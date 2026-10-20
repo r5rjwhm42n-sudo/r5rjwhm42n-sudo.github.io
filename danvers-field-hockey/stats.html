@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#18479f">
+<title>Stats · Danvers Falcons Field Hockey</title>
+<meta name="description" content="2026 Danvers Falcons field hockey roster and player stats.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="images/falcons-logo.png">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="stats">
+<header class="site-header" id="site-header"></header>
+<main>
+<div class="hero page-banner"><div class="wrap">
+  <div class="eyebrow">2026 Season · Field Hockey</div>
+  <h1>Player Stats</h1>
+  <p>Filter by position or search for a player. Each card shows season totals and a game-by-game log.</p>
+</div></div>
+
+<section class="block"><div class="wrap">
+  <div class="notice"><strong>Heads up:</strong> <span id="stats-note"></span></div>
+  <div class="section-head"><h2>Team</h2><span class="pill" id="stats-asof"></span></div>
+  <div class="strip" id="team-tiles"></div>
+  <p class="sub coach-line" id="coach-line"></p>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Leaders</h2></div>
+  <div class="leaders" id="leaders"></div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Scoring</h2><span class="pill">Goals + assists = points</span></div>
+  <div class="card chart" id="scoring"></div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Roster</h2><span class="pill">Tap a column to sort</span></div>
+  <div class="card table-scroll"><table class="records sheet" id="sheet"></table></div>
+  <p class="sub fine" id="sheet-note"></p>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Players</h2></div>
+  <div class="filters" id="filters"></div>
+  <div class="grid g3" id="players"></div>
+</div></section>
+</main>
+<footer class="site-footer" id="site-footer"></footer>
+<script src="js/data.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>

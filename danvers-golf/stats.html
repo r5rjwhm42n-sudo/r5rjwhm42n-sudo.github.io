@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#18479f">
+<title>Players · Danvers Falcons Golf</title>
+<meta name="description" content="2026 Danvers Falcons golf roster and match-by-match player results.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="images/falcons-logo.png">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="stats">
+<header class="site-header" id="site-header"></header>
+<main>
+<div class="hero page-banner"><div class="wrap">
+  <div class="eyebrow">2026 Season</div>
+  <h1>Players &amp; Results</h1>
+  <p>Filter by class or search for a player. Each card shows a golfer's wins, points and match-by-match results.</p>
+</div></div>
+
+<section class="block"><div class="wrap">
+  <div class="notice"><strong>Heads up:</strong> team scores come from the school's schedule page. Individual results come from newspaper roundups, which mostly print the winners — so player totals are partial until the team's own scorecards are added.</div>
+  <div class="section-head"><h2>Team</h2><span class="pill" id="stats-asof"></span></div>
+  <div class="strip" id="team-tiles"></div>
+  <p class="sub coach-line" id="coach-line"></p>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Leaders</h2></div>
+  <div class="leaders" id="leaders"></div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Match-Play Scorecard</h2><span class="pill">Points out of 72</span></div>
+  <div class="card chart" id="scorecard"></div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Points Won</h2><span class="pill">Reported matches</span></div>
+  <div class="card chart" id="points"></div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Players</h2></div>
+  <div class="filters" id="filters"></div>
+  <div class="grid g3" id="players"></div>
+</div></section>
+</main>
+<footer class="site-footer" id="site-footer"></footer>
+<script src="js/data.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>

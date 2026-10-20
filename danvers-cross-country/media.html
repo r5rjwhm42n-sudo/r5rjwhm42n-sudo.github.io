@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#18479f">
+<title>Media · Danvers Falcons Cross Country</title>
+<meta name="description" content="Danvers Falcons cross country photos and news coverage.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="images/falcons-logo.png">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="media">
+<header class="site-header" id="site-header"></header>
+<main>
+<div class="hero page-banner"><div class="wrap">
+  <div class="eyebrow">Photos &amp; News</div>
+  <h1>Race Day</h1>
+  <p>Meet write-ups and results from around the web, plus race-day photos.</p>
+</div></div>
+
+<section class="block"><div class="wrap">
+  <div class="card cta">
+    <div><h3>Follow the Falcons</h3><p>Official schedule and program info from Danvers High School.</p></div>
+    <div class="btn-row">
+      <a class="btn btn-primary" id="link-schedule" target="_blank" rel="noopener">Official Schedule ↗</a>
+      <a class="btn btn-ghost" id="link-school" target="_blank" rel="noopener">Program Page ↗</a>
+    </div>
+  </div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>In the News</h2></div>
+  <p class="sub">Each card opens the story or results on the original site.</p>
+  <div class="grid g3" id="news"></div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Photos</h2></div>
+  <div class="notice" id="photo-note"><strong>Placeholder:</strong> race photos from the team will go here.</div>
+  <div class="grid g4" id="photos"></div>
+</div></section>
+</main>
+<footer class="site-footer" id="site-footer"></footer>
+<script src="js/data.js"></script>
+<script src="js/site.js"></script>
+<script>
+  document.getElementById("link-schedule").href = TEAM.links.schedule;
+  document.getElementById("link-school").href = TEAM.links.school;
+</script>
+</body>
+</html>
