@@ -251,6 +251,8 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .next-up { max-width: 460px; }
   .hub-hero::before { background: linear-gradient(180deg, rgba(11, 31, 77, .95), rgba(11, 31, 77, .9) 60%, rgba(18, 58, 133, .86)); }
   .mosaic { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(4, 1fr); }
+  .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .hs { padding-right: 16px; margin-right: 16px; }
   .week-grid { grid-template-columns: 1fr; }
   .facts { grid-template-columns: repeat(2, 1fr); }
 }
@@ -262,7 +264,6 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .badge img { width: 44px; height: 44px; }
   .brand-text { font-size: 23px; }
   .ticker-label { padding: 0 12px 0 16px; }
-  .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); }
   .hs { padding-right: 10px; margin-right: 12px; }
   .hs-v { font-size: 42px; }
   .hs-k { font-size: 13px; letter-spacing: .06em; line-height: 1.15; }
