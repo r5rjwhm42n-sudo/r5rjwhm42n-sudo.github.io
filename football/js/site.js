@@ -68,7 +68,8 @@
     <div class="wrap foot-bot">
       <div>
         ${esc(TEAM.address)}<br>
-        ${esc(TEAM.conference)} · ${esc(TEAM.division)} · Head Coach ${esc(TEAM.headCoach)}
+        ${esc(TEAM.conference)} · ${esc(TEAM.division)} · Head Coach ${esc(TEAM.headCoach)}<br>
+        <span class="disclaimer">A Danvers High School DECA student project. Not the official school website.</span>
       </div>
       <div class="links">
         <a href="${TEAM.links.hudl}" target="_blank" rel="noopener">Hudl</a>
@@ -123,6 +124,8 @@
         ? `<table class="line"><tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>F</th></tr>
              <tr><td>Danvers</td>${g.quarters.us.map((q) => `<td>${q}</td>`).join("")}<td>${g.us}</td></tr>
              <tr><td>${esc(g.opponent)}</td>${g.quarters.them.map((q) => `<td>${q}</td>`).join("")}<td>${g.them}</td></tr></table>`
+        : g.half
+        ? `<p>Halftime: Danvers ${g.half[0]}, ${esc(g.opponent)} ${g.half[1]} <span class="tbd">Quarter scores not published</span></p>`
         : `<p><span class="tbd">Quarter scores TBD</span></p>`;
       body += `<h4>Scoring Summary</h4>`;
       body += g.scoring
@@ -205,7 +208,7 @@
     }
 
     $("#scorestrip").innerHTML =
-      tile(["Record", record, `NEC ${rec((g) => g.league)} · Home ${rec((g) => g.home)} · Away ${rec((g) => !g.home)}`]) +
+      tile(["Record", record, `NEC ${rec((g) => g.league)} · Home ${rec((g) => g.home)} · Away ${rec((g) => !g.home)}${TEAM.ranking ? `<br>${esc(TEAM.ranking)}` : ""}`]) +
       (next ? `<button class="card next-game" data-game="${next.id}">
         <div>
           <div class="k">Next game</div>
@@ -245,16 +248,16 @@
     $("#leaders").innerHTML = leaders();
 
     const yds = (p, g) => +(((p.log[g.id] || "").match(/(\d+)\s*(?:rushing )?yds/) || [])[1] || 0);
-    const rushers = PLAYERS.filter((p) => statOf(p, "Rush Yds")).sort((a, b) => statOf(b, "Rush Yds") - statOf(a, "Rush Yds"));
+    const rushers = PLAYERS.filter((p) => statOf(p, "Rush Yds") > 0).sort((a, b) => statOf(b, "Rush Yds") - statOf(a, "Rush Yds"));
     const max = Math.max(...rushers.map((p) => statOf(p, "Rush Yds")), 1);
     $("#rushing").innerHTML = `
-      <div class="legend-row">${played.map((g, i) => `<span><i class="s${i % 5 + 1}"></i>${vs(g)} ${esc(g.opponent)}</span>`).join("")}</div>
+      <div class="legend-row">${played.map((g, i) => `<span><i class="s${i % 6 + 1}"></i>${vs(g)} ${esc(g.opponent)}</span>`).join("")}</div>
       ${rushers.map((p) => {
         const total = statOf(p, "Rush Yds");
         return `<div class="bar-row">
           <div class="nm">${esc(p.name)}<small>${p.pos.join(" / ") || "Position TBD"}</small></div>
           <div class="bar-track"><div class="bar-fill" style="--w:${(total / max * 100).toFixed(1)}%">
-            ${played.map((g, i) => yds(p, g) ? `<span class="s${i % 5 + 1}" style="flex:${yds(p, g)}" title="${yds(p, g)} yds ${vs(g)} ${esc(g.opponent)}">${yds(p, g)}</span>` : "").join("")}
+            ${played.map((g, i) => yds(p, g) ? `<span class="s${i % 6 + 1}" style="flex:${yds(p, g)}" title="${yds(p, g)} yds ${vs(g)} ${esc(g.opponent)}">${yds(p, g)}</span>` : "").join("")}
           </div></div>
           <div class="tot">${total}<small>${statOf(p, "Rush TD")} TD</small></div>
         </div>`;
