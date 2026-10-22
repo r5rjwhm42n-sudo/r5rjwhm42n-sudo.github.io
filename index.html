@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#18479f">
 <title>Danvers Falcons Teams</title>
-<meta name="description" content="Team sites for Danvers High School Falcons sports — stats, schedules, history and highlights.">
+<meta name="description" content="Team sites for Danvers High School Falcons sports — live records, scores, schedules, team photos, history and highlights.">
 <link rel="canonical" href="https://danversfalconsathletics.org/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Danvers Falcons Teams">
 <meta property="og:title" content="Danvers Falcons Teams">
-<meta property="og:description" content="Team sites for Danvers High School Falcons sports — stats, schedules, history and highlights.">
+<meta property="og:description" content="Team sites for Danvers High School Falcons sports — live records, scores, schedules, team photos, history and highlights.">
 <meta property="og:url" content="https://danversfalconsathletics.org/">
 <meta property="og:image" content="https://danversfalconsathletics.org/images/falcons-logo.png">
 <meta name="twitter:card" content="summary">
@@ -18,81 +18,209 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="images/falcons-logo.png">
-<style>
-/* Hub page that links every team site. Same royal/navy look as the team sites. */
-:root {
-  --royal: #18479f;
-  --navy: #0b1f4d;
-  --ink: #131a2b;
-  --muted: #5b647a;
-  --line: #dfe4ee;
-  --bg: #f3f5f9;
-  --white: #ffffff;
-  --gold: #f0b429;
-  --r: 10px;
-  --shadow: 0 1px 2px rgba(11, 31, 77, .06), 0 6px 18px rgba(11, 31, 77, .07);
-  --display: "Saira Condensed", "Arial Narrow", Impact, sans-serif;
-  --body: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-}
-* { box-sizing: border-box; }
-body { margin: 0; font-family: var(--body); font-size: 16.5px; color: var(--ink); background: var(--bg); line-height: 1.5; -webkit-font-smoothing: antialiased; }
-h1, h2, h3 { font-family: var(--display); font-weight: 800; text-transform: uppercase; line-height: 1; margin: 0; }
-:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
-.wrap { max-width: 1160px; margin: 0 auto; padding: 0 20px; }
-
-.hero { background: linear-gradient(135deg, var(--navy), var(--royal)); color: var(--white); padding: 56px 0 64px; }
-.hero .wrap { display: flex; align-items: center; gap: 28px; }
-.badge { flex: none; width: 112px; height: 112px; border-radius: 50%; background: var(--white); display: grid; place-items: center; box-shadow: 0 6px 24px rgba(0, 0, 0, .25); }
-.badge img { width: 84%; height: auto; display: block; }
-.eyebrow { font-family: var(--display); font-weight: 700; font-size: 15px; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
-.hero h1 { font-size: clamp(40px, 7vw, 68px); }
-.hero p { margin: 12px 0 0; color: #c9d4ee; max-width: 560px; }
-
-.teams { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 18px; margin: -32px auto 48px; }
-.team { position: relative; display: block; background: var(--white); border: 1px solid var(--line); border-top: 5px solid var(--royal); border-radius: var(--r); box-shadow: var(--shadow); padding: 22px 22px 20px; color: var(--ink); text-decoration: none; transition: transform .15s, box-shadow .15s; }
-.team:hover { transform: translateY(-3px); box-shadow: 0 2px 4px rgba(11, 31, 77, .08), 0 12px 28px rgba(11, 31, 77, .12); }
-.team h2 { font-size: 30px; color: var(--navy); }
-.team .season { font-family: var(--display); font-weight: 700; font-size: 14px; letter-spacing: .1em; text-transform: uppercase; color: var(--royal); margin-top: 4px; }
-.team p { margin: 10px 0 0; color: var(--muted); font-size: 15.5px; }
-.team .arrow { position: absolute; top: 20px; right: 20px; font-size: 22px; color: var(--royal); }
-
-footer { background: var(--navy); color: #b9c6e6; font-size: 14px; padding: 22px 0; }
-footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px 24px; }
-footer a { color: var(--white); font-weight: 600; }
-
-@media (max-width: 600px) {
-  .hero { padding: 36px 0 56px; }
-  .hero .wrap { flex-direction: column; align-items: flex-start; gap: 18px; }
-  .badge { width: 84px; height: 84px; }
-  .wrap { padding: 0 16px; }
-}
-@media (prefers-reduced-motion: reduce) { .team { transition: none; } .team:hover { transform: none; } }
-</style>
+<link rel="stylesheet" href="css/home.css">
 </head>
 <body>
-<header class="hero"><div class="wrap">
-  <span class="badge"><img src="images/falcons-logo.png" alt="Danvers Falcons logo"></span>
-  <div>
-    <div class="eyebrow">Danvers High School</div>
-    <h1>Falcons Teams</h1>
-    <p>Stats, schedules, history and highlights for every team. Pick a sport.</p>
-  </div>
+<!-- Sport icons -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-football" viewBox="0 0 64 64"><g transform="rotate(-35 32 32)"><path d="M5 32C13 17 51 17 59 32C51 47 13 47 5 32Z"/><path d="M23 32h18M27 28v8M32 28v8M37 28v8"/><path d="M14 25.5v13M50 25.5v13"/></g></symbol>
+    <symbol id="i-soccer" viewBox="0 0 64 64"><circle cx="32" cy="32" r="26"/><path d="M32 22l9.5 6.9-3.6 11.2H26.1l-3.6-11.2z" fill="currentColor"/><path d="M32 22V6M41.5 28.9l15.2-4.9M37.9 40.1l9.4 12.9M26.1 40.1l-9.4 12.9M22.5 28.9L7.3 24"/></symbol>
+    <symbol id="i-field-hockey" viewBox="0 0 64 64"><path d="M48 5L24 45c-3 6-10 8-14 5-3-2-2-6 1-6"/><circle cx="44" cy="52" r="5" fill="currentColor"/></symbol>
+    <symbol id="i-volleyball" viewBox="0 0 64 64"><circle cx="32" cy="32" r="26"/><path d="M32 32c0-11 5-20 14-24.5M32 32c-9.5 5.5-20 5.5-27.5.5M32 32c9.5 5.5 14.5 14.5 13.5 24.5"/></symbol>
+    <symbol id="i-cross-country" viewBox="0 0 64 64"><circle cx="32" cy="36" r="22"/><path d="M26 6h12M32 6v8M48 18l4-4M32 36l9-9"/><circle cx="32" cy="36" r="2.5" fill="currentColor"/></symbol>
+    <symbol id="i-golf" viewBox="0 0 64 64"><path d="M26 54V7"/><path d="M26 8l22 8-22 8z" fill="currentColor"/><ellipse cx="26" cy="54" rx="18" ry="4.5"/><circle cx="47" cy="47" r="3.5" fill="currentColor"/></symbol>
+    <symbol id="i-esports" viewBox="0 0 64 64"><path d="M20 20h24c7 0 11 5 12.5 13l2.2 12.5c1 6-5.5 9.5-9.5 5.2L42 43H22l-7.2 7.7c-4 4.3-10.5.8-9.5-5.2L7.5 33C9 25 13 20 20 20z"/><path d="M19 28v10M14 33h10"/><circle cx="43" cy="30" r="2.4" fill="currentColor"/><circle cx="49" cy="36" r="2.4" fill="currentColor"/></symbol>
+  </defs>
+</svg>
+
+<div class="topbar"><div class="wrap">
+  <span>A Danvers High School DECA student project · Not the official school website</span>
+  <a href="https://www.danversfalconsathletics.com/" target="_blank" rel="noopener">Official Falcons Athletics →</a>
+</div></div>
+<header class="site-header"><div class="wrap hbar">
+  <a class="brand" href="./">
+    <span class="badge"><img src="images/falcons-logo.png" alt="Danvers Falcons logo"></span>
+    <span class="brand-text">Danvers Falcons<small>Team Sites</small></span>
+  </a>
+  <nav class="nav" aria-label="Teams">
+    <a href="football/">Football</a><a href="soccer/">Soccer</a><a href="field-hockey/">Field Hockey</a><a href="volleyball/">Volleyball</a><a href="cross-country/">Cross Country</a><a href="golf/">Golf</a><a href="esports/">Esports</a>
+  </nav>
 </div></header>
 
-<main class="wrap teams">
-  <a class="team" href="football/"><span class="arrow">→</span><h2>Football</h2><div class="season">Fall</div><p>Season leaders, game-by-game stats, conference titles and Falcon greats.</p></a>
-  <a class="team" href="soccer/"><span class="arrow">→</span><h2>Soccer</h2><div class="season">Fall · Boys &amp; Girls</div><p>Both teams in one place, with schedules, scorers and record books.</p></a>
-  <a class="team" href="field-hockey/"><span class="arrow">→</span><h2>Field Hockey</h2><div class="season">Fall</div><p>Results, stat leaders and the program's record book.</p></a>
-  <a class="team" href="volleyball/"><span class="arrow">→</span><h2>Volleyball</h2><div class="season">Fall · Girls</div><p>Match box scores, kills and aces leaders, and season history.</p></a>
-  <a class="team" href="cross-country/"><span class="arrow">→</span><h2>Cross Country</h2><div class="season">Fall</div><p>Meet results, runner profiles and records going back two decades.</p></a>
-  <a class="team" href="golf/"><span class="arrow">→</span><h2>Golf</h2><div class="season">Fall</div><p>Match play, Stableford and stroke play results, plus player stats.</p></a>
-  <a class="team" href="esports/"><span class="arrow">→</span><h2>Esports</h2><div class="season">Varsity</div><p>Series results for each game title, plus the roster and team history.</p></a>
+<div class="ticker" id="ticker" hidden>
+  <div class="ticker-label"><span class="dot"></span>Scores</div>
+  <div class="ticker-view"><div class="ticker-track" id="ticker-track"></div></div>
+</div>
+
+<main>
+<section class="hub-hero">
+  <div class="mosaic" aria-hidden="true">
+    <img src="images/teams/football.jpg" alt="" style="--pos:50% 72%">
+    <img src="images/teams/girls-soccer.jpg" alt="" style="--pos:50% 46%">
+    <img src="images/teams/field-hockey.jpg" alt="" style="--pos:50% 58%">
+    <img src="images/teams/volleyball.jpg" alt="" style="--pos:50% 50%">
+    <img src="images/teams/boys-xc.jpg" alt="" style="--pos:50% 45%">
+    <img src="images/teams/boys-soccer.jpg" alt="" style="--pos:50% 60%">
+    <img src="images/teams/golf.jpg" alt="" style="--pos:50% 45%">
+    <img src="images/teams/girls-xc.jpg" alt="" style="--pos:50% 45%">
+  </div>
+  <div class="wrap hero-in">
+    <div>
+      <div class="eyebrow">Danvers High School · Fall 2026</div>
+      <h1>Every Falcon.<br>Every score.</h1>
+      <p class="lede">Live records, the latest results, this week's games and decades of history for every Danvers High team, all in one place.</p>
+      <div class="hero-stats" id="hero-stats"></div>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="#teams">Pick a team</a>
+        <a class="btn btn-ghost" href="#week">This week's games</a>
+      </div>
+    </div>
+    <div class="card next-up" id="next-up" hidden></div>
+  </div>
+</section>
+
+<section class="block" id="teams"><div class="wrap">
+  <div class="section-head"><h2>Pick Your Team</h2><span class="sub">Fall 2026 · records update with every result</span></div>
+  <div class="teams-grid">
+    <a class="team-card feature" href="football/" data-sport="football">
+      <div class="tc-media">
+        <img src="images/teams/football.jpg" alt="The 2026 Danvers football team" style="--pos:50% 74%">
+        <span class="tc-season">Fall</span>
+        <div class="tc-head"><h3>Football</h3></div>
+      </div>
+      <div class="tc-body">
+        <p class="tc-blurb">Season leaders, game-by-game stats, conference titles and Falcon greats.</p>
+        <div class="tc-live"></div>
+        <span class="tc-go">Football site <span aria-hidden="true">→</span></span>
+      </div>
+    </a>
+    <a class="team-card" href="soccer/" data-sport="soccer">
+      <div class="tc-media multi">
+        <img class="on" src="images/teams/girls-soccer.jpg" alt="The 2026 Danvers girls soccer team" data-squad="Girls" style="--pos:50% 46%">
+        <img src="images/teams/boys-soccer.jpg" alt="The 2026 Danvers boys soccer team" data-squad="Boys" style="--pos:50% 60%" loading="lazy">
+        <span class="tc-season">Fall · Boys &amp; Girls</span><span class="tc-squad">Girls</span>
+        <div class="tc-head"><h3>Soccer</h3></div>
+      </div>
+      <div class="tc-body">
+        <p class="tc-blurb">Both teams in one place, with schedules, scorers and record books.</p>
+        <div class="tc-live"></div>
+        <span class="tc-go">Soccer site <span aria-hidden="true">→</span></span>
+      </div>
+    </a>
+    <a class="team-card" href="field-hockey/" data-sport="field-hockey">
+      <div class="tc-media">
+        <img src="images/teams/field-hockey.jpg" alt="The 2026 Danvers field hockey team" style="--pos:50% 58%">
+        <span class="tc-season">Fall</span>
+        <div class="tc-head"><h3>Field Hockey</h3></div>
+      </div>
+      <div class="tc-body">
+        <p class="tc-blurb">Results, stat leaders and the program's record book.</p>
+        <div class="tc-live"></div>
+        <span class="tc-go">Field hockey site <span aria-hidden="true">→</span></span>
+      </div>
+    </a>
+    <a class="team-card" href="volleyball/" data-sport="volleyball">
+      <div class="tc-media">
+        <img src="images/teams/volleyball.jpg" alt="The 2026 Danvers volleyball team" style="--pos:50% 52%" loading="lazy">
+        <span class="tc-season">Fall · Girls</span>
+        <div class="tc-head"><h3>Volleyball</h3></div>
+      </div>
+      <div class="tc-body">
+        <p class="tc-blurb">Match box scores, kills and aces leaders, and season history.</p>
+        <div class="tc-live"></div>
+        <span class="tc-go">Volleyball site <span aria-hidden="true">→</span></span>
+      </div>
+    </a>
+    <a class="team-card" href="cross-country/" data-sport="cross-country">
+      <div class="tc-media multi">
+        <img class="on" src="images/teams/boys-xc.jpg" alt="The 2026 Danvers boys cross country team" data-squad="Boys" style="--pos:50% 45%" loading="lazy">
+        <img src="images/teams/girls-xc.jpg" alt="The 2026 Danvers girls cross country team" data-squad="Girls" style="--pos:50% 45%" loading="lazy">
+        <span class="tc-season">Fall · Boys &amp; Girls</span><span class="tc-squad">Boys</span>
+        <div class="tc-head"><h3>Cross Country</h3></div>
+      </div>
+      <div class="tc-body">
+        <p class="tc-blurb">Meet results, runner profiles and records going back two decades.</p>
+        <div class="tc-live"></div>
+        <span class="tc-go">Cross country site <span aria-hidden="true">→</span></span>
+      </div>
+    </a>
+    <a class="team-card" href="golf/" data-sport="golf">
+      <div class="tc-media">
+        <img src="images/teams/golf.jpg" alt="The 2026 Danvers golf team" style="--pos:50% 42%" loading="lazy">
+        <span class="tc-season">Fall</span>
+        <div class="tc-head"><h3>Golf</h3></div>
+      </div>
+      <div class="tc-body">
+        <p class="tc-blurb">Match play, Stableford and stroke play results, plus player stats.</p>
+        <div class="tc-live"></div>
+        <span class="tc-go">Golf site <span aria-hidden="true">→</span></span>
+      </div>
+    </a>
+    <a class="team-card" href="esports/" data-sport="esports">
+      <div class="tc-media art">
+        <svg aria-hidden="true"><use href="#i-esports"/></svg>
+        <span class="tc-season">Varsity</span>
+        <div class="tc-head"><h3>Esports</h3></div>
+      </div>
+      <div class="tc-body">
+        <p class="tc-blurb">Series results for each game title, plus the roster and team history.</p>
+        <div class="tc-live"></div>
+        <span class="tc-go">Esports site <span aria-hidden="true">→</span></span>
+      </div>
+    </a>
+  </div>
+</div></section>
+
+<section class="block alt" id="week"><div class="wrap">
+  <div class="section-head"><h2>Coming Up</h2><span class="sub">The next games, matches and meets for every team</span></div>
+  <div class="week-grid" id="week-list"><p class="empty">Loading the schedule…</p></div>
+</div></section>
+
+<section class="block" id="latest" hidden><div class="wrap">
+  <div class="section-head"><h2>Latest Results</h2><span class="sub">The most recent final from each team</span></div>
+  <div class="stories" id="latest-list"></div>
+</div></section>
+
+<section class="block alt" id="photos"><div class="wrap">
+  <div class="section-head"><h2>2026 Team Photos</h2><span class="sub">Click a photo to see it full size</span></div>
+  <div class="gallery" id="gallery-grid">
+    <figure class="gal"><button type="button" data-full="images/teams/football.jpg" data-cap="Football · 2026"><img src="images/teams/football.jpg" alt="The 2026 Danvers football team" loading="lazy"></button><figcaption><b>Football</b></figcaption></figure>
+    <figure class="gal"><button type="button" data-full="images/teams/girls-soccer.jpg" data-cap="Girls Soccer · 2026"><img src="images/teams/girls-soccer.jpg" alt="The 2026 Danvers girls soccer team" loading="lazy"></button><figcaption><b>Girls Soccer</b></figcaption></figure>
+    <figure class="gal"><button type="button" data-full="images/teams/boys-soccer.jpg" data-cap="Boys Soccer · 2026"><img src="images/teams/boys-soccer.jpg" alt="The 2026 Danvers boys soccer team" loading="lazy"></button><figcaption><b>Boys Soccer</b></figcaption></figure>
+    <figure class="gal"><button type="button" data-full="images/teams/field-hockey.jpg" data-cap="Field Hockey · 2026"><img src="images/teams/field-hockey.jpg" alt="The 2026 Danvers field hockey team" loading="lazy"></button><figcaption><b>Field Hockey</b></figcaption></figure>
+    <figure class="gal"><button type="button" data-full="images/teams/volleyball.jpg" data-cap="Volleyball · 2026"><img src="images/teams/volleyball.jpg" alt="The 2026 Danvers volleyball team" loading="lazy"></button><figcaption><b>Volleyball</b></figcaption></figure>
+    <figure class="gal"><button type="button" data-full="images/teams/boys-xc.jpg" data-cap="Boys Cross Country · 2026"><img src="images/teams/boys-xc.jpg" alt="The 2026 Danvers boys cross country team" loading="lazy"></button><figcaption><b>Boys Cross Country</b></figcaption></figure>
+    <figure class="gal"><button type="button" data-full="images/teams/girls-xc.jpg" data-cap="Girls Cross Country · 2026"><img src="images/teams/girls-xc.jpg" alt="The 2026 Danvers girls cross country team" loading="lazy"></button><figcaption><b>Girls Cross Country</b></figcaption></figure>
+    <figure class="gal"><button type="button" data-full="images/teams/golf.jpg" data-cap="Golf · 2026"><img src="images/teams/golf.jpg" alt="The 2026 Danvers golf team" loading="lazy"></button><figcaption><b>Golf</b></figcaption></figure>
+  </div>
+  <p class="credit">Team photos from the Danvers High School athletics pages (Danvers Public Schools).</p>
+</div></section>
+
+<section class="block" id="tradition"><div class="wrap">
+  <div class="section-head"><h2>A Winning Tradition</h2><span class="sub">From each team's history page</span></div>
+  <div class="trad">
+    <div class="card trad-main">
+      <div class="trad-total"><b id="titles-total">—</b><div><div class="k">Conference titles</div><div class="d">Northeastern Conference championships won by <span id="titles-programs">these</span> Falcons programs. Hover a bar for the years.</div></div></div>
+      <div class="title-bars" id="title-bars"></div>
+    </div>
+    <div class="facts" id="tradition-tiles"></div>
+  </div>
+</div></section>
 </main>
 
-<footer><div class="wrap">
+<footer class="site-footer"><div class="wrap">
   <span>A Danvers High School DECA student project. Not the official school website.</span>
   <span>Official athletics: <a href="https://www.danversfalconsathletics.com/" target="_blank" rel="noopener">Falcons Athletics</a></span>
 </div></footer>
+
+<dialog class="viewer" id="viewer" aria-label="Team photo">
+  <button class="viewer-close" type="button" aria-label="Close">×</button>
+  <figure><img alt=""><figcaption></figcaption></figure>
+</dialog>
+<div class="tip" id="tip" role="tooltip" hidden></div>
+
+<script src="js/home.js"></script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "012041330fec4a07ad02e32f49e725f2"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
