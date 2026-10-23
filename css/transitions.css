@@ -1,0 +1,118 @@
+/* =====================================================================
+   Sport transitions: the full-screen animation that plays when a link on
+   the hub leads into one of the team sites. Built by js/transitions.js;
+   the team site finishes the move with js/arrive.js.
+   ===================================================================== */
+.tx { position: fixed; inset: 0; z-index: 10000; overflow: hidden; pointer-events: all; color: #fff; }
+/* everything grows out of the spot that was clicked */
+.tx-stage { position: absolute; inset: 0; clip-path: circle(0 at var(--x) var(--y)); animation: tx-open .6s cubic-bezier(.7, 0, .25, 1) forwards; }
+.tx-bg { position: absolute; inset: 0; background: linear-gradient(115deg, #0b1f4d 0%, #18479f 62%, #2459c2 100%); }
+.tx-bg::before {   /* the skewed light bars from the site's hero */
+  content: ""; position: absolute; top: -20%; bottom: -20%; right: 30%; width: 90px;
+  background: rgba(255, 255, 255, .06); transform: skewX(-18deg);
+  box-shadow: 130px 0 0 rgba(255, 255, 255, .04), 230px 0 0 rgba(255, 255, 255, .025);
+  animation: tx-out .3s 1.08s ease-in forwards;
+}
+.tx-bg::after {   /* falcon watermark */
+  content: ""; position: absolute; right: -60px; bottom: -70px; width: 420px; height: 420px;
+  background: url(../images/falcons-logo.png) center / contain no-repeat;
+  filter: brightness(0) invert(1); opacity: 0;
+  animation: tx-mark .9s .25s ease-out forwards, tx-out .3s 1.08s ease-in forwards;
+}
+@keyframes tx-open { to { clip-path: circle(var(--r) at var(--x) var(--y)); } }
+@keyframes tx-mark { from { opacity: 0; transform: scale(.9) rotate(-6deg); } to { opacity: .09; transform: none; } }
+@keyframes tx-out { to { opacity: 0; } }
+
+/* ---------- the sport name ---------- */
+.tx-title {
+  position: absolute; left: max(6vw, 20px); bottom: 11vh; right: 6vw;
+  font-family: "Saira Condensed", "Arial Narrow", Impact, sans-serif; text-transform: uppercase;
+}
+.tx-kicker {
+  display: inline-block; background: #fff; color: #18479f; font-weight: 700; letter-spacing: .14em;
+  font-size: clamp(13px, 1.5vw, 18px); padding: 4px 12px 3px; border-radius: 4px;
+  opacity: 0; transform: translateY(8px);
+  animation: tx-kick .4s .32s ease-out forwards, tx-leave .3s 1.08s ease-in forwards;
+}
+.tx-name { display: block; overflow: hidden; margin-top: 12px; padding-bottom: .04em; }
+.tx-name b {
+  display: flex; align-items: center; gap: .22em; font-weight: 800; line-height: .92; letter-spacing: .005em;
+  font-size: clamp(54px, 11.5vw, 172px); transform: translateY(105%);
+  animation: tx-rise .6s .36s cubic-bezier(.2, .85, .2, 1) forwards, tx-leave .3s 1.08s ease-in forwards;
+}
+.tx-name b::before {
+  content: ""; flex: none; width: .14em; height: .78em; background: #f0b429; transform: skewX(-14deg) scaleY(0);
+  transform-origin: bottom; animation: tx-bar .35s .5s cubic-bezier(.3, 1.4, .5, 1) forwards;
+}
+.tx-press {
+  display: block; margin-top: 10px; font-weight: 700; letter-spacing: .3em; color: #f0b429;
+  font-size: clamp(15px, 1.8vw, 22px); opacity: 0;
+  animation: tx-blink .5s .55s steps(1) 2, tx-leave .2s 1.08s ease-in forwards;
+}
+@keyframes tx-kick { to { opacity: 1; transform: none; } }
+@keyframes tx-rise { to { transform: none; } }
+@keyframes tx-bar { to { transform: skewX(-14deg) scaleY(1); } }
+@keyframes tx-leave { to { opacity: 0; transform: translateY(-28%); } }
+@keyframes tx-blink { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }
+
+/* ---------- the scene ---------- */
+.tx-scene { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; animation: tx-scene-out .32s 1.08s ease-in forwards; }
+@keyframes tx-scene-out { to { opacity: 0; transform: scale(1.04); } }
+.tx-scene text { font-family: "Saira Condensed", "Arial Narrow", Impact, sans-serif; font-weight: 800; }
+.tx .fx { transform-box: fill-box; transform-origin: center; }
+.tx .draw { stroke-dasharray: 1; stroke-dashoffset: 1; animation: tx-draw var(--t, .8s) var(--d, .2s) var(--e, cubic-bezier(.45, .05, .2, 1)) forwards; }
+.tx .fade { opacity: 0; animation: tx-fadein var(--t, .35s) var(--d, .1s) ease-out forwards; }
+.tx .pop { transform: scale(0); animation: tx-pop .4s var(--d, .3s) cubic-bezier(.3, 1.6, .5, 1) forwards; }
+.tx .ring { opacity: 0; animation: tx-ring .55s var(--d, .9s) cubic-bezier(.2, .7, .3, 1) forwards; }
+.tx .spin { animation: tx-spin var(--t, .8s) linear infinite; }
+@keyframes tx-draw { to { stroke-dashoffset: 0; } }
+@keyframes tx-fadein { to { opacity: var(--o, 1); } }
+@keyframes tx-pop { to { transform: scale(1); } }
+@keyframes tx-ring { 0% { opacity: .9; transform: scale(.2); } 100% { opacity: 0; transform: scale(1.6); } }
+@keyframes tx-spin { to { transform: rotate(360deg); } }
+
+/* Football: the field scrolls by while the ball spirals downfield */
+.tx-football .field { animation: fb-run 1.35s cubic-bezier(.25, .7, .3, 1) forwards; }
+.tx-football .spiral { animation: fb-spiral .14s linear infinite; }
+.tx-football .trail { animation: tx-draw .95s .15s cubic-bezier(.3, .1, .3, 1) forwards, tx-out .3s .95s ease-in forwards; }
+@keyframes fb-run { to { transform: translateX(-960px); } }
+@keyframes fb-spiral { 50% { transform: scaleY(.62); } }
+
+/* Soccer: the net bulges when the ball hits it */
+.tx-soccer .net { animation: sc-bulge .6s .88s cubic-bezier(.2, .8, .3, 1); }
+@keyframes sc-bulge { 30% { transform: translateX(22px) scale(1.06, .97); } 60% { transform: translateX(-6px) scale(.99, 1.01); } }
+.tx-soccer .ball-in { animation: tx-spin .5s linear 2, sc-settle .25s .86s ease-out forwards; }
+@keyframes sc-settle { to { transform: scale(.86); } }
+
+/* Field hockey: the stick swings through, the ball rockets off */
+.tx-field-hockey .turf { animation: fh-turf 1.35s cubic-bezier(.25, .7, .3, 1) forwards; }
+.tx-field-hockey .stick { transform: rotate(58deg); animation: fh-swing .26s .16s cubic-bezier(.6, 0, .9, .6) forwards; }
+@keyframes fh-turf { to { transform: translateX(-320px); } }
+@keyframes fh-swing { to { transform: rotate(-14deg); } }
+
+/* Volleyball: the swing arc flashes at the top of the jump */
+.tx-volleyball .swing { animation: tx-draw .16s .66s ease-out forwards, tx-out .25s .86s ease-in forwards; }
+.tx-volleyball .floor-flash { opacity: 0; animation: vb-flash .5s 1.02s ease-out forwards; }
+@keyframes vb-flash { 0% { opacity: .9; } 100% { opacity: 0; } }
+
+/* Cross country: the hills drift at different speeds */
+.tx-cross-country .hills-back { animation: xc-drift 1.4s ease-out forwards; }
+.tx-cross-country .hills-front { animation: xc-drift-fast 1.4s ease-out forwards; }
+.tx-cross-country .runner-ring { animation: xc-pulse .5s ease-out infinite; }
+@keyframes xc-drift { to { transform: translateX(-60px); } }
+@keyframes xc-drift-fast { to { transform: translateX(-160px); } }
+@keyframes xc-pulse { from { opacity: .8; transform: scale(.6); } to { opacity: 0; transform: scale(1.6); } }
+
+/* Golf: the flag waves, the ball drops */
+.tx-golf .flag { animation: gf-wave .45s ease-in-out infinite alternate; }
+.tx-golf .drop { animation: gf-drop .22s 1.03s ease-in forwards; }
+@keyframes gf-wave { from { transform: skewY(0deg) scaleX(1); } to { transform: skewY(-7deg) scaleX(.9); } }
+@keyframes gf-drop { to { transform: translateY(6px) scale(.2); opacity: 0; } }
+
+/* Esports: pixels burst out, a scanline sweeps */
+.tx-esports .px { opacity: 0; animation: es-px .7s var(--d) cubic-bezier(.2, .8, .3, 1) forwards; }
+@keyframes es-px { 0% { opacity: 1; transform: translate(0, 0) scale(0); } 70% { opacity: 1; } 100% { opacity: 0; transform: translate(var(--tx), var(--ty)) scale(1); } }
+.tx-esports .scan { animation: es-scan .9s .2s linear forwards; }
+@keyframes es-scan { from { transform: translateY(-40px); } to { transform: translateY(960px); } }
+
+@media (prefers-reduced-motion: reduce) { .tx { display: none; } }
