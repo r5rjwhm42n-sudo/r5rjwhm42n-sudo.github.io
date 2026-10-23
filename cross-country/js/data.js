@@ -14,7 +14,7 @@ const TEAM = {
   season: 2026,
   location: "Danvers, MA",
   conference: "Northeastern Conference",
-  division: null,               // MIAA division for 2026 — TBD
+  division: "MIAA Division 2",  // MIAA cross country alignment for 2025-26 and 2026-27 (boys and girls)
   headCoach: "Jeff Bartlett",
   coachNote: "6th season",
   assistants: ["Andrew Russell"],
@@ -175,7 +175,7 @@ const MEETS = [
         f("Makayla Cheung", null, "26:11")
       ]
     },
-    notes: ["Saugus and Winthrop run as a combined team", "Run on the 2.9-mile home course"],
+    notes: ["Saugus and Winthrop run as a combined team", "Excel Academy also ran in the meet, per the athletic department's post", "Run on the 2.9-mile home course"],
     sources: [{ label: "Salem News roundup", url: SN + "wednesdays-area-roundup-corbetts-strong-finish-drives-panthers/article_30d4075f-7e97-48e8-8508-f8d636f3a1f2.html" }]
   },
   {
@@ -238,8 +238,11 @@ const MEETS = [
   {
     id: 9, date: "2026-10-21T16:00", opponent: "Masconomet", mascot: "Chieftains", short: "MAS",
     home: false, league: true, site: "Bradley Palmer State Park", distance: null,
-    boys: null, girls: null,
-    notes: ["Final dual meet of the regular season", "4:00 PM per the school's Arbiter Live schedule (the September schedule graphic said 4:30)"]
+    summary: "Masconomet swept the last dual meet of the regular season at Bradley Palmer State Park. The Chieftains' boys took the first five places for a perfect 15–50 score, finishing 7–0 and clinching their first Northeastern Conference title, and the Masconomet girls won 25–34.",
+    boys: { result: "L", us: 50, them: 15, check: "Danvers places and times still needed", finishers: null },
+    girls: { result: "L", us: 34, them: 25, check: "Danvers places and times still needed", finishers: null },
+    notes: ["Final dual meet of the regular season", "Team scores from the school's Arbiter Live schedule", "The Masconomet boys' first NEC title, per the Salem News"],
+    sources: [{ label: "Boys result on Arbiter Live", url: "https://www.arbiterlive.com/Teams/Schedule/9311100?activeEntityId=5538" }, { label: "Girls result on Arbiter Live", url: "https://www.arbiterlive.com/Teams/Schedule/9311101?activeEntityId=5538" }, { label: "Salem News roundup, Oct. 21", url: SN + "wednesdays-area-roundup-salem-boys-soccer-claims-first-playoff-berth-in-eight-years/article_7a036899-52f9-4d42-b3e3-91e435916861.html" }]
   },
   {
     id: 7, date: "2026-10-31T10:00", name: "NEC Championship Meet", short: "NEC",
@@ -248,16 +251,22 @@ const MEETS = [
     notes: []
   },
   {
-    id: 8, date: "2026-11-14T10:00", timeTbd: true, name: "MIAA Divisional Championships", short: "MIAA", postseason: true,
-    home: false, league: false, site: null, distance: null,
+    id: 8, date: "2026-11-14T11:00", timeTbd: true, name: "MIAA Division 2 Championships", short: "MIAA", postseason: true,
+    home: false, league: false, site: "Wrentham Developmental Center", distance: "5K",
     boys: null, girls: null,
-    notes: ["Listed as \"States\" on the team schedule", "Site, time and division to be added"]
+    notes: [
+      "Listed as \"States\" on the team schedule",
+      "Division 2 runs in three waves (A, B, C): girls at 11:00 a.m., 12:30 and 2:00 p.m., boys at 11:45 a.m., 1:15 and 2:45 p.m. Danvers' wave hasn't been announced.",
+      "The top seven teams and the top ten other individuals in each wave qualify for the state meet"
+    ],
+    sources: [{ label: "MIAA cross country schedule (PDF)", url: "https://www.miaa.net/sites/default/files/2026-03/cross-country-2026-schedule.pdf" }]
   },
   {
-    id: 14, date: "2026-11-21T10:00", timeTbd: true, name: "MIAA All-State Championships", short: "ALL", postseason: true,
-    home: false, league: false, site: null, distance: null,
+    id: 14, date: "2026-11-21T14:00", name: "MIAA State Championship Meet", short: "STA", postseason: true,
+    home: false, league: false, site: "Devens", distance: "5K",
     boys: null, girls: null,
-    notes: ["For teams and runners who qualify at the divisional meet", "Site and time to be added"]
+    notes: ["For teams and runners who qualify at the divisional meet", "Division 2 girls race at 2:00 p.m., boys at 2:45 p.m."],
+    sources: [{ label: "MIAA cross country schedule (PDF)", url: "https://www.miaa.net/sites/default/files/2026-03/cross-country-2026-schedule.pdf" }]
   }
 ];
 
@@ -269,7 +278,7 @@ const MEETS = [
    Each runner's race-by-race results are pulled automatically from the
    finishers lists in MEETS above — spell names the same in both places.
    --------------------------------------------------------------------- */
-const STATS_AS_OF = "Through 7 meets (Oct. 14, 2026)";
+const STATS_AS_OF = "Through 8 meets (Oct. 21, 2026)";
 
 const RUNNERS = [
   { name: "Marcus Morais", squad: "boys", grade: "Sr.", captain: false, pr: "18:00.4" },

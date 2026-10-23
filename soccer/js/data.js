@@ -49,6 +49,7 @@ const GIRLS_HUDL = HUDL_ORG + "752826/girls-varsity-soccer";
 const GIRLS_WATCH = GIRLS_HUDL + "/watch?ot=TEAM&oi=752826&hr=";
 const GIRLS_REPLAY = GIRLS_HUDL + "/watch?b=";
 const GIRLS_MP = "https://www.maxpreps.com/ma/soccer/girls/match/";
+const X = "https://x.com/GirlsDanvers/status/";   // the team's own posts on X
 
 const BOYS_HUDL = HUDL_ORG + "752825/boys-varsity-soccer";
 const BOYS_WATCH = BOYS_HUDL + "/watch?ot=TEAM&oi=752825&hr=";
@@ -66,7 +67,7 @@ const TEAMS = {
     division: "MIAA Division 2",
     ranking: { rank: 16, of: 63, asOf: "Oct. 20" },   // MIAA power ranking within the division
     headCoach: "Jimmy Hinchion",
-    coachNote: "28th season · 422–94–44 entering 2026",
+    coachNote: "28th season · 425th career win on Oct. 21, 2026",
     assistants: ["Ashley Gawrys", "Shawn Hills", "Taylor Orlando", "Emma Hatch (JV)"],
     links: {
       hudl: GIRLS_HUDL,
@@ -77,8 +78,8 @@ const TEAMS = {
       recordBook: "https://docs.google.com/spreadsheets/d/1aEta7OUlu2jtN1_9Fnpnbcnx-u_ATxXd1bkvDhLocrY/edit?gid=1756060361"
     },
 
-    statsAsOf: "Through 15 games (Oct. 19, 2026)",
-    statsNote: "the school doesn't publish full game stats, so goals, assists and game logs come from Salem News game recaps. Season totals for the top three scorers start from the paper's weekly leaders list and add the recaps since. (The Oct. 15 list has Emma Sutherland at 8 goals and 7 assists; her recaps add up to 7 goals and 8 assists, which is what the site shows.) Roster, jersey numbers and classes are from the school's team page.",
+    statsAsOf: "Through 16 games (Oct. 21, 2026)",
+    statsNote: "the school doesn't publish full game stats, so goals, assists and game logs come from the team's own posts on X (@GirlsDanvers) and Salem News game recaps, checked against the school's Arbiter Live game stats where they exist, and season totals are added up from the games. The paper's weekly leaders list differs by one in a few places (on Oct. 15 it had Emma Sutherland at 8 goals, where her games add up to 7 through Oct. 13); the site follows the team's game-by-game posts. Roster, jersey numbers and classes are from the school's team page.",
 
     schedule: [
       /* Scrimmages — listed on the school's schedule, not counted in the record */
@@ -104,16 +105,17 @@ const TEAMS = {
           { when: "1st half", play: "Emma Sutherland (Cassidy Randall)", score: "2–2" }
         ],
         standouts: ["Ali Doucette", "Kaia Glover"],
-        notes: ["Danvers outshot Marblehead 20–7"],
+        notes: ["Danvers outshot Marblehead 20–7", "Mia St. Pierre's first varsity goal"],
         replay: GIRLS_REPLAY + "QnJvYWRjYXN0NDM5NjcyNQ%3D%3D",
         sources: [
           { label: "Salem News roundup, Sept. 9", url: null },
+          { label: "Danvers Girls Soccer on X", url: X + "2097495320779190281" },
           { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/girls/match/danvers-vs-marblehead/9-8-2026/?c=77568c4d-2f22-425e-bcaf-b91fb7e630f0" }
         ] },
 
       { id: 2, date: "2026-09-14T16:30", opponent: "Winthrop", mascot: "Vikings", home: true, league: true, site: HOME,
         result: "W", us: 9, them: 1,
-        halves: null,
+        halves: { us: [5, 4], them: [0, 1] },
         summary: "Mia St. Pierre and Rylee Sullivan both had hat tricks, and Emma Sutherland added two goals and two assists as Danvers rolled to its first win.",
         scorers: [["Mia St. Pierre", 3], ["Rylee Sullivan", 3], ["Emma Sutherland", 2], ["Maddie Hanas", 1]],
         assists: [["Emma Sutherland", 2], ["Kaitlyn Rosa", 2], ["Ella Cangiano", 1], ["Maggie Lamar", 1]],
@@ -123,18 +125,21 @@ const TEAMS = {
         replay: GIRLS_REPLAY + "QnJvYWRjYXN0NDQyMjI1Nw%3D%3D",
         sources: [
           { label: "Salem News roundup, Sept. 14", url: null },
+          { label: "Danvers Girls Soccer on X", url: X + "2099625700567191902" },
           { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/girls/match/danvers-vs-winthrop/9-14-2026/?c=c9b7185f-d18f-4681-93af-2a5f7ca18fb2" }
         ] },
 
       { id: 3, date: "2026-09-16T16:00", opponent: "Beverly", mascot: "Panthers", home: false, league: true, site: "Beverly High School, Beverly",
         result: "L", us: 2, them: 3,
         halves: null,
-        summary: "Rylee Sullivan scored both Danvers goals in a one-goal loss on the road.",
+        summary: "Rylee Sullivan scored both Danvers goals and the Falcons led 2–1, but Beverly came back to win by a goal. Taylor Landry played well in goal.",
         scorers: [["Rylee Sullivan", 2]],
         assists: [],
-        notes: [],
+        standouts: ["Taylor Landry"],
+        notes: ["Danvers led 2–1 before Beverly scored twice"],
         sources: [
           { label: "Salem News Athlete of the Week, Sept. 23", url: null },
+          { label: "Danvers Girls Soccer on X", url: X + "2100354234021511653" },
           { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/girls/match/beverly-vs-danvers/9-16-2026/?c=9db0d860-ee7f-47a9-b656-b39ae5e6c2e8" }
         ] },
 
@@ -154,39 +159,44 @@ const TEAMS = {
         replay: GIRLS_REPLAY + "QnJvYWRjYXN0NDQ2MjIzMA%3D%3D",
         sources: [
           { label: "Salem News roundup", url: "https://www.salemnews.com/sports/fridays-area-roundup-sutherland-nets-the-game-winner-for-danvers-girls-soccer/article_c44299e5-4c84-4466-8763-1a39f5668cb5.html" },
+          { label: "Danvers Girls Soccer on X", url: X + "2101104164214653233" },
           { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/girls/match/danvers-vs-north-reading/9-18-2026/?c=eb038759-92c2-41af-8598-df1887b3cd33" }
         ] },
 
       { id: 5, date: "2026-09-21T16:00", opponent: "Masconomet", mascot: "Chieftains", home: false, league: true, site: "Masconomet Regional, Boxford",
         result: "L", us: 1, them: 5,
         halves: null,
+        summary: "A tough loss to a very talented Masconomet team. Mia St. Pierre scored a beautiful goal and played well in the middle of the field.",
         scorers: [["Mia St. Pierre", 1]],
         assists: [],
-        notes: [
-          "No recap was published. The goal is credited to Mia St. Pierre because the Salem News leaders list gives her one more goal than the other recaps account for — confirm with the team."
-        ],
+        standouts: ["Mia St. Pierre"],
+        notes: [],
         video: GIRLS_WATCH + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2YWJhMzZmYjU2NWUyYzcxNzI0MDM4YTA%3D",
-        sources: [{ label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/girls/match/danvers-vs-masconomet-regional-boxford/9-21-2026/?c=ff57359e-31d3-4935-b469-31ea06c3b12f" }] },
+        sources: [
+          { label: "Danvers Girls Soccer on X", url: X + "2102154083750551992" },
+          { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/girls/match/danvers-vs-masconomet-regional-boxford/9-21-2026/?c=ff57359e-31d3-4935-b469-31ea06c3b12f" }
+        ] },
 
       { id: 6, date: "2026-09-23T17:30", opponent: "Saugus", mascot: "Sachems", home: true, league: true, site: HOME,
         result: "W", us: 6, them: 0,
-        halves: null,
+        halves: { us: [3, 3], them: [0, 0] },
         summary: "Kaia Glover scored twice and Mia St. Pierre had a goal and two assists in a home shutout. Goalkeepers Taylor Landry and Stella Shairs shared the clean sheet.",
         scorers: [["Kaia Glover", 2], ["Mia St. Pierre", 1], ["Rylee Sullivan", 1], ["Maggie Lamar", 1], ["Emma Sutherland", 1]],
         assists: [["Mia St. Pierre", 2], ["Rylee Sullivan", 1], ["Maggie Lamar", 1]],
         shutout: ["Taylor Landry", "Stella Shairs"],
         standouts: ["Maddie Hanas", "Ali Doucette", "Ella Cangiano", "Scarlet Chung"],
-        notes: [],
+        notes: ["The team's post also credits an assist to Paige, who isn't on the varsity roster"],
         video: GIRLS_WATCH + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2YWI4MGRkZDU2NWUyYzcxNzIzMjhiZDg%3D",
         replay: GIRLS_REPLAY + "QnJvYWRjYXN0NDQ5MjE2NA%3D%3D",
         sources: [
           { label: "Salem News roundup, Sept. 23", url: null },
+          { label: "Danvers Girls Soccer on X", url: X + "2102910796091015403" },
           { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/girls/match/danvers-vs-saugus/9-23-2026/?c=2d1e5f1b-b447-4004-a031-2bd7eb7b79bc" }
         ] },
 
       { id: 7, date: "2026-09-25T16:00", opponent: "Melrose", mascot: "Red Hawks", home: true, league: false, site: MORSE,
         result: "T", us: 1, them: 1,
-        halves: null,
+        halves: { us: [0, 1], them: [1, 0] },
         summary: "Nine minutes into the second half, Mia St. Pierre took a feed from Emma Sutherland and scored the tying goal.",
         scorers: [["Mia St. Pierre", 1]],
         assists: [["Emma Sutherland", 1]],
@@ -197,24 +207,26 @@ const TEAMS = {
         replay: GIRLS_REPLAY + "QnJvYWRjYXN0NDUwNzQ0OA%3D%3D",
         sources: [
           { label: "Salem News roundup, Sept. 25", url: null },
+          { label: "Danvers Girls Soccer on X", url: X + "2103616918863454313" },
           { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/girls/match/danvers-vs-melrose-red-hawks/9-25-2026/?c=8aac035f-eba0-4dfe-b882-0b824e5775a6" }
         ] },
 
       { id: 8, date: "2026-09-28T16:00", opponent: "Peabody", mascot: "Tanners", home: false, league: true, site: "Peabody Veterans Memorial HS, Peabody",
         result: "W", us: 2, them: 1,
         halves: { us: [1, 1], them: [1, 0] },
-        summary: "Emma Sutherland assisted on both goals — Rylee Sullivan's equalizer before halftime and Mia St. Pierre's winner in the first minute of the second half — as the Falcons stretched their unbeaten run to three.",
+        summary: "In a rain and wind storm, Rylee Sullivan tied it before halftime off an Emma Sutherland pass, then set up Mia St. Pierre's winner in the first minute of the second half as the Falcons stretched their unbeaten run to three.",
         scorers: [["Rylee Sullivan", 1], ["Mia St. Pierre", 1]],
-        assists: [["Emma Sutherland", 2]],
+        assists: [["Emma Sutherland", 1], ["Rylee Sullivan", 1]],
         plays: [
           { when: "1st half", play: "Rylee Sullivan (Emma Sutherland)", score: "1–1" },
-          { when: "41'", play: "Mia St. Pierre (Emma Sutherland)", score: "2–1" }
+          { when: "41'", play: "Mia St. Pierre (Rylee Sullivan)", score: "2–1" }
         ],
         standouts: ["Ali Doucette", "Maddie Hanas", "Maggie Lamar", "Raegan Cassidy", "Kaia Glover"],
         notes: [],
         replay: GIRLS_REPLAY + "QnJvYWRjYXN0NDQ2MjIyNg%3D%3D",
         sources: [
           { label: "Salem News roundup, Sept. 28", url: null },
+          { label: "Danvers Girls Soccer on X", url: X + "2104697292322115833" },
           { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/girls/match/danvers-vs-peabody-veterans-memorial/9-28-2026/?c=63a0fedc-525d-4b84-9f4d-b7d311d18ad1" }
         ] },
 
@@ -237,16 +249,17 @@ const TEAMS = {
         halves: null,
         summary: "Rylee Sullivan scored with five minutes left to earn a draw on the road. Emma Sutherland had put Danvers ahead in the 12th minute, and the Falcons held a big edge in shots on goal.",
         scorers: [["Emma Sutherland", 1], ["Rylee Sullivan", 1]],
-        assists: [],
+        assists: [["Rylee Sullivan", 1]],
         plays: [
-          { when: "12'", play: "Emma Sutherland", score: "1–0" },
-          { when: "75'", play: "Rylee Sullivan", score: "2–2" }
+          { when: "12'", play: "Emma Sutherland (Rylee Sullivan)", score: "1–0" },
+          { when: "75'", play: "Rylee Sullivan, penalty kick", score: "2–2" }
         ],
         standouts: ["Kaia Glover", "Ella Cangiano"],
         notes: [],
         video: GIRLS_WATCH + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2YWMyNmY1Y2U1N2Q2YTZiOWI0OTRkYTk%3D",
         sources: [
           { label: "Salem News roundup, Oct. 2", url: null },
+          { label: "Danvers Girls Soccer on X", url: X + "2106169059670892560" },
           { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/girls/match/bishop-fenwick-peabody-vs-danvers/10-2-2026/?c=8aa9be7f-dea8-417a-b8bd-1bf0a17ff16f" }
         ] },
 
@@ -255,23 +268,24 @@ const TEAMS = {
         halves: { us: [1, 2], them: [0, 0] },
         summary: "In what coach Jimmy Hinchion called his team's best win of the season, Rylee Sullivan scored in the first half and Mia St. Pierre and Emma Sutherland added goals after the break. Taylor Landry earned the shutout in goal.",
         scorers: [["Rylee Sullivan", 1], ["Mia St. Pierre", 1], ["Emma Sutherland", 1]],
-        assists: [],
+        assists: [["Rylee Sullivan", 2], ["Emma Sutherland", 1]],
         shutout: ["Taylor Landry"],
         plays: [
-          { when: "1st half", play: "Rylee Sullivan", score: "1–0" },
-          { when: "2nd half", play: "Mia St. Pierre", score: "2–0" },
-          { when: "2nd half", play: "Emma Sutherland", score: "3–0" }
+          { when: "1st half", play: "Rylee Sullivan (Emma Sutherland)", score: "1–0" },
+          { when: "2nd half", play: "Mia St. Pierre (Rylee Sullivan)", score: "2–0" },
+          { when: "2nd half", play: "Emma Sutherland (Rylee Sullivan)", score: "3–0" }
         ],
         standouts: ["Maddie Hanas", "Kaia Glover", "Maggie Lamar"],
         notes: [],
         sources: [
           { label: "Salem News roundup, Oct. 5", url: null },
+          { label: "Danvers Girls Soccer on X", url: X + "2107237857806922097" },
           { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/girls/match/danvers-vs-swampscott/10-5-2026/?c=02153da1-cb12-4eea-8264-ee710ab1bc7f" }
         ] },
 
       { id: 12, date: "2026-10-10T18:00", opponent: "Lynnfield", mascot: "Pioneers", home: true, league: false, site: HOME,
         result: "W", us: 4, them: 0,
-        halves: null,
+        halves: { us: [2, 2], them: [0, 0] },
         summary: "In what coach Jimmy Hinchion called the team's most complete game of the season, Rylee Sullivan scored twice, Mia St. Pierre had a goal and an assist, and Taylor Landry kept another clean sheet.",
         scorers: [["Rylee Sullivan", 2], ["Mia St. Pierre", 1], ["Maggie Lamar", 1]],
         assists: [["Mia St. Pierre", 1], ["Emma Sutherland", 1], ["Sophia Blodgett", 1]],
@@ -279,7 +293,7 @@ const TEAMS = {
         notes: [],
         video: GIRLS_WATCH + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2YWNkNDQzM2U0N2VmMzkwYmY3MjBhMzU%3D",
         replay: GIRLS_REPLAY + "QnJvYWRjYXN0NDYwNjc3MQ%3D%3D",
-        sources: [{ label: "Salem News roundup, Oct. 11", url: null }, { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/girls/match/danvers-vs-lynnfield/10-10-2026/?c=9a0b9792-d8c2-4784-bd1d-8e479647cbcd" }] },
+        sources: [{ label: "Salem News roundup, Oct. 11", url: null }, { label: "Danvers Girls Soccer on X", url: X + "2109079255401607219" }, { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/girls/match/danvers-vs-lynnfield/10-10-2026/?c=9a0b9792-d8c2-4784-bd1d-8e479647cbcd" }] },
 
       { id: 13, date: "2026-10-13T18:30", opponent: "Beverly", mascot: "Panthers", home: true, league: true, site: HOME,
         result: "L", us: 0, them: 2,
@@ -290,7 +304,7 @@ const TEAMS = {
         notes: [],
         video: GIRLS_WATCH + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2YWQwYzg0YjkyMTNhY2YxMDlmN2RlNDU%3D",
         replay: GIRLS_REPLAY + "QnJvYWRjYXN0NDYxOTA0Ng%3D%3D",
-        sources: [{ label: "Salem News roundup, Oct. 13", url: null }, { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/girls/match/beverly-vs-danvers/10-13-2026/?c=4bf97627-a495-4524-9478-f7862595213a" }] },
+        sources: [{ label: "Salem News roundup, Oct. 13", url: null }, { label: "Danvers Girls Soccer on X", url: X + "2110173343882342743" }, { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/girls/match/beverly-vs-danvers/10-13-2026/?c=4bf97627-a495-4524-9478-f7862595213a" }] },
 
       { id: 14, date: "2026-10-17T15:00", opponent: "Andover", mascot: "Golden Warriors", home: false, league: false, site: "Lovely Stadium, Andover",
         result: "T", us: 1, them: 1,
@@ -316,7 +330,24 @@ const TEAMS = {
           { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/girls/match/danvers-vs-salem/10-19-2026/?c=56ac466e-b500-4c56-b53d-0b6e3227390e" }
         ] },
 
-      { id: 16, date: "2026-10-21T18:30", opponent: "Masconomet", mascot: "Chieftains", home: true, league: true, site: HOME, result: null, notes: [] },
+      { id: 16, date: "2026-10-21T18:30", opponent: "Masconomet", mascot: "Chieftains", home: true, league: true, site: HOME,
+        result: "W", us: 3, them: 2,
+        halves: null,
+        summary: "On Pink Out night, Rylee Sullivan, Emma Sutherland and Mia St. Pierre scored and the Falcons held a 3–2 lead through the last 15 minutes to beat Masconomet, a month after losing 5–1 in Boxford. The win clinched a state tournament berth for the 35th straight season and was coach Jimmy Hinchion's 425th career victory.",
+        scorers: [["Rylee Sullivan", 1], ["Emma Sutherland", 1], ["Mia St. Pierre", 1]],
+        assists: [["Rylee Sullivan", 1], ["Kaia Glover", 1], ["Ali Doucette", 1]],
+        notes: [
+          "Clinched a spot in the MIAA tournament for the 35th year in a row, which the team calls the longest streak in Eastern Mass.",
+          "Jimmy Hinchion's 425th career win",
+          "Pink Out game for Breast Cancer Awareness Month",
+          "Masconomet came in 11–1–2 and won the first meeting 5–1 on Sept. 21",
+          "Goals and assists are from the team's own post; the order of the goals wasn't reported"
+        ],
+        replay: GIRLS_REPLAY + "QnJvYWRjYXN0NDY1OTc2NA%3D%3D",
+        sources: [
+          { label: "Danvers Girls Soccer on X", url: X + "2113068827408056577" },
+          { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/girls/match/danvers-vs-masconomet-regional-boxford/10-21-2026/?c=b30f279d-1ca6-4537-9dd2-26ca53204cbf" }
+        ] },
       { id: 17, date: "2026-10-26T18:30", opponent: "Peabody", mascot: "Tanners", home: true, league: true, site: HOME, result: null, notes: [] },
       { id: 18, date: "2026-10-28T16:30", opponent: "Gloucester", mascot: "Fishermen", home: false, league: true, site: "Newell Stadium, Gloucester", result: null, notes: [] },
 
@@ -334,9 +365,9 @@ const TEAMS = {
                adds them up from the game recaps above.
        ----------------------------------------------------------------- */
     players: [
-      { name: "Emma Sutherland", num: 5, pos: ["F"], grade: "Sr.", captain: true, totals: { g: 7, a: 8 } },
-      { name: "Rylee Sullivan", num: 9, pos: ["F"], grade: "So.", captain: false, totals: { g: 12, a: 5 } },
-      { name: "Mia St. Pierre", num: 20, pos: ["M"], grade: "Jr.", captain: false, totals: { g: 11, a: 5 } },
+      { name: "Emma Sutherland", num: 5, pos: ["F"], grade: "Sr.", captain: true },
+      { name: "Rylee Sullivan", num: 9, pos: ["F"], grade: "So.", captain: false },
+      { name: "Mia St. Pierre", num: 20, pos: ["M"], grade: "Jr.", captain: false },
       { name: "Maddie Hanas", num: 3, pos: ["D", "F"], grade: "Jr.", captain: true },
       { name: "Ali Doucette", num: 24, pos: ["D"], grade: "Jr.", captain: true },
       { name: "Cassidy Randall", num: 2, pos: ["D"], grade: "Jr.", captain: true },
@@ -358,7 +389,7 @@ const TEAMS = {
        HISTORY — from the school's athletics page and the Danvers High
        Girls Soccer Record Book.
        ----------------------------------------------------------------- */
-    historyIntro: "A state championship, 18 conference titles and 33 straight trips to the state tournament — the seasons and the players behind one of the North Shore's most consistent programs.",
+    historyIntro: "A state championship, 18 conference titles and 35 straight trips to the state tournament — the seasons and the players behind one of the North Shore's most consistent programs.",
     banners: [
       { year: 2017, label: "MIAA D2 State Champions" },
       { year: 2009, label: "North Sectional Champions" },
@@ -367,7 +398,7 @@ const TEAMS = {
       { year: 2002, label: "North Sectional Champions" }
     ],
     necTitles: [1995, 1996, 1998, 2000, 2001, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2012, 2013, 2017, 2018, 2019, 2021],
-    historyTile: ["State tournaments", "33", "Straight MIAA tournament appearances"],
+    historyTile: ["State tournaments", "35", "Straight MIAA tournament trips, through 2026"],
     historyNote: "Title years follow the school's athletics page. The record book also lists the unbeaten 2020 season as an NEC title.",
 
     /* [year, wins, losses, ties, coach, NEC finish, postseason] — null record = not in the record book */
@@ -519,7 +550,7 @@ const TEAMS = {
       recordBook: "https://docs.google.com/spreadsheets/d/18a7tVEOYReMH80QCl6_rTqgiZfDyWE195MJkjmbHhLQ/edit?gid=1756060361"
     },
 
-    statsAsOf: "Through 14 games (Oct. 19, 2026)",
+    statsAsOf: "Through 15 games (Oct. 21, 2026)",
     statsNote: "the school doesn't publish full game stats, so goals, assists and game logs come from Salem News game recaps — the scorer of the Oct. 16 goal at Gloucester wasn't reported. Roster, jersey numbers and classes are from the school's team page; positions are known only for the captains.",
 
     schedule: [
@@ -568,7 +599,7 @@ const TEAMS = {
 
       { id: 5, date: "2026-09-21T16:00", opponent: "Masconomet", mascot: "Chieftains", home: true, league: true, site: HOME,
         result: "L", us: 0, them: 7,
-        halves: null,
+        halves: { us: [0, 0], them: [4, 3] },
         scorers: [], assists: [],
         notes: ["Masconomet came in unbeaten"],
         video: BOYS_WATCH + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2YWI1MDFmNDk5NTc1MDYwMzM3MGQzNjU%3D",
@@ -651,7 +682,11 @@ const TEAMS = {
         summary: "The Falcons led 1–0 at halftime, but Gloucester tied it on a shot that deflected off a Danvers defender and won it about five minutes from the end off a corner kick. \"Danvers is a nice young team, they put up a good fight,\" Gloucester coach Armando Marnoto said.",
         scorers: [], assists: [],
         notes: ["Danvers' goal scorer wasn't named in the recap", "The first of two meetings with Gloucester; the Oct. 28 game is the NEC one"],
-        sources: [{ label: "Area roundup, Oct. 18", url: null }, { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/match/danvers-vs-gloucester/10-16-2026/?c=c3e0e5c5-02fb-4af2-b37a-c11e670ee07b" }] },
+        sources: [
+          { label: "Area roundup, Oct. 18", url: null },
+          { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/match/danvers-vs-gloucester/10-16-2026/?c=c3e0e5c5-02fb-4af2-b37a-c11e670ee07b" },
+          { label: "Full-game replay on NFHS Network", url: "https://www.nfhsnetwork.com/events/gloucester-high-school-gloucester-ma/gama87b0df8a2" }
+        ] },
 
       { id: 14, date: "2026-10-19T17:30", opponent: "Salem", mascot: "Witches", home: true, league: true, site: HOME,
         result: "L", us: 0, them: 2,
@@ -659,10 +694,17 @@ const TEAMS = {
         summary: "A scoreless first half gave way to two second-half goals from Salem senior captain Henry Beauparlant.",
         scorers: [], assists: [],
         notes: [],
+        video: BOYS_WATCH + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2YWQ5YzFjY2RlNzVlNzkzNmQ1ZmViOTA%3D",
         replay: BOYS_REPLAY + "QnJvYWRjYXN0NDY1NTQ1Mw%3D%3D",
         sources: [{ label: "Salem News roundup, Oct. 19", url: null }, { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/match/danvers-vs-salem/10-19-2026/?c=0e4ae061-c418-407b-b2c5-b3089fe6e0aa" }] },
 
-      { id: 15, date: "2026-10-21T16:00", opponent: "Masconomet", mascot: "Chieftains", home: false, league: true, site: "Masconomet Regional, Boxford", result: null, notes: [] },
+      { id: 15, date: "2026-10-21T16:00", opponent: "Masconomet", mascot: "Chieftains", home: false, league: true, site: "Masconomet Regional, Boxford",
+        result: "L", us: 0, them: 7,
+        halves: null,
+        summary: "Masconomet won 7–0 on its home field, the same score as the first meeting in Danvers.",
+        scorers: [], assists: [],
+        notes: ["Second meeting — Masconomet also won 7–0 on Sept. 21"],
+        sources: [{ label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/match/danvers-vs-masconomet-regional-boxford/10-21-2026/?c=72a09f70-101c-453e-998a-ab39c39bedac" }] },
       { id: 16, date: "2026-10-26T16:00", opponent: "Peabody", mascot: "Tanners", home: false, league: true, site: "Peabody Veterans Memorial HS, Peabody", result: null, notes: [] },
       { id: 17, date: "2026-10-28T18:30", opponent: "Gloucester", mascot: "Fishermen", home: true, league: true, site: HOME, result: null, notes: [] },
       { id: 18, date: "2026-10-30T18:30", opponent: "Essex Tech", mascot: "Hawks", home: true, league: false, site: MORSE, result: null, notes: [] }
@@ -808,6 +850,7 @@ const TEAMS = {
     records: null,
 
     videos: [
+      { title: "Danvers vs. Salem", sub: "Game Recap", season: 2026, len: "1:17", url: BOYS_WATCH + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2YWQ5YzFjY2RlNzVlNzkzNmQ1ZmViOTA%3D" },
       { title: "Danvers vs. Swampscott", sub: "Game Recap", season: 2026, len: "0:47", url: BOYS_WATCH + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2YWM2YzNjZjA5M2Y3MjQ1NGUxZDc1MTk%3D" },
       { title: "Danvers vs. Marblehead", sub: "Game Recap", season: 2026, len: "0:46", url: BOYS_WATCH + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2YWMwMDRmNGM0NGFmNDUyMWFkYzgzNTk%3D" },
       { title: "Danvers vs. Peabody", sub: "Game Recap", season: 2026, len: "0:32", url: BOYS_WATCH + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2YWJkNjhhZDI5MmYxMDIzODVhZmI0YWE%3D" },

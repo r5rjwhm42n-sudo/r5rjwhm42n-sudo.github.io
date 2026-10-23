@@ -84,7 +84,7 @@ const SCHEDULE = [
     notes: ["Season opener and Sarah Griffin's first match as head coach"],
     sources: [
       { label: "MaxPreps box score", url: MP + "barnstable-hyannis-vs-danvers/9-7-2026/?c=fa299626-1812-472e-871b-a1cf2d75c92c" },
-      { label: "Full-match replay on Hudl", url: HUDL_TEAM + "/video" }
+      { label: "Full-match replay on Hudl", url: HUDL_TEAM + "/watch?b=QnJvYWRjYXN0NDM4NTc2Mw%3D%3D" }
     ] },
 
   { id: 2, date: "2026-09-09T17:15", opponent: "Triton", mascot: "Vikings", home: false, league: false, site: "Triton Regional HS, Byfield",
@@ -216,7 +216,8 @@ const SCHEDULE = [
     notes: ["Rivalry match", "First conference win of the season", "Beverly won the rematch in five sets on Oct. 19"],
     sources: [
       { label: "Salem News roundup, Sept. 23", url: null },
-      { label: "MaxPreps box score", url: MP + "beverly-vs-danvers/9-23-2026/?c=15a06c0b-ee40-4541-972a-4bbff2df95b3" }
+      { label: "MaxPreps box score", url: MP + "beverly-vs-danvers/9-23-2026/?c=15a06c0b-ee40-4541-972a-4bbff2df95b3" },
+      { label: "Match replay on NFHS Network", url: "https://www.nfhsnetwork.com/events/danvers-high-school-danvers-ma/gam1123b82d64" }
     ] },
 
   { id: 8, date: "2026-09-25T17:30", opponent: "Peabody", mascot: "Tanners", home: false, league: true, site: "Peabody Veterans Memorial HS",
@@ -236,7 +237,7 @@ const SCHEDULE = [
     notes: ["Gabrielle Lindeman does not appear in the box score for this match"],
     sources: [
       { label: "MaxPreps box score", url: MP + "danvers-vs-peabody-veterans-memorial/9-25-2026/?c=c2fb8032-37cb-47cb-899a-c0701c7e0b3c" },
-      { label: "Full-match replay on Hudl", url: HUDL_TEAM + "/video" }
+      { label: "Full-match replay on Hudl", url: HUDL_TEAM + "/watch?b=QnJvYWRjYXN0NDM4Mjg5Nw%3D%3D" }
     ] },
 
   { id: 9, date: "2026-09-28T17:30", opponent: "Saugus", mascot: "Sachems", home: false, league: true, site: "Saugus Middle High School",
@@ -314,7 +315,7 @@ const SCHEDULE = [
     notes: ["Eighth win in a row", "Third five-set win of the season"],
     sources: [
       { label: "MaxPreps box score", url: MP + "danvers-vs-winthrop/10-7-2026/?c=dcf22755-2d21-4eff-85fa-da4ecd248e0a" },
-      { label: "Full-match replay on Hudl", url: HUDL_TEAM + "/video" }
+      { label: "Full-match replay on Hudl", url: HUDL_TEAM + "/watch?b=QnJvYWRjYXN0NDU1MDA1Mg%3D%3D" }
     ] },
 
   { id: 13, date: "2026-10-09T17:30", opponent: "Stoneham", mascot: "Spartans", home: false, league: false, site: "Stoneham High School",
@@ -335,7 +336,7 @@ const SCHEDULE = [
     notes: ["Ninth win in a row", "Season sweep of Stoneham"],
     sources: [
       { label: "MaxPreps box score", url: MP + "danvers-vs-stoneham/10-9-2026/?c=91ec865f-4aee-4be8-94c8-328c4e288385" },
-      { label: "Full-match replay on Hudl", url: HUDL_TEAM + "/video" }
+      { label: "Full-match replay on Hudl", url: HUDL_TEAM + "/watch?b=QnJvYWRjYXN0NDM0MjIyOQ%3D%3D" }
     ] },
 
   { id: 14, date: "2026-10-12T10:30", opponent: "Mystic Valley", mascot: "Eagles", home: true, league: false, site: HOME,
@@ -406,7 +407,29 @@ const SCHEDULE = [
       { label: "MaxPreps box score", url: MP + "beverly-vs-danvers/10-19-2026/?c=397f2426-aeda-4d7a-b961-d8db165946e7" }
     ] },
 
-  { id: 17, date: "2026-10-21T17:15", opponent: "Swampscott", mascot: "Big Blue", home: true, league: true, site: HOME, result: null, notes: [] },
+  { id: 17, date: "2026-10-21T17:15", opponent: "Swampscott", mascot: "Big Blue", home: true, league: true, site: HOME,
+    result: "L", us: 2, them: 3,
+    sets: [[26, 24], [25, 18], [15, 25], [19, 25], [8, 15]],
+    summary: "Danvers took the first two sets, 26–24 and 25–18, but Swampscott won the next three. Gabrielle Lindeman dug 37 balls and took 28 serve receptions, Lauren Garofalo had nine kills and 18 digs, Brooke Bernard eight kills, Kendall Murphy seven kills without an error, and Hannah Tersolo 20 assists.",
+    box: {
+      "Lauren Garofalo":    [5, 9, 0, 0, 18, 0, 39, 8, 23],
+      "Brooke Bernard":     [5, 8, 0, 1, 3, 0, 20, 2, 0],
+      "Kendall Murphy":     [5, 7, 1, 1, 4, 0, 21, 0, 0],
+      "Gabrielle Lindeman": [5, 6, 2, 0, 37, 1, 31, 2, 28],
+      "Gracie Monteiro":    [5, 3, 0, 0, 6, 0, 11, 3, 0],
+      "Sienna Lynch":       [5, 1, 0, 1, 4, 0, 15, 1, 0],
+      "Hadley Brown":       [5, 1, 4, 0, 16, 5, 4, 0, 39],
+      "Hannah Tersolo":     [5, 1, 4, 0, 18, 20, 6, 1, 0],
+      "Tess Crowley":       [2, 1, 0, 0, 2, 0, 3, 1, 0],
+      "Lila Osborne":       [5, 0, 0, 0, 4, 9, 5, 1, 0],
+      "Emma Coffin":        [5, 0, 2, 0, 4, 0, 0, 0, 2]
+    },
+    notes: [
+      "Lindeman's 37 digs are ten more than the single-match record of 27 listed in the program's record book",
+      "Third straight loss, after a 10-match winning streak",
+      "116 digs as a team"
+    ],
+    sources: [{ label: "MaxPreps box score", url: MP + "danvers-vs-swampscott/10-21-2026/?c=5ec3bd19-91ce-48d1-880c-a8c1dc25bff9" }] },
   { id: 18, date: "2026-10-26T17:15", opponent: "Peabody", mascot: "Tanners", home: true, league: true, site: HOME, result: null,
     notes: ["Second meeting — Danvers won 3–1 on Sept. 25"] },
   { id: 19, date: "2026-10-28T17:15", opponent: "Masconomet", mascot: "Chieftains", home: true, league: true, site: HOME, result: null,
@@ -427,7 +450,7 @@ const SCHEDULE = [
    Names, numbers, grades and positions are from the team's MaxPreps
    roster; captains are from the Salem News preview (Sept. 11).
    --------------------------------------------------------------------- */
-const STATS_AS_OF = "Through 16 matches (Oct. 19, 2026)";
+const STATS_AS_OF = "Through 17 matches (Oct. 21, 2026)";
 const STATS_NOTE = "every number here is added up from the team's MaxPreps box scores, match by match, and matches the team's MaxPreps season stat sheet. Hitting percentage is (kills − attack errors) ÷ attempts. Digs reported to the Salem News are sometimes higher than the MaxPreps box score for the same match; this site uses MaxPreps throughout.";
 
 const PLAYERS = [
@@ -562,26 +585,28 @@ const RECORDS = {
    To add photos: drop image files in /photos and list them in PHOTOS.
    Example: { src: "photos/beverly-01.jpg", caption: "Lindeman attacks vs. Beverly" }
    --------------------------------------------------------------------- */
+const HL = HUDL_TEAM + "/watch?ot=TEAM&oi=752824&hr=";   // highlight / recap videos
+const RP = HUDL_TEAM + "/watch?b=";                        // full-match livestream replays
 const VIDEOS = [
-  { title: "Danvers at Stoneham", sub: "Full-Match Replay · Oct. 9", season: 2026, len: "Replay", url: null },
-  { title: "Danvers at Winthrop", sub: "Full-Match Replay · Oct. 7", season: 2026, len: "Replay", url: null },
-  { title: "Danvers at Peabody", sub: "Full-Match Replay · Sept. 25", season: 2026, len: "Replay", url: null },
-  { title: "Danvers at Triton", sub: "Match Recap · Sept. 9", season: 2026, len: "2:02", url: null },
-  { title: "Danvers at Barnstable", sub: "Full-Match Replay · Sept. 7", season: 2026, len: "Replay", url: null },
-  { title: "Danvers vs. Bishop Fenwick", sub: "Highlights · Oct. 24", season: 2025, len: "1:38", url: null },
-  { title: "Danvers vs. Marblehead", sub: "Highlights · Oct. 21", season: 2025, len: "1:38", url: null },
-  { title: "Danvers vs. Andover", sub: "Highlights · Oct. 9", season: 2025, len: "1:38", url: null },
-  { title: "Danvers vs. Bishop Fenwick", sub: "Highlights · Sept. 5", season: 2025, len: "1:38", url: null },
-  { title: "Danvers vs. Peabody", sub: "Highlights · Sept. 3", season: 2025, len: "1:38", url: null },
-  { title: "Danvers vs. Taconic", sub: "Tournament Highlights · Nov. 1", season: 2024, len: "1:38", url: null },
-  { title: "Danvers vs. Billerica", sub: "Highlights · Oct. 25", season: 2024, len: "1:38", url: null },
-  { title: "Danvers vs. Marblehead", sub: "Highlights · Oct. 22", season: 2024, len: "1:38", url: null },
-  { title: "Danvers vs. Wakefield", sub: "Highlights · Oct. 21", season: 2024, len: "1:38", url: null },
-  { title: "Danvers vs. Andover", sub: "Highlights · Oct. 19", season: 2024, len: "1:38", url: null },
-  { title: "Danvers vs. Ipswich", sub: "Highlights · Oct. 18", season: 2024, len: "1:38", url: null },
-  { title: "Danvers vs. Masconomet", sub: "Highlights · Oct. 16", season: 2024, len: "1:38", url: null },
-  { title: "Danvers vs. Beverly", sub: "Highlights · Oct. 7", season: 2024, len: "1:38", url: null },
-  { title: "Danvers vs. Saugus", sub: "Highlights · Sept. 6", season: 2024, len: "1:38", url: null }
+  { title: "Danvers at Stoneham", sub: "Full-Match Replay · Oct. 9", season: 2026, len: "Replay", url: RP + "QnJvYWRjYXN0NDM0MjIyOQ%3D%3D" },
+  { title: "Danvers at Winthrop", sub: "Full-Match Replay · Oct. 7", season: 2026, len: "Replay", url: RP + "QnJvYWRjYXN0NDU1MDA1Mg%3D%3D" },
+  { title: "Danvers at Peabody", sub: "Full-Match Replay · Sept. 25", season: 2026, len: "Replay", url: RP + "QnJvYWRjYXN0NDM4Mjg5Nw%3D%3D" },
+  { title: "Danvers at Triton", sub: "Match Recap · Sept. 9", season: 2026, len: "2:02", url: HL + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2YWEyNTMzZDRkM2JhOGM1YzdhZTVhZjM%3D" },
+  { title: "Danvers at Barnstable", sub: "Full-Match Replay · Sept. 7", season: 2026, len: "Replay", url: RP + "QnJvYWRjYXN0NDM4NTc2Mw%3D%3D" },
+  { title: "Danvers vs. Bishop Fenwick", sub: "Highlights · Oct. 24", season: 2025, len: "1:38", url: HL + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2OTA3YmFmZGQxMGExMTA5MGJhNGNmNjU%3D" },
+  { title: "Danvers vs. Marblehead", sub: "Highlights · Oct. 21", season: 2025, len: "1:38", url: HL + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2OTAxZWM3MmRlNDkwYjQwZWMyYWViZjk%3D" },
+  { title: "Danvers vs. Andover", sub: "Highlights · Oct. 9", season: 2025, len: "1:38", url: HL + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2OTAxMmI1YzQ0NmNmYWQ2ZjA0Y2FiMDU%3D" },
+  { title: "Danvers vs. Bishop Fenwick", sub: "Highlights · Sept. 5", season: 2025, len: "1:38", url: HL + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2OGJjNTJmOWM2MWFjMWZiZGEzNzczYTA%3D" },
+  { title: "Danvers vs. Peabody", sub: "Highlights · Sept. 3", season: 2025, len: "1:38", url: HL + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2OGMyMjk2NGE1NjQwZDFmZGRmY2NlOGU%3D" },
+  { title: "Danvers vs. Taconic", sub: "Tournament Highlights · Nov. 1", season: 2024, len: "1:38", url: HL + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2NzYyYjA3MDZiNWE5ZDA4MGQzYTY4NDQ%3D" },
+  { title: "Danvers vs. Billerica", sub: "Highlights · Oct. 25", season: 2024, len: "1:38", url: HL + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2NzFkZGUxOWVmNTQ2MDk1NGZlYjM5ZWM%3D" },
+  { title: "Danvers vs. Marblehead", sub: "Highlights · Oct. 22", season: 2024, len: "1:38", url: HL + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2NzFiNTQ4NDYyN2FlM2NhNjdkNWM0OTU%3D" },
+  { title: "Danvers vs. Wakefield", sub: "Highlights · Oct. 21", season: 2024, len: "1:38", url: HL + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2NzE4ZTMwMjg5MDJhOTJmY2RlZDlhYjM%3D" },
+  { title: "Danvers vs. Andover", sub: "Highlights · Oct. 19", season: 2024, len: "1:38", url: HL + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2NzI0NGUyY2I2NmNjNDBmNzkyNzQzOTE%3D" },
+  { title: "Danvers vs. Ipswich", sub: "Highlights · Oct. 18", season: 2024, len: "1:38", url: HL + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2NzE4ZDc1MGZiNDliNDAzYjBiNWZkMTg%3D" },
+  { title: "Danvers vs. Masconomet", sub: "Highlights · Oct. 16", season: 2024, len: "1:38", url: HL + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2NzEwZTcwZGI4MGMyYzFhZjdiY2EzYzY%3D" },
+  { title: "Danvers vs. Beverly", sub: "Highlights · Oct. 7", season: 2024, len: "1:38", url: HL + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2NzIzM2I2NjNlNmQwMWYyYzI4YWZjZjY%3D" },
+  { title: "Danvers vs. Saugus", sub: "Highlights · Sept. 6", season: 2024, len: "1:38", url: HL + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2NzI1ZmRmMWI2NmNjNDBmNzkyODkzMjk%3D" }
 ];
 
 const PHOTOS = [];

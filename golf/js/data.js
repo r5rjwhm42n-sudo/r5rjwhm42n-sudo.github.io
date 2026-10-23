@@ -67,10 +67,10 @@ const SCHEDULE = [
 
   { id: 2, date: "2026-09-01T13:00", opponent: "St. Mary's", mascot: "Spartans", home: false, league: false, site: "Gannon Golf Course, Lynn",
     format: "stableford", result: "L", us: 170, them: 174,
-    summary: "A four-point loss at Gannon in the first non-league match of the year, less than 24 hours after the opener.",
-    points: [],
-    notes: ["Individual results still needed from the team", "Scoring format and which side had 170 are taken from the school's schedule page — to confirm"],
-    sources: [] },
+    summary: "A four-point loss on a rainy day at Gannon in the first non-league match of the year, less than 24 hours after the opener. Ben Campbell led the Falcons with 28 points and Austin Patuto had 27.",
+    points: [["Ben Campbell", 28], ["Austin Patuto", 27]],
+    notes: ["Stableford scoring — the higher team total wins"],
+    sources: [{ label: "DanversHighGolf on X", url: "https://x.com/GolfDanversHigh/status/2094886028473512258" }] },
 
   { id: 3, date: "2026-09-02T15:00", opponent: "St. John's Prep", mascot: "Eagles", home: false, league: false, site: "Turner Hill, Ipswich",
     format: "stroke", result: "L", us: 253, them: 227,
@@ -82,17 +82,20 @@ const SCHEDULE = [
 
   { id: 4, date: "2026-09-03T15:00", opponent: "Salem", mascot: "Witches", home: false, league: true, site: "Olde Salem Greens, Salem",
     format: "match", result: "W", us: 47, them: 25,
-    summary: "Playing for the fourth time in four days to start the season, Danvers won on the road at Olde Salem Greens to get back to 2–2.",
-    cards: [],
-    notes: ["Individual results still needed from the team"],
-    sources: [{ label: "Salem News roundup, Sept. 3", url: SN + "thursdays-area-roundup-danvers-golfers-slip-by-salem/article_141f2e3b-a61a-4bd6-904c-dcffb5058867.html" }] },
+    summary: "Playing for the fourth time in four days to start the season, Danvers won on the road at Olde Salem Greens to get back to 2–2. Ben Blum (7–2), Ryan Moore and Drew Carlson (both 6.5–2.5) earned their first varsity wins, and Wes Maylor won 6.5–2.5.",
+    cards: [["Ben Blum", 7, 2], ["Wes Maylor", 6.5, 2.5], ["Ryan Moore", 6.5, 2.5], ["Drew Carlson", 6.5, 2.5]],
+    notes: ["First varsity wins for Ben Blum, Ryan Moore and Drew Carlson"],
+    sources: [
+      { label: "Salem News roundup, Sept. 3", url: SN + "thursdays-area-roundup-danvers-golfers-slip-by-salem/article_141f2e3b-a61a-4bd6-904c-dcffb5058867.html" },
+      { label: "DanversHighGolf on X", url: "https://x.com/GolfDanversHigh/status/2095634729420706151" }
+    ] },
 
   { id: 5, date: "2026-09-04T15:00", opponent: "Rockport", mascot: "Vikings", home: false, league: false, site: "Rockport Golf Club",
     format: "stableford", result: "L", us: 149, them: 155,
     summary: "A six-point loss at Rockport closed out a stretch of five road matches in five days.",
     points: [],
-    notes: ["Individual results still needed from the team", "Scoring format and which side had 149 are taken from the school's schedule page — to confirm"],
-    sources: [] },
+    notes: ["Stableford scoring — the higher team total wins", "Individual results still needed from the team"],
+    sources: [{ label: "Rockport Athletics final-score post on X", url: "https://x.com/RKPT_Athletics/status/2096075581871857697" }] },
 
   { id: 101, date: "2026-09-07T14:50", opponent: "Bishop Fenwick", mascot: "Crusaders", home: true, league: false, site: HOME,
     format: "stableford", result: "W", us: 174, them: 164,
@@ -107,21 +110,30 @@ const SCHEDULE = [
     cards: [["Austin Patuto", 6, 3], ["Wes Maylor", 5.5, 3.5], ["Cole Andrews", 5, 4]],
     opp: ["Brendan O'Connor 32 (2 under on the back nine)", "Cooper Wassung 36", "Hayes Maher 37"],
     notes: [],
-    sources: [{ label: "Salem News roundup, Sept. 9", url: SN + "wednesdays-area-roundup-beverly-girls-cross-country-shades-danvers/article_aa72c861-635a-4fb7-b41d-9d3825d17ac5.html" }] },
+    sources: [
+      { label: "Salem News roundup, Sept. 9", url: SN + "wednesdays-area-roundup-beverly-girls-cross-country-shades-danvers/article_aa72c861-635a-4fb7-b41d-9d3825d17ac5.html" },
+      { label: "DanversHighGolf on X", url: "https://x.com/GolfDanversHigh/status/2097806584617328856" }
+    ] },
 
   { id: 7, date: "2026-09-10T15:30", opponent: "Bishop Fenwick", mascot: "Crusaders", home: false, league: false, site: "The Meadow at Peabody",
     format: "stableford", result: "W", us: 172, them: 166,
     summary: "Ben Campbell put up 32 points and three teammates were right behind him as Danvers edged Bishop Fenwick by six in a Stableford match.",
     points: [["Ben Campbell", 32], ["Tommy Surette", 28], ["Lucas Silva", 27], ["Anthony Sheehan", 25]],
     notes: ["Stableford scoring — the higher team total wins"],
-    sources: [{ label: "Salem News roundup, Sept. 10", url: SN + "thursdays-area-roundup-eagles-take-down-lasalle-on-pitch/article_604f56ae-37a6-4f8b-9345-211d145d25e9.html" }] },
+    sources: [
+      { label: "Salem News roundup, Sept. 10", url: SN + "thursdays-area-roundup-eagles-take-down-lasalle-on-pitch/article_604f56ae-37a6-4f8b-9345-211d145d25e9.html" },
+      { label: "DanversHighGolf on X", url: "https://x.com/GolfDanversHigh/status/2098215042260865503" }
+    ] },
 
   { id: 8, date: "2026-09-14T15:00", opponent: "Beverly", mascot: "Panthers", home: true, league: true, site: HOME,
     format: "match", result: "L", us: 32.5, them: 39.5,
     summary: "Wes Maylor (7–2) and Lucas Silva (6.5–2.5) won their matches, but rival Beverly left Wenham with a seven-point win.",
     cards: [["Wes Maylor", 7, 2], ["Lucas Silva", 6.5, 2.5]],
     notes: [],
-    sources: [{ label: "Salem News roundup, Sept. 14", url: SN + "mondays-area-roundup-beverly-volleyball-rallies-past-masco-for-dramatic-win/article_492309cf-e6d6-452c-ba7a-7f00d3b9cece.html" }] },
+    sources: [
+      { label: "Salem News roundup, Sept. 14", url: SN + "mondays-area-roundup-beverly-volleyball-rallies-past-masco-for-dramatic-win/article_492309cf-e6d6-452c-ba7a-7f00d3b9cece.html" },
+      { label: "DanversHighGolf on X", url: "https://x.com/GolfDanversHigh/status/2099889619542175744" }
+    ] },
 
   { id: 102, date: "2026-09-14T15:30", opponent: "Masconomet", mascot: "Chieftains", home: true, league: true, site: "Ferncroft Country Club, Middleton",
     format: "match", result: null, noResult: true,
@@ -139,8 +151,12 @@ const SCHEDULE = [
     format: "match", result: "L", us: 27, them: 45,
     summary: "Sophomore Anthony Sheehan halved his match at Tedesco to lead the Falcons against unbeaten Marblehead.",
     cards: [["Anthony Sheehan", 4.5, 4.5]],
+    opp: ["Tyler Forbes 33, won his match 7–2", "Pete Ryan 37 and Colby Moore 39, each won 5.5–3.5", "Marblehead won seven of the eight matches; the other was halved"],
     notes: [],
-    sources: [{ label: "Salem News roundup, Sept. 22", url: SN + "tuesdays-area-roundup-captains-beauparlant-mcmanus-guide-salem-boys-soccer-to-win/article_7ef3b1f7-0bc0-4283-a55e-12623314faf1.html" }] },
+    sources: [
+      { label: "Salem News roundup, Sept. 22", url: SN + "tuesdays-area-roundup-captains-beauparlant-mcmanus-guide-salem-boys-soccer-to-win/article_7ef3b1f7-0bc0-4283-a55e-12623314faf1.html" },
+      { label: "Marblehead Current", url: "https://marbleheadcurrent.org/2026/09/30/par-for-the-course-mhs-golfers-sweep-away-the-competition-after-eight-matches/" }
+    ] },
 
   { id: 11, date: "2026-09-23T16:00", opponent: "Peabody", mascot: "Tanners", home: false, league: true, site: "The Meadow at Peabody",
     format: "match", result: "W", us: 57.5, them: 14.5,
@@ -154,14 +170,21 @@ const SCHEDULE = [
     summary: "Tommy Surette, Wes Maylor and Lucas Silva all won 6–3 and Brady Swanton took his match 5–4 to pull the Falcons back to .500.",
     cards: [["Tommy Surette", 6, 3], ["Wes Maylor", 6, 3], ["Lucas Silva", 6, 3], ["Brady Swanton", 5, 4]],
     notes: [],
-    sources: [{ label: "Salem News roundup, Sept. 29", url: SN + "tuesdays-area-roundup-abells-last-second-goal-enables-danvers-to-tie-fenwick/article_1fc650a5-97fd-4ebd-9c0d-54fa57c03004.html" }] },
+    sources: [
+      { label: "Salem News roundup, Sept. 29", url: SN + "tuesdays-area-roundup-abells-last-second-goal-enables-danvers-to-tie-fenwick/article_1fc650a5-97fd-4ebd-9c0d-54fa57c03004.html" },
+      { label: "DanversHighGolf on X", url: "https://x.com/GolfDanversHigh/status/2105326229624877307" }
+    ] },
 
   { id: 13, date: "2026-09-30T15:00", opponent: "Marblehead", mascot: "Magicians", home: true, league: true, site: HOME,
     format: "match", result: "L", us: 26, them: 46,
     summary: "Wes Maylor won his match 5–4 and Cole Andrews halved his, but Marblehead stayed unbeaten with a win at Wenham.",
     cards: [["Wes Maylor", 5, 4], ["Cole Andrews", 4.5, 4.5]],
+    opp: ["Tyler Forbes 31, the day's low score, won his match 7–2", "Six Marblehead golfers won their matches"],
     notes: [],
-    sources: [{ label: "Salem News roundup, Sept. 30", url: SN + "wednesdays-area-roundup-corbetts-strong-finish-drives-panthers/article_30d4075f-7e97-48e8-8508-f8d636f3a1f2.html" }] },
+    sources: [
+      { label: "Salem News roundup, Sept. 30", url: SN + "wednesdays-area-roundup-corbetts-strong-finish-drives-panthers/article_30d4075f-7e97-48e8-8508-f8d636f3a1f2.html" },
+      { label: "Marblehead Current", url: "https://marbleheadcurrent.org/2026/10/08/magicians-notebook-golfers-keep-on-winning/" }
+    ] },
 
   { id: 14, date: "2026-10-01T16:30", opponent: "Beverly", mascot: "Panthers", home: false, league: true, site: "Beverly Golf & Tennis Club",
     format: "match", result: "T", us: 36, them: 36,
@@ -180,10 +203,13 @@ const SCHEDULE = [
 
   { id: 16, date: "2026-10-07T15:00", opponent: "Saugus", mascot: "Sachems", home: false, league: true, site: "Cedar Glen Golf Course, Saugus",
     format: "match", result: "W", us: 48.5, them: 23.5,
-    summary: "Freshman Dom Onorio swept all nine points in his match, and Cole Andrews (8.5–0.5) and Austin Patuto (7–2) also won big as the Falcons moved a game over .500.",
-    cards: [["Dom Onorio", 9, 0], ["Cole Andrews", 8.5, 0.5], ["Austin Patuto", 7, 2], ["Brady Swanton", 5.5, 3.5]],
+    summary: "Freshman Dom Onorio swept all nine points in his match, and Cole Andrews (8.5–0.5), Austin Patuto and Tommy Surette (both 7–2) also won big as the Falcons moved a game over .500.",
+    cards: [["Dom Onorio", 9, 0], ["Cole Andrews", 8.5, 0.5], ["Austin Patuto", 7, 2], ["Tommy Surette", 7, 2], ["Brady Swanton", 5.5, 3.5]],
     notes: ["Onorio's 9–0 is the first clean sweep by a Falcon in a reported match this season"],
-    sources: [{ label: "Salem News roundup, Oct. 7", url: SN + "wednesdays-area-roundup-sullivan-earns-100th-career-point-in-beverly-boys-soccer-win/article_c800b2c7-9306-49f2-b583-622af94054b3.html" }] },
+    sources: [
+      { label: "Salem News roundup, Oct. 7", url: SN + "wednesdays-area-roundup-sullivan-earns-100th-career-point-in-beverly-boys-soccer-win/article_c800b2c7-9306-49f2-b583-622af94054b3.html" },
+      { label: "DanversHighGolf on X", url: "https://x.com/GolfDanversHigh/status/2108256635705557135" }
+    ] },
 
   { id: 17, date: "2026-10-12T14:50", opponent: "Masconomet", mascot: "Chieftains", home: false, league: true, site: "Rowley Country Club",
     format: "match", result: "L", us: 30.5, them: 41.5,
@@ -209,8 +235,21 @@ const SCHEDULE = [
     sources: [{ label: "Official results (Golf Genius)", url: "https://www.golfgenius.com/ggid/26d2nsect" }] },
 
   { id: 18, date: "2026-10-21T09:00", opponent: "NEC Open", tournament: true, home: false, league: true, site: "Tedesco Country Club, Marblehead",
-    format: "stroke", result: null,
-    notes: ["The Northeastern Conference's season-ending tournament — nine teams on the school's schedule listing", "NEC all-conference and all-star picks are usually announced after the Open"] }
+    format: "stroke", holes: 18, result: null,
+    finish: "4th", fieldSize: 10, us: 179, toPar: "+39",
+    summary: "Cold temperatures, swirling winds and lightning-fast greens made Tedesco play tough at the conference's season-ending tournament. Danvers finished fourth of 10 teams with a 179, one shot ahead of Swampscott, and junior Ben Campbell tied for seventh individually with a 15-over 85. Marblehead won the team title with 163 and Tyler Forbes was the medalist with a 79.",
+    rounds: [["Ben Campbell", 85]],
+    field: [["Marblehead", 163], ["Masconomet", 166], ["Beverly", 176]],
+    formatNote: "NEC Open: 18 holes of stroke play at Tedesco, par 70. Each team's best two scores make up its total.",
+    notes: [
+      "Danvers' 179 is Campbell's 85 plus a 94 from a teammate the published results don't name",
+      "Swampscott also shot 179 and was listed fifth",
+      "NEC all-conference and all-star picks are usually announced after the Open"
+    ],
+    sources: [
+      { label: "Salem News story and results", url: SN + "tough-weather-conditions-take-center-stage-at-nec-open-golf/article_0c5ee106-0c54-466f-9c20-56683fd04f1c.html" },
+      { label: "Gloucester Times story", url: "https://www.gloucestertimes.com/sports/linn-finishes-strong-for-gloucester-golfers-at-nec-open-marblehead-takes-home-team-title/article_529f128c-6966-49fa-8edb-2f14d8eb37b2.html" }
+    ] }
 ];
 
 /* ---------------------------------------------------------------------
@@ -222,7 +261,7 @@ const SCHEDULE = [
    match results above. Newspaper roundups mostly print the winners, so
    a player's wins and points are "reported" totals, not a full record.
    --------------------------------------------------------------------- */
-const STATS_AS_OF = "Regular season complete + sectional (Oct. 20, 2026)";
+const STATS_AS_OF = "Season complete: regular season, sectional and NEC Open (Oct. 21, 2026)";
 
 const PLAYERS = [
   { name: "Cole Andrews", grade: "Sr.", captain: false },
@@ -262,7 +301,7 @@ const TITLES = [
 /* w/l/t = overall, lw/ll/lt = league. note is optional.
    2021–2026 are regular-season results from the school's schedule page. */
 const SEASONS = [
-  { year: 2026, w: 9, l: 8, t: 1, lw: 7, ll: 5, lt: 1, note: "11th at Division 2 North sectional" },
+  { year: 2026, w: 9, l: 8, t: 1, lw: 7, ll: 5, lt: 1, note: "11th at Division 2 North sectional · 4th at NEC Open" },
   { year: 2025, w: 8, l: 9, t: 1, lw: 5, ll: 7, lt: 1, note: "Thomas Fish NEC All-Conference" },
   { year: 2024, w: 8, l: 11, t: 1, lw: 5, ll: 7, lt: 1 },
   { year: 2023, w: 5, l: 9, t: 1, lw: 3, ll: 9, lt: 1, note: "Bobby Fish NEC Player of the Year" },
@@ -301,6 +340,8 @@ const LEGENDS = [
    To add photos: drop image files in /photos and list them in PHOTOS.
    --------------------------------------------------------------------- */
 const NEWS = [
+  { date: "2026-10-21", title: "Tough weather conditions take center stage at NEC Open golf", blurb: "Danvers finishes fourth of 10 teams at Tedesco; Ben Campbell ties for seventh with an 85.", source: "Salem News",
+    url: SN + "tough-weather-conditions-take-center-stage-at-nec-open-golf/article_0c5ee106-0c54-466f-9c20-56683fd04f1c.html" },
   { date: "2026-10-20", title: "Division 2 North sectional results", blurb: "Danvers places 11th of 15 at Bradford; Wes Maylor leads the Falcons with an 81.", source: "Golf Genius",
     url: "https://www.golfgenius.com/ggid/26d2nsect" },
   { date: "2026-10-12", title: "O'Connor sparks Masconomet golfers to victory", blurb: "Silva, Maylor and Swanton win their matches in the regular-season finale at Rowley.", source: "Salem News",

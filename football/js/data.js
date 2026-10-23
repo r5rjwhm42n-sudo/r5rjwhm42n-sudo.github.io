@@ -7,6 +7,7 @@
    ===================================================================== */
 
 const HUDL_TEAM = "https://fan.hudl.com/usa/ma/danvers/organization/17204/danvers-high-school/team/33811";
+const REPLAY = HUDL_TEAM + "/boys-varsity-football/watch?b=";   // full-game livestream replays on Hudl
 
 const TEAM = {
   school: "Danvers High School",
@@ -74,12 +75,13 @@ const SCHEDULE = [
     id: 2, date: "2026-09-18T19:00", opponent: "Melrose", mascot: "Red Raiders",
     home: false, league: false, site: "Fred Green Memorial Stadium, Melrose",
     result: "W", us: 17, them: 7,
-    quarters: null,
-    summary: "Zach Fultz punched in two short touchdowns before halftime, the second with three seconds left in the half, and Colby Medeiros added a 35-yard field goal. The defense held Melrose to 136 yards.",
+    quarters: { us: [7, 7, 3, 0], them: [0, 7, 0, 0] },
+    summary: "Zach Fultz scored on the opening drive and again with three seconds left in the half, after Melrose had tied it 7–7, and Colby Medeiros added a 35-yard field goal in the third quarter. The defense held Melrose to 136 yards.",
     scoring: [
-      { q: "1st half", play: "Zach Fultz 1 run", score: null },
-      { q: "2nd · 0:03", play: "Zach Fultz 2 run", score: null },
-      { q: "—", play: "Colby Medeiros 35 field goal", score: null }
+      { q: "1st", play: "Zach Fultz 1 run, on the opening drive", score: "7–0" },
+      { q: "2nd · 3:57", play: "Melrose touchdown", score: "7–7" },
+      { q: "2nd · 0:03", play: "Zach Fultz 2 run", score: "14–7" },
+      { q: "3rd", play: "Colby Medeiros 35 field goal", score: "17–7" }
     ],
     performers: [
       { name: "Jack Houston", line: "79 rushing yds · 2 catches, 45 yds" },
@@ -88,8 +90,9 @@ const SCHEDULE = [
       { name: "Juan Martinez", line: "Recovered the onside kick" },
       { name: "Nick Xerras", line: "Blocked punt (4th quarter)" }
     ],
-    notes: ["Melrose held to 136 yards, 3.7 per play", "Quarter-by-quarter scores were not published"],
+    notes: ["Melrose held to 136 yards, 3.7 per play", "Quarter scores from the athletic department's live updates"],
     sources: [
+      { label: "Danvers Falcons live updates on X", url: "https://x.com/WeAreDanvers/status/2101111710316695852" },
       { label: "Salem News roundup", url: "https://www.salemnews.com/sports/friday-football-roundup-danvers-st-johns-prep-earn-big-road-wins/article_4d9c0799-dc34-4429-8822-55c36ca84e8d.html" },
       { label: "MaxPreps recap", url: "https://www.maxpreps.com/news/uySKp6oB8EOg49Tp-axluw/football-recap-danvers-handles-melrose.htm" }
     ]
@@ -98,16 +101,23 @@ const SCHEDULE = [
     id: 3, date: "2026-09-25T18:00", opponent: "Reading", mascot: "Rockets",
     home: false, league: false, site: "Hollingsworth Field, Reading",
     result: "W", us: 37, them: 20,
-    quarters: null,
-    summary: "The ground game produced five rushing touchdowns. Jack Houston and Zach Fultz both cleared 100 yards, and Colby Medeiros added a 36-yard field goal and an interception in a non-league road win.",
+    quarters: { us: [0, 10, 13, 14], them: [8, 6, 0, 6] },
+    summary: "Danvers trailed 8–0 after a quarter and 14–10 at halftime, then outscored Reading 27–6 after the break. The ground game produced five rushing touchdowns: Jack Houston and Zach Fultz both cleared 100 yards, and Colby Medeiros added a 36-yard field goal and an interception in a non-league road win.",
     scoring: null,
     performers: [
       { name: "Jack Houston", line: "135 rushing yds, 2 TD" },
       { name: "Zach Fultz", line: "101 rushing yds, 3 TD" },
       { name: "Colby Medeiros", line: "36-yd FG · interception" }
     ],
-    notes: ["Full game replay on the Hudl team page under Past Livestreams"],
+    notes: [
+      "First time trailing at halftime this season",
+      "Danvers went ahead 10–8 late in the second quarter before Reading retook the lead",
+      "Reading's touchdown early in the fourth (conversion failed) cut it to 23–20, and Danvers answered to lead 30–20 with nine minutes left"
+    ],
     sources: [
+      { label: "Danvers Falcons live updates on X", url: "https://x.com/WeAreDanvers/status/2103629294874309060" },
+      { label: "Full-game replay on Hudl", url: REPLAY + "QnJvYWRjYXN0NDQ5MzkzNQ%3D%3D" },
+      { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/football/game/danvers-vs-reading-memorial/9-25-2026/?c=f11d41e9-7f18-40d5-bd55-eef839236282" },
       { label: "Boston Globe roundup", url: "https://www.bostonglobe.com/2026/09/25/sports/miaa-high-school-football-scores-week-3/" },
       { label: "MaxPreps recap", url: "https://www.maxpreps.com/news/jNgJBQqC9kmjtMIKO3zvCQ/football-recap-higher-ranked-danvers-takes-care-of-reading-memorial.htm" }
     ]
@@ -149,10 +159,12 @@ const SCHEDULE = [
     notes: [
       "Beverly: 5 first downs (3 by penalty) and 38 total yards",
       "243 rushing yards as a team",
+      "Danvers led 7–0 after one quarter and 14–0 with 2:40 left in the half before scoring 10 more points by halftime",
       "First game in 14 days, after the Marblehead cancellation",
       "91st meeting. Beverly leads the series 60–29–2, but Danvers has won nine of the meetings since 2015"
     ],
     sources: [
+      { label: "Full-game replay on Hudl", url: REPLAY + "QnJvYWRjYXN0NDU5MTI0Mw%3D%3D" },
       { label: "Salem News recap", url: "https://www.salemnews.com/sports/back-in-black-danvers-opens-up-its-offense-rolls-all-over-beverly/article_f184c7c4-6046-4bb5-a29d-ffe49f8eb165.html" },
       { label: "Boston Globe roundup", url: "https://www.bostonglobe.com/2026/10/09/sports/miaa-high-school-football-roundup-october-9/" },
       { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/football/game/beverly-vs-danvers/10-9-2026/?c=29748a55-fb2f-41c1-873a-84a48f00c882" }
@@ -162,7 +174,7 @@ const SCHEDULE = [
     id: 6, date: "2026-10-16T18:30", opponent: "Masconomet", mascot: "Chieftains",
     home: false, league: true, site: "Masconomet Regional, Boxford",
     result: "W", us: 35, them: 0,
-    quarters: null, half: [28, 0],
+    quarters: { us: [14, 14, 0, 7], them: [0, 0, 0, 0] },
     summary: "Danvers scored four times in the first half, piled up 399 yards and shut out the defending NEC champions in the rain. Zach Fultz ran for 179 yards, and the defense turned Masconomet away twice deep in Danvers territory.",
     scoring: [
       { q: "1st", play: "Jack Houston 2 run", score: null },
@@ -185,7 +197,9 @@ const SCHEDULE = [
       "First win over Masconomet since 2023 (Danvers is 4–7 all-time in the series)"
     ],
     sources: [
+      { label: "Full-game replay on Hudl", url: REPLAY + "QnJvYWRjYXN0NDUwNzQ3MQ%3D%3D" },
       { label: "Salem News recap", url: "https://www.salemnews.com/sports/defense-continues-to-dominate-for-danvers-while-offense-kicks-into-gear-in-shutout-over-masco/article_575aac00-4d6e-4d9b-8891-26367b290445.html" },
+      { label: "Danvers Falcons live updates on X", url: "https://x.com/WeAreDanvers/status/2111236801679511760" },
       { label: "Boston Globe roundup", url: "https://www.bostonglobe.com/2026/10/16/sports/miaa-high-school-football-october-16-roundup/" },
       { label: "MaxPreps recap", url: "https://www.maxpreps.com/news/FoPI_SuzhEqh08J-rgB0Sw/football-recap-danvers-skates-past-masconomet-regional-with-ease.htm" }
     ]
@@ -357,18 +371,21 @@ const LEGENDS = [
    --------------------------------------------------------------------- */
 const HL = HUDL_TEAM + "/boys-varsity-football/watch?ot=TEAM&oi=33811&hr=";
 const VIDEOS = [
+  { title: "Danvers at Masconomet", sub: "Full-Game Replay · Oct. 16", season: 2026, len: "Replay", url: REPLAY + "QnJvYWRjYXN0NDUwNzQ3MQ%3D%3D" },
+  { title: "Danvers vs. Beverly", sub: "Full-Game Replay · Oct. 9", season: 2026, len: "Replay", url: REPLAY + "QnJvYWRjYXN0NDU5MTI0Mw%3D%3D" },
+  { title: "Danvers at Reading", sub: "Full-Game Replay · Sept. 25", season: 2026, len: "Replay", url: REPLAY + "QnJvYWRjYXN0NDQ5MzkzNQ%3D%3D" },
   { title: "Danvers at Concord-Carlisle", sub: "Game Recap", season: 2025, len: "1:42", url: HL + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2YTliMDBiNmM2NzUyOTZjZmI1MGZlZGE%3D" },
   { title: "Danvers vs. Peabody", sub: "Game Recap", season: 2025, len: "1:41", url: HL + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2OThmYTBhOWE2NmUzZGMxZWMxMzBjMjY%3D" },
   { title: "Danvers vs. Reading", sub: "Game Recap", season: 2025, len: "2:00", url: HL + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2OTFjYTYyNmU2MzY4NzdmZTg3ZGI4ZGM%3D" },
   { title: "Danvers vs. Salem", sub: "Game Recap", season: 2024, len: "1:53", url: HL + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2NzRkZTgzZjk2MzE0NmUyYmQyNzM2Y2U%3D" },
   { title: "Danvers vs. Tewksbury", sub: "Game Recap", season: 2024, len: "1:46", url: HL + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2NzM5MjJmYTJjMjFmYjJlNDE2NmEyN2E%3D" },
   { title: "Danvers vs. Peabody", sub: "Game Recap", season: 2024, len: "1:23", url: HL + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2NzIyNWQ5YTJkMGJhMzI4N2ZmNDQ0ZmI%3D" },
-  { title: "Danvers vs. Masconomet", sub: "Game Recap", season: 2024, len: "1:40", url: null },
-  { title: "Danvers vs. Reading", sub: "Game Recap", season: 2024, len: "1:43", url: null },
-  { title: "Danvers vs. Hanover", sub: "Playoff Recap", season: 2023, len: "1:10", url: null },
-  { title: "Danvers vs. Gloucester", sub: "Thanksgiving Recap", season: 2023, len: "2:14", url: null },
-  { title: "Danvers vs. Masconomet", sub: "Game Recap", season: 2023, len: "1:33", url: null },
-  { title: "Danvers vs. Tewksbury", sub: "Game Recap", season: 2023, len: "1:45", url: null }
+  { title: "Danvers vs. Masconomet", sub: "Game Recap", season: 2024, len: "1:40", url: HL + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2NzBiMTlkNDE2MmI1ZmMyMTM4MmIyMGY%3D" },
+  { title: "Danvers vs. Reading", sub: "Game Recap", season: 2024, len: "1:43", url: HL + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2NmVmNzgwODAzMzhjMmExYWIyZjBiODg%3D" },
+  { title: "Danvers vs. Hanover", sub: "Playoff Recap", season: 2023, len: "1:10", url: HL + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2NTcyMDJlZGI1MzUxMTBhZDg1MDY5ZTk%3D" },
+  { title: "Danvers vs. Gloucester", sub: "Thanksgiving Recap", season: 2023, len: "2:14", url: HL + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2NTcxZjZlZDVjYTk3MjBhNDgyZjNjZTE%3D" },
+  { title: "Danvers vs. Masconomet", sub: "Game Recap", season: 2023, len: "1:33", url: HL + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2NTQxNDExNjJhYTdjYjBkYTBkMzRjOTE%3D" },
+  { title: "Danvers vs. Tewksbury", sub: "Game Recap", season: 2023, len: "1:45", url: HL + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2NTAwOWM2OGMxMTliOTBkZGM2ZjNiZmE%3D" }
 ];
 
 /* Example: { src: "photos/marblehead-01.jpg", caption: "Houston breaks one vs. Marblehead", game: "vs. Marblehead" } */

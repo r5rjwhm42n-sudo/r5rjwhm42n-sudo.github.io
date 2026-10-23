@@ -68,22 +68,23 @@ const SCHEDULE = [
 
   { id: 1, date: "2026-09-07T10:00", opponent: "Marblehead", mascot: "Magicians", home: true, league: true, site: HOME,
     result: "L", us: 2, them: 6,
-    quarters: null,
+    quarters: { us: [0, 0, 0, 2], them: [2, 1, 1, 2] },
     summary: "Senior captain Kyla Moroney and freshman Zoie Abell each had a goal and an assist in the Labor Day opener, but Marblehead pulled away on the Falcons' home turf.",
     scorers: [["Kyla Moroney", 1], ["Zoie Abell", 1]],
     assists: [["Kyla Moroney", 1], ["Zoie Abell", 1]],
     saves: [["Eva Selaya-Mendez", 4], ["Ellie Barnes", 3]],
     standouts: ["Olivia Henry", "Addie Moore"],
-    notes: ["Both goalkeepers saw time in the cage", "Quarter scores still needed from the team"],
+    notes: ["Both goalkeepers saw time in the cage", "Marblehead led 4–0 going into the fourth quarter"],
     video: HUDL_TEAM + "/watch?b=QnJvYWRjYXN0NDM2MDI5Ng%3D%3D",
     sources: [
       { label: "Salem News roundup, Sept. 8", url: null },
+      { label: "Danvers Falcons live updates on X", url: "https://x.com/WeAreDanvers/status/2096981858093318490" },
       { label: "MaxPreps box score", url: MP + "danvers-vs-marblehead/9-7-2026/?c=082823ea-f631-4b35-80ac-f8b5c5996cbb" }
     ] },
 
   { id: 2, date: "2026-09-08T16:00", opponent: "Hamilton-Wenham", mascot: "Generals", home: true, league: false, site: HOME,
     result: "W", us: 4, them: 3,
-    quarters: null,
+    quarters: { us: [2, 0, 2, 0], them: [2, 1, 0, 0] },
     summary: "The Falcons came from behind three separate times for their first win. Kyla Moroney had a hat trick and set up Zoie Abell's goal, and freshman goalkeeper Ellie Barnes made 14 saves.",
     scorers: [["Kyla Moroney", 3], ["Zoie Abell", 1]],
     assists: [["Kyla Moroney", 1], ["Mia Calabro", 1]],
@@ -93,6 +94,7 @@ const SCHEDULE = [
     video: HUDL_TEAM + "/watch?b=QnJvYWRjYXN0NDM2MDMwMQ%3D%3D",
     sources: [
       { label: "Salem News roundup, Sept. 8", url: null },
+      { label: "Danvers Falcons live updates on X", url: "https://x.com/WeAreDanvers/status/2097434360588726436" },
       { label: "MaxPreps box score", url: MP + "danvers-vs-hamilton-wenham-regional-south-hamilton/9-8-2026/?c=7e011654-3635-4e36-968f-c1390f58f7fe" }
     ] },
 
@@ -105,6 +107,7 @@ const SCHEDULE = [
     saves: [["Eva Selaya-Mendez", 1], ["Ellie Barnes", 4]],
     standouts: ["Olivia Henry", "Elizabeth Sher", "Rylee Sheppard"],
     notes: [
+      "Danvers led 3–0 after one quarter and 5–0 at halftime",
       "Abell's four goals match the single-game mark listed in the program's record book",
       "Peabody goalkeeper Mia Covey made 37 saves",
       "Selaya-Mendez played the first half in goal and Barnes the second"
@@ -135,7 +138,7 @@ const SCHEDULE = [
 
   { id: 5, date: "2026-09-21T16:00", opponent: "Ipswich", mascot: "Tigers", home: false, league: false, site: "Ipswich High School",
     result: "L", us: 2, them: 6,
-    quarters: null,
+    quarters: null, halftime: [2, 4],
     summary: "It was 1–1 after one quarter before Ipswich took control in the second. Kyla Moroney had a goal and an assist, and the two Danvers goalkeepers combined for 11 saves.",
     scorers: [["Kyla Moroney", 1]],
     assists: [["Kyla Moroney", 1]],
@@ -143,6 +146,7 @@ const SCHEDULE = [
     notes: ["The scorer of Danvers' other goal is still needed from the team"],
     sources: [
       { label: "Salem News roundup, Sept. 21", url: null },
+      { label: "Ipswich Athletics on X", url: "https://x.com/ihstigers/status/2102148644296151325" },
       { label: "MaxPreps box score", url: MP + "danvers-vs-ipswich/9-21-2026/?c=8269720e-63a5-4c90-91ec-8d2e7203a27d" }
     ] },
 
@@ -206,7 +210,7 @@ const SCHEDULE = [
 
   { id: 10, date: "2026-10-06T17:30", opponent: "Masconomet", mascot: "Chieftains", home: true, league: true, site: HOME,
     result: "L", us: 1, them: 3,
-    quarters: null,
+    quarters: null, halftime: [1, 2],
     summary: "Kyla Moroney finished a pass from Olivia Henry just 50 seconds in for a 1–0 lead, but the defending conference champions answered with three. Eva Selaya-Mendez made six saves.",
     scorers: [["Kyla Moroney", 1]],
     assists: [["Olivia Henry", 1]],
@@ -215,16 +219,17 @@ const SCHEDULE = [
       { when: "1st · 0:50 in", play: "Kyla Moroney (Olivia Henry)", score: "1–0" }
     ],
     standouts: ["Olivia Henry", "Rylee Sheppard", "Lia Chiarenza"],
-    notes: ["Quarter scores still needed from the team"],
+    notes: ["Masconomet led 2–1 at halftime and 3–1 after three quarters; neither team scored in the fourth"],
     video: HUDL_TEAM + "/watch?b=QnJvYWRjYXN0NDU4MDI4OA%3D%3D",
     sources: [
       { label: "Salem News roundup, Oct. 6", url: null },
+      { label: "Danvers Falcons live updates on X", url: "https://x.com/WeAreDanvers/status/2107602786791669992" },
       { label: "MaxPreps box score", url: MP + "danvers-vs-masconomet-regional-boxford/10-6-2026/?c=2527bbfe-959b-4236-a5df-91cbbcc041d2" }
     ] },
 
   { id: 11, date: "2026-10-09T15:45", opponent: "Gloucester", mascot: "Fishermen", home: true, league: true, site: HOME,
     result: "L", us: 0, them: 5,
-    quarters: null,
+    quarters: { us: [0, 0, 0, 0], them: [2, 1, 2, 0] },
     summary: "Unbeaten Gloucester, the conference leader, kept a clean sheet and clinched a state tournament berth. Olivia Henry made plays at both ends, Rylee Sheppard was strong on defense, and Kyla Moroney was double-teamed for most of the afternoon. Eva Selaya-Mendez made seven saves.",
     scorers: [], assists: [],
     saves: [["Eva Selaya-Mendez", 7]],
@@ -233,21 +238,23 @@ const SCHEDULE = [
     video: HUDL_TEAM + "/watch?b=QnJvYWRjYXN0NDU5NTcyOA%3D%3D",
     sources: [
       { label: "Salem News roundups, Oct. 9 and Oct. 11", url: null },
+      { label: "Danvers Falcons live updates on X", url: "https://x.com/WeAreDanvers/status/2108659812577821148" },
       { label: "MaxPreps box score", url: MP + "danvers-vs-gloucester/10-9-2026/?c=1da8bf2a-41e8-4316-b297-d5c266da4c58" }
     ] },
 
   { id: 12, date: "2026-10-13T16:00", opponent: "Malden Catholic", mascot: "Lancers", home: true, league: false, site: HOME,
     result: "W", us: 5, them: 1,
-    quarters: null,
-    summary: "Captain Kyla Moroney had her second hat trick of the season and an assist, and freshman Zoie Abell added two goals and two assists in a convincing non-league win.",
+    quarters: { us: [0, 1, 0, 4], them: [1, 0, 0, 0] },
+    summary: "Down 1–0 after a quarter and tied 1–1 going into the fourth, the Falcons scored four times in the final quarter. Captain Kyla Moroney had her second hat trick of the season and an assist, and freshman Zoie Abell added two goals and two assists.",
     scorers: [["Kyla Moroney", 3], ["Zoie Abell", 2]],
     assists: [["Zoie Abell", 2], ["Kyla Moroney", 1], ["Olivia Henry", 1], ["Sabrina Stoney", 1]],
     saves: [["Ellie Barnes", 3], ["Eva Selaya-Mendez", 6]],
     standouts: ["Rylee Sheppard", "Isabella Latusky", "Addie Moore"],
-    notes: ["Barnes played the first half in goal (3 saves on 4 shots) and Selaya-Mendez the second (6 saves, no goals allowed)"],
+    notes: ["Four goals in the fourth quarter", "Barnes played the first half in goal (3 saves on 4 shots) and Selaya-Mendez the second (6 saves, no goals allowed)"],
     video: HUDL_TEAM + "/watch?b=QnJvYWRjYXN0NDYxOTA2MA%3D%3D",
     sources: [
       { label: "Salem News roundup, Oct. 13", url: null },
+      { label: "Danvers Falcons live updates on X", url: "https://x.com/WeAreDanvers/status/2110113850502639921" },
       { label: "MaxPreps box score", url: MP + "danvers-vs-malden-catholic/10-13-2026/?c=71d161ee-a654-4dce-8908-b79fcb17fde2" }
     ] },
 
@@ -280,9 +287,24 @@ const SCHEDULE = [
       { label: "MaxPreps box score", url: MP + "danvers-vs-marblehead/10-16-2026/?c=f79313c9-8814-4ecf-831d-31d44454528f" }
     ] },
 
-  { id: 15, date: "2026-10-20T19:00", opponent: "Saugus", mascot: "Sachems", home: false, league: true, site: "Serino Field, Saugus", result: null,
-    notes: ["Second meeting — Danvers won 2–1 at home on Sept. 17"] },
-  { id: 16, date: "2026-10-21T16:00", opponent: "St. Mary's", mascot: "Spartans", home: false, league: false, site: "Manning Bowl, Lynn", result: null, notes: [] },
+  { id: 15, date: "2026-10-20T19:00", opponent: "Saugus", mascot: "Sachems", home: false, league: true, site: "Serino Field, Saugus",
+    result: "W", us: 6, them: 2,
+    quarters: null,
+    summary: "The Falcons scored six times under the lights at Serino Field to sweep the season series with Saugus, getting back above .500 overall and to .500 in the conference.",
+    scorers: [], assists: [],
+    notes: ["Second meeting — Danvers won 2–1 at home on Sept. 17", "Goal scorers and saves still needed from the team"],
+    sources: [
+      { label: "Salem News roundup, Oct. 20", url: "https://www.salemnews.com/sports/tuesdays-area-roundup-beverly-danvers-fenwick-field-hockey-all-score-big-wins/article_2c88f6e2-5712-4e03-ba8b-e2041bd6252f.html" },
+      { label: "Result on Arbiter Live", url: "https://www.arbiterlive.com/Teams/Schedule/4285268?activeEntityId=5538" }
+    ] },
+
+  { id: 16, date: "2026-10-21T16:00", opponent: "St. Mary's", mascot: "Spartans", home: false, league: false, site: "Manning Bowl, Lynn",
+    result: "L", us: 0, them: 5,
+    quarters: null,
+    summary: "A day after the win at Saugus, the Falcons were shut out by St. Mary's on the turf at the Manning Bowl in a non-league game.",
+    scorers: [], assists: [],
+    notes: ["Second game in two days", "Saves still needed from the team"],
+    sources: [{ label: "MaxPreps box score", url: MP + "danvers-vs-st-marys-lynn/10-21-2026/?c=28677cba-f670-4b16-89da-13abff0da084" }] },
   { id: 17, date: "2026-10-27T17:30", opponent: "Bishop Fenwick", mascot: "Crusaders", home: true, league: false, site: HOME, result: null,
     notes: ["Second meeting — the teams tied 2–2 on Sept. 29"] },
   { id: 18, date: "2026-10-30T16:00", opponent: "Masconomet", mascot: "Chieftains", home: false, league: false, site: "Boxford Commons turf field, Boxford", result: null,
@@ -300,8 +322,8 @@ const SCHEDULE = [
            it out and the site adds them up from the game recaps above.
    Names in the game lists above must match these names exactly.
    --------------------------------------------------------------------- */
-const STATS_AS_OF = "Through 14 games (Oct. 16, 2026)";
-const STATS_NOTE = "no official stat sheet is published for 2026. Goals, assists, saves and game logs are added up from Salem News game recaps, so they can differ slightly from the paper's own leaders list — on Oct. 15 it had Kyla Moroney at 14 goals and 10 assists and Eva Selaya-Mendez at 79 saves through the Oct. 13 game, where the recaps add up to 14 goals, 11 assists and 86 saves. The roster, numbers and positions are the school's official list.";
+const STATS_AS_OF = "Through 16 games (Oct. 21, 2026)";
+const STATS_NOTE = "no official stat sheet is published for 2026. Goals, assists, saves and game logs are added up from Salem News game recaps, so they can differ slightly from the paper's own leaders list — on Oct. 15 it had Kyla Moroney at 14 goals and 10 assists and Eva Selaya-Mendez at 79 saves through the Oct. 13 game, where the recaps add up to 14 goals, 11 assists and 86 saves. The Oct. 15 Swampscott goals match the school's own game stats on Arbiter Live. No scorers or saves have been published in a free source for the Oct. 20 Saugus and Oct. 21 St. Mary's games yet. The roster, numbers and positions are the school's official list.";
 
 const PLAYERS = [
   { name: "Ellie Barnes", num: 0, pos: ["GK"], grade: "Fr.", captain: false },
@@ -329,16 +351,16 @@ const PLAYERS = [
    NORTHEASTERN CONFERENCE STANDINGS — copy from the MaxPreps league page
    (TEAM.links.standings). [team, league W, L, T, overall W, L, T]
    --------------------------------------------------------------------- */
-const STANDINGS_AS_OF = "Oct. 20";
+const STANDINGS_AS_OF = "Oct. 21 (the Oct. 20 Danvers–Saugus result is added from the school's schedule)";
 const STANDINGS = [
   ["Gloucester", 10, 0, 0, 13, 0, 0],
+  ["Beverly", 7, 2, 1, 9, 4, 1],
   ["Masconomet", 6, 2, 1, 8, 3, 2],
-  ["Beverly", 6, 2, 1, 8, 4, 1],
   ["Swampscott", 3, 3, 1, 3, 6, 2],
-  ["Danvers", 4, 5, 1, 6, 6, 2],
+  ["Danvers", 5, 5, 1, 7, 7, 2],
   ["Marblehead", 4, 7, 1, 4, 8, 2],
-  ["Saugus", 2, 6, 1, 6, 6, 2],
-  ["Peabody", 0, 10, 0, 3, 12, 0]
+  ["Saugus", 2, 7, 1, 6, 7, 2],
+  ["Peabody", 0, 11, 0, 3, 13, 0]
 ];
 
 /* Position → group used by the filter buttons on the Stats page */
