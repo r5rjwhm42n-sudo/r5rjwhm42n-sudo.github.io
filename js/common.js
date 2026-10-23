@@ -118,6 +118,7 @@
     "hamilton-wenham", "lynn-classical", "lynnfield", "malden-catholic", "marblehead", "masconomet", "medford", "melrose",
     "mystic-valley", "north-reading", "peabody", "pingree", "pioneer-charter", "reading", "rockport", "salem", "saugus",
     "st-johns-prep", "stoneham", "triton", "wakefield", "weston", "wilmington", "winthrop"]);
+  const SOLID = new Set(["barnstable", "medford", "wakefield"]);   // logos drawn on a solid square, shown cropped to a circle
   const school = (name) => String(name || "").split(/\s*(?:\/|&)\s*/)[0].trim();
   const slug = (s) => s.toLowerCase().replace(/'/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
   const hasColors = (name) => !!SCHOOL_COLORS[school(name)];
@@ -127,7 +128,7 @@
     const s = school(name);
     const [c1, c2] = SCHOOL_COLORS[s] || ["#5b647a", "#ffffff"];
     if (LOGOS.has(slug(s))) {
-      return `<span class="opp-badge logo ${size}" style="--c1:${c1};--c2:${c2}" aria-hidden="true"><img src="${ROOT}images/opponents/${slug(s)}.png" alt="" loading="lazy"></span>`;
+      return `<span class="opp-badge logo ${size}" style="--c1:${c1};--c2:${c2}" aria-hidden="true"><img src="${ROOT}images/opponents/${slug(s)}.png" alt="" loading="lazy"${SOLID.has(slug(s)) ? ' class="round"' : ""}></span>`;
     }
     const words = s.replace(/^St\.\s*/, "St ").split(/[\s-]+/).filter((w) => /^[A-Za-z]/.test(w));
     const letters = (words.length > 1 ? words.slice(0, 2).map((w) => w[0]).join("") : s.charAt(0)).toUpperCase();
@@ -140,11 +141,12 @@
       font: 800 13px/1 "Saira Condensed", "Arial Narrow", sans-serif; letter-spacing: .02em; text-transform: uppercase; }
     .opp-badge.md { width: 46px; height: 46px; font-size: 19px; box-shadow: inset 0 0 0 3px var(--c2), 0 0 0 1px rgba(11, 31, 77, .12); }
     .opp-badge.lg { width: 56px; height: 56px; font-size: 22px; box-shadow: inset 0 0 0 3.5px var(--c2), 0 0 0 2px rgba(255, 255, 255, .9); }
-    /* logos are cropped to a circle that fills the badge, with the school-color ring as its border */
+    /* the logo sits inside the white circle at its own shape, with the school-color ring as the border */
     .opp-badge.logo { background: #fff; border: 2px solid var(--c1); box-shadow: 0 0 0 1px rgba(11, 31, 77, .12); overflow: hidden; }
     .opp-badge.logo.md, .opp-badge.logo.lg { border-width: 3px; }
     .opp-badge.logo.lg { box-shadow: 0 0 0 2px rgba(255, 255, 255, .9); }
-    .opp-badge.logo img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }`;
+    .opp-badge.logo img { display: block; width: 80%; height: 80%; object-fit: contain; }
+    .opp-badge.logo img.round { width: 86%; height: 86%; object-fit: cover; border-radius: 50%; }`;
   document.head.appendChild(css);
 
   window.DFA = { place, mapsUrl, weather, weatherText, state, icon, badge, hasColors };
