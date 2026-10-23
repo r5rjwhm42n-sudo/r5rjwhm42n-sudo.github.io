@@ -37,6 +37,8 @@ jobs:
           python-version: "3.12"
       - name: Build the link preview images
         continue-on-error: true   # the calendar feeds still publish if this step has a problem
+        env:
+          TZ: America/New_York      # game times in data.js are Danvers local time
         run: |
           pip install --quiet pillow
           tools/build-og.sh

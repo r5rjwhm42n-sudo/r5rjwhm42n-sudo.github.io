@@ -5,6 +5,7 @@
        game is, its forecast, directions, and whether it's on right now.
    ===================================================================== */
 (function () {
+  const ROOT = new URL("..", document.currentScript.src).href;   // the site root, from /js/common.js
   if ("serviceWorker" in navigator && /^https?:$/.test(location.protocol)) {
     addEventListener("load", () => navigator.serviceWorker.register("/sw.js").catch(() => {}));
   }
@@ -112,12 +113,22 @@
     "Triton": ["#034CB2", "#FFFFFF"], "Wakefield": ["#CC0022", "#FFFFFF"], "Weston": ["#CC0022", "#FFFFFF"],
     "Wilmington": ["#022C66", "#FFFFFF"], "Winthrop": ["#022C66", "#C8880A"]
   };
+  /* Schools with their logo in images/opponents/<name>.png (from the school's MaxPreps page) */
+  const LOGOS = new Set(["andover", "arlington", "barnstable", "beverly", "bishop-fenwick", "concord-carlisle", "gloucester",
+    "hamilton-wenham", "lynn-classical", "lynnfield", "malden-catholic", "marblehead", "masconomet", "medford", "melrose",
+    "mystic-valley", "north-reading", "peabody", "pingree", "pioneer-charter", "reading", "rockport", "salem", "saugus",
+    "st-johns-prep", "stoneham", "triton", "wakefield", "weston", "wilmington", "winthrop"]);
   const school = (name) => String(name || "").split(/\s*(?:\/|&)\s*/)[0].trim();
+  const slug = (s) => s.toLowerCase().replace(/'/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
   const hasColors = (name) => !!SCHOOL_COLORS[school(name)];
-  /* A round badge in the opponent's colors with its initials ("BF" for Bishop Fenwick, "S" for Salem) */
+  /* The opponent's logo in a white circle ringed in its main color; schools without a usable logo
+     get a badge in their colors with initials ("BF" for Bishop Fenwick, "S" for Swampscott) */
   function badge(name, size = "") {
     const s = school(name);
     const [c1, c2] = SCHOOL_COLORS[s] || ["#5b647a", "#ffffff"];
+    if (LOGOS.has(slug(s))) {
+      return `<span class="opp-badge logo ${size}" style="--c1:${c1};--c2:${c2}" aria-hidden="true"><img src="${ROOT}images/opponents/${slug(s)}.png" alt="" loading="lazy"></span>`;
+    }
     const words = s.replace(/^St\.\s*/, "St ").split(/[\s-]+/).filter((w) => /^[A-Za-z]/.test(w));
     const letters = (words.length > 1 ? words.slice(0, 2).map((w) => w[0]).join("") : s.charAt(0)).toUpperCase();
     return `<span class="opp-badge ${size}" style="--c1:${c1};--c2:${c2}" aria-hidden="true">${letters}</span>`;
@@ -128,7 +139,10 @@
       background: var(--c1); color: #fff; box-shadow: inset 0 0 0 2.5px var(--c2), 0 0 0 1px rgba(11, 31, 77, .12);
       font: 800 13px/1 "Saira Condensed", "Arial Narrow", sans-serif; letter-spacing: .02em; text-transform: uppercase; }
     .opp-badge.md { width: 46px; height: 46px; font-size: 19px; box-shadow: inset 0 0 0 3px var(--c2), 0 0 0 1px rgba(11, 31, 77, .12); }
-    .opp-badge.lg { width: 56px; height: 56px; font-size: 22px; box-shadow: inset 0 0 0 3.5px var(--c2), 0 0 0 2px rgba(255, 255, 255, .9); }`;
+    .opp-badge.lg { width: 56px; height: 56px; font-size: 22px; box-shadow: inset 0 0 0 3.5px var(--c2), 0 0 0 2px rgba(255, 255, 255, .9); }
+    .opp-badge.logo { background: #fff; box-shadow: inset 0 0 0 2px var(--c1), 0 0 0 1px rgba(11, 31, 77, .12); overflow: hidden; }
+    .opp-badge.logo.lg { box-shadow: inset 0 0 0 3px var(--c1), 0 0 0 2px rgba(255, 255, 255, .9); }
+    .opp-badge.logo img { width: 74%; height: 74%; object-fit: contain; }`;
   document.head.appendChild(css);
 
   window.DFA = { place, mapsUrl, weather, weatherText, state, icon, badge, hasColors };

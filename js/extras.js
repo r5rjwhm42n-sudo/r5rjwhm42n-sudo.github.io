@@ -468,7 +468,7 @@
     @media (max-width: 720px) { .hero.has-shot { background: linear-gradient(180deg, rgba(11,31,77,.9) 0%, rgba(11,31,77,.78) 55%, rgba(24,71,159,.72) 100%), var(--shot) center 30% / cover; } }
     .dfa-credit { margin: 12px 0 0; font-size: 13.5px; color: var(--muted); }
     .dfa-credit a { color: var(--royal); font-weight: 600; }
-    .game .opp .opp-badge { margin: -4px 9px 0 0; }
+    .game .opp .opp-badge { width: 38px; height: 38px; font-size: 15px; margin: -6px 10px 0 0; }
     .modal-head h2 .opp-badge { margin: -6px 12px 0 0; }
     .scoreline .team .opp-badge { order: 2; }
     .dfa-btn svg, .dfa-share svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none; }
