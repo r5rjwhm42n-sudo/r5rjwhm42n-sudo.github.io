@@ -140,9 +140,11 @@
       font: 800 13px/1 "Saira Condensed", "Arial Narrow", sans-serif; letter-spacing: .02em; text-transform: uppercase; }
     .opp-badge.md { width: 46px; height: 46px; font-size: 19px; box-shadow: inset 0 0 0 3px var(--c2), 0 0 0 1px rgba(11, 31, 77, .12); }
     .opp-badge.lg { width: 56px; height: 56px; font-size: 22px; box-shadow: inset 0 0 0 3.5px var(--c2), 0 0 0 2px rgba(255, 255, 255, .9); }
-    .opp-badge.logo { background: #fff; box-shadow: inset 0 0 0 2px var(--c1), 0 0 0 1px rgba(11, 31, 77, .12); overflow: hidden; }
-    .opp-badge.logo.lg { box-shadow: inset 0 0 0 3px var(--c1), 0 0 0 2px rgba(255, 255, 255, .9); }
-    .opp-badge.logo img { width: 74%; height: 74%; object-fit: contain; }`;
+    /* logos are cropped to a circle that fills the badge, with the school-color ring as its border */
+    .opp-badge.logo { background: #fff; border: 2px solid var(--c1); box-shadow: 0 0 0 1px rgba(11, 31, 77, .12); overflow: hidden; }
+    .opp-badge.logo.md, .opp-badge.logo.lg { border-width: 3px; }
+    .opp-badge.logo.lg { box-shadow: 0 0 0 2px rgba(255, 255, 255, .9); }
+    .opp-badge.logo img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }`;
   document.head.appendChild(css);
 
   window.DFA = { place, mapsUrl, weather, weatherText, state, icon, badge, hasColors };
