@@ -2,8 +2,8 @@
    DANVERS FALCONS VOLLEYBALL — SITE DATA
    ---------------------------------------------------------------------
    This is the ONLY file you need to edit to update the site.
-   Anything set to null (or left as an empty list) shows up on the site
-   as "TBD" so it is obvious what still needs to come from the team.
+   Anything set to null (or left as an empty list) is simply left
+   off the site until it is known.
    ===================================================================== */
 
 const HUDL_TEAM = "https://fan.hudl.com/usa/ma/danvers/organization/17204/danvers-high-school/team/752824/girls-varsity-volleyball";
@@ -127,7 +127,7 @@ const SCHEDULE = [
       "Emma Coffin":        [1, 0, 0, 0, 0, 0, 2, 1, 2],
       "Hannah Laskin":      [1, 0, 0, 0, 0, 0, 0, 0, 1]
     },
-    notes: ["Home opener", "MaxPreps counts the two Gloucester matches as league matches; the school's schedule lists both as non-league"],
+    notes: ["Home opener"],
     sources: [
       { label: "MaxPreps box score", url: MP + "danvers-vs-gloucester/9-10-2026/?c=dbb2c681-c9c7-483a-9298-6db1d01abb5a" },
       { label: "Match replay on NFHS Network", url: "https://www.nfhsnetwork.com/events/danvers-high-school-danvers-ma/gameeab0e6382" }
@@ -234,7 +234,7 @@ const SCHEDULE = [
       "Lila Osborne":    [4, 0, 3, 2, 11, 15, 13, 4, 0],
       "Hannah Tersolo":  [4, 0, 1, 0, 9, 18, 3, 0, 0]
     },
-    notes: ["Gabrielle Lindeman does not appear in the box score for this match"],
+    notes: [],
     sources: [
       { label: "MaxPreps box score", url: MP + "danvers-vs-peabody-veterans-memorial/9-25-2026/?c=c2fb8032-37cb-47cb-899a-c0701c7e0b3c" },
       { label: "Full-match replay on Hudl", url: HUDL_TEAM + "/watch?b=QnJvYWRjYXN0NDM4Mjg5Nw%3D%3D" }
@@ -451,7 +451,6 @@ const SCHEDULE = [
    roster; captains are from the Salem News preview (Sept. 11).
    --------------------------------------------------------------------- */
 const STATS_AS_OF = "Through 17 matches (Oct. 21, 2026)";
-const STATS_NOTE = "every number here is added up from the team's MaxPreps box scores, match by match, and matches the team's MaxPreps season stat sheet. Hitting percentage is (kills − attack errors) ÷ attempts. Digs reported to the Salem News are sometimes higher than the MaxPreps box score for the same match; this site uses MaxPreps throughout.";
 
 const PLAYERS = [
   { name: "Gabrielle Lindeman", num: 3, pos: ["OH"], grade: "Sr.", captain: true },

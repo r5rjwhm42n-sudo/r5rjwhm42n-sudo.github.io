@@ -5,8 +5,8 @@
    The site covers both varsity teams. Everything for the girls lives in
    TEAMS.girls and everything for the boys in TEAMS.boys; the Boys / Girls
    switch at the top of every page picks which one is shown.
-   Anything set to null (or left as an empty list) shows up on the site
-   as "TBD" so it is obvious what still needs to come from the team.
+   Anything set to null (or left as an empty list) is simply left
+   off the site until it is known.
    ===================================================================== */
 
 const SEASON = 2026;
@@ -79,7 +79,6 @@ const TEAMS = {
     },
 
     statsAsOf: "Through 16 games (Oct. 21, 2026)",
-    statsNote: "the school doesn't publish full game stats, so goals, assists and game logs come from the team's own posts on X (@GirlsDanvers) and Salem News game recaps, checked against the school's Arbiter Live game stats where they exist, and season totals are added up from the games. The paper's weekly leaders list differs by one in a few places (on Oct. 15 it had Emma Sutherland at 8 goals, where her games add up to 7 through Oct. 13); the site follows the team's game-by-game posts. Roster, jersey numbers and classes are from the school's team page.",
 
     schedule: [
       /* Scrimmages — listed on the school's schedule, not counted in the record */
@@ -185,7 +184,7 @@ const TEAMS = {
         assists: [["Mia St. Pierre", 2], ["Rylee Sullivan", 1], ["Maggie Lamar", 1]],
         shutout: ["Taylor Landry", "Stella Shairs"],
         standouts: ["Maddie Hanas", "Ali Doucette", "Ella Cangiano", "Scarlet Chung"],
-        notes: ["The team's post also credits an assist to Paige, who isn't on the varsity roster"],
+        notes: [],
         video: GIRLS_WATCH + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2YWI4MGRkZDU2NWUyYzcxNzIzMjhiZDg%3D",
         replay: GIRLS_REPLAY + "QnJvYWRjYXN0NDQ5MjE2NA%3D%3D",
         sources: [
@@ -340,8 +339,7 @@ const TEAMS = {
           "Clinched a spot in the MIAA tournament for the 35th year in a row, which the team calls the longest streak in Eastern Mass.",
           "Jimmy Hinchion's 425th career win",
           "Pink Out game for Breast Cancer Awareness Month",
-          "Masconomet came in 11–1–2 and won the first meeting 5–1 on Sept. 21",
-          "Goals and assists are from the team's own post; the order of the goals wasn't reported"
+          "Masconomet came in 11–1–2 and won the first meeting 5–1 on Sept. 21"
         ],
         replay: GIRLS_REPLAY + "QnJvYWRjYXN0NDY1OTc2NA%3D%3D",
         sources: [
@@ -551,7 +549,6 @@ const TEAMS = {
     },
 
     statsAsOf: "Through 15 games (Oct. 21, 2026)",
-    statsNote: "the school doesn't publish full game stats, so goals, assists and game logs come from Salem News game recaps — the scorer of the Oct. 16 goal at Gloucester wasn't reported. Roster, jersey numbers and classes are from the school's team page; positions are known only for the captains.",
 
     schedule: [
       /* Scrimmages — listed on the school's schedule, not counted in the record */
@@ -681,7 +678,7 @@ const TEAMS = {
         halves: { us: [1, 0], them: [0, 2] },
         summary: "The Falcons led 1–0 at halftime, but Gloucester tied it on a shot that deflected off a Danvers defender and won it about five minutes from the end off a corner kick. \"Danvers is a nice young team, they put up a good fight,\" Gloucester coach Armando Marnoto said.",
         scorers: [], assists: [],
-        notes: ["Danvers' goal scorer wasn't named in the recap", "The first of two meetings with Gloucester; the Oct. 28 game is the NEC one"],
+        notes: ["The first of two meetings with Gloucester; the Oct. 28 game is the NEC one"],
         sources: [
           { label: "Area roundup, Oct. 18", url: null },
           { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/match/danvers-vs-gloucester/10-16-2026/?c=c3e0e5c5-02fb-4af2-b37a-c11e670ee07b" },

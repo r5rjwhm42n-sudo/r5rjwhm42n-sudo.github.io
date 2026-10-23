@@ -2,8 +2,8 @@
    DANVERS FALCONS FOOTBALL — SITE DATA
    ---------------------------------------------------------------------
    This is the ONLY file you need to edit to update the site.
-   Anything set to null (or marked tbd: true) shows up on the site as
-   "TBD" so it is obvious what still needs to come from the team.
+   Anything set to null (or left as an empty list) is simply left
+   off the site until it is known.
    ===================================================================== */
 
 const HUDL_TEAM = "https://fan.hudl.com/usa/ma/danvers/organization/17204/danvers-high-school/team/33811";
@@ -90,7 +90,7 @@ const SCHEDULE = [
       { name: "Juan Martinez", line: "Recovered the onside kick" },
       { name: "Nick Xerras", line: "Blocked punt (4th quarter)" }
     ],
-    notes: ["Melrose held to 136 yards, 3.7 per play", "Quarter scores from the athletic department's live updates"],
+    notes: ["Melrose held to 136 yards, 3.7 per play"],
     sources: [
       { label: "Danvers Falcons live updates on X", url: "https://x.com/WeAreDanvers/status/2101111710316695852" },
       { label: "Salem News roundup", url: "https://www.salemnews.com/sports/friday-football-roundup-danvers-st-johns-prep-earn-big-road-wins/article_4d9c0799-dc34-4429-8822-55c36ca84e8d.html" },

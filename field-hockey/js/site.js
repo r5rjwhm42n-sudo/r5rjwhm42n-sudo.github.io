@@ -36,6 +36,7 @@
   const divShort = T.division.replace("MIAA ", "");
   const rankText = R ? `MIAA ${divShort} power ranking: No. ${R.rank} of ${R.of} · ${R.asOf}` : "";
   const fullName = (p) => p.nick ? p.name.replace(" ", ` “${p.nick}” `) : p.name;
+  const initials = (name) => name.split(" ").map((w) => w[0]).join("").slice(0, 2);
   const tile = ([k, v, d]) => `<div class="card tile"><div class="k">${k}</div><div class="v count ${String(v).length > 8 ? "long" : ""}">${v}</div><div class="d">${d}</div></div>`;
 
   /* ---------- Player numbers, added up from the game lists in data.js ---------- */
@@ -158,22 +159,19 @@
     else if (g.scrimmage && !g.result) body += `<h4>Preseason</h4><p>${dateLong(g.date)} · ${timeOf(g.date)}<br>${esc(g.site)}</p><p>Scrimmage — no score is kept.</p>`;
     else if (!g.result) body += `<h4>Game Time</h4><p>${dateLong(g.date)} · ${timeOf(g.date)}<br>${esc(g.site)}</p>`;
     if (g.result && !g.scrimmage) {
-      body += `<h4>Score by Quarter</h4>`;
       body += g.quarters
-        ? `<table class="line"><tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>F</th></tr>
+        ? `<h4>Score by Quarter</h4><table class="line"><tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>F</th></tr>
              <tr><td>Danvers</td>${g.quarters.us.map((q) => `<td>${q}</td>`).join("")}<td>${g.us}</td></tr>
              <tr><td>${esc(g.opponent)}</td>${g.quarters.them.map((q) => `<td>${q}</td>`).join("")}<td>${g.them}</td></tr></table>`
-        : `<p>${g.halftime ? `Halftime: Danvers ${g.halftime[0]}, ${esc(g.opponent)} ${g.halftime[1]} · ` : ""}<span class="tbd">Quarter scores TBD</span></p>`;
-      body += `<h4>Danvers Goals</h4>`;
+        : g.halftime ? `<h4>Score by Quarter</h4><p>Halftime: Danvers ${g.halftime[0]}, ${esc(g.opponent)} ${g.halftime[1]}</p>` : "";
       const named = (g.scorers || []).reduce((n, [, goals]) => n + goals, 0);
       if (g.plays) {
-        body += `<div class="plays">${g.plays.map((s) => `<div class="row"><span class="q">${esc(s.when)}</span><span>${esc(s.play)}</span>${s.score ? `<span class="sc">${esc(s.score)}</span>` : ""}</div>`).join("")}</div>`;
+        body += `<h4>Danvers Goals</h4><div class="plays">${g.plays.map((s) => `<div class="row"><span class="q">${esc(s.when)}</span><span>${esc(s.play)}</span>${s.score ? `<span class="sc">${esc(s.score)}</span>` : ""}</div>`).join("")}</div>`;
       } else if (named) {
-        body += `<div class="perf">${g.scorers.map(([name, n]) => `<div class="row"><span class="n">${esc(name)}</span><span>${n === 3 ? "Hat trick" : plural(n, "goal")}</span></div>`).join("")}</div>`;
-      } else {
-        body += g.us ? `<p><span class="tbd">Goal scorers TBD</span></p>` : `<p>Danvers was held scoreless.</p>`;
+        body += `<h4>Danvers Goals</h4><div class="perf">${g.scorers.map(([name, n]) => `<div class="row"><span class="n">${esc(name)}</span><span>${n === 3 ? "Hat trick" : plural(n, "goal")}</span></div>`).join("")}</div>`;
+      } else if (!g.us) {
+        body += `<h4>Danvers Goals</h4><p>Danvers was held scoreless.</p>`;
       }
-      if (named && named < g.us) body += `<p class="assist-line"><span class="tbd">${plural(g.us - named, "more goal scorer")} TBD</span></p>`;
       if (g.assists?.length) body += `<p class="assist-line"><b>Assists:</b> ${g.assists.map(([name, n]) => esc(name) + (n > 1 ? ` ${n}` : "")).join(", ")}</p>`;
       if (g.saves?.length) body += `<h4>In Goal</h4><div class="perf">${g.saves.map(([name, n]) => `<div class="row"><span class="n">${esc(name)}</span><span>${plural(n, "save")}</span></div>`).join("")}</div>`;
       if (g.shutout?.length) body += `<p class="assist-line">${g.shutout.map(esc).join(" and ")} ${g.shutout.length > 1 ? "shared" : "earned"} the shutout.</p>`;
@@ -296,7 +294,6 @@
   function stats() {
     const n = played.length || 1, diff = gf - ga;
     $("#stats-asof").textContent = STATS_AS_OF;
-    $("#stats-note").textContent = STATS_NOTE;
     $("#coach-line").textContent = `Head coach ${T.headCoach} (${T.coachNote}). Assistants: ${T.assistants.join(", ")}.`;
     $("#team-tiles").innerHTML = [
       ["Record", record, `${T.conference} · W–L–T`],
@@ -311,7 +308,7 @@
     $("#scoring").innerHTML = scorers.length ? `
       <div class="legend-row"><span><i class="s2"></i>Goals</span><span><i class="s4"></i>Assists</span></div>
       ${scorers.map((p) => `<div class="bar-row">
-          <div class="nm">${esc(p.name)}<small>${p.pos.join(" / ") || "Position TBD"}${p.grade ? ` · ${p.grade}` : ""}</small></div>
+          <div class="nm">${esc(p.name)}<small>${[p.pos.join(" / "), p.grade].filter(Boolean).join(" · ")}</small></div>
           <div class="bar-track"><div class="bar-fill" style="--w:${(p.points / max * 100).toFixed(1)}%">
             ${p.goals ? `<span class="s2" style="flex:${p.goals}" title="${plural(p.goals, "goal")}">${p.goals}</span>` : ""}
             ${p.assists ? `<span class="s4" style="flex:${p.assists}" title="${plural(p.assists, "assist")}">${p.assists}</span>` : ""}
@@ -321,7 +318,6 @@
 
     const groupOf = (p) => Object.keys(POSITION_GROUPS).filter((grp) => p.pos.some((x) => POSITION_GROUPS[grp].includes(x)));
     const groups = ["All", ...Object.keys(POSITION_GROUPS).filter((grp) => ROSTER.some((p) => groupOf(p).includes(grp)))];
-    if (ROSTER.some((p) => !p.pos.length)) groups.push("Position TBD");
     let active = "All", q = "";
 
     $("#filters").innerHTML = groups.map((grp) => `<button class="chip" aria-pressed="${grp === "All"}" data-group="${grp}">${grp}</button>`).join("")
@@ -334,27 +330,26 @@
     ];
     const draw = () => {
       const list = ROSTER.filter((p) =>
-        (active === "All" || (active === "Position TBD" ? !p.pos.length : groupOf(p).includes(active))) &&
+        (active === "All" || groupOf(p).includes(active)) &&
         fullName(p).toLowerCase().includes(q));
       $("#players").innerHTML = list.length ? list.map((p) => `
         <article class="card player">
           <div class="player-top">
-            <div class="jersey ${p.num == null ? "unknown" : ""}" title="${p.num == null ? "Jersey number TBD" : ""}">${p.num ?? "#"}</div>
+            <div class="jersey ${p.num == null ? "unknown" : ""}">${p.num ?? esc(initials(p.name))}</div>
             <div>
               <h3>${esc(fullName(p))}</h3>
               <div class="posline">
-                ${p.pos.length ? p.pos.map((x) => `<span class="pos">${x}</span>`).join("") : `<span class="tbd">Position TBD</span>`}
+                ${p.pos.map((x) => `<span class="pos">${x}</span>`).join("")}
                 ${p.grade ? `<span>${p.grade}</span>` : ""}
                 ${p.captain ? `<span class="cap">CAPTAIN</span>` : ""}
               </div>
             </div>
           </div>
           ${statBoxes(p).length ? `<div class="player-stats">${statBoxes(p).map(([k, v]) => `<div><b>${v}</b><span>${k}</span></div>`).join("")}</div>` : ""}
-          <div class="player-log">
+          ${played.some((g) => p.games[g.id]) ? `<div class="player-log">
             ${played.filter((g) => p.games[g.id]).map((g) =>
-              `<div class="row"><span class="opp">${vs(g)} ${esc(g.opponent)}</span><span>${logLine(p.games[g.id])}</span></div>`).join("")
-              || `<span class="tbd">Stats TBD</span>`}
-          </div>
+              `<div class="row"><span class="opp">${vs(g)} ${esc(g.opponent)}</span><span>${logLine(p.games[g.id])}</span></div>`).join("")}
+          </div>` : ""}
         </article>`).join("") : `<div class="empty card" style="grid-column:1/-1">No players match.</div>`;
     };
     /* Roster table: every player, sortable by any column */
@@ -494,7 +489,7 @@
     const SHOWN = 15;
     $("#records").innerHTML = YEARS.map((s, i) => `<tr${i >= SHOWN ? ' class="older" hidden' : ""}>
         <td class="yr">${s.year}</td>
-        <td class="rec">${s.w == null ? `<span class="tbd">TBD</span>` : `${s.w}–${s.l}–${s.t}`}${s.caveat ? `<small>${esc(s.caveat)}</small>` : ""}</td>
+        <td class="rec">${s.w == null ? "–" : `${s.w}–${s.l}–${s.t}`}${s.caveat ? `<small>${esc(s.caveat)}</small>` : ""}</td>
         <td>${s.w == null ? "" : `<div class="bar" title="${(pct(s) * 100).toFixed(0)}% (ties count as half a win)"><i style="width:${pct(s) * 100}%"></i></div>`}</td>
         <td>${esc(s.coach)}</td>
         <td>${isTitle(s) ? `<span class="note-pill">NEC Champions</span>${s.finish ? ` ${esc(s.finish)}` : ""}` : esc(s.finish)}</td>
@@ -529,10 +524,8 @@
       draw();
     });
     draw();
-    $("#photos").innerHTML = PHOTOS.length
-      ? PHOTOS.map((p) => `<figure class="photo has-img"><img src="${esc(p.src)}" alt="${esc(p.caption)}" loading="lazy"><figcaption>${esc(p.caption)}</figcaption></figure>`).join("")
-      : Array.from({ length: 8 }, (_, i) => `<div class="photo">Photo ${i + 1}<br>coming soon</div>`).join("");
-    $("#photo-note").hidden = PHOTOS.length > 0;
+    $("#photos").innerHTML = PHOTOS.map((p) => `<figure class="photo has-img"><img src="${esc(p.src)}" alt="${esc(p.caption)}" loading="lazy"><figcaption>${esc(p.caption)}</figcaption></figure>`).join("");
+    $("#photos").closest("section").hidden = !PHOTOS.length;   // no photos yet: leave the section out
   }
 
   ({ home, stats, schedule, history, media })[page]?.();

@@ -2,8 +2,8 @@
    DANVERS FALCONS ESPORTS — SITE DATA
    ---------------------------------------------------------------------
    This is the ONLY file you need to edit to update the site.
-   Anything set to null (or left as an empty list) shows up on the site
-   as "TBD" so it is obvious what still needs to come from the team.
+   Anything set to null (or left as an empty list) is simply left
+   off the site until it is known.
 
    FROM THE SCHOOL (2025–26 DHS student activities guide):
      · adviser Ms. Kristina Aste-Mayer, rooms A120 and A328, meeting
@@ -186,7 +186,7 @@ const MILESTONES = [
   { year: "Spring 2024", text: "Mario Kart 8 Deluxe gets its first state champion, Sutton." },
   { year: "May 2026", text: "The first New England Interscholastic Esports Championships are held, with the finals played in person at Southern New Hampshire University's esports arena in Manchester." },
   { year: "2025–26", text: "The DHS activities guide lists E Sports, advised by English teacher Kristina Aste-Mayer: PC and Nintendo Switch games, with a state tournament every year." },
-  { year: "Fall 2026", text: "Esports is listed with Danvers High's fall and spring teams. The Falcons' own milestones — first season, first win, first playoff match — go here once the team confirms them." }
+  { year: "Fall 2026", text: "Esports is listed with Danvers High's fall and spring teams." }
 ];
 
 /* MSAA state finals, newest first: [champion, runner-up] for each game.

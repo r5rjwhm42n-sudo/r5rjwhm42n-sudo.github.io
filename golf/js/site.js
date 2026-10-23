@@ -185,11 +185,7 @@
         ...(g.points || []).map(([n, p]) => [n, `${p} points`]),
         ...(g.rounds || []).map(([n, s]) => [n, `Shot ${s}`])
       ];
-      body += `<h4>Falcons' Results</h4>`;
-      body += rows.length
-        ? `<div class="perf">${rows.map(([n, r]) => `<div class="row"><span class="n">${esc(n)}</span><span>${r}</span></div>`).join("")}</div>
-           ${g.finish ? "" : `<p class="sub fine">Only the individual results printed in the paper are listed.</p>`}`
-        : `<p><span class="tbd">Individual results TBD</span></p>`;
+      if (rows.length) body += `<h4>Falcons' Results</h4><div class="perf">${rows.map(([n, r]) => `<div class="row"><span class="n">${esc(n)}</span><span>${r}</span></div>`).join("")}</div>`;
     }
     if (g.opp?.length) body += `<h4>${esc(g.opponent)}</h4><ul>${g.opp.map((n) => `<li>${esc(n)}</li>`).join("")}</ul>`;
     if (g.notes?.length) body += `<h4>Notes</h4><ul>${g.notes.map((n) => `<li>${esc(n)}</li>`).join("")}</ul>`;
@@ -347,10 +343,10 @@
     const scorers = ROSTER.filter((p) => p.pts).sort((a, b) => b.pts - a.pts);
     const max = Math.max(...scorers.map((p) => p.pts), 1);
     $("#points").innerHTML = scorers.length ? `
-      <p class="chart-note">Each block is one match (9 points available). Only results printed in the paper are counted, so totals are partial.</p>
+      <p class="chart-note">Each block is one match (9 points available).</p>
       ${scorers.map((p) => `
         <div class="bar-row">
-          <div class="nm">${esc(p.name)}<small>${p.grade || "Class TBD"} · ${p.wins} win${p.wins === 1 ? "" : "s"}${p.halves ? `, ${p.halves} halved` : ""}</small></div>
+          <div class="nm">${esc(p.name)}<small>${p.grade ? `${p.grade} · ` : ""}${p.wins} win${p.wins === 1 ? "" : "s"}${p.halves ? `, ${p.halves} halved` : ""}</small></div>
           <div class="bar-track"><div class="bar-fill" style="--w:${(p.pts / max * 100).toFixed(1)}%">
             ${p.log.filter((x) => x.pts != null).map((x, i) => `<span class="s${i % 2 ? 3 : 2}" style="flex:${x.pts || 0.01}" title="${x.pts} points ${esc(title(x.g))}">${x.pts}</span>`).join("")}
           </div></div>
@@ -381,16 +377,16 @@
             <div>
               <h3>${esc(p.name)}</h3>
               <div class="posline">
-                ${p.grade ? `<span class="pos">${p.grade}</span>` : `<span class="tbd">Class TBD</span>`}
+                ${p.grade ? `<span class="pos">${p.grade}</span>` : ""}
                 ${p.captain ? `<span class="cap">CAPTAIN</span>` : ""}
                 ${p.note ? `<span>${esc(p.note)}</span>` : ""}
               </div>
             </div>
           </div>
           ${statBox(p).length ? `<div class="player-stats">${statBox(p).map(([k, v]) => `<div><b>${v}</b><span>${k}</span></div>`).join("")}</div>` : ""}
-          <div class="player-log">
-            ${p.log.map((x) => `<div class="row"><span class="opp">${esc(title(x.g))}</span><span>${esc(x.text)}</span></div>`).join("") || `<span class="tbd">Results TBD</span>`}
-          </div>
+          ${p.log.length ? `<div class="player-log">
+            ${p.log.map((x) => `<div class="row"><span class="opp">${esc(title(x.g))}</span><span>${esc(x.text)}</span></div>`).join("")}
+          </div>` : ""}
         </article>`).join("") : `<div class="empty card" style="grid-column:1/-1">No players match.</div>`;
     };
     $("#filters").addEventListener("click", (e) => {
@@ -482,10 +478,8 @@
         <p>${esc(n.blurb)}</p>
         <span class="go">Read at ${esc(n.source)} ↗</span>
       </a>`).join("");
-    $("#photos").innerHTML = PHOTOS.length
-      ? PHOTOS.map((p) => `<figure class="photo has-img"><img src="${esc(p.src)}" alt="${esc(p.caption)}" loading="lazy"><figcaption>${esc(p.caption)}</figcaption></figure>`).join("")
-      : Array.from({ length: 8 }, (_, i) => `<div class="photo">Photo ${i + 1}<br>coming soon</div>`).join("");
-    $("#photo-note").hidden = PHOTOS.length > 0;
+    $("#photos").innerHTML = PHOTOS.map((p) => `<figure class="photo has-img"><img src="${esc(p.src)}" alt="${esc(p.caption)}" loading="lazy"><figcaption>${esc(p.caption)}</figcaption></figure>`).join("");
+    $("#photos").closest("section").hidden = !PHOTOS.length;   // no photos yet: leave the section out
   }
 
   ({ home, stats, schedule, history, media })[page]?.();

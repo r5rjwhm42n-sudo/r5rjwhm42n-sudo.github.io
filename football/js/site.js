@@ -24,6 +24,7 @@
   const dateShort = (iso) => fmt(iso, { weekday: "short", month: "short", day: "numeric" });
   const timeOf = (iso) => fmt(iso, { hour: "numeric", minute: "2-digit" });
   const vs = (g) => (g.home ? "vs" : "at");
+  const initials = (name) => name.split(" ").map((w) => w[0]).join("").slice(0, 2);
   const tile = ([k, v, d]) => `<div class="card tile"><div class="k">${k}</div><div class="v count">${v}</div><div class="d">${d}</div></div>`;
 
   /* ---------- Top bar, header, scoreboard strip, footer ---------- */
@@ -119,18 +120,16 @@
     if (g.cancelled) body += `<h4>Cancelled</h4><p>Originally scheduled for ${dateLong(g.date)} at ${timeOf(g.date)}, ${esc(g.site)}.</p>`;
     else if (!g.result) body += `<h4>Kickoff</h4><p>${dateLong(g.date)} · ${timeOf(g.date)}<br>${esc(g.site)}</p>`;
     if (g.result) {
-      body += `<h4>Line Score</h4>`;
       body += g.quarters
-        ? `<table class="line"><tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>F</th></tr>
+        ? `<h4>Line Score</h4><table class="line"><tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>F</th></tr>
              <tr><td>Danvers</td>${g.quarters.us.map((q) => `<td>${q}</td>`).join("")}<td>${g.us}</td></tr>
              <tr><td>${esc(g.opponent)}</td>${g.quarters.them.map((q) => `<td>${q}</td>`).join("")}<td>${g.them}</td></tr></table>`
         : g.half
-        ? `<p>Halftime: Danvers ${g.half[0]}, ${esc(g.opponent)} ${g.half[1]} <span class="tbd">Quarter scores not published</span></p>`
-        : `<p><span class="tbd">Quarter scores TBD</span></p>`;
-      body += `<h4>Scoring Summary</h4>`;
+        ? `<h4>Line Score</h4><p>Halftime: Danvers ${g.half[0]}, ${esc(g.opponent)} ${g.half[1]}</p>`
+        : "";
       body += g.scoring
-        ? `<div class="plays">${g.scoring.map((s) => `<div class="row"><span class="q">${esc(s.q)}</span><span>${esc(s.play)}</span>${s.score ? `<span class="sc">${esc(s.score)}</span>` : ""}</div>`).join("")}</div>`
-        : `<p><span class="tbd">Scoring plays TBD</span></p>`;
+        ? `<h4>Scoring Summary</h4><div class="plays">${g.scoring.map((s) => `<div class="row"><span class="q">${esc(s.q)}</span><span>${esc(s.play)}</span>${s.score ? `<span class="sc">${esc(s.score)}</span>` : ""}</div>`).join("")}</div>`
+        : "";
     }
     if (g.performers?.length) {
       body += `<h4>Top Performers</h4><div class="perf">${g.performers.map((p) => `<div class="row"><span class="n">${esc(p.name)}</span><span>${esc(p.line)}</span></div>`).join("")}</div>`;
@@ -255,7 +254,7 @@
       ${rushers.map((p) => {
         const total = statOf(p, "Rush Yds");
         return `<div class="bar-row">
-          <div class="nm">${esc(p.name)}<small>${p.pos.join(" / ") || "Position TBD"}</small></div>
+          <div class="nm">${esc(p.name)}<small>${p.pos.join(" / ")}</small></div>
           <div class="bar-track"><div class="bar-fill" style="--w:${(total / max * 100).toFixed(1)}%">
             ${played.map((g, i) => yds(p, g) ? `<span class="s${i % 6 + 1}" style="flex:${yds(p, g)}" title="${yds(p, g)} yds ${vs(g)} ${esc(g.opponent)}">${yds(p, g)}</span>` : "").join("")}
           </div></div>
@@ -265,7 +264,6 @@
 
     const groupOf = (p) => Object.keys(POSITION_GROUPS).filter((grp) => p.pos.some((x) => POSITION_GROUPS[grp].includes(x)));
     const groups = ["All", ...Object.keys(POSITION_GROUPS).filter((grp) => PLAYERS.some((p) => groupOf(p).includes(grp)))];
-    if (PLAYERS.some((p) => !p.pos.length)) groups.push("Position TBD");
     let active = "All", q = "";
 
     $("#filters").innerHTML = groups.map((grp) => `<button class="chip" aria-pressed="${grp === "All"}" data-group="${grp}">${grp}</button>`).join("")
@@ -273,28 +271,28 @@
 
     const draw = () => {
       const list = PLAYERS.filter((p) =>
-        (active === "All" || (active === "Position TBD" ? !p.pos.length : groupOf(p).includes(active))) &&
+        (active === "All" || groupOf(p).includes(active)) &&
         p.name.toLowerCase().includes(q));
       $("#players").innerHTML = list.length ? list.map((p) => `
         <article class="card player">
           <div class="player-top">
-            <div class="jersey ${p.num == null ? "unknown" : ""}" title="${p.num == null ? "Jersey number TBD" : ""}">${p.num ?? "#"}</div>
+            <div class="jersey ${p.num == null ? "unknown" : ""}">${p.num ?? esc(initials(p.name))}</div>
             <div>
               <h3>${esc(p.name)}</h3>
               <div class="posline">
-                ${p.pos.length ? p.pos.map((x) => `<span class="pos">${x}</span>`).join("") : `<span class="tbd">Position TBD</span>`}
+                ${p.pos.map((x) => `<span class="pos">${x}</span>`).join("")}
                 ${p.grade ? `<span>${p.grade}</span>` : ""}
                 ${p.captain ? `<span class="cap">CAPTAIN</span>` : ""}
               </div>
             </div>
           </div>
           ${p.stats.length ? `<div class="player-stats">${p.stats.map(([k, v]) => `<div><b>${v}</b><span>${k}</span></div>`).join("")}</div>` : ""}
-          <div class="player-log">
+          ${Object.keys(p.log).length ? `<div class="player-log">
             ${Object.entries(p.log).map(([id, line]) => {
               const g = SCHEDULE.find((x) => x.id === +id);
               return `<div class="row"><span class="opp">${vs(g)} ${esc(g.opponent)}</span><span>${esc(line)}</span></div>`;
-            }).join("") || `<span class="tbd">Stats TBD</span>`}
-          </div>
+            }).join("")}
+          </div>` : ""}
         </article>`).join("") : `<div class="empty card" style="grid-column:1/-1">No players match.</div>`;
     };
     $("#filters").addEventListener("click", (e) => {
@@ -397,10 +395,8 @@
       draw();
     });
     draw();
-    $("#photos").innerHTML = PHOTOS.length
-      ? PHOTOS.map((p) => `<figure class="photo has-img"><img src="${esc(p.src)}" alt="${esc(p.caption)}" loading="lazy"><figcaption>${esc(p.caption)}</figcaption></figure>`).join("")
-      : Array.from({ length: 8 }, (_, i) => `<div class="photo">Photo ${i + 1}<br>coming soon</div>`).join("");
-    $("#photo-note").hidden = PHOTOS.length > 0;
+    $("#photos").innerHTML = PHOTOS.map((p) => `<figure class="photo has-img"><img src="${esc(p.src)}" alt="${esc(p.caption)}" loading="lazy"><figcaption>${esc(p.caption)}</figcaption></figure>`).join("");
+    $("#photos").closest("section").hidden = !PHOTOS.length;   // no photos yet: leave the section out
   }
 
   ({ home, stats, schedule, history, media })[page]?.();

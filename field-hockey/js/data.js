@@ -2,8 +2,8 @@
    DANVERS FALCONS FIELD HOCKEY — SITE DATA
    ---------------------------------------------------------------------
    This is the ONLY file you need to edit to update the site.
-   Anything set to null (or left as an empty list) shows up on the site
-   as "TBD" so it is obvious what still needs to come from the team.
+   Anything set to null (or left as an empty list) is simply left
+   off the site until it is known.
    ===================================================================== */
 
 const HUDL_TEAM = "https://fan.hudl.com/usa/ma/danvers/organization/17204/danvers-high-school/team/356796/girls-varsity-field-hockey";
@@ -143,7 +143,7 @@ const SCHEDULE = [
     scorers: [["Kyla Moroney", 1]],
     assists: [["Kyla Moroney", 1]],
     saves: [["Eva Selaya-Mendez", 6], ["Ellie Barnes", 5]],
-    notes: ["The scorer of Danvers' other goal is still needed from the team"],
+    notes: [],
     sources: [
       { label: "Salem News roundup, Sept. 21", url: null },
       { label: "Ipswich Athletics on X", url: "https://x.com/ihstigers/status/2102148644296151325" },
@@ -292,7 +292,7 @@ const SCHEDULE = [
     quarters: null,
     summary: "The Falcons scored six times under the lights at Serino Field to sweep the season series with Saugus, getting back above .500 overall and to .500 in the conference.",
     scorers: [], assists: [],
-    notes: ["Second meeting — Danvers won 2–1 at home on Sept. 17", "Goal scorers and saves still needed from the team"],
+    notes: ["Second meeting — Danvers won 2–1 at home on Sept. 17"],
     sources: [
       { label: "Salem News roundup, Oct. 20", url: "https://www.salemnews.com/sports/tuesdays-area-roundup-beverly-danvers-fenwick-field-hockey-all-score-big-wins/article_2c88f6e2-5712-4e03-ba8b-e2041bd6252f.html" },
       { label: "Result on Arbiter Live", url: "https://www.arbiterlive.com/Teams/Schedule/4285268?activeEntityId=5538" }
@@ -303,7 +303,7 @@ const SCHEDULE = [
     quarters: null,
     summary: "A day after the win at Saugus, the Falcons were shut out by St. Mary's on the turf at the Manning Bowl in a non-league game.",
     scorers: [], assists: [],
-    notes: ["Second game in two days", "Saves still needed from the team"],
+    notes: ["Second game in two days"],
     sources: [{ label: "MaxPreps box score", url: MP + "danvers-vs-st-marys-lynn/10-21-2026/?c=28677cba-f670-4b16-89da-13abff0da084" }] },
   { id: 17, date: "2026-10-27T17:30", opponent: "Bishop Fenwick", mascot: "Crusaders", home: true, league: false, site: HOME, result: null,
     notes: ["Second meeting — the teams tied 2–2 on Sept. 29"] },
@@ -323,7 +323,6 @@ const SCHEDULE = [
    Names in the game lists above must match these names exactly.
    --------------------------------------------------------------------- */
 const STATS_AS_OF = "Through 16 games (Oct. 21, 2026)";
-const STATS_NOTE = "no official stat sheet is published for 2026. Goals, assists, saves and game logs are added up from Salem News game recaps, so they can differ slightly from the paper's own leaders list — on Oct. 15 it had Kyla Moroney at 14 goals and 10 assists and Eva Selaya-Mendez at 79 saves through the Oct. 13 game, where the recaps add up to 14 goals, 11 assists and 86 saves. The Oct. 15 Swampscott goals match the school's own game stats on Arbiter Live. No scorers or saves have been published in a free source for the Oct. 20 Saugus and Oct. 21 St. Mary's games yet. The roster, numbers and positions are the school's official list.";
 
 const PLAYERS = [
   { name: "Ellie Barnes", num: 0, pos: ["GK"], grade: "Fr.", captain: false },

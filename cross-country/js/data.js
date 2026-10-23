@@ -2,8 +2,8 @@
    DANVERS FALCONS CROSS COUNTRY — SITE DATA
    ---------------------------------------------------------------------
    This is the ONLY file you need to edit to update the site.
-   Anything set to null shows up on the site as "TBD" so it is obvious
-   what still needs to come from the team.
+   Anything set to null (or left as an empty list) is simply left
+   off the site until it is known.
    ===================================================================== */
 
 const ATHLETICS = "https://www.danversfalconsathletics.com/";
@@ -97,7 +97,7 @@ const MEETS = [
     home: false, league: false, site: "Maudslay State Park, Newburyport", distance: "3K / 2 mi",
     noResults: true,
     boys: null, girls: null,
-    notes: ["No results are available for this meet"]
+    notes: []
   },
   {
     id: 2, date: "2026-09-16T16:00", opponent: "Salem", mascot: "Witches", short: "SAL",
@@ -130,7 +130,7 @@ const MEETS = [
     home: true, league: true, site: "Danvers High School", distance: "2.9 mi",
     summary: "Swampscott took both races, but the Falcons ran fast on the home course: Marcus Morais dropped to 17:12 and Grace Conklin to 18:51, each about 40 seconds quicker than they ran on the same course two weeks earlier.",
     boys: {
-      result: "L", us: 45, them: 17, check: "Overall places need confirming",
+      result: "L", us: 45, them: 17,
       finishers: [
         f("Marcus Morais", null, "17:12"), f("Jason Rooney", null, "18:08"), f("Miles Pietal", null, "18:29"),
         f("Levi James", null, "18:57"), f("Rowan Bartlett", null, "21:14"), f("Jakob Crandall", null, "22:25"),
@@ -138,7 +138,7 @@ const MEETS = [
       ]
     },
     girls: {
-      result: "L", us: 33, them: 24, check: "Overall places need confirming",
+      result: "L", us: 33, them: 24,
       finishers: [
         f("Grace Conklin", null, "18:51"), f("Madyson Danish", null, "20:37"), f("Paige Sherman", null, "22:01"),
         f("Emily Sullivan", null, "22:12"), f("Makayla Cheung", null, "24:43"), f("Kylie Walsh", null, "24:48")
@@ -159,7 +159,7 @@ const MEETS = [
     home: true, league: true, site: "Danvers High School", distance: "2.9 mi",
     summary: "Both squads got back to .500. Madyson Danish won the girls race and four more Falcons followed her into the scoring in a 16–40 rout, and the boys won 22–30.",
     boys: {
-      result: "W", us: 22, them: 30, check: "Team score is from a newspaper summary and is not on Arbiter Live; places still needed",
+      result: "W", us: 22, them: 30,
       finishers: [
         f("Marcus Morais", null, "17:25"), f("Levi James", null, "18:52"), f("Miles Pietal", null, "19:02"),
         f("Jakob Crandall", null, "21:27"), f("Ethan Santiago", null, "24:03"), f("Anis Lmal", null, "25:31")
@@ -168,14 +168,13 @@ const MEETS = [
     girls: {
       result: "W", us: 16, them: 40,
       winner: { name: "Madyson Danish", school: "Danvers", time: "21:31" },
-      check: "Places for the 2nd–5th Danvers scorers still needed",
       finishers: [
         f("Madyson Danish", 1, "21:31"), f("Grace Conklin", null, "21:31", "Scored"), f("Paige Sherman", null, "23:34", "Scored"),
         f("Emily Sullivan", null, "23:34", "Scored"), f("Kylie Walsh", null, "24:13", "Scored"), f("Norah Wright", null, "25:22"),
         f("Makayla Cheung", null, "26:11")
       ]
     },
-    notes: ["Saugus and Winthrop run as a combined team", "Excel Academy also ran in the meet, per the athletic department's post", "Run on the 2.9-mile home course"],
+    notes: ["Saugus and Winthrop run as a combined team", "Excel Academy also ran in the meet", "Run on the 2.9-mile home course"],
     sources: [{ label: "Salem News roundup", url: SN + "wednesdays-area-roundup-corbetts-strong-finish-drives-panthers/article_30d4075f-7e97-48e8-8508-f8d636f3a1f2.html" }]
   },
   {
@@ -223,25 +222,25 @@ const MEETS = [
         f("Norah Wright", null, null, "DNF")
       ]
     },
-    notes: ["Team scores from the school's Arbiter Live schedule; times from the team's master results sheet", "Danvers places were worked out from Marblehead's finishers as listed in the Marblehead Current, and they add up to both team scores. Places after a team's 7th runner don't count toward the score, so 10th–12th are scoring places."],
+    notes: ["Places are scoring places: runners after a team's seventh finisher don't count toward the score"],
     sources: [{ label: "Marblehead Current notebook", url: "https://marbleheadcurrent.org/2026/10/12/magicians-notebook-from-the-pitch-to-the-links-successes-continue-for-the-local-teams/" }, { label: "Boys result on Arbiter Live", url: "https://www.arbiterlive.com/Teams/Schedule/9311100?activeEntityId=5538" }, { label: "Girls result on Arbiter Live", url: "https://www.arbiterlive.com/Teams/Schedule/9311101?activeEntityId=5538" }]
   },
   {
     id: 10, date: "2026-10-14T16:00", opponent: "Peabody", mascot: "Tanners", short: "PEA",
     home: true, league: true, site: "Danvers High School", distance: "2.9 mi", tag: "Senior Night",
     summary: "Peabody took both races on Senior Night at Danvers: 19–42 in the boys meet and 24–31 in the girls meet.",
-    boys: { result: "L", us: 42, them: 19, check: "Danvers places and times still needed", finishers: null },
-    girls: { result: "L", us: 31, them: 24, check: "Danvers places and times still needed", finishers: null },
-    notes: ["Senior Night", "Team scores from the school's Arbiter Live schedule"],
+    boys: { result: "L", us: 42, them: 19, finishers: null },
+    girls: { result: "L", us: 31, them: 24, finishers: null },
+    notes: ["Senior Night"],
     sources: [{ label: "Boys result on Arbiter Live", url: "https://www.arbiterlive.com/Teams/Schedule/9311100?activeEntityId=5538" }, { label: "Girls result on Arbiter Live", url: "https://www.arbiterlive.com/Teams/Schedule/9311101?activeEntityId=5538" }]
   },
   {
     id: 9, date: "2026-10-21T16:00", opponent: "Masconomet", mascot: "Chieftains", short: "MAS",
     home: false, league: true, site: "Bradley Palmer State Park", distance: null,
     summary: "Masconomet swept the last dual meet of the regular season at Bradley Palmer State Park. The Chieftains' boys took the first five places for a perfect 15–50 score, finishing 7–0 and clinching their first Northeastern Conference title, and the Masconomet girls won 25–34.",
-    boys: { result: "L", us: 50, them: 15, check: "Danvers places and times still needed", finishers: null },
-    girls: { result: "L", us: 34, them: 25, check: "Danvers places and times still needed", finishers: null },
-    notes: ["Final dual meet of the regular season", "Team scores from the school's Arbiter Live schedule", "The Masconomet boys' first NEC title, per the Salem News"],
+    boys: { result: "L", us: 50, them: 15, finishers: null },
+    girls: { result: "L", us: 34, them: 25, finishers: null },
+    notes: ["Final dual meet of the regular season", "The Masconomet boys' first NEC title"],
     sources: [{ label: "Boys result on Arbiter Live", url: "https://www.arbiterlive.com/Teams/Schedule/9311100?activeEntityId=5538" }, { label: "Girls result on Arbiter Live", url: "https://www.arbiterlive.com/Teams/Schedule/9311101?activeEntityId=5538" }, { label: "Salem News roundup, Oct. 21", url: SN + "wednesdays-area-roundup-salem-boys-soccer-claims-first-playoff-berth-in-eight-years/article_7a036899-52f9-4d42-b3e3-91e435916861.html" }]
   },
   {
@@ -256,7 +255,7 @@ const MEETS = [
     boys: null, girls: null,
     notes: [
       "Listed as \"States\" on the team schedule",
-      "Division 2 runs in three waves (A, B, C): girls at 11:00 a.m., 12:30 and 2:00 p.m., boys at 11:45 a.m., 1:15 and 2:45 p.m. Danvers' wave hasn't been announced.",
+      "Division 2 runs in three waves (A, B, C): girls at 11:00 a.m., 12:30 and 2:00 p.m., boys at 11:45 a.m., 1:15 and 2:45 p.m.",
       "The top seven teams and the top ten other individuals in each wave qualify for the state meet"
     ],
     sources: [{ label: "MIAA cross country schedule (PDF)", url: "https://www.miaa.net/sites/default/files/2026-03/cross-country-2026-schedule.pdf" }]

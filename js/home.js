@@ -13,7 +13,7 @@
 
   const fmt = (iso, opts) => new Date(iso).toLocaleString("en-US", opts);
   const dayShort = (iso) => fmt(iso, { weekday: "short", month: "short", day: "numeric" });
-  const timeOf = (e) => (e.timeTbd ? "Time TBD" : fmt(e.date, { hour: "numeric", minute: "2-digit" }));
+  const timeOf = (e) => (e.timeTbd ? "" : fmt(e.date, { hour: "numeric", minute: "2-digit" }));
   const ord = (n) => n + (["th", "st", "nd", "rd"][(n % 100 - 20) % 10] || ["th", "st", "nd", "rd"][n % 100] || "th");
 
   /* ---------- Load each team's data.js in its own scope ---------- */
@@ -186,13 +186,13 @@
     box.innerHTML = `
       <div class="nu-top"><span>Next up</span><span>${esc(e.team)}</span></div>
       <div class="nu-body">
-        <div class="nu-when">${fmt(e.date, { weekday: "long", month: "short", day: "numeric" })} · ${esc(timeOf(e))}</div>
+        <div class="nu-when">${[fmt(e.date, { weekday: "long", month: "short", day: "numeric" }), timeOf(e)].filter(Boolean).map(esc).join(" · ")}</div>
         <div class="nu-match">
           <span class="nu-logo"><img src="images/falcons-logo.png" alt=""></span>
           <div><div class="nu-title">${esc(e.title)}</div>${e.mascot ? `<div class="nu-mascot">${esc(e.mascot)}</div>` : ""}</div>
         </div>
         <div class="clock" id="clock" aria-live="off"></div>
-        <div class="nu-site">${esc(e.site || "Site TBD")}${e.home ? ` · <b>Home</b>` : e.home === false ? " · Away" : ""}</div>
+        <div class="nu-site">${[esc(e.site || ""), e.home ? "<b>Home</b>" : e.home === false ? "Away" : ""].filter(Boolean).join(" · ")}</div>
       </div>
       <a class="nu-foot" href="${esc(e.href)}">Game details <span aria-hidden="true">→</span></a>`;
     const clock = $("#clock");
@@ -271,7 +271,7 @@
         <div class="wk-main">
           <div class="wk-team"><svg aria-hidden="true"><use href="#i-${e.sport}"/></svg>${esc(e.team)}</div>
           <div class="wk-title">${esc(e.title)}</div>
-          <div class="wk-meta">${esc(timeOf(e))} · ${esc(e.site || "Site TBD")}</div>
+          <div class="wk-meta">${[timeOf(e), e.site].filter(Boolean).map(esc).join(" · ")}</div>
         </div>
         ${e.home ? `<span class="wk-ha home">Home</span>` : e.home === false ? `<span class="wk-ha">Away</span>` : ""}
       </a>`).join("");

@@ -2,8 +2,8 @@
    DANVERS FALCONS GOLF — SITE DATA
    ---------------------------------------------------------------------
    This is the ONLY file you need to edit to update the site.
-   Anything set to null (or left as an empty list) shows up on the site
-   as "TBD" so it is obvious what still needs to come from the team.
+   Anything set to null (or left as an empty list) is simply left
+   off the site until it is known.
    ===================================================================== */
 
 const SN = "https://www.salemnews.com/sports/";
@@ -62,7 +62,7 @@ const SCHEDULE = [
     format: "match", result: "W", us: 65, them: 7,
     summary: "The Falcons opened the season with a runaway win at The Meadow, taking 65 of the 72 points on offer.",
     cards: [],
-    notes: ["Individual results still needed from the team"],
+    notes: [],
     sources: [{ label: "Salem News roundup, Aug. 31", url: SN + "mondays-area-roundup-beverly-danvers-prep-golfers-all-win-season-openers/article_29aa7a69-1fbc-4203-bf2e-a71cfb272375.html" }] },
 
   { id: 2, date: "2026-09-01T13:00", opponent: "St. Mary's", mascot: "Spartans", home: false, league: false, site: "Gannon Golf Course, Lynn",
@@ -94,14 +94,14 @@ const SCHEDULE = [
     format: "stableford", result: "L", us: 149, them: 155,
     summary: "A six-point loss at Rockport closed out a stretch of five road matches in five days.",
     points: [],
-    notes: ["Stableford scoring — the higher team total wins", "Individual results still needed from the team"],
+    notes: ["Stableford scoring — the higher team total wins"],
     sources: [{ label: "Rockport Athletics final-score post on X", url: "https://x.com/RKPT_Athletics/status/2096075581871857697" }] },
 
   { id: 101, date: "2026-09-07T14:50", opponent: "Bishop Fenwick", mascot: "Crusaders", home: true, league: false, site: HOME,
     format: "stableford", result: "W", us: 174, them: 164,
     summary: "A ten-point win over Bishop Fenwick at Wenham on Labor Day, the first of two wins over the Crusaders in four days.",
     points: [],
-    notes: ["Individual results still needed from the team"],
+    notes: ["Stableford scoring — the higher team total wins"],
     sources: [] },
 
   { id: 6, date: "2026-09-09T15:00", opponent: "Masconomet", mascot: "Chieftains", home: true, league: true, site: HOME,
@@ -134,10 +134,6 @@ const SCHEDULE = [
       { label: "Salem News roundup, Sept. 14", url: SN + "mondays-area-roundup-beverly-volleyball-rallies-past-masco-for-dramatic-win/article_492309cf-e6d6-452c-ba7a-7f00d3b9cece.html" },
       { label: "DanversHighGolf on X", url: "https://x.com/GolfDanversHigh/status/2099889619542175744" }
     ] },
-
-  { id: 102, date: "2026-09-14T15:30", opponent: "Masconomet", mascot: "Chieftains", home: true, league: true, site: "Ferncroft Country Club, Middleton",
-    format: "match", result: null, noResult: true,
-    notes: ["Listed on the school's schedule for the same afternoon as the Beverly match, with no score posted. Not counted in the record."] },
 
   { id: 9, date: "2026-09-17T16:00", opponent: "Winthrop", mascot: "Vikings", home: false, league: true, site: "Winthrop Golf Club",
     format: "match", result: "W", us: 37, them: 35,
@@ -242,9 +238,8 @@ const SCHEDULE = [
     field: [["Marblehead", 163], ["Masconomet", 166], ["Beverly", 176]],
     formatNote: "NEC Open: 18 holes of stroke play at Tedesco, par 70. Each team's best two scores make up its total.",
     notes: [
-      "Danvers' 179 is Campbell's 85 plus a 94 from a teammate the published results don't name",
-      "Swampscott also shot 179 and was listed fifth",
-      "NEC all-conference and all-star picks are usually announced after the Open"
+      "Danvers' 179 combined Campbell's 85 with a 94",
+      "Swampscott also shot 179 and was listed fifth"
     ],
     sources: [
       { label: "Salem News story and results", url: SN + "tough-weather-conditions-take-center-stage-at-nec-open-golf/article_0c5ee106-0c54-466f-9c20-56683fd04f1c.html" },
