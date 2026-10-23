@@ -1,8 +1,7 @@
 /* =====================================================================
    Hub: Road to the State Tournament. One card per team still playing for
-   an MIAA bracket: its power ranking on a gauge with the cut line, a
-   status worked out from the live record in its data.js, the key dates,
-   and a countdown to the next bracket reveal.
+   an MIAA bracket: its power ranking on a bar with the cut line, a status
+   worked out from the live record in its data.js, and the key dates.
 
    To update: change the rankings in each team's data.js (TEAM.ranking)
    and the dates below. Once brackets are out, add  bracket: { seed,
@@ -22,7 +21,7 @@
     { sport: "cross-country", name: "Cross Country", href: "cross-country/", path: true,
       dates: [["NEC Championship", "2026-10-31T10:00", null, "Stage Fort Park, Gloucester", "NEC"], ["Division 2 meet", "2026-11-14", null, "Wrentham Developmental Center", "Div. 2"],
               ["All-State meet", "2026-11-21T14:00", null, "Devens", "State"]] },
-    { sport: "golf", name: "Golf", href: "golf/", path: true, done: { big: "11", pre: "", post: "th", line: "of 15 teams<br>D2 North sectional",
+    { sport: "golf", name: "Golf", href: "golf/", path: true, done: { big: "11", pre: "", post: "th", line: "of 15 teams at the D2 North sectional",
         detail: "The top three teams went on to the state final" },
       dates: [["D2 North sectional", "2026-10-20", null, "Bradford Country Club", "Sectional"], ["NEC Open", "2026-10-21", null, "Tedesco Country Club", "NEC Open"]] }
   ];
@@ -82,88 +81,53 @@
         detail = `${t.bracket.home ? "vs" : "at"} ${t.bracket.opponent}${t.bracket.date ? ` · ${day(t.bracket.date)}` : ""}`;
       }
 
-      const dates = t.dates.map(([k, iso, label, where]) => {
-        const past = new Date(iso.length === 10 ? `${iso}T23:59` : iso) < Date.now();
-        return `<li class="${past ? "past" : ""}"><span>${esc(k)}</span><b>${esc(label && label.startsWith("From") ? `From ${day(iso)}` : label || day(iso))}</b>${where && t.path ? `<small>${esc(where)}</small>` : ""}</li>`;
-      });
       const nextIdx = t.dates.findIndex(([, iso]) => new Date(iso.length === 10 ? `${iso}T23:59` : iso) >= Date.now());
+      const dates = t.dates.map(([k, iso, label, where], j) => {
+        const past = nextIdx < 0 || j < nextIdx;
+        const when = label && label.startsWith("From") ? `From ${day(iso)}` : label || day(iso);
+        return `<div class="${past ? "past" : j === nextIdx ? "next" : ""}"><dt>${esc(k)}</dt><dd>${esc(when)}${where && t.path ? `<small>${esc(where)}</small>` : ""}</dd></div>`;
+      });
 
-      const gauge = t.path ? `
-        <div class="rd-path" style="--done:${nextIdx < 0 ? 1 : nextIdx / (t.dates.length - 1)}">
-          <div class="rd-line"><i></i></div>
-          <ol>${t.dates.map(([k, , , , tag], j) => `<li class="${nextIdx < 0 || j < nextIdx ? "past" : j === nextIdx ? "now" : ""}"><span></span><em>${esc(tag || k)}</em></li>`).join("")}</ol>
-        </div>` : rank ? `
-        <div class="rd-gauge" style="--cut:${(t.cut / of) * 100}%; --at:${((rank - 1) / (of - 1)) * 100}%">
-          <div class="rd-track"><span class="rd-zone"></span><span class="rd-line-cut"></span><span class="rd-pin"><img src="images/falcons-logo.png" alt=""></span></div>
+      let big;
+      if (t.done) big = `<b>${t.done.big}${t.done.post}</b><span>${t.done.line}</span>`;
+      else if (t.path) {
+        const [k, iso] = t.dates[Math.max(0, nextIdx)];
+        const days = Math.max(0, Math.ceil((new Date(iso.slice(0, 10) + "T00:00") - new Date(new Date().toDateString())) / 864e5));
+        big = `<b>${days}</b><span>${days === 1 ? "day" : "days"} to the ${esc(k)}</span>`;
+      } else big = `<b>${rank ? `No. ${rank}` : "—"}</b><span>of ${of} in ${esc(division)}</span>`;
+
+      /* the division as a bar: qualifying spots shaded, Danvers' spot marked */
+      const gauge = !t.path && rank ? `
+        <div class="rd-gauge" style="--cut:${(t.cut / of) * 100}%; --at:${((rank - .5) / of) * 100}%" aria-hidden="true">
+          <div class="rd-track"><span class="rd-zone"></span><span class="rd-mark"></span></div>
           <div class="rd-scale"><span>No. 1</span><span class="rd-cutlabel">Top ${t.cut}</span><span>No. ${of}</span></div>
         </div>` : "";
 
-      return `<a class="rd-card ${cls}" href="${esc(t.href)}" style="--i:${i}">
-        <div class="rd-top"><svg aria-hidden="true"><use href="#i-${t.sport}"/></svg><span>${esc(t.name)}</span>${division && !t.path ? `<em>${esc(division)}</em>` : ""}</div>
-        <div class="rd-main">
-          ${t.done ? `<div class="rd-big"><b>${t.done.big}</b><small class="post">${t.done.post}</small><span>${t.done.line}</span></div>`
-            : t.path ? (() => {
-              const [k, iso] = t.dates[Math.max(0, nextIdx)];
-              const days = Math.max(0, Math.ceil((new Date(iso.slice(0, 10) + "T00:00") - new Date(new Date().toDateString())) / 864e5));
-              return `<div class="rd-big"><b>${days}</b><span>${days === 1 ? "day" : "days"} to the<br>${esc(k)}</span></div>`;
-            })()
-            : `<div class="rd-big"><small>No.</small><b data-n="${rank || ""}" data-from="${of}">${rank || "—"}</b><span>of ${of}<br>${esc(division)}</span></div>`}
-          <div class="rd-status"><span class="chip">${esc(status)}</span><small>${esc(detail)}</small></div>
+      return `<a class="rd-card card lift" href="${esc(t.href)}">
+        <div class="rd-top"><svg aria-hidden="true"><use href="#i-${t.sport}"/></svg><span>${esc(t.name)}</span>${division && !t.path ? `<span class="rd-div">${esc(division)}</span>` : ""}</div>
+        <div class="rd-body">
+          <div class="rd-main"><div class="rd-big">${big}</div><span class="rd-chip ${cls}">${esc(status)}</span></div>
+          ${detail ? `<p class="rd-detail">${esc(detail)}</p>` : ""}
+          ${gauge}
+          ${t._rec ? `<dl class="rd-recs"><div><dt>Record</dt><dd>${t._rec}</dd></div><div><dt>Win pct</dt><dd>${t._pct}</dd></div><div><dt>Before cutoff</dt><dd>${t._left}</dd></div></dl>` : ""}
+          <dl class="rd-dates">${dates.join("")}</dl>
         </div>
-        ${gauge}
-        ${t._rec ? `<div class="rd-rec"><span><b>${t._rec}</b> record</span><span><b>${t._pct}</b> win pct</span><span><b>${t._left}</b> before cutoff</span></div>` : ""}
-        <ol class="rd-dates">${dates.join("")}</ol>
       </a>`;
     });
 
     const asOf = H.raw["field-hockey"]?.TEAM?.ranking?.asOf || "Oct. 20";
     const next = REVEALS.find(([, iso]) => new Date(iso) > Date.now());
+    const reveal = next && `${next[0]} come out ${new Date(next[1]).toLocaleString("en-US", { weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit" }).replace(":00", "").replace(/, (\d+ [AP]M)$/, " at $1")}`;
     box.innerHTML = `<div class="wrap">
-      <div class="rd-head">
-        <div>
-          <div class="eyebrow">MIAA state tournaments · Fall 2026</div>
-          <h2>Road to the State Tournament</h2>
-          <p>Where every Falcons team stands in the power rankings, how close each is to a bracket, and the dates that decide it.</p>
-        </div>
-        ${next ? `<div class="rd-clock">
-          <div class="k"><span class="dot"></span>Next bracket reveal</div>
-          <div class="v">${esc(next[0])} · ${new Date(next[1]).toLocaleString("en-US", { weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit" }).replace(":00", "")}</div>
-          <div class="rd-cd" id="rd-cd"></div>
-        </div>` : ""}
-      </div>
+      <div class="section-head"><h2>Road to the State Tournament</h2><span class="sub">${reveal ? `${esc(reveal)}` : "Where each team stands in the MIAA power rankings"}</span></div>
       <div class="rd-grid">${cards.join("")}</div>
-      <p class="rd-note">Rankings as of ${esc(asOf)} from the ${RULE}</p>
+      <p class="credit">Rankings as of ${esc(asOf)} from the ${RULE}</p>
     </div>`;
     box.hidden = false;
 
-    if (next) {
-      const end = new Date(next[1]).getTime(), cd = $("#rd-cd");
-      const tick = () => {
-        const ms = Math.max(0, end - Date.now());
-        const cell = (v, l) => `<div><b>${String(Math.floor(v)).padStart(2, "0")}</b><span>${l}</span></div>`;
-        cd.innerHTML = cell(ms / 864e5, "Days") + cell((ms / 36e5) % 24, "Hrs") + cell((ms / 6e4) % 60, "Min") + cell((ms / 1e3) % 60, "Sec");
-      };
-      tick();
-      setInterval(tick, 1000);
-    }
-
-    /* cards rise in, pins slide to their rank and the numbers count up once the section is on screen */
-    const go = () => {
-      box.classList.add("in");
-      if (calm) return;
-      box.querySelectorAll("[data-n]").forEach((el) => {
-        const end = +el.dataset.n, from = +el.dataset.from || 60, t0 = performance.now();
-        if (!end) return;
-        const step = (t) => {
-          const p = Math.min(1, (t - t0) / 1100);
-          el.textContent = Math.max(1, Math.round(end + (from - end) * Math.pow(1 - p, 3)));
-          if (p < 1) requestAnimationFrame(step);
-        };
-        requestAnimationFrame(step);
-      });
-    };
-    if (calm || !("IntersectionObserver" in window)) go();
-    else new IntersectionObserver((en, o) => { if (en[0].isIntersecting) { go(); o.disconnect(); } }, { threshold: .18 }).observe(box);
+    /* the shaded bars fill in once the section scrolls into view, like the title bars below */
+    if (calm || !("IntersectionObserver" in window)) box.classList.add("in");
+    else new IntersectionObserver((en, o) => { if (en[0].isIntersecting) { box.classList.add("in"); o.disconnect(); } }, { threshold: .2 }).observe(box);
   }
 
   if (window.DFAHub) start();
