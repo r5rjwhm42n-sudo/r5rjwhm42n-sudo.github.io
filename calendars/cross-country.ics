@@ -1,0 +1,194 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Danvers Falcons Team Sites//Schedules//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Danvers Cross Country
+X-WR-CALDESC:Danvers Cross Country schedule and results from danversfalcons
+ athletics.org
+X-WR-TIMEZONE:America/New_York
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:cross-country-1@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260909T160000
+DURATION:PT2H
+SUMMARY:Danvers Cross Country vs Beverly
+LOCATION:Danvers High School
+DESCRIPTION:Northeastern Conference\nBoys: lost 31–24\nGirls: lost 32–2
+ 6\nOpening day against a Northeastern Conference rival. Marcus Morais ran 
+ 17:54 for second in the boys race — three seconds behind the winner — 
+ and Grace Conklin (19:30) and Madyson Danish (20:47) went 2–3 in the gir
+ ls race\, but Beverly's depth took both meets.\nSchedule and results: http
+ s://danversfalconsathletics.org/cross-country/schedule.html
+URL:https://danversfalconsathletics.org/cross-country/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:cross-country-11@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260912T091500
+DURATION:PT2H
+SUMMARY:Danvers Cross Country: Clipper Relays
+LOCATION:Maudslay State Park\, Newburyport
+DESCRIPTION:Invitational\nSchedule and results: https://danversfalconsathle
+ tics.org/cross-country/schedule.html
+URL:https://danversfalconsathletics.org/cross-country/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:cross-country-2@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260916T160000
+DURATION:PT2H
+SUMMARY:Danvers Cross Country at Salem
+LOCATION:Winter Island\, Salem
+DESCRIPTION:Northeastern Conference\nBoys: won 28–29\nGirls: won 20–35\
+ nA sweep\, and a one-point thriller on the boys side. Marcus Morais won th
+ e race in 19:20 as the Falcons edged Salem 28–29 for the boys' first dua
+ l-meet win since 2024. Grace Conklin (23:01) and Madyson Danish (23:02) cr
+ ossed a second apart to go 1–2 and lead the girls to a 20–35 win.\nSch
+ edule and results: https://danversfalconsathletics.org/cross-country/sched
+ ule.html
+URL:https://danversfalconsathletics.org/cross-country/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:cross-country-3@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260923T163000
+DURATION:PT2H
+SUMMARY:Danvers Cross Country vs Swampscott
+LOCATION:Danvers High School
+DESCRIPTION:Northeastern Conference\nBoys: lost 45–17\nGirls: lost 33–2
+ 4\nSwampscott took both races\, but the Falcons ran fast on the home cours
+ e: Marcus Morais dropped to 17:12 and Grace Conklin to 18:51\, each about 
+ 40 seconds quicker than they ran on the same course two weeks earlier.\nSc
+ hedule and results: https://danversfalconsathletics.org/cross-country/sche
+ dule.html
+URL:https://danversfalconsathletics.org/cross-country/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:cross-country-4@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260930T163000
+DURATION:PT2H
+SUMMARY:Danvers Cross Country vs Saugus/Winthrop
+LOCATION:Danvers High School
+DESCRIPTION:Northeastern Conference\nBoys: won 22–30\nGirls: won 16–40\
+ nBoth squads got back to .500. Madyson Danish won the girls race and four 
+ more Falcons followed her into the scoring in a 16–40 rout\, and the boy
+ s won 22–30.\nSchedule and results: https://danversfalconsathletics.org/
+ cross-country/schedule.html
+URL:https://danversfalconsathletics.org/cross-country/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:cross-country-5@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261003T170000
+DURATION:PT2H
+SUMMARY:Danvers Cross Country: MSTCA Bay State Invitational
+LOCATION:Wrentham Developmental Center
+DESCRIPTION:Invitational\nBoys: Marcus Morais\, 83 in 18:00.4\nGirls: Grace
+  Conklin\, 15 in 19:46.7\nUnder the lights at the MSTCA's Twilight Meet\, 
+ Grace Conklin ran 19:46.7 to finish 15th in the Varsity A race — the fif
+ th-fastest 5K by a Danvers girl on athletic.net's all-time list. Marcus Mo
+ rais led the boys in a personal-best 18:00.4\, one of four Falcon boys to 
+ set a 5K best.\nSchedule and results: https://danversfalconsathletics.org/
+ cross-country/schedule.html
+URL:https://danversfalconsathletics.org/cross-country/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:cross-country-6@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261007T160000
+DURATION:PT2H
+SUMMARY:Danvers Cross Country at Marblehead
+LOCATION:Lead Mills Conservation Area\, Marblehead
+DESCRIPTION:Northeastern Conference\nBoys: lost 43–19\nGirls: lost 42–1
+ 9\nMarblehead swept both races at Lead Mills on the Magicians' senior day\
+ , winning the boys meet 19–43 and the girls meet 19–42. Marcus Morais 
+ split the Marblehead pack in second (18:14)\, and Grace Conklin (20:17) an
+ d Madyson Danish (21:25) were third and sixth in the girls race.\nSchedule
+  and results: https://danversfalconsathletics.org/cross-country/schedule.h
+ tml
+URL:https://danversfalconsathletics.org/cross-country/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:cross-country-10@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261014T160000
+DURATION:PT2H
+SUMMARY:Danvers Cross Country vs Peabody
+LOCATION:Danvers High School
+DESCRIPTION:Northeastern Conference\nBoys: lost 42–19\nGirls: lost 31–2
+ 4\nPeabody took both races on Senior Night at Danvers: 19–42 in the boys
+  meet and 24–31 in the girls meet.\nSchedule and results: https://danver
+ sfalconsathletics.org/cross-country/schedule.html
+URL:https://danversfalconsathletics.org/cross-country/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:cross-country-9@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261021T160000
+DURATION:PT2H
+SUMMARY:Danvers Cross Country at Masconomet
+LOCATION:Bradley Palmer State Park
+DESCRIPTION:Northeastern Conference\nBoys: lost 50–15\nGirls: lost 34–2
+ 5\nMasconomet swept the last dual meet of the regular season at Bradley Pa
+ lmer State Park. The Chieftains' boys took the first five places for a per
+ fect 15–50 score\, finishing 7–0 and clinching their first Northeaster
+ n Conference title\, and the Masconomet girls won 25–34.\nSchedule and r
+ esults: https://danversfalconsathletics.org/cross-country/schedule.html
+URL:https://danversfalconsathletics.org/cross-country/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:cross-country-7@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261031T100000
+DURATION:PT2H
+SUMMARY:Danvers Cross Country: NEC Championship Meet
+LOCATION:Stage Fort Park\, Gloucester
+DESCRIPTION:Northeastern Conference\nParking\, $10 per vehicle\, on GoFan: 
+ https://gofan.co/event/6973738?schoolId=MA86936\nSchedule and results: htt
+ ps://danversfalconsathletics.org/cross-country/schedule.html
+URL:https://danversfalconsathletics.org/cross-country/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:cross-country-8@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;VALUE=DATE:20261114
+DTEND;VALUE=DATE:20261115
+SUMMARY:Danvers Cross Country: MIAA Division 2 Championships
+LOCATION:Wrentham Developmental Center
+DESCRIPTION:Postseason\nSchedule and results: https://danversfalconsathleti
+ cs.org/cross-country/schedule.html
+URL:https://danversfalconsathletics.org/cross-country/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:cross-country-14@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261121T140000
+DURATION:PT2H
+SUMMARY:Danvers Cross Country: MIAA State Championship Meet
+LOCATION:Devens
+DESCRIPTION:Postseason\nSchedule and results: https://danversfalconsathleti
+ cs.org/cross-country/schedule.html
+URL:https://danversfalconsathletics.org/cross-country/schedule.html
+END:VEVENT
+END:VCALENDAR

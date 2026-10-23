@@ -13,6 +13,7 @@
   const teamKey = TEAMS[asked] ? asked : TEAMS[saved] ? saved : DEFAULT_TEAM;
   try { localStorage.setItem("dhs-soccer-team", teamKey); } catch (e) { /* fine without it */ }
   const T = TEAMS[teamKey];
+  document.body.dataset.team = teamKey;   // read by the shared Add to calendar buttons
   const to = (href, key = teamKey) => `${href}?team=${key}`;
   document.title = document.title.replace("Soccer", T.label);
   $$("[data-t]").forEach((el) => { el.textContent = { label: T.label, season: SEASON, intro: T.historyIntro }[el.dataset.t]; });

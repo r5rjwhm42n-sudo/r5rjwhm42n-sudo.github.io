@@ -1,0 +1,293 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Danvers Falcons Team Sites//Schedules//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Danvers Esports
+X-WR-CALDESC:Danvers Esports schedule and results from danversfalconsathlet
+ ics.org
+X-WR-TIMEZONE:America/New_York
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:esports-101@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260923T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Smash (Week 1)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Super Smash Bros. Ultimate · Best of 5 sets\nSchedule and resu
+ lts: https://danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-201@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260924T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Rocket League (Week 1)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Rocket League · Best of 5 games\nSchedule and results: https:/
+ /danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-301@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260924T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Mario Kart (Week 1)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Mario Kart 8 Deluxe · Best of 3 games\nSchedule and results: h
+ ttps://danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-102@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260930T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Smash (Week 2)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Super Smash Bros. Ultimate · Best of 5 sets\nSchedule and resu
+ lts: https://danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-202@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261001T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Rocket League (Week 2)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Rocket League · Best of 5 games\nSchedule and results: https:/
+ /danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-302@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261001T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Mario Kart (Week 2)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Mario Kart 8 Deluxe · Best of 3 games\nSchedule and results: h
+ ttps://danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-103@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261007T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Smash (Week 3)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Super Smash Bros. Ultimate · Best of 5 sets\nSchedule and resu
+ lts: https://danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-203@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261008T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Rocket League (Week 3)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Rocket League · Best of 5 games\nSchedule and results: https:/
+ /danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-303@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261008T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Mario Kart (Week 3)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Mario Kart 8 Deluxe · Best of 3 games\nSchedule and results: h
+ ttps://danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-104@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261014T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Smash (Week 4)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Super Smash Bros. Ultimate · Best of 5 sets\nSchedule and resu
+ lts: https://danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-204@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261015T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Rocket League (Week 4)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Rocket League · Best of 5 games\nSchedule and results: https:/
+ /danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-304@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261015T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Mario Kart (Week 4)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Mario Kart 8 Deluxe · Best of 3 games\nSchedule and results: h
+ ttps://danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-105@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261021T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Smash (Week 5)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Super Smash Bros. Ultimate · Best of 5 sets\nSchedule and resu
+ lts: https://danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-205@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261022T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Rocket League (Week 5)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Rocket League · Best of 5 games\nSchedule and results: https:/
+ /danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-305@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261022T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Mario Kart (Week 5)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Mario Kart 8 Deluxe · Best of 3 games\nSchedule and results: h
+ ttps://danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-106@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261028T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Smash (Week 6)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Super Smash Bros. Ultimate · Best of 5 sets\nSchedule and resu
+ lts: https://danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-206@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261029T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Rocket League (Week 6)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Rocket League · Best of 5 games\nSchedule and results: https:/
+ /danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-306@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261029T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Mario Kart (Week 6)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Mario Kart 8 Deluxe · Best of 3 games\nSchedule and results: h
+ ttps://danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-107@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261104T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Smash (Week 7)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Super Smash Bros. Ultimate · Best of 5 sets\nSchedule and resu
+ lts: https://danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-207@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261105T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Rocket League (Week 7)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Rocket League · Best of 5 games\nSchedule and results: https:/
+ /danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-307@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261105T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Mario Kart (Week 7)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Mario Kart 8 Deluxe · Best of 3 games\nSchedule and results: h
+ ttps://danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-108@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261111T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Smash (Week 8)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Super Smash Bros. Ultimate · Best of 5 sets\nSchedule and resu
+ lts: https://danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-208@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261112T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Rocket League (Week 8)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Rocket League · Best of 5 games\nSchedule and results: https:/
+ /danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-308@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261112T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Mario Kart (Week 8)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Mario Kart 8 Deluxe · Best of 3 games\nSchedule and results: h
+ ttps://danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,301 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Danvers Falcons Team Sites//Schedules//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Danvers Golf
+X-WR-CALDESC:Danvers Golf schedule and results from danversfalconsathletics
+ .org
+X-WR-TIMEZONE:America/New_York
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:golf-1@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260831T160000
+DURATION:PT3H
+SUMMARY:Danvers Golf at Peabody (W 65–7)
+LOCATION:The Meadow at Peabody
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 65\, Peabody 7\nThe Fal
+ cons opened the season with a runaway win at The Meadow\, taking 65 of the
+  72 points on offer.\nSchedule and results: https://danversfalconsathletic
+ s.org/golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-2@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260901T130000
+DURATION:PT3H
+SUMMARY:Danvers Golf at St. Mary's (L 170–174)
+LOCATION:Gannon Golf Course\, Lynn
+DESCRIPTION:Non-league\nFinal: Danvers 170\, St. Mary's 174\nA four-point l
+ oss on a rainy day at Gannon in the first non-league match of the year\, l
+ ess than 24 hours after the opener. Ben Campbell led the Falcons with 28 p
+ oints and Austin Patuto had 27.\nSchedule and results: https://danversfalc
+ onsathletics.org/golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-3@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260902T150000
+DURATION:PT3H
+SUMMARY:Danvers Golf at St. John's Prep (L 253–227)
+LOCATION:Turner Hill\, Ipswich
+DESCRIPTION:Non-league\nFinal: Danvers 253\, St. John's Prep 227\nThe Falco
+ ns' crosstown rival won a stroke-play match at Turner Hill. Tommy Surette 
+ led Danvers with a 39.\nSchedule and results: https://danversfalconsathlet
+ ics.org/golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-4@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260903T150000
+DURATION:PT3H
+SUMMARY:Danvers Golf at Salem (W 47–25)
+LOCATION:Olde Salem Greens\, Salem
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 47\, Salem 25\nPlaying 
+ for the fourth time in four days to start the season\, Danvers won on the 
+ road at Olde Salem Greens to get back to 2–2. Ben Blum (7–2)\, Ryan Mo
+ ore and Drew Carlson (both 6.5–2.5) earned their first varsity wins\, an
+ d Wes Maylor won 6.5–2.5.\nSchedule and results: https://danversfalconsa
+ thletics.org/golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-5@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260904T150000
+DURATION:PT3H
+SUMMARY:Danvers Golf at Rockport (L 149–155)
+LOCATION:Rockport Golf Club
+DESCRIPTION:Non-league\nFinal: Danvers 149\, Rockport 155\nA six-point loss
+  at Rockport closed out a stretch of five road matches in five days.\nSche
+ dule and results: https://danversfalconsathletics.org/golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-101@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260907T145000
+DURATION:PT3H
+SUMMARY:Danvers Golf vs Bishop Fenwick (W 174–164)
+LOCATION:Wenham Country Club\, Wenham
+DESCRIPTION:Non-league\nFinal: Danvers 174\, Bishop Fenwick 164\nA ten-poin
+ t win over Bishop Fenwick at Wenham on Labor Day\, the first of two wins o
+ ver the Crusaders in four days.\nSchedule and results: https://danversfalc
+ onsathletics.org/golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-6@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260909T150000
+DURATION:PT3H
+SUMMARY:Danvers Golf vs Masconomet (L 33–39)
+LOCATION:Wenham Country Club\, Wenham
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 33\, Masconomet 39\nWes
+  Maylor\, Cole Andrews and Austin Patuto all won their matches in the home
+  opener\, but Masconomet took it by six points behind a 2-under 32 from Br
+ endan O'Connor.\nSchedule and results: https://danversfalconsathletics.org
+ /golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-7@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260910T153000
+DURATION:PT3H
+SUMMARY:Danvers Golf at Bishop Fenwick (W 172–166)
+LOCATION:The Meadow at Peabody
+DESCRIPTION:Non-league\nFinal: Danvers 172\, Bishop Fenwick 166\nBen Campbe
+ ll put up 32 points and three teammates were right behind him as Danvers e
+ dged Bishop Fenwick by six in a Stableford match.\nSchedule and results: h
+ ttps://danversfalconsathletics.org/golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-8@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260914T150000
+DURATION:PT3H
+SUMMARY:Danvers Golf vs Beverly (L 32.5–39.5)
+LOCATION:Wenham Country Club\, Wenham
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 32.5\, Beverly 39.5\nWe
+ s Maylor (7–2) and Lucas Silva (6.5–2.5) won their matches\, but rival
+  Beverly left Wenham with a seven-point win.\nSchedule and results: https:
+ //danversfalconsathletics.org/golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-9@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260917T160000
+DURATION:PT3H
+SUMMARY:Danvers Golf at Winthrop (W 37–35)
+LOCATION:Winthrop Golf Club
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 37\, Winthrop 35\nThree
+  wins and three halved matches added up to a two-point road victory\, the 
+ closest result of the season so far.\nSchedule and results: https://danver
+ sfalconsathletics.org/golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-10@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260922T153000
+DURATION:PT3H
+SUMMARY:Danvers Golf at Marblehead (L 27–45)
+LOCATION:Tedesco Country Club\, Marblehead
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 27\, Marblehead 45\nSop
+ homore Anthony Sheehan halved his match at Tedesco to lead the Falcons aga
+ inst unbeaten Marblehead.\nSchedule and results: https://danversfalconsath
+ letics.org/golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-11@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260923T160000
+DURATION:PT3H
+SUMMARY:Danvers Golf at Peabody (W 57.5–14.5)
+LOCATION:The Meadow at Peabody
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 57.5\, Peabody 14.5\nFi
+ ve seniors won big — three of them dropping just half a point — as the
+  Falcons swept the season series with Peabody.\nSchedule and results: http
+ s://danversfalconsathletics.org/golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-12@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260929T153000
+DURATION:PT3H
+SUMMARY:Danvers Golf at Swampscott (W 39–33)
+LOCATION:Tedesco Country Club\, Marblehead
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 39\, Swampscott 33\nTom
+ my Surette\, Wes Maylor and Lucas Silva all won 6–3 and Brady Swanton to
+ ok his match 5–4 to pull the Falcons back to .500.\nSchedule and results
+ : https://danversfalconsathletics.org/golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-13@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260930T150000
+DURATION:PT3H
+SUMMARY:Danvers Golf vs Marblehead (L 26–46)
+LOCATION:Wenham Country Club\, Wenham
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 26\, Marblehead 46\nWes
+  Maylor won his match 5–4 and Cole Andrews halved his\, but Marblehead s
+ tayed unbeaten with a win at Wenham.\nSchedule and results: https://danver
+ sfalconsathletics.org/golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-14@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261001T163000
+DURATION:PT3H
+SUMMARY:Danvers Golf at Beverly (T 36–36)
+LOCATION:Beverly Golf & Tennis Club
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 36\, Beverly 36\nThe ri
+ vals split the 72 points right down the middle. Brady Swanton won 7.5–1.
+ 5\, Cole Andrews took his match and freshman Dom Onorio earned a half.\nSc
+ hedule and results: https://danversfalconsathletics.org/golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-15@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261005T152500
+DURATION:PT3H
+SUMMARY:Danvers Golf vs Gloucester (W 43.5–28.5)
+LOCATION:Wenham Country Club\, Wenham
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 43.5\, Gloucester 28.5\
+ nCole Andrews won 7–2 and four more Falcons took their matches as Danver
+ s snapped Gloucester's four-match win streak at Wenham.\nSchedule and resu
+ lts: https://danversfalconsathletics.org/golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-16@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261007T150000
+DURATION:PT3H
+SUMMARY:Danvers Golf at Saugus (W 48.5–23.5)
+LOCATION:Cedar Glen Golf Course\, Saugus
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 48.5\, Saugus 23.5\nFre
+ shman Dom Onorio swept all nine points in his match\, and Cole Andrews (8.
+ 5–0.5)\, Austin Patuto and Tommy Surette (both 7–2) also won big as th
+ e Falcons moved a game over .500.\nSchedule and results: https://danversfa
+ lconsathletics.org/golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-17@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261012T145000
+DURATION:PT3H
+SUMMARY:Danvers Golf at Masconomet (L 30.5–41.5)
+LOCATION:Rowley Country Club
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 30.5\, Masconomet 41.5\
+ nLucas Silva (6–3)\, Wes Maylor (5–4) and Brady Swanton (5–4) won th
+ eir matches and Anthony Sheehan earned a half in the regular-season finale
+ \, but Masconomet's Brendan O'Connor shot a 2-under 33 to lead the Chiefta
+ ins to a season sweep.\nSchedule and results: https://danversfalconsathlet
+ ics.org/golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-19@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261020T090000
+DURATION:PT5H
+SUMMARY:Danvers Golf: Division 2 North Sectional (11th of 15)
+LOCATION:Bradford Country Club\, Haverhill
+DESCRIPTION:MIAA tournament\nFinished 11th of 15 with 348 (+64)\nIn the las
+ t MIAA sectional before the state switches formats in 2027\, the Falcons p
+ laced 11th of 15 teams at Bradford. Junior Wes Maylor led Danvers with a 9
+ -over 81. Masconomet won with 294\, and Newburyport and Milton took the ot
+ her two spots in the state final.\nSchedule and results: https://danversfa
+ lconsathletics.org/golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-18@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261021T090000
+DURATION:PT5H
+SUMMARY:Danvers Golf: NEC Open (4th of 10)
+LOCATION:Tedesco Country Club\, Marblehead
+DESCRIPTION:Northeastern Conference tournament\nFinished 4th of 10 with 179
+  (+39)\nCold temperatures\, swirling winds and lightning-fast greens made 
+ Tedesco play tough at the conference's season-ending tournament. Danvers f
+ inished fourth of 10 teams with a 179\, one shot ahead of Swampscott\, and
+  junior Ben Campbell tied for seventh individually with a 15-over 85. Marb
+ lehead won the team title with 163 and Tyler Forbes was the medalist with 
+ a 79.\nSchedule and results: https://danversfalconsathletics.org/golf/sche
+ dule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+END:VCALENDAR

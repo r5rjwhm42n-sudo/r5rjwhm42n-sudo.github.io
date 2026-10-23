@@ -1,0 +1,1995 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Danvers Falcons Team Sites//Schedules//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Danvers Falcons
+X-WR-CALDESC:Danvers Falcons schedule and results from danversfalconsathlet
+ ics.org
+X-WR-TIMEZONE:America/New_York
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:field-hockey-101@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260827T150000
+DURATION:PT2H
+SUMMARY:Danvers Field Hockey at Wilmington (scrimmage)
+LOCATION:Wilmington\, MA
+DESCRIPTION:Scrimmage\nSchedule and results: https://danversfalconsathletic
+ s.org/field-hockey/schedule.html
+URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-soccer-101@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260827T180000
+DURATION:PT2H
+SUMMARY:Danvers Girls Soccer at Medford (scrimmage) (T 0–0)
+LOCATION:Medford High School\, Medford
+DESCRIPTION:Scrimmage\nFinal: Danvers 0\, Medford 0\nSchedule and results: 
+ https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-soccer-102@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260828T093000
+DURATION:PT2H
+SUMMARY:Danvers Girls Soccer at Pingree (scrimmage)
+LOCATION:Pingree School\, South Hamilton
+DESCRIPTION:Scrimmage\nSchedule and results: https://danversfalconsathletic
+ s.org/soccer/schedule.html?team=girls
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-soccer-101@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260829T090000
+DURATION:PT2H
+SUMMARY:Danvers Boys Soccer vs St. Mary's (scrimmage)
+LOCATION:Dr. Deering Stadium\, Danvers
+DESCRIPTION:Scrimmage\nSchedule and results: https://danversfalconsathletic
+ s.org/soccer/schedule.html?team=boys
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+END:VEVENT
+BEGIN:VEVENT
+UID:volleyball-101@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260829T120000
+DURATION:PT2H
+SUMMARY:Danvers Volleyball vs Stoneham (scrimmage)
+LOCATION:DHS Field House\, Danvers
+DESCRIPTION:Scrimmage\nSchedule and results: https://danversfalconsathletic
+ s.org/volleyball/schedule.html
+URL:https://danversfalconsathletics.org/volleyball/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-soccer-102@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260831T160000
+DURATION:PT2H
+SUMMARY:Danvers Boys Soccer at Mystic Valley (scrimmage) (T 0–0)
+LOCATION:Mystic Valley athletic complex\, Malden
+DESCRIPTION:Scrimmage\nFinal: Danvers 0\, Mystic Valley 0\nSchedule and res
+ ults: https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+END:VEVENT
+BEGIN:VEVENT
+UID:field-hockey-102@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260831T160000
+DURATION:PT2H
+SUMMARY:Danvers Field Hockey at Weston (scrimmage)
+LOCATION:Weston\, MA
+DESCRIPTION:Scrimmage\nSchedule and results: https://danversfalconsathletic
+ s.org/field-hockey/schedule.html
+URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-soccer-103@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260831T160000
+DURATION:PT2H
+SUMMARY:Danvers Girls Soccer at Arlington (scrimmage)
+LOCATION:Peirce Field\, Arlington
+DESCRIPTION:Scrimmage\nSchedule and results: https://danversfalconsathletic
+ s.org/soccer/schedule.html?team=girls
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-1@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260831T160000
+DURATION:PT3H
+SUMMARY:Danvers Golf at Peabody (W 65–7)
+LOCATION:The Meadow at Peabody
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 65\, Peabody 7\nThe Fal
+ cons opened the season with a runaway win at The Meadow\, taking 65 of the
+  72 points on offer.\nSchedule and results: https://danversfalconsathletic
+ s.org/golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-2@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260901T130000
+DURATION:PT3H
+SUMMARY:Danvers Golf at St. Mary's (L 170–174)
+LOCATION:Gannon Golf Course\, Lynn
+DESCRIPTION:Non-league\nFinal: Danvers 170\, St. Mary's 174\nA four-point l
+ oss on a rainy day at Gannon in the first non-league match of the year\, l
+ ess than 24 hours after the opener. Ben Campbell led the Falcons with 28 p
+ oints and Austin Patuto had 27.\nSchedule and results: https://danversfalc
+ onsathletics.org/golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-soccer-104@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260901T160000
+DURATION:PT2H
+SUMMARY:Danvers Girls Soccer at Weston (scrimmage)
+LOCATION:Weston High School\, Weston
+DESCRIPTION:Scrimmage\nSchedule and results: https://danversfalconsathletic
+ s.org/soccer/schedule.html?team=girls
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-3@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260902T150000
+DURATION:PT3H
+SUMMARY:Danvers Golf at St. John's Prep (L 253–227)
+LOCATION:Turner Hill\, Ipswich
+DESCRIPTION:Non-league\nFinal: Danvers 253\, St. John's Prep 227\nThe Falco
+ ns' crosstown rival won a stroke-play match at Turner Hill. Tommy Surette 
+ led Danvers with a 39.\nSchedule and results: https://danversfalconsathlet
+ ics.org/golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-soccer-105@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260902T160000
+DURATION:PT2H
+SUMMARY:Danvers Girls Soccer at Lynnfield (scrimmage)
+LOCATION:Lynnfield High School\, Lynnfield
+DESCRIPTION:Scrimmage\nSchedule and results: https://danversfalconsathletic
+ s.org/soccer/schedule.html?team=girls
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+END:VEVENT
+BEGIN:VEVENT
+UID:volleyball-102@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260902T163000
+DURATION:PT2H
+SUMMARY:Danvers Volleyball vs Wakefield & 2 others (scrimmage)
+LOCATION:DHS Field House\, Danvers
+DESCRIPTION:Scrimmage\nSchedule and results: https://danversfalconsathletic
+ s.org/volleyball/schedule.html
+URL:https://danversfalconsathletics.org/volleyball/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-4@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260903T150000
+DURATION:PT3H
+SUMMARY:Danvers Golf at Salem (W 47–25)
+LOCATION:Olde Salem Greens\, Salem
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 47\, Salem 25\nPlaying 
+ for the fourth time in four days to start the season\, Danvers won on the 
+ road at Olde Salem Greens to get back to 2–2. Ben Blum (7–2)\, Ryan Mo
+ ore and Drew Carlson (both 6.5–2.5) earned their first varsity wins\, an
+ d Wes Maylor won 6.5–2.5.\nSchedule and results: https://danversfalconsa
+ thletics.org/golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:field-hockey-103@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260904T080000
+DURATION:PT2H
+SUMMARY:Danvers Field Hockey vs Manchester Essex & 8 others (scrimmage)
+LOCATION:Danvers High School
+DESCRIPTION:Scrimmage\nSchedule and results: https://danversfalconsathletic
+ s.org/field-hockey/schedule.html
+URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-5@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260904T150000
+DURATION:PT3H
+SUMMARY:Danvers Golf at Rockport (L 149–155)
+LOCATION:Rockport Golf Club
+DESCRIPTION:Non-league\nFinal: Danvers 149\, Rockport 155\nA six-point loss
+  at Rockport closed out a stretch of five road matches in five days.\nSche
+ dule and results: https://danversfalconsathletics.org/golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:volleyball-103@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260904T170000
+DURATION:PT2H
+SUMMARY:Danvers Volleyball at Hamilton-Wenham (scrimmage)
+LOCATION:Hamilton-Wenham Regional HS
+DESCRIPTION:Scrimmage\nSchedule and results: https://danversfalconsathletic
+ s.org/volleyball/schedule.html
+URL:https://danversfalconsathletics.org/volleyball/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:field-hockey-1@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260907T100000
+DURATION:PT2H
+SUMMARY:Danvers Field Hockey vs Marblehead (L 2–6)
+LOCATION:Dr. Deering Stadium\, Danvers
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 2\, Marblehead 6\nSenio
+ r captain Kyla Moroney and freshman Zoie Abell each had a goal and an assi
+ st in the Labor Day opener\, but Marblehead pulled away on the Falcons' ho
+ me turf.\nSchedule and results: https://danversfalconsathletics.org/field-
+ hockey/schedule.html
+URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:volleyball-1@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260907T123000
+DURATION:PT2H
+SUMMARY:Danvers Volleyball at Barnstable (L 0–3)
+LOCATION:Barnstable High School\, Hyannis
+DESCRIPTION:Non-league\nFinal: Danvers 0\, Barnstable 3\nThe Sarah Griffin 
+ era opened with a Labor Day trip to Cape Cod. Gabrielle Lindeman had eight
+  kills and Hadley Brown 12 digs\, but Barnstable took it in three.\nSchedu
+ le and results: https://danversfalconsathletics.org/volleyball/schedule.ht
+ ml
+URL:https://danversfalconsathletics.org/volleyball/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-101@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260907T145000
+DURATION:PT3H
+SUMMARY:Danvers Golf vs Bishop Fenwick (W 174–164)
+LOCATION:Wenham Country Club\, Wenham
+DESCRIPTION:Non-league\nFinal: Danvers 174\, Bishop Fenwick 164\nA ten-poin
+ t win over Bishop Fenwick at Wenham on Labor Day\, the first of two wins o
+ ver the Crusaders in four days.\nSchedule and results: https://danversfalc
+ onsathletics.org/golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-soccer-1@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260908T160000
+DURATION:PT2H
+SUMMARY:Danvers Boys Soccer at Marblehead (L 0–7)
+LOCATION:Piper Field\, Marblehead
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 0\, Marblehead 7\nSched
+ ule and results: https://danversfalconsathletics.org/soccer/schedule.html?
+ team=boys
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+END:VEVENT
+BEGIN:VEVENT
+UID:field-hockey-2@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260908T160000
+DURATION:PT2H
+SUMMARY:Danvers Field Hockey vs Hamilton-Wenham (W 4–3)
+LOCATION:Dr. Deering Stadium\, Danvers
+DESCRIPTION:Non-league\nFinal: Danvers 4\, Hamilton-Wenham 3\nThe Falcons c
+ ame from behind three separate times for their first win. Kyla Moroney had
+  a hat trick and set up Zoie Abell's goal\, and freshman goalkeeper Ellie 
+ Barnes made 14 saves.\nSchedule and results: https://danversfalconsathleti
+ cs.org/field-hockey/schedule.html
+URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-soccer-1@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260908T183000
+DURATION:PT2H
+SUMMARY:Danvers Girls Soccer vs Marblehead (T 2–2)
+LOCATION:Dr. Deering Stadium\, Danvers
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 2\, Marblehead 2\nThe F
+ alcons twice came back from a goal down in the first half of the season op
+ ener but couldn't find a winner despite a 20–7 edge in shots. Mia St. Pi
+ erre scored from a tough angle and Emma Sutherland got the second equalize
+ r.\nSchedule and results: https://danversfalconsathletics.org/soccer/sched
+ ule.html?team=girls
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-6@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260909T150000
+DURATION:PT3H
+SUMMARY:Danvers Golf vs Masconomet (L 33–39)
+LOCATION:Wenham Country Club\, Wenham
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 33\, Masconomet 39\nWes
+  Maylor\, Cole Andrews and Austin Patuto all won their matches in the home
+  opener\, but Masconomet took it by six points behind a 2-under 32 from Br
+ endan O'Connor.\nSchedule and results: https://danversfalconsathletics.org
+ /golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:cross-country-1@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260909T160000
+DURATION:PT2H
+SUMMARY:Danvers Cross Country vs Beverly
+LOCATION:Danvers High School
+DESCRIPTION:Northeastern Conference\nBoys: lost 31–24\nGirls: lost 32–2
+ 6\nOpening day against a Northeastern Conference rival. Marcus Morais ran 
+ 17:54 for second in the boys race — three seconds behind the winner — 
+ and Grace Conklin (19:30) and Madyson Danish (20:47) went 2–3 in the gir
+ ls race\, but Beverly's depth took both meets.\nSchedule and results: http
+ s://danversfalconsathletics.org/cross-country/schedule.html
+URL:https://danversfalconsathletics.org/cross-country/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:volleyball-2@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260909T171500
+DURATION:PT2H
+SUMMARY:Danvers Volleyball at Triton (W 3–0)
+LOCATION:Triton Regional HS\, Byfield
+DESCRIPTION:Non-league\nFinal: Danvers 3\, Triton 0\nDanvers served its way
+  to Sarah Griffin's first win with 19 aces\, six from Lauren Garofalo and 
+ five from Hadley Brown. Gabrielle Lindeman had seven kills and 12 digs\, a
+ nd setters Hannah Tersolo and Lila Osborne each handed out 11 assists.\nSc
+ hedule and results: https://danversfalconsathletics.org/volleyball/schedul
+ e.html
+URL:https://danversfalconsathletics.org/volleyball/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-7@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260910T153000
+DURATION:PT3H
+SUMMARY:Danvers Golf at Bishop Fenwick (W 172–166)
+LOCATION:The Meadow at Peabody
+DESCRIPTION:Non-league\nFinal: Danvers 172\, Bishop Fenwick 166\nBen Campbe
+ ll put up 32 points and three teammates were right behind him as Danvers e
+ dged Bishop Fenwick by six in a Stableford match.\nSchedule and results: h
+ ttps://danversfalconsathletics.org/golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:volleyball-3@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260910T171500
+DURATION:PT2H
+SUMMARY:Danvers Volleyball vs Gloucester (W 3–0)
+LOCATION:DHS Field House\, Danvers
+DESCRIPTION:Non-league\nFinal: Danvers 3\, Gloucester 0\nThe home opener wa
+ s a sweep. The Falcons hit .267 as a team\, with seven kills from Gabriell
+ e Lindeman\, six aces from Lauren Garofalo and 14 assists from Hannah Ters
+ olo.\nSchedule and results: https://danversfalconsathletics.org/volleyball
+ /schedule.html
+URL:https://danversfalconsathletics.org/volleyball/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:football-1@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260910T183000
+DURATION:PT2H30M
+SUMMARY:Danvers Football vs Concord-Carlisle (W 16–0)
+LOCATION:Morse Field at Dr. Deering Stadium\, Danvers
+DESCRIPTION:Non-league\nFinal: Danvers 16\, Concord-Carlisle 0\nThree Falco
+ ns ran for 100-plus yards and the defense never let Concord-Carlisle run a
+  play in Danvers territory. Danvers rolled up 382 yards\, 353 of them on t
+ he ground\, and allowed no first downs and just 15 yards of offense in the
+  season opener.\nSchedule and results: https://danversfalconsathletics.org
+ /football/schedule.html
+URL:https://danversfalconsathletics.org/football/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:cross-country-11@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260912T091500
+DURATION:PT2H
+SUMMARY:Danvers Cross Country: Clipper Relays
+LOCATION:Maudslay State Park\, Newburyport
+DESCRIPTION:Invitational\nSchedule and results: https://danversfalconsathle
+ tics.org/cross-country/schedule.html
+URL:https://danversfalconsathletics.org/cross-country/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-8@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260914T150000
+DURATION:PT3H
+SUMMARY:Danvers Golf vs Beverly (L 32.5–39.5)
+LOCATION:Wenham Country Club\, Wenham
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 32.5\, Beverly 39.5\nWe
+ s Maylor (7–2) and Lucas Silva (6.5–2.5) won their matches\, but rival
+  Beverly left Wenham with a seven-point win.\nSchedule and results: https:
+ //danversfalconsathletics.org/golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-soccer-2@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260914T163000
+DURATION:PT2H
+SUMMARY:Danvers Boys Soccer at Winthrop (L 0–7)
+LOCATION:Miller Field\, Winthrop
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 0\, Winthrop 7\nSchedul
+ e and results: https://danversfalconsathletics.org/soccer/schedule.html?te
+ am=boys
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-soccer-2@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260914T163000
+DURATION:PT2H
+SUMMARY:Danvers Girls Soccer vs Winthrop (W 9–1)
+LOCATION:Dr. Deering Stadium\, Danvers
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 9\, Winthrop 1\nMia St.
+  Pierre and Rylee Sullivan both had hat tricks\, and Emma Sutherland added
+  two goals and two assists as Danvers rolled to its first win.\nSchedule a
+ nd results: https://danversfalconsathletics.org/soccer/schedule.html?team=
+ girls
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+END:VEVENT
+BEGIN:VEVENT
+UID:volleyball-4@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260914T173000
+DURATION:PT2H
+SUMMARY:Danvers Volleyball at Marblehead (L 0–3)
+LOCATION:Marblehead High School
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 0\, Marblehead 3\nMarbl
+ ehead took the conference opener in three sets. Sienna Lynch led the Falco
+ ns with three kills and a block\, and Hannah Tersolo had two aces and thre
+ e assists.\nSchedule and results: https://danversfalconsathletics.org/voll
+ eyball/schedule.html
+URL:https://danversfalconsathletics.org/volleyball/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:field-hockey-3@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260915T160000
+DURATION:PT2H
+SUMMARY:Danvers Field Hockey vs Peabody (W 8–3)
+LOCATION:Dr. Deering Stadium\, Danvers
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 8\, Peabody 3\nFreshman
+  Zoie Abell scored four goals\, and Kyla Moroney (a goal and three assists
+ ) and Addie Moore (four assists) also finished with four points as Danvers
+  built a 5–0 halftime lead at Deering Stadium.\nSchedule and results: ht
+ tps://danversfalconsathletics.org/field-hockey/schedule.html
+URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:cross-country-2@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260916T160000
+DURATION:PT2H
+SUMMARY:Danvers Cross Country at Salem
+LOCATION:Winter Island\, Salem
+DESCRIPTION:Northeastern Conference\nBoys: won 28–29\nGirls: won 20–35\
+ nA sweep\, and a one-point thriller on the boys side. Marcus Morais won th
+ e race in 19:20 as the Falcons edged Salem 28–29 for the boys' first dua
+ l-meet win since 2024. Grace Conklin (23:01) and Madyson Danish (23:02) cr
+ ossed a second apart to go 1–2 and lead the girls to a 20–35 win.\nSch
+ edule and results: https://danversfalconsathletics.org/cross-country/sched
+ ule.html
+URL:https://danversfalconsathletics.org/cross-country/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-soccer-3@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260916T160000
+DURATION:PT2H
+SUMMARY:Danvers Girls Soccer at Beverly (L 2–3)
+LOCATION:Beverly High School\, Beverly
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 2\, Beverly 3\nRylee Su
+ llivan scored both Danvers goals and the Falcons led 2–1\, but Beverly c
+ ame back to win by a goal. Taylor Landry played well in goal.\nSchedule an
+ d results: https://danversfalconsathletics.org/soccer/schedule.html?team=g
+ irls
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+END:VEVENT
+BEGIN:VEVENT
+UID:volleyball-5@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260916T171500
+DURATION:PT2H
+SUMMARY:Danvers Volleyball vs Stoneham (W 3–0)
+LOCATION:DHS Field House\, Danvers
+DESCRIPTION:Non-league\nFinal: Danvers 3\, Stoneham 0\nGabrielle Lindeman s
+ erved nine aces to go with six kills and 20 digs\, and Hannah Tersolo had 
+ 17 assists and 10 digs\, as the Falcons gave up just five points in the se
+ cond set.\nSchedule and results: https://danversfalconsathletics.org/volle
+ yball/schedule.html
+URL:https://danversfalconsathletics.org/volleyball/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-soccer-3@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260916T173000
+DURATION:PT2H
+SUMMARY:Danvers Boys Soccer vs Beverly (L 0–5)
+LOCATION:Dr. Deering Stadium\, Danvers
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 0\, Beverly 5\nDanvers 
+ trailed by a goal at halftime\, but four second-half Beverly goals put it 
+ away. The Falcons\, who don't have a single starter back from last year\, 
+ lost five players to cramping early in the second half.\nSchedule and resu
+ lts: https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-9@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260917T160000
+DURATION:PT3H
+SUMMARY:Danvers Golf at Winthrop (W 37–35)
+LOCATION:Winthrop Golf Club
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 37\, Winthrop 35\nThree
+  wins and three halved matches added up to a two-point road victory\, the 
+ closest result of the season so far.\nSchedule and results: https://danver
+ sfalconsathletics.org/golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:volleyball-6@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260917T171500
+DURATION:PT2H
+SUMMARY:Danvers Volleyball at Gloucester (W 3–2)
+LOCATION:Gloucester HS Field House
+DESCRIPTION:Non-league\nFinal: Danvers 3\, Gloucester 2\nA week after sweep
+ ing Gloucester\, the Falcons needed all five sets in the rematch. Kendall 
+ Murphy had five aces\, three blocks and three kills\, Lauren Garofalo eigh
+ t kills\, and Danvers served 25 aces as a team before closing out the fift
+ h set 15–9.\nSchedule and results: https://danversfalconsathletics.org/v
+ olleyball/schedule.html
+URL:https://danversfalconsathletics.org/volleyball/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:field-hockey-4@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260917T190000
+DURATION:PT2H
+SUMMARY:Danvers Field Hockey vs Saugus (W 2–1)
+LOCATION:Dr. Deering Stadium\, Danvers
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 2\, Saugus 1\nUnder the
+  lights at Deering Stadium\, Kyla Moroney tied it 50 seconds before halfti
+ me and won it on a penalty stroke in the third quarter. Danvers earned 15 
+ corners and put 27 shots on goal in its third straight win.\nSchedule and 
+ results: https://danversfalconsathletics.org/field-hockey/schedule.html
+URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-soccer-4@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260918T160000
+DURATION:PT2H
+SUMMARY:Danvers Boys Soccer vs Pioneer Charter (L 0–4)
+LOCATION:Morse Field\, Danvers
+DESCRIPTION:Non-league\nFinal: Danvers 0\, Pioneer Charter 4\nDown just a g
+ oal at halftime\, the young Falcons couldn't find the equalizer and gave u
+ p three in the second half.\nSchedule and results: https://danversfalconsa
+ thletics.org/soccer/schedule.html?team=boys
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-soccer-4@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260918T183000
+DURATION:PT2H
+SUMMARY:Danvers Girls Soccer vs North Reading (W 2–1)
+LOCATION:Morse Field\, Danvers
+DESCRIPTION:Non-league\nFinal: Danvers 2\, North Reading 1\nEmma Sutherland
+  set up Rylee Sullivan's sixth goal of the season and then scored the go-a
+ head goal herself in a non-league win on Danvers Youth Soccer Night.\nSche
+ dule and results: https://danversfalconsathletics.org/soccer/schedule.html
+ ?team=girls
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+END:VEVENT
+BEGIN:VEVENT
+UID:football-2@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260918T190000
+DURATION:PT2H30M
+SUMMARY:Danvers Football at Melrose (W 17–7)
+LOCATION:Fred Green Memorial Stadium\, Melrose
+DESCRIPTION:Non-league\nFinal: Danvers 17\, Melrose 7\nZach Fultz scored on
+  the opening drive and again with three seconds left in the half\, after M
+ elrose had tied it 7–7\, and Colby Medeiros added a 35-yard field goal i
+ n the third quarter. The defense held Melrose to 136 yards.\nSchedule and 
+ results: https://danversfalconsathletics.org/football/schedule.html
+URL:https://danversfalconsathletics.org/football/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-soccer-5@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260921T160000
+DURATION:PT2H
+SUMMARY:Danvers Boys Soccer vs Masconomet (L 0–7)
+LOCATION:Dr. Deering Stadium\, Danvers
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 0\, Masconomet 7\nSched
+ ule and results: https://danversfalconsathletics.org/soccer/schedule.html?
+ team=boys
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+END:VEVENT
+BEGIN:VEVENT
+UID:field-hockey-5@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260921T160000
+DURATION:PT2H
+SUMMARY:Danvers Field Hockey at Ipswich (L 2–6)
+LOCATION:Ipswich High School
+DESCRIPTION:Non-league\nFinal: Danvers 2\, Ipswich 6\nIt was 1–1 after on
+ e quarter before Ipswich took control in the second. Kyla Moroney had a go
+ al and an assist\, and the two Danvers goalkeepers combined for 11 saves.\
+ nSchedule and results: https://danversfalconsathletics.org/field-hockey/sc
+ hedule.html
+URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-soccer-5@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260921T160000
+DURATION:PT2H
+SUMMARY:Danvers Girls Soccer at Masconomet (L 1–5)
+LOCATION:Masconomet Regional\, Boxford
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 1\, Masconomet 5\nA tou
+ gh loss to a very talented Masconomet team. Mia St. Pierre scored a beauti
+ ful goal and played well in the middle of the field.\nSchedule and results
+ : https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-10@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260922T153000
+DURATION:PT3H
+SUMMARY:Danvers Golf at Marblehead (L 27–45)
+LOCATION:Tedesco Country Club\, Marblehead
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 27\, Marblehead 45\nSop
+ homore Anthony Sheehan halved his match at Tedesco to lead the Falcons aga
+ inst unbeaten Marblehead.\nSchedule and results: https://danversfalconsath
+ letics.org/golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-101@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260923T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Smash (Week 1)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Super Smash Bros. Ultimate · Best of 5 sets\nSchedule and resu
+ lts: https://danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-11@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260923T160000
+DURATION:PT3H
+SUMMARY:Danvers Golf at Peabody (W 57.5–14.5)
+LOCATION:The Meadow at Peabody
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 57.5\, Peabody 14.5\nFi
+ ve seniors won big — three of them dropping just half a point — as the
+  Falcons swept the season series with Peabody.\nSchedule and results: http
+ s://danversfalconsathletics.org/golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-soccer-6@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260923T163000
+DURATION:PT2H
+SUMMARY:Danvers Boys Soccer at Saugus (W 2–1)
+LOCATION:Serino Field\, Saugus
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 2\, Saugus 1\nNathan Ko
+ unga scored both goals — one off an Andrew Morse free kick\, the other o
+ ff a cross from Alejandro Henry — to give the Falcons their first win of
+  the season.\nSchedule and results: https://danversfalconsathletics.org/so
+ ccer/schedule.html?team=boys
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+END:VEVENT
+BEGIN:VEVENT
+UID:cross-country-3@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260923T163000
+DURATION:PT2H
+SUMMARY:Danvers Cross Country vs Swampscott
+LOCATION:Danvers High School
+DESCRIPTION:Northeastern Conference\nBoys: lost 45–17\nGirls: lost 33–2
+ 4\nSwampscott took both races\, but the Falcons ran fast on the home cours
+ e: Marcus Morais dropped to 17:12 and Grace Conklin to 18:51\, each about 
+ 40 seconds quicker than they ran on the same course two weeks earlier.\nSc
+ hedule and results: https://danversfalconsathletics.org/cross-country/sche
+ dule.html
+URL:https://danversfalconsathletics.org/cross-country/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:volleyball-7@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260923T171500
+DURATION:PT2H
+SUMMARY:Danvers Volleyball vs Beverly (W 3–0)
+LOCATION:DHS Field House\, Danvers
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 3\, Beverly 0\nTwo 25
+ –23 sets decided a tight rivalry match at the Field House. Gabrielle Lin
+ deman and Lauren Garofalo each had eight kills\, and setters Hannah Tersol
+ o and Lila Osborne finished with 14 assists apiece.\nSchedule and results:
+  https://danversfalconsathletics.org/volleyball/schedule.html
+URL:https://danversfalconsathletics.org/volleyball/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-soccer-6@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260923T173000
+DURATION:PT2H
+SUMMARY:Danvers Girls Soccer vs Saugus (W 6–0)
+LOCATION:Dr. Deering Stadium\, Danvers
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 6\, Saugus 0\nKaia Glov
+ er scored twice and Mia St. Pierre had a goal and two assists in a home sh
+ utout. Goalkeepers Taylor Landry and Stella Shairs shared the clean sheet.
+ \nSchedule and results: https://danversfalconsathletics.org/soccer/schedul
+ e.html?team=girls
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-201@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260924T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Rocket League (Week 1)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Rocket League · Best of 5 games\nSchedule and results: https:/
+ /danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-301@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260924T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Mario Kart (Week 1)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Mario Kart 8 Deluxe · Best of 3 games\nSchedule and results: h
+ ttps://danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:field-hockey-6@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260924T160000
+DURATION:PT2H
+SUMMARY:Danvers Field Hockey at Beverly (L 0–2)
+LOCATION:Forti Field\, Beverly
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 0\, Beverly 2\nThe Falc
+ ons played their rival to a scoreless first half and held Beverly to six c
+ orners\, but the unbeaten-in-the-league Panthers scored in the third and f
+ ourth quarters. Eva Selaya-Mendez made 11 saves.\nSchedule and results: ht
+ tps://danversfalconsathletics.org/field-hockey/schedule.html
+URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-soccer-7@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260925T160000
+DURATION:PT2H
+SUMMARY:Danvers Girls Soccer vs Melrose (T 1–1)
+LOCATION:Morse Field\, Danvers
+DESCRIPTION:Non-league\nFinal: Danvers 1\, Melrose 1\nNine minutes into the
+  second half\, Mia St. Pierre took a feed from Emma Sutherland and scored 
+ the tying goal.\nSchedule and results: https://danversfalconsathletics.org
+ /soccer/schedule.html?team=girls
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+END:VEVENT
+BEGIN:VEVENT
+UID:volleyball-8@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260925T173000
+DURATION:PT2H
+SUMMARY:Danvers Volleyball at Peabody (W 3–1)
+LOCATION:Peabody Veterans Memorial HS
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 3\, Peabody 1\nDanvers 
+ dropped the first set and then won three straight. Lauren Garofalo and Tes
+ s Crowley each put down 11 kills\, Hadley Brown had 23 digs\, and Hannah T
+ ersolo and Lila Osborne combined for 33 assists.\nSchedule and results: ht
+ tps://danversfalconsathletics.org/volleyball/schedule.html
+URL:https://danversfalconsathletics.org/volleyball/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:football-3@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260925T180000
+DURATION:PT2H30M
+SUMMARY:Danvers Football at Reading (W 37–20)
+LOCATION:Hollingsworth Field\, Reading
+DESCRIPTION:Non-league\nFinal: Danvers 37\, Reading 20\nDanvers trailed 8
+ –0 after a quarter and 14–10 at halftime\, then outscored Reading 27
+ –6 after the break. The ground game produced five rushing touchdowns: Ja
+ ck Houston and Zach Fultz both cleared 100 yards\, and Colby Medeiros adde
+ d a 36-yard field goal and an interception in a non-league road win.\nSche
+ dule and results: https://danversfalconsathletics.org/football/schedule.ht
+ ml
+URL:https://danversfalconsathletics.org/football/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-soccer-8@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260928T160000
+DURATION:PT2H
+SUMMARY:Danvers Girls Soccer at Peabody (W 2–1)
+LOCATION:Peabody Veterans Memorial HS\, Peabody
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 2\, Peabody 1\nIn a rai
+ n and wind storm\, Rylee Sullivan tied it before halftime off an Emma Suth
+ erland pass\, then set up Mia St. Pierre's winner in the first minute of t
+ he second half as the Falcons stretched their unbeaten run to three.\nSche
+ dule and results: https://danversfalconsathletics.org/soccer/schedule.html
+ ?team=girls
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+END:VEVENT
+BEGIN:VEVENT
+UID:volleyball-9@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260928T173000
+DURATION:PT2H
+SUMMARY:Danvers Volleyball at Saugus (W 3–0)
+LOCATION:Saugus Middle High School
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 3\, Saugus 0\nGabrielle
+  Lindeman put down 12 kills\, Lauren Garofalo added eight with 11 digs\, a
+ nd Hannah Tersolo had 17 assists in a sweep\, the Falcons' fifth win in a 
+ row.\nSchedule and results: https://danversfalconsathletics.org/volleyball
+ /schedule.html
+URL:https://danversfalconsathletics.org/volleyball/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-soccer-7@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260928T180000
+DURATION:PT2H
+SUMMARY:Danvers Boys Soccer vs Peabody (L 0–3)
+LOCATION:Dr. Deering Stadium\, Danvers
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 0\, Peabody 3\nPeabody 
+ led 1–0 at the half on a penalty kick and added two more after the break
+ .\nSchedule and results: https://danversfalconsathletics.org/soccer/schedu
+ le.html?team=boys
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-12@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260929T153000
+DURATION:PT3H
+SUMMARY:Danvers Golf at Swampscott (W 39–33)
+LOCATION:Tedesco Country Club\, Marblehead
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 39\, Swampscott 33\nTom
+ my Surette\, Wes Maylor and Lucas Silva all won 6–3 and Brady Swanton to
+ ok his match 5–4 to pull the Falcons back to .500.\nSchedule and results
+ : https://danversfalconsathletics.org/golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:field-hockey-7@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260929T160000
+DURATION:PT2H
+SUMMARY:Danvers Field Hockey at Bishop Fenwick (T 2–2)
+LOCATION:Bishop Fenwick\, Peabody
+DESCRIPTION:Non-league\nFinal: Danvers 2\, Bishop Fenwick 2\nZoie Abell bur
+ ied a pass from Kyla Moroney off a penalty corner with no time left on the
+  clock to earn a tie at one-loss Bishop Fenwick. Moroney scored the first 
+ Danvers goal and Eva Selaya-Mendez stopped 11 shots.\nSchedule and results
+ : https://danversfalconsathletics.org/field-hockey/schedule.html
+URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-13@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260930T150000
+DURATION:PT3H
+SUMMARY:Danvers Golf vs Marblehead (L 26–46)
+LOCATION:Wenham Country Club\, Wenham
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 26\, Marblehead 46\nWes
+  Maylor won his match 5–4 and Cole Andrews halved his\, but Marblehead s
+ tayed unbeaten with a win at Wenham.\nSchedule and results: https://danver
+ sfalconsathletics.org/golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-102@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260930T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Smash (Week 2)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Super Smash Bros. Ultimate · Best of 5 sets\nSchedule and resu
+ lts: https://danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-soccer-9@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260930T160000
+DURATION:PT2H
+SUMMARY:Danvers Girls Soccer at Marblehead (L 0–3)
+LOCATION:Piper Field\, Marblehead
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 0\, Marblehead 3\nDanve
+ rs carried the play early but fell behind and couldn't recover\, getting s
+ hut out for the first time this fall.\nSchedule and results: https://danve
+ rsfalconsathletics.org/soccer/schedule.html?team=girls
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+END:VEVENT
+BEGIN:VEVENT
+UID:cross-country-4@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260930T163000
+DURATION:PT2H
+SUMMARY:Danvers Cross Country vs Saugus/Winthrop
+LOCATION:Danvers High School
+DESCRIPTION:Northeastern Conference\nBoys: won 22–30\nGirls: won 16–40\
+ nBoth squads got back to .500. Madyson Danish won the girls race and four 
+ more Falcons followed her into the scoring in a 16–40 rout\, and the boy
+ s won 22–30.\nSchedule and results: https://danversfalconsathletics.org/
+ cross-country/schedule.html
+URL:https://danversfalconsathletics.org/cross-country/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:volleyball-10@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260930T173000
+DURATION:PT2H
+SUMMARY:Danvers Volleyball at Masconomet (W 3–2)
+LOCATION:Masconomet Regional HS\, Boxford
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 3\, Masconomet 2\nDanve
+ rs won the first two sets\, watched the Chieftains force a fifth\, then st
+ eadied itself to take it 15–11. Gabrielle Lindeman had 10 kills and 25 d
+ igs\, Hadley Brown 21 digs\, and Brooke Bernard five blocks.\nSchedule and
+  results: https://danversfalconsathletics.org/volleyball/schedule.html
+URL:https://danversfalconsathletics.org/volleyball/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-soccer-8@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20260930T180000
+DURATION:PT2H
+SUMMARY:Danvers Boys Soccer vs Marblehead (L 0–7)
+LOCATION:Dr. Deering Stadium\, Danvers
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 0\, Marblehead 7\nMissi
+ ng three starters to injury\, the Falcons played much better in the second
+  half\, giving up just one goal after the break.\nSchedule and results: ht
+ tps://danversfalconsathletics.org/soccer/schedule.html?team=boys
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-202@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261001T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Rocket League (Week 2)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Rocket League · Best of 5 games\nSchedule and results: https:/
+ /danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-302@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261001T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Mario Kart (Week 2)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Mario Kart 8 Deluxe · Best of 3 games\nSchedule and results: h
+ ttps://danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:field-hockey-8@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261001T163000
+DURATION:PT2H
+SUMMARY:Danvers Field Hockey at Gloucester (L 2–5)
+LOCATION:Newell Stadium\, Gloucester
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 2\, Gloucester 5\nFirst
+ -half goals from Zoie Abell and Addie Moore\, both set up by Kyla Moroney\
+ , had Danvers level with unbeaten Gloucester at halftime before a tough th
+ ird quarter. Eva Selaya-Mendez made a career-high 21 saves.\nSchedule and 
+ results: https://danversfalconsathletics.org/field-hockey/schedule.html
+URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-14@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261001T163000
+DURATION:PT3H
+SUMMARY:Danvers Golf at Beverly (T 36–36)
+LOCATION:Beverly Golf & Tennis Club
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 36\, Beverly 36\nThe ri
+ vals split the 72 points right down the middle. Brady Swanton won 7.5–1.
+ 5\, Cole Andrews took his match and freshman Dom Onorio earned a half.\nSc
+ hedule and results: https://danversfalconsathletics.org/golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-soccer-10@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261002T160000
+DURATION:PT2H
+SUMMARY:Danvers Girls Soccer at Bishop Fenwick (T 2–2)
+LOCATION:Donaldson Field\, Peabody
+DESCRIPTION:Non-league\nFinal: Danvers 2\, Bishop Fenwick 2\nRylee Sullivan
+  scored with five minutes left to earn a draw on the road. Emma Sutherland
+  had put Danvers ahead in the 12th minute\, and the Falcons held a big edg
+ e in shots on goal.\nSchedule and results: https://danversfalconsathletics
+ .org/soccer/schedule.html?team=girls
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+END:VEVENT
+BEGIN:VEVENT
+UID:field-hockey-9@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261002T163000
+DURATION:PT2H
+SUMMARY:Danvers Field Hockey at Swampscott (W 4–2)
+LOCATION:Blocksidge Field\, Swampscott
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 4\, Swampscott 2\nDown 
+ a goal at halftime\, the Falcons scored three unanswered in the second hal
+ f. Olivia Henry and Kyla Moroney each had a goal and an assist\, Addie Moo
+ re scored\, and sophomore Elynne Silva got her first varsity goal.\nSchedu
+ le and results: https://danversfalconsathletics.org/field-hockey/schedule.
+ html
+URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:volleyball-11@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261002T171500
+DURATION:PT2H
+SUMMARY:Danvers Volleyball vs Bishop Fenwick (W 3–0)
+LOCATION:DHS Field House\, Danvers
+DESCRIPTION:Non-league\nFinal: Danvers 3\, Bishop Fenwick 0\nA comfortable 
+ sweep at the Field House. Lauren Garofalo had six kills and nine digs\, Ha
+ nnah Tersolo handed out 16 assists\, and the Falcons served 15 aces.\nSche
+ dule and results: https://danversfalconsathletics.org/volleyball/schedule.
+ html
+URL:https://danversfalconsathletics.org/volleyball/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:cross-country-5@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261003T170000
+DURATION:PT2H
+SUMMARY:Danvers Cross Country: MSTCA Bay State Invitational
+LOCATION:Wrentham Developmental Center
+DESCRIPTION:Invitational\nBoys: Marcus Morais\, 83 in 18:00.4\nGirls: Grace
+  Conklin\, 15 in 19:46.7\nUnder the lights at the MSTCA's Twilight Meet\, 
+ Grace Conklin ran 19:46.7 to finish 15th in the Varsity A race — the fif
+ th-fastest 5K by a Danvers girl on athletic.net's all-time list. Marcus Mo
+ rais led the boys in a personal-best 18:00.4\, one of four Falcon boys to 
+ set a 5K best.\nSchedule and results: https://danversfalconsathletics.org/
+ cross-country/schedule.html
+URL:https://danversfalconsathletics.org/cross-country/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-15@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261005T152500
+DURATION:PT3H
+SUMMARY:Danvers Golf vs Gloucester (W 43.5–28.5)
+LOCATION:Wenham Country Club\, Wenham
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 43.5\, Gloucester 28.5\
+ nCole Andrews won 7–2 and four more Falcons took their matches as Danver
+ s snapped Gloucester's four-match win streak at Wenham.\nSchedule and resu
+ lts: https://danversfalconsathletics.org/golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-soccer-11@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261005T163000
+DURATION:PT2H
+SUMMARY:Danvers Girls Soccer at Swampscott (W 3–0)
+LOCATION:Blocksidge Field\, Swampscott
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 3\, Swampscott 0\nIn wh
+ at coach Jimmy Hinchion called his team's best win of the season\, Rylee S
+ ullivan scored in the first half and Mia St. Pierre and Emma Sutherland ad
+ ded goals after the break. Taylor Landry earned the shutout in goal.\nSche
+ dule and results: https://danversfalconsathletics.org/soccer/schedule.html
+ ?team=girls
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-soccer-9@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261005T183000
+DURATION:PT2H
+SUMMARY:Danvers Boys Soccer vs Swampscott (L 0–3)
+LOCATION:Dr. Deering Stadium\, Danvers
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 0\, Swampscott 3\nSched
+ ule and results: https://danversfalconsathletics.org/soccer/schedule.html?
+ team=boys
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+END:VEVENT
+BEGIN:VEVENT
+UID:field-hockey-10@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261006T173000
+DURATION:PT2H
+SUMMARY:Danvers Field Hockey vs Masconomet (L 1–3)
+LOCATION:Dr. Deering Stadium\, Danvers
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 1\, Masconomet 3\nKyla 
+ Moroney finished a pass from Olivia Henry just 50 seconds in for a 1–0 l
+ ead\, but the defending conference champions answered with three. Eva Sela
+ ya-Mendez made six saves.\nSchedule and results: https://danversfalconsath
+ letics.org/field-hockey/schedule.html
+URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-16@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261007T150000
+DURATION:PT3H
+SUMMARY:Danvers Golf at Saugus (W 48.5–23.5)
+LOCATION:Cedar Glen Golf Course\, Saugus
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 48.5\, Saugus 23.5\nFre
+ shman Dom Onorio swept all nine points in his match\, and Cole Andrews (8.
+ 5–0.5)\, Austin Patuto and Tommy Surette (both 7–2) also won big as th
+ e Falcons moved a game over .500.\nSchedule and results: https://danversfa
+ lconsathletics.org/golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-103@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261007T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Smash (Week 3)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Super Smash Bros. Ultimate · Best of 5 sets\nSchedule and resu
+ lts: https://danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:cross-country-6@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261007T160000
+DURATION:PT2H
+SUMMARY:Danvers Cross Country at Marblehead
+LOCATION:Lead Mills Conservation Area\, Marblehead
+DESCRIPTION:Northeastern Conference\nBoys: lost 43–19\nGirls: lost 42–1
+ 9\nMarblehead swept both races at Lead Mills on the Magicians' senior day\
+ , winning the boys meet 19–43 and the girls meet 19–42. Marcus Morais 
+ split the Marblehead pack in second (18:14)\, and Grace Conklin (20:17) an
+ d Madyson Danish (21:25) were third and sixth in the girls race.\nSchedule
+  and results: https://danversfalconsathletics.org/cross-country/schedule.h
+ tml
+URL:https://danversfalconsathletics.org/cross-country/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:volleyball-12@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261007T174500
+DURATION:PT2H
+SUMMARY:Danvers Volleyball at Winthrop (W 3–2)
+LOCATION:Winthrop High School
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 3\, Winthrop 2\nThe Fal
+ cons' third five-set win of the season was also their eighth victory in a 
+ row. Gabrielle Lindeman had 14 kills\, six aces and 23 digs\, Lauren Garof
+ alo 11 kills\, and Hannah Tersolo 21 assists.\nSchedule and results: https
+ ://danversfalconsathletics.org/volleyball/schedule.html
+URL:https://danversfalconsathletics.org/volleyball/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-203@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261008T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Rocket League (Week 3)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Rocket League · Best of 5 games\nSchedule and results: https:/
+ /danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-303@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261008T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Mario Kart (Week 3)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Mario Kart 8 Deluxe · Best of 3 games\nSchedule and results: h
+ ttps://danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:field-hockey-11@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261009T154500
+DURATION:PT2H
+SUMMARY:Danvers Field Hockey vs Gloucester (L 0–5)
+LOCATION:Dr. Deering Stadium\, Danvers
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 0\, Gloucester 5\nUnbea
+ ten Gloucester\, the conference leader\, kept a clean sheet and clinched a
+  state tournament berth. Olivia Henry made plays at both ends\, Rylee Shep
+ pard was strong on defense\, and Kyla Moroney was double-teamed for most o
+ f the afternoon. Eva Selaya-Mendez made seven saves.\nSchedule and results
+ : https://danversfalconsathletics.org/field-hockey/schedule.html
+URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:volleyball-13@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261009T173000
+DURATION:PT2H
+SUMMARY:Danvers Volleyball at Stoneham (W 3–0)
+LOCATION:Stoneham High School
+DESCRIPTION:Non-league\nFinal: Danvers 3\, Stoneham 0\nDanvers swept Stoneh
+ am for the second time this season and hit .302\, its best attacking night
+  of the year. Gabrielle Lindeman had nine kills and 12 digs\, Kendall Murp
+ hy five kills and five blocks\, and Hannah Tersolo 17 assists as the Falco
+ ns served 13 aces.\nSchedule and results: https://danversfalconsathletics.
+ org/volleyball/schedule.html
+URL:https://danversfalconsathletics.org/volleyball/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:football-5@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261009T183000
+DURATION:PT2H30M
+SUMMARY:Danvers Football vs Beverly (W 38–0)
+LOCATION:Morse Field at Dr. Deering Stadium\, Danvers
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 38\, Beverly 0\nIn new 
+ all-black uniforms\, Danvers debuted a shotgun double wing. Captain Nate W
+ ise threw for a career-high 120 yards and two touchdowns\, both to Jack Ho
+ uston\, and the defense forced three fumbles and held Beverly to 38 yards.
+ \nSchedule and results: https://danversfalconsathletics.org/football/sched
+ ule.html
+URL:https://danversfalconsathletics.org/football/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-soccer-10@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261010T120000
+DURATION:PT2H
+SUMMARY:Danvers Boys Soccer at Bishop Fenwick (L 0–2)
+LOCATION:Donaldson Field\, Peabody
+DESCRIPTION:Non-league\nFinal: Danvers 0\, Bishop Fenwick 2\nSchedule and r
+ esults: https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-soccer-12@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261010T180000
+DURATION:PT2H
+SUMMARY:Danvers Girls Soccer vs Lynnfield (W 4–0)
+LOCATION:Dr. Deering Stadium\, Danvers
+DESCRIPTION:Non-league\nFinal: Danvers 4\, Lynnfield 0\nIn what coach Jimmy
+  Hinchion called the team's most complete game of the season\, Rylee Sulli
+ van scored twice\, Mia St. Pierre had a goal and an assist\, and Taylor La
+ ndry kept another clean sheet.\nSchedule and results: https://danversfalco
+ nsathletics.org/soccer/schedule.html?team=girls
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+END:VEVENT
+BEGIN:VEVENT
+UID:volleyball-14@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261012T103000
+DURATION:PT2H
+SUMMARY:Danvers Volleyball vs Mystic Valley (W 3–0)
+LOCATION:DHS Field House\, Danvers
+DESCRIPTION:Non-league\nFinal: Danvers 3\, Mystic Valley 0\nBrooke Bernard 
+ led a Monday-morning sweep with 10 kills\, three aces and two blocks. Gabr
+ ielle Lindeman served seven aces to go with 20 digs\, Lauren Garofalo had 
+ 13 digs and 22 serve receptions\, and Hannah Tersolo handed out 20 assists
+ .\nSchedule and results: https://danversfalconsathletics.org/volleyball/sc
+ hedule.html
+URL:https://danversfalconsathletics.org/volleyball/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-17@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261012T145000
+DURATION:PT3H
+SUMMARY:Danvers Golf at Masconomet (L 30.5–41.5)
+LOCATION:Rowley Country Club
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 30.5\, Masconomet 41.5\
+ nLucas Silva (6–3)\, Wes Maylor (5–4) and Brady Swanton (5–4) won th
+ eir matches and Anthony Sheehan earned a half in the regular-season finale
+ \, but Masconomet's Brendan O'Connor shot a 2-under 33 to lead the Chiefta
+ ins to a season sweep.\nSchedule and results: https://danversfalconsathlet
+ ics.org/golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-soccer-11@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261012T163000
+DURATION:PT2H
+SUMMARY:Danvers Boys Soccer at Lynn Classical (L 1–2)
+LOCATION:Manning Field\, Lynn
+DESCRIPTION:Non-league\nFinal: Danvers 1\, Lynn Classical 2\nSophomore Andr
+ ew Morse finished a pass from classmate Mateo Musta to give the Falcons th
+ e lead\, but Lynn Classical answered with two goals.\nSchedule and results
+ : https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+END:VEVENT
+BEGIN:VEVENT
+UID:field-hockey-12@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261013T160000
+DURATION:PT2H
+SUMMARY:Danvers Field Hockey vs Malden Catholic (W 5–1)
+LOCATION:Dr. Deering Stadium\, Danvers
+DESCRIPTION:Non-league\nFinal: Danvers 5\, Malden Catholic 1\nDown 1–0 af
+ ter a quarter and tied 1–1 going into the fourth\, the Falcons scored fo
+ ur times in the final quarter. Captain Kyla Moroney had her second hat tri
+ ck of the season and an assist\, and freshman Zoie Abell added two goals a
+ nd two assists.\nSchedule and results: https://danversfalconsathletics.org
+ /field-hockey/schedule.html
+URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-soccer-13@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261013T183000
+DURATION:PT2H
+SUMMARY:Danvers Girls Soccer vs Beverly (L 0–2)
+LOCATION:Dr. Deering Stadium\, Danvers
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 0\, Beverly 2\nBeverly 
+ scored twice in the second half to complete a season sweep. Danvers had it
+ s chances but couldn't crack the Panthers' defense\, which posted its four
+ th straight shutout.\nSchedule and results: https://danversfalconsathletic
+ s.org/soccer/schedule.html?team=girls
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-104@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261014T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Smash (Week 4)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Super Smash Bros. Ultimate · Best of 5 sets\nSchedule and resu
+ lts: https://danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-soccer-12@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261014T160000
+DURATION:PT2H
+SUMMARY:Danvers Boys Soccer at Beverly (L 0–7)
+LOCATION:Beverly High School\, Beverly
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 0\, Beverly 7\nBeverly 
+ completed the season sweep with a convincing home win.\nSchedule and resul
+ ts: https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+END:VEVENT
+BEGIN:VEVENT
+UID:cross-country-10@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261014T160000
+DURATION:PT2H
+SUMMARY:Danvers Cross Country vs Peabody
+LOCATION:Danvers High School
+DESCRIPTION:Northeastern Conference\nBoys: lost 42–19\nGirls: lost 31–2
+ 4\nPeabody took both races on Senior Night at Danvers: 19–42 in the boys
+  meet and 24–31 in the girls meet.\nSchedule and results: https://danver
+ sfalconsathletics.org/cross-country/schedule.html
+URL:https://danversfalconsathletics.org/cross-country/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:volleyball-15@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261014T171500
+DURATION:PT2H
+SUMMARY:Danvers Volleyball vs Marblehead (L 1–3)
+LOCATION:DHS Field House\, Danvers
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 1\, Marblehead 3\nThe F
+ alcons took the first set 25–19\, but Marblehead won the next three to c
+ omplete a season sweep and end Danvers' 10-match winning streak. Gabrielle
+  Lindeman had eight kills\, 26 digs and 36 serve receptions\, Hadley Brown
+  added 25 digs and Lila Osborne 19.\nSchedule and results: https://danvers
+ falconsathletics.org/volleyball/schedule.html
+URL:https://danversfalconsathletics.org/volleyball/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-204@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261015T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Rocket League (Week 4)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Rocket League · Best of 5 games\nSchedule and results: https:/
+ /danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-304@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261015T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Mario Kart (Week 4)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Mario Kart 8 Deluxe · Best of 3 games\nSchedule and results: h
+ ttps://danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:field-hockey-13@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261015T183000
+DURATION:PT2H
+SUMMARY:Danvers Field Hockey at Swampscott (T 3–3)
+LOCATION:Blocksidge Field\, Swampscott
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 3\, Swampscott 3\nA bac
+ k-and-forth game under the lights at Blocksidge Field ended level. Freshma
+ n Zoie Abell scored twice and Kyla Moroney had a goal and an assist.\nSche
+ dule and results: https://danversfalconsathletics.org/field-hockey/schedul
+ e.html
+URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-soccer-13@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261016T160000
+DURATION:PT2H
+SUMMARY:Danvers Boys Soccer at Gloucester (L 1–2)
+LOCATION:Newell Stadium\, Gloucester
+DESCRIPTION:Non-league\nFinal: Danvers 1\, Gloucester 2\nThe Falcons led 1
+ –0 at halftime\, but Gloucester tied it on a shot that deflected off a D
+ anvers defender and won it about five minutes from the end off a corner ki
+ ck. "Danvers is a nice young team\, they put up a good fight\," Gloucester
+  coach Armando Marnoto said.\nSchedule and results: https://danversfalcons
+ athletics.org/soccer/schedule.html?team=boys
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+END:VEVENT
+BEGIN:VEVENT
+UID:field-hockey-14@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261016T160000
+DURATION:PT2H
+SUMMARY:Danvers Field Hockey at Marblehead (W 5–3)
+LOCATION:Piper Field\, Marblehead
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 5\, Marblehead 3\nDown 
+ 2–0 after the first quarter\, the Falcons came back behind their captain
+ s: Kyla Moroney (a goal and two assists)\, Olivia Henry (a goal and an ass
+ ist) and Addie Moore (a goal). Senior Mia Calabro and freshman Zoie Abell 
+ each added a goal and an assist.\nSchedule and results: https://danversfal
+ consathletics.org/field-hockey/schedule.html
+URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:football-6@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261016T183000
+DURATION:PT2H30M
+SUMMARY:Danvers Football at Masconomet (W 35–0)
+LOCATION:Masconomet Regional\, Boxford
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 35\, Masconomet 0\nDanv
+ ers scored four times in the first half\, piled up 399 yards and shut out 
+ the defending NEC champions in the rain. Zach Fultz ran for 179 yards\, an
+ d the defense turned Masconomet away twice deep in Danvers territory.\nSch
+ edule and results: https://danversfalconsathletics.org/football/schedule.h
+ tml
+URL:https://danversfalconsathletics.org/football/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-soccer-14@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261017T150000
+DURATION:PT2H
+SUMMARY:Danvers Girls Soccer at Andover (T 1–1)
+LOCATION:Lovely Stadium\, Andover
+DESCRIPTION:Non-league\nFinal: Danvers 1\, Andover 1\nJunior captain Maddie
+  Hanas scored in the first half off a Rylee Sullivan assist\, and the Falc
+ ons held on through a defensive second half for a road draw that moved the
+ m a step closer to the state tournament.\nSchedule and results: https://da
+ nversfalconsathletics.org/soccer/schedule.html?team=girls
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-soccer-15@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261019T163000
+DURATION:PT2H
+SUMMARY:Danvers Girls Soccer at Salem (L 1–2)
+LOCATION:Bertram Field\, Salem
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 1\, Salem 2\nMia St. Pi
+ erre scored with eight minutes to go\, but Danvers couldn't find the equal
+ izer. A long-range strike by Jackie Fritz held up as the winner\, and Sale
+ m beat Danvers for the first time in close to 20 years.\nSchedule and resu
+ lts: https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-soccer-14@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261019T173000
+DURATION:PT2H
+SUMMARY:Danvers Boys Soccer vs Salem (L 0–2)
+LOCATION:Dr. Deering Stadium\, Danvers
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 0\, Salem 2\nA scoreles
+ s first half gave way to two second-half goals from Salem senior captain H
+ enry Beauparlant.\nSchedule and results: https://danversfalconsathletics.o
+ rg/soccer/schedule.html?team=boys
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+END:VEVENT
+BEGIN:VEVENT
+UID:volleyball-16@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261019T173000
+DURATION:PT2H
+SUMMARY:Danvers Volleyball at Beverly (L 2–3)
+LOCATION:Beverly High School
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 2\, Beverly 3\nDanvers 
+ came back from nine points down to win a 29–27 first set and forced a fi
+ fth after dropping the next two\, but Beverly pulled away late in the deci
+ ding set to split the rivalry series. Lauren Garofalo had nine kills\, thr
+ ee aces and 24 digs\, Brooke Bernard seven kills and two blocks\, and Kend
+ all Murphy four aces.\nSchedule and results: https://danversfalconsathleti
+ cs.org/volleyball/schedule.html
+URL:https://danversfalconsathletics.org/volleyball/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-19@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261020T090000
+DURATION:PT5H
+SUMMARY:Danvers Golf: Division 2 North Sectional (11th of 15)
+LOCATION:Bradford Country Club\, Haverhill
+DESCRIPTION:MIAA tournament\nFinished 11th of 15 with 348 (+64)\nIn the las
+ t MIAA sectional before the state switches formats in 2027\, the Falcons p
+ laced 11th of 15 teams at Bradford. Junior Wes Maylor led Danvers with a 9
+ -over 81. Masconomet won with 294\, and Newburyport and Milton took the ot
+ her two spots in the state final.\nSchedule and results: https://danversfa
+ lconsathletics.org/golf/schedule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:field-hockey-15@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261020T190000
+DURATION:PT2H
+SUMMARY:Danvers Field Hockey at Saugus (W 6–2)
+LOCATION:Serino Field\, Saugus
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 6\, Saugus 2\nThe Falco
+ ns scored six times under the lights at Serino Field to sweep the season s
+ eries with Saugus\, getting back above .500 overall and to .500 in the con
+ ference.\nSchedule and results: https://danversfalconsathletics.org/field-
+ hockey/schedule.html
+URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:golf-18@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261021T090000
+DURATION:PT5H
+SUMMARY:Danvers Golf: NEC Open (4th of 10)
+LOCATION:Tedesco Country Club\, Marblehead
+DESCRIPTION:Northeastern Conference tournament\nFinished 4th of 10 with 179
+  (+39)\nCold temperatures\, swirling winds and lightning-fast greens made 
+ Tedesco play tough at the conference's season-ending tournament. Danvers f
+ inished fourth of 10 teams with a 179\, one shot ahead of Swampscott\, and
+  junior Ben Campbell tied for seventh individually with a 15-over 85. Marb
+ lehead won the team title with 163 and Tyler Forbes was the medalist with 
+ a 79.\nSchedule and results: https://danversfalconsathletics.org/golf/sche
+ dule.html
+URL:https://danversfalconsathletics.org/golf/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-105@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261021T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Smash (Week 5)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Super Smash Bros. Ultimate · Best of 5 sets\nSchedule and resu
+ lts: https://danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-soccer-15@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261021T160000
+DURATION:PT2H
+SUMMARY:Danvers Boys Soccer at Masconomet (L 0–7)
+LOCATION:Masconomet Regional\, Boxford
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 0\, Masconomet 7\nMasco
+ nomet won 7–0 on its home field\, the same score as the first meeting in
+  Danvers.\nSchedule and results: https://danversfalconsathletics.org/socce
+ r/schedule.html?team=boys
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+END:VEVENT
+BEGIN:VEVENT
+UID:cross-country-9@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261021T160000
+DURATION:PT2H
+SUMMARY:Danvers Cross Country at Masconomet
+LOCATION:Bradley Palmer State Park
+DESCRIPTION:Northeastern Conference\nBoys: lost 50–15\nGirls: lost 34–2
+ 5\nMasconomet swept the last dual meet of the regular season at Bradley Pa
+ lmer State Park. The Chieftains' boys took the first five places for a per
+ fect 15–50 score\, finishing 7–0 and clinching their first Northeaster
+ n Conference title\, and the Masconomet girls won 25–34.\nSchedule and r
+ esults: https://danversfalconsathletics.org/cross-country/schedule.html
+URL:https://danversfalconsathletics.org/cross-country/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:field-hockey-16@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261021T160000
+DURATION:PT2H
+SUMMARY:Danvers Field Hockey at St. Mary's (L 0–5)
+LOCATION:Manning Bowl\, Lynn
+DESCRIPTION:Non-league\nFinal: Danvers 0\, St. Mary's 5\nA day after the wi
+ n at Saugus\, the Falcons were shut out by St. Mary's on the turf at the M
+ anning Bowl in a non-league game.\nSchedule and results: https://danversfa
+ lconsathletics.org/field-hockey/schedule.html
+URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:volleyball-17@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261021T171500
+DURATION:PT2H
+SUMMARY:Danvers Volleyball vs Swampscott (L 2–3)
+LOCATION:DHS Field House\, Danvers
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 2\, Swampscott 3\nDanve
+ rs took the first two sets\, 26–24 and 25–18\, but Swampscott won the 
+ next three. Gabrielle Lindeman dug 37 balls and took 28 serve receptions\,
+  Lauren Garofalo had nine kills and 18 digs\, Brooke Bernard eight kills\,
+  Kendall Murphy seven kills without an error\, and Hannah Tersolo 20 assis
+ ts.\nSchedule and results: https://danversfalconsathletics.org/volleyball/
+ schedule.html
+URL:https://danversfalconsathletics.org/volleyball/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-soccer-16@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261021T183000
+DURATION:PT2H
+SUMMARY:Danvers Girls Soccer vs Masconomet (W 3–2)
+LOCATION:Dr. Deering Stadium\, Danvers
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 3\, Masconomet 2\nOn Pi
+ nk Out night\, Rylee Sullivan\, Emma Sutherland and Mia St. Pierre scored 
+ and the Falcons held a 3–2 lead through the last 15 minutes to beat Masc
+ onomet\, a month after losing 5–1 in Boxford. The win clinched a state t
+ ournament berth for the 35th straight season and was coach Jimmy Hinchion'
+ s 425th career victory.\nSchedule and results: https://danversfalconsathle
+ tics.org/soccer/schedule.html?team=girls
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-205@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261022T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Rocket League (Week 5)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Rocket League · Best of 5 games\nSchedule and results: https:/
+ /danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-305@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261022T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Mario Kart (Week 5)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Mario Kart 8 Deluxe · Best of 3 games\nSchedule and results: h
+ ttps://danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:football-7@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261023T183000
+DURATION:PT2H30M
+SUMMARY:Danvers Football vs Salem
+LOCATION:Morse Field at Dr. Deering Stadium\, Danvers
+DESCRIPTION:Non-league\nTickets on GoFan: https://gofan.co/app/school/MA145
+ 53\nSchedule and results: https://danversfalconsathletics.org/football/sch
+ edule.html
+URL:https://danversfalconsathletics.org/football/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-soccer-16@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261026T160000
+DURATION:PT2H
+SUMMARY:Danvers Boys Soccer at Peabody
+LOCATION:Peabody Veterans Memorial HS\, Peabody
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/soccer/schedule.html?team=boys
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+END:VEVENT
+BEGIN:VEVENT
+UID:volleyball-18@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261026T171500
+DURATION:PT2H
+SUMMARY:Danvers Volleyball vs Peabody
+LOCATION:DHS Field House\, Danvers
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/volleyball/schedule.html
+URL:https://danversfalconsathletics.org/volleyball/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-soccer-17@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261026T183000
+DURATION:PT2H
+SUMMARY:Danvers Girls Soccer vs Peabody
+LOCATION:Dr. Deering Stadium\, Danvers
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/soccer/schedule.html?team=girls
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+END:VEVENT
+BEGIN:VEVENT
+UID:field-hockey-17@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261027T173000
+DURATION:PT2H
+SUMMARY:Danvers Field Hockey vs Bishop Fenwick
+LOCATION:Dr. Deering Stadium\, Danvers
+DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
+ cs.org/field-hockey/schedule.html
+URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-106@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261028T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Smash (Week 6)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Super Smash Bros. Ultimate · Best of 5 sets\nSchedule and resu
+ lts: https://danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-soccer-18@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261028T163000
+DURATION:PT2H
+SUMMARY:Danvers Girls Soccer at Gloucester
+LOCATION:Newell Stadium\, Gloucester
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/soccer/schedule.html?team=girls
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+END:VEVENT
+BEGIN:VEVENT
+UID:volleyball-19@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261028T171500
+DURATION:PT2H
+SUMMARY:Danvers Volleyball vs Masconomet
+LOCATION:DHS Field House\, Danvers
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/volleyball/schedule.html
+URL:https://danversfalconsathletics.org/volleyball/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-soccer-17@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261028T183000
+DURATION:PT2H
+SUMMARY:Danvers Boys Soccer vs Gloucester
+LOCATION:Dr. Deering Stadium\, Danvers
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/soccer/schedule.html?team=boys
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-206@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261029T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Rocket League (Week 6)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Rocket League · Best of 5 games\nSchedule and results: https:/
+ /danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-306@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261029T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Mario Kart (Week 6)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Mario Kart 8 Deluxe · Best of 3 games\nSchedule and results: h
+ ttps://danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:volleyball-20@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261029T171500
+DURATION:PT2H
+SUMMARY:Danvers Volleyball vs Salem
+LOCATION:DHS Field House\, Danvers
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/volleyball/schedule.html
+URL:https://danversfalconsathletics.org/volleyball/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:field-hockey-18@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261030T160000
+DURATION:PT2H
+SUMMARY:Danvers Field Hockey at Masconomet
+LOCATION:Boxford Commons turf field\, Boxford
+DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
+ cs.org/field-hockey/schedule.html
+URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-soccer-18@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261030T183000
+DURATION:PT2H
+SUMMARY:Danvers Boys Soccer vs Essex Tech
+LOCATION:Morse Field\, Danvers
+DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
+ cs.org/soccer/schedule.html?team=boys
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+END:VEVENT
+BEGIN:VEVENT
+UID:football-8@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261030T190000
+DURATION:PT2H30M
+SUMMARY:Danvers Football at Peabody
+LOCATION:Peabody Veterans Memorial Stadium
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/football/schedule.html
+URL:https://danversfalconsathletics.org/football/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:cross-country-7@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261031T100000
+DURATION:PT2H
+SUMMARY:Danvers Cross Country: NEC Championship Meet
+LOCATION:Stage Fort Park\, Gloucester
+DESCRIPTION:Northeastern Conference\nParking\, $10 per vehicle\, on GoFan: 
+ https://gofan.co/event/6973738?schoolId=MA86936\nSchedule and results: htt
+ ps://danversfalconsathletics.org/cross-country/schedule.html
+URL:https://danversfalconsathletics.org/cross-country/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-soccer-106@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261102T160000
+DURATION:PT2H
+SUMMARY:Danvers Girls Soccer at Lynnfield (scrimmage)
+LOCATION:Lynnfield High School\, Lynnfield
+DESCRIPTION:Scrimmage\nSchedule and results: https://danversfalconsathletic
+ s.org/soccer/schedule.html?team=girls
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-107@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261104T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Smash (Week 7)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Super Smash Bros. Ultimate · Best of 5 sets\nSchedule and resu
+ lts: https://danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-207@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261105T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Rocket League (Week 7)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Rocket League · Best of 5 games\nSchedule and results: https:/
+ /danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-307@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261105T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Mario Kart (Week 7)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Mario Kart 8 Deluxe · Best of 3 games\nSchedule and results: h
+ ttps://danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-108@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261111T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Smash (Week 8)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Super Smash Bros. Ultimate · Best of 5 sets\nSchedule and resu
+ lts: https://danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-208@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261112T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Rocket League (Week 8)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Rocket League · Best of 5 games\nSchedule and results: https:/
+ /danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:esports-308@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261112T153000
+DURATION:PT1H30M
+SUMMARY:Danvers Esports: Mario Kart (Week 8)
+LOCATION:Online (PlayVS)
+DESCRIPTION:Mario Kart 8 Deluxe · Best of 3 games\nSchedule and results: h
+ ttps://danversfalconsathletics.org/esports/schedule.html
+URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:cross-country-8@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;VALUE=DATE:20261114
+DTEND;VALUE=DATE:20261115
+SUMMARY:Danvers Cross Country: MIAA Division 2 Championships
+LOCATION:Wrentham Developmental Center
+DESCRIPTION:Postseason\nSchedule and results: https://danversfalconsathleti
+ cs.org/cross-country/schedule.html
+URL:https://danversfalconsathletics.org/cross-country/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:cross-country-14@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261121T140000
+DURATION:PT2H
+SUMMARY:Danvers Cross Country: MIAA State Championship Meet
+LOCATION:Devens
+DESCRIPTION:Postseason\nSchedule and results: https://danversfalconsathleti
+ cs.org/cross-country/schedule.html
+URL:https://danversfalconsathletics.org/cross-country/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:football-9@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261126T100000
+DURATION:PT2H30M
+SUMMARY:Danvers Football at Gloucester
+LOCATION:Newell Stadium\, Gloucester
+DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
+ cs.org/football/schedule.html
+URL:https://danversfalconsathletics.org/football/schedule.html
+END:VEVENT
+END:VCALENDAR

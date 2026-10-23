@@ -246,8 +246,10 @@ const MEETS = [
   {
     id: 7, date: "2026-10-31T10:00", name: "NEC Championship Meet", short: "NEC",
     home: false, league: true, site: "Stage Fort Park, Gloucester", distance: null,
+    /* Gloucester sells spectator parking on GoFan; shows a Tickets button until the meet is run */
+    tickets: { label: "NEC meet parking", note: "Parking, $10 per vehicle, on GoFan", url: "https://gofan.co/event/6973738?schoolId=MA86936" },
     boys: null, girls: null,
-    notes: []
+    notes: ["Spectator parking is $10 per vehicle, sold in advance on GoFan"]
   },
   {
     id: 8, date: "2026-11-14T11:00", timeTbd: true, name: "MIAA Division 2 Championships", short: "MIAA", postseason: true,

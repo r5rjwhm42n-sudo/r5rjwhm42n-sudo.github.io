@@ -22,6 +22,9 @@ const TEAM = {
                "Andrew Barton", "Sean Dunn", "Jeff Smith", "Tom Ladd"],
   stadium: "Dr. Deering Stadium",
   address: "60 Cabot Road, Danvers, MA 01923",
+  /* Home games are sold on GoFan (the Falcon Pass there covers every home game).
+     Shows a Tickets button next to Add to calendar; set to null to hide it. */
+  tickets: { label: "Buy tickets", note: "Tickets on GoFan", url: "https://gofan.co/app/school/MA14553" },
   links: {
     hudl: HUDL_TEAM + "/boys-varsity-football",
     hudlVideo: HUDL_TEAM + "/video",
