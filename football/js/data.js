@@ -391,5 +391,8 @@ const VIDEOS = [
   { title: "Danvers vs. Tewksbury", sub: "Game Recap", season: 2023, len: "1:45", url: HL + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2NTAwOWM2OGMxMTliOTBkZGM2ZjNiZmE%3D" }
 ];
 
-/* Example: { src: "photos/marblehead-01.jpg", caption: "Houston breaks one vs. Marblehead", game: "vs. Marblehead" } */
-const PHOTOS = [];
+/* Example: { src: "photos/marblehead-01.jpg", caption: "Houston breaks one vs. Marblehead", game: "vs. Marblehead" }
+   credit shows under the Photos grid; the first photo is also the home page backdrop and link preview. */
+const PHOTOS = [
+  { src: "images/action/football-under-the-lights.jpg", caption: "The Falcons under the lights", credit: "@danversfalconsathletics" }
+];

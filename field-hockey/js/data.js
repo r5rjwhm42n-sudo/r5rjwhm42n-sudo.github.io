@@ -553,4 +553,9 @@ const VIDEOS = [
   { title: "Danvers vs. Malden", sub: "Game Highlights", season: 2018, len: "1:14", url: REEL("SGlnaGxpZ2h0UmVlbFN1bW1hcnk1YmFmOTZjMjlhOWMwYjBlMzBiYWQ0OGY%3D") }
 ];
 
-const PHOTOS = [];
+/* credit shows under the Photos grid; the first photo is also the home page backdrop and link preview */
+const PHOTOS = [
+  { src: "images/action/driving-upfield.jpg", caption: "Driving the ball upfield", credit: "@danversfalconsathletics" },
+  { src: "images/action/battle-for-the-ball.jpg", caption: "Battling for the ball", credit: "@danversfalconsathletics" },
+  { src: "images/action/controlling-the-ball.jpg", caption: "Controlling the ball", credit: "@danversfalconsathletics" }
+];

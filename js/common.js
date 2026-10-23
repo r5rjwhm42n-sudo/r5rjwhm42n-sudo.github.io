@@ -97,5 +97,39 @@
     return "";
   }
 
-  window.DFA = { place, mapsUrl, weather, weatherText, state, icon };
+  /* Each opponent's school colors (main, trim), from the school's MaxPreps page */
+  const SCHOOL_COLORS = {
+    "Andover": ["#022C66", "#C8880A"], "Arlington": ["#CC0022", "#454444"], "Barnstable": ["#CC0022", "#FFFFFF"],
+    "Beverly": ["#222222", "#D5350B"], "Bishop Fenwick": ["#222222", "#C8880A"], "Concord-Carlisle": ["#8F0018", "#FFFFFF"],
+    "Essex Tech": ["#00824B", "#FFFFFF"], "Gloucester": ["#8F0018", "#C8880A"], "Hamilton-Wenham": ["#034CB2", "#FFFFFF"],
+    "Ipswich": ["#222222", "#D5350B"], "Lynn Classical": ["#00824B", "#C8880A"], "Lynnfield": ["#034CB2", "#C8880A"],
+    "Malden Catholic": ["#034CB2", "#C8880A"], "Marblehead": ["#222222", "#CC0022"], "Masconomet": ["#CC0022", "#FFFFFF"],
+    "Medford": ["#034CB2", "#FFFFFF"], "Melrose": ["#CC0022", "#FFFFFF"], "Mystic Valley": ["#8F0018", "#C8880A"],
+    "North Reading": ["#00824B", "#C8880A"], "Peabody": ["#034CB2", "#FFFFFF"], "Pingree": ["#00824B", "#FFFFFF"],
+    "Pioneer Charter": ["#022C66", "#046DFF"], "Reading": ["#222222", "#CC0022"], "Rockport": ["#8F0018", "#454444"],
+    "Salem": ["#CC0022", "#FFFFFF"], "Saugus": ["#CC0022", "#FFFFFF"], "St. John's Prep": ["#022C66", "#FFFFFF"],
+    "St. Mary's": ["#034CB2", "#C8880A"], "Stoneham": ["#034CB2", "#FFFFFF"], "Swampscott": ["#034CB2", "#FFFFFF"],
+    "Triton": ["#034CB2", "#FFFFFF"], "Wakefield": ["#CC0022", "#FFFFFF"], "Weston": ["#CC0022", "#FFFFFF"],
+    "Wilmington": ["#022C66", "#FFFFFF"], "Winthrop": ["#022C66", "#C8880A"]
+  };
+  const school = (name) => String(name || "").split(/\s*(?:\/|&)\s*/)[0].trim();
+  const hasColors = (name) => !!SCHOOL_COLORS[school(name)];
+  /* A round badge in the opponent's colors with its initials ("BF" for Bishop Fenwick, "S" for Salem) */
+  function badge(name, size = "") {
+    const s = school(name);
+    const [c1, c2] = SCHOOL_COLORS[s] || ["#5b647a", "#ffffff"];
+    const words = s.replace(/^St\.\s*/, "St ").split(/[\s-]+/).filter((w) => /^[A-Za-z]/.test(w));
+    const letters = (words.length > 1 ? words.slice(0, 2).map((w) => w[0]).join("") : s.charAt(0)).toUpperCase();
+    return `<span class="opp-badge ${size}" style="--c1:${c1};--c2:${c2}" aria-hidden="true">${letters}</span>`;
+  }
+  const css = document.createElement("style");
+  css.textContent = `
+    .opp-badge { display: inline-grid; place-items: center; flex: none; width: 30px; height: 30px; border-radius: 50%; vertical-align: middle;
+      background: var(--c1); color: #fff; box-shadow: inset 0 0 0 2.5px var(--c2), 0 0 0 1px rgba(11, 31, 77, .12);
+      font: 800 13px/1 "Saira Condensed", "Arial Narrow", sans-serif; letter-spacing: .02em; text-transform: uppercase; }
+    .opp-badge.md { width: 46px; height: 46px; font-size: 19px; box-shadow: inset 0 0 0 3px var(--c2), 0 0 0 1px rgba(11, 31, 77, .12); }
+    .opp-badge.lg { width: 56px; height: 56px; font-size: 22px; box-shadow: inset 0 0 0 3.5px var(--c2), 0 0 0 2px rgba(255, 255, 255, .9); }`;
+  document.head.appendChild(css);
+
+  window.DFA = { place, mapsUrl, weather, weatherText, state, icon, badge, hasColors };
 })();

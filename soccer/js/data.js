@@ -505,6 +505,7 @@ const TEAMS = {
        to the team's full video page.
        To add photos: drop image files in /photos and list them in photos.
        Example: { src: "photos/swampscott-01.jpg", caption: "Sullivan scores at Swampscott" }
+       credit shows under the Photos grid; the first photo is also the home page backdrop.
        ----------------------------------------------------------------- */
     videos: [
       { title: "Danvers vs. Beverly", sub: "Game Recap", season: 2026, len: "1:17", url: GIRLS_WATCH + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2YWQwYzg0YjkyMTNhY2YxMDlmN2RlNDU%3D" },
@@ -525,7 +526,10 @@ const TEAMS = {
       { title: "Danvers vs. Bishop Fenwick", sub: "Game Highlights", season: 2025, len: "1:12", url: null },
       { title: "Danvers vs. Gloucester", sub: "Game Highlights", season: 2025, len: "1:33", url: null }
     ],
-    photos: []
+    photos: [
+      { src: "images/action/girls-emma-sutherland.jpg", caption: "Emma Sutherland pushes the ball upfield", credit: "@danversfalconsathletics" },
+      { src: "images/action/girls-ella-cangiano.jpg", caption: "Ella Cangiano sets up a throw-in", credit: "@danversfalconsathletics" }
+    ]
   },
 
   /* ===================================================================
@@ -863,7 +867,12 @@ const TEAMS = {
       { title: "Danvers vs. Bishop Fenwick", sub: "Game Highlights", season: 2024, len: "1:38", url: BOYS_WATCH + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2NzAxZDliODczMDNiMTk5NzRkMmRmZWE%3D" },
       { title: "Danvers vs. Swampscott", sub: "Game Highlights", season: 2024, len: "1:02", url: BOYS_WATCH + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2NmZhZjllZDljMTdlMzQ4OTNiNWFhYmU%3D" }
     ],
-    photos: []
+    photos: [
+      { src: "images/action/boys-on-the-attack.jpg", caption: "The Falcons on the attack", credit: "@danversfalconsathletics" },
+      { src: "images/action/boys-lining-up-a-shot.jpg", caption: "Lining up a shot", credit: "@danversfalconsathletics" },
+      { src: "images/action/boys-ball-in-the-air.jpg", caption: "Chasing a ball in the air", credit: "@danversfalconsathletics" },
+      { src: "images/action/boys-moving-upfield.jpg", caption: "Moving the ball upfield", credit: "@danversfalconsathletics" }
+    ]
   }
 };
 

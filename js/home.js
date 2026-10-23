@@ -137,7 +137,11 @@
     const S = {};
     FOLDERS.forEach((f, i) => {
       if (!all[i]) return;
-      try { S[f] = ADAPT[f](all[i]); S[f].photos = all[i].PHOTOS || []; } catch (e) { console.warn(`Hub: could not read ${f} data`, e); }
+      try {
+        S[f] = ADAPT[f](all[i]);
+        /* soccer keeps a photo list per team */
+        S[f].photos = all[i].PHOTOS || (all[i].TEAMS ? ["girls", "boys"].flatMap((k) => (all[i].TEAMS[k].photos || []).map((p) => ({ ...p, team: all[i].TEAMS[k].label }))) : []);
+      } catch (e) { console.warn(`Hub: could not read ${f} data`, e); }
     });
     if (!Object.keys(S).length) return;
 
@@ -192,7 +196,7 @@
       <div class="nu-body">
         <div class="nu-when">${[fmt(e.date, { weekday: "long", month: "short", day: "numeric" }), timeOf(e)].filter(Boolean).map(esc).join(" · ")}</div>
         <div class="nu-match">
-          <span class="nu-logo"><img src="images/falcons-logo.png" alt=""></span>
+          <span class="nu-logo"><img src="images/falcons-logo.png" alt=""></span>${window.DFA?.hasColors(e.opponent) ? DFA.badge(e.opponent, "lg nu-opp") : ""}
           <div><div class="nu-title">${esc(e.title)}</div>${e.mascot ? `<div class="nu-mascot">${esc(e.mascot)}</div>` : ""}</div>
         </div>
         <div class="clock" id="clock" aria-live="off"></div>
@@ -386,8 +390,10 @@
   /* ---------- Photos: action shots from every site's PHOTOS join the team photos ---------- */
   function renderGallery(S) {
     const NAMES_BY = { football: "Football", soccer: "Soccer", "field-hockey": "Field Hockey", volleyball: "Volleyball", "cross-country": "Cross Country", golf: "Golf", esports: "Esports" };
-    const extra = Object.keys(NAMES_BY).flatMap((key) => (S[key]?.photos || []).map((p) => ({ ...p, src: `${key}/${p.src}`, team: NAMES_BY[key] })));
+    const extra = Object.keys(NAMES_BY).flatMap((key) => (S[key]?.photos || []).map((p) => ({ ...p, src: `${key}/${p.src}`, team: p.team || NAMES_BY[key] })));
     if (!extra.length) return;
+    const credits = [...new Set(extra.map((p) => p.credit).filter(Boolean))];
+    if (credits.length) $(".credit").insertAdjacentHTML("beforeend", ` Action shots: ${credits.map((c) => c.startsWith("@") ? `<a href="https://www.instagram.com/${esc(c.slice(1))}/" target="_blank" rel="noopener">${esc(c)}</a> on Instagram` : esc(c)).join(", ")}.`);
     $("#gallery-grid").insertAdjacentHTML("beforeend", extra.slice(0, 12).map((p) => `<figure class="gal">
         <button type="button" data-full="${esc(p.src)}" data-cap="${esc(p.caption)}"><img src="${esc(p.src)}" alt="${esc(p.caption)}" loading="lazy"></button>
         <figcaption><b>${esc(p.team)}</b> ${esc(p.caption)}</figcaption></figure>`).join(""));

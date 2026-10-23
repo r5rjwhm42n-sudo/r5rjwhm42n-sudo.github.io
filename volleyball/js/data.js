@@ -608,4 +608,8 @@ const VIDEOS = [
   { title: "Danvers vs. Saugus", sub: "Highlights · Sept. 6", season: 2024, len: "1:38", url: HL + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2NzI1ZmRmMWI2NmNjNDBmNzkyODkzMjk%3D" }
 ];
 
-const PHOTOS = [];
+/* credit shows under the Photos grid; the first photo is also the home page backdrop and link preview */
+const PHOTOS = [
+  { src: "images/action/gabrielle-lindeman.jpg", caption: "Gabrielle Lindeman fires up the Falcons", credit: "@danversfalconsathletics" },
+  { src: "images/action/celebrating-a-point.jpg", caption: "Celebrating a point", credit: "@danversfalconsathletics" }
+];

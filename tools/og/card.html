@@ -1,0 +1,133 @@
+<!doctype html>
+<!-- Link preview card (1200×630) for one page of the sites, photographed by
+     tools/build-og.sh into images/og/. Reads the team's data.js, so the
+     record and next game on the card are current when it's rebuilt.
+     card.html?sport=football&page=schedule   ·   card.html?sport=hub -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=block" rel="stylesheet">
+<style>
+  :root { --royal: #18479f; --navy: #0b1f4d; --gold: #f0b429; --display: "Saira Condensed", "Arial Narrow", sans-serif; --body: "Source Sans 3", sans-serif; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; background: var(--navy); }
+  .card { position: relative; width: 1200px; height: 630px; overflow: hidden; color: #fff; font-family: var(--body);
+    background: linear-gradient(115deg, var(--navy) 0%, var(--royal) 62%, #2459c2 100%); }
+  .photo { position: absolute; top: 0; right: 0; bottom: 0; width: 640px; background-size: cover; background-position: center; }
+  .mosaic { position: absolute; top: 0; right: 0; bottom: 0; width: 640px; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 3px; }
+  .mosaic div { background-size: cover; background-position: center; }
+  .shade { position: absolute; inset: 0; background: linear-gradient(90deg, var(--navy) 0%, var(--navy) 44%, rgba(11, 31, 77, .82) 58%, rgba(11, 31, 77, .25) 100%); }
+  .bars { position: absolute; top: -20%; bottom: -20%; left: 520px; width: 80px; background: rgba(255, 255, 255, .06); transform: skewX(-18deg); box-shadow: 120px 0 0 rgba(255, 255, 255, .035); }
+  .content { position: absolute; left: 64px; top: 56px; bottom: 56px; width: 640px; display: flex; flex-direction: column; }
+  .brand { display: flex; align-items: center; gap: 18px; }
+  .badge { width: 86px; height: 86px; border-radius: 50%; background: #fff; display: grid; place-items: center; box-shadow: 0 0 0 4px var(--royal), 0 0 0 7px #fff; flex: none; }
+  .badge img { width: 62px; height: 62px; }
+  .kicker { font-family: var(--display); font-weight: 800; font-size: 30px; letter-spacing: .04em; text-transform: uppercase; line-height: 1; }
+  .kicker small { display: block; margin-top: 6px; font-weight: 600; font-size: 17px; letter-spacing: .22em; color: #c5d4f5; }
+  h1 { margin: 34px 0 0; font-family: var(--display); font-weight: 800; font-size: 112px; line-height: .86; text-transform: uppercase; letter-spacing: .005em; }
+  h1.long { font-size: 92px; }
+  .page { align-self: flex-start; margin-top: 18px; padding: 6px 14px 5px; border-radius: 5px; background: #fff; color: var(--royal); font-family: var(--display); font-weight: 700; font-size: 22px; letter-spacing: .12em; text-transform: uppercase; }
+  .facts { margin-top: auto; display: flex; gap: 0; }
+  .facts > div { padding: 0 30px 0 0; margin-right: 30px; border-right: 1px solid rgba(255, 255, 255, .25); }
+  .facts > div:last-child { border-right: 0; margin-right: 0; }
+  .facts span { display: block; font-family: var(--display); font-weight: 700; font-size: 18px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+  .facts b { display: block; margin-top: 4px; font-family: var(--display); font-weight: 800; font-size: 46px; line-height: 1; text-transform: uppercase; white-space: nowrap; }
+  .facts small { display: block; margin-top: 4px; font-size: 17px; color: #dbe5fb; white-space: nowrap; }
+  .url { position: absolute; right: 40px; bottom: 30px; font-family: var(--display); font-weight: 700; font-size: 20px; letter-spacing: .14em; text-transform: uppercase; color: #fff; text-shadow: 0 2px 8px rgba(0, 0, 0, .5); }
+  .art { position: absolute; right: 40px; top: 70px; width: 440px; height: 440px; fill: none; stroke: #fff; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; opacity: .16; }
+  .edge { position: absolute; left: 0; right: 0; bottom: 0; height: 8px; background: var(--gold); }
+</style>
+</head>
+<body>
+<div class="card" id="card"></div>
+<script>
+(async function () {
+  const q = new URLSearchParams(location.search);
+  const sport = q.get("sport") || "hub", page = q.get("page") || "index";
+  const ROOT = "../../";
+  const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const NAMES = ["TEAM", "TEAMS", "SCHEDULE", "MEETS", "GAMES", "TITLES", "NEC_TITLES", "PHOTOS"];
+  const load = (s) => fetch(`${ROOT}${s}/js/data.js`).then((r) => r.text())
+    .then((src) => new Function(`${src}\n;return {${NAMES.map((n) => `${n}: typeof ${n} === "undefined" ? undefined : ${n}`).join(",")}};`)());
+  const LABEL = { football: "Football", soccer: "Soccer", "field-hockey": "Field Hockey", volleyball: "Volleyball", "cross-country": "Cross Country", golf: "Golf", esports: "Esports" };
+  const PAGE = { index: "", schedule: "Schedule & Results", stats: "Stats & Roster", runners: "Runners", history: "History", media: "Highlights & Media" };
+  const TEAM_PHOTO = { football: "football", soccer: "girls-soccer", "field-hockey": "field-hockey", volleyball: "volleyball", "cross-country": "boys-xc", golf: "golf" };
+  const day = (iso) => new Date(iso).toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" });
+  const time = (g) => (g.timeTbd ? "" : ` · ${new Date(g.date).toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" })}`);
+  const rec = (list, ties) => {
+    const n = (r) => list.filter((g) => g.result === r && !g.scrimmage).length;
+    return n("W") + n("L") + n("T") ? `${n("W")}–${n("L")}${ties || n("T") ? `–${n("T")}` : ""}` : null;
+  };
+  const upcoming = (list) => list.filter((g) => !g.result && !g.finish && !g.cancelled && !g.scrimmage && !g.dateTbd && new Date(g.date) > Date.now() - 3 * 36e5)
+    .sort((a, b) => new Date(a.date) - new Date(b.date))[0];
+  const nextFact = (g) => g && [`Next`, g.name || g.tournament ? (g.short || g.name || g.opponent) : `${g.home ? "vs" : "at"} ${g.opponent}`, `${day(g.date)}${time(g)}`];
+  const fact = ([k, v, d]) => `<div><span>${esc(k)}</span><b>${esc(v)}</b>${d ? `<small>${esc(d)}</small>` : ""}</div>`;
+
+  let title, sub = "Danvers High School · Fall 2026", pill = "", facts = [], photo = "", mosaic = null;
+  if (sport === "hub") {
+    const all = {};
+    await Promise.all(Object.keys(LABEL).map(async (s) => { all[s] = await load(s).catch(() => null); }));
+    let wins = 0, games = [];
+    for (const [s, d] of Object.entries(all)) {
+      if (!d) continue;
+      const lists = s === "soccer" ? [d.TEAMS.girls.schedule, d.TEAMS.boys.schedule] : s === "cross-country" ? [] : [d.SCHEDULE || []];
+      lists.forEach((l) => { wins += l.filter((g) => g.result === "W" && !g.scrimmage).length; games.push(...l.map((g) => ({ ...g, sport: s, label: s === "soccer" ? (lists[0] === l ? "Girls Soccer" : "Boys Soccer") : LABEL[s] }))); });
+      if (s === "cross-country") ["boys", "girls"].forEach((k) => (wins += d.MEETS.filter((m) => m[k]?.result === "W").length));
+    }
+    const nx = upcoming(games.filter((g) => g.opponent || g.tournament));
+    title = "Every Falcon.<br>Every score.";
+    sub = "Danvers Falcons Team Sites";
+    facts = [["Teams", "7 sports"], ["Wins this fall", `${wins}`], nx && ["Next up", `${nx.label}`, `${nx.tournament ? nx.opponent : `${nx.home ? "vs" : "at"} ${nx.opponent}`} · ${day(nx.date)}`]].filter(Boolean);
+    mosaic = ["football", "girls-soccer", "volleyball", "field-hockey"];
+  } else {
+    const d = await load(sport);
+    title = LABEL[sport];
+    pill = PAGE[page] || "";
+    const titles = (d.NEC_TITLES || d.TITLES?.filter((t) => /NEC/.test(t.label)) || []).length;
+    if (sport === "soccer") {
+      const g = d.TEAMS.girls, b = d.TEAMS.boys;
+      facts = [["Girls", rec(g.schedule) || "—"], ["Boys", rec(b.schedule) || "—"]];
+      const nx = upcoming([...g.schedule.map((x) => ({ ...x, who: "Girls" })), ...b.schedule.map((x) => ({ ...x, who: "Boys" }))]);
+      if (nx && page !== "history") facts.push(["Next", `${nx.who} ${nx.home ? "vs" : "at"} ${nx.opponent}`, `${day(nx.date)}${time(nx)}`]);
+    } else if (sport === "cross-country") {
+      const r = (k) => { const m = d.MEETS.filter((x) => x[k]?.result); const w = m.filter((x) => x[k].result === "W").length; return `${w}–${m.length - w}`; };
+      facts = [["Boys duals", r("boys")], ["Girls duals", r("girls")]];
+      const nx = upcoming(d.MEETS);
+      if (nx && page !== "history") facts.push(["Next", nx.name ? nx.short === "NEC" ? "NEC meet" : nx.name.replace(/^MIAA /, "") : `${nx.home ? "vs" : "at"} ${nx.opponent}`, `${day(nx.date)}`]);
+    } else if (sport === "esports") {
+      const title = Object.fromEntries((d.GAMES || []).map((x) => [x.id, x.short || x.name]));
+      const nx = upcoming((d.SCHEDULE || []).filter((m) => title[m.game]));
+      if (nx) facts.push(["Next match", title[nx.game], `${day(nx.date)}${time(nx)}`]);
+    } else {
+      const list = d.SCHEDULE || [];
+      const r = rec(list, sport === "field-hockey");
+      if (r) facts.push(["2026 record", r]);
+      if (page === "history" && titles) facts.push(["NEC titles", `${titles}`]);
+      else { const nx = upcoming(list.filter((g) => g.opponent || g.tournament)); if (nx) facts.push(nextFact(nx)); }
+    }
+    if (page === "history" && sport === "soccer") facts = facts.slice(0, 2);
+    const list = d.PHOTOS || (d.TEAMS ? [...(d.TEAMS.girls.photos || []), ...(d.TEAMS.boys.photos || [])] : []);
+    const shot = list.find((p) => p.og) || list[0];
+    photo = shot ? `${ROOT}${sport}/${shot.src}` : TEAM_PHOTO[sport] ? `${ROOT}images/teams/${TEAM_PHOTO[sport]}.jpg` : "";
+  }
+
+  document.getElementById("card").innerHTML = `
+    ${mosaic ? `<div class="mosaic">${mosaic.map((m) => `<div style="background-image:url('${ROOT}images/teams/${m}.jpg')"></div>`).join("")}</div>`
+      : photo ? `<div class="photo" style="background-image:url('${photo}')"></div>`
+      : `<svg class="art" viewBox="0 0 64 64" aria-hidden="true"><path d="M20 20h24c7 0 11 5 12.5 13l2.2 12.5c1 6-5.5 9.5-9.5 5.2L42 43H22l-7.2 7.7c-4 4.3-10.5.8-9.5-5.2L7.5 33C9 25 13 20 20 20z"/><path d="M19 28v10M14 33h10"/><circle cx="43" cy="30" r="2.4" fill="currentColor"/><circle cx="49" cy="36" r="2.4" fill="currentColor"/></svg>`}
+    <div class="shade"></div><div class="bars"></div>
+    <div class="content">
+      <div class="brand"><span class="badge"><img src="${ROOT}images/falcons-logo.png" alt=""></span><span class="kicker">${sport === "hub" ? esc(sub) : "Danvers Falcons"}<small>${sport === "hub" ? "Danvers High School · Fall 2026" : esc(sub)}</small></span></div>
+      <h1 class="${title.length > 11 && sport !== "hub" ? "long" : ""}">${sport === "hub" ? title : esc(title)}</h1>
+      ${pill ? `<div class="page">${esc(pill)}</div>` : ""}
+      <div class="facts">${facts.map(fact).join("")}</div>
+    </div>
+    <div class="url">danversfalconsathletics.org</div>
+    <div class="edge"></div>`;
+  await document.fonts.ready;
+  await Promise.all([...document.images].map((i) => (i.complete ? 0 : new Promise((r) => { i.onload = i.onerror = r; }))));
+  document.body.dataset.ready = "1";
+})();
+</script>
+</body>
+</html>

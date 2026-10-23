@@ -313,6 +313,12 @@
   }, true);
 
   function augment(dlg, g) {
+    /* the opponent's color badge beside its name */
+    if (g.opponent && DFA.hasColors(g.opponent)) {
+      const side = dlg.querySelector(".scoreline .team:last-child");
+      if (side) side.insertAdjacentHTML("beforeend", DFA.badge(g.opponent, "md"));
+      else dlg.querySelector(".modal-head h2")?.insertAdjacentHTML("afterbegin", DFA.badge(g.opponent, "md"));
+    }
     if (finished(g) && SPORT !== "esports") {
       const head = dlg.querySelector(".modal-head");
       const btn = document.createElement("button");
@@ -339,6 +345,45 @@
       const slot = box.querySelector(".dfa-wx-slot");
       if (w) slot.innerHTML = `<span class="dfa-wx">${w.icon}<b>${w.temp}°</b> ${esc(w.label)}${w.rain >= 20 ? ` · ${w.rain}% rain` : ""}${w.wind >= 12 ? ` · wind ${w.wind} mph` : ""}</span>`;
       else slot.remove();
+    });
+  }
+
+  /* =================================================================
+     ACTION PHOTOS: the newest one behind the home page hero, and a
+     credit line under the Photos grid on the Media page
+     ================================================================= */
+  const photos = () => (SPORT === "soccer" ? TEAMS[squad()].photos : typeof PHOTOS !== "undefined" ? PHOTOS : []) || [];
+  function actionPhotos() {
+    const list = photos();
+    const hero = document.querySelector(".hero.hero-home");
+    if (hero && list[0]) {
+      hero.style.setProperty("--shot", `url("${list[0].src}")`);
+      hero.classList.add("has-shot");
+    }
+    const grid = document.getElementById("photos");
+    const credits = [...new Set(list.map((p) => p.credit).filter(Boolean))];
+    if (grid && credits.length && !document.querySelector(".dfa-credit")) {
+      grid.insertAdjacentHTML("afterend", `<p class="dfa-credit">Photos: ${credits.map((c) => c.startsWith("@")
+        ? `<a href="https://www.instagram.com/${esc(c.slice(1))}/" target="_blank" rel="noopener">${esc(c)}</a> on Instagram` : esc(c)).join(", ")}</p>`);
+    }
+  }
+
+  /* =================================================================
+     OPPONENT COLOR BADGES on the home scoreboard and schedule rows
+     (kept up as lists re-render, e.g. after a filter)
+     ================================================================= */
+  function badges() {
+    document.querySelectorAll(".sb-row .dot").forEach((dot) => {
+      const name = dot.parentElement.querySelector(".nm")?.textContent.trim();
+      if (name && DFA.hasColors(name) && dot.textContent.trim() === name.charAt(0)) dot.outerHTML = DFA.badge(name, "md");
+    });
+    document.querySelectorAll(".game[data-game] .opp, .game[data-meet] .opp").forEach((opp) => {
+      if (opp.querySelector(".opp-badge")) return;
+      const row = opp.closest(".game");
+      const g = games().find((x) => x.id === +(row.dataset.game || row.dataset.meet));
+      if (!g?.opponent || g.name || !DFA.hasColors(g.opponent)) return;
+      const label = opp.querySelector("small");
+      label ? label.insertAdjacentHTML("afterend", DFA.badge(g.opponent)) : opp.insertAdjacentHTML("afterbegin", DFA.badge(g.opponent));
     });
   }
 
@@ -419,6 +464,13 @@
     .dfa-btn.solid:hover { background: #e6edfc; }
     .dfa-btn.ink { border-color: var(--royal); color: var(--royal); }
     .dfa-btn.ink:hover { background: #eef2fb; }
+    .hero.has-shot { background: linear-gradient(115deg, rgba(11,31,77,.97) 0%, rgba(11,31,77,.9) 40%, rgba(24,71,159,.74) 72%, rgba(36,89,194,.58) 100%), var(--shot) center 32% / cover; }
+    @media (max-width: 720px) { .hero.has-shot { background: linear-gradient(180deg, rgba(11,31,77,.9) 0%, rgba(11,31,77,.78) 55%, rgba(24,71,159,.72) 100%), var(--shot) center 30% / cover; } }
+    .dfa-credit { margin: 12px 0 0; font-size: 13.5px; color: var(--muted); }
+    .dfa-credit a { color: var(--royal); font-weight: 600; }
+    .game .opp .opp-badge { margin: -4px 9px 0 0; }
+    .modal-head h2 .opp-badge { margin: -6px 12px 0 0; }
+    .scoreline .team .opp-badge { order: 2; }
     .dfa-btn svg, .dfa-share svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none; }
     .dfa-share { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; font: 800 16px/1 var(--display); letter-spacing: .1em; text-transform: uppercase;
       padding: 10px 17px 9px; border: 0; border-radius: 999px; background: #f0b429; color: #0b1f4d; cursor: pointer;
@@ -462,6 +514,18 @@
     @media (max-width: 640px) { .dfa-actions { margin-left: 0; } .dfa-match { font-size: 21px; } }`;
   document.head.appendChild(css);
 
+  /* Fetch a page of this site when a link to it is hovered or pressed, so the page change is instant */
+  if (HTMLScriptElement.supports?.("speculationrules")) {
+    const rules = document.createElement("script");
+    rules.type = "speculationrules";
+    rules.textContent = JSON.stringify({ prefetch: [{ where: { href_matches: `/${SPORT}/*` }, eagerness: "moderate" }] });
+    document.head.appendChild(rules);
+  }
+
+  actionPhotos();
+  badges();
+  const main = document.querySelector("main");
+  if (main) new MutationObserver(() => badges()).observe(main, { childList: true, subtree: true });
   gameDay();
   setInterval(gameDay, 60000);
   deepLink();

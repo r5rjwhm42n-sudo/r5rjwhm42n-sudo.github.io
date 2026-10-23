@@ -435,3 +435,13 @@ table.sheet td:nth-child(2) { font-weight: 700; }
 table.sheet td:nth-child(n+5), table.sheet th:nth-child(n+5) button { text-align: right; }
 table.sheet .cap { font-size: 10px; font-weight: 800; letter-spacing: .06em; background: var(--gold); color: var(--navy); border-radius: 3px; padding: 1px 5px; vertical-align: 2px; }
 table.sheet tfoot td { border-top: 2px solid var(--royal); font-weight: 700; color: var(--muted); background: var(--white) !important; }
+
+/* ---------- Smooth page changes within the site (Chrome, Edge, Safari 18+) ----------
+   The header stays put while the page underneath fades and lifts in. */
+@view-transition { navigation: auto; }
+.site-header { view-transition-name: site-header; }
+::view-transition-old(root) { animation: vt-out .16s ease both; }
+::view-transition-new(root) { animation: vt-in .3s cubic-bezier(.2, .8, .2, 1) both; }
+@keyframes vt-out { to { opacity: 0; } }
+@keyframes vt-in { from { opacity: 0; transform: translateY(12px); } }
+@media (prefers-reduced-motion: reduce) { @view-transition { navigation: none; } }
