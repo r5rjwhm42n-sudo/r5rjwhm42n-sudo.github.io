@@ -49,7 +49,7 @@
 
   const ADAPT = {
     football(d) {
-      const ev = d.SCHEDULE.map((g) => gameEvent("football", "Football", "football/schedule.html", g));
+      const ev = d.SCHEDULE.map((g) => ({ ...gameEvent("football", "Football", "football/schedule.html", g), tickets: g.home ? d.TEAM.tickets : g.tickets }));
       return { teams: [{ label: null, events: ev, record: record(ev.filter((e) => e.result)) }],
         rank: rankText(d.TEAM.ranking),
         titles: [{ name: "Football", href: "football/history.html", years: d.TITLES.filter((t) => /NEC/.test(t.label)).map((t) => t.year) }] };
@@ -96,7 +96,7 @@
           title: m.name || `${m.home === false ? "at" : "vs"} ${m.opponent}`,
           result: s.result || null,
           score: s.result ? `${s.us}–${s.them}` : s.place ? `${ord(s.place)}${s.of ? ` of ${s.of}` : ""}` : null,
-          final: !!(s.result || s.place), off: !!m.cancelled, dateTbd: !!m.dateTbd,
+          final: !!(s.result || s.place), off: !!m.cancelled, dateTbd: !!m.dateTbd, tickets: m.tickets || null,
           summary: m.summary || null, headline: m.headline || null
         };
       };
@@ -155,6 +155,7 @@
     const FINALS = finalsOf(RESULT_ITEMS.filter(listed));
 
     renderTicker(FINALS.slice(0, 16));
+    renderToday(UPCOMING);
     renderNext(UPCOMING[0]);
     renderHeroStats(S, UPCOMING);
     renderCards(S);
@@ -163,6 +164,9 @@
     renderTitles(S);
     renderGallery(S);
     document.documentElement.classList.add("hub-ready");
+    /* the tournament tracker (js/tracker.js) builds on the same data */
+    window.DFAHub = { S, raw: Object.fromEntries(FOLDERS.map((f, i) => [f, all[i]])), UPCOMING };
+    document.dispatchEvent(new CustomEvent("dfa:hub"));
   });
 
   /* ---------- Scores ticker ---------- */
@@ -193,6 +197,13 @@
         </div>
         <div class="clock" id="clock" aria-live="off"></div>
         <div class="nu-site">${[esc(e.site || ""), e.home ? "<b>Home</b>" : e.home === false ? "Away" : ""].filter(Boolean).join(" · ")}</div>
+        ${window.DFA ? `<div class="nu-extra">
+          <span class="nu-wx" id="nu-wx"></span>
+          <span class="nu-acts">
+            <a href="${DFA.mapsUrl(e)}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Directions</a>
+            ${e.tickets ? `<a href="${esc(e.tickets.url)}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9V6h18v3a3 3 0 0 0 0 6v3H3v-3a3 3 0 0 0 0-6z"/><path d="M14 6v12" stroke-dasharray="2 2.5"/></svg>Tickets</a>` : ""}
+          </span>
+        </div>` : ""}
       </div>
       <a class="nu-foot" href="${esc(e.href)}">Game details <span aria-hidden="true">→</span></a>`;
     const clock = $("#clock");
@@ -207,6 +218,29 @@
     };
     if (tick()) { const id = setInterval(() => tick() || clearInterval(id), 1000); }
     box.hidden = false;
+    window.DFA?.weather(e).then((w) => { if (w) $("#nu-wx").innerHTML = `${w.icon}<b>${w.temp}°</b><span>${esc(w.label)}${w.rain >= 30 ? ` · ${w.rain}% rain` : ""}</span>`; });
+  }
+
+  /* ---------- Game day: a strip under the scores for every game today, LIVE while it's on ---------- */
+  function renderToday(upcoming) {
+    if (!window.DFA) return;
+    const strip = $("#today");
+    const draw = () => {
+      const today = upcoming.filter((e) => DFA.state({ ...e, finish: e.final }, e.sport));
+      strip.hidden = !today.length;
+      if (!today.length) return;
+      const live = today.filter((e) => DFA.state({ ...e, finish: e.final }, e.sport) === "live").length;
+      strip.innerHTML = `<div class="wrap">
+        <span class="td-flag ${live ? "live" : ""}">${live ? "<i></i>Live now" : "Game day"}</span>
+        <div class="td-games">${today.map((e) => {
+          const on = DFA.state({ ...e, finish: e.final }, e.sport) === "live";
+          return `<a class="td-g ${on ? "on" : ""}" href="${esc(e.href)}">
+            <svg aria-hidden="true"><use href="#i-${e.sport}"/></svg>
+            <span><b>${esc(e.team)} ${esc(e.title)}</b><small>${on ? "Under way" : timeOf(e) || "Today"}${e.home ? " · Home" : ""}</small></span></a>`;
+        }).join("")}</div></div>`;
+    };
+    draw();
+    setInterval(draw, 60000);
   }
 
   /* ---------- Hero numbers ---------- */

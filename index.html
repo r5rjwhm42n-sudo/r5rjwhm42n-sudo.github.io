@@ -20,6 +20,11 @@
 <link rel="icon" type="image/png" href="images/falcons-logo.png">
 <link rel="stylesheet" href="css/home.css">
 <link rel="stylesheet" href="css/transitions.css">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="images/icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Falcons">
 </head>
 <body>
 <!-- Sport icons -->
@@ -53,6 +58,8 @@
   <div class="ticker-label"><span class="dot"></span>Scores</div>
   <div class="ticker-view"><div class="ticker-track" id="ticker-track"></div></div>
 </div>
+
+<div class="today" id="today" hidden></div>
 
 <main>
 <section class="hub-hero">
@@ -179,6 +186,8 @@
   <div class="light" data-addcal="all-sports" data-label="Add every Danvers game to your calendar"></div>
 </div></section>
 
+<section class="road" id="road" hidden></section>
+
 <section class="block" id="latest" hidden><div class="wrap">
   <div class="section-head"><h2>Latest Results</h2><span class="sub">The most recent final from each team</span></div>
   <div class="stories" id="latest-list"></div>
@@ -222,9 +231,13 @@
 </dialog>
 <div class="tip" id="tip" role="tooltip" hidden></div>
 
+<script src="js/common.js"></script>
 <script src="js/home.js"></script>
 <script src="js/addcal.js"></script>
 <script src="js/transitions.js"></script>
+<script src="js/search.js"></script>
+<script src="js/tracker.js"></script>
+<script src="js/install.js"></script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "012041330fec4a07ad02e32f49e725f2"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
