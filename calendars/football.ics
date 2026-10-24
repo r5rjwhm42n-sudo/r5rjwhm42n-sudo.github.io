@@ -106,11 +106,13 @@ UID:football-7@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261023T183000
 DURATION:PT2H30M
-SUMMARY:Danvers Football vs Salem
+SUMMARY:Danvers Football vs Salem (W 41–0)
 LOCATION:Morse Field at Dr. Deering Stadium\, Danvers
-DESCRIPTION:Non-league\nTickets on GoFan: https://gofan.co/app/school/MA145
- 53\nSchedule and results: https://danversfalconsathletics.org/football/sch
- edule.html
+DESCRIPTION:Non-league\nFinal: Danvers 41\, Salem 0\nDanvers led 14–0 lat
+ e in the first quarter and 35–0 at halftime on its way to a fourth shuto
+ ut in six games. The non-league win kept the Falcons unbeaten heading into
+  its final NEC game at Peabody.\nSchedule and results: https://danversfalc
+ onsathletics.org/football/schedule.html
 URL:https://danversfalconsathletics.org/football/schedule.html
 END:VEVENT
 BEGIN:VEVENT

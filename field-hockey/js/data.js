@@ -25,7 +25,7 @@ const TEAM = {
   address: "60 Cabot Road, Danvers, MA 01923",
   /* MIAA power ranking (published every Tuesday and Friday in season) —
      update rank, of and asOf from miaa.net/power-rankings (Field Hockey · Girls · Division 3) */
-  ranking: { rank: 32, of: 54, asOf: "Oct. 20", url: "https://www.miaa.net/power-rankings" },
+  ranking: { rank: 31, of: 54, asOf: "Oct. 23", url: "https://www.miaa.net/power-rankings" },
   links: {
     hudl: HUDL_TEAM,
     hudlVideo: HUDL_TEAM + "/video",

@@ -24,7 +24,7 @@ const TEAM = {
   stadium: "DHS Field House",
   /* MIAA power ranking (published every Tuesday and Friday in season) —
      update rank, of and asOf from miaa.net/power-rankings (Volleyball · Fall · Division 3) */
-  ranking: { rank: 20, of: 68, asOf: "Oct. 20", url: "https://www.miaa.net/power-rankings" },
+  ranking: { rank: 20, of: 68, asOf: "Oct. 23", url: "https://www.miaa.net/power-rankings" },
   address: "60 Cabot Road, Danvers, MA 01923",
   links: {
     hudl: HUDL_TEAM,

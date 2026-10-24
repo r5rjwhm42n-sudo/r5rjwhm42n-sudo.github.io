@@ -16,7 +16,7 @@ const TEAM = {
   location: "Danvers, MA",
   conference: "Northeastern Conference",
   division: "MIAA Division 4",
-  ranking: "No. 2 in the MIAA Division 4 power rankings (Oct. 20)",   // null hides it
+  ranking: "No. 2 in the MIAA Division 4 power rankings (Oct. 23)",   // null hides it
   headCoach: "Ryan Nolan",
   assistants: ["Bryan Ibbitson", "Jon Babula", "Angel Adamas", "Tom Walfield", "Kyle Brennan",
                "Andrew Barton", "Sean Dunn", "Jeff Smith", "Tom Ladd"],
@@ -207,7 +207,22 @@ const SCHEDULE = [
       { label: "MaxPreps recap", url: "https://www.maxpreps.com/news/FoPI_SuzhEqh08J-rgB0Sw/football-recap-danvers-skates-past-masconomet-regional-with-ease.htm" }
     ]
   },
-  { id: 7, date: "2026-10-23T18:30", opponent: "Salem", mascot: "Witches", home: true, league: false, site: HOME_FIELD, result: null, notes: [] },
+  {
+    id: 7, date: "2026-10-23T18:30", opponent: "Salem", mascot: "Witches",
+    home: true, league: false, site: HOME_FIELD,
+    result: "W", us: 41, them: 0,
+    half: [35, 0],
+    summary: "Danvers led 14–0 late in the first quarter and 35–0 at halftime on its way to a fourth shutout in six games. The non-league win kept the Falcons unbeaten heading into its final NEC game at Peabody.",
+    notes: [
+      "Fourth shutout of the season; 27 points allowed through six games",
+      "Next: at Peabody (6–1) on Oct. 30"
+    ],
+    sources: [
+      { label: "Danvers Falcons final score on X", url: "https://x.com/WeAreDanvers/status/2113792959753900212" },
+      { label: "Danvers Falcons halftime update on X", url: "https://x.com/WeAreDanvers/status/2113776620670517517" },
+      { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/football/game/danvers-vs-salem/10-23-2026/?c=26259630-cdea-40b0-ba76-b8203791a81c" }
+    ]
+  },
   { id: 8, date: "2026-10-30T19:00", opponent: "Peabody", mascot: "Tanners", home: false, league: true, site: "Peabody Veterans Memorial Stadium", result: null,
     notes: ["Last NEC game of the regular season", "Danvers won last year's meeting 30–12"] },
   { id: 9, date: "2026-11-26T10:00", opponent: "Gloucester", mascot: "Fishermen", home: false, league: false, site: "Newell Stadium, Gloucester", result: null,
