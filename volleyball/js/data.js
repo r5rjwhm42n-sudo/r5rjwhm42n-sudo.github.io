@@ -431,11 +431,14 @@ const SCHEDULE = [
     ],
     sources: [{ label: "MaxPreps box score", url: MP + "danvers-vs-swampscott/10-21-2026/?c=5ec3bd19-91ce-48d1-880c-a8c1dc25bff9" }] },
   { id: 18, date: "2026-10-26T17:15", opponent: "Peabody", mascot: "Tanners", home: true, league: true, site: HOME, result: null,
-    notes: ["Second meeting — Danvers won 3–1 on Sept. 25"] },
+    notes: ["Second meeting — Danvers won 3–1 on Sept. 25"],
+    sources: [{ label: "Watch live on NFHS Network", url: "https://www.nfhsnetwork.com/events/danvers-high-school-danvers-ma/gam524c066736" }] },
   { id: 19, date: "2026-10-28T17:15", opponent: "Masconomet", mascot: "Chieftains", home: true, league: true, site: HOME, result: null,
-    notes: ["Second meeting — Danvers won 3–2 on Sept. 30"] },
+    notes: ["Second meeting — Danvers won 3–2 on Sept. 30"],
+    sources: [{ label: "Watch live on NFHS Network", url: "https://www.nfhsnetwork.com/events/danvers-high-school-danvers-ma/gam76f9d68549" }] },
   { id: 20, date: "2026-10-29T17:15", opponent: "Salem", mascot: "Witches", home: true, league: true, site: HOME, result: null,
-    notes: ["Regular-season finale"] }
+    notes: ["Regular-season finale"],
+    sources: [{ label: "Watch live on NFHS Network", url: "https://www.nfhsnetwork.com/events/danvers-high-school-danvers-ma/gam3e8529ea45" }] }
 ];
 
 /* ---------------------------------------------------------------------

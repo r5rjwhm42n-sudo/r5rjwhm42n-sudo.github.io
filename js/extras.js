@@ -30,6 +30,8 @@
   const kind = (g) => (g.scrimmage ? "Scrimmage" : g.postseason ? "Postseason" : g.tournament ? (g.league ? "NEC tournament" : "MIAA tournament") : g.league ? "NEC" : "Non-league");
 
   function watchUrl(g) {
+    const own = (g.sources || []).find((s) => s.url && /livestream|watch live/i.test(s.label));
+    if (own) return own.url;
     const links = team().links || {};
     if (SPORT === "volleyball" && g.home) return "https://www.nfhsnetwork.com/schools/6d1b1b0797";
     if (["football", "soccer", "field-hockey", "volleyball"].includes(SPORT)) return links.hudl || null;

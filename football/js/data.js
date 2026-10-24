@@ -212,19 +212,26 @@ const SCHEDULE = [
     home: true, league: false, site: HOME_FIELD,
     result: "W", us: 41, them: 0,
     half: [35, 0],
-    summary: "Danvers led 14–0 late in the first quarter and 35–0 at halftime on its way to a fourth shutout in six games. The non-league win kept the Falcons unbeaten heading into its final NEC game at Peabody.",
+    summary: "Danvers celebrated Senior Night with its third straight shutout. Jack Houston scored three touchdowns, one on a 32-yard run, and captain Nick Xerras returned an interception 41 yards for another as the Falcons built a 14–0 lead in the first quarter and a 35–0 lead at halftime.",
+    performers: [
+      { name: "Jack Houston", line: "3 TD, including a 32-yard run" },
+      { name: "Nick Xerras", line: "41-yard interception return for a TD" }
+    ],
     notes: [
-      "Fourth shutout of the season; 27 points allowed through six games",
-      "Next: at Peabody (6–1) on Oct. 30"
+      "Senior Night at Deering Stadium",
+      "Third straight shutout and fourth in six games; 27 points allowed all season"
     ],
     sources: [
+      { label: "Salem News game story", url: "https://www.salemnews.com/sports/unbeaten-danvers-football-pitches-third-straight-shutout-hammers-salem/article_c6f8caf9-e058-4b62-8e4b-de3e94a209ac.html" },
+      { label: "Full-game replay on Hudl", url: REPLAY + "QnJvYWRjYXN0NDUwNzQ3NQ%3D%3D" },
       { label: "Danvers Falcons final score on X", url: "https://x.com/WeAreDanvers/status/2113792959753900212" },
       { label: "Danvers Falcons halftime update on X", url: "https://x.com/WeAreDanvers/status/2113776620670517517" },
       { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/football/game/danvers-vs-salem/10-23-2026/?c=26259630-cdea-40b0-ba76-b8203791a81c" }
     ]
   },
   { id: 8, date: "2026-10-30T19:00", opponent: "Peabody", mascot: "Tanners", home: false, league: true, site: "Peabody Veterans Memorial Stadium", result: null,
-    notes: ["Last NEC game of the regular season", "Danvers won last year's meeting 30–12"] },
+    notes: ["Last NEC game of the regular season", "Peabody comes in 6–1 (2–1 NEC)", "Danvers won last year's meeting 30–12"],
+    sources: [{ label: "Livestream on Hudl", url: REPLAY + "QnJvYWRjYXN0NDUzMDAzOQ%3D%3D" }] },
   { id: 9, date: "2026-11-26T10:00", opponent: "Gloucester", mascot: "Fishermen", home: false, league: false, site: "Newell Stadium, Gloucester", result: null,
     notes: ["Thanksgiving Day rivalry, played every Thanksgiving morning since 1964"] }
 ];
@@ -253,7 +260,8 @@ const PLAYERS = [
   { name: "Jack Houston", num: null, pos: ["RB", "LB"], grade: "Sr.", captain: true,
     stats: [["Rush Yds", 379], ["Rush TD", 3], ["Rec TD", 3], ["Points", 36]],
     log: { 1: "16 car, 106 yds", 2: "79 rushing yds · 2 catches for 45 yards", 3: "135 rushing yds, 2 TD",
-           5: "TD catches of 15 and 11 yards from Nate Wise", 6: "59 rushing yds, 2-yd TD run · 11-yard TD catch" } },
+           5: "TD catches of 15 and 11 yards from Nate Wise", 6: "59 rushing yds, 2-yd TD run · 11-yard TD catch",
+           7: "3 TD, including a 32-yard run" } },
   { name: "Evan Kaciqi", num: null, pos: ["RB", "DB"], grade: "So.", captain: false,
     stats: [["Rush Yds", 225], ["Rush TD", 2]],
     log: { 1: "21 car, 114 yds, 1-yd TD run (varsity debut)", 6: "12 car, 111 yds, 25-yd TD run" } },
@@ -269,13 +277,13 @@ const PLAYERS = [
     stats: [["Rush TD", 1], ["Rec", 1], ["Fum Rec", 1]],
     log: { 1: "1 catch for 8 yards · lead blocker for three 100-yard rushers", 5: "1-yd TD run, his first career touchdown",
            6: "Fumble recovery" } },
-  { name: "Nick Xerras", num: 10, pos: ["DE"], grade: null, captain: true,
+  { name: "Nick Xerras", num: 10, pos: ["DE"], grade: "Sr.", captain: true,
     stats: [["Blocked Punts", 1]],
-    log: { 2: "Blocked punt in the 4th quarter", 6: "Pressure off the edge all night" } },
+    log: { 2: "Blocked punt in the 4th quarter", 6: "Pressure off the edge all night", 7: "41-yard interception return for a TD" } },
   { name: "Hunter DeDominicis", num: 8, pos: ["DE", "OL"], grade: null, captain: true,
     stats: [["Fum Rec", 1]],
     log: { 5: "Fumble recovery · filled in at right tackle", 6: "Pressure off the edge" } },
-  { name: "Dylan Kinney", num: null, pos: ["OL", "DL"], grade: "Sr.", captain: true,
+  { name: "Dylan Kinney", num: 75, pos: ["OL", "DL"], grade: "Sr.", captain: true,
     stats: [], log: { 1: "Started at right guard" } },
   { name: "Tim Nikiforov", num: null, pos: ["LB"], grade: "So.", captain: false,
     stats: [["Rec", 1], ["Rec Yds", 21], ["Forced Fum", 1]],
@@ -289,7 +297,7 @@ const PLAYERS = [
   { name: "Juan Martinez", num: null, pos: [], grade: null, captain: false,
     stats: [["Onside Rec", 1]],
     log: { 2: "Recovered the onside kick to open the 2nd half", 5: "Nearly blocked a punt" } },
-  { name: "Grayson Haskell", num: null, pos: ["OL", "DL"], grade: null, captain: false,
+  { name: "Grayson Haskell", num: 59, pos: ["OL", "DL"], grade: null, captain: false,
     stats: [], log: { 1: "Started at right tackle", 6: "Pressure on the Masconomet quarterback" } },
   { name: "Lucas McGloin", num: null, pos: ["OL"], grade: null, captain: false,
     stats: [], log: { 1: "Started at left tackle" } },
@@ -389,6 +397,7 @@ const LEGENDS = [
    --------------------------------------------------------------------- */
 const HL = HUDL_TEAM + "/boys-varsity-football/watch?ot=TEAM&oi=33811&hr=";
 const VIDEOS = [
+  { title: "Danvers vs. Salem", sub: "Full-Game Replay · Oct. 23", season: 2026, len: "Replay", url: REPLAY + "QnJvYWRjYXN0NDUwNzQ3NQ%3D%3D" },
   { title: "Danvers at Masconomet", sub: "Full-Game Replay · Oct. 16", season: 2026, len: "Replay", url: REPLAY + "QnJvYWRjYXN0NDUwNzQ3MQ%3D%3D" },
   { title: "Danvers vs. Beverly", sub: "Full-Game Replay · Oct. 9", season: 2026, len: "Replay", url: REPLAY + "QnJvYWRjYXN0NDU5MTI0Mw%3D%3D" },
   { title: "Danvers at Reading", sub: "Full-Game Replay · Sept. 25", season: 2026, len: "Replay", url: REPLAY + "QnJvYWRjYXN0NDQ5MzkzNQ%3D%3D" },

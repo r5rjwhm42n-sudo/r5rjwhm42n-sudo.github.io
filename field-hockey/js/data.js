@@ -350,16 +350,16 @@ const PLAYERS = [
    NORTHEASTERN CONFERENCE STANDINGS — copy from the MaxPreps league page
    (TEAM.links.standings). [team, league W, L, T, overall W, L, T]
    --------------------------------------------------------------------- */
-const STANDINGS_AS_OF = "Oct. 21 (the Oct. 20 Danvers–Saugus result is added from the school's schedule)";
+const STANDINGS_AS_OF = "Oct. 24";
 const STANDINGS = [
-  ["Gloucester", 10, 0, 0, 13, 0, 0],
-  ["Beverly", 7, 2, 1, 9, 4, 1],
-  ["Masconomet", 6, 2, 1, 8, 3, 2],
-  ["Swampscott", 3, 3, 1, 3, 6, 2],
+  ["Gloucester", 11, 0, 0, 14, 0, 0],
+  ["Beverly", 8, 2, 1, 10, 4, 1],
+  ["Masconomet", 6, 3, 1, 9, 4, 2],
+  ["Swampscott", 4, 3, 1, 4, 7, 2],
   ["Danvers", 5, 5, 1, 7, 7, 2],
-  ["Marblehead", 4, 7, 1, 4, 8, 2],
-  ["Saugus", 2, 7, 1, 6, 7, 2],
-  ["Peabody", 0, 11, 0, 3, 13, 0]
+  ["Marblehead", 5, 7, 1, 5, 8, 2],
+  ["Saugus", 2, 9, 1, 6, 9, 2],
+  ["Peabody", 0, 12, 0, 3, 14, 0]
 ];
 
 /* Position → group used by the filter buttons on the Stats page */

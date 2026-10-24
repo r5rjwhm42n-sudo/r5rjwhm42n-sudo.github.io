@@ -347,7 +347,8 @@ const TEAMS = {
           { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/girls/match/danvers-vs-masconomet-regional-boxford/10-21-2026/?c=b30f279d-1ca6-4537-9dd2-26ca53204cbf" }
         ] },
       { id: 17, date: "2026-10-26T18:30", opponent: "Peabody", mascot: "Tanners", home: true, league: true, site: HOME, result: null, notes: [] },
-      { id: 18, date: "2026-10-28T16:30", opponent: "Gloucester", mascot: "Fishermen", home: false, league: true, site: "Newell Stadium, Gloucester", result: null, notes: [] },
+      { id: 18, date: "2026-10-28T16:30", opponent: "Gloucester", mascot: "Fishermen", home: false, league: true, site: "Newell Stadium, Gloucester", result: null, notes: [],
+        sources: [{ label: "Watch live on NFHS Network", url: "https://www.nfhsnetwork.com/events/gloucester-high-school-gloucester-ma/gamf6b6ca0e67" }] },
 
       { id: 106, date: "2026-11-02T16:00", opponent: "Lynnfield", mascot: "Pioneers", home: false, league: false, site: "Lynnfield High School, Lynnfield",
         scrimmage: true, result: null, notes: ["Scrimmage after the regular season"] }
@@ -706,7 +707,8 @@ const TEAMS = {
         scorers: [], assists: [],
         notes: ["Second meeting — Masconomet also won 7–0 on Sept. 21"],
         sources: [{ label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/match/danvers-vs-masconomet-regional-boxford/10-21-2026/?c=72a09f70-101c-453e-998a-ab39c39bedac" }] },
-      { id: 16, date: "2026-10-26T16:00", opponent: "Peabody", mascot: "Tanners", home: false, league: true, site: "Peabody Veterans Memorial HS, Peabody", result: null, notes: [] },
+      { id: 16, date: "2026-10-26T16:00", opponent: "Peabody", mascot: "Tanners", home: false, league: true, site: "Peabody Veterans Memorial HS, Peabody", result: null, notes: [],
+      sources: [{ label: "Livestream on Hudl", url: BOYS_REPLAY + "QnJvYWRjYXN0NDMxMzIyNA%3D%3D" }] },
       { id: 17, date: "2026-10-28T18:30", opponent: "Gloucester", mascot: "Fishermen", home: true, league: true, site: HOME, result: null, notes: [] },
       { id: 18, date: "2026-10-30T18:30", opponent: "Essex Tech", mascot: "Hawks", home: true, league: false, site: MORSE, result: null, notes: [] }
     ],
