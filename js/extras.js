@@ -110,7 +110,7 @@
     const pill = (text, cx, y, bg, fg, px = 34, align = "left") => {
       spaced(.12); font(800, px);
       const w = x.measureText(text).width + px * 1.1, h = px * 1.45, left = align === "right" ? cx - w : cx;
-      x.fillStyle = bg; x.beginPath(); x.roundRect(left, y, w, h, 8); x.fill();
+      x.fillStyle = bg; x.beginPath(); x.roundRect(left, y, w, h, 4); x.fill();
       x.fillStyle = fg; x.textBaseline = "middle"; x.fillText(text, left + px * .55, y + h / 2 + 2); x.textBaseline = "alphabetic";
       spaced(0);
       return w;
@@ -150,7 +150,7 @@
     fit(line, W - P * 2 - 34 - tw - 24, 50); x.fillText(line, P + 34, 307); spaced(0);
     if (m.tag) {
       spaced(.14); font(700, 24);
-      x.strokeStyle = "rgba(197,212,245,.55)"; x.lineWidth = 2; x.beginPath(); x.roundRect(W - P - tw, 266, tw, 44, 22); x.stroke();
+      x.strokeStyle = "rgba(197,212,245,.55)"; x.lineWidth = 2; x.beginPath(); x.roundRect(W - P - tw, 266, tw, 44, 4); x.stroke();
       x.fillStyle = "#dbe5fb"; x.textAlign = "center"; x.fillText(m.tag.toUpperCase(), W - P - tw / 2, 297); x.textAlign = "left"; spaced(0);
     }
 
@@ -219,7 +219,7 @@
       while (fit.length > 1 && h(fit) > room) fit = fit.slice(0, -1);
       const top = Math.max(y, 860) + Math.max(0, (room - h(fit)) / 2);
       x.fillStyle = "rgba(255,255,255,.08)"; x.strokeStyle = "rgba(255,255,255,.18)"; x.lineWidth = 2;
-      x.beginPath(); x.roundRect(P, top, W - P * 2, h(fit), 18); x.fill(); x.stroke();
+      x.beginPath(); x.roundRect(P, top, W - P * 2, h(fit), 6); x.fill(); x.stroke();
       x.fillStyle = "#f0b429"; spaced(.16); font(800, 28); x.fillText(m.heading.toUpperCase(), P + 36, top + 54); spaced(0);
       let ly = top + 108;
       for (const [k, lines] of fit) {
@@ -459,7 +459,7 @@
   const css = document.createElement("style");
   css.textContent = `
     .dfa-btn { display: inline-flex; align-items: center; gap: 7px; font: 700 15px/1 var(--display); letter-spacing: .08em; text-transform: uppercase;
-      padding: 9px 14px 8px; border-radius: 6px; border: 2px solid #fff; color: #fff; background: transparent; text-decoration: none; cursor: pointer;
+      padding: 9px 14px 8px; border-radius: 4px; border: 2px solid #fff; color: #fff; background: transparent; text-decoration: none; cursor: pointer;
       transition: background .15s, color .15s, transform .15s; }
     .dfa-btn:hover { background: rgba(255,255,255,.14); transform: translateY(-1px); }
     .dfa-btn.solid { background: #fff; color: var(--royal); }
@@ -475,7 +475,7 @@
     .scoreline .team .opp-badge { order: 2; }
     .dfa-btn svg, .dfa-share svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none; }
     .dfa-share { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; font: 800 16px/1 var(--display); letter-spacing: .1em; text-transform: uppercase;
-      padding: 10px 17px 9px; border: 0; border-radius: 999px; background: #f0b429; color: #0b1f4d; cursor: pointer;
+      padding: 10px 17px 9px; border: 0; border-radius: 4px; background: #f0b429; color: #0b1f4d; cursor: pointer;
       box-shadow: 0 8px 20px rgba(0,0,0,.28); transition: transform .15s, box-shadow .15s; }
     .dfa-share:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(0,0,0,.34); }
     .dfa-share:disabled { opacity: .8; cursor: progress; }
@@ -490,7 +490,7 @@
     dialog.dfa-sheet { border: 0; padding: 0; background: transparent; max-width: 100vw; max-height: 100vh; overflow: visible; }
     dialog.dfa-sheet::backdrop { background: rgba(5,14,40,.84); backdrop-filter: blur(6px); }
     .dfa-sheet figure { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 18px; padding: 16px; animation: dfa-rise .4s cubic-bezier(.2,.8,.2,1); }
-    .dfa-sheet img { display: block; height: min(70vh, 860px); max-width: calc(100vw - 32px); object-fit: contain; border-radius: 14px; box-shadow: 0 30px 80px rgba(0,0,0,.55); }
+    .dfa-sheet img { display: block; height: min(70vh, 860px); max-width: calc(100vw - 32px); object-fit: contain; border-radius: 4px; box-shadow: 0 30px 80px rgba(0,0,0,.55); }
     .dfa-sheet .row { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
     @keyframes dfa-rise { from { opacity: 0; transform: translateY(24px) scale(.96); } }
 

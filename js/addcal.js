@@ -41,7 +41,7 @@
       background: rgba(255, 255, 255, .1); border: 1px solid rgba(255, 255, 255, .28); }
     .addcal .addcal-menu p { margin: 0 0 12px; max-width: none; font-size: 15px; line-height: 1.45; color: inherit; }
     .addcal-links { display: flex; flex-wrap: wrap; gap: 8px; }
-    .addcal-links a { display: inline-flex; align-items: center; padding: 8px 14px; border-radius: 999px; background: #fff;
+    .addcal-links a { display: inline-flex; align-items: center; padding: 8px 14px; border-radius: 4px; background: #fff;
       color: var(--royal); font-weight: 700; font-size: 15px; text-decoration: none; }
     .addcal-links a:hover, .addcal-links a:focus-visible { background: #e6edfc; }
     .addcal.light .btn-primary { background: var(--royal); border-color: var(--royal); color: #fff; }

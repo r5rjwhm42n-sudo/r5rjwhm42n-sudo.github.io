@@ -305,7 +305,7 @@
   const css = document.createElement("style");
   css.textContent = `
     .site-header .hbar .nav { margin-left: auto; }
-    .dfs-open { display: inline-flex; align-items: center; gap: 8px; flex: none; height: 40px; margin-left: 14px; padding: 0 14px 0 11px; border-radius: 999px;
+    .dfs-open { display: inline-flex; align-items: center; gap: 8px; flex: none; height: 40px; margin-left: 14px; padding: 0 14px 0 11px; border-radius: 4px;
       border: 1.5px solid rgba(255,255,255,.4); background: rgba(255,255,255,.1); color: #fff; font: 700 16px/1 var(--display); letter-spacing: .08em; text-transform: uppercase;
       transition: background .15s, border-color .15s, transform .15s; }
     .dfs-open:hover { background: rgba(255,255,255,.2); border-color: #fff; transform: translateY(-1px); }
@@ -325,7 +325,7 @@
     dialog.dfs[open]::backdrop { animation: dfs-fade .25s ease; }
     @keyframes dfs-in { from { opacity: 0; transform: translateY(-14px) scale(.97); } }
     @keyframes dfs-fade { from { opacity: 0; } }
-    .dfs-panel { display: flex; flex-direction: column; max-height: min(640px, 80vh); background: #fff; border-radius: 16px; overflow: hidden;
+    .dfs-panel { display: flex; flex-direction: column; max-height: min(640px, 80vh); background: #fff; border-radius: 4px; overflow: hidden;
       box-shadow: 0 0 0 1px rgba(255,255,255,.12), 0 30px 80px rgba(3,10,30,.55); }
     .dfs-bar { position: relative; display: flex; align-items: center; gap: 12px; padding: 16px 16px 16px 20px;
       background: linear-gradient(115deg, #0b1f4d, #18479f 70%, #2459c2); color: #fff; }
@@ -334,18 +334,18 @@
     .dfs-bar input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; color: #fff; font: 700 26px/1.2 var(--display); letter-spacing: .02em; text-transform: uppercase; padding: 4px 0; }
     .dfs-bar input::placeholder { color: rgba(219,229,251,.62); }
     .dfs-bar input::-webkit-search-cancel-button { display: none; }
-    .dfs-x { flex: none; border: 1.5px solid rgba(255,255,255,.4); background: transparent; color: #dbe5fb; border-radius: 6px; padding: 5px 9px 4px; font: 700 13px/1 var(--display); letter-spacing: .1em; text-transform: uppercase; }
+    .dfs-x { flex: none; border: 1.5px solid rgba(255,255,255,.4); background: transparent; color: #dbe5fb; border-radius: 4px; padding: 5px 9px 4px; font: 700 13px/1 var(--display); letter-spacing: .1em; text-transform: uppercase; }
     .dfs-x:hover { background: rgba(255,255,255,.15); color: #fff; }
     .dfs-tabs { display: flex; flex: none; gap: 6px; padding: 12px 16px 6px; overflow-x: auto; scrollbar-width: none; }
-    .dfs-tabs button { flex: none; border: 1.5px solid #dfe4ee; background: #fff; color: #5b647a; border-radius: 999px; padding: 7px 14px 6px; font: 700 14px/1.1 var(--display); letter-spacing: .08em; text-transform: uppercase; transition: all .15s; }
+    .dfs-tabs button { flex: none; border: 1.5px solid #dfe4ee; background: #fff; color: #5b647a; border-radius: 4px; padding: 7px 14px 6px; font: 700 14px/1.1 var(--display); letter-spacing: .08em; text-transform: uppercase; transition: all .15s; }
     .dfs-tabs button:hover { border-color: #18479f; color: #18479f; }
     .dfs-tabs button[aria-selected="true"] { background: #18479f; border-color: #18479f; color: #fff; }
     .dfs-list { flex: 1; overflow-y: auto; overscroll-behavior: contain; padding: 4px 10px 12px; scroll-padding: 34px 0 8px; }
     .dfs-group { padding-top: 6px; }
     .dfs-h { position: sticky; top: 0; z-index: 1; padding: 8px 10px 6px; background: linear-gradient(#fff 75%, rgba(255,255,255,0)); font: 800 13px/1 var(--display); letter-spacing: .16em; text-transform: uppercase; color: #18479f; }
-    .dfs-item { position: relative; display: grid; grid-template-columns: 42px 1fr auto 18px; align-items: center; gap: 12px; padding: 9px 10px; border-radius: 10px; color: inherit; text-decoration: none; }
+    .dfs-item { position: relative; display: grid; grid-template-columns: 42px 1fr auto 18px; align-items: center; gap: 12px; padding: 9px 10px; border-radius: 4px; color: inherit; text-decoration: none; }
     .dfs-item.on { background: #eef3fd; box-shadow: inset 3px 0 0 #18479f; }
-    .dfs-ic { width: 42px; height: 42px; border-radius: 10px; display: grid; place-items: center; background: linear-gradient(135deg, #0b1f4d, #18479f); color: #fff; }
+    .dfs-ic { width: 42px; height: 42px; border-radius: 4px; display: grid; place-items: center; background: linear-gradient(135deg, #0b1f4d, #18479f); color: #fff; }
     .dfs-item.athlete .dfs-ic { border-radius: 50%; }
     .dfs-item.page .dfs-ic { background: #eef3fd; color: #18479f; }
     .dfs-ic svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 4.2; stroke-linecap: round; stroke-linejoin: round; }
