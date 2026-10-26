@@ -233,7 +233,8 @@ const SCHEDULE = [
     notes: ["Last NEC game of the regular season", "Peabody comes in 6–1 (2–1 NEC)", "Danvers won last year's meeting 30–12"],
     sources: [{ label: "Livestream on Hudl", url: REPLAY + "QnJvYWRjYXN0NDUzMDAzOQ%3D%3D" }] },
   { id: 9, date: "2026-11-26T10:00", opponent: "Gloucester", mascot: "Fishermen", home: false, league: false, site: "Newell Stadium, Gloucester", result: null,
-    notes: ["Thanksgiving Day rivalry, played every Thanksgiving morning since 1964"] }
+    notes: ["Thanksgiving Day rivalry, played every Thanksgiving morning since 1964"],
+    sources: [{ label: "Watch live on NFHS Network", url: "https://www.nfhsnetwork.com/events/gloucester-high-school-gloucester-ma/gam6c9d84ba83" }] }
 ];
 
 /* ---------------------------------------------------------------------
