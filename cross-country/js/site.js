@@ -284,14 +284,17 @@
       const pill = x.place ? `<span class="pl ${dual && x.place === 1 ? "p1" : dual && x.place <= 5 ? "top" : ""}">${ord(x.place)}</span>` : "";
       return `<span class="tm ${x.time ? "" : "none"}" title="${esc(x.note || "")}">${esc(x.time || (x.place ? "" : "✓"))}</span>${pill}`;
     };
+    /* Preseason time trial, shown ahead of the meets */
+    const hasTT = RUNNERS.some((r) => r.tt);
+    const ttCell = (r) => (r.tt ? `<span class="tm">${esc(r.tt)}</span>${r.ttDistance ? `<span class="pl">${esc(r.ttDistance)}</span>` : ""}` : `<span class="tm none">–</span>`);
     $("#places").innerHTML = SQUADS.map(([k, label]) => `
       <div class="card chart">
         <h3>${label}</h3>
         <div class="table-scroll"><table class="places">
-          <thead><tr><th>Runner</th>${done.map((m) => `<th title="${title(m)}">${esc(m.short)}<small>${fmt(m.date, { month: "short", day: "numeric" })}${m.distance ? ` · ${esc(m.distance)}` : ""}</small></th>`).join("")}</tr></thead>
+          <thead><tr><th>Runner</th>${hasTT ? `<th title="Preseason 2K time trial">TT<small>Preseason · 2K</small></th>` : ""}${done.map((m) => `<th title="${title(m)}">${esc(m.short)}<small>${fmt(m.date, { month: "short", day: "numeric" })}${m.distance ? ` · ${esc(m.distance)}` : ""}</small></th>`).join("")}</tr></thead>
           <tbody>${RUNNERS.filter((r) => r.squad === k).sort((a, b) => avg(a) - avg(b)).map((r) => {
             const rs = races(r);
-            return `<tr><td class="nm">${esc(r.name)}${r.grade ? `<small>${r.grade}</small>` : ""}</td>${done.map((m) => `<td>${cell(rs.find((x) => x.m === m))}</td>`).join("")}</tr>`;
+            return `<tr><td class="nm">${esc(r.name)}${r.grade ? `<small>${r.grade}</small>` : ""}</td>${hasTT ? `<td>${ttCell(r)}</td>` : ""}${done.map((m) => `<td>${cell(rs.find((x) => x.m === m))}</td>`).join("")}</tr>`;
           }).join("")}</tbody>
         </table></div>
       </div>`).join("");
@@ -326,7 +329,8 @@
             <div><b>${p.length ? avg(r).toFixed(1) : "–"}</b><span>Dual avg.</span></div>
             <div><b class="${r.pr ? "pr" : "dim"}">${esc(r.pr || "–")}</b><span>5K PR</span></div>
           </div>
-          ${rs.length ? `<div class="player-log">
+          ${rs.length || r.tt ? `<div class="player-log">
+            ${r.tt ? `<div class="row"><span class="opp">${esc(r.ttDistance || "2K")} time trial</span><span>${esc(r.tt)}</span></div>` : ""}
             ${rs.map((x) => `<div class="row"><span class="opp">${title(x.m)}</span><span>${line(x)}</span></div>`).join("")}
           </div>` : ""}
         </article>`;

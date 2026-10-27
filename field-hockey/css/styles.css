@@ -308,6 +308,13 @@ table.records .rec { font-family: var(--display); font-weight: 700; font-size: 2
 .bar { height: 10px; background: #e3e8f2; border-radius: 5px; min-width: 100px; overflow: hidden; }
 .bar i { display: block; height: 100%; background: var(--royal); }
 table.records .rec small { display: block; font-family: var(--body); font-size: 11px; font-weight: 600; color: var(--muted); }
+table.records.honors td { white-space: normal; vertical-align: top; font-size: 14.5px; line-height: 1.4; }
+table.records.honors td.yr { white-space: nowrap; }
+table.records.honors td:nth-child(2), table.records.honors td:nth-child(3) { min-width: 210px; }
+table.records.honors td:nth-child(4) { min-width: 180px; }
+table.records.honors td:last-child { min-width: 200px; }
+table.records.honors small { display: block; font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); }
+table.records.honors td div + div { margin-top: 6px; }
 .show-more { display: block; margin: 14px auto 0; }
 .fine { font-size: 13px; margin: 12px 0 0; }
 .note-pill { font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; background: #fff3cd; color: #7a5a00; border-radius: 4px; padding: 2px 8px; white-space: nowrap; }

@@ -499,6 +499,19 @@
     more.textContent = `Show all ${YEARS.length} seasons`;
     more.addEventListener("click", () => { $$("#records .older").forEach((tr) => { tr.hidden = false; }); more.hidden = true; });
 
+    $("#honors").innerHTML = HONORS.map((h, i) => `<tr${i >= SHOWN ? ' class="older" hidden' : ""}>
+        <td class="yr">${h.year}</td>
+        <td>${esc(h.captains || "")}</td>
+        <td>${esc(h.allLeague || "")}</td>
+        <td>${[["Best of 60", h.best60], ["All-Scholastic", h.allScholastic]].filter(([, v]) => v)
+          .map(([k, v]) => `<div><small>${k}</small>${esc(v)}</div>`).join("")}</td>
+        <td>${esc(h.note || "")}</td>
+      </tr>`).join("");
+    const moreHonors = $("#honors-more");
+    moreHonors.textContent = `Show all ${HONORS.length} seasons`;
+    moreHonors.hidden = HONORS.length <= SHOWN;
+    moreHonors.addEventListener("click", () => { $$("#honors .older").forEach((tr) => { tr.hidden = false; }); moreHonors.hidden = true; });
+
     $("#timeline").innerHTML = MILESTONES.map((m) => `<div class="item"><div class="y">${esc(m.year)}</div><p>${esc(m.text)}</p></div>`).join("");
   }
 

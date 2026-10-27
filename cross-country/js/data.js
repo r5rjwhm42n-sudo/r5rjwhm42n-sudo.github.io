@@ -228,19 +228,46 @@ const MEETS = [
   {
     id: 10, date: "2026-10-14T16:00", opponent: "Peabody", mascot: "Tanners", short: "PEA",
     home: true, league: true, site: "Danvers High School", distance: "2.9 mi", tag: "Senior Night",
-    summary: "Peabody took both races on Senior Night at Danvers: 19–42 in the boys meet and 24–31 in the girls meet.",
-    boys: { result: "L", us: 42, them: 19, finishers: null },
-    girls: { result: "L", us: 31, them: 24, finishers: null },
-    notes: ["Senior Night"],
+    summary: "Peabody took both races on Senior Night at Danvers: 19–42 in the boys meet and 24–31 in the girls meet. Marcus Morais (17:37) and Grace Conklin (18:51) led the Falcons home.",
+    boys: {
+      result: "L", us: 42, them: 19,
+      finishers: [
+        f("Marcus Morais", null, "17:37"), f("Jason Rooney", null, "18:15"), f("Miles Pietal", null, "19:03"),
+        f("Levi James", null, "20:03"), f("Jakob Crandall", null, "21:49"), f("Rowan Bartlett", null, "21:52"),
+        f("Ethan Santiago", null, "23:49"), f("Miles LaMontagne", null, "23:50"), f("Samuel Lawler", null, "28:42")
+      ]
+    },
+    girls: {
+      result: "L", us: 31, them: 24,
+      finishers: [
+        f("Grace Conklin", null, "18:51"), f("Madyson Danish", null, "20:47"), f("Emily Sullivan", null, "22:12"),
+        f("Paige Sherman", null, "22:43"), f("Kylie Walsh", null, "22:48"), f("Makayla Cheung", null, "24:05")
+      ]
+    },
+    notes: ["Senior Night", "Run on the 2.9-mile home course", "Times from the team's results sheet"],
     sources: [{ label: "Boys result on Arbiter Live", url: "https://www.arbiterlive.com/Teams/Schedule/9311100?activeEntityId=5538" }, { label: "Girls result on Arbiter Live", url: "https://www.arbiterlive.com/Teams/Schedule/9311101?activeEntityId=5538" }]
   },
   {
     id: 9, date: "2026-10-21T16:00", opponent: "Masconomet", mascot: "Chieftains", short: "MAS",
-    home: false, league: true, site: "Bradley Palmer State Park", distance: null,
-    summary: "Masconomet swept the last dual meet of the regular season at Bradley Palmer State Park. The Chieftains' boys took the first five places for a perfect 15–50 score, finishing 7–0 and clinching their first Northeastern Conference title, and the Masconomet girls won 25–34.",
-    boys: { result: "L", us: 50, them: 15, finishers: null },
-    girls: { result: "L", us: 34, them: 25, finishers: null },
-    notes: ["Final dual meet of the regular season", "The Masconomet boys' first NEC title"],
+    home: false, league: true, site: "Bradley Palmer State Park", distance: "3.03 mi",
+    summary: "Masconomet swept the last dual meet of the regular season at Bradley Palmer State Park. The Chieftains' boys took the first five places for a perfect 15–50 score, finishing 7–0 and clinching their first Northeastern Conference title, and the Masconomet girls won 25–34. Marcus Morais (18:21) and Grace Conklin (19:56) were the first Falcons across the line.",
+    boys: {
+      result: "L", us: 50, them: 15,
+      finishers: [
+        f("Marcus Morais", null, "18:21"), f("Levi James", null, "18:48"), f("Miles Pietal", null, "18:52"),
+        f("Jason Rooney", null, "18:59"), f("Ethan Santiago", null, "22:58"), f("Miles LaMontagne", null, "23:54"),
+        f("Jakob Crandall", null, "24:48"), f("Colin Wilhelm", null, "25:18"), f("Anis Lmal", null, "28:51"),
+        f("Samuel Lawler", null, "29:38")
+      ]
+    },
+    girls: {
+      result: "L", us: 34, them: 25,
+      finishers: [
+        f("Grace Conklin", null, "19:56"), f("Madyson Danish", null, "21:45"), f("Emily Sullivan", null, "22:25"),
+        f("Paige Sherman", null, "23:17"), f("Makayla Cheung", null, "26:49")
+      ]
+    },
+    notes: ["Final dual meet of the regular season", "The Masconomet boys' first NEC title", "3.03-mile course", "Times from the team's results sheet"],
     sources: [{ label: "Boys result on Arbiter Live", url: "https://www.arbiterlive.com/Teams/Schedule/9311100?activeEntityId=5538" }, { label: "Girls result on Arbiter Live", url: "https://www.arbiterlive.com/Teams/Schedule/9311101?activeEntityId=5538" }, { label: "Salem News roundup, Oct. 21", url: SN + "wednesdays-area-roundup-salem-boys-soccer-claims-first-playoff-berth-in-eight-years/article_7a036899-52f9-4d42-b3e3-91e435916861.html" }]
   },
   {
@@ -276,32 +303,34 @@ const MEETS = [
    squad:  "boys" | "girls"
    grade:  "Sr." | "Jr." | "So." | "Fr." | null
    pr:     5K personal best, e.g. "17:42" (null = TBD)
+   tt:     preseason 2K time trial, from the team's results sheet
+           (null = didn't run it; ttDistance if it wasn't 2K)
    Each runner's race-by-race results are pulled automatically from the
    finishers lists in MEETS above — spell names the same in both places.
    --------------------------------------------------------------------- */
 const STATS_AS_OF = "Through 8 meets (Oct. 21, 2026)";
 
 const RUNNERS = [
-  { name: "Marcus Morais", squad: "boys", grade: "Sr.", captain: false, pr: "18:00.4" },
-  { name: "Jason Rooney", squad: "boys", grade: "Jr.", captain: true, pr: "19:21.4" },
-  { name: "Miles Pietal", squad: "boys", grade: "Jr.", captain: false, pr: "19:37.1" },
-  { name: "Levi James", squad: "boys", grade: "So.", captain: false, pr: "19:20.8" },
-  { name: "Jakob Crandall", squad: "boys", grade: "Sr.", captain: false, pr: null },
-  { name: "Rowan Bartlett", squad: "boys", grade: "Fr.", captain: false, pr: null },
-  { name: "Miles LaMontagne", squad: "boys", grade: "So.", captain: false, pr: null },
-  { name: "Ethan Santiago", squad: "boys", grade: "Fr.", captain: false, pr: null },
-  { name: "Colin Wilhelm", squad: "boys", grade: "Jr.", captain: false, pr: null },
-  { name: "Anis Lmal", squad: "boys", grade: "So.", captain: false, pr: null },
-  { name: "Samuel Lawler", squad: "boys", grade: "So.", captain: false, pr: null },
+  { name: "Marcus Morais", squad: "boys", grade: "Sr.", captain: false, pr: "18:00.4", tt: "6:57" },
+  { name: "Jason Rooney", squad: "boys", grade: "Jr.", captain: true, pr: "19:21.4", tt: null },
+  { name: "Miles Pietal", squad: "boys", grade: "Jr.", captain: false, pr: "19:37.1", tt: "7:19" },
+  { name: "Levi James", squad: "boys", grade: "So.", captain: false, pr: "19:20.8", tt: "7:29" },
+  { name: "Jakob Crandall", squad: "boys", grade: "Sr.", captain: false, pr: null, tt: "10:37" },
+  { name: "Rowan Bartlett", squad: "boys", grade: "Fr.", captain: false, pr: null, tt: "9:19" },
+  { name: "Miles LaMontagne", squad: "boys", grade: "So.", captain: false, pr: null, tt: null },
+  { name: "Ethan Santiago", squad: "boys", grade: "Fr.", captain: false, pr: null, tt: "9:25" },
+  { name: "Colin Wilhelm", squad: "boys", grade: "Jr.", captain: false, pr: null, tt: "9:36" },
+  { name: "Anis Lmal", squad: "boys", grade: "So.", captain: false, pr: null, tt: null },
+  { name: "Samuel Lawler", squad: "boys", grade: "So.", captain: false, pr: null, tt: "4:25", ttDistance: "800 m" },
 
-  { name: "Grace Conklin", squad: "girls", grade: "Sr.", captain: true, pr: "19:46.7" },
-  { name: "Emily Sullivan", squad: "girls", grade: "Sr.", captain: true, pr: "20:46.8" },
-  { name: "Madyson Danish", squad: "girls", grade: "Jr.", captain: false, pr: "21:20.8" },
-  { name: "Paige Sherman", squad: "girls", grade: "Jr.", captain: false, pr: null },
-  { name: "Kylie Walsh", squad: "girls", grade: "So.", captain: false, pr: null },
-  { name: "Makayla Cheung", squad: "girls", grade: "So.", captain: false, pr: null },
-  { name: "Norah Wright", squad: "girls", grade: "So.", captain: false, pr: null },
-  { name: "Yara Azzazi", squad: "girls", grade: null, captain: false, pr: null }
+  { name: "Grace Conklin", squad: "girls", grade: "Sr.", captain: true, pr: "19:46.7", tt: "7:38" },
+  { name: "Emily Sullivan", squad: "girls", grade: "Sr.", captain: true, pr: "20:46.8", tt: "8:53" },
+  { name: "Madyson Danish", squad: "girls", grade: "Jr.", captain: false, pr: "21:20.8", tt: "8:28" },
+  { name: "Paige Sherman", squad: "girls", grade: "Jr.", captain: false, pr: null, tt: "9:06" },
+  { name: "Kylie Walsh", squad: "girls", grade: "So.", captain: false, pr: null, tt: "10:28" },
+  { name: "Makayla Cheung", squad: "girls", grade: "So.", captain: false, pr: null, tt: "11:41" },
+  { name: "Norah Wright", squad: "girls", grade: "So.", captain: false, pr: null, tt: "10:29" },
+  { name: "Yara Azzazi", squad: "girls", grade: null, captain: false, pr: null, tt: "12:26" }
 ];
 
 /* ---------------------------------------------------------------------
