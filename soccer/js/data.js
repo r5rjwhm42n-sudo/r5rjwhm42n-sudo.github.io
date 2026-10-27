@@ -346,7 +346,20 @@ const TEAMS = {
           { label: "Danvers Girls Soccer on X", url: X + "2113068827408056577" },
           { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/girls/match/danvers-vs-masconomet-regional-boxford/10-21-2026/?c=b30f279d-1ca6-4537-9dd2-26ca53204cbf" }
         ] },
-      { id: 17, date: "2026-10-26T18:30", opponent: "Peabody", mascot: "Tanners", home: true, league: true, site: HOME, result: null, notes: [] },
+      { id: 17, date: "2026-10-26T18:30", opponent: "Peabody", mascot: "Tanners", home: true, league: true, site: HOME,
+        result: "L", us: 0, them: 1,
+        halves: null,
+        summary: "On Senior Night for Emma Sutherland, Taylor Landry and Ari Fajardo, Peabody scored the only goal to win 1–0 and split the season series.",
+        scorers: [], assists: [],
+        notes: [
+          "Senior Night for Emma Sutherland, Taylor Landry and Ari Fajardo",
+          "Second meeting — Danvers won 2–1 at Peabody on Sept. 28"
+        ],
+        replay: GIRLS_REPLAY + "QnJvYWRjYXN0NDY5NTc2NA%3D%3D",
+        sources: [
+          { label: "Danvers Girls Soccer on X", url: X + "2114354518167343340" },
+          { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/girls/match/danvers-vs-peabody-veterans-memorial/10-26-2026/?c=9b4b43b7-c2bb-4c44-9a98-e3cee50db060" }
+        ] },
       { id: 18, date: "2026-10-28T16:30", opponent: "Gloucester", mascot: "Fishermen", home: false, league: true, site: "Newell Stadium, Gloucester", result: null, notes: [],
         sources: [{ label: "Watch live on NFHS Network", url: "https://www.nfhsnetwork.com/events/gloucester-high-school-gloucester-ma/gamf6b6ca0e67" }] },
 
@@ -707,8 +720,16 @@ const TEAMS = {
         scorers: [], assists: [],
         notes: ["Second meeting — Masconomet also won 7–0 on Sept. 21"],
         sources: [{ label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/match/danvers-vs-masconomet-regional-boxford/10-21-2026/?c=72a09f70-101c-453e-998a-ab39c39bedac" }] },
-      { id: 16, date: "2026-10-26T16:00", opponent: "Peabody", mascot: "Tanners", home: false, league: true, site: "Peabody Veterans Memorial HS, Peabody", result: null, notes: [],
-      sources: [{ label: "Livestream on Hudl", url: BOYS_REPLAY + "QnJvYWRjYXN0NDMxMzIyNA%3D%3D" }] },
+      { id: 16, date: "2026-10-26T16:00", opponent: "Peabody", mascot: "Tanners", home: false, league: true, site: "Peabody Veterans Memorial HS, Peabody",
+        result: "T", us: 0, them: 0,
+        halves: { us: [0, 0], them: [0, 0] },
+        summary: "Danvers held Peabody scoreless on the road for a 0–0 draw, a month after the Tanners won 3–0 in Danvers.",
+        scorers: [], assists: [],
+        notes: ["Second meeting — Peabody won 3–0 on Sept. 28"],
+        sources: [
+          { label: "Livestream on Hudl", url: BOYS_REPLAY + "QnJvYWRjYXN0NDMxMzIyNA%3D%3D" },
+          { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/match/danvers-vs-peabody-veterans-memorial/10-26-2026/?c=8e9d8f0b-8683-43f8-aee6-928d7f9c9b7f" }
+        ] },
       { id: 17, date: "2026-10-28T18:30", opponent: "Gloucester", mascot: "Fishermen", home: true, league: true, site: HOME, result: null, notes: [] },
       { id: 18, date: "2026-10-30T18:30", opponent: "Essex Tech", mascot: "Hawks", home: true, league: false, site: MORSE, result: null, notes: [] }
     ],

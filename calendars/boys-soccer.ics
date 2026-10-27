@@ -245,10 +245,12 @@ UID:boys-soccer-16@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261026T160000
 DURATION:PT2H
-SUMMARY:Danvers Boys Soccer at Peabody
+SUMMARY:Danvers Boys Soccer at Peabody (T 0–0)
 LOCATION:Peabody Veterans Memorial HS\, Peabody
-DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
- alconsathletics.org/soccer/schedule.html?team=boys
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 0\, Peabody 0\nDanvers 
+ held Peabody scoreless on the road for a 0–0 draw\, a month after the Ta
+ nners won 3–0 in Danvers.\nSchedule and results: https://danversfalconsa
+ thletics.org/soccer/schedule.html?team=boys
 URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
 END:VEVENT
 BEGIN:VEVENT

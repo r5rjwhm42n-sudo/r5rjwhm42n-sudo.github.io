@@ -312,10 +312,13 @@ UID:girls-soccer-17@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261026T183000
 DURATION:PT2H
-SUMMARY:Danvers Girls Soccer vs Peabody
+SUMMARY:Danvers Girls Soccer vs Peabody (L 0–1)
 LOCATION:Dr. Deering Stadium\, Danvers
-DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
- alconsathletics.org/soccer/schedule.html?team=girls
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 0\, Peabody 1\nOn Senio
+ r Night for Emma Sutherland\, Taylor Landry and Ari Fajardo\, Peabody scor
+ ed the only goal to win 1–0 and split the season series.\nSchedule and r
+ esults: https://danversfalconsathletics.org/soccer/schedule.html?team=girl
+ s
 URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
 END:VEVENT
 BEGIN:VEVENT

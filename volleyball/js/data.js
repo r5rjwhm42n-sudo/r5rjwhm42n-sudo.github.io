@@ -430,9 +430,18 @@ const SCHEDULE = [
       "116 digs as a team"
     ],
     sources: [{ label: "MaxPreps box score", url: MP + "danvers-vs-swampscott/10-21-2026/?c=5ec3bd19-91ce-48d1-880c-a8c1dc25bff9" }] },
-  { id: 18, date: "2026-10-26T17:15", opponent: "Peabody", mascot: "Tanners", home: true, league: true, site: HOME, result: null,
-    notes: ["Second meeting — Danvers won 3–1 on Sept. 25"],
-    sources: [{ label: "Watch live on NFHS Network", url: "https://www.nfhsnetwork.com/events/danvers-high-school-danvers-ma/gam524c066736" }] },
+  { id: 18, date: "2026-10-26T17:15", opponent: "Peabody", mascot: "Tanners", home: true, league: true, site: HOME,
+    result: "W", us: 3, them: 0,
+    sets: [[25, 11], [25, 12], [25, 16]],
+    summary: "Danvers snapped a three-match skid with a sweep of Peabody, 25–11, 25–12, 25–16. The Falcons served 21 aces and had 24 kills, seven of them from Gabrielle Lindeman.",
+    notes: [
+      "Second meeting — Danvers won 3–1 on Sept. 25",
+      "21 aces as a team"
+    ],
+    sources: [
+      { label: "MaxPreps box score", url: MP + "danvers-vs-peabody-veterans-memorial/10-26-2026/?c=d312a82e-e647-466b-821d-7bd2ccbdf098" },
+      { label: "Match replay on NFHS Network", url: "https://www.nfhsnetwork.com/events/danvers-high-school-danvers-ma/gam524c066736" }
+    ] },
   { id: 19, date: "2026-10-28T17:15", opponent: "Masconomet", mascot: "Chieftains", home: true, league: true, site: HOME, result: null,
     notes: ["Second meeting — Danvers won 3–2 on Sept. 30"],
     sources: [{ label: "Watch live on NFHS Network", url: "https://www.nfhsnetwork.com/events/danvers-high-school-danvers-ma/gam76f9d68549" }] },
