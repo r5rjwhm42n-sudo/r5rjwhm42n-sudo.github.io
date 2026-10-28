@@ -312,7 +312,7 @@ const STATS_AS_OF = "Through 8 meets (Oct. 21, 2026)";
 
 const RUNNERS = [
   { name: "Marcus Morais", squad: "boys", grade: "Sr.", captain: false, pr: "18:00.4", tt: "6:57" },
-  { name: "Jason Rooney", squad: "boys", grade: "Jr.", captain: true, pr: "19:21.4", tt: null },
+  { name: "Jason Rooney", squad: "boys", grade: "Sr.", captain: true, pr: "19:21.4", tt: null },
   { name: "Miles Pietal", squad: "boys", grade: "Jr.", captain: false, pr: "19:37.1", tt: "7:19" },
   { name: "Levi James", squad: "boys", grade: "So.", captain: false, pr: "19:20.8", tt: "7:29" },
   { name: "Jakob Crandall", squad: "boys", grade: "Sr.", captain: false, pr: null, tt: "10:37" },

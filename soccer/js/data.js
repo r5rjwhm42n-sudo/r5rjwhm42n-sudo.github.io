@@ -694,8 +694,8 @@ const TEAMS = {
       { id: 13, date: "2026-10-16T16:00", opponent: "Gloucester", mascot: "Fishermen", home: false, league: false, site: "Newell Stadium, Gloucester",
         result: "L", us: 1, them: 2,
         halves: { us: [1, 0], them: [0, 2] },
-        summary: "The Falcons led 1–0 at halftime, but Gloucester tied it on a shot that deflected off a Danvers defender and won it about five minutes from the end off a corner kick. \"Danvers is a nice young team, they put up a good fight,\" Gloucester coach Armando Marnoto said.",
-        scorers: [], assists: [],
+        summary: "Matthew McCrea scored to give the Falcons a 1–0 halftime lead, but Gloucester tied it on a shot that deflected off a Danvers defender and won it about five minutes from the end off a corner kick. \"Danvers is a nice young team, they put up a good fight,\" Gloucester coach Armando Marnoto said.",
+        scorers: [["Matthew McCrea", 1]], assists: [],
         notes: ["The first of two meetings with Gloucester; the Oct. 28 game is the NEC one"],
         sources: [
           { label: "Area roundup, Oct. 18", url: null },
