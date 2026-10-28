@@ -24,7 +24,7 @@ const TEAM = {
   stadium: "DHS Field House",
   /* MIAA power ranking (published every Tuesday and Friday in season) —
      update rank, of and asOf from miaa.net/power-rankings (Volleyball · Fall · Division 3) */
-  ranking: { rank: 20, of: 68, asOf: "Oct. 23", url: "https://www.miaa.net/power-rankings" },
+  ranking: { rank: 21, of: 68, asOf: "Oct. 27", url: "https://www.miaa.net/power-rankings" },
   address: "60 Cabot Road, Danvers, MA 01923",
   links: {
     hudl: HUDL_TEAM,
@@ -447,7 +447,9 @@ const SCHEDULE = [
     sources: [{ label: "Watch live on NFHS Network", url: "https://www.nfhsnetwork.com/events/danvers-high-school-danvers-ma/gam76f9d68549" }] },
   { id: 20, date: "2026-10-29T17:15", opponent: "Salem", mascot: "Witches", home: true, league: true, site: HOME, result: null,
     notes: ["Regular-season finale"],
-    sources: [{ label: "Watch live on NFHS Network", url: "https://www.nfhsnetwork.com/events/danvers-high-school-danvers-ma/gam3e8529ea45" }] }
+    sources: [{ label: "Watch live on NFHS Network", url: "https://www.nfhsnetwork.com/events/danvers-high-school-danvers-ma/gam3e8529ea45" }] },
+  { id: 104, date: "2026-10-30T16:00", opponent: "North Andover", mascot: "Scarlet Knights", home: true, league: false, site: HOME,
+    scrimmage: true, result: null, notes: [] }
 ];
 
 /* ---------------------------------------------------------------------

@@ -65,7 +65,7 @@ const TEAMS = {
     label: "Girls Soccer",
     short: "Girls",
     division: "MIAA Division 2",
-    ranking: { rank: 15, of: 63, asOf: "Oct. 23" },   // MIAA power ranking within the division
+    ranking: { rank: 17, of: 63, asOf: "Oct. 27" },   // MIAA power ranking within the division
     headCoach: "Jimmy Hinchion",
     coachNote: "28th season · 425th career win on Oct. 21, 2026",
     assistants: ["Ashley Gawrys", "Shawn Hills", "Taylor Orlando", "Emma Hatch (JV)"],
@@ -553,7 +553,7 @@ const TEAMS = {
     label: "Boys Soccer",
     short: "Boys",
     division: "MIAA Division 2",
-    ranking: { rank: 60, of: 61, asOf: "Oct. 23" },   // MIAA power ranking within the division
+    ranking: { rank: 60, of: 61, asOf: "Oct. 27" },   // MIAA power ranking within the division
     headCoach: "Sam Perel",
     coachNote: "3rd season · 17–16–6 entering 2026",
     assistants: ["Nathan Dos Santos", "Jamie Kidney (JV)"],

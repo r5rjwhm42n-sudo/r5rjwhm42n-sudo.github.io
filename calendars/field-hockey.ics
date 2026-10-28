@@ -291,10 +291,14 @@ UID:field-hockey-17@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261027T173000
 DURATION:PT2H
-SUMMARY:Danvers Field Hockey vs Bishop Fenwick
+SUMMARY:Danvers Field Hockey vs Bishop Fenwick (L 1–2)
 LOCATION:Dr. Deering Stadium\, Danvers
-DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
- cs.org/field-hockey/schedule.html
+DESCRIPTION:Non-league\nFinal: Danvers 1\, Bishop Fenwick 2\nThe Falcons le
+ d 1–0 at halftime at Deering Stadium\, but Fenwick tied it late in the t
+ hird quarter and Reese Robillard scored the winner with 17 seconds left. A
+  month earlier Danvers had tied the Crusaders with a goal at the final whi
+ stle.\nSchedule and results: https://danversfalconsathletics.org/field-hoc
+ key/schedule.html
 URL:https://danversfalconsathletics.org/field-hockey/schedule.html
 END:VEVENT
 BEGIN:VEVENT

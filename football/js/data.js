@@ -16,7 +16,7 @@ const TEAM = {
   location: "Danvers, MA",
   conference: "Northeastern Conference",
   division: "MIAA Division 4",
-  ranking: "No. 2 in the MIAA Division 4 power rankings (Oct. 23)",   // null hides it
+  ranking: "No. 3 in the MIAA Division 4 power rankings (Oct. 27)",   // null hides it
   headCoach: "Ryan Nolan",
   assistants: ["Bryan Ibbitson", "Jon Babula", "Angel Adamas", "Tom Walfield", "Kyle Brennan",
                "Andrew Barton", "Sean Dunn", "Jeff Smith", "Tom Ladd"],

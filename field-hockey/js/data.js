@@ -25,7 +25,7 @@ const TEAM = {
   address: "60 Cabot Road, Danvers, MA 01923",
   /* MIAA power ranking (published every Tuesday and Friday in season) —
      update rank, of and asOf from miaa.net/power-rankings (Field Hockey · Girls · Division 3) */
-  ranking: { rank: 31, of: 54, asOf: "Oct. 23", url: "https://www.miaa.net/power-rankings" },
+  ranking: { rank: 29, of: 54, asOf: "Oct. 27", url: "https://www.miaa.net/power-rankings" },
   links: {
     hudl: HUDL_TEAM,
     hudlVideo: HUDL_TEAM + "/video",
@@ -305,8 +305,23 @@ const SCHEDULE = [
     scorers: [], assists: [],
     notes: ["Second game in two days"],
     sources: [{ label: "MaxPreps box score", url: MP + "danvers-vs-st-marys-lynn/10-21-2026/?c=28677cba-f670-4b16-89da-13abff0da084" }] },
-  { id: 17, date: "2026-10-27T17:30", opponent: "Bishop Fenwick", mascot: "Crusaders", home: true, league: false, site: HOME, result: null,
-    notes: ["Second meeting — the teams tied 2–2 on Sept. 29"] },
+  { id: 17, date: "2026-10-27T17:30", opponent: "Bishop Fenwick", mascot: "Crusaders", home: true, league: false, site: HOME,
+    result: "L", us: 1, them: 2,
+    quarters: null,
+    halftime: [1, 0],
+    summary: "The Falcons led 1–0 at halftime at Deering Stadium, but Fenwick tied it late in the third quarter and Reese Robillard scored the winner with 17 seconds left. A month earlier Danvers had tied the Crusaders with a goal at the final whistle.",
+    scorers: [], assists: [],
+    plays: [
+      { when: "3rd · 5:00 left", play: "Bishop Fenwick goal", score: "1–1" },
+      { when: "4th · 0:17 left", play: "Reese Robillard (Bishop Fenwick)", score: "1–2" }
+    ],
+    notes: ["Second meeting — the teams tied 2–2 on Sept. 29", "Fenwick improved to 11–3–3"],
+    video: HUDL_TEAM + "/watch?b=QnJvYWRjYXN0NDcwMjg5Mw%3D%3D",
+    sources: [
+      { label: "Salem News roundup, Oct. 27", url: "https://www.salemnews.com/sports/tuesdays-area-roundup-robillards-last-second-tally-gives-fenwick-field-hockey-dramatic-win/article_2afefd52-4443-4517-874b-31d073f65529.html" },
+      { label: "Danvers Athletics on X", url: "https://x.com/WeAreDanvers/status/2115215456474960112" },
+      { label: "MaxPreps box score", url: MP + "bishop-fenwick-peabody-vs-danvers/10-27-2026/?c=c30b03d9-cdb3-42ed-8732-44330a625f55" }
+    ] },
   { id: 18, date: "2026-10-30T16:00", opponent: "Masconomet", mascot: "Chieftains", home: false, league: false, site: "Boxford Commons turf field, Boxford", result: null,
     notes: ["Regular-season finale", "Second meeting — Masconomet won 3–1 on Oct. 6"] }
 ];

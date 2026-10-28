@@ -342,4 +342,15 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
  alconsathletics.org/volleyball/schedule.html
 URL:https://danversfalconsathletics.org/volleyball/schedule.html
 END:VEVENT
+BEGIN:VEVENT
+UID:volleyball-104@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261030T160000
+DURATION:PT2H
+SUMMARY:Danvers Volleyball vs North Andover (scrimmage)
+LOCATION:DHS Field House\, Danvers
+DESCRIPTION:Scrimmage\nSchedule and results: https://danversfalconsathletic
+ s.org/volleyball/schedule.html
+URL:https://danversfalconsathletics.org/volleyball/schedule.html
+END:VEVENT
 END:VCALENDAR
