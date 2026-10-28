@@ -212,9 +212,17 @@ const SCHEDULE = [
     home: true, league: false, site: HOME_FIELD,
     result: "W", us: 41, them: 0,
     half: [35, 0],
-    summary: "Danvers celebrated Senior Night with its third straight shutout. Jack Houston scored three touchdowns, one on a 32-yard run, and captain Nick Xerras returned an interception 41 yards for another as the Falcons built a 14–0 lead in the first quarter and a 35–0 lead at halftime.",
+    summary: "Danvers celebrated Senior Night with its third straight shutout. Jack Houston scored three touchdowns, a 32-yard run and two catches from Nate Wise, Wise ran one in from a yard out, and captain Nick Xerras returned an interception 41 yards for another as the Falcons built a 14–0 lead in the first quarter and a 35–0 lead at halftime.",
+    scoring: [
+      { q: "—", play: "Jack Houston 32 run", score: null },
+      { q: "—", play: "Nate Wise pass to Jack Houston", score: null },
+      { q: "—", play: "Nate Wise pass to Jack Houston", score: null },
+      { q: "—", play: "Nate Wise 1 run", score: null },
+      { q: "—", play: "Nick Xerras 41 interception return", score: null }
+    ],
     performers: [
-      { name: "Jack Houston", line: "3 TD, including a 32-yard run" },
+      { name: "Jack Houston", line: "32-yd TD run · 2 TD catches" },
+      { name: "Nate Wise", line: "2 TD passes to Houston · 1-yd TD run" },
       { name: "Nick Xerras", line: "41-yard interception return for a TD" }
     ],
     notes: [
@@ -223,6 +231,7 @@ const SCHEDULE = [
     ],
     sources: [
       { label: "Salem News game story", url: "https://www.salemnews.com/sports/unbeaten-danvers-football-pitches-third-straight-shutout-hammers-salem/article_c6f8caf9-e058-4b62-8e4b-de3e94a209ac.html" },
+      { label: "Boston Globe roundup", url: "https://www.bostonglobe.com/2026/10/23/sports/eastern-mass-football-st-johns-shrewsbury/" },
       { label: "Full-game replay on Hudl", url: REPLAY + "QnJvYWRjYXN0NDUwNzQ3NQ%3D%3D" },
       { label: "Danvers Falcons final score on X", url: "https://x.com/WeAreDanvers/status/2113792959753900212" },
       { label: "Danvers Falcons halftime update on X", url: "https://x.com/WeAreDanvers/status/2113776620670517517" },
@@ -247,29 +256,31 @@ const SCHEDULE = [
           the first "<number> yds" in each line, so write rushing yards first
           and use "yards" (not "yds") for passing and receiving.
 
-   NOTE: No official stat sheet is published for 2026 yet. Everything
-   below was compiled from newspaper box scores and recaps, so totals are
-   PARTIAL. Replace with the team's official numbers when you get them.
+   NOTE: No official stat sheet is published for 2026 yet. Season yardage
+   and passing totals for Fultz, Houston, Kaciqi and Wise are from the
+   Boston Globe notebook of Oct. 26 (through six games); everything else
+   was compiled from newspaper box scores and recaps, so it is PARTIAL.
+   Replace with the team's official numbers when you get them.
    --------------------------------------------------------------------- */
-const STATS_AS_OF = "Through 5 games (Oct. 16, 2026)";
+const STATS_AS_OF = "Through 6 games (Oct. 23, 2026)";
 
 const PLAYERS = [
   { name: "Zach Fultz", num: null, pos: ["RB", "DB"], grade: "Jr.", captain: false,
-    stats: [["Rush Yds", 582], ["Rush TD", 10], ["Points", 60]],
+    stats: [["Rush Yds", 653], ["Rush TD", 10], ["Points", 60]],
     log: { 1: "14 car, 121 yds, 23-yd TD run", 2: "56 rushing yds, TD runs of 1 and 2 yards", 3: "101 rushing yds, 3 TD",
            5: "125 rushing yds, 2 TD", 6: "15 car, 179 yds, TD runs of 1 and 4 yards" } },
   { name: "Jack Houston", num: null, pos: ["RB", "LB"], grade: "Sr.", captain: true,
-    stats: [["Rush Yds", 379], ["Rush TD", 3], ["Rec TD", 3], ["Points", 36]],
+    stats: [["Rush Yds", 588], ["Rush TD", 4], ["Rec Yds", 231], ["Rec TD", 5], ["Points", 54]],
     log: { 1: "16 car, 106 yds", 2: "79 rushing yds · 2 catches for 45 yards", 3: "135 rushing yds, 2 TD",
            5: "TD catches of 15 and 11 yards from Nate Wise", 6: "59 rushing yds, 2-yd TD run · 11-yard TD catch",
-           7: "3 TD, including a 32-yard run" } },
+           7: "32-yd TD run · 2 TD catches from Nate Wise" } },
   { name: "Evan Kaciqi", num: null, pos: ["RB", "DB"], grade: "So.", captain: false,
-    stats: [["Rush Yds", 225], ["Rush TD", 2]],
+    stats: [["Rush Yds", 295], ["Rush TD", 2]],
     log: { 1: "21 car, 114 yds, 1-yd TD run (varsity debut)", 6: "12 car, 111 yds, 25-yd TD run" } },
   { name: "Nate Wise", num: null, pos: ["QB"], grade: "Sr.", captain: true,
-    stats: [["Pass Yds", 192], ["Pass TD", 3], ["Rush Yds", 13]],
+    stats: [["Comp/Att", "20/29"], ["Pass Yds", 299], ["Pass TD", 5], ["Rush TD", 1], ["Rush Yds", 13]],
     log: { 1: "3 car, 13 yds · 2-of-4 passing for 29 yards", 5: "120 passing yards (career high), 2 TD",
-           6: "5-of-6 passing for 43 yards, TD" } },
+           6: "5-of-6 passing for 43 yards, TD", 7: "2 TD passes to Jack Houston · 1-yd TD run" } },
   { name: "Colby Medeiros", num: 11, pos: ["K"], grade: "Sr.", captain: true,
     stats: [["FG Made", 4], ["Long FG", 40], ["INT", 1]],
     log: { 1: "19-yd FG · extra point", 2: "35-yd FG · onside kick to open the 2nd half", 3: "36-yd FG · interception",
@@ -279,7 +290,7 @@ const PLAYERS = [
     log: { 1: "1 catch for 8 yards · lead blocker for three 100-yard rushers", 5: "1-yd TD run, his first career touchdown",
            6: "Fumble recovery" } },
   { name: "Nick Xerras", num: 10, pos: ["DE"], grade: "Sr.", captain: true,
-    stats: [["Blocked Punts", 1]],
+    stats: [["Blocked Punts", 1], ["INT", 1], ["Def TD", 1]],
     log: { 2: "Blocked punt in the 4th quarter", 6: "Pressure off the edge all night", 7: "41-yard interception return for a TD" } },
   { name: "Hunter DeDominicis", num: 8, pos: ["DE", "OL"], grade: null, captain: true,
     stats: [["Fum Rec", 1]],

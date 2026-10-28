@@ -78,7 +78,7 @@ const TEAMS = {
       recordBook: "https://docs.google.com/spreadsheets/d/1aEta7OUlu2jtN1_9Fnpnbcnx-u_ATxXd1bkvDhLocrY/edit?gid=1756060361"
     },
 
-    statsAsOf: "Through 16 games (Oct. 21, 2026)",
+    statsAsOf: "Through 17 games (Oct. 26, 2026)",
 
     schedule: [
       /* Scrimmages — listed on the school's schedule, not counted in the record */
@@ -566,7 +566,7 @@ const TEAMS = {
       recordBook: "https://docs.google.com/spreadsheets/d/18a7tVEOYReMH80QCl6_rTqgiZfDyWE195MJkjmbHhLQ/edit?gid=1756060361"
     },
 
-    statsAsOf: "Through 15 games (Oct. 21, 2026)",
+    statsAsOf: "Through 16 games (Oct. 26, 2026)",
 
     schedule: [
       /* Scrimmages — listed on the school's schedule, not counted in the record */

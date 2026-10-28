@@ -309,8 +309,8 @@ const SCHEDULE = [
     result: "L", us: 1, them: 2,
     quarters: null,
     halftime: [1, 0],
-    summary: "The Falcons led 1–0 at halftime at Deering Stadium, but Fenwick tied it late in the third quarter and Reese Robillard scored the winner with 17 seconds left. A month earlier Danvers had tied the Crusaders with a goal at the final whistle.",
-    scorers: [], assists: [],
+    summary: "Kyla Moroney gave the Falcons a 1–0 halftime lead at Deering Stadium, but Fenwick tied it late in the third quarter and Reese Robillard scored the winner with 17 seconds left. A month earlier Danvers had tied the Crusaders with a goal at the final whistle.",
+    scorers: [["Kyla Moroney", 1]], assists: [],
     plays: [
       { when: "3rd · 5:00 left", play: "Bishop Fenwick goal", score: "1–1" },
       { when: "4th · 0:17 left", play: "Reese Robillard (Bishop Fenwick)", score: "1–2" }
@@ -337,7 +337,7 @@ const SCHEDULE = [
            it out and the site adds them up from the game recaps above.
    Names in the game lists above must match these names exactly.
    --------------------------------------------------------------------- */
-const STATS_AS_OF = "Through 16 games (Oct. 21, 2026)";
+const STATS_AS_OF = "Through 17 games (Oct. 27, 2026)";
 
 const PLAYERS = [
   { name: "Ellie Barnes", num: 0, pos: ["GK"], grade: "Fr.", captain: false },
