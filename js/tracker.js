@@ -4,20 +4,22 @@
    worked out from the live record in its data.js, and the key dates.
 
    To update: change the rankings in each team's data.js (TEAM.ranking)
-   and the dates below. Once brackets are out, add  bracket: { seed,
-   opponent, date, home }  to a team here and its card shows the matchup.
+   and the dates below. Once the MIAA posts a team's bracket, fill in
+   `bracket` in that team's data.js: the card leaves the grid and the
+   section turns into the State Tournament, with a tab per team showing
+   its whole division bracket (drawn by bracket.js) and Danvers' games.
    ===================================================================== */
 (function () {
   const ROAD = [
     { sport: "football", name: "Football", href: "football/", division: "Division 4", of: 36, cut: 16,
-      rule: "Top 16 make the bracket", ruleOnly: true,
+      ruleOnly: true,
       dates: [["Ranking cutoff", "2026-10-31"], ["Brackets out", "2026-11-01T13:00"], ["Playoffs begin", "2026-11-05", "From"]] },
     { sport: "soccer", squad: "girls", name: "Girls Soccer", href: "soccer/?team=girls", of: 63, cut: 32,
-      dates: [["Ranking cutoff", "2026-11-03"], ["Brackets out", "2026-11-05"], ["First round", "2026-11-06"], ["State finals", "2026-11-20", "Nov. 20–21"]] },
+      dates: [["Ranking cutoff", "2026-11-03"], ["Brackets out", "2026-11-05T13:00"], ["First round", "2026-11-06"], ["State finals", "2026-11-20", "Nov. 20–21"]] },
     { sport: "volleyball", name: "Volleyball", href: "volleyball/", of: 68, cut: 32,
-      dates: [["Ranking cutoff", "2026-11-01"], ["Brackets out", "2026-11-03"], ["First round", "2026-11-05"], ["State finals", "2026-11-20", "Nov. 20–21"]] },
+      dates: [["Ranking cutoff", "2026-11-01"], ["Brackets out", "2026-11-03T13:00"], ["First round", "2026-11-05"], ["State finals", "2026-11-20", "Nov. 20–21"]] },
     { sport: "field-hockey", name: "Field Hockey", href: "field-hockey/", of: 54, cut: 32,
-      dates: [["Ranking cutoff", "2026-11-01"], ["Brackets out", "2026-11-03"], ["First round", "2026-11-05"], ["State finals", "2026-11-20", "Nov. 20–21"]] },
+      dates: [["Ranking cutoff", "2026-11-01"], ["Brackets out", "2026-11-03T11:00"], ["First round", "2026-11-05"], ["State finals", "2026-11-20", "Nov. 20–21"]] },
     { sport: "cross-country", name: "Cross Country", href: "cross-country/", path: true,
       dates: [["NEC Championship", "2026-10-31T10:00", null, "Stage Fort Park, Gloucester", "NEC"], ["Division 2 meet", "2026-11-14", null, "Wrentham Developmental Center", "Div. 2"],
               ["All-State meet", "2026-11-21T14:00", null, "Devens", "State"]] },
@@ -25,8 +27,8 @@
         detail: "The top three teams went on to the state final" },
       dates: [["D2 North sectional", "2026-10-20", null, "Bradford Country Club", "Sectional"], ["NEC Open", "2026-10-21", null, "Tedesco Country Club", "NEC Open"]] }
   ];
-  const REVEALS = [["Football brackets", "2026-11-01T13:00"], ["Volleyball & field hockey brackets", "2026-11-03T12:00"], ["Soccer brackets", "2026-11-05T12:00"]];
-  const RULE = "MIAA power rankings. In soccer, volleyball and field hockey the top 32 in each division qualify, plus any team at .500 or better (ties count as half a win). Football takes the top 16.";
+  const REVEALS = [["Football brackets", "2026-11-01T13:00"], ["Field hockey brackets", "2026-11-03T11:00"], ["Volleyball brackets", "2026-11-03T13:00"], ["Soccer brackets", "2026-11-05T13:00"]];
+  const RULE = "MIAA power rankings. In soccer, volleyball and field hockey the top 32 in each division qualify, and teams below that at .500 or better (ties count as half a win) get a play-in game. Football takes the top 16 teams with at least three wins.";
 
   const $ = (s, r = document) => r.querySelector(s);
   const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -39,6 +41,8 @@
     const box = $("#road");
     box.dataset.built = "1";
 
+    const brackets = [];   // teams whose bracket is out, shown as tabs instead of cards
+    let ranked = false;
     const cards = ROAD.map((t, i) => {
       const d = H.raw[t.sport];
       if (!d) return "";
@@ -76,10 +80,12 @@
         t._pct = pct.toFixed(3).replace(/^0/, "");
         t._left = left;
       }
-      if (t.bracket) {
-        status = `No. ${t.bracket.seed} seed`; cls = "in";
-        detail = `${t.bracket.home ? "vs" : "at"} ${t.bracket.opponent}${t.bracket.date ? ` · ${day(t.bracket.date)}` : ""}`;
-      }
+      /* once the bracket is out the team moves to the bracket tabs (or its season is over) */
+      const B = !t.path && team?.bracket;
+      if (B?.seeds?.length) {
+        if (DFABracket.seedOf(B)) { brackets.push({ t, B, division, key: t.squad ? `${t.squad}-${t.sport}` : t.sport }); return ""; }
+        status = "Season complete"; cls = "done"; detail = `Finished ${t._rec}`;
+      } else if (!t.path) ranked = true;
 
       const nextIdx = t.dates.findIndex(([, iso]) => new Date(iso.length === 10 ? `${iso}T23:59` : iso) >= Date.now());
       const dates = t.dates.map(([k, iso, label, where], j) => {
@@ -118,12 +124,51 @@
     const asOf = H.raw["field-hockey"]?.TEAM?.ranking?.asOf || "Oct. 20";
     const next = REVEALS.find(([, iso]) => new Date(iso) > Date.now());
     const reveal = next && `${next[0]} come out ${new Date(next[1]).toLocaleString("en-US", { weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit" }).replace(":00", "").replace(/, (\d+ [AP]M)$/, " at $1")}`;
+    const tour = brackets.length > 0;
+    const rest = cards.filter(Boolean);
     box.innerHTML = `<div class="wrap">
-      <div class="section-head"><h2>Road to the State Tournament</h2><span class="sub">${reveal ? `${esc(reveal)}` : "Where each team stands in the MIAA power rankings"}</span></div>
-      <div class="rd-grid">${cards.join("")}</div>
-      <p class="credit">Rankings as of ${esc(asOf)} from the ${RULE}</p>
+      <div class="section-head"><h2>${tour ? "State Tournament" : "Road to the State Tournament"}</h2><span class="sub">${reveal ? esc(reveal) : tour ? "The full MIAA bracket for every Danvers team in the field" : "Where each team stands in the MIAA power rankings"}</span></div>
+      ${tour ? `<div class="bk-tabs" role="tablist" aria-label="State tournament brackets">${brackets.map((x) => `<button type="button" role="tab" id="bkt-${x.key}" aria-controls="bk-panel" aria-selected="false" data-k="${x.key}"><svg aria-hidden="true"><use href="#i-${x.t.sport}"/></svg><span><b>${esc(x.t.name)}</b><small>No. ${DFABracket.seedOf(x.B)} seed · ${esc(x.division)}</small></span></button>`).join("")}</div>
+      <div class="bk-panel card" id="bk-panel" role="tabpanel"></div>` : ""}
+      ${rest.length ? `<div class="rd-grid">${rest.join("")}</div>` : ""}
+      <p class="credit">${tour ? "Brackets and seeds from the MIAA. " : ""}${ranked ? `Rankings as of ${esc(asOf)} from the ${RULE}` : ""}</p>
     </div>`;
     box.hidden = false;
+
+    /* the bracket tabs: one division bracket at a time, linkable as #bracket-<team> */
+    function show(x) {
+      const P = $("#bk-panel"), size = x.t.cut, st = DFABracket.status(x.B, size), road = DFABracket.road(x.B, size);
+      box.querySelectorAll(".bk-tabs [role=tab]").forEach((b) => b.setAttribute("aria-selected", b.dataset.k === x.key));
+      P.setAttribute("aria-labelledby", `bkt-${x.key}`);
+      P.innerHTML = `
+        <div class="bk-head">
+          <div class="rd-big"><b>No. ${DFABracket.seedOf(x.B)}</b><span>seed of ${x.B.seeds.length} in ${esc(x.division)}</span></div>
+          <div class="bk-now"><span class="rd-chip ${st.cls}">${esc(st.chip)}</span>${st.detail ? `<p>${esc(st.detail)}</p>` : ""}</div>
+          <div class="bk-links"><a href="${esc(x.t.href)}">${esc(x.t.name)} site</a>${x.B.url ? `<a href="${esc(x.B.url)}" target="_blank" rel="noopener">MIAA bracket ↗</a>` : ""}</div>
+        </div>
+        ${road ? `<ol class="bk-road">${road}</ol>` : ""}
+        <div class="bk-scroll">${DFABracket.draw(x.B, size)}</div>`;
+      /* when the bracket is wider than the screen, scroll just far enough to show Danvers' latest game */
+      const sc = $(".bk-scroll", P), col = [...P.querySelectorAll(".bk-m.on")].pop()?.closest(".bk-col");
+      if (col) sc.scrollLeft = Math.max(0, col.offsetLeft + col.offsetWidth + 20 - sc.clientWidth);
+    }
+    const fromHash = () => {
+      const k = (location.hash.match(/^#bracket-(.+)/) || [])[1];
+      const x = k && brackets.find((b) => b.key === k);
+      if (x) show(x);
+      if (k) box.scrollIntoView();
+      return x;
+    };
+    if (tour) {
+      $(".bk-tabs", box).addEventListener("click", (e) => {
+        const b = e.target.closest("[role=tab]");
+        if (!b) return;
+        show(brackets.find((x) => x.key === b.dataset.k));
+        history.replaceState(null, "", `#bracket-${b.dataset.k}`);
+      });
+      if (!fromHash()) show(brackets[0]);
+    } else fromHash();
+    addEventListener("hashchange", fromHash);
 
     /* the shaded bars fill in once the section scrolls into view, like the title bars below */
     if (calm || !("IntersectionObserver" in window)) box.classList.add("in");

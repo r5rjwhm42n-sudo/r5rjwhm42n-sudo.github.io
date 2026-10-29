@@ -41,7 +41,8 @@
   const vs = (g) => (g.home ? "vs" : "at");
   const kind = (g) => (g.scrimmage ? "Scrimmage" : g.league ? "NEC" : "Non-league");
   const pending = (g) => (g.scrimmage ? "Scrimmage" : "");   // past game with no score posted
-  const rankLine = T.ranking ? `MIAA D${T.division.replace(/\D/g, "")} No. ${T.ranking.rank}` : "";
+  const seed = T.bracket?.seeds ? T.bracket.seeds.findIndex((s) => /^Danvers\b/.test(s)) + 1 : 0;   // once the MIAA bracket is out
+  const rankLine = seed ? `MIAA D${T.division.replace(/\D/g, "")} No. ${seed} seed` : T.ranking ? `MIAA D${T.division.replace(/\D/g, "")} No. ${T.ranking.rank}` : "";
   const outcome = { W: "Win", L: "Loss", T: "Tie" };
   const plural = (n, word) => `${n} ${word}${n === 1 ? "" : "s"}`;
   const last = (name) => name.split(" ").slice(1).join(" ") || name;
@@ -381,7 +382,8 @@
     $("#sched-tiles").innerHTML = [
       ["Overall", record, `Home ${rec((g) => g.home)} · Away ${rec((g) => !g.home)}`],
       ["NEC", rec((g) => g.league), "Conference games"],
-      ...(T.ranking ? [["MIAA power rank", T.ranking.rank, `${T.division} · of ${T.ranking.of} teams · ${T.ranking.asOf}`]] : []),
+      ...(seed ? [["Tournament seed", seed, `${T.division} · <a href="/#bracket-${teamKey}-soccer">see the bracket →</a>`]]
+        : T.ranking ? [["MIAA power rank", T.ranking.rank, `${T.division} · of ${T.ranking.of} teams · ${T.ranking.asOf}`]] : []),
       ["Goals", `${gf}–${ga}`, `${plural(played.length, "game")} played`]
     ].map(tile).join("");
     const done = SCHEDULE.filter((g) => g.result || g.cancelled || awaiting(g));

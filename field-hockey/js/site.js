@@ -35,6 +35,7 @@
   const R = T.ranking;
   const divShort = T.division.replace("MIAA ", "");
   const rankText = R ? `MIAA ${divShort} power ranking: No. ${R.rank} of ${R.of} · ${R.asOf}` : "";
+  const seed = T.bracket?.seeds ? T.bracket.seeds.findIndex((s) => /^Danvers\b/.test(s)) + 1 : 0;   // once the MIAA bracket is out
   const fullName = (p) => p.nick ? p.name.replace(" ", ` “${p.nick}” `) : p.name;
   const initials = (name) => name.split(" ").map((w) => w[0]).join("").slice(0, 2);
   const tile = ([k, v, d]) => `<div class="card tile"><div class="k">${k}</div><div class="v count ${String(v).length > 8 ? "long" : ""}">${v}</div><div class="d">${d}</div></div>`;
@@ -271,7 +272,8 @@
         </div>
         <div class="countdown" id="countdown"></div>
       </button>` : `<div class="card next-game"><div><div class="k">Regular season complete</div><h3>Final record ${record}</h3></div></div>`) +
-      (R ? `<a class="card tile rank-tile" href="${R.url}" target="_blank" rel="noopener"><div class="k">MIAA ${esc(divShort)}</div><div class="v">#${R.rank}</div><div class="d">of ${R.of} in the power rankings · ${esc(R.asOf)} ↗</div></a>`
+      (seed ? `<a class="card tile rank-tile" href="/#bracket-field-hockey"><div class="k">State tournament</div><div class="v">#${seed}</div><div class="d">seed in ${esc(divShort)} · see the bracket →</div></a>`
+       : R ? `<a class="card tile rank-tile" href="${R.url}" target="_blank" rel="noopener"><div class="k">MIAA ${esc(divShort)}</div><div class="v">#${R.rank}</div><div class="d">of ${R.of} in the power rankings · ${esc(R.asOf)} ↗</div></a>`
          : tile(["Goals", `${gf}–${ga}`, `${(gf / n).toFixed(1)} scored · ${(ga / n).toFixed(1)} allowed per game`]));
 
     $("#home-leaders").innerHTML = leaders();
@@ -404,7 +406,8 @@
     ].map(tile).join("");
     $("#results").innerHTML = past.length ? [...past].reverse().map(gameRow).join("") : `<div class="empty">No games played yet.</div>`;
     $("#upcoming").innerHTML = upcoming.length ? upcoming.map(gameRow).join("") : `<div class="empty">Regular season complete.</div>`;
-    if (R) $("#rank-pill").innerHTML = `<a href="${R.url}" target="_blank" rel="noopener">${esc(rankText)} ↗</a>`;
+    if (seed) $("#rank-pill").innerHTML = `<a href="/#bracket-field-hockey">No. ${seed} seed in the MIAA ${esc(divShort)} tournament · see the bracket →</a>`;
+    else if (R) $("#rank-pill").innerHTML = `<a href="${R.url}" target="_blank" rel="noopener">${esc(rankText)} ↗</a>`;
     const pctOf = (w, l, t) => (w + l + t ? (w + t / 2) / (w + l + t) : 0);
     $("#standings").innerHTML = `
       <thead><tr><th>#</th><th>Team</th><th>NEC</th><th>Pct.</th><th>Overall</th></tr></thead>

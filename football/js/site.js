@@ -24,6 +24,7 @@
   const dateShort = (iso) => fmt(iso, { weekday: "short", month: "short", day: "numeric" });
   const timeOf = (iso) => fmt(iso, { hour: "numeric", minute: "2-digit" });
   const vs = (g) => (g.home ? "vs" : "at");
+  const seed = TEAM.bracket?.seeds ? TEAM.bracket.seeds.findIndex((s) => /^Danvers\b/.test(s)) + 1 : 0;   // once the MIAA bracket is out
   const initials = (name) => name.split(" ").map((w) => w[0]).join("").slice(0, 2);
   const tile = ([k, v, d]) => `<div class="card tile"><div class="k">${k}</div><div class="v count">${v}</div><div class="d">${d}</div></div>`;
 
@@ -207,7 +208,7 @@
     }
 
     $("#scorestrip").innerHTML =
-      tile(["Record", record, `NEC ${rec((g) => g.league)} · Home ${rec((g) => g.home)} · Away ${rec((g) => !g.home)}${TEAM.ranking ? `<br>${esc(TEAM.ranking)}` : ""}`]) +
+      tile(["Record", record, `NEC ${rec((g) => g.league)} · Home ${rec((g) => g.home)} · Away ${rec((g) => !g.home)}${seed ? `<br><a href="/#bracket-football">No. ${seed} seed in the ${esc(TEAM.division.replace("MIAA ", ""))} tournament · see the bracket →</a>` : TEAM.ranking ? `<br>${esc(TEAM.ranking)}` : ""}`]) +
       (next ? `<button class="card next-game" data-game="${next.id}">
         <div>
           <div class="k">Next game</div>

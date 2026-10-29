@@ -17,6 +17,16 @@ const TEAM = {
   conference: "Northeastern Conference",
   division: "MIAA Division 4",
   ranking: "No. 3 in the MIAA Division 4 power rankings (Oct. 27)",   // null hides it
+  /* MIAA state tournament bracket: null until the MIAA posts it (Sun., Nov. 1, 1 p.m.) at
+     https://www.miaa.net/miaa-football-2026-division-4-state-tournament
+     Then fill it in from that page and the hub's State Tournament section draws it:
+       url:   that bracket page
+       seeds: every team in seed order, No. 1 first, as the page's SEEDS line lists them
+       games: one entry per game, named by the two seeds in it, with the score in the same order:
+              { seeds: [3, 14], score: [28, 7], date: "2026-11-06T19:00", site: "Morse Field, Danvers" }
+              note: "OT", "2OT" or "PKs 4–3" (optional) · winner: the winning seed, only when the score is tied
+     Add each game once it's set (date and site) and its score once it's played. */
+  bracket: null,
   headCoach: "Ryan Nolan",
   assistants: ["Bryan Ibbitson", "Jon Babula", "Angel Adamas", "Tom Walfield", "Kyle Brennan",
                "Andrew Barton", "Sean Dunn", "Jeff Smith", "Tom Ladd"],

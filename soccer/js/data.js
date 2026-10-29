@@ -66,6 +66,16 @@ const TEAMS = {
     short: "Girls",
     division: "MIAA Division 2",
     ranking: { rank: 17, of: 63, asOf: "Oct. 27" },   // MIAA power ranking within the division
+    /* MIAA state tournament bracket: null until the MIAA posts it (Thu., Nov. 5, 1 p.m.) at
+       https://www.miaa.net/miaa-girls-soccer-2026-division-2-state-tournament
+       Then fill it in from that page and the hub's State Tournament section draws it:
+         url:   that bracket page
+         seeds: every team in seed order, No. 1 first, as the page's SEEDS line lists them
+         games: one entry per game, named by the two seeds in it, with the score in the same order:
+                { seeds: [3, 14], score: [28, 7], date: "2026-11-06T19:00", site: "Morse Field, Danvers" }
+                note: "OT", "2OT" or "PKs 4–3" (optional) · winner: the winning seed, only when the score is tied
+       Add each game once it's set (date and site) and its score once it's played. */
+    bracket: null,
     headCoach: "Jimmy Hinchion",
     coachNote: "28th season · 425th career win on Oct. 21, 2026",
     assistants: ["Ashley Gawrys", "Shawn Hills", "Taylor Orlando", "Emma Hatch (JV)"],
