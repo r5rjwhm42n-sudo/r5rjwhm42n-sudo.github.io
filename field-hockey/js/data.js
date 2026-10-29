@@ -365,13 +365,13 @@ const PLAYERS = [
    NORTHEASTERN CONFERENCE STANDINGS — copy from the MaxPreps league page
    (TEAM.links.standings). [team, league W, L, T, overall W, L, T]
    --------------------------------------------------------------------- */
-const STANDINGS_AS_OF = "Oct. 24";
+const STANDINGS_AS_OF = "Oct. 24 (Danvers through Oct. 27)";
 const STANDINGS = [
   ["Gloucester", 11, 0, 0, 14, 0, 0],
   ["Beverly", 8, 2, 1, 10, 4, 1],
   ["Masconomet", 6, 3, 1, 9, 4, 2],
   ["Swampscott", 4, 3, 1, 4, 7, 2],
-  ["Danvers", 5, 5, 1, 7, 7, 2],
+  ["Danvers", 5, 5, 1, 7, 8, 2],
   ["Marblehead", 5, 7, 1, 5, 8, 2],
   ["Saugus", 2, 9, 1, 6, 9, 2],
   ["Peabody", 0, 12, 0, 3, 14, 0]
