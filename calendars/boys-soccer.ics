@@ -259,10 +259,12 @@ UID:boys-soccer-17@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261028T183000
 DURATION:PT2H
-SUMMARY:Danvers Boys Soccer vs Gloucester
+SUMMARY:Danvers Boys Soccer vs Gloucester (L 0–2)
 LOCATION:Dr. Deering Stadium\, Danvers
-DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
- alconsathletics.org/soccer/schedule.html?team=boys
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 0\, Gloucester 2\nGlouc
+ ester shut out the Falcons 2–0 at Deering Stadium to sweep the season se
+ ries\, 12 days after a 2–1 win in Gloucester.\nSchedule and results: htt
+ ps://danversfalconsathletics.org/soccer/schedule.html?team=boys
 URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
 END:VEVENT
 BEGIN:VEVENT

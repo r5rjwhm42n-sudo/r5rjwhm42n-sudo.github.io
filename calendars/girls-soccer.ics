@@ -326,10 +326,12 @@ UID:girls-soccer-18@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261028T163000
 DURATION:PT2H
-SUMMARY:Danvers Girls Soccer at Gloucester
+SUMMARY:Danvers Girls Soccer at Gloucester (T 6–6)
 LOCATION:Newell Stadium\, Gloucester
-DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
- alconsathletics.org/soccer/schedule.html?team=girls
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 6\, Gloucester 6\nDanve
+ rs and Gloucester played to a 6–6 draw at Newell Stadium\, the most goal
+ s the Fishermen had scored in a game all season.\nSchedule and results: ht
+ tps://danversfalconsathletics.org/soccer/schedule.html?team=girls
 URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
 END:VEVENT
 BEGIN:VEVENT

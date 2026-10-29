@@ -360,8 +360,16 @@ const TEAMS = {
           { label: "Danvers Girls Soccer on X", url: X + "2114354518167343340" },
           { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/girls/match/danvers-vs-peabody-veterans-memorial/10-26-2026/?c=9b4b43b7-c2bb-4c44-9a98-e3cee50db060" }
         ] },
-      { id: 18, date: "2026-10-28T16:30", opponent: "Gloucester", mascot: "Fishermen", home: false, league: true, site: "Newell Stadium, Gloucester", result: null, notes: [],
-        sources: [{ label: "Watch live on NFHS Network", url: "https://www.nfhsnetwork.com/events/gloucester-high-school-gloucester-ma/gamf6b6ca0e67" }] },
+      { id: 18, date: "2026-10-28T16:30", opponent: "Gloucester", mascot: "Fishermen", home: false, league: true, site: "Newell Stadium, Gloucester",
+        result: "T", us: 6, them: 6,
+        halves: null,
+        summary: "Danvers and Gloucester played to a 6–6 draw at Newell Stadium, the most goals the Fishermen had scored in a game all season.",
+        scorers: [], assists: [],
+        notes: [],
+        sources: [
+          { label: "MaxPreps recap", url: "https://www.maxpreps.com/news/2b15zbu0T06wslTEvS8Zgg/soccer-recap-gloucester-drops-season-high-score-on-danvers--how-to-watch.htm" },
+          { label: "Game replay on NFHS Network", url: "https://www.nfhsnetwork.com/events/gloucester-high-school-gloucester-ma/gamf6b6ca0e67" }
+        ] },
 
       { id: 106, date: "2026-11-02T16:00", opponent: "Lynnfield", mascot: "Pioneers", home: false, league: false, site: "Lynnfield High School, Lynnfield",
         scrimmage: true, result: null, notes: ["Scrimmage after the regular season"] }
@@ -566,7 +574,7 @@ const TEAMS = {
       recordBook: "https://docs.google.com/spreadsheets/d/18a7tVEOYReMH80QCl6_rTqgiZfDyWE195MJkjmbHhLQ/edit?gid=1756060361"
     },
 
-    statsAsOf: "Through 16 games (Oct. 26, 2026)",
+    statsAsOf: "Through 17 games (Oct. 28, 2026)",
 
     schedule: [
       /* Scrimmages — listed on the school's schedule, not counted in the record */
@@ -731,7 +739,13 @@ const TEAMS = {
           { label: "Livestream on Hudl", url: BOYS_REPLAY + "QnJvYWRjYXN0NDMxMzIyNA%3D%3D" },
           { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/match/danvers-vs-peabody-veterans-memorial/10-26-2026/?c=8e9d8f0b-8683-43f8-aee6-928d7f9c9b7f" }
         ] },
-      { id: 17, date: "2026-10-28T18:30", opponent: "Gloucester", mascot: "Fishermen", home: true, league: true, site: HOME, result: null, notes: [] },
+      { id: 17, date: "2026-10-28T18:30", opponent: "Gloucester", mascot: "Fishermen", home: true, league: true, site: HOME,
+        result: "L", us: 0, them: 2,
+        halves: null,
+        summary: "Gloucester shut out the Falcons 2–0 at Deering Stadium to sweep the season series, 12 days after a 2–1 win in Gloucester.",
+        scorers: [], assists: [],
+        notes: ["Second meeting — Gloucester won 2–1 on Oct. 16"],
+        sources: [{ label: "MaxPreps recap", url: "https://www.maxpreps.com/news/pd3lzQPSx0y9xV9rrXQEww/soccer-recap-gloucester-blanks-danvers.htm" }] },
       { id: 18, date: "2026-10-30T18:30", opponent: "Essex Tech", mascot: "Hawks", home: true, league: false, site: MORSE, result: null, notes: [] }
     ],
 

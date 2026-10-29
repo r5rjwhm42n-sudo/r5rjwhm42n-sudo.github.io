@@ -433,7 +433,7 @@ const SCHEDULE = [
   { id: 18, date: "2026-10-26T17:15", opponent: "Peabody", mascot: "Tanners", home: true, league: true, site: HOME,
     result: "W", us: 3, them: 0,
     sets: [[25, 11], [25, 12], [25, 16]],
-    summary: "Danvers snapped a three-match skid with a sweep of Peabody, 25–11, 25–12, 25–16. The Falcons served 21 aces and had 24 kills, seven of them from Gabrielle Lindeman.",
+    summary: "Danvers snapped a three-match skid with a sweep of Peabody, 25–11, 25–12, 25–16. The Falcons served 21 aces, eight of them from Lauren Garofalo, and had 24 kills, seven from Gabrielle Lindeman. Hadley Brown added 14 digs and four aces.",
     notes: [
       "Second meeting — Danvers won 3–1 on Sept. 25",
       "21 aces as a team"
@@ -442,9 +442,18 @@ const SCHEDULE = [
       { label: "MaxPreps box score", url: MP + "danvers-vs-peabody-veterans-memorial/10-26-2026/?c=d312a82e-e647-466b-821d-7bd2ccbdf098" },
       { label: "Match replay on NFHS Network", url: "https://www.nfhsnetwork.com/events/danvers-high-school-danvers-ma/gam524c066736" }
     ] },
-  { id: 19, date: "2026-10-28T17:15", opponent: "Masconomet", mascot: "Chieftains", home: true, league: true, site: HOME, result: null,
-    notes: ["Second meeting — Danvers won 3–2 on Sept. 30"],
-    sources: [{ label: "Watch live on NFHS Network", url: "https://www.nfhsnetwork.com/events/danvers-high-school-danvers-ma/gam76f9d68549" }] },
+  { id: 19, date: "2026-10-28T17:15", opponent: "Masconomet", mascot: "Chieftains", home: true, league: true, site: HOME,
+    result: "W", us: 3, them: 0,
+    sets: [[25, 15], [25, 22], [25, 20]],
+    summary: "Danvers made it two wins in a row with a sweep of Masconomet, 25–15, 25–22, 25–20. Gabrielle Lindeman had 14 digs, six aces and two solo blocks, and Lauren Garofalo added six kills, 14 digs and four aces.",
+    notes: [
+      "Second meeting — Danvers won 3–2 on Sept. 30, so the Falcons swept the season series",
+      "Masconomet fell to 4–11"
+    ],
+    sources: [
+      { label: "MaxPreps recap", url: "https://www.maxpreps.com/news/s9bNOg5iEkuLQmPBAGsJgw/volleyball-recap-danvers-wins-going-away-against-masconomet-regional--how-to-watch.htm" },
+      { label: "Match replay on NFHS Network", url: "https://www.nfhsnetwork.com/events/danvers-high-school-danvers-ma/gam76f9d68549" }
+    ] },
   { id: 20, date: "2026-10-29T17:15", opponent: "Salem", mascot: "Witches", home: true, league: true, site: HOME, result: null,
     notes: ["Regular-season finale"],
     sources: [{ label: "Watch live on NFHS Network", url: "https://www.nfhsnetwork.com/events/danvers-high-school-danvers-ma/gam3e8529ea45" }] },
