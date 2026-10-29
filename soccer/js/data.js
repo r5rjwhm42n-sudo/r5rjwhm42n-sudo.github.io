@@ -361,15 +361,12 @@ const TEAMS = {
           { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/girls/match/danvers-vs-peabody-veterans-memorial/10-26-2026/?c=9b4b43b7-c2bb-4c44-9a98-e3cee50db060" }
         ] },
       { id: 18, date: "2026-10-28T16:30", opponent: "Gloucester", mascot: "Fishermen", home: false, league: true, site: "Newell Stadium, Gloucester",
-        result: "T", us: 6, them: 6,
+        result: "W", us: 7, them: 1,
         halves: null,
-        summary: "Danvers and Gloucester played to a 6–6 draw at Newell Stadium, the most goals the Fishermen had scored in a game all season.",
+        summary: "Danvers poured in seven goals at Newell Stadium for a 7–1 win over Gloucester, its most in a game since the 9–1 rout of Winthrop in September.",
         scorers: [], assists: [],
         notes: [],
-        sources: [
-          { label: "MaxPreps recap", url: "https://www.maxpreps.com/news/2b15zbu0T06wslTEvS8Zgg/soccer-recap-gloucester-drops-season-high-score-on-danvers--how-to-watch.htm" },
-          { label: "Game replay on NFHS Network", url: "https://www.nfhsnetwork.com/events/gloucester-high-school-gloucester-ma/gamf6b6ca0e67" }
-        ] },
+        sources: [{ label: "Game replay on NFHS Network", url: "https://www.nfhsnetwork.com/events/gloucester-high-school-gloucester-ma/gamf6b6ca0e67" }] },
 
       { id: 106, date: "2026-11-02T16:00", opponent: "Lynnfield", mascot: "Pioneers", home: false, league: false, site: "Lynnfield High School, Lynnfield",
         scrimmage: true, result: null, notes: ["Scrimmage after the regular season"] }
