@@ -5,7 +5,7 @@
    the saved copy; images and fonts come from the saved copy first.
    Bump VERSION to clear old saved copies.
    ===================================================================== */
-const VERSION = "dfa-v1";
+const VERSION = "dfa-v2";
 const CORE = [
   "/", "/offline.html", "/css/home.css", "/js/home.js", "/js/common.js",
   "/images/falcons-logo.png", "/images/icons/icon-192.png", "/manifest.webmanifest"
@@ -29,9 +29,11 @@ const save = (req, res) => {
   return res;
 };
 
-/* Network first, with a time limit so a weak signal falls back to the saved copy quickly */
+/* Network first, with a time limit so a weak signal falls back to the saved copy quickly.
+   no-cache makes the browser check with the server every time, so a new score or a site
+   update shows up right away instead of after the host's 10-minute cache runs out. */
 function fresh(req, fallback) {
-  const net = fetch(req).then((res) => save(req, res));
+  const net = fetch(req, { cache: "no-cache" }).then((res) => save(req, res));
   const timer = new Promise((resolve) => setTimeout(resolve, 4000));
   return Promise.race([net, timer.then(() => caches.match(req).then((hit) => hit || net))])
     .catch(() => caches.match(req))
