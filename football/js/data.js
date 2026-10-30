@@ -290,7 +290,7 @@ const PLAYERS = [
     stats: [["Rush Yds", 295], ["Rush TD", 2]],
     log: { 1: "21 car, 114 yds, 1-yd TD run (varsity debut)", 6: "12 car, 111 yds, 25-yd TD run" } },
   { name: "Nate Wise", num: null, pos: ["QB"], grade: "Sr.", captain: true,
-    stats: [["Comp/Att", "20/29"], ["Pass Yds", 294], ["Pass TD", 5], ["Rush TD", 1], ["Rush Yds", 13]],
+    stats: [["Comp/Att", "20/29"], ["Pass Yds", 294], ["Pass TD", 5], ["Rush TD", 1]],
     log: { 1: "3 car, 13 yds · 2-of-4 passing for 29 yards", 5: "120 passing yards (career high), 2 TD",
            6: "5-of-6 passing for 43 yards, TD", 7: "2 TD passes to Jack Houston · 1-yd TD run" } },
   { name: "Colby Medeiros", num: 11, pos: ["K"], grade: "Sr.", captain: true,
