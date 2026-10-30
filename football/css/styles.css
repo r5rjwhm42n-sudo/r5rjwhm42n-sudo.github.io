@@ -393,3 +393,17 @@ figure { margin: 0; }
 @keyframes vt-out { to { opacity: 0; } }
 @keyframes vt-in { from { opacity: 0; transform: translateY(12px); } }
 @media (prefers-reduced-motion: reduce) { @view-transition { navigation: none; } }
+
+/* ---------- Big-game spotlight on the home page (a game with spotlight: {...} in data.js) ---------- */
+.hero-home.spot { border-bottom: 4px solid var(--gold); background: radial-gradient(120% 150% at 88% -10%, #2459c2 0%, #18479f 26%, #123a85 46%, #0b1f4d 78%); }
+.hero .spot-eyebrow { background: var(--gold); color: var(--navy); }
+.hero h1 em { font-style: normal; color: var(--gold); }
+.btn-gold { background: var(--gold); border-color: var(--gold); color: var(--navy); }
+.btn-gold:hover { background: #ffc845; border-color: #ffc845; }
+.spot-board { box-shadow: 0 0 0 3px var(--gold), 0 16px 40px rgba(5, 14, 40, .45); }
+.spot-board .sb-top { border-bottom: 3px solid var(--gold); }
+.spot-board .sb-top span:last-child { color: var(--gold); }
+.sb-row .opp-img { width: 46px; height: 46px; object-fit: contain; }
+.sb-row .rec { font-family: var(--display); font-weight: 800; font-size: 36px; line-height: 1; color: var(--ink); font-variant-numeric: tabular-nums; }
+.spot-board .sb-row .nm { color: var(--ink); }
+.tag.big { background: var(--gold); color: var(--navy); }

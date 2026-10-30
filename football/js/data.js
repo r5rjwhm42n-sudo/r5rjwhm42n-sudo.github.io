@@ -249,8 +249,31 @@ const SCHEDULE = [
     ]
   },
   { id: 8, date: "2026-10-30T19:00", opponent: "Peabody", mascot: "Tanners", home: false, league: true, site: "Peabody Veterans Memorial Stadium", result: null,
-    notes: ["Last NEC game of the regular season", "Peabody comes in 6–1 (2–1 NEC)", "Danvers won last year's meeting 30–12"],
-    sources: [{ label: "Livestream on Hudl", url: REPLAY + "QnJvYWRjYXN0NDUzMDAzOQ%3D%3D" }] },
+    tag: "NEC Title Game",
+    /* spotlight: a big-game banner across the top of the hub and the football home page.
+       It shows for the week before the game and for two days after the final. */
+    spotlight: {
+      kicker: "Northeastern Conference title game",
+      headline: "For the *NEC crown*",   // *words* show in gold
+      blurb: "Unbeaten Danvers visits Peabody in the NEC finale, and a Falcons win clinches the conference title, the program's first since 2019. Fill the visitors' side and bring the noise.",
+      oppRecord: "6–1 · 2–1 NEC",
+      facts: [["27", "Points Danvers has allowed all season"], ["3", "Straight shutouts"], ["2019", "The last Danvers NEC title"]],
+      watch: REPLAY + "QnJvYWRjYXN0NDUzMDAzOQ%3D%3D",
+      tickets: { label: "Tickets", note: "Peabody sells tickets on GoFan", url: "https://gofan.co/" },
+      won: "Falcons are NEC champions",
+      lost: "Peabody takes the NEC finale"
+    },
+    notes: [
+      "NEC title game: a Danvers win clinches the conference championship",
+      "Last NEC game of the regular season",
+      "Peabody comes in 6–1 (2–1 NEC); QB Dom Mercier leads the area with 698 rushing yards and 15 TDs and has thrown for 954 yards",
+      "Danvers has allowed 27 points in six games, with three straight shutouts",
+      "Danvers won last year's meeting 30–12"
+    ],
+    sources: [
+      { label: "Livestream on Hudl", url: REPLAY + "QnJvYWRjYXN0NDUzMDAzOQ%3D%3D" },
+      { label: "Boston Globe notebook", url: "https://www.bostonglobe.com/2026/10/26/sports/high-school-football-danvers/" }
+    ] },
   { id: 9, date: "2026-11-26T10:00", opponent: "Gloucester", mascot: "Fishermen", home: false, league: false, site: "Newell Stadium, Gloucester", result: null,
     notes: ["Thanksgiving Day rivalry, played every Thanksgiving morning since 1964"],
     sources: [{ label: "Watch live on NFHS Network", url: "https://www.nfhsnetwork.com/events/gloucester-high-school-gloucester-ma/gam6c9d84ba83" }] }

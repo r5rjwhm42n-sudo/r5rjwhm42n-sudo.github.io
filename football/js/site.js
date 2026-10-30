@@ -100,6 +100,7 @@
           <div class="meta">
             <span class="tag ${g.home ? "home" : ""}">${g.home ? "Home" : "Away"}</span>
             <span class="tag">${g.league ? "NEC" : "Non-league"}</span>
+            ${g.tag ? `<span class="tag big">${esc(g.tag)}</span>` : ""}
             <span>${esc(g.site)}</span>
           </div>
         </div>
@@ -175,8 +176,31 @@
   function home() {
     const next = upcoming[0];
     const last = played[played.length - 1];
+    /* a game with spotlight: {...} leads the page from a week out until it's played */
+    const big = SCHEDULE.find((g) => g.spotlight && !g.result && !g.cancelled &&
+      Date.now() > new Date(g.date).getTime() - 7 * 864e5 && Date.now() < new Date(g.date).getTime() + 12 * 36e5);
 
-    if (last) {
+    if (big) {
+      const sp = big.spotlight;
+      const when = new Date(big.date).toDateString() === new Date().toDateString() ? "Tonight" : dateShort(big.date);
+      const slug = big.opponent.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+      $(".hero-home").classList.add("spot");
+      $("#hero-story").innerHTML = `
+        <div class="eyebrow spot-eyebrow">${esc(big.tag || sp.kicker)} · ${esc(when)} ${timeOf(big.date)}</div>
+        <h1>${esc(sp.headline).replace(/\*(.+?)\*/g, "<em>$1</em>")}</h1>
+        <p>${esc(sp.blurb)}</p>
+        <div class="btn-row">
+          ${sp.watch ? `<a class="btn btn-gold" href="${esc(sp.watch)}" target="_blank" rel="noopener">Watch live on Hudl</a>` : ""}
+          <button class="btn btn-ghost" data-game="${big.id}">Game preview</button>
+        </div>`;
+      $("#scoreboard").innerHTML = `
+        <button class="card scoreboard spot-board" data-game="${big.id}" aria-label="Title game details">
+          <div class="sb-top"><span>${esc(big.tag || sp.kicker)}</span><span>${esc(when)}</span></div>
+          <div class="sb-row"><img src="${LOGO}" alt=""><span class="nm">Danvers</span><span class="rec">${record}</span></div>
+          <div class="sb-row"><img src="../images/opponents/${slug}.png" alt="" class="opp-img" onerror="this.style.visibility='hidden'"><span class="nm">${esc(big.opponent)}</span><span class="rec">${esc((sp.oppRecord || "").split(" · ")[0])}</span></div>
+          <div class="sb-foot"><span>${vs(big) === "at" ? "At " : ""}${esc(big.site)} · ${timeOf(big.date)}</span><b>Preview ›</b></div>
+        </button>`;
+    } else if (last) {
       const won = last.result === "W";
       $("#hero-story").innerHTML = `
         <div class="eyebrow">Final · ${dateShort(last.date)}</div>
