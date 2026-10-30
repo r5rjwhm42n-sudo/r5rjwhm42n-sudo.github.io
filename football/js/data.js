@@ -251,17 +251,16 @@ const SCHEDULE = [
   { id: 8, date: "2026-10-30T19:00", opponent: "Peabody", mascot: "Tanners", home: false, league: true, site: "Peabody Veterans Memorial Stadium", result: null,
     tag: "NEC Title Game",
     /* spotlight: a big-game banner across the top of the hub and the football home page.
-       It shows for the week before the game and for two days after the final. */
+       It shows for the week before the game and for two days after the final. The
+       background is the first photo in PHOTOS below. */
     spotlight: {
-      kicker: "Northeastern Conference title game",
-      headline: "For the *NEC crown*",   // *words* show in gold
-      blurb: "Unbeaten Danvers visits Peabody in the NEC finale, and a Falcons win clinches the conference title, the program's first since 2019. Fill the visitors' side and bring the noise.",
-      oppRecord: "6–1 · 2–1 NEC",
-      facts: [["27", "Points Danvers has allowed all season"], ["3", "Straight shutouts"], ["2019", "The last Danvers NEC title"]],
+      kicker: "NEC Title Game",
+      blurb: "A Danvers win clinches the Northeastern Conference title, the program's first since 2019.",
+      oppRecord: "6–1",
       watch: REPLAY + "QnJvYWRjYXN0NDUzMDAzOQ%3D%3D",
       tickets: { label: "Tickets", note: "Peabody sells tickets on GoFan", url: "https://gofan.co/" },
-      won: "Falcons are NEC champions",
-      lost: "Peabody takes the NEC finale"
+      won: "NEC Champions",
+      lost: "Final"
     },
     notes: [
       "NEC title game: a Danvers win clinches the conference championship",

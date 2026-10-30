@@ -236,45 +236,35 @@
       return x.spotlight && !x.cancelled && NOW > t - 7 * 864e5 && NOW < t + (x.result ? 2 * 864e5 : 12 * HOUR);
     });
     if (!box || !g) return;
-    const sp = g.spotlight, start = new Date(g.date).getTime();
+    const sp = g.spotlight, start = new Date(g.date).getTime(), done = !!g.result;
     const games = d.SCHEDULE.filter((x) => x.result && !x.cancelled);
-    const wl = (list) => `${list.filter((x) => x.result === "W").length}–${list.filter((x) => x.result === "L").length}`;
-    const ours = `${wl(games)} · ${wl(games.filter((x) => x.league))} NEC`;
-    const gold = (s) => esc(s).replace(/\*(.+?)\*/g, "<em>$1</em>");
+    const ours = `${games.filter((x) => x.result === "W").length}–${games.filter((x) => x.result === "L").length}`;
+    const photo = d.PHOTOS?.[0]?.src;
     const page = new URL("football/", location.href).href;
     const recap = `football/schedule.html#g=${g.id}`;
-    const opp = window.DFA ? DFA.badge(g.opponent, "sp-logo") : `<span class="sp-logo dot">${esc(g.opponent[0])}</span>`;
-    const team = (logo, name, line, pts, win) => `
-      <div class="sp-team ${win ? "win" : ""}">${logo}<b>${esc(name)}</b><small>${esc(line)}</small>${pts == null ? "" : `<span class="sp-pts">${pts}</span>`}</div>`;
-    const done = !!g.result;
-    const icon = (path) => `<svg viewBox="0 0 24 24" aria-hidden="true">${path}</svg>`;
+    const opp = window.DFA ? DFA.badge(g.opponent, "sp-logo") : "";
+    const side = (logo, name, line, pts, win) => `
+      <div class="sp-side ${win ? "win" : ""}">${logo}<div class="sp-name"><b>${esc(name)}</b><small>${esc(line)}</small></div>${pts == null ? "" : `<span class="sp-pts">${pts}</span>`}</div>`;
+    const today = new Date(g.date).toDateString() === new Date().toDateString();
 
+    if (photo) box.style.setProperty("--sp-photo", `url("${new URL(`football/${photo}`, location.href).href}")`);
     box.innerHTML = `<div class="wrap sp-in">
-      <div class="sp-copy">
-        <div class="sp-kicker"><span class="sp-flag" id="sp-flag"></span>${esc(sp.kicker)}</div>
-        <h2 class="sp-h">${done ? gold(g.result === "W" ? sp.won : sp.lost) : gold(sp.headline)}</h2>
-        <p class="sp-blurb">${esc(done && g.summary ? g.summary : sp.blurb)}</p>
-        ${!done && sp.facts ? `<div class="sp-facts">${sp.facts.map(([v, k]) => `<div class="sp-fact"><b>${esc(v)}</b><span>${esc(k)}</span></div>`).join("")}</div>` : ""}
-        <div class="btn-row">
-          ${done ? `<a class="btn btn-gold" href="${recap}">Game recap</a>` + (sp.watch ? `<a class="btn btn-ghost" href="${esc(sp.watch)}" target="_blank" rel="noopener">Watch the replay</a>` : "")
-            : (sp.watch ? `<a class="btn btn-gold" href="${esc(sp.watch)}" target="_blank" rel="noopener">Watch live on Hudl</a>` : "") + `<a class="btn btn-ghost" href="${recap}">Game preview</a>`}
-        </div>
-        <div class="sp-links">
-          ${!done && window.DFA ? `<a href="${DFA.mapsUrl(g)}" target="_blank" rel="noopener">${icon('<path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/>')}Directions</a>` : ""}
-          ${!done && sp.tickets ? `<a href="${esc(sp.tickets.url)}" target="_blank" rel="noopener" title="${esc(sp.tickets.note || "")}">${icon('<path d="M3 9V6h18v3a3 3 0 0 0 0 6v3H3v-3a3 3 0 0 0 0-6z"/><path d="M14 6v12" stroke-dasharray="2 2.5"/>')}${esc(sp.tickets.label)}</a>` : ""}
-          ${!done ? `<a href="football/">${icon('<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>')}Season stats</a>` : ""}
-          <button type="button" id="sp-share">${icon('<path d="M12 3v12M7 8l5-5 5 5"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/>')}<span>Share</span></button>
-        </div>
+      <div class="sp-label"><span class="sp-flag" id="sp-flag"></span><span>${esc(done ? (g.result === "W" ? sp.won : sp.lost) : sp.kicker)}</span></div>
+      <div class="sp-matchup">
+        ${side(`<span class="sp-logo us"><img src="images/falcons-logo.png" alt=""></span>`, "Danvers", ours, done ? g.us : null, done && g.result === "W")}
+        <span class="sp-vs">${g.home ? "vs" : "at"}</span>
+        ${side(opp, g.opponent, sp.oppRecord || "", done ? g.them : null, done && g.result === "L")}
       </div>
-      <div class="sp-card">
-        <div class="sp-card-top"><span>${done ? "Final" : esc(fmt(g.date, { weekday: "short", month: "short", day: "numeric" }))}</span><span>${done ? esc(sp.kicker.replace(/ game$/i, "")) : esc(timeOf(g))}</span></div>
-        <div class="sp-teams">
-          ${team(`<span class="sp-logo us"><img src="images/falcons-logo.png" alt=""></span>`, "Danvers", ours, done ? g.us : null, done && g.result === "W")}
-          <div class="sp-at">${g.home ? "vs" : "at"}</div>
-          ${team(opp, g.opponent, sp.oppRecord || g.mascot || "", done ? g.them : null, done && g.result === "L")}
-        </div>
-        ${done ? "" : `<div class="sp-clock" id="sp-clock" aria-live="off"></div>`}
-        <div class="sp-meta"><span>${esc(g.site || "")}</span><span id="sp-wx"></span></div>
+      <p class="sp-info">${done ? esc(sp.kicker) : `${today ? "" : `${esc(fmt(g.date, { weekday: "long", month: "short", day: "numeric" }))} · `}${esc(timeOf(g))}`} · ${esc(g.site || "")}<span id="sp-wx"></span></p>
+      ${done ? "" : `<p class="sp-blurb">${esc(sp.blurb || "")}</p><div class="sp-clock" id="sp-clock" aria-live="off"></div>`}
+      <div class="sp-actions">
+        ${done ? `<a class="btn btn-gold" href="${recap}">Game recap</a>` : sp.watch ? `<a class="btn btn-gold" href="${esc(sp.watch)}" target="_blank" rel="noopener">Watch live</a>` : ""}
+        <a class="btn btn-ghost" href="${done ? "football/" : recap}">${done ? "Football site" : "Game preview"}</a>
+      </div>
+      <div class="sp-links">
+        ${!done && window.DFA ? `<a href="${DFA.mapsUrl(g)}" target="_blank" rel="noopener">Directions</a>` : ""}
+        ${!done && sp.tickets ? `<a href="${esc(sp.tickets.url)}" target="_blank" rel="noopener" title="${esc(sp.tickets.note || "")}">${esc(sp.tickets.label)}</a>` : ""}
+        <button type="button" id="sp-share">Share</button>
       </div>
     </div>`;
 
@@ -283,25 +273,25 @@
       const ms = start - Date.now();
       const live = !done && ms <= 0;
       flag.className = `sp-flag ${live ? "live" : ""}`;
-      flag.innerHTML = done ? "Final" : live ? "<i></i>Live now" : new Date(g.date).toDateString() === new Date().toDateString() ? "Tonight" : "Big game";
+      flag.innerHTML = done ? "Final" : live ? "<i></i>Live" : today ? "Tonight" : esc(fmt(g.date, { weekday: "short" }));
       if (!clock) return false;
-      if (live) { clock.innerHTML = `<a class="sp-live" href="${esc(sp.watch || recap)}" target="_blank" rel="noopener"><i></i>Under way · watch live</a>`; return false; }
+      if (live) { clock.hidden = true; return false; }
       const dd = Math.floor(ms / 864e5), h = Math.floor(ms / HOUR) % 24, m = Math.floor(ms / 6e4) % 60, s = Math.floor(ms / 1e3) % 60;
-      const cell = (v, l) => `<div class="cl"><b>${String(v).padStart(2, "0")}</b><span>${l}</span></div>`;
-      clock.innerHTML = (dd ? cell(dd, "Days") : "") + cell(h, "Hrs") + cell(m, "Min") + cell(s, "Sec");
+      const cell = (v, l) => `<span class="cl"><b>${String(v).padStart(2, "0")}</b><small>${l}</small></span>`;
+      clock.innerHTML = (dd ? cell(dd, "days") : "") + cell(h, "hrs") + cell(m, "min") + cell(s, "sec");
       clock.setAttribute("aria-label", `Kickoff in ${dd ? `${dd} days, ` : ""}${h} hours and ${m} minutes`);
       return true;
     };
     if (tick()) { const id = setInterval(() => tick() || clearInterval(id), 1000); }
-    if (!done) window.DFA?.weather(g).then((w) => { if (w) $("#sp-wx").innerHTML = `${w.icon}${w.temp}° · ${esc(w.label)}${w.rain >= 30 ? ` · ${w.rain}% rain` : ""}`; });
+    if (!done) window.DFA?.weather(g).then((w) => { if (w) $("#sp-wx").textContent = ` · ${w.temp}° ${w.label.toLowerCase()}${w.rain >= 30 ? `, ${w.rain}% rain` : ""}`; });
 
     $("#sp-share").addEventListener("click", async (ev) => {
       const btn = ev.currentTarget;
-      const text = done ? `${g.result === "W" ? sp.won : sp.lost}: Danvers ${g.us}, ${g.opponent} ${g.them}`.replace(/\*/g, "")
+      const text = done ? `${g.result === "W" ? sp.won : sp.lost}: Danvers ${g.us}, ${g.opponent} ${g.them}`
         : `${sp.kicker}: Danvers ${g.home ? "vs" : "at"} ${g.opponent}, ${fmt(g.date, { weekday: "long", month: "short", day: "numeric" })} at ${timeOf(g)}. Go Falcons!`;
       try {
         if (navigator.share) await navigator.share({ title: "Danvers Falcons Football", text, url: page });
-        else { await navigator.clipboard.writeText(`${text} ${page}`); btn.querySelector("span").textContent = "Link copied"; }
+        else { await navigator.clipboard.writeText(`${text} ${page}`); btn.textContent = "Link copied"; }
       } catch (e) { /* share sheet closed */ }
     });
     box.hidden = false;
@@ -310,7 +300,7 @@
     if (!done) {
       $$('.nav a[href="football/"], .team-card[data-sport="football"]').forEach((el) => el.classList.add("sp-glow"));
       const media = $('.team-card[data-sport="football"] .tc-media');
-      if (media) media.insertAdjacentHTML("beforeend", `<span class="tc-ribbon">${esc(g.tag || sp.kicker)}${new Date(g.date).toDateString() === new Date().toDateString() ? " · tonight" : ""}</span>`);
+      if (media) media.insertAdjacentHTML("beforeend", `<span class="tc-ribbon">${esc(g.tag || sp.kicker)}${today ? " · tonight" : ""}</span>`);
     }
   }
 

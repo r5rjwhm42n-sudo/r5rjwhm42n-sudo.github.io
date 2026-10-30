@@ -187,10 +187,10 @@
       $(".hero-home").classList.add("spot");
       $("#hero-story").innerHTML = `
         <div class="eyebrow spot-eyebrow">${esc(big.tag || sp.kicker)} · ${esc(when)} ${timeOf(big.date)}</div>
-        <h1>${esc(sp.headline).replace(/\*(.+?)\*/g, "<em>$1</em>")}</h1>
+        <h1>Danvers ${vs(big)} <em>${esc(big.opponent)}</em></h1>
         <p>${esc(sp.blurb)}</p>
         <div class="btn-row">
-          ${sp.watch ? `<a class="btn btn-gold" href="${esc(sp.watch)}" target="_blank" rel="noopener">Watch live on Hudl</a>` : ""}
+          ${sp.watch ? `<a class="btn btn-gold" href="${esc(sp.watch)}" target="_blank" rel="noopener">Watch live</a>` : ""}
           <button class="btn btn-ghost" data-game="${big.id}">Game preview</button>
         </div>`;
       $("#scoreboard").innerHTML = `
