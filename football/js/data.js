@@ -266,21 +266,23 @@ const SCHEDULE = [
           the first "<number> yds" in each line, so write rushing yards first
           and use "yards" (not "yds") for passing and receiving.
 
-   NOTE: No official stat sheet is published for 2026 yet. Season yardage
-   and passing totals for Fultz, Houston, Kaciqi and Wise are from the
-   Boston Globe notebook of Oct. 26 (through six games); everything else
-   was compiled from newspaper box scores and recaps, so it is PARTIAL.
+   NOTE: No official stat sheet is published for 2026 yet. Rushing totals
+   for Fultz and Houston and Wise's passing line are from the newspaper's
+   area leaders (Thursday, Oct. 29). Houston's receiving yards and
+   Kaciqi's rushing yards are from the Boston Globe notebook of Oct. 26.
+   Both cover six games; everything else was compiled from newspaper box
+   scores and recaps, so it is PARTIAL.
    Replace with the team's official numbers when you get them.
    --------------------------------------------------------------------- */
 const STATS_AS_OF = "Through 6 games (Oct. 23, 2026)";
 
 const PLAYERS = [
   { name: "Zach Fultz", num: null, pos: ["RB", "DB"], grade: "Jr.", captain: false,
-    stats: [["Rush Yds", 653], ["Rush TD", 10], ["Points", 60]],
+    stats: [["Carries", 99], ["Rush Yds", 646], ["Rush TD", 11], ["Points", 66]],
     log: { 1: "14 car, 121 yds, 23-yd TD run", 2: "56 rushing yds, TD runs of 1 and 2 yards", 3: "101 rushing yds, 3 TD",
            5: "125 rushing yds, 2 TD", 6: "15 car, 179 yds, TD runs of 1 and 4 yards" } },
   { name: "Jack Houston", num: null, pos: ["RB", "LB"], grade: "Sr.", captain: true,
-    stats: [["Rush Yds", 588], ["Rush TD", 4], ["Rec Yds", 231], ["Rec TD", 5], ["Points", 54]],
+    stats: [["Carries", 86], ["Rush Yds", 577], ["Rush TD", 4], ["Rec Yds", 231], ["Rec TD", 5], ["Points", 54]],
     log: { 1: "16 car, 106 yds", 2: "79 rushing yds · 2 catches for 45 yards", 3: "135 rushing yds, 2 TD",
            5: "TD catches of 15 and 11 yards from Nate Wise", 6: "59 rushing yds, 2-yd TD run · 11-yard TD catch",
            7: "32-yd TD run · 2 TD catches from Nate Wise" } },
@@ -288,7 +290,7 @@ const PLAYERS = [
     stats: [["Rush Yds", 295], ["Rush TD", 2]],
     log: { 1: "21 car, 114 yds, 1-yd TD run (varsity debut)", 6: "12 car, 111 yds, 25-yd TD run" } },
   { name: "Nate Wise", num: null, pos: ["QB"], grade: "Sr.", captain: true,
-    stats: [["Comp/Att", "20/29"], ["Pass Yds", 299], ["Pass TD", 5], ["Rush TD", 1], ["Rush Yds", 13]],
+    stats: [["Comp/Att", "20/29"], ["Pass Yds", 294], ["Pass TD", 5], ["Rush TD", 1], ["Rush Yds", 13]],
     log: { 1: "3 car, 13 yds · 2-of-4 passing for 29 yards", 5: "120 passing yards (career high), 2 TD",
            6: "5-of-6 passing for 43 yards, TD", 7: "2 TD passes to Jack Houston · 1-yd TD run" } },
   { name: "Colby Medeiros", num: 11, pos: ["K"], grade: "Sr.", captain: true,
