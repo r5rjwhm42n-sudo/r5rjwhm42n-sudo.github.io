@@ -38,7 +38,8 @@ button { font: inherit; cursor: pointer; color: inherit; }
 .tb-links { margin-left: auto; white-space: nowrap; }
 .tb-links a { color: var(--white); text-decoration: none; margin-left: 18px; font-weight: 600; }
 .tb-links a:hover { text-decoration: underline; }
-.site-header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; background: var(--royal); color: var(--white); box-shadow: 0 2px 10px rgba(11, 31, 77, .25); }
+/* Faint line art for the sport behind the header bar */
+.site-header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; background: var(--royal) url(../images/header-lines.svg) center / auto 100% no-repeat; color: var(--white); box-shadow: 0 2px 10px rgba(11, 31, 77, .25); }
 .hbar { display: flex; align-items: center; justify-content: space-between; height: 70px; }
 .brand { display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--white); }
 .badge { width: 82px; height: 82px; border-radius: 50%; background: var(--white); display: grid; place-items: center; margin-bottom: -22px; box-shadow: 0 3px 10px rgba(11, 31, 77, .3); border: 3px solid var(--royal); outline: 2px solid var(--white); flex: none; }

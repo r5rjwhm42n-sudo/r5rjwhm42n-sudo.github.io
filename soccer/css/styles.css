@@ -43,7 +43,8 @@ button { font: inherit; cursor: pointer; color: inherit; }
 .teamswitch a { padding: 2px 14px 1px; border-radius: 4px; font-family: var(--display); font-weight: 700; font-size: 16px; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; color: #c5d4f5; transition: background .15s, color .15s; }
 .teamswitch a:hover { color: var(--white); }
 .teamswitch a.on { background: var(--white); color: var(--royal); }
-.site-header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; background: var(--royal); color: var(--white); box-shadow: 0 2px 10px rgba(11, 31, 77, .25); }
+/* Faint line art for the sport behind the header bar */
+.site-header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; background: var(--royal) url(../images/header-lines.svg) center / auto 100% no-repeat; color: var(--white); box-shadow: 0 2px 10px rgba(11, 31, 77, .25); }
 .hbar { display: flex; align-items: center; justify-content: space-between; height: 70px; }
 .brand { display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--white); }
 .badge { width: 82px; height: 82px; border-radius: 50%; background: var(--white); display: grid; place-items: center; margin-bottom: -22px; box-shadow: 0 3px 10px rgba(11, 31, 77, .3); border: 3px solid var(--royal); outline: 2px solid var(--white); flex: none; }
