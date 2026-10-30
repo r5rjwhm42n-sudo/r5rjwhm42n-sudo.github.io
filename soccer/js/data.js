@@ -376,7 +376,10 @@ const TEAMS = {
         summary: "Danvers poured in seven goals at Newell Stadium for a 7–1 win over Gloucester, its most in a game since the 9–1 rout of Winthrop in September.",
         scorers: [], assists: [],
         notes: [],
-        sources: [{ label: "Game replay on NFHS Network", url: "https://www.nfhsnetwork.com/events/gloucester-high-school-gloucester-ma/gamf6b6ca0e67" }] },
+        sources: [
+          { label: "Gloucester High scores, Oct. 28 (Good Morning Gloucester)", url: "https://goodmorninggloucester.com/2026/10/29/gloucester-high-school-fishermen-yesterdays-scores/" },
+          { label: "Game replay on NFHS Network", url: "https://www.nfhsnetwork.com/events/gloucester-high-school-gloucester-ma/gamf6b6ca0e67" }
+        ] },
 
       { id: 106, date: "2026-11-02T16:00", opponent: "Lynnfield", mascot: "Pioneers", home: false, league: false, site: "Lynnfield High School, Lynnfield",
         scrimmage: true, result: null, notes: ["Scrimmage after the regular season"] }
@@ -752,7 +755,10 @@ const TEAMS = {
         summary: "Gloucester shut out the Falcons 2–0 at Deering Stadium to sweep the season series, 12 days after a 2–1 win in Gloucester.",
         scorers: [], assists: [],
         notes: ["Second meeting — Gloucester won 2–1 on Oct. 16"],
-        sources: [{ label: "MaxPreps recap", url: "https://www.maxpreps.com/news/pd3lzQPSx0y9xV9rrXQEww/soccer-recap-gloucester-blanks-danvers.htm" }] },
+        sources: [
+          { label: "MaxPreps recap", url: "https://www.maxpreps.com/news/pd3lzQPSx0y9xV9rrXQEww/soccer-recap-gloucester-blanks-danvers.htm" },
+          { label: "Gloucester High scores, Oct. 28 (Good Morning Gloucester)", url: "https://goodmorninggloucester.com/2026/10/29/gloucester-high-school-fishermen-yesterdays-scores/" }
+        ] },
       { id: 18, date: "2026-10-30T18:30", opponent: "Essex Tech", mascot: "Hawks", home: true, league: false, site: MORSE, result: null, notes: [] }
     ],
 
