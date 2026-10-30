@@ -77,7 +77,7 @@ const SCHEDULE = [
     notes: [
       "Concord-Carlisle: 0 first downs, 15 total yards, 6 rushing",
       "Danvers had the ball for more than 33 of the 48 minutes",
-      "Offensive line: McGloin (LT), Travers (LG), Mahler (C), Kinney (RG), Haskell (RT)"
+      "Offensive line: McGloin (LT), Travers (LG), Maylor (C), Kinney (RG), Haskell (RT)"
     ],
     sources: [
       { label: "Salem News recap", url: "https://www.salemnews.com/sports/trio-of-100-yard-runners-dominant-defense-propel-danvers-to-season-opening-win/article_d2a33c47-f2a5-4bca-b56d-0f0ed3b1b565.html" },
@@ -327,7 +327,7 @@ const PLAYERS = [
     stats: [], log: { 1: "Started at left tackle" } },
   { name: "Logan Travers", num: null, pos: ["OL"], grade: null, captain: false,
     stats: [], log: { 1: "Started at left guard" } },
-  { name: "Cole Mahler", num: null, pos: ["OL"], grade: null, captain: false,
+  { name: "Cole Maylor", num: null, pos: ["OL"], grade: null, captain: false,
     stats: [], log: { 1: "Started at center" } },
   { name: "Thomas Pinto", num: null, pos: ["TE"], grade: null, captain: false,
     stats: [], log: {} },
