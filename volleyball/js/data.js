@@ -464,9 +464,32 @@ const SCHEDULE = [
       { label: "MaxPreps recap", url: "https://www.maxpreps.com/news/s9bNOg5iEkuLQmPBAGsJgw/volleyball-recap-danvers-wins-going-away-against-masconomet-regional--how-to-watch.htm" },
       { label: "Match replay on NFHS Network", url: "https://www.nfhsnetwork.com/events/danvers-high-school-danvers-ma/gam76f9d68549" }
     ] },
-  { id: 20, date: "2026-10-29T17:15", opponent: "Salem", mascot: "Witches", home: true, league: true, site: HOME, result: null,
-    notes: ["Regular-season finale"],
-    sources: [{ label: "Watch live on NFHS Network", url: "https://www.nfhsnetwork.com/events/danvers-high-school-danvers-ma/gam3e8529ea45" }] },
+  { id: 20, date: "2026-10-29T17:15", opponent: "Salem", mascot: "Witches", home: true, league: true, site: HOME,
+    result: "W", us: 3, them: 1,
+    sets: [[21, 25], [26, 24], [25, 20], [25, 22]],
+    summary: "Danvers dropped the first set to Salem, 25–21, then won the next three, 26–24, 25–20 and 25–22, to close the regular season with a third straight win. Gabrielle Lindeman led with 11 kills and 20 digs, Kendall Murphy added nine kills, Lauren Garofalo served eight aces, and Hadley Brown dug 31 balls with 39 serve receptions.",
+    box: {
+      "Lauren Garofalo":    [4, 2, 8, 0, 15, 0, 15, 4, 18],
+      "Sienna Lynch":       [3, 5, 0, 2, 2, 0, 17, 3, 1],
+      "Gabrielle Lindeman": [4, 11, 2, 0, 20, 2, 42, 1, 25],
+      "Hadley Brown":       [4, 2, 3, 0, 31, 5, 6, 2, 39],
+      "Emma Coffin":        [4, 2, 0, 0, 7, 0, 9, 2, 2],
+      "Brooke Bernard":     [2, 5, 0, 0, 0, 0, 15, 6, 0],
+      "Tess Crowley":       [3, 4, 0, 0, 2, 0, 9, 1, 2],
+      "Kendall Murphy":     [4, 9, 0, 0, 5, 0, 29, 2, 0],
+      "Gracie Monteiro":    [4, 7, 0, 0, 2, 0, 29, 4, 0],
+      "Hannah Tersolo":     [4, 0, 2, 0, 23, 20, 0, 0, 0],
+      "Lila Osborne":       [4, 0, 5, 0, 14, 15, 0, 0, 0]
+    },
+    notes: [
+      "Regular-season finale",
+      "15–5 overall",
+      "121 digs as a team"
+    ],
+    sources: [
+      { label: "MaxPreps box score", url: MP + "danvers-vs-salem/10-29-2026/?c=d1042efb-18c7-415c-ba64-dcaaf37f974b" },
+      { label: "Match replay on NFHS Network", url: "https://www.nfhsnetwork.com/events/danvers-high-school-danvers-ma/gam3e8529ea45" }
+    ] },
   { id: 104, date: "2026-10-30T16:00", opponent: "North Andover", mascot: "Scarlet Knights", home: true, league: false, site: HOME,
     scrimmage: true, result: null, notes: [] }
 ];
