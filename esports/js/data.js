@@ -172,7 +172,8 @@ const STATE_LEADERS = [
 
 const PLAYERS = [
   { name: "Darrian Harris", grade: null, titles: ["rl"], captain: false, note: "4th in the state in goals per shot (70%)" },
-  { name: "Julian LaMontagne", grade: null, titles: ["rl"], captain: false, note: "5th in the state in score per game (381.67)" }
+  { name: "Julian LaMontagne", grade: null, titles: ["rl"], captain: false, note: "5th in the state in score per game (381.67)" },
+  { name: "Leo Zou", grade: null, titles: [], captain: false }
 ];
 
 /* ---------------------------------------------------------------------
