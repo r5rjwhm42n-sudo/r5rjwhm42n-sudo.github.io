@@ -9,11 +9,14 @@
      · adviser Ms. Kristina Aste-Mayer, rooms A120 and A328, meeting
        times vary; PC and Nintendo Switch games; state tournament each year
 
-   STILL NEEDED FROM THE TEAM (nothing below was published anywhere):
-     · confirmation that Ms. Aste-Mayer still runs the Fall 2026 team
-     · which games the Falcons actually field (GAMES)
-     · the roster (PLAYERS)
-     · opponents and scores for every match (SCHEDULE)
+   FROM MS. ASTE-MAYER (email, Oct. 31): the Falcons play Super Smash
+   Bros. Ultimate and Rocket League, as "Falcons SURGE"; opponents and
+   scores for Weeks 1–6, the MSAA standings, and the two Falcons on the
+   state Rocket League leaderboards.
+
+   STILL NEEDED FROM THE TEAM:
+     · the full roster (PLAYERS)
+     · set-by-set and player numbers for each match (sets / stats below)
      · past seasons, playoff runs and when the program started (SEASONS,
        BANNERS, MILESTONES)
    ===================================================================== */
@@ -28,7 +31,8 @@ const TEAM = {
   season: 2026,
   seasonLabel: "Fall 2026",
   location: "Danvers, MA",
-  league: "MSAA Esports",          // the state league, run with PlayVS — to confirm with the coach
+  league: "MSAA Esports",          // the state league, run with PlayVS
+  teamName: "Falcons SURGE",       // what the Falcons go by in the league
   platform: "PlayVS",
   matchTime: "3:30 PM",            // the league's weekday start time for Massachusetts
   headCoach: "Kristina Aste-Mayer",   // E Sports adviser in the 2025–26 activities guide
@@ -51,9 +55,9 @@ const TEAM = {
 
 /* ---------------------------------------------------------------------
    GAMES
-   The three games the MSAA runs state leagues in for high schools.
-   Delete a block if the Falcons do not field that game — its matches,
-   records and roster section disappear with it.
+   The games the Falcons field. (The MSAA also runs Mario Kart 8 Deluxe;
+   Danvers doesn't have a team in it this fall.) Delete a block and its
+   matches, records and roster section disappear with it.
    id:     short code used in SCHEDULE and PLAYERS
    size:   players in the lineup at one time
    --------------------------------------------------------------------- */
@@ -66,12 +70,7 @@ const GAMES = [
   { id: "rl", name: "Rocket League", short: "Rocket League", day: "Thursday", size: 3, system: "PC or console",
     series: "Best of 5 games",
     how: "Three-on-three car soccer. Games are five minutes, with sudden-death overtime if it is tied. The regular season is best of five games; playoff series go to best of seven.",
-    rules: PLAYVS + "4919221-rocket-league-rulebook" },
-
-  { id: "mk", name: "Mario Kart 8 Deluxe", short: "Mario Kart", day: "Thursday", size: 4, system: "Nintendo Switch",
-    series: "Best of 3 games",
-    how: "Four racers a side. Each game is six races, every finishing place is worth points, and the team with more points takes the game. First to two games wins the match.",
-    rules: PLAYVS + "5872507-mario-kart-8-deluxe-rulebook" }
+    rules: PLAYVS + "4919221-rocket-league-rulebook" }
 ];
 
 /* ---------------------------------------------------------------------
@@ -86,8 +85,7 @@ const GAMES = [
    week:     regular-season week number, or use round: "Quarterfinal" etc.
    opponent: the other school, or null until it is known
    result:   "W" | "L" | null (null = not played / no score typed in yet)
-   us / them: the series score (Smash: sets won · Rocket League and
-              Mario Kart: games won)
+   us / them: the series score as the team reports it
    off:      "Break week" (or "Forfeit", "Not fielded") — kept on the list,
              left out of the record
    summary:  a sentence or two for the recap
@@ -110,35 +108,25 @@ const GAMES = [
    --------------------------------------------------------------------- */
 const SCHEDULE = [
   /* Super Smash Bros. Ultimate — Wednesdays */
-  { id: 101, game: "ssbu", week: 1, date: "2026-09-23T15:30", opponent: null, result: null },
-  { id: 102, game: "ssbu", week: 2, date: "2026-09-30T15:30", opponent: null, result: null },
-  { id: 103, game: "ssbu", week: 3, date: "2026-10-07T15:30", opponent: null, result: null },
-  { id: 104, game: "ssbu", week: 4, date: "2026-10-14T15:30", opponent: null, result: null },
-  { id: 105, game: "ssbu", week: 5, date: "2026-10-21T15:30", opponent: null, result: null },
-  { id: 106, game: "ssbu", week: 6, date: "2026-10-28T15:30", opponent: null, result: null },
+  { id: 101, game: "ssbu", week: 1, date: "2026-09-23T15:30", opponent: "Tewksbury Memorial", result: "W", us: 3, them: 2 },
+  { id: 102, game: "ssbu", week: 2, date: "2026-09-30T15:30", opponent: "Oliver Ames", result: "L", us: 0, them: 6 },
+  { id: 103, game: "ssbu", week: 3, date: "2026-10-07T15:30", opponent: "Natick", result: "L", us: 4, them: 7 },
+  { id: 104, game: "ssbu", week: 4, date: "2026-10-14T15:30", opponent: "Attleboro", result: "L", us: 2, them: 3 },
+  { id: 105, game: "ssbu", week: 5, date: "2026-10-21T15:30", opponent: "Littleton", result: "W", us: 6, them: 4 },
+  { id: 106, game: "ssbu", week: 6, date: "2026-10-28T15:30", opponent: "Burlington", result: "W", us: 7, them: 5 },
   { id: 107, game: "ssbu", week: 7, date: "2026-11-04T15:30", opponent: null, result: null },
   { id: 108, game: "ssbu", week: 8, date: "2026-11-11T15:30", opponent: null, result: null,
     notes: ["Veterans Day — the league does not move holiday matches on its own, so the coaches agree on a new time"] },
 
   /* Rocket League — Thursdays */
-  { id: 201, game: "rl", week: 1, date: "2026-09-24T15:30", opponent: null, result: null },
-  { id: 202, game: "rl", week: 2, date: "2026-10-01T15:30", opponent: null, result: null },
-  { id: 203, game: "rl", week: 3, date: "2026-10-08T15:30", opponent: null, result: null },
-  { id: 204, game: "rl", week: 4, date: "2026-10-15T15:30", opponent: null, result: null },
-  { id: 205, game: "rl", week: 5, date: "2026-10-22T15:30", opponent: null, result: null },
-  { id: 206, game: "rl", week: 6, date: "2026-10-29T15:30", opponent: null, result: null },
+  { id: 201, game: "rl", week: 1, date: "2026-09-24T15:30", opponent: "Tewksbury Memorial", result: "W", us: 3, them: 0 },
+  { id: 202, game: "rl", week: 2, date: "2026-10-01T15:30", opponent: "Dracut", result: "W", us: 6, them: 0 },
+  { id: 203, game: "rl", week: 3, date: "2026-10-08T15:30", opponent: "Natick", result: "W", us: 7, them: 4 },
+  { id: 204, game: "rl", week: 4, date: "2026-10-15T15:30", opponent: "Leicester", result: "W", us: 3, them: 1 },
+  { id: 205, game: "rl", week: 5, date: "2026-10-22T15:30", opponent: "Littleton", result: "L", us: 0, them: 3 },
+  { id: 206, game: "rl", week: 6, date: "2026-10-29T15:30", opponent: "Tri-County", result: "L", us: 0, them: 3 },
   { id: 207, game: "rl", week: 7, date: "2026-11-05T15:30", opponent: null, result: null },
-  { id: 208, game: "rl", week: 8, date: "2026-11-12T15:30", opponent: null, result: null },
-
-  /* Mario Kart 8 Deluxe — Thursdays */
-  { id: 301, game: "mk", week: 1, date: "2026-09-24T15:30", opponent: null, result: null },
-  { id: 302, game: "mk", week: 2, date: "2026-10-01T15:30", opponent: null, result: null },
-  { id: 303, game: "mk", week: 3, date: "2026-10-08T15:30", opponent: null, result: null },
-  { id: 304, game: "mk", week: 4, date: "2026-10-15T15:30", opponent: null, result: null },
-  { id: 305, game: "mk", week: 5, date: "2026-10-22T15:30", opponent: null, result: null },
-  { id: 306, game: "mk", week: 6, date: "2026-10-29T15:30", opponent: null, result: null },
-  { id: 307, game: "mk", week: 7, date: "2026-11-05T15:30", opponent: null, result: null },
-  { id: 308, game: "mk", week: 8, date: "2026-11-12T15:30", opponent: null, result: null }
+  { id: 208, game: "rl", week: 8, date: "2026-11-12T15:30", opponent: null, result: null }
 ];
 
 /* The road after the regular season. Dates are from the league platform's
@@ -165,9 +153,27 @@ const POSTSEASON_NOTE = "In Spring 2026 the MSAA took the top 32 teams in Smash,
    Example:
      { name: "First Last", tag: "FalconOne", grade: "Jr.", titles: ["rl"], captain: true, main: "Striker" },
    --------------------------------------------------------------------- */
-const STATS_AS_OF = null;   // e.g. "Through Week 4 (Oct. 15, 2026)"
+const STATS_AS_OF = "Through Week 6 (Oct. 29, 2026)";
 
-const PLAYERS = [];
+/* MSAA state standings (PlayVS), as the team sent them. pos = place in
+   Massachusetts. OMW% = opponents' match-win percentage and OOMW% =
+   their opponents' — the league's strength-of-schedule tiebreakers. */
+const STANDINGS_AS_OF = "Oct. 31, 2026";
+const STANDINGS = [
+  { game: "ssbu", team: "DHS Falcons SURGE", pos: 24, match: "3–3", series: "13–12", games: "29–28", omw: "48.28%", oomw: "50%" },
+  { game: "rl", team: "Falcons SURGE", pos: 5, match: "4–2", games: "12–7", omw: "66.67%", oomw: "50.88%" }
+];
+
+/* Falcons on the MSAA statewide leaderboards: [game, stat, place, player, value] */
+const STATE_LEADERS = [
+  ["rl", "Goals per shot", 4, "Darrian Harris", "70.00%"],
+  ["rl", "Score per game", 5, "Julian LaMontagne", "381.67"]
+];
+
+const PLAYERS = [
+  { name: "Darrian Harris", grade: null, titles: ["rl"], captain: false, note: "4th in the state in goals per shot (70%)" },
+  { name: "Julian LaMontagne", grade: null, titles: ["rl"], captain: false, note: "5th in the state in score per game (381.67)" }
+];
 
 /* ---------------------------------------------------------------------
    HISTORY
@@ -186,7 +192,8 @@ const MILESTONES = [
   { year: "Spring 2024", text: "Mario Kart 8 Deluxe gets its first state champion, Sutton." },
   { year: "May 2026", text: "The first New England Interscholastic Esports Championships are held, with the finals played in person at Southern New Hampshire University's esports arena in Manchester." },
   { year: "2025–26", text: "The DHS activities guide lists E Sports, advised by English teacher Kristina Aste-Mayer: PC and Nintendo Switch games, with a state tournament every year." },
-  { year: "Fall 2026", text: "Esports is listed with Danvers High's fall and spring teams." }
+  { year: "Fall 2026", text: "Esports is listed with Danvers High's fall and spring teams." },
+  { year: "Fall 2026", text: "Falcons SURGE go 4–2 in Rocket League through six weeks, fifth in the state standings." }
 ];
 
 /* MSAA state finals, newest first: [champion, runner-up] for each game.

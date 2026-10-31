@@ -36,6 +36,10 @@
   const title = (m) => `${GAME[m.game].short} ${m.opponent ? `vs ${m.opponent}` : stage(m)}`;
   const outcome = { W: "Win", L: "Loss" };
   const plural = (n, w) => `${n} ${w}${n === 1 ? "" : "s"}`;
+  const ord = (n) => n + (["th", "st", "nd", "rd"][(n % 100 - 20) % 10] || ["th", "st", "nd", "rd"][n % 100] || "th");
+  /* MSAA state standings and Falcons on the statewide leaderboards, for the games the team plays */
+  const STAND = typeof STANDINGS === "undefined" ? [] : STANDINGS.filter((s) => GAME[s.game]);
+  const BOARD = typeof STATE_LEADERS === "undefined" ? [] : STATE_LEADERS.filter(([g]) => GAME[g]);
   const or = (v) => esc(v || "");
   const tile = ([k, v, d]) => `<div class="card tile"><div class="k">${k}</div><div class="v count ${String(v).length > 8 ? "long" : ""}">${v}</div><div class="d">${d}</div></div>`;
   const gameList = GAMES.map((g) => g.short).join(" · ");
@@ -303,9 +307,15 @@
         </div>
         <div class="countdown" id="countdown"></div>
       </button>` : `<div class="card next-game"><div><div class="k">Season complete</div><h3>Final record ${record}</h3></div></div>`) +
-      tile(played.length
-        ? ["Games won", `${gamesWon}–${gamesLost}`, `Across ${played.length} series`]
-        : ["Games", GAMES.length, gameList]);
+      (STAND.length
+        ? (() => {
+            const [best, ...rest] = [...STAND].sort((a, b) => a.pos - b.pos);
+            return `<a class="card tile lift" href="stats.html#standings-block"><div class="k">State standings</div><div class="v count">${ord(best.pos)}</div>
+              <div class="d">in ${esc(GAME[best.game].short)}${rest.map((s) => ` · ${ord(s.pos)} in ${esc(GAME[s.game].short)}`).join("")}</div></a>`;
+          })()
+        : tile(played.length
+          ? ["Games won", `${gamesWon}–${gamesLost}`, `Across ${played.length} series`]
+          : ["Games", GAMES.length, gameList]));
 
     $("#home-games-cards").innerHTML = gameCards();
     $("#about").innerHTML = `
@@ -345,6 +355,26 @@
       `<strong>League:</strong> ${esc(TEAM.league)} on ${esc(TEAM.platform)}`
     ].filter(Boolean).join(" · ");
     if (TEAM.headCoach) $("#join-text").textContent = `Esports runs in the fall and the spring and is open to every grade and skill level. Talk to ${TEAM.coachTitle || "Coach"} ${TEAM.headCoach}${TEAM.room ? ` in ${TEAM.room.replace(/^Rooms? /, "").replace(" and ", " or ")}` : ""}.`;
+    if (STAND.length) {
+      $("#standings-asof").textContent = `As of ${STANDINGS_AS_OF}`;
+      $("#standings").innerHTML = STAND.map((s) => `
+        <div class="card standing">
+          <div class="st-top"><span>${esc(GAME[s.game].name)}</span><span>${esc(s.team)}</span></div>
+          <div class="st-body">
+            <div class="st-pos"><b>${ord(s.pos)}</b><span>in Massachusetts</span></div>
+            <dl>
+              <div><dt>Matches</dt><dd>${esc(s.match)}</dd></div>
+              ${s.series ? `<div><dt>Series</dt><dd>${esc(s.series)}</dd></div>` : ""}
+              <div><dt>Games</dt><dd>${esc(s.games)}</dd></div>
+              <div><dt>Opp. win %</dt><dd>${esc(s.omw)}</dd></div>
+            </dl>
+          </div>
+          ${BOARD.filter(([g]) => g === s.game).map(([, stat, place, name, value]) =>
+            `<div class="st-leader"><b>${ord(place)}</b> in the state in ${esc(stat.toLowerCase())}: <strong>${esc(name)}</strong>, ${esc(value)}</div>`).join("")}
+        </div>`).join("");
+      $("#standings-note").textContent = "From the MSAA standings on PlayVS, as the team sent them. Opp. win % is the league's strength-of-schedule tiebreaker: how often the Falcons' opponents win.";
+      $("#standings-block").hidden = false;
+    }
     $("#leaders").innerHTML = leaders();
     $("#leaders").closest("section").hidden = !$("#leaders").innerHTML;
     /* No roster published yet: leave the lineup and player sections out */
