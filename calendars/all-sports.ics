@@ -1844,10 +1844,11 @@ UID:boys-soccer-18@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261030T183000
 DURATION:PT2H
-SUMMARY:Danvers Boys Soccer vs Essex Tech
+SUMMARY:Danvers Boys Soccer vs Essex Tech (L 0–4)
 LOCATION:Morse Field\, Danvers
-DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
- cs.org/soccer/schedule.html?team=boys
+DESCRIPTION:Non-league\nFinal: Danvers 0\, Essex Tech 4\nEssex Tech shut ou
+ t the Falcons 4–0 at Morse Field in the season finale.\nSchedule and res
+ ults: https://danversfalconsathletics.org/soccer/schedule.html?team=boys
 URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
 END:VEVENT
 BEGIN:VEVENT
@@ -1855,10 +1856,16 @@ UID:football-8@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261030T190000
 DURATION:PT2H30M
-SUMMARY:Danvers Football at Peabody
+SUMMARY:Danvers Football at Peabody (W 17–14)
 LOCATION:Peabody Veterans Memorial Stadium
-DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
- alconsathletics.org/football/schedule.html
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 17\, Peabody 14\nDanver
+ s clinched the NEC Dunn Division title and a perfect 7–0 regular season.
+  Zach Fultz scored on the opening drive\, Peabody went ahead 14–10 on Dr
+ ake Dixon's 3-yard run late in the third quarter\, and four minutes later 
+ senior Colby Medeiros returned a punt 66 yards for his first varsity touch
+ down. The defense held the Tanners scoreless the rest of the way\, and a l
+ ate Nick Xerras sack forced third-and-long.\nSchedule and results: https:/
+ /danversfalconsathletics.org/football/schedule.html
 URL:https://danversfalconsathletics.org/football/schedule.html
 END:VEVENT
 BEGIN:VEVENT

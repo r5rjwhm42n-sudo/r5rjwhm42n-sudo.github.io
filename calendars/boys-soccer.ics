@@ -272,10 +272,11 @@ UID:boys-soccer-18@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261030T183000
 DURATION:PT2H
-SUMMARY:Danvers Boys Soccer vs Essex Tech
+SUMMARY:Danvers Boys Soccer vs Essex Tech (L 0–4)
 LOCATION:Morse Field\, Danvers
-DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
- cs.org/soccer/schedule.html?team=boys
+DESCRIPTION:Non-league\nFinal: Danvers 0\, Essex Tech 4\nEssex Tech shut ou
+ t the Falcons 4–0 at Morse Field in the season finale.\nSchedule and res
+ ults: https://danversfalconsathletics.org/soccer/schedule.html?team=boys
 URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
 END:VEVENT
 END:VCALENDAR

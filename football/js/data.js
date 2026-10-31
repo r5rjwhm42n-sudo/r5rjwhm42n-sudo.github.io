@@ -248,7 +248,21 @@ const SCHEDULE = [
       { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/football/game/danvers-vs-salem/10-23-2026/?c=26259630-cdea-40b0-ba76-b8203791a81c" }
     ]
   },
-  { id: 8, date: "2026-10-30T19:00", opponent: "Peabody", mascot: "Tanners", home: false, league: true, site: "Peabody Veterans Memorial Stadium", result: null,
+  { id: 8, date: "2026-10-30T19:00", opponent: "Peabody", mascot: "Tanners", home: false, league: true, site: "Peabody Veterans Memorial Stadium",
+    result: "W", us: 17, them: 14,
+    summary: "Danvers clinched the NEC Dunn Division title and a perfect 7–0 regular season. Zach Fultz scored on the opening drive, Peabody went ahead 14–10 on Drake Dixon's 3-yard run late in the third quarter, and four minutes later senior Colby Medeiros returned a punt 66 yards for his first varsity touchdown. The defense held the Tanners scoreless the rest of the way, and a late Nick Xerras sack forced third-and-long.",
+    scoring: [
+      { q: "1st", play: "Zach Fultz 4 run, on the opening drive (Colby Medeiros kick)", score: "7–0" },
+      { q: "—", play: "Colby Medeiros field goal", score: null },
+      { q: "—", play: "Peabody: Dominik Mercier pass to Mark Mendonca", score: null },
+      { q: "3rd · 5:35", play: "Peabody: Drake Dixon 3 run", score: "10–14" },
+      { q: "3rd", play: "Colby Medeiros 66 punt return (Medeiros kick)", score: "17–14" }
+    ],
+    performers: [
+      { name: "Colby Medeiros", line: "66-yd punt return TD (his first varsity TD) · FG · 2 extra points" },
+      { name: "Zach Fultz", line: "4-yd TD run on the opening drive" },
+      { name: "Nick Xerras", line: "Late sack on Dominik Mercier to force 3rd-and-long" }
+    ],
     tag: "NEC Title Game",
     /* spotlight: a big-game banner across the top of the hub and the football home page.
        It shows for the week before the game and for two days after the final. The
@@ -256,22 +270,24 @@ const SCHEDULE = [
     spotlight: {
       kicker: "NEC Title Game",
       blurb: "A Danvers win clinches the Northeastern Conference title, the program's first since 2019.",
-      oppRecord: "6–1",
+      oppRecord: "6–2",   // Peabody's record after the game
       watch: "https://www.youtube.com/results?search_query=Peabody+TV+Danvers+vs+Peabody+football+live",   // Peabody TV's YouTube broadcast
       tickets: { label: "Tickets", note: "Peabody sells tickets on GoFan", url: "https://gofan.co/" },
-      won: "NEC Champions",
+      won: "NEC Dunn Division Champions",
       lost: "Final"
     },
     notes: [
-      "NEC title game: a Danvers win clinches the conference championship",
-      "Last NEC game of the regular season",
-      "Peabody comes in 6–1 (2–1 NEC); QB Dom Mercier leads the area with 698 rushing yards and 15 TDs and has thrown for 954 yards",
-      "Danvers has allowed 27 points in six games, with three straight shutouts",
-      "Danvers won last year's meeting 30–12"
+      "Clinched the NEC Dunn Division title, 3–0 in league play",
+      "A perfect 7–0 regular season",
+      "Peabody's only lead, 14–10, lasted about four minutes",
+      "Peabody coach Mark Bettencourt: \"Offense and defense didn't decide this game, it happened on special teams with the punt return.\"",
+      "Danvers came in No. 17 in the Boston Globe Top 20; Peabody came in 6–1"
     ],
     sources: [
-      { label: "Watch live on Peabody TV (YouTube)", url: "https://www.youtube.com/results?search_query=Peabody+TV+Danvers+vs+Peabody+football+live" },
-      { label: "Boston Globe notebook", url: "https://www.bostonglobe.com/2026/10/26/sports/high-school-football-danvers/" }
+      { label: "Boston Globe game story", url: "https://www.bostonglobe.com/2026/10/30/sports/danvers-peabody-football/" },
+      { label: "Daily Item game story", url: "https://itemlive.com/2026/10/30/peabody-comes-up-short-against-unbeaten-danvers/" },
+      { label: "New England Football Journal", url: "https://nefootballjournal.com/danvers-17-peabody-14-falcons-defense-holds-on-against-tanners/" },
+      { label: "MaxPreps recap", url: "https://www.maxpreps.com/news/zjHXfVc68k2APXOq1YAq7g/football-recap-danvers-edges-past-peabody-veterans-memorial.htm" }
     ] },
   { id: 9, date: "2026-11-26T10:00", opponent: "Gloucester", mascot: "Fishermen", home: false, league: false, site: "Newell Stadium, Gloucester", result: null,
     notes: ["Thanksgiving Day rivalry, played every Thanksgiving morning since 1964"],
@@ -296,13 +312,13 @@ const SCHEDULE = [
    scores and recaps, so it is PARTIAL.
    Replace with the team's official numbers when you get them.
    --------------------------------------------------------------------- */
-const STATS_AS_OF = "Through 6 games (Oct. 23, 2026)";
+const STATS_AS_OF = "Through 7 games (Oct. 30, 2026) · yardage through Oct. 23";
 
 const PLAYERS = [
   { name: "Zach Fultz", num: null, pos: ["RB", "DB"], grade: "Jr.", captain: false,
-    stats: [["Carries", 99], ["Rush Yds", 646], ["Rush TD", 11], ["Points", 66]],
+    stats: [["Carries", 99], ["Rush Yds", 646], ["Rush TD", 12], ["Points", 72]],
     log: { 1: "14 car, 121 yds, 23-yd TD run", 2: "56 rushing yds, TD runs of 1 and 2 yards", 3: "101 rushing yds, 3 TD",
-           5: "125 rushing yds, 2 TD", 6: "15 car, 179 yds, TD runs of 1 and 4 yards" } },
+           5: "125 rushing yds, 2 TD", 6: "15 car, 179 yds, TD runs of 1 and 4 yards", 8: "4-yd TD run on the opening drive" } },
   { name: "Jack Houston", num: null, pos: ["RB", "LB"], grade: "Sr.", captain: true,
     stats: [["Carries", 86], ["Rush Yds", 577], ["Rush TD", 4], ["Rec Yds", 231], ["Rec TD", 5], ["Points", 54]],
     log: { 1: "16 car, 106 yds", 2: "79 rushing yds · 2 catches for 45 yards", 3: "135 rushing yds, 2 TD",
@@ -316,16 +332,18 @@ const PLAYERS = [
     log: { 1: "3 car, 13 yds · 2-of-4 passing for 29 yards", 5: "120 passing yards (career high), 2 TD",
            6: "5-of-6 passing for 43 yards, TD", 7: "2 TD passes to Jack Houston · 1-yd TD run" } },
   { name: "Colby Medeiros", num: 11, pos: ["K"], grade: "Sr.", captain: true,
-    stats: [["FG Made", 4], ["Long FG", 40], ["INT", 1]],
+    stats: [["FG Made", 5], ["Long FG", 40], ["INT", 1], ["Punt Ret TD", 1]],
     log: { 1: "19-yd FG · extra point", 2: "35-yd FG · onside kick to open the 2nd half", 3: "36-yd FG · interception",
-           5: "40-yd FG on the last play of the half", 6: "5-for-5 on extra points" } },
+           5: "40-yd FG on the last play of the half", 6: "5-for-5 on extra points",
+           8: "66-yard punt return TD, his first varsity touchdown · FG · 2 extra points" } },
   { name: "Matt Nikiforov", num: null, pos: ["FB", "LB"], grade: "Sr.", captain: false,
     stats: [["Rush TD", 1], ["Rec", 1], ["Fum Rec", 1]],
     log: { 1: "1 catch for 8 yards · lead blocker for three 100-yard rushers", 5: "1-yd TD run, his first career touchdown",
            6: "Fumble recovery" } },
   { name: "Nick Xerras", num: 10, pos: ["DE"], grade: "Sr.", captain: true,
-    stats: [["Blocked Punts", 1], ["INT", 1], ["Def TD", 1]],
-    log: { 2: "Blocked punt in the 4th quarter", 6: "Pressure off the edge all night", 7: "41-yard interception return for a TD" } },
+    stats: [["Blocked Punts", 1], ["INT", 1], ["Def TD", 1], ["Sacks", 1]],
+    log: { 2: "Blocked punt in the 4th quarter", 6: "Pressure off the edge all night", 7: "41-yard interception return for a TD",
+           8: "Late sack on Dominik Mercier to force 3rd-and-long" } },
   { name: "Hunter DeDominicis", num: 8, pos: ["DE", "OL"], grade: null, captain: true,
     stats: [["Fum Rec", 1]],
     log: { 5: "Fumble recovery · filled in at right tackle", 6: "Pressure off the edge" } },
@@ -377,7 +395,8 @@ const TITLES = [
   { year: 2005, label: "NEC Champions" },
   { year: 2013, label: "NEC Champions" },
   { year: 2019, label: "NEC Champions" },
-  { year: 2023, label: "MIAA D5 Final Four" }
+  { year: 2023, label: "MIAA D5 Final Four" },
+  { year: 2026, label: "NEC Dunn Division Champions" }
 ];
 
 /* w/l = overall, lw/ll = league. note is optional. */
@@ -413,7 +432,8 @@ const MILESTONES = [
   { year: "1969", text: "The Falcons go 8–1, their best record in 28 years, and set a then-school record with 269 points." },
   { year: "2004–05", text: "Back-to-back NEC championships." },
   { year: "2019", text: "A 9–2 season and a perfect 4–0 league record deliver another NEC title." },
-  { year: "2023", text: "An 8–4 run carries Danvers to the MIAA Division 5 Final Four." }
+  { year: "2023", text: "An 8–4 run carries Danvers to the MIAA Division 5 Final Four." },
+  { year: "2026", text: "A perfect 7–0 regular season and the NEC Dunn Division title, clinched 17–14 at Peabody on Colby Medeiros's 66-yard punt return." }
 ];
 
 const LEGENDS = [

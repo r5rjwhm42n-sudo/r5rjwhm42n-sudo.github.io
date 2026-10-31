@@ -584,7 +584,7 @@ const TEAMS = {
       recordBook: "https://docs.google.com/spreadsheets/d/18a7tVEOYReMH80QCl6_rTqgiZfDyWE195MJkjmbHhLQ/edit?gid=1756060361"
     },
 
-    statsAsOf: "Through 17 games (Oct. 28, 2026)",
+    statsAsOf: "Season complete: 18 games (Oct. 30, 2026)",
 
     schedule: [
       /* Scrimmages — listed on the school's schedule, not counted in the record */
@@ -759,7 +759,13 @@ const TEAMS = {
           { label: "MaxPreps recap", url: "https://www.maxpreps.com/news/pd3lzQPSx0y9xV9rrXQEww/soccer-recap-gloucester-blanks-danvers.htm" },
           { label: "Gloucester High scores, Oct. 28 (Good Morning Gloucester)", url: "https://goodmorninggloucester.com/2026/10/29/gloucester-high-school-fishermen-yesterdays-scores/" }
         ] },
-      { id: 18, date: "2026-10-30T18:30", opponent: "Essex Tech", mascot: "Hawks", home: true, league: false, site: MORSE, result: null, notes: [] }
+      { id: 18, date: "2026-10-30T18:30", opponent: "Essex Tech", mascot: "Hawks", home: true, league: false, site: MORSE,
+        result: "L", us: 0, them: 4,
+        halves: null,
+        summary: "Essex Tech shut out the Falcons 4–0 at Morse Field in the season finale.",
+        scorers: [], assists: [],
+        notes: ["Season finale", "Essex Tech improved to 10–7–2"],
+        sources: [{ label: "MaxPreps recap", url: "https://www.maxpreps.com/news/HzjOW2fcQ0yZd4tixJrcWg/soccer-recap-essex-north-shore-agric-and-tech-school-holds-danvers-scoreless.htm" }] }
     ],
 
     /* -----------------------------------------------------------------
