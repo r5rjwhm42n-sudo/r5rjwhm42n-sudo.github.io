@@ -257,7 +257,7 @@ const SCHEDULE = [
       kicker: "NEC Title Game",
       blurb: "A Danvers win clinches the Northeastern Conference title, the program's first since 2019.",
       oppRecord: "6–1",
-      watch: REPLAY + "QnJvYWRjYXN0NDUzMDAzOQ%3D%3D",
+      watch: "https://www.youtube.com/results?search_query=Peabody+TV+Danvers+vs+Peabody+football+live",   // Peabody TV's YouTube broadcast
       tickets: { label: "Tickets", note: "Peabody sells tickets on GoFan", url: "https://gofan.co/" },
       won: "NEC Champions",
       lost: "Final"
@@ -270,7 +270,7 @@ const SCHEDULE = [
       "Danvers won last year's meeting 30–12"
     ],
     sources: [
-      { label: "Livestream on Hudl", url: REPLAY + "QnJvYWRjYXN0NDUzMDAzOQ%3D%3D" },
+      { label: "Watch live on Peabody TV (YouTube)", url: "https://www.youtube.com/results?search_query=Peabody+TV+Danvers+vs+Peabody+football+live" },
       { label: "Boston Globe notebook", url: "https://www.bostonglobe.com/2026/10/26/sports/high-school-football-danvers/" }
     ] },
   { id: 9, date: "2026-11-26T10:00", opponent: "Gloucester", mascot: "Fishermen", home: false, league: false, site: "Newell Stadium, Gloucester", result: null,
