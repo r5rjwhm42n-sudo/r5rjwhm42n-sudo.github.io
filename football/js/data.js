@@ -26,7 +26,13 @@ const TEAM = {
               { seeds: [3, 14], score: [28, 7], date: "2026-11-06T19:00", site: "Morse Field, Danvers" }
               note: "OT", "2OT" or "PKs 4–3" (optional) · winner: the winning seed, only when the score is tied
      Add each game once it's set (date and site) and its score once it's played. */
-  bracket: null,
+  bracket: {
+    url: "https://www.miaa.net/miaa-football-2026-division-4-state-tournament",
+    seeds: ["Scituate", "Tewksbury Memorial", "Danvers", "Duxbury", "Walpole", "Tantasqua Regional",
+            "Shepherd Hill Regional", "Grafton", "South High Community", "Canton", "Wayland",
+            "Westfield", "Nashoba Regional", "Bedford", "Wakefield Memorial", "Ashland"],
+    games: []
+  },
   headCoach: "Ryan Nolan",
   assistants: ["Bryan Ibbitson", "Jon Babula", "Angel Adamas", "Tom Walfield", "Kyle Brennan",
                "Andrew Barton", "Sean Dunn", "Jeff Smith", "Tom Ladd"],
