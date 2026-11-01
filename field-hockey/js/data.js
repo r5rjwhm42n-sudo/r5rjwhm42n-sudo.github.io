@@ -25,7 +25,7 @@ const TEAM = {
   address: "60 Cabot Road, Danvers, MA 01923",
   /* MIAA power ranking (published every Tuesday and Friday in season) —
      update rank, of and asOf from miaa.net/power-rankings (Field Hockey · Girls · Division 3) */
-  ranking: { rank: 29, of: 54, asOf: "Oct. 27", url: "https://www.miaa.net/power-rankings" },
+  ranking: { rank: 30, of: 54, asOf: "Oct. 30", url: "https://www.miaa.net/power-rankings" },
   /* MIAA state tournament bracket: null until the MIAA posts it (Tue., Nov. 3, 11 a.m.) at
      https://www.miaa.net/miaa-field-hockey-2026-division-3-state-tournament
      Then fill it in from that page and the hub's State Tournament section draws it:
@@ -214,6 +214,7 @@ const SCHEDULE = [
     saves: [["Eva Selaya-Mendez", 7]],
     notes: ["Elynne Silva's first varsity goal"],
     sources: [
+      { label: "Full-game replay on Swampscott Big Blue Athletics (YouTube)", url: "https://www.youtube.com/watch?v=ideMqUE3kNE" },
       { label: "Salem News roundup, Oct. 2", url: null },
       { label: "MaxPreps box score", url: MP + "danvers-vs-swampscott/10-2-2026/?c=b8f5f204-0f9f-433b-a90d-d9b18384a04b" }
     ] },
@@ -278,6 +279,7 @@ const SCHEDULE = [
     standouts: ["Lia Chiarenza"],
     notes: ["Selaya-Mendez made 3 saves on 6 shots and Barnes 4 saves on 4 shots", "Second meeting — Danvers won 4–2 at Swampscott on Oct. 2"],
     sources: [
+      { label: "Full-game replay on Swampscott Big Blue Athletics (YouTube)", url: "https://www.youtube.com/watch?v=T4iu4bF6mT4" },
       { label: "Salem News roundup, Oct. 15", url: null },
       { label: "MaxPreps box score", url: MP + "danvers-vs-swampscott/10-15-2026/?c=e0f7f8ca-f898-432b-a205-9a27d0f25d1f" }
     ] },
@@ -304,6 +306,7 @@ const SCHEDULE = [
     scorers: [], assists: [],
     notes: ["Second meeting — Danvers won 2–1 at home on Sept. 17"],
     sources: [
+      { label: "Full-game replay on Saugus TV (YouTube)", url: "https://www.youtube.com/watch?v=gyVKz-9KcqY" },
       { label: "Salem News roundup, Oct. 20", url: "https://www.salemnews.com/sports/tuesdays-area-roundup-beverly-danvers-fenwick-field-hockey-all-score-big-wins/article_2c88f6e2-5712-4e03-ba8b-e2041bd6252f.html" },
       { label: "Result on Arbiter Live", url: "https://www.arbiterlive.com/Teams/Schedule/4285268?activeEntityId=5538" }
     ] },
@@ -332,8 +335,16 @@ const SCHEDULE = [
       { label: "Danvers Athletics on X", url: "https://x.com/WeAreDanvers/status/2115215456474960112" },
       { label: "MaxPreps box score", url: MP + "bishop-fenwick-peabody-vs-danvers/10-27-2026/?c=c30b03d9-cdb3-42ed-8732-44330a625f55" }
     ] },
-  { id: 18, date: "2026-10-30T16:00", opponent: "Masconomet", mascot: "Chieftains", home: false, league: false, site: "Boxford Commons turf field, Boxford", result: null,
-    notes: ["Regular-season finale", "Second meeting — Masconomet won 3–1 on Oct. 6"] }
+  { id: 18, date: "2026-10-30T16:00", opponent: "Masconomet", mascot: "Chieftains", home: false, league: true, site: "Boxford Commons turf field, Boxford",
+    result: "W", us: 3, them: 1,
+    quarters: null,
+    summary: "The Falcons closed the regular season with a 3–1 win at Boxford Commons, turning the score around on Masconomet after the Chieftains won by the same margin at Deering Stadium on Oct. 6. The win evened Danvers at 8–8–2.",
+    scorers: [], assists: [],
+    notes: ["Regular-season finale", "Second meeting — Masconomet won 3–1 on Oct. 6", "Masconomet fell to 9–7–2"],
+    sources: [
+      { label: "MaxPreps box score", url: MP + "danvers-vs-masconomet-regional-boxford/10-30-2026/?c=9392ca63-588e-406f-bc6b-698388ee4941" },
+      { label: "Danvers Field Hockey on Instagram", url: "https://www.instagram.com/p/DfIobbtNLgN/" }
+    ] }
 ];
 
 /* ---------------------------------------------------------------------
@@ -375,16 +386,16 @@ const PLAYERS = [
    NORTHEASTERN CONFERENCE STANDINGS — copy from the MaxPreps league page
    (TEAM.links.standings). [team, league W, L, T, overall W, L, T]
    --------------------------------------------------------------------- */
-const STANDINGS_AS_OF = "Oct. 24 (Danvers through Oct. 27)";
+const STANDINGS_AS_OF = "Oct. 31";
 const STANDINGS = [
-  ["Gloucester", 11, 0, 0, 14, 0, 0],
-  ["Beverly", 8, 2, 1, 10, 4, 1],
-  ["Masconomet", 6, 3, 1, 9, 4, 2],
-  ["Swampscott", 4, 3, 1, 4, 7, 2],
-  ["Danvers", 5, 5, 1, 7, 8, 2],
-  ["Marblehead", 5, 7, 1, 5, 8, 2],
-  ["Saugus", 2, 9, 1, 6, 9, 2],
-  ["Peabody", 0, 12, 0, 3, 14, 0]
+  ["Gloucester", 13, 0, 0, 17, 0, 0],
+  ["Beverly", 8, 2, 1, 13, 4, 1],
+  ["Masconomet", 6, 5, 1, 9, 7, 2],
+  ["Danvers", 6, 5, 1, 8, 8, 2],
+  ["Swampscott", 4, 4, 2, 4, 8, 4],
+  ["Marblehead", 5, 7, 2, 6, 8, 3],
+  ["Saugus", 2, 9, 1, 7, 9, 2],
+  ["Peabody", 0, 12, 0, 4, 14, 0]
 ];
 
 /* Position → group used by the filter buttons on the Stats page */

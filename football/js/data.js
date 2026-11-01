@@ -16,7 +16,7 @@ const TEAM = {
   location: "Danvers, MA",
   conference: "Northeastern Conference",
   division: "MIAA Division 4",
-  ranking: "No. 3 in the MIAA Division 4 power rankings (Oct. 27)",   // null hides it
+  ranking: "No. 3 in the MIAA Division 4 power rankings (Oct. 30)",   // null hides it
   /* MIAA state tournament bracket: null until the MIAA posts it (Sun., Nov. 1, 1 p.m.) at
      https://www.miaa.net/miaa-football-2026-division-4-state-tournament
      Then fill it in from that page and the hub's State Tournament section draws it:
@@ -81,7 +81,8 @@ const SCHEDULE = [
     ],
     sources: [
       { label: "Salem News recap", url: "https://www.salemnews.com/sports/trio-of-100-yard-runners-dominant-defense-propel-danvers-to-season-opening-win/article_d2a33c47-f2a5-4bca-b56d-0f0ed3b1b565.html" },
-      { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/football/game/concord-carlisle-vs-danvers/9-10-2026/?c=8b2fa199-c0f7-480b-90f5-b59095f1dcef" }
+      { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/football/game/concord-carlisle-vs-danvers/9-10-2026/?c=8b2fa199-c0f7-480b-90f5-b59095f1dcef" },
+      { label: "Full-game replay on DCAT (YouTube)", url: "https://www.youtube.com/watch?v=MQH2xTfdNwE" }
     ]
   },
   {
@@ -250,18 +251,19 @@ const SCHEDULE = [
   },
   { id: 8, date: "2026-10-30T19:00", opponent: "Peabody", mascot: "Tanners", home: false, league: true, site: "Peabody Veterans Memorial Stadium",
     result: "W", us: 17, them: 14,
-    summary: "Danvers clinched the NEC Dunn Division title and a perfect 7–0 regular season. Zach Fultz scored on the opening drive, Peabody went ahead 14–10 on Drake Dixon's 3-yard run late in the third quarter, and four minutes later senior Colby Medeiros returned a punt 66 yards for his first varsity touchdown. The defense held the Tanners scoreless the rest of the way, and a late Nick Xerras sack forced third-and-long.",
+    quarters: { us: [7, 3, 7, 0], them: [0, 7, 7, 0] },
+    summary: "Danvers clinched the NEC Dunn Division title and a perfect 7–0 regular season. Zach Fultz scored on the opening drive, Peabody went ahead 14–10 on Drake Dixon's 3-yard run late in the third quarter, and four minutes later senior Colby Medeiros returned a punt 66 yards for his first varsity touchdown. The defense held the Tanners scoreless the rest of the way, with senior captain Nick Xerras stopping two fourth-down tries in the final quarter.",
     scoring: [
       { q: "1st", play: "Zach Fultz 4 run, on the opening drive (Colby Medeiros kick)", score: "7–0" },
-      { q: "—", play: "Colby Medeiros field goal", score: null },
-      { q: "—", play: "Peabody: Dominik Mercier pass to Mark Mendonca", score: null },
+      { q: "2nd", play: "Colby Medeiros field goal", score: null },
+      { q: "2nd", play: "Peabody: Dominik Mercier pass to Mark Mendonca", score: null },
       { q: "3rd · 5:35", play: "Peabody: Drake Dixon 3 run", score: "10–14" },
       { q: "3rd", play: "Colby Medeiros 66 punt return (Medeiros kick)", score: "17–14" }
     ],
     performers: [
       { name: "Colby Medeiros", line: "66-yd punt return TD (his first varsity TD) · FG · 2 extra points" },
       { name: "Zach Fultz", line: "4-yd TD run on the opening drive" },
-      { name: "Nick Xerras", line: "Late sack on Dominik Mercier to force 3rd-and-long" }
+      { name: "Nick Xerras", line: "Two fourth-down stops in the 4th: a sack with 7:06 left and a tipped pass at the line with 2:01 left" }
     ],
     tag: "NEC Title Game",
     /* spotlight: a big-game banner across the top of the hub and the football home page.
@@ -284,6 +286,8 @@ const SCHEDULE = [
       "Danvers came in No. 17 in the Boston Globe Top 20; Peabody came in 6–1"
     ],
     sources: [
+      { label: "Full-game replay on Peabody TV (YouTube)", url: "https://www.youtube.com/watch?v=JtIVvNMIin8" },
+      { label: "Salem News game story", url: "https://www.salemnews.com/sports/danvers-holds-off-peabody-in-classic-to-claim-nec-title/article_efb3db10-eee2-4c34-8635-bde6dac40ffa.html" },
       { label: "Boston Globe game story", url: "https://www.bostonglobe.com/2026/10/30/sports/danvers-peabody-football/" },
       { label: "Daily Item game story", url: "https://itemlive.com/2026/10/30/peabody-comes-up-short-against-unbeaten-danvers/" },
       { label: "New England Football Journal", url: "https://nefootballjournal.com/danvers-17-peabody-14-falcons-defense-holds-on-against-tanners/" },

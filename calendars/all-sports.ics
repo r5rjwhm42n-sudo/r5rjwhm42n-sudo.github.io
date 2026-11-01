@@ -1757,9 +1757,10 @@ SUMMARY:Danvers Girls Soccer at Gloucester (W 7–1)
 LOCATION:Newell Stadium\, Gloucester
 DESCRIPTION:Northeastern Conference\nFinal: Danvers 7\, Gloucester 1\nDanve
  rs poured in seven goals at Newell Stadium for a 7–1 win over Gloucester
- \, its most in a game since the 9–1 rout of Winthrop in September.\nSche
- dule and results: https://danversfalconsathletics.org/soccer/schedule.html
- ?team=girls
+ \, its most in a game since the 9–1 rout of Winthrop in September. Kaitl
+ yn Rosa and Paige Dembowski scored twice each\, and eight different Falcon
+ s had a goal or an assist.\nSchedule and results: https://danversfalconsat
+ hletics.org/soccer/schedule.html?team=girls
 URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
 END:VEVENT
 BEGIN:VEVENT
@@ -1822,10 +1823,14 @@ UID:field-hockey-18@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261030T160000
 DURATION:PT2H
-SUMMARY:Danvers Field Hockey at Masconomet
+SUMMARY:Danvers Field Hockey at Masconomet (W 3–1)
 LOCATION:Boxford Commons turf field\, Boxford
-DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
- cs.org/field-hockey/schedule.html
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 3\, Masconomet 1\nThe F
+ alcons closed the regular season with a 3–1 win at Boxford Commons\, tur
+ ning the score around on Masconomet after the Chieftains won by the same m
+ argin at Deering Stadium on Oct. 6. The win evened Danvers at 8–8–2.\n
+ Schedule and results: https://danversfalconsathletics.org/field-hockey/sch
+ edule.html
 URL:https://danversfalconsathletics.org/field-hockey/schedule.html
 END:VEVENT
 BEGIN:VEVENT
@@ -1863,9 +1868,10 @@ DESCRIPTION:Northeastern Conference\nFinal: Danvers 17\, Peabody 14\nDanver
   Zach Fultz scored on the opening drive\, Peabody went ahead 14–10 on Dr
  ake Dixon's 3-yard run late in the third quarter\, and four minutes later 
  senior Colby Medeiros returned a punt 66 yards for his first varsity touch
- down. The defense held the Tanners scoreless the rest of the way\, and a l
- ate Nick Xerras sack forced third-and-long.\nSchedule and results: https:/
- /danversfalconsathletics.org/football/schedule.html
+ down. The defense held the Tanners scoreless the rest of the way\, with se
+ nior captain Nick Xerras stopping two fourth-down tries in the final quart
+ er.\nSchedule and results: https://danversfalconsathletics.org/football/sc
+ hedule.html
 URL:https://danversfalconsathletics.org/football/schedule.html
 END:VEVENT
 BEGIN:VEVENT
@@ -1875,9 +1881,11 @@ DTSTART;TZID=America/New_York:20261031T100000
 DURATION:PT2H
 SUMMARY:Danvers Cross Country: NEC Championship Meet
 LOCATION:Stage Fort Park\, Gloucester
-DESCRIPTION:Northeastern Conference\nParking\, $10 per vehicle\, on GoFan: 
- https://gofan.co/event/6973738?schoolId=MA86936\nSchedule and results: htt
- ps://danversfalconsathletics.org/cross-country/schedule.html
+DESCRIPTION:Northeastern Conference\nMasconomet's Alexander Hamlin won the 
+ boys race in 16:02 and led the Chieftains\, unbeaten NEC champions in the 
+ regular season\, to the boys team title with 41 points. Beverly's Grace Co
+ rbett won the girls race in 19:05.\nSchedule and results: https://danversf
+ alconsathletics.org/cross-country/schedule.html
 URL:https://danversfalconsathletics.org/cross-country/schedule.html
 END:VEVENT
 BEGIN:VEVENT

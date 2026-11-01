@@ -272,11 +272,11 @@ const MEETS = [
   },
   {
     id: 7, date: "2026-10-31T10:00", name: "NEC Championship Meet", short: "NEC",
-    home: false, league: true, site: "Stage Fort Park, Gloucester", distance: null,
-    /* Gloucester sells spectator parking on GoFan; shows a Tickets button until the meet is run */
-    tickets: { label: "NEC meet parking", note: "Parking, $10 per vehicle, on GoFan", url: "https://gofan.co/event/6973738?schoolId=MA86936" },
+    home: false, league: true, site: "Stage Fort Park, Gloucester", distance: "5K",
+    summary: "Masconomet's Alexander Hamlin won the boys race in 16:02 and led the Chieftains, unbeaten NEC champions in the regular season, to the boys team title with 41 points. Beverly's Grace Corbett won the girls race in 19:05.",
     boys: null, girls: null,
-    notes: ["Spectator parking is $10 per vehicle, sold in advance on GoFan"]
+    notes: ["Boys team scores: Masconomet 41, Swampscott 52, Peabody 54"],
+    sources: [{ label: "Salem News meet story", url: SN + "mascos-hamlin-beverlys-corbett-take-individual-titles-at-nec-cross-country-championships/article_0a158f57-ccf5-4f47-a35e-559cf24f5ba1.html" }]
   },
   {
     id: 8, date: "2026-11-14T11:00", timeTbd: true, name: "MIAA Division 2 Championships", short: "MIAA", postseason: true,

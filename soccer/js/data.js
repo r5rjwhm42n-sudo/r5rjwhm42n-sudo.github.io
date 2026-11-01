@@ -65,7 +65,7 @@ const TEAMS = {
     label: "Girls Soccer",
     short: "Girls",
     division: "MIAA Division 2",
-    ranking: { rank: 17, of: 63, asOf: "Oct. 27" },   // MIAA power ranking within the division
+    ranking: { rank: 17, of: 63, asOf: "Oct. 30" },   // MIAA power ranking within the division
     /* MIAA state tournament bracket: null until the MIAA posts it (Thu., Nov. 5, 1 p.m.) at
        https://www.miaa.net/miaa-girls-soccer-2026-division-2-state-tournament
        Then fill it in from that page and the hub's State Tournament section draws it:
@@ -147,6 +147,7 @@ const TEAMS = {
         standouts: ["Taylor Landry"],
         notes: ["Danvers led 2–1 before Beverly scored twice"],
         sources: [
+          { label: "Full-game replay on BevCam (YouTube)", url: "https://www.youtube.com/watch?v=o0mQX36BWUY" },
           { label: "Salem News Athlete of the Week, Sept. 23", url: null },
           { label: "Danvers Girls Soccer on X", url: X + "2100354234021511653" },
           { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/girls/match/beverly-vs-danvers/9-16-2026/?c=9db0d860-ee7f-47a9-b656-b39ae5e6c2e8" }
@@ -287,6 +288,7 @@ const TEAMS = {
         standouts: ["Maddie Hanas", "Kaia Glover", "Maggie Lamar"],
         notes: [],
         sources: [
+          { label: "Full-game replay on Swampscott Big Blue Athletics (YouTube)", url: "https://www.youtube.com/watch?v=MopTJySYo0Y" },
           { label: "Salem News roundup, Oct. 5", url: null },
           { label: "Danvers Girls Soccer on X", url: X + "2107237857806922097" },
           { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/girls/match/danvers-vs-swampscott/10-5-2026/?c=02153da1-cb12-4eea-8264-ee710ab1bc7f" }
@@ -373,10 +375,11 @@ const TEAMS = {
       { id: 18, date: "2026-10-28T16:30", opponent: "Gloucester", mascot: "Fishermen", home: false, league: true, site: "Newell Stadium, Gloucester",
         result: "W", us: 7, them: 1,
         halves: null,
-        summary: "Danvers poured in seven goals at Newell Stadium for a 7–1 win over Gloucester, its most in a game since the 9–1 rout of Winthrop in September.",
-        scorers: [], assists: [],
-        notes: [],
+        summary: "Danvers poured in seven goals at Newell Stadium for a 7–1 win over Gloucester, its most in a game since the 9–1 rout of Winthrop in September. Kaitlyn Rosa and Paige Dembowski scored twice each, and eight different Falcons had a goal or an assist.",
+        scorers: [["Kaitlyn Rosa", 2], ["Paige Dembowski", 2]], assists: [],
+        notes: ["Regular-season finale", "Eight different players had a goal or an assist"],
         sources: [
+          { label: "Danvers Girls Soccer on X", url: X + "2115568532515967366" },
           { label: "Gloucester High scores, Oct. 28 (Good Morning Gloucester)", url: "https://goodmorninggloucester.com/2026/10/29/gloucester-high-school-fishermen-yesterdays-scores/" },
           { label: "Game replay on NFHS Network", url: "https://www.nfhsnetwork.com/events/gloucester-high-school-gloucester-ma/gamf6b6ca0e67" }
         ] },
@@ -571,7 +574,7 @@ const TEAMS = {
     label: "Boys Soccer",
     short: "Boys",
     division: "MIAA Division 2",
-    ranking: { rank: 60, of: 61, asOf: "Oct. 27" },   // MIAA power ranking within the division
+    ranking: { rank: 60, of: 61, asOf: "Oct. 30" },   // MIAA power ranking within the division
     headCoach: "Sam Perel",
     coachNote: "3rd season · 17–16–6 entering 2026",
     assistants: ["Nathan Dos Santos", "Jamie Kidney (JV)"],
@@ -651,7 +654,7 @@ const TEAMS = {
         ],
         standouts: ["Matthew McCrea", "Mateo Musta", "Luke Wynott", "Lucas St. Pierre", "Cam Sillars", "Bradley Powers", "Adrian Sazo", "Gideon Achilles"],
         notes: ["First win of the season"],
-        sources: [{ label: "Salem News roundup, Sept. 23", url: null }, { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/match/danvers-vs-saugus/9-23-2026/?c=bfc64097-bc8f-4364-9ea9-8f1c1db94296" }] },
+        sources: [{ label: "Full-game replay on Saugus TV (YouTube)", url: "https://www.youtube.com/watch?v=c8QCl_Ya3NY" }, { label: "Salem News roundup, Sept. 23", url: null }, { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/match/danvers-vs-saugus/9-23-2026/?c=bfc64097-bc8f-4364-9ea9-8f1c1db94296" }] },
 
       { id: 7, date: "2026-09-28T18:00", opponent: "Peabody", mascot: "Tanners", home: true, league: true, site: HOME,
         result: "L", us: 0, them: 3,
@@ -699,7 +702,7 @@ const TEAMS = {
         plays: [{ when: "—", play: "Andrew Morse (Mateo Musta)", score: "1–0" }],
         standouts: ["Lucas St. Pierre", "Luke Wynott", "Matthew McCrea", "Cam Sillars", "Bradley Powers", "Drew Maioli"],
         notes: [],
-        sources: [{ label: "Salem News roundup, Oct. 12", url: null }, { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/match/danvers-vs-lynn-classical/10-12-2026/?c=9b3bc863-7734-4c04-82a8-c1112463e67b" }] },
+        sources: [{ label: "Full-game replay on Lynn Educational Television (YouTube)", url: "https://www.youtube.com/watch?v=ulVvpUS44UU" }, { label: "Salem News roundup, Oct. 12", url: null }, { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/match/danvers-vs-lynn-classical/10-12-2026/?c=9b3bc863-7734-4c04-82a8-c1112463e67b" }] },
 
       { id: 12, date: "2026-10-14T16:00", opponent: "Beverly", mascot: "Panthers", home: false, league: true, site: "Beverly High School, Beverly",
         result: "L", us: 0, them: 7,
@@ -707,7 +710,7 @@ const TEAMS = {
         summary: "Beverly completed the season sweep with a convincing home win.",
         scorers: [], assists: [],
         notes: [],
-        sources: [{ label: "Salem News roundup, Oct. 14", url: null }, { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/match/beverly-vs-danvers/10-14-2026/?c=b89e44aa-a16e-4734-8511-a008f63a1487" }] },
+        sources: [{ label: "Full-game replay on BevCam (YouTube)", url: "https://www.youtube.com/watch?v=ZeyP4IM71OY" }, { label: "Salem News roundup, Oct. 14", url: null }, { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/match/beverly-vs-danvers/10-14-2026/?c=b89e44aa-a16e-4734-8511-a008f63a1487" }] },
 
       { id: 13, date: "2026-10-16T16:00", opponent: "Gloucester", mascot: "Fishermen", home: false, league: false, site: "Newell Stadium, Gloucester",
         result: "L", us: 1, them: 2,
@@ -754,8 +757,9 @@ const TEAMS = {
         halves: null,
         summary: "Gloucester shut out the Falcons 2–0 at Deering Stadium to sweep the season series, 12 days after a 2–1 win in Gloucester.",
         scorers: [], assists: [],
-        notes: ["Second meeting — Gloucester won 2–1 on Oct. 16"],
+        notes: ["Senior Night", "Second meeting — Gloucester won 2–1 on Oct. 16"],
         sources: [
+          { label: "Full-game replay on DCAT (YouTube)", url: "https://www.youtube.com/watch?v=yahxjiD2MwU" },
           { label: "MaxPreps recap", url: "https://www.maxpreps.com/news/pd3lzQPSx0y9xV9rrXQEww/soccer-recap-gloucester-blanks-danvers.htm" },
           { label: "Gloucester High scores, Oct. 28 (Good Morning Gloucester)", url: "https://goodmorninggloucester.com/2026/10/29/gloucester-high-school-fishermen-yesterdays-scores/" }
         ] },

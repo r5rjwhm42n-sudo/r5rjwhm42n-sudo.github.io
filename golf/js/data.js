@@ -203,6 +203,7 @@ const SCHEDULE = [
     cards: [["Dom Onorio", 9, 0], ["Cole Andrews", 8.5, 0.5], ["Austin Patuto", 7, 2], ["Tommy Surette", 7, 2], ["Brady Swanton", 5.5, 3.5]],
     notes: ["Onorio's 9–0 is the first clean sweep by a Falcon in a reported match this season"],
     sources: [
+      { label: "Match video on Saugus TV (YouTube)", url: "https://www.youtube.com/watch?v=pMHUKRLupU4" },
       { label: "Salem News roundup, Oct. 7", url: SN + "wednesdays-area-roundup-sullivan-earns-100th-career-point-in-beverly-boys-soccer-win/article_c800b2c7-9306-49f2-b583-622af94054b3.html" },
       { label: "DanversHighGolf on X", url: "https://x.com/GolfDanversHigh/status/2108256635705557135" }
     ] },

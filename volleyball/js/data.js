@@ -24,7 +24,7 @@ const TEAM = {
   stadium: "DHS Field House",
   /* MIAA power ranking (published every Tuesday and Friday in season) —
      update rank, of and asOf from miaa.net/power-rankings (Volleyball · Fall · Division 3) */
-  ranking: { rank: 21, of: 68, asOf: "Oct. 27", url: "https://www.miaa.net/power-rankings" },
+  ranking: { rank: 19, of: 68, asOf: "Oct. 30", url: "https://www.miaa.net/power-rankings" },
   /* MIAA state tournament bracket: null until the MIAA posts it (Tue., Nov. 3, 1 p.m.) at
      https://www.miaa.net/miaa-fall-volleyball-2026-division-3-state-tournament
      Then fill it in from that page and the hub's State Tournament section draws it:
@@ -117,7 +117,7 @@ const SCHEDULE = [
       "Isabella DeSouza":   [1, 0, 0, 0, 0, 1, 1, 0, 0]
     },
     notes: ["First win of the season", "All 13 players on the roster got into the match"],
-    sources: [{ label: "MaxPreps box score", url: MP + "danvers-vs-triton-regional-byfield/9-9-2026/?c=690a2b85-553c-4017-8bbe-544be33814ce" }] },
+    sources: [{ label: "Match replay on Triton Volleyball Boosters (YouTube)", url: "https://www.youtube.com/watch?v=obZrI-Fztos" }, { label: "MaxPreps box score", url: MP + "danvers-vs-triton-regional-byfield/9-9-2026/?c=690a2b85-553c-4017-8bbe-544be33814ce" }] },
 
   { id: 3, date: "2026-09-10T17:15", opponent: "Gloucester", mascot: "Fishermen", home: true, league: false, site: HOME,
     result: "W", us: 3, them: 0,
@@ -266,7 +266,7 @@ const SCHEDULE = [
       "Emma Coffin":        [1, 0, 0, 0, 0, 0, 0, 0, 0]
     },
     notes: [],
-    sources: [{ label: "MaxPreps box score", url: MP + "danvers-vs-saugus/9-28-2026/?c=87ba35df-b08f-4076-9ccf-04f7f1f711f2" }] },
+    sources: [{ label: "Match replay on Saugus TV (YouTube)", url: "https://www.youtube.com/watch?v=XY-vEy-If4U" }, { label: "MaxPreps box score", url: MP + "danvers-vs-saugus/9-28-2026/?c=87ba35df-b08f-4076-9ccf-04f7f1f711f2" }] },
 
   { id: 10, date: "2026-09-30T17:30", opponent: "Masconomet", mascot: "Chieftains", home: false, league: true, site: "Masconomet Regional HS, Boxford",
     result: "W", us: 3, them: 2,
@@ -413,6 +413,7 @@ const SCHEDULE = [
       "First back-to-back losses of the season"
     ],
     sources: [
+      { label: "Match replay on BevCam (YouTube)", url: "https://www.youtube.com/watch?v=f7tc1weMt7c" },
       { label: "Salem News game story, Oct. 20", url: null },
       { label: "MaxPreps box score", url: MP + "beverly-vs-danvers/10-19-2026/?c=397f2426-aeda-4d7a-b961-d8db165946e7" }
     ] },
@@ -444,6 +445,21 @@ const SCHEDULE = [
     result: "W", us: 3, them: 0,
     sets: [[25, 11], [25, 12], [25, 16]],
     summary: "Danvers snapped a three-match skid with a sweep of Peabody, 25–11, 25–12, 25–16. The Falcons served 21 aces, eight of them from Lauren Garofalo, and had 24 kills, seven from Gabrielle Lindeman. Hadley Brown added 14 digs and four aces.",
+    box: {
+      "Lauren Garofalo":    [3, 3, 8, 0, 5, 1, 17, 4, 10],
+      "Sienna Lynch":       [2, 3, 0, 1, 1, 0, 8, 1, 0],
+      "Gabrielle Lindeman": [3, 7, 2, 1, 7, 2, 13, 0, 10],
+      "Hadley Brown":       [3, 1, 4, 0, 14, 1, 4, 2, 10],
+      "Brooke Bernard":     [3, 2, 0, 0, 0, 0, 9, 2, 0],
+      "Tess Crowley":       [2, 2, 0, 0, 7, 0, 6, 0, 2],
+      "Kendall Murphy":     [3, 3, 1, 1, 5, 0, 6, 0, 0],
+      "Ellie Lindeman":     [1, 1, 0, 0, 0, 0, 1, 0, 0],
+      "Gracie Monteiro":    [3, 2, 0, 0, 1, 1, 7, 1, 0],
+      "Hannah Tersolo":     [3, 0, 3, 0, 7, 14, 0, 0, 0],
+      "Lila Osborne":       [3, 0, 3, 0, 3, 3, 0, 0, 0],
+      "Isabelle Maffei":    [1, 0, 0, 0, 1, 0, 0, 0, 0],
+      "Hannah Laskin":      [1, 0, 0, 0, 0, 0, 0, 0, 1]
+    },
     notes: [
       "Second meeting — Danvers won 3–1 on Sept. 25",
       "21 aces as a team"
@@ -456,11 +472,25 @@ const SCHEDULE = [
     result: "W", us: 3, them: 0,
     sets: [[25, 15], [25, 22], [25, 20]],
     summary: "Danvers made it two wins in a row with a sweep of Masconomet, 25–15, 25–22, 25–20. Gabrielle Lindeman had 14 digs, six aces and two solo blocks, and Lauren Garofalo added six kills, 14 digs and four aces.",
+    box: {
+      "Lauren Garofalo":    [3, 6, 4, 0, 14, 0, 18, 2, 15],
+      "Sienna Lynch":       [1, 0, 0, 1, 0, 0, 3, 0, 0],
+      "Gabrielle Lindeman": [3, 3, 6, 2, 14, 1, 13, 2, 16],
+      "Hadley Brown":       [3, 0, 0, 0, 14, 4, 2, 1, 16],
+      "Hannah Tersolo":     [3, 0, 2, 0, 9, 7, 1, 0, 0],
+      "Brooke Bernard":     [3, 7, 0, 1, 0, 0, 17, 0, 0],
+      "Tess Crowley":       [3, 5, 0, 0, 1, 0, 13, 2, 0],
+      "Kendall Murphy":     [3, 2, 2, 0, 1, 0, 9, 0, 1],
+      "Gracie Monteiro":    [3, 4, 0, 0, 3, 0, 10, 1, 0],
+      "Emma Coffin":        [1, 0, 0, 0, 0, 0, 0, 0, 0],
+      "Lila Osborne":       [3, 0, 2, 0, 6, 14, 0, 0, 0]
+    },
     notes: [
       "Second meeting — Danvers won 3–2 on Sept. 30, so the Falcons swept the season series",
       "Masconomet fell to 4–11"
     ],
     sources: [
+      { label: "MaxPreps box score", url: MP + "danvers-vs-masconomet-regional-boxford/10-28-2026/?c=6aeadfee-b989-4613-8b2a-c35662b4ecd7" },
       { label: "MaxPreps recap", url: "https://www.maxpreps.com/news/s9bNOg5iEkuLQmPBAGsJgw/volleyball-recap-danvers-wins-going-away-against-masconomet-regional--how-to-watch.htm" },
       { label: "Match replay on NFHS Network", url: "https://www.nfhsnetwork.com/events/danvers-high-school-danvers-ma/gam76f9d68549" }
     ] },
@@ -521,6 +551,7 @@ const PLAYERS = [
   { name: "Sienna Lynch", num: 2, pos: ["MB"], grade: "Jr.", captain: false },
   { name: "Emma Coffin", num: 8, pos: ["OPP", "OH"], grade: "Sr.", captain: false },
   { name: "Hannah Laskin", num: 13, pos: ["DS"], grade: "So.", captain: false },
+  { name: "Ellie Lindeman", num: 14, pos: ["MB", "OPP"], grade: "So.", captain: false },
   { name: "Isabelle Maffei", num: 17, pos: ["L"], grade: "So.", captain: false },
   { name: "Isabella DeSouza", num: 20, pos: ["S"], grade: "Sr.", captain: false }
 ];

@@ -306,10 +306,14 @@ UID:field-hockey-18@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261030T160000
 DURATION:PT2H
-SUMMARY:Danvers Field Hockey at Masconomet
+SUMMARY:Danvers Field Hockey at Masconomet (W 3–1)
 LOCATION:Boxford Commons turf field\, Boxford
-DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
- cs.org/field-hockey/schedule.html
+DESCRIPTION:Northeastern Conference\nFinal: Danvers 3\, Masconomet 1\nThe F
+ alcons closed the regular season with a 3–1 win at Boxford Commons\, tur
+ ning the score around on Masconomet after the Chieftains won by the same m
+ argin at Deering Stadium on Oct. 6. The win evened Danvers at 8–8–2.\n
+ Schedule and results: https://danversfalconsathletics.org/field-hockey/sch
+ edule.html
 URL:https://danversfalconsathletics.org/field-hockey/schedule.html
 END:VEVENT
 END:VCALENDAR
