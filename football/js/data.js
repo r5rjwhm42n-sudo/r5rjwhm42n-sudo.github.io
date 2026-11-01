@@ -463,14 +463,19 @@ const LEGENDS = [
    Hudl doesn't allow its videos to be embedded on other sites, so each
    card opens the video on Hudl. url: null falls back to the full
    highlights page.
+   Every game's full replay belongs here, wherever it lives: Hudl, another
+   school's or town's channel on YouTube (DCAT, Peabody TV, BevCam…) or the
+   NFHS Network. by: names the channel when it isn't Hudl, e.g. "DCAT (YouTube)".
    To add photos: drop image files in /photos and list them in PHOTOS.
    --------------------------------------------------------------------- */
 const HL = HUDL_TEAM + "/boys-varsity-football/watch?ot=TEAM&oi=33811&hr=";
 const VIDEOS = [
+  { title: "Danvers at Peabody", sub: "Full-Game Replay · Oct. 30", season: 2026, len: "Replay", by: "Peabody TV (YouTube)", url: "https://www.youtube.com/watch?v=JtIVvNMIin8" },
   { title: "Danvers vs. Salem", sub: "Full-Game Replay · Oct. 23", season: 2026, len: "Replay", url: REPLAY + "QnJvYWRjYXN0NDUwNzQ3NQ%3D%3D" },
   { title: "Danvers at Masconomet", sub: "Full-Game Replay · Oct. 16", season: 2026, len: "Replay", url: REPLAY + "QnJvYWRjYXN0NDUwNzQ3MQ%3D%3D" },
   { title: "Danvers vs. Beverly", sub: "Full-Game Replay · Oct. 9", season: 2026, len: "Replay", url: REPLAY + "QnJvYWRjYXN0NDU5MTI0Mw%3D%3D" },
   { title: "Danvers at Reading", sub: "Full-Game Replay · Sept. 25", season: 2026, len: "Replay", url: REPLAY + "QnJvYWRjYXN0NDQ5MzkzNQ%3D%3D" },
+  { title: "Danvers vs. Concord-Carlisle", sub: "Full-Game Replay · Sept. 10", season: 2026, len: "Replay", by: "DCAT (YouTube)", url: "https://www.youtube.com/watch?v=MQH2xTfdNwE" },
   { title: "Danvers at Concord-Carlisle", sub: "Game Recap", season: 2025, len: "1:42", url: HL + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2YTliMDBiNmM2NzUyOTZjZmI1MGZlZGE%3D" },
   { title: "Danvers vs. Peabody", sub: "Game Recap", season: 2025, len: "1:41", url: HL + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2OThmYTBhOWE2NmUzZGMxZWMxMzBjMjY%3D" },
   { title: "Danvers vs. Reading", sub: "Game Recap", season: 2025, len: "2:00", url: HL + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2OTFjYTYyNmU2MzY4NzdmZTg3ZGI4ZGM%3D" },

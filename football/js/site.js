@@ -3,6 +3,8 @@
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
   const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  /* where a video lives, for the "Watch on …" labels (a video's `by` names the channel) */
+  const host = (url) => (/youtu/.test(url || "") ? "YouTube" : /nfhsnetwork/.test(url || "") ? "NFHS Network" : "Hudl");
   const page = document.body.dataset.page;
   const LOGO = "images/falcons-logo.png";
 
@@ -409,7 +411,7 @@
       $("#videos").innerHTML = VIDEOS.filter((v) => active === "All" || v.season === +active).map((v) => `
         <a class="card lift video" href="${v.url || TEAM.links.hudlVideo}" target="_blank" rel="noopener">
           <div class="thumb"><img src="${LOGO}" alt=""><span class="yr">${v.season}</span><span class="play"></span><span class="len">${v.len}</span></div>
-          <div class="cap-txt"><h3>${esc(v.title)}</h3><span>${esc(v.sub)} · Watch on Hudl ↗</span></div>
+          <div class="cap-txt"><h3>${esc(v.title)}</h3><span>${esc(v.sub)} · Watch on ${esc(v.by || host(v.url))} ↗</span></div>
         </a>`).join("");
     };
     $("#video-filters").addEventListener("click", (e) => {

@@ -304,7 +304,7 @@ const SCHEDULE = [
     quarters: null,
     summary: "The Falcons scored six times under the lights at Serino Field to sweep the season series with Saugus, getting back above .500 overall and to .500 in the conference.",
     scorers: [], assists: [],
-    notes: ["Second meeting — Danvers won 2–1 at home on Sept. 17"],
+    notes: ["Second meeting — Danvers won 2–1 at home on Sept. 17", "Saugus' Senior Night"],
     sources: [
       { label: "Full-game replay on Saugus TV (YouTube)", url: "https://www.youtube.com/watch?v=gyVKz-9KcqY" },
       { label: "Salem News roundup, Oct. 20", url: "https://www.salemnews.com/sports/tuesdays-area-roundup-beverly-danvers-fenwick-field-hockey-all-score-big-wins/article_2c88f6e2-5712-4e03-ba8b-e2041bd6252f.html" },

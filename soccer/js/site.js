@@ -3,6 +3,8 @@
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
   const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  /* where a video lives, for the "Watch on …" labels (a video's `by` names the channel) */
+  const host = (url) => (/youtu/.test(url || "") ? "YouTube" : /nfhsnetwork/.test(url || "") ? "NFHS Network" : "Hudl");
   const page = document.body.dataset.page;
   const LOGO = "images/falcons-logo.png";
 
@@ -195,7 +197,7 @@
     if (g.notes?.length) body += `<h4>Notes</h4><ul>${g.notes.map((n) => `<li>${esc(n)}</li>`).join("")}</ul>`;
     const srcs = [
       ...(g.video ? [{ label: "Highlights on Hudl", url: g.video }] : []),
-      ...(g.replay ? [{ label: "Full game replay on Hudl", url: g.replay }] : []),
+      ...(g.replay ? [{ label: `Full game replay on ${g.replayBy || host(g.replay)}`, url: g.replay }] : []),
       ...(g.sources || []),
       ...(g.result || g.cancelled || awaiting(g) ? [] : [{ label: "Watch live on Hudl", url: T.links.hudl }])
     ];
@@ -481,7 +483,7 @@
     /* Full-game replays come straight from the schedule's replay links */
     const replays = [...played].reverse().filter((g) => g.replay).map((g) => ({
       title: `Danvers ${vs(g) === "vs" ? "vs." : "at"} ${g.opponent}`, sub: `Full game · ${g.result} ${g.us}–${g.them}`,
-      season: SEASON, len: "Full game", url: g.replay, full: true }));
+      season: SEASON, len: "Full game", url: g.replay, by: g.replayBy, full: true }));
     const all = [...T.videos, ...replays];
     const seasons = ["All", ...(replays.length ? ["Full games"] : []), ...new Set(T.videos.map((v) => v.season))];
     let active = "All";
@@ -490,7 +492,7 @@
       $("#videos").innerHTML = all.filter((v) => active === "All" || (active === "Full games" ? v.full : !v.full && v.season === +active)).map((v) => `
         <a class="card lift video" href="${v.url || T.links.hudlVideo}" target="_blank" rel="noopener">
           <div class="thumb"><img src="${LOGO}" alt=""><span class="yr">${v.season}</span><span class="play"></span><span class="len">${v.len}</span></div>
-          <div class="cap-txt"><h3>${esc(v.title)}</h3><span>${esc(v.sub)} · Watch on Hudl ↗</span></div>
+          <div class="cap-txt"><h3>${esc(v.title)}</h3><span>${esc(v.sub)} · Watch on ${esc(v.by || host(v.url))} ↗</span></div>
         </a>`).join("");
     };
     $("#video-filters").addEventListener("click", (e) => {

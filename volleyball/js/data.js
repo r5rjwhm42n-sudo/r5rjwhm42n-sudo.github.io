@@ -465,8 +465,7 @@ const SCHEDULE = [
       "21 aces as a team"
     ],
     sources: [
-      { label: "MaxPreps box score", url: MP + "danvers-vs-peabody-veterans-memorial/10-26-2026/?c=d312a82e-e647-466b-821d-7bd2ccbdf098" },
-      { label: "Match replay on NFHS Network", url: "https://www.nfhsnetwork.com/events/danvers-high-school-danvers-ma/gam524c066736" }
+      { label: "MaxPreps box score", url: MP + "danvers-vs-peabody-veterans-memorial/10-26-2026/?c=d312a82e-e647-466b-821d-7bd2ccbdf098" }
     ] },
   { id: 19, date: "2026-10-28T17:15", opponent: "Masconomet", mascot: "Chieftains", home: true, league: true, site: HOME,
     result: "W", us: 3, them: 0,
@@ -491,8 +490,7 @@ const SCHEDULE = [
     ],
     sources: [
       { label: "MaxPreps box score", url: MP + "danvers-vs-masconomet-regional-boxford/10-28-2026/?c=6aeadfee-b989-4613-8b2a-c35662b4ecd7" },
-      { label: "MaxPreps recap", url: "https://www.maxpreps.com/news/s9bNOg5iEkuLQmPBAGsJgw/volleyball-recap-danvers-wins-going-away-against-masconomet-regional--how-to-watch.htm" },
-      { label: "Match replay on NFHS Network", url: "https://www.nfhsnetwork.com/events/danvers-high-school-danvers-ma/gam76f9d68549" }
+      { label: "MaxPreps recap", url: "https://www.maxpreps.com/news/s9bNOg5iEkuLQmPBAGsJgw/volleyball-recap-danvers-wins-going-away-against-masconomet-regional--how-to-watch.htm" }
     ] },
   { id: 20, date: "2026-10-29T17:15", opponent: "Salem", mascot: "Witches", home: true, league: true, site: HOME,
     result: "W", us: 3, them: 1,
@@ -517,8 +515,7 @@ const SCHEDULE = [
       "121 digs as a team"
     ],
     sources: [
-      { label: "MaxPreps box score", url: MP + "danvers-vs-salem/10-29-2026/?c=d1042efb-18c7-415c-ba64-dcaaf37f974b" },
-      { label: "Match replay on NFHS Network", url: "https://www.nfhsnetwork.com/events/danvers-high-school-danvers-ma/gam3e8529ea45" }
+      { label: "MaxPreps box score", url: MP + "danvers-vs-salem/10-29-2026/?c=d1042efb-18c7-415c-ba64-dcaaf37f974b" }
     ] },
   { id: 104, date: "2026-10-30T16:00", opponent: "North Andover", mascot: "Scarlet Knights", home: true, league: false, site: HOME,
     scrimmage: true, result: null, notes: [] }
@@ -668,15 +665,24 @@ const RECORDS = {
    Hudl doesn't allow its videos to be embedded on other sites, so each
    card opens the video on Hudl. url: null falls back to the team's full
    video page.
+   Every game's full replay belongs here, wherever it lives: Hudl, another
+   school's or town's channel on YouTube (DCAT, Peabody TV, BevCam…) or the
+   NFHS Network. by: names the channel when it isn't Hudl, e.g. "DCAT (YouTube)".
    To add photos: drop image files in /photos and list them in PHOTOS.
    Example: { src: "photos/beverly-01.jpg", caption: "Lindeman attacks vs. Beverly" }
    --------------------------------------------------------------------- */
 const HL = HUDL_TEAM + "/watch?ot=TEAM&oi=752824&hr=";   // highlight / recap videos
 const RP = HUDL_TEAM + "/watch?b=";                        // full-match livestream replays
 const VIDEOS = [
+  { title: "Danvers at Beverly", sub: "Full-Match Replay · Oct. 19", season: 2026, len: "Replay", by: "BevCam (YouTube)", url: "https://www.youtube.com/watch?v=f7tc1weMt7c" },
   { title: "Danvers at Stoneham", sub: "Full-Match Replay · Oct. 9", season: 2026, len: "Replay", url: RP + "QnJvYWRjYXN0NDM0MjIyOQ%3D%3D" },
   { title: "Danvers at Winthrop", sub: "Full-Match Replay · Oct. 7", season: 2026, len: "Replay", url: RP + "QnJvYWRjYXN0NDU1MDA1Mg%3D%3D" },
+  { title: "Danvers at Saugus", sub: "Full-Match Replay · Sept. 28", season: 2026, len: "Replay", by: "Saugus TV (YouTube)", url: "https://www.youtube.com/watch?v=XY-vEy-If4U" },
   { title: "Danvers at Peabody", sub: "Full-Match Replay · Sept. 25", season: 2026, len: "Replay", url: RP + "QnJvYWRjYXN0NDM4Mjg5Nw%3D%3D" },
+  { title: "Danvers vs. Beverly", sub: "Full-Match Replay · Sept. 23", season: 2026, len: "Replay", url: "https://www.nfhsnetwork.com/events/danvers-high-school-danvers-ma/gam1123b82d64" },
+  { title: "Danvers at Gloucester", sub: "Full-Match Replay · Sept. 17", season: 2026, len: "Replay", url: "https://www.nfhsnetwork.com/events/gloucester-high-school-gloucester-ma/gamb3db8b3998" },
+  { title: "Danvers vs. Gloucester", sub: "Full-Match Replay · Sept. 10", season: 2026, len: "Replay", url: "https://www.nfhsnetwork.com/events/danvers-high-school-danvers-ma/gameeab0e6382" },
+  { title: "Danvers at Triton", sub: "Full-Match Replay · Sept. 9", season: 2026, len: "Replay", by: "Triton Volleyball Boosters (YouTube)", url: "https://www.youtube.com/watch?v=obZrI-Fztos" },
   { title: "Danvers at Triton", sub: "Match Recap · Sept. 9", season: 2026, len: "2:02", url: HL + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2YWEyNTMzZDRkM2JhOGM1YzdhZTVhZjM%3D" },
   { title: "Danvers at Barnstable", sub: "Full-Match Replay · Sept. 7", season: 2026, len: "Replay", url: RP + "QnJvYWRjYXN0NDM4NTc2Mw%3D%3D" },
   { title: "Danvers vs. Bishop Fenwick", sub: "Highlights · Oct. 24", season: 2025, len: "1:38", url: HL + "SGlnaGxpZ2h0UmVlbFN1bW1hcnk2OTA3YmFmZGQxMGExMTA5MGJhNGNmNjU%3D" },
