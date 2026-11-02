@@ -31,7 +31,7 @@ const TEAM = {
     seeds: ["Scituate", "Tewksbury Memorial", "Danvers", "Duxbury", "Walpole", "Tantasqua Regional",
             "Shepherd Hill Regional", "Grafton", "South High Community", "Canton", "Wayland",
             "Westfield", "Nashoba Regional", "Bedford", "Wakefield Memorial", "Ashland"],
-    games: [{ seeds: [3, 14], site: "Morse Field, Danvers" }]
+    games: [{ seeds: [3, 14], date: "2026-11-06T18:30", site: "Morse Field, Danvers" }]
   },
   headCoach: "Ryan Nolan",
   assistants: ["Bryan Ibbitson", "Jon Babula", "Angel Adamas", "Tom Walfield", "Kyle Brennan",
@@ -305,7 +305,7 @@ const SCHEDULE = [
       { label: "New England Football Journal", url: "https://nefootballjournal.com/danvers-17-peabody-14-falcons-defense-holds-on-against-tanners/" },
       { label: "MaxPreps recap", url: "https://www.maxpreps.com/news/zjHXfVc68k2APXOq1YAq7g/football-recap-danvers-edges-past-peabody-veterans-memorial.htm" }
     ] },
-  { id: 10, date: "2026-11-06T00:00", dateTbd: true, dates: "Nov 6–7", opponent: "Bedford", mascot: "Buccaneers",
+  { id: 10, date: "2026-11-06T18:30", opponent: "Bedford", mascot: "Buccaneers",
     home: true, league: false, postseason: true, round: "Round of 16", site: HOME_FIELD, result: null,
     notes: ["MIAA Division 4 Round of 16: No. 3 Danvers hosts No. 14 Bedford", "Bedford enters 5–3", "The higher seed hosts through the quarterfinals"],
     sources: [{ label: "MIAA Division 4 bracket", url: "https://www.miaa.net/miaa-football-2026-division-4-state-tournament" }] },

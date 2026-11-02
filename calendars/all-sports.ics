@@ -1922,6 +1922,18 @@ DESCRIPTION:Rocket League · Best of 5 games\nSchedule and results: https:/
 URL:https://danversfalconsathletics.org/esports/schedule.html
 END:VEVENT
 BEGIN:VEVENT
+UID:football-10@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261106T183000
+DURATION:PT2H30M
+SUMMARY:Danvers Football vs Bedford
+LOCATION:Morse Field at Dr. Deering Stadium\, Danvers
+DESCRIPTION:MIAA state tournament · Round of 16\nTickets on GoFan: https:/
+ /gofan.co/app/school/MA14553\nSchedule and results: https://danversfalcons
+ athletics.org/football/schedule.html
+URL:https://danversfalconsathletics.org/football/schedule.html
+END:VEVENT
+BEGIN:VEVENT
 UID:esports-108@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261111T153000
