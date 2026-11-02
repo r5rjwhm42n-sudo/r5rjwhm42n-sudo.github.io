@@ -24,7 +24,7 @@
   const PRESEASON = T.schedule.filter((g) => g.scrimmage);
   const played = SCHEDULE.filter((g) => g.result);
   const NOW = Date.now();
-  const awaiting = (g) => !g.result && !g.cancelled && new Date(g.date) < NOW - 3 * 36e5;
+  const awaiting = (g) => !g.result && !g.cancelled && !g.dateTbd && new Date(g.date) < NOW - 3 * 36e5;
   const upcoming = SCHEDULE.filter((g) => !g.result && !g.cancelled);
   const next = upcoming.find((g) => !awaiting(g));
   const count = (list, r) => list.filter((g) => g.result === r).length;
@@ -40,8 +40,12 @@
   const dateLong = (iso) => fmt(iso, { weekday: "long", month: "long", day: "numeric" });
   const dateShort = (iso) => fmt(iso, { weekday: "short", month: "short", day: "numeric" });
   const timeOf = (iso) => fmt(iso, { hour: "numeric", minute: "2-digit" });
+  /* a playoff game can go on the schedule before the MIAA sets its day (dateTbd, with the
+     round's days in `dates`) or its start time (timeTbd) */
+  const dayOf = (g, f) => (g.dateTbd ? g.dates : f(g.date));
+  const startOf = (g) => (g.dateTbd || g.timeTbd ? "" : timeOf(g.date));
   const vs = (g) => (g.home ? "vs" : "at");
-  const kind = (g) => (g.scrimmage ? "Scrimmage" : g.league ? "NEC" : "Non-league");
+  const kind = (g) => (g.scrimmage ? "Scrimmage" : g.postseason ? `MIAA ${g.round || "tournament"}` : g.league ? "NEC" : "Non-league");
   const pending = (g) => (g.scrimmage ? "Scrimmage" : "");   // past game with no score posted
   const seed = T.bracket?.seeds ? T.bracket.seeds.findIndex((s) => /^Danvers\b/.test(s)) + 1 : 0;   // once the MIAA bracket is out
   const rankLine = seed ? `MIAA D${T.division.replace(/\D/g, "")} No. ${seed} seed` : T.ranking ? `MIAA D${T.division.replace(/\D/g, "")} No. ${T.ranking.rank}` : "";
@@ -102,9 +106,9 @@
       <div class="scores-label">${SEASON}<br>Schedule</div>
       <div class="scores-track">${SCHEDULE.map((g) => `
         <button class="sc ${g === next ? "next" : ""}" data-game="${g.id}">
-          <div class="when">${dateShort(g.date)}${g.result ? " · Final" : ""}</div>
+          <div class="when">${esc(dayOf(g, dateShort))}${g.result ? " · Final" : ""}</div>
           <div class="who">${vs(g)} ${esc(g.opponent)}</div>
-          <div class="res ${g.cancelled ? "cx" : g.result || (awaiting(g) ? "cx" : "up")}">${g.cancelled ? "Cancelled" : g.result ? `${g.result} ${g.us}–${g.them}` : awaiting(g) ? pending(g) : timeOf(g.date)}</div>
+          <div class="res ${g.cancelled ? "cx" : g.result || (awaiting(g) ? "cx" : "up")}">${g.cancelled ? "Cancelled" : g.result ? `${g.result} ${g.us}–${g.them}` : awaiting(g) ? pending(g) : startOf(g) || esc(g.round || "")}</div>
         </button>`).join("")}</div>
     </div></div>`);
   /* Start the strip at the latest results instead of the season opener */
@@ -144,13 +148,13 @@
       : g.result
       ? `<div class="result"><span class="wl ${g.result}">${g.result}</span>${g.us}–${g.them}</div>`
       : awaiting(g) ? `<div class="result cancelled">${pending(g)}</div>`
-      : `<div class="result upcoming">${timeOf(g.date)}</div>`;
+      : `<div class="result upcoming">${startOf(g)}</div>`;
     return `
       <button class="game ${g.cancelled ? "is-cancelled" : ""}" data-game="${g.id}">
         <div class="datebox">
           <div class="m">${fmt(g.date, { month: "short" })}</div>
-          <div class="d">${d.getDate()}</div>
-          <div class="w">${fmt(g.date, { weekday: "short" })}</div>
+          <div class="d">${g.dateTbd ? esc(g.dates.replace(/^\D+/, "")) : d.getDate()}</div>
+          <div class="w">${g.dateTbd ? "&nbsp;" : fmt(g.date, { weekday: "short" })}</div>
         </div>
         <div>
           <div class="opp"><small>${vs(g).toUpperCase()}</small>${esc(g.opponent)}</div>
@@ -176,7 +180,7 @@
     let body = "";
     if (g.summary) body += `<h4>Recap</h4><p>${esc(g.summary)}</p>`;
     if (g.cancelled) body += `<h4>Cancelled</h4><p>Originally scheduled for ${dateLong(g.date)} at ${timeOf(g.date)}, ${esc(g.site)}.</p>`;
-    else if (!g.result) body += `<h4>${awaiting(g) ? pending(g) || "Game" : "Kickoff"}</h4><p>${dateLong(g.date)} · ${timeOf(g.date)}<br>${esc(g.site)}</p>`;
+    else if (!g.result) body += `<h4>${awaiting(g) ? pending(g) || "Game" : "Kickoff"}</h4><p>${esc([dayOf(g, dateLong), startOf(g)].filter(Boolean).join(" · "))}<br>${esc(g.site)}</p>`;
     if (g.result && !g.scrimmage) {
       body += g.halves
         ? `<h4>Score by Half</h4><table class="line"><tr><th></th><th>1st</th><th>2nd</th><th>F</th></tr>
@@ -208,7 +212,7 @@
     return `
       <div class="modal-head">
         <button class="modal-close" aria-label="Close">✕</button>
-        <div class="eyebrow">${dateLong(g.date)} · ${g.home ? "Home" : "Away"} · ${kind(g)}${g.cancelled ? " · Cancelled" : g.result ? ` · ${outcome[g.result]}` : ""}</div>
+        <div class="eyebrow">${esc(dayOf(g, dateLong))} · ${g.home ? "Home" : "Away"} · ${kind(g)}${g.cancelled ? " · Cancelled" : g.result ? ` · ${outcome[g.result]}` : ""}</div>
         ${head}
       </div>
       <div class="modal-body">${body}</div>`;
@@ -284,7 +288,7 @@
         <div>
           <div class="k">Next game</div>
           <h3>${vs(next)} ${esc(next.opponent)}</h3>
-          <div class="meta">${dateLong(next.date)} · ${timeOf(next.date)} · ${esc(next.site)}</div>
+          <div class="meta">${esc([dayOf(next, dateLong), startOf(next), next.site].filter(Boolean).join(" · "))}</div>
         </div>
         <div class="countdown" id="countdown"></div>
       </button>` : `<div class="card next-game"><div><div class="k">Regular season complete</div><h3>Final record ${record}</h3></div></div>`) +
@@ -294,7 +298,7 @@
     const ahead = next ? upcoming.slice(upcoming.indexOf(next)) : [];
     $("#home-games").innerHTML = [...SCHEDULE.filter((g) => !ahead.includes(g)).slice(-2), ...ahead.slice(0, 3)].map(gameRow).join("");
 
-    if (next) {
+    if (next && startOf(next)) {   // counts down once the start time is set
       const tick = () => {
         const ms = Math.max(0, new Date(next.date) - new Date());
         const parts = [["Days", ms / 864e5], ["Hrs", (ms / 36e5) % 24], ["Min", (ms / 6e4) % 60]];

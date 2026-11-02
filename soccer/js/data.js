@@ -33,6 +33,12 @@ const MORSE = "Morse Field, Danvers";
    league:   true for Northeastern Conference opponents
    scrimmage: true = scrimmage (listed, but left out of the record)
    cancelled: true = called off (kept on the schedule, left out of the record)
+   postseason: true for an MIAA state tournament game; round names it ("Round of 32",
+             "Round of 16", "Quarterfinals", "Semifinals", "State final", or
+             "Preliminary") and it is listed as "MIAA <round>" instead of NEC / Non-league
+   dateTbd:  true until the MIAA sets the day: date then only places the game in the
+             list and dates (the round's days, e.g. "Nov 6–7") is shown instead
+   timeTbd:  true when the day is set but the start time isn't
    halves:   { us:[1st,2nd], them:[1st,2nd] }  (optional)
    scorers:  [ [player, goals], ... ]    assists: [ [player, assists], ... ]
    shutout:  [ goalkeeper(s) who kept the clean sheet ]

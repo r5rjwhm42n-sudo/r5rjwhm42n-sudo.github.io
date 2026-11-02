@@ -91,13 +91,13 @@ const page = (dir, query = "") => `${SITE}/${dir}/schedule.html${query}`;
 
 /* Football, soccer, field hockey and volleyball games all look alike */
 const games = (key, label, dir, list, minutes, query, extra = () => []) => list
-  .filter((g) => !g.cancelled)
+  .filter((g) => !g.cancelled && !g.dateTbd)   // a playoff game joins the feed once its day is set
   .map((g) => ({
-    uid: `${key}-${g.id}`, date: g.date, minutes, url: page(dir, query),
+    uid: `${key}-${g.id}`, date: g.date, allDay: !!g.timeTbd, minutes, url: page(dir, query),
     title: `Danvers ${label} ${vs(g.home)} ${g.opponent}${g.scrimmage ? " (scrimmage)" : ""}${final(g)}`,
     location: g.site,
     lines: [
-      g.scrimmage ? "Scrimmage" : g.league ? "Northeastern Conference" : "Non-league",
+      g.scrimmage ? "Scrimmage" : g.postseason ? `MIAA state tournament${g.round ? ` · ${g.round}` : ""}` : g.league ? "Northeastern Conference" : "Non-league",
       g.result ? `Final: Danvers ${g.us}, ${g.opponent} ${g.them}` : null,
       g.summary || null,
       ...extra(g)

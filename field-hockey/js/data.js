@@ -55,6 +55,12 @@ const TEAM = {
    league:   true for games that count in the Northeastern Conference
    scrimmage: true = preseason (listed, but left out of the record)
    cancelled: true = called off (kept on the schedule, left out of the record)
+   postseason: true for an MIAA state tournament game; round names it ("Round of 32",
+             "Round of 16", "Quarterfinals", "Semifinals", "State final", or
+             "Preliminary") and it is listed as "MIAA <round>" instead of NEC / Non-league
+   dateTbd:  true until the MIAA sets the day: date then only places the game in the
+             list and dates (the round's days, e.g. "Nov 6–7") is shown instead
+   timeTbd:  true when the day is set but the start time isn't
    quarters: { us:[q1,q2,q3,q4], them:[...] }  (optional)
    halftime: [us, them] — used when the quarter scores aren't known
    scorers:  [ [player, goals], ... ]    assists: [ [player, assists], ... ]

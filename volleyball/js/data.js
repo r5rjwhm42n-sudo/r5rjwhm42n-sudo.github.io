@@ -56,6 +56,12 @@ const TEAM = {
    league:   true for matches that count in the Northeastern Conference
    scrimmage: true = preseason (listed, but left out of the record)
    cancelled: true = called off (kept on the schedule, left out of the record)
+   postseason: true for an MIAA state tournament match; round names it ("Round of 32",
+             "Round of 16", "Quarterfinals", "Semifinals", "State final", or
+             "Preliminary") and it is listed as "MIAA <round>" instead of NEC / Non-league
+   dateTbd:  true until the MIAA sets the day: date then only places the match in the
+             list and dates (the round's days, e.g. "Nov 6–7") is shown instead
+   timeTbd:  true when the day is set but the start time isn't
    box:      one line per Danvers player who got in, from the MaxPreps box score:
              "Player Name": [sets played, kills, aces, blocks, digs, assists,
                              attack attempts, attack errors, serve receptions]

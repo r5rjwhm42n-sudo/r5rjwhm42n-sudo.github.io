@@ -34,7 +34,7 @@
     const real = list.filter((g) => !g.scrimmage && !g.cancelled && !g.noResult && !(g.tournament && !g.result));
     const games = real.filter((g) => g.result).map((g) => ({ id: g.id, date: g.date, abbr: abbr(g.opponent), title: vs(g), result: g.result,
       score: `${g.us}–${g.them}`, us: g.us, them: g.them, margin: g.us - g.them, home: g.home, sets: g.sets, raw: g }));
-    const ahead = real.filter((g) => !g.result && new Date(g.date) > Date.now() - 3 * 36e5).slice(0, 4)
+    const ahead = real.filter((g) => !g.result && !g.dateTbd && new Date(g.date) > Date.now() - 3 * 36e5).slice(0, 4)
       .map((g) => ({ id: g.id, date: g.date, abbr: abbr(g.opponent), title: vs(g) }));
     return { lines: [{ label: null, games }], attr: "data-game", unit: SPORT === "volleyball" || SPORT === "golf" ? "match" : "game", ahead };
   }

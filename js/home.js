@@ -28,7 +28,7 @@
      ev: { sport, team, href, date, title, opponent, home, site, result, score, final, summary, headline } */
   const vs = (g) => (g.home ? "vs" : "at");
   const gameEvent = (sport, team, href, g) => ({
-    sport, team, href, date: g.date, timeTbd: g.timeTbd, home: g.home, site: g.site,
+    sport, team, href, date: g.date, timeTbd: g.timeTbd, dateTbd: !!g.dateTbd, home: g.home, site: g.site,
     opponent: g.opponent, mascot: g.mascot,
     title: g.tournament ? g.opponent : `${vs(g)} ${g.opponent}`,
     result: g.result || null,

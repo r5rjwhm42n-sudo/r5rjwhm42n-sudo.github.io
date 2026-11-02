@@ -65,7 +65,7 @@
   const memo = {};
   function weather(g) {
     const start = new Date(g.date).getTime();
-    if (!g.date || g.timeTbd || start < Date.now() - 3 * 36e5 || start > Date.now() + 15 * 864e5) return Promise.resolve(null);
+    if (!g.date || g.timeTbd || g.dateTbd || start < Date.now() - 3 * 36e5 || start > Date.now() + 15 * 864e5) return Promise.resolve(null);
     const [lat, lon] = place(g);
     const key = `${lat},${lon}`;
     memo[key] = memo[key] || fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}`
@@ -91,7 +91,7 @@
   /* How long each sport's events usually run, for the "live now" window */
   const LENGTH = { football: 150, soccer: 120, "field-hockey": 120, volleyball: 120, golf: 240, "cross-country": 120, esports: 90 };
   function state(g, sport) {
-    if (!g.date || g.timeTbd || g.cancelled || g.result || g.finish) return "";
+    if (!g.date || g.timeTbd || g.dateTbd || g.cancelled || g.result || g.finish) return "";
     const start = new Date(g.date).getTime(), now = Date.now();
     if (now >= start - 10 * 6e4 && now <= start + (LENGTH[sport] || 120) * 6e4) return "live";
     if (new Date(g.date).toDateString() === new Date().toDateString() && now < start) return "today";
@@ -101,7 +101,7 @@
   /* Each opponent's school colors (main, trim), from the school's MaxPreps page */
   const SCHOOL_COLORS = {
     "Andover": ["#022C66", "#C8880A"], "Arlington": ["#CC0022", "#454444"], "Barnstable": ["#CC0022", "#FFFFFF"],
-    "Beverly": ["#222222", "#D5350B"], "Bishop Fenwick": ["#222222", "#C8880A"], "Concord-Carlisle": ["#8F0018", "#FFFFFF"],
+    "Bedford": ["#034CB2", "#FFFFFF"], "Beverly": ["#222222", "#D5350B"], "Bishop Fenwick": ["#222222", "#C8880A"], "Concord-Carlisle": ["#8F0018", "#FFFFFF"],
     "Essex Tech": ["#00824B", "#FFFFFF"], "Gloucester": ["#8F0018", "#C8880A"], "Hamilton-Wenham": ["#034CB2", "#FFFFFF"],
     "Ipswich": ["#222222", "#D5350B"], "Lynn Classical": ["#00824B", "#C8880A"], "Lynnfield": ["#034CB2", "#C8880A"],
     "Malden Catholic": ["#034CB2", "#C8880A"], "Marblehead": ["#222222", "#CC0022"], "Masconomet": ["#CC0022", "#FFFFFF"],
@@ -114,7 +114,7 @@
     "Wilmington": ["#022C66", "#FFFFFF"], "Winthrop": ["#022C66", "#C8880A"]
   };
   /* Schools with their logo in images/opponents/<name>.png (from the school's MaxPreps page) */
-  const LOGOS = new Set(["andover", "arlington", "barnstable", "beverly", "bishop-fenwick", "concord-carlisle", "gloucester",
+  const LOGOS = new Set(["andover", "arlington", "barnstable", "bedford", "beverly", "bishop-fenwick", "concord-carlisle", "gloucester",
     "hamilton-wenham", "lynn-classical", "lynnfield", "malden-catholic", "marblehead", "masconomet", "medford", "melrose",
     "mystic-valley", "north-reading", "peabody", "pingree", "pioneer-charter", "reading", "rockport", "salem", "saugus",
     "st-johns-prep", "stoneham", "triton", "wakefield", "weston", "wilmington", "winthrop"]);

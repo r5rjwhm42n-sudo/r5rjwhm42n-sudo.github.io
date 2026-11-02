@@ -31,8 +31,12 @@
   const dateLong = (iso) => fmt(iso, { weekday: "long", month: "long", day: "numeric" });
   const dateShort = (iso) => fmt(iso, { weekday: "short", month: "short", day: "numeric" });
   const timeOf = (iso) => fmt(iso, { hour: "numeric", minute: "2-digit" });
+  /* a playoff game can go on the schedule before the MIAA sets its day (dateTbd, with the
+     round's days in `dates`) or its start time (timeTbd) */
+  const dayOf = (g, f) => (g.dateTbd ? g.dates : f(g.date));
+  const startOf = (g) => (g.dateTbd || g.timeTbd ? "" : timeOf(g.date));
   const vs = (g) => (g.home ? "vs" : "at");
-  const kind = (g) => (g.scrimmage ? "Preseason" : g.league ? "NEC" : "Non-league");
+  const kind = (g) => (g.scrimmage ? "Preseason" : g.postseason ? `MIAA ${g.round || "tournament"}` : g.league ? "NEC" : "Non-league");
   const outcome = { W: "Win", L: "Loss" };
   const plural = (n, word, s = "s") => `${n} ${word}${n === 1 ? "" : s}`;
   const initials = (name) => name.split(" ").map((w) => w[0]).join("").slice(0, 2);
@@ -96,9 +100,9 @@
       <div class="scores-label">${SEASON}<br>Schedule</div>
       <div class="scores-track">${REGULAR.map((g) => `
         <button class="sc ${g === upcoming[0] ? "next" : ""}" data-game="${g.id}">
-          <div class="when">${dateShort(g.date)}${g.result ? " · Final" : ""}</div>
+          <div class="when">${esc(dayOf(g, dateShort))}${g.result ? " · Final" : ""}</div>
           <div class="who">${vs(g)} ${esc(g.opponent)}</div>
-          <div class="res ${g.cancelled ? "cx" : g.result || "up"}">${g.cancelled ? "Cancelled" : g.result ? `${g.result} ${g.us}–${g.them}` : timeOf(g.date)}</div>
+          <div class="res ${g.cancelled ? "cx" : g.result || "up"}">${g.cancelled ? "Cancelled" : g.result ? `${g.result} ${g.us}–${g.them}` : startOf(g) || esc(g.round || "")}</div>
         </button>`).join("")}</div>
     </div></div>`);
   $(".nav-toggle").addEventListener("click", (e) => {
@@ -131,13 +135,13 @@
       ? `<div class="result"><span class="wl ${g.result}">${g.result}</span>${g.us}–${g.them}</div>`
       : g.scrimmage
       ? `<div class="result cancelled">Scrimmage</div>`
-      : `<div class="result upcoming">${timeOf(g.date)}</div>`;
+      : `<div class="result upcoming">${startOf(g)}</div>`;
     return `
       <button class="game ${g.cancelled ? "is-cancelled" : ""}" data-game="${g.id}">
         <div class="datebox">
           <div class="m">${fmt(g.date, { month: "short" })}</div>
-          <div class="d">${d.getDate()}</div>
-          <div class="w">${fmt(g.date, { weekday: "short" })}</div>
+          <div class="d">${g.dateTbd ? esc(g.dates.replace(/^\D+/, "")) : d.getDate()}</div>
+          <div class="w">${g.dateTbd ? "&nbsp;" : fmt(g.date, { weekday: "short" })}</div>
         </div>
         <div>
           <div class="opp"><small>${vs(g).toUpperCase()}</small>${esc(g.opponent)}</div>
@@ -164,7 +168,7 @@
     if (g.summary) body += `<h4>Recap</h4><p>${esc(g.summary)}</p>`;
     if (g.cancelled) body += `<h4>Cancelled</h4><p>Originally scheduled for ${dateLong(g.date)} at ${timeOf(g.date)}, ${esc(g.site)}.</p>`;
     else if (g.scrimmage && !g.result) body += `<h4>Preseason</h4><p>${dateLong(g.date)} · ${timeOf(g.date)}<br>${esc(g.site)}</p><p>Scrimmage — no result is kept.</p>`;
-    else if (!g.result) body += `<h4>Match Time</h4><p>${dateLong(g.date)} · ${timeOf(g.date)}<br>${esc(g.site)}</p>`;
+    else if (!g.result) body += `<h4>Match Time</h4><p>${esc([dayOf(g, dateLong), startOf(g)].filter(Boolean).join(" · "))}<br>${esc(g.site)}</p>`;
     if (g.result && !g.scrimmage) {
       const cells = (i) => g.sets.map((set) => `<td class="${set[i] > set[1 - i] ? "w" : ""}">${set[i]}</td>`).join("");
       body += g.sets?.length
@@ -203,7 +207,7 @@
     return `
       <div class="modal-head">
         <button class="modal-close" aria-label="Close">✕</button>
-        <div class="eyebrow">${dateLong(g.date)} · ${g.home ? "Home" : "Away"} · ${kind(g)}${g.cancelled ? " · Cancelled" : g.result ? ` · ${outcome[g.result]}` : ""}</div>
+        <div class="eyebrow">${esc(dayOf(g, dateLong))} · ${g.home ? "Home" : "Away"} · ${kind(g)}${g.cancelled ? " · Cancelled" : g.result ? ` · ${outcome[g.result]}` : ""}</div>
         ${head}
       </div>
       <div class="modal-body">${body}</div>`;
@@ -279,7 +283,7 @@
         <div>
           <div class="k">Next match</div>
           <h3>${vs(next)} ${esc(next.opponent)}</h3>
-          <div class="meta">${dateLong(next.date)} · ${timeOf(next.date)} · ${esc(next.site)}</div>
+          <div class="meta">${esc([dayOf(next, dateLong), startOf(next), next.site].filter(Boolean).join(" · "))}</div>
         </div>
         <div class="countdown" id="countdown"></div>
       </button>` : `<div class="card next-game"><div><div class="k">Regular season complete</div><h3>Final record ${record}</h3></div></div>`) +
@@ -290,7 +294,7 @@
     $("#home-leaders").innerHTML = leaders(["kills", "assists", "digs"]);
     $("#home-games").innerHTML = [...past.slice(-2), ...upcoming.slice(0, 3)].map(gameRow).join("");
 
-    if (next) {
+    if (next && startOf(next)) {   // counts down once the start time is set
       const tick = () => {
         const ms = Math.max(0, new Date(next.date) - new Date());
         const parts = [["Days", ms / 864e5], ["Hrs", (ms / 36e5) % 24], ["Min", (ms / 6e4) % 60]];

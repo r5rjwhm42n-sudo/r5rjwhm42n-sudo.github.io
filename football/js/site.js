@@ -25,6 +25,11 @@
   const dateLong = (iso) => fmt(iso, { weekday: "long", month: "long", day: "numeric" });
   const dateShort = (iso) => fmt(iso, { weekday: "short", month: "short", day: "numeric" });
   const timeOf = (iso) => fmt(iso, { hour: "numeric", minute: "2-digit" });
+  /* a playoff game can go on the schedule before the MIAA sets its day (dateTbd, with the
+     round's days in `dates`) or its kickoff time (timeTbd) */
+  const dayOf = (g, f) => (g.dateTbd ? g.dates : f(g.date));
+  const startOf = (g) => (g.dateTbd || g.timeTbd ? "" : timeOf(g.date));
+  const kind = (g) => (g.postseason ? `MIAA ${g.round || "tournament"}` : g.league ? "NEC" : "Non-league");
   const vs = (g) => (g.home ? "vs" : "at");
   const seed = TEAM.bracket?.seeds ? TEAM.bracket.seeds.findIndex((s) => /^Danvers\b/.test(s)) + 1 : 0;   // once the MIAA bracket is out
   const initials = (name) => name.split(" ").map((w) => w[0]).join("").slice(0, 2);
@@ -55,9 +60,9 @@
       <div class="scores-label">${TEAM.season}<br>Schedule</div>
       <div class="scores-track">${SCHEDULE.map((g) => `
         <button class="sc ${g === upcoming[0] ? "next" : ""}" data-game="${g.id}">
-          <div class="when">${dateShort(g.date)}${g.result ? " · Final" : ""}</div>
+          <div class="when">${esc(dayOf(g, dateShort))}${g.result ? " · Final" : ""}</div>
           <div class="who">${vs(g)} ${esc(g.opponent)}</div>
-          <div class="res ${g.cancelled ? "cx" : g.result || "up"}">${g.cancelled ? "Cancelled" : g.result ? `${g.result} ${g.us}–${g.them}` : timeOf(g.date)}</div>
+          <div class="res ${g.cancelled ? "cx" : g.result || "up"}">${g.cancelled ? "Cancelled" : g.result ? `${g.result} ${g.us}–${g.them}` : startOf(g) || esc(g.round || "")}</div>
         </button>`).join("")}</div>
     </div></div>`);
   $(".nav-toggle").addEventListener("click", (e) => {
@@ -89,19 +94,19 @@
       ? `<div class="result cancelled">Cancelled</div>`
       : g.result
       ? `<div class="result"><span class="wl ${g.result}">${g.result}</span>${g.us}–${g.them}</div>`
-      : `<div class="result upcoming">${timeOf(g.date)}</div>`;
+      : `<div class="result upcoming">${startOf(g)}</div>`;
     return `
       <button class="game ${g.cancelled ? "is-cancelled" : ""}" data-game="${g.id}">
         <div class="datebox">
           <div class="m">${fmt(g.date, { month: "short" })}</div>
-          <div class="d">${d.getDate()}</div>
-          <div class="w">${fmt(g.date, { weekday: "short" })}</div>
+          <div class="d">${g.dateTbd ? esc(g.dates.replace(/^\D+/, "")) : d.getDate()}</div>
+          <div class="w">${g.dateTbd ? "&nbsp;" : fmt(g.date, { weekday: "short" })}</div>
         </div>
         <div>
           <div class="opp"><small>${vs(g).toUpperCase()}</small>${esc(g.opponent)}</div>
           <div class="meta">
             <span class="tag ${g.home ? "home" : ""}">${g.home ? "Home" : "Away"}</span>
-            <span class="tag">${g.league ? "NEC" : "Non-league"}</span>
+            <span class="tag">${kind(g)}</span>
             ${g.tag ? `<span class="tag big">${esc(g.tag)}</span>` : ""}
             <span>${esc(g.site)}</span>
           </div>
@@ -122,7 +127,7 @@
     let body = "";
     if (g.summary) body += `<h4>Recap</h4><p>${esc(g.summary)}</p>`;
     if (g.cancelled) body += `<h4>Cancelled</h4><p>Originally scheduled for ${dateLong(g.date)} at ${timeOf(g.date)}, ${esc(g.site)}.</p>`;
-    else if (!g.result) body += `<h4>Kickoff</h4><p>${dateLong(g.date)} · ${timeOf(g.date)}<br>${esc(g.site)}</p>`;
+    else if (!g.result) body += `<h4>Kickoff</h4><p>${esc([dayOf(g, dateLong), startOf(g)].filter(Boolean).join(" · "))}<br>${esc(g.site)}</p>`;
     if (g.result) {
       body += g.quarters
         ? `<h4>Line Score</h4><table class="line"><tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>F</th></tr>
@@ -145,7 +150,7 @@
     return `
       <div class="modal-head">
         <button class="modal-close" aria-label="Close">✕</button>
-        <div class="eyebrow">${dateLong(g.date)} · ${g.home ? "Home" : "Away"} · ${g.league ? "NEC" : "Non-league"}${g.cancelled ? " · Cancelled" : g.result ? ` · ${g.result === "W" ? "Win" : "Loss"}` : ""}</div>
+        <div class="eyebrow">${esc(dayOf(g, dateLong))} · ${g.home ? "Home" : "Away"} · ${kind(g)}${g.cancelled ? " · Cancelled" : g.result ? ` · ${g.result === "W" ? "Win" : "Loss"}` : ""}</div>
         ${head}
       </div>
       <div class="modal-body">${body}</div>`;
@@ -221,7 +226,7 @@
       const opp = row(last.opponent, last.them, !won, false);
       $("#scoreboard").innerHTML = `
         <button class="card scoreboard" data-game="${last.id}" aria-label="Last game details">
-          <div class="sb-top"><span>Final</span><span>${last.home ? "Home" : "Away"} · ${last.league ? "NEC" : "Non-league"}</span></div>
+          <div class="sb-top"><span>Final</span><span>${last.home ? "Home" : "Away"} · ${kind(last)}</span></div>
           ${last.home ? opp + dan : dan + opp}
           <div class="sb-foot"><span>${esc((last.performers || []).slice(0, 2).map((p) => `${p.name.split(" ").pop()}: ${p.line}`).join(" · "))}</span><b>Box score ›</b></div>
         </button>`;
@@ -239,7 +244,7 @@
         <div>
           <div class="k">Next game</div>
           <h3>${vs(next)} ${esc(next.opponent)}</h3>
-          <div class="meta">${dateLong(next.date)} · ${timeOf(next.date)} · ${esc(next.site)}</div>
+          <div class="meta">${esc([dayOf(next, dateLong), startOf(next), next.site].filter(Boolean).join(" · "))}</div>
         </div>
         <div class="countdown" id="countdown"></div>
       </button>` : `<div class="card next-game"><div><div class="k">Season complete</div><h3>Final record ${record}</h3></div></div>`) +
@@ -248,7 +253,7 @@
     $("#home-leaders").innerHTML = leaders();
     $("#home-games").innerHTML = [...past.slice(-2), ...upcoming.slice(0, 3)].map(gameRow).join("");
 
-    if (next) {
+    if (next && startOf(next)) {   // counts down once the kickoff is set
       const tick = () => {
         const ms = Math.max(0, new Date(next.date) - new Date());
         const parts = [["Days", ms / 864e5], ["Hrs", (ms / 36e5) % 24], ["Min", (ms / 6e4) % 60]];
