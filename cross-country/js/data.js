@@ -283,7 +283,8 @@ const MEETS = [
     ],
     sources: [
       { label: "Salem News meet story", url: SN + "mascos-hamlin-beverlys-corbett-take-individual-titles-at-nec-cross-country-championships/article_0a158f57-ccf5-4f47-a35e-559cf24f5ba1.html" },
-      { label: "Globe Schools Insider, Nov. 1", url: "https://www.bostonglobe.com/2026/11/01/sports/globe-schools-insider-takeaways-highlights/" }
+      { label: "Globe Schools Insider, Nov. 1", url: "https://www.bostonglobe.com/2026/11/01/sports/globe-schools-insider-takeaways-highlights/" },
+      { label: "Daily Item meet story", url: "https://itemlive.com/2026/11/01/marblehead-masters-the-course/" }
     ]
   },
   {
