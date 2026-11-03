@@ -273,10 +273,18 @@ const MEETS = [
   {
     id: 7, date: "2026-10-31T10:00", name: "NEC Championship Meet", short: "NEC",
     home: false, league: true, site: "Stage Fort Park, Gloucester", distance: "5K",
-    summary: "Masconomet's Alexander Hamlin won the boys race in 16:02 and led the Chieftains, unbeaten NEC champions in the regular season, to the boys team title with 41 points. Beverly's Grace Corbett won the girls race in 19:05.",
-    boys: null, girls: null,
-    notes: ["Boys team scores: Masconomet 41, Swampscott 52, Peabody 54"],
-    sources: [{ label: "Salem News meet story", url: SN + "mascos-hamlin-beverlys-corbett-take-individual-titles-at-nec-cross-country-championships/article_0a158f57-ccf5-4f47-a35e-559cf24f5ba1.html" }]
+    summary: "Masconomet's Alexander Hamlin won the boys race in 16:02 and led the Chieftains, unbeaten NEC champions in the regular season, to the boys team title with 41 points. Marblehead ran away with the girls title on 33 points, and Beverly's Grace Corbett won the girls race in 19:05. The Danvers boys and girls both placed sixth.",
+    boys: { race: "Team score: 162 points", place: 6, finishers: [] },
+    girls: { race: "Team score: 119 points", place: 6, finishers: [] },
+    notes: [
+      "Boys team scores: Masconomet 41, Swampscott 52, Peabody 54, Marblehead 85 … Danvers 162 (6th)",
+      "Girls team scores: Marblehead 33, Swampscott 81 … Masconomet 92 (4th), Danvers 119 (6th)",
+      "Danvers runners' places and times weren't published"
+    ],
+    sources: [
+      { label: "Salem News meet story", url: SN + "mascos-hamlin-beverlys-corbett-take-individual-titles-at-nec-cross-country-championships/article_0a158f57-ccf5-4f47-a35e-559cf24f5ba1.html" },
+      { label: "Globe Schools Insider, Nov. 1", url: "https://www.bostonglobe.com/2026/11/01/sports/globe-schools-insider-takeaways-highlights/" }
+    ]
   },
   {
     id: 8, date: "2026-11-14T11:00", timeTbd: true, name: "MIAA Division 2 Championships", short: "MIAA", postseason: true,
