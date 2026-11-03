@@ -307,11 +307,12 @@ const SCHEDULE = [
     ] },
   { id: 10, date: "2026-11-06T18:30", opponent: "Bedford", mascot: "Buccaneers",
     home: true, league: false, postseason: true, round: "Round of 16", site: HOME_FIELD, result: null,
-    notes: ["MIAA Division 4 Round of 16: No. 3 Danvers hosts No. 14 Bedford", "Bedford enters 5–3 on a two-game win streak: 55–30 over Wayland and 44–34 over Acton-Boxborough", "Danvers is No. 16 in the Globe Top 20 (Nov. 2), up from 17 after the Peabody win", "The higher seed hosts through the quarterfinals"],
+    notes: ["MIAA Division 4 Round of 16: No. 3 Danvers hosts No. 14 Bedford", "Bedford enters 5–3 on a two-game win streak: 55–30 over Wayland and 44–34 over Acton-Boxborough", "Danvers is No. 16 in the Globe Top 20 (Nov. 2), up from 17 after the Peabody win", "The Globe's playoff preview picks two-time defending champion Scituate as the Division 4 favorite and notes Danvers has the bracket's second-highest average margin of victory (11.8)", "The higher seed hosts through the quarterfinals"],
     sources: [
       { label: "MIAA Division 4 bracket", url: "https://www.miaa.net/miaa-football-2026-division-4-state-tournament" },
       { label: "Bedford's last game (MaxPreps)", url: "https://www.maxpreps.com/news/dfoe0HM3N0uRjdKP0slKdg/football-recap-bedford-handles-acton-boxborough.htm" },
-      { label: "Globe Top 20, Nov. 2", url: "https://www.bostonglobe.com/2026/11/02/sports/eastern-mass-football-and-globe-top-20/" }
+      { label: "Globe Top 20, Nov. 2", url: "https://www.bostonglobe.com/2026/11/02/sports/eastern-mass-football-and-globe-top-20/" },
+      { label: "Globe playoff preview", url: "https://www.bostonglobe.com/2026/11/01/sports/miaa-football-playoff-preview/" }
     ] },
   { id: 9, date: "2026-11-26T10:00", opponent: "Gloucester", mascot: "Fishermen", home: false, league: false, site: "Newell Stadium, Gloucester", result: null,
     notes: ["Thanksgiving Day rivalry, played every Thanksgiving morning since 1964"],
