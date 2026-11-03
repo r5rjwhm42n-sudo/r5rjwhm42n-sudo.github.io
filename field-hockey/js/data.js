@@ -308,10 +308,11 @@ const SCHEDULE = [
   { id: 15, date: "2026-10-20T19:00", opponent: "Saugus", mascot: "Sachems", home: false, league: true, site: "Serino Field, Saugus",
     result: "W", us: 6, them: 2,
     quarters: null,
-    summary: "The Falcons scored six times under the lights at Serino Field to sweep the season series with Saugus, getting back above .500 overall and to .500 in the conference.",
-    scorers: [], assists: [],
+    summary: "The Falcons scored six times under the lights at Serino Field to sweep the season series with Saugus, getting back above .500 overall and to .500 in the conference. Freshman Zoie Abell had a hat trick, and Kyla Moroney scored twice and set up two more.",
+    scorers: [["Zoie Abell", 3], ["Kyla Moroney", 2]], assists: [["Kyla Moroney", 2]],
     notes: ["Second meeting — Danvers won 2–1 at home on Sept. 17", "Saugus' Senior Night"],
     sources: [
+      { label: "Globe Schools Insider, Oct. 21 (stat leaders)", url: "https://www.bostonglobe.com/2026/10/21/sports/globe-schools-insider-takeaways-highlights/" },
       { label: "Full-game replay on Saugus TV (YouTube)", url: "https://www.youtube.com/watch?v=gyVKz-9KcqY" },
       { label: "Salem News roundup, Oct. 20", url: "https://www.salemnews.com/sports/tuesdays-area-roundup-beverly-danvers-fenwick-field-hockey-all-score-big-wins/article_2c88f6e2-5712-4e03-ba8b-e2041bd6252f.html" },
       { label: "Result on Arbiter Live", url: "https://www.arbiterlive.com/Teams/Schedule/4285268?activeEntityId=5538" }
@@ -345,9 +346,10 @@ const SCHEDULE = [
     result: "W", us: 3, them: 1,
     quarters: null,
     summary: "The Falcons closed the regular season with a 3–1 win at Boxford Commons, turning the score around on Masconomet after the Chieftains won by the same margin at Deering Stadium on Oct. 6. The win evened Danvers at 8–8–2.",
-    scorers: [], assists: [],
+    scorers: [], assists: [["Kyla Moroney", 2]],
     notes: ["Regular-season finale", "Second meeting — Masconomet won 3–1 on Oct. 6", "Masconomet fell to 9–7–2"],
     sources: [
+      { label: "Globe Schools Insider, Oct. 31 (stat leaders)", url: "https://www.bostonglobe.com/2026/10/31/sports/globe-schools-insider-takeaways-highlights/" },
       { label: "MaxPreps box score", url: MP + "danvers-vs-masconomet-regional-boxford/10-30-2026/?c=9392ca63-588e-406f-bc6b-698388ee4941" },
       { label: "Danvers Field Hockey on Instagram", url: "https://www.instagram.com/p/DfIobbtNLgN/" }
     ] },

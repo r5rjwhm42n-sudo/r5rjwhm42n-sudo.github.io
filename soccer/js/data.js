@@ -423,7 +423,8 @@ const TEAMS = {
       { name: "Raegan Cassidy", num: 11, pos: ["D"], grade: "So.", captain: false },
       { name: "Dani Scarpaci", num: 15, pos: ["M"], grade: "Jr.", captain: false },
       { name: "Flavia Locilento", num: 4, pos: ["F"], grade: "Jr.", captain: false },
-      { name: "Ari Fajardo", num: 10, pos: ["D"], grade: "Sr.", captain: false }
+      { name: "Ari Fajardo", num: 10, pos: ["D"], grade: "Sr.", captain: false },
+      { name: "Paige Dembowski", num: null, pos: [], grade: null, captain: false }   // two goals at Gloucester (Globe, Oct. 29); not on the school's roster page
     ],
 
     /* -----------------------------------------------------------------
