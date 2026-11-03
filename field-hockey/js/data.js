@@ -350,7 +350,10 @@ const SCHEDULE = [
     sources: [
       { label: "MaxPreps box score", url: MP + "danvers-vs-masconomet-regional-boxford/10-30-2026/?c=9392ca63-588e-406f-bc6b-698388ee4941" },
       { label: "Danvers Field Hockey on Instagram", url: "https://www.instagram.com/p/DfIobbtNLgN/" }
-    ] }
+    ] },
+
+  { id: 104, date: "2026-11-03T16:30", opponent: "Woburn", mascot: "Tanners", home: false, league: false, site: "Woburn High School Stadium, Woburn",
+    scrimmage: true, result: null, notes: ["Scrimmage after the regular season"] }
 ];
 
 /* ---------------------------------------------------------------------

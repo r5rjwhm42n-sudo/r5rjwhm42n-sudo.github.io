@@ -316,4 +316,15 @@ DESCRIPTION:Northeastern Conference\nFinal: Danvers 3\, Masconomet 1\nThe F
  edule.html
 URL:https://danversfalconsathletics.org/field-hockey/schedule.html
 END:VEVENT
+BEGIN:VEVENT
+UID:field-hockey-104@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261103T163000
+DURATION:PT2H
+SUMMARY:Danvers Field Hockey at Woburn (scrimmage)
+LOCATION:Woburn High School Stadium\, Woburn
+DESCRIPTION:Scrimmage\nSchedule and results: https://danversfalconsathletic
+ s.org/field-hockey/schedule.html
+URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+END:VEVENT
 END:VCALENDAR
