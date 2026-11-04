@@ -28,6 +28,7 @@
     ["Newburyport", 42.812, -70.877], ["Haverhill", 42.776, -71.077], ["Bradford", 42.776, -71.077], ["Stoneham", 42.48, -71.099],
     ["Malden", 42.425, -71.066], ["Everett", 42.408, -71.054], ["Wakefield", 42.506, -71.073], ["Arlington", 42.415, -71.157],
     ["Medford", 42.418, -71.106], ["Weston", 42.367, -71.303], ["Middleton", 42.595, -71.016], ["Topsfield", 42.637, -70.95],
+    ["East Longmeadow", 42.064, -72.513], ["Worcester", 42.262, -71.802],
     ["Danvers", 42.575, -70.93]
   ];
   const HOME = [42.575, -70.93];
@@ -102,9 +103,9 @@
   const SCHOOL_COLORS = {
     "Andover": ["#022C66", "#C8880A"], "Arlington": ["#CC0022", "#454444"], "Barnstable": ["#CC0022", "#FFFFFF"],
     "Bedford": ["#034CB2", "#FFFFFF"], "Beverly": ["#222222", "#D5350B"], "Bishop Fenwick": ["#222222", "#C8880A"], "Concord-Carlisle": ["#8F0018", "#FFFFFF"],
-    "Essex Tech": ["#00824B", "#FFFFFF"], "Gloucester": ["#8F0018", "#C8880A"], "Hamilton-Wenham": ["#034CB2", "#FFFFFF"],
+    "East Longmeadow": ["#CC0022", "#454444"], "Essex Tech": ["#00824B", "#FFFFFF"], "Gloucester": ["#8F0018", "#C8880A"], "Hamilton-Wenham": ["#034CB2", "#FFFFFF"],
     "Ipswich": ["#222222", "#D5350B"], "Lynn Classical": ["#00824B", "#C8880A"], "Lynnfield": ["#034CB2", "#C8880A"],
-    "Malden Catholic": ["#034CB2", "#C8880A"], "Marblehead": ["#222222", "#CC0022"], "Masconomet": ["#CC0022", "#FFFFFF"],
+    "Malden Catholic": ["#034CB2", "#C8880A"], "Notre Dame Academy": ["#00824B", "#C8880A"], "Marblehead": ["#222222", "#CC0022"], "Masconomet": ["#CC0022", "#FFFFFF"],
     "Medford": ["#034CB2", "#FFFFFF"], "Melrose": ["#CC0022", "#FFFFFF"], "Mystic Valley": ["#8F0018", "#C8880A"],
     "North Reading": ["#00824B", "#C8880A"], "Peabody": ["#034CB2", "#FFFFFF"], "Pingree": ["#00824B", "#FFFFFF"],
     "Pioneer Charter": ["#022C66", "#046DFF"], "Reading": ["#222222", "#CC0022"], "Rockport": ["#8F0018", "#454444"],
@@ -114,7 +115,7 @@
     "Wilmington": ["#022C66", "#FFFFFF"], "Winthrop": ["#022C66", "#C8880A"]
   };
   /* Schools with their logo in images/opponents/<name>.png (from the school's MaxPreps page) */
-  const LOGOS = new Set(["andover", "arlington", "barnstable", "bedford", "beverly", "bishop-fenwick", "concord-carlisle", "gloucester",
+  const LOGOS = new Set(["andover", "arlington", "barnstable", "bedford", "beverly", "bishop-fenwick", "concord-carlisle", "east-longmeadow", "gloucester",
     "hamilton-wenham", "lynn-classical", "lynnfield", "malden-catholic", "marblehead", "masconomet", "medford", "melrose",
     "mystic-valley", "north-reading", "peabody", "pingree", "pioneer-charter", "reading", "rockport", "salem", "saugus",
     "st-johns-prep", "stoneham", "triton", "wakefield", "weston", "wilmington", "winthrop"]);

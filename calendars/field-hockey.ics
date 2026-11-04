@@ -328,4 +328,15 @@ DESCRIPTION:Scrimmage\nSchedule and results: https://danversfalconsathletic
  s.org/field-hockey/schedule.html
 URL:https://danversfalconsathletics.org/field-hockey/schedule.html
 END:VEVENT
+BEGIN:VEVENT
+UID:field-hockey-105@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261105T180000
+DURATION:PT2H
+SUMMARY:Danvers Field Hockey at East Longmeadow
+LOCATION:East Longmeadow High School\, East Longmeadow
+DESCRIPTION:MIAA state tournament · Round of 32\nSchedule and results: htt
+ ps://danversfalconsathletics.org/field-hockey/schedule.html
+URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+END:VEVENT
 END:VCALENDAR

@@ -73,7 +73,7 @@ const TEAMS = {
     label: "Girls Soccer",
     short: "Girls",
     division: "MIAA Division 2",
-    ranking: { rank: 17, of: 63, asOf: "Oct. 30" },   // MIAA power ranking within the division
+    ranking: { rank: 19, of: 63, asOf: "Nov. 3" },   // MIAA power ranking within the division
     /* MIAA state tournament bracket: null until the MIAA posts it (Thu., Nov. 5, 1 p.m.) at
        https://www.miaa.net/miaa-girls-soccer-2026-division-2-state-tournament
        Then fill it in from that page and the hub's State Tournament section draws it:
@@ -583,7 +583,7 @@ const TEAMS = {
     label: "Boys Soccer",
     short: "Boys",
     division: "MIAA Division 2",
-    ranking: { rank: 60, of: 61, asOf: "Oct. 30" },   // MIAA power ranking within the division
+    ranking: { rank: 60, of: 61, asOf: "Nov. 3" },   // MIAA power ranking within the division
     headCoach: "Sam Perel",
     coachNote: "3rd season · 17–16–6 entering 2026",
     assistants: ["Nathan Dos Santos", "Jamie Kidney (JV)"],

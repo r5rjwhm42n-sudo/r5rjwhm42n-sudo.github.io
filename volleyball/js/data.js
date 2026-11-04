@@ -24,7 +24,7 @@ const TEAM = {
   stadium: "DHS Field House",
   /* MIAA power ranking (published every Tuesday and Friday in season) —
      update rank, of and asOf from miaa.net/power-rankings (Volleyball · Fall · Division 3) */
-  ranking: { rank: 19, of: 68, asOf: "Oct. 30", url: "https://www.miaa.net/power-rankings" },
+  ranking: { rank: 19, of: 68, asOf: "Nov. 3", url: "https://www.miaa.net/power-rankings" },
   /* MIAA state tournament bracket: null until the MIAA posts it (Tue., Nov. 3, 1 p.m.) at
      https://www.miaa.net/miaa-fall-volleyball-2026-division-3-state-tournament
      Then fill it in from that page and the hub's State Tournament section draws it:
@@ -34,7 +34,18 @@ const TEAM = {
               { seeds: [3, 14], score: [28, 7], date: "2026-11-06T19:00", site: "Morse Field, Danvers" }
               note: "OT", "2OT" or "PKs 4–3" (optional) · winner: the winning seed, only when the score is tied
      Add each game once it's set (date and site) and its score once it's played. */
-  bracket: null,
+  bracket: {
+    url: "https://www.miaa.net/miaa-fall-volleyball-2026-division-3-state-tournament",
+    seeds: ["Bellingham", "Old Rochester Regional", "Lynnfield", "Joseph Case", "Newburyport", "Weston",
+            "East Longmeadow", "Pembroke", "Ludlow", "Groton-Dunstable", "Fairhaven",
+            "Blackstone Valley RVT", "Lynn Classical", "Notre Dame (Worcester)", "Hanover", "Medfield",
+            "Belchertown", "Greater New Bedford", "Danvers", "North Reading", "Dracut", "Medway",
+            "Shawsheen Valley Tech", "Fontbonne", "Marlborough", "Dennis-Yarmouth", "Tewksbury Memorial",
+            "Arlington Catholic", "Dedham", "Dighton-Rehoboth", "Taconic", "North Middlesex Reg.",
+            "Burncoat", "Salem", "St. Mary's", "Norwell", "Greater Lowell Tech", "Swampscott", "Nantucket",
+            "Whittier RVT", "Gloucester", "Assabet Valley RVT", "Pope Francis"],
+    games: [{ seeds: [14, 19], date: "2026-11-05T17:00", site: "Notre Dame Academy, Worcester" }]
+  },
   address: "60 Cabot Road, Danvers, MA 01923",
   links: {
     hudl: HUDL_TEAM,
@@ -524,7 +535,15 @@ const SCHEDULE = [
       { label: "MaxPreps box score", url: MP + "danvers-vs-salem/10-29-2026/?c=d1042efb-18c7-415c-ba64-dcaaf37f974b" }
     ] },
   { id: 104, date: "2026-10-30T16:00", opponent: "North Andover", mascot: "Scarlet Knights", home: true, league: false, site: HOME,
-    scrimmage: true, result: null, notes: [] }
+    scrimmage: true, result: null, notes: [] },
+
+  { id: 105, date: "2026-11-05T17:00", opponent: "Notre Dame Academy", mascot: "Rebels", home: false, league: false,
+    postseason: true, round: "Round of 32", site: "Notre Dame Academy, Worcester", result: null,
+    notes: ["MIAA Division 3 Round of 32: No. 19 Danvers at No. 14 Notre Dame Academy", "Notre Dame enters 15–3"],
+    sources: [
+      { label: "MIAA Division 3 bracket", url: "https://www.miaa.net/miaa-fall-volleyball-2026-division-3-state-tournament" },
+      { label: "Watch live on NFHS Network", url: "https://www.nfhsnetwork.com/events/notre-dame-academy-worcester-worcester-ma/gam2b29c4f396" }
+    ] }
 ];
 
 /* ---------------------------------------------------------------------

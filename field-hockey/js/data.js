@@ -25,7 +25,7 @@ const TEAM = {
   address: "60 Cabot Road, Danvers, MA 01923",
   /* MIAA power ranking (published every Tuesday and Friday in season) —
      update rank, of and asOf from miaa.net/power-rankings (Field Hockey · Girls · Division 3) */
-  ranking: { rank: 30, of: 54, asOf: "Oct. 30", url: "https://www.miaa.net/power-rankings" },
+  ranking: { rank: 25, of: 54, asOf: "Nov. 3", url: "https://www.miaa.net/power-rankings" },
   /* MIAA state tournament bracket: null until the MIAA posts it (Tue., Nov. 3, 11 a.m.) at
      https://www.miaa.net/miaa-field-hockey-2026-division-3-state-tournament
      Then fill it in from that page and the hub's State Tournament section draws it:
@@ -35,7 +35,17 @@ const TEAM = {
               { seeds: [3, 14], score: [28, 7], date: "2026-11-06T19:00", site: "Morse Field, Danvers" }
               note: "OT", "2OT" or "PKs 4–3" (optional) · winner: the winning seed, only when the score is tied
      Add each game once it's set (date and site) and its score once it's played. */
-  bracket: null,
+  bracket: {
+    url: "https://www.miaa.net/miaa-field-hockey-2026-division-3-state-tournament",
+    seeds: ["Sandwich", "Uxbridge", "Dover-Sherborn", "Watertown", "Foxborough", "Gloucester", "Dedham",
+            "East Longmeadow", "Medfield", "Medway", "Falmouth", "St. Mary's", "Marlborough",
+            "Ursuline Academy", "Weston", "Scituate", "Nauset Regional", "Hanover", "Bellingham",
+            "Bishop Fenwick", "Lynnfield", "Blackstone Valley RVT", "St. Bernard's", "Oakmont Regional",
+            "Danvers", "Nantucket", "Old Rochester Regional", "Apponequet Regional", "Norwell",
+            "Wilmington", "Belchertown", "Groton-Dunstable", "Tantasqua Regional", "North Middlesex Reg.",
+            "Franklin County Tech"],
+    games: [{ seeds: [8, 25], date: "2026-11-05T18:00", site: "East Longmeadow High School, East Longmeadow" }]
+  },
   links: {
     hudl: HUDL_TEAM,
     hudlVideo: HUDL_TEAM + "/video",
@@ -355,7 +365,12 @@ const SCHEDULE = [
     ] },
 
   { id: 104, date: "2026-11-03T16:30", opponent: "Woburn", mascot: "Tanners", home: false, league: false, site: "Woburn High School Stadium, Woburn",
-    scrimmage: true, result: null, notes: ["Scrimmage after the regular season"] }
+    scrimmage: true, result: null, notes: ["Scrimmage after the regular season"] },
+
+  { id: 105, date: "2026-11-05T18:00", opponent: "East Longmeadow", mascot: "Spartans", home: false, league: false,
+    postseason: true, round: "Round of 32", site: "East Longmeadow High School, East Longmeadow", result: null,
+    notes: ["MIAA Division 3 Round of 32: No. 25 Danvers at No. 8 East Longmeadow", "East Longmeadow enters 12–3–2", "The winner meets No. 9 Medfield or No. 24 Oakmont Regional in the Round of 16"],
+    sources: [{ label: "MIAA Division 3 bracket", url: "https://www.miaa.net/miaa-field-hockey-2026-division-3-state-tournament" }] }
 ];
 
 /* ---------------------------------------------------------------------
