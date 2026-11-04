@@ -44,7 +44,24 @@ const TEAM = {
             "Danvers", "Nantucket", "Old Rochester Regional", "Apponequet Regional", "Norwell",
             "Wilmington", "Belchertown", "Groton-Dunstable", "Tantasqua Regional", "North Middlesex Reg.",
             "Franklin County Tech"],
-    games: [{ seeds: [8, 25], date: "2026-11-05T18:00", site: "East Longmeadow High School, East Longmeadow" }]
+    games: [
+      { seeds: [32, 33], date: "2026-11-05T16:00", site: "Groton-Dunstable Regional High School, Groton" },
+      { seeds: [31, 34], date: "2026-11-05T17:00", site: "Belchertown High School, Belchertown" },
+      { seeds: [30, 35], date: "2026-11-04T18:00", site: "Wilmington High School, Wilmington" },
+      { seeds: [16, 17], date: "2026-11-07T17:00", site: "Scituate High School, Scituate" },
+      { seeds: [8, 25], date: "2026-11-05T18:00", site: "East Longmeadow High School, East Longmeadow" },
+      { seeds: [9, 24], date: "2026-11-05T16:30", site: "Medfield High School, Medfield" },
+      { seeds: [4, 29], date: "2026-11-05T18:00", site: "Victory Field, Watertown" },
+      { seeds: [13, 20], date: "2026-11-05T18:00", site: "Whitcomb Middle School, Marlborough" },
+      { seeds: [5, 28], date: "2026-11-08T10:30", site: "Foxborough High School, Foxborough" },
+      { seeds: [12, 21], date: "2026-11-07T14:00", site: "Manning Field, Lynn" },
+      { seeds: [15, 18], date: "2026-11-05T18:00", site: "Weston High School, Weston" },
+      { seeds: [7, 26], date: "2026-11-08T13:00", site: "Dedham High School, Dedham" },
+      { seeds: [10, 23], date: "2026-11-07T13:00", site: "Medway High School, Medway" },
+      { seeds: [14, 19], date: "2026-11-05T17:00", site: "SM Lorusso Complex, Walpole" },
+      { seeds: [6, 27], date: "2026-11-09T17:00", site: "Gloucester High School, Gloucester" },
+      { seeds: [11, 22], date: "2026-11-05T17:00", site: "Falmouth High School, Falmouth" }
+    ]
   },
   links: {
     hudl: HUDL_TEAM,

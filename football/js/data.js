@@ -31,7 +31,16 @@ const TEAM = {
     seeds: ["Scituate", "Tewksbury Memorial", "Danvers", "Duxbury", "Walpole", "Tantasqua Regional",
             "Shepherd Hill Regional", "Grafton", "South High Community", "Canton", "Wayland",
             "Westfield", "Nashoba Regional", "Bedford", "Wakefield Memorial", "Ashland"],
-    games: [{ seeds: [3, 14], date: "2026-11-06T18:30", site: "Morse Field, Danvers" }]
+    games: [
+      { seeds: [1, 16], date: "2026-11-05T18:00", site: "Scituate High School, Scituate" },
+      { seeds: [8, 9], date: "2026-11-06T18:00", site: "Grafton High School, Grafton" },
+      { seeds: [4, 13], date: "2026-11-05T19:00", site: "Duxbury High School, Duxbury" },
+      { seeds: [5, 12], date: "2026-11-06T18:30", site: "Walpole High School, Walpole" },
+      { seeds: [2, 15], date: "2026-11-06T19:00", site: "Doucette Stadium, Tewksbury" },
+      { seeds: [7, 10], date: "2026-11-06T19:00", site: "Shepherd Hill Regional High School, Dudley" },
+      { seeds: [3, 14], date: "2026-11-06T18:30", site: "Morse Field, Danvers" },
+      { seeds: [6, 11], date: "2026-11-06T19:00", site: "Tantasqua Regional High School, Sturbridge" }
+    ]
   },
   headCoach: "Ryan Nolan",
   assistants: ["Bryan Ibbitson", "Jon Babula", "Angel Adamas", "Tom Walfield", "Kyle Brennan",
@@ -307,8 +316,9 @@ const SCHEDULE = [
     ] },
   { id: 10, date: "2026-11-06T18:30", opponent: "Bedford", mascot: "Buccaneers",
     home: true, league: false, postseason: true, round: "Round of 16", site: HOME_FIELD, result: null,
-    notes: ["MIAA Division 4 Round of 16: No. 3 Danvers hosts No. 14 Bedford", "Bedford enters 5–3 on a two-game win streak: 55–30 over Wayland and 44–34 over Acton-Boxborough", "Danvers is No. 16 in the Globe Top 20 (Nov. 2), up from 17 after the Peabody win", "The Globe's playoff preview picks two-time defending champion Scituate as the Division 4 favorite and notes Danvers has the bracket's second-highest average margin of victory (11.8)", "The higher seed hosts through the quarterfinals"],
+    notes: ["MIAA Division 4 Round of 16: No. 3 Danvers hosts No. 14 Bedford", "Bedford enters 5–3 on a two-game win streak: 55–30 over Wayland and 44–34 over Acton-Boxborough", "Danvers is No. 16 in the Globe Top 20 (Nov. 2), up from 17 after the Peabody win", "The Globe's playoff preview picks two-time defending champion Scituate as the Division 4 favorite and notes Danvers has the bracket's second-highest average margin of victory (11.8)", "The higher seed hosts through the quarterfinals", "The winner meets No. 6 Tantasqua Regional or No. 11 Wayland in the quarterfinals"],
     sources: [
+      { label: "Livestream on Hudl", url: REPLAY + "QnJvYWRjYXN0NDczNjA0NA%3D%3D" },
       { label: "MIAA Division 4 bracket", url: "https://www.miaa.net/miaa-football-2026-division-4-state-tournament" },
       { label: "Bedford's last game (MaxPreps)", url: "https://www.maxpreps.com/news/dfoe0HM3N0uRjdKP0slKdg/football-recap-bedford-handles-acton-boxborough.htm" },
       { label: "Globe Top 20, Nov. 2", url: "https://www.bostonglobe.com/2026/11/02/sports/eastern-mass-football-and-globe-top-20/" },

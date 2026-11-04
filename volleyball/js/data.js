@@ -43,8 +43,26 @@ const TEAM = {
             "Shawsheen Valley Tech", "Fontbonne", "Marlborough", "Dennis-Yarmouth", "Tewksbury Memorial",
             "Arlington Catholic", "Dedham", "Dighton-Rehoboth", "Taconic", "North Middlesex Reg.",
             "Burncoat", "Salem", "St. Mary's", "Norwell", "Greater Lowell Tech", "Swampscott", "Nantucket",
-            "Whittier RVT", "Gloucester", "Assabet Valley RVT", "Pope Francis"],
-    games: [{ seeds: [14, 19], date: "2026-11-05T17:00", site: "Notre Dame Academy, Worcester" }]
+            "Whittier RVT", "Gloucester", "Assabet Valley RVT", "Pope Francis", "Diman RVT",
+            "Tantasqua Regional"],
+    games: [
+      { seeds: [32, 33], date: "2026-11-05T17:30" },
+      { seeds: [25, 40], date: "2026-11-04T17:00" },
+      { seeds: [24, 41], date: "2026-11-04T18:00", site: "Milton High School, Milton" },
+      { seeds: [29, 36], date: "2026-11-05T18:00" },
+      { seeds: [20, 45], date: "2026-11-06T17:30" },
+      { seeds: [28, 37], date: "2026-11-05T18:00" },
+      { seeds: [21, 44], date: "2026-11-05T17:00" },
+      { seeds: [31, 34], date: "2026-11-05T17:30" },
+      { seeds: [26, 39], date: "2026-11-05T17:00" },
+      { seeds: [23, 42], date: "2026-11-05T17:30" },
+      { seeds: [30, 35], date: "2026-11-05T18:00" },
+      { seeds: [27, 38], date: "2026-11-05T18:15" },
+      { seeds: [22, 43], date: "2026-11-05T17:00" },
+      { seeds: [16, 17], date: "2026-11-06T18:00" },
+      { seeds: [15, 18], date: "2026-11-06T17:30" },
+      { seeds: [14, 19], date: "2026-11-05T17:00", site: "Notre Dame Academy, Worcester" }
+    ]
   },
   address: "60 Cabot Road, Danvers, MA 01923",
   links: {
@@ -539,7 +557,7 @@ const SCHEDULE = [
 
   { id: 105, date: "2026-11-05T17:00", opponent: "Notre Dame Academy", mascot: "Rebels", home: false, league: false,
     postseason: true, round: "Round of 32", site: "Notre Dame Academy, Worcester", result: null,
-    notes: ["MIAA Division 3 Round of 32: No. 19 Danvers at No. 14 Notre Dame Academy", "Notre Dame enters 15–3"],
+    notes: ["MIAA Division 3 Round of 32: No. 19 Danvers at No. 14 Notre Dame Academy", "Notre Dame enters 15–3", "The winner meets No. 3 Lynnfield or the No. 30 Dighton-Rehoboth–No. 35 St. Mary's winner in the Round of 16"],
     sources: [
       { label: "MIAA Division 3 bracket", url: "https://www.miaa.net/miaa-fall-volleyball-2026-division-3-state-tournament" },
       { label: "Watch live on NFHS Network", url: "https://www.nfhsnetwork.com/events/notre-dame-academy-worcester-worcester-ma/gam2b29c4f396" }

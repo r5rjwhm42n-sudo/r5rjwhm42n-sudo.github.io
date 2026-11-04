@@ -279,12 +279,13 @@ const MEETS = [
     notes: [
       "Boys team scores: Masconomet 41, Swampscott 52, Peabody 54, Marblehead 85 … Danvers 162 (6th)",
       "Girls team scores: Marblehead 33, Swampscott 81 … Masconomet 92 (4th), Danvers 119 (6th)",
-      "Danvers runners' places and times weren't published"
+      "Grace Conklin was named to the All-NEC team for the second straight year"
     ],
     sources: [
       { label: "Salem News meet story", url: SN + "mascos-hamlin-beverlys-corbett-take-individual-titles-at-nec-cross-country-championships/article_0a158f57-ccf5-4f47-a35e-559cf24f5ba1.html" },
       { label: "Globe Schools Insider, Nov. 1", url: "https://www.bostonglobe.com/2026/11/01/sports/globe-schools-insider-takeaways-highlights/" },
-      { label: "Daily Item meet story", url: "https://itemlive.com/2026/11/01/marblehead-masters-the-course/" }
+      { label: "Daily Item meet story", url: "https://itemlive.com/2026/11/01/marblehead-masters-the-course/" },
+      { label: "Salem News All-NEC teams", url: SN + "beverlys-corbett-mascos-hamlin-named-nec-cross-country-runners-of-the-year/article_7a7115d9-9bef-4c13-8381-171422d7676a.html" }
     ]
   },
   {
@@ -403,7 +404,7 @@ const MILESTONES = [
   { year: "2023", text: "The boys win the MIAA 2B divisional meet, then the MIAA Division II state championship." },
   { year: "2024", text: "Will Conklin is named NEC Boys Cross Country Runner of the Year and runs 15:53.1, the fastest 5K on the program's all-time list." },
   { year: "2025", text: "The girls go 5–2 and win the NEC Lynch Division. Grace Conklin is named NEC All-Conference." },
-  { year: "2026", text: "Marcus Morais wins the race at Salem and the boys take a 28–29 thriller, their first dual-meet win since 2024. Grace Conklin runs 19:46.7 at the Bay State Invitational, fifth on the girls' all-time 5K list." }
+  { year: "2026", text: "Marcus Morais wins the race at Salem and the boys take a 28–29 thriller, their first dual-meet win since 2024. Grace Conklin runs 19:46.7 at the Bay State Invitational, fifth on the girls' all-time 5K list, and makes the All-NEC team for the second straight year." }
 ];
 
 const STANDOUTS = [
@@ -414,8 +415,8 @@ const STANDOUTS = [
     bio: "Named Northeastern Conference Boys Cross Country Runner of the Year in 2024. His 15:53.1 that fall is the fastest 5K on the program's all-time list.",
     tags: ["NEC Runner of the Year", "15:53.1 5K"] },
   { name: "Grace Conklin", role: "Girls · Class of 2027", year: "2025",
-    bio: "NEC All-Conference in 2025 and a senior captain in 2026. Her 19:46.7 at the 2026 Bay State Invitational ranks fifth on the girls' all-time 5K list.",
-    tags: ["NEC All-Conference", "Captain", "19:46.7 5K"] },
+    bio: "NEC All-Conference in 2025 and 2026 and a senior captain in 2026. Her 19:46.7 at the 2026 Bay State Invitational ranks fifth on the girls' all-time 5K list.",
+    tags: ["2× NEC All-Conference", "Captain", "19:46.7 5K"] },
   { name: "Madyson Danish", role: "Girls · Class of 2028", year: "2025",
     bio: "A 2025 NEC All-Star as a sophomore, and a race winner in 2026. Her 21:20.8 is 20th on the girls' all-time 5K list.",
     tags: ["NEC All-Star"] },
@@ -431,6 +432,8 @@ const STANDOUTS = [
    --------------------------------------------------------------------- */
 const src = (id) => MEETS.find((m) => m.id === id).sources[0].url;
 const NEWS = [
+  { title: "Conklin named All-NEC again", sub: "All-conference", date: "Nov. 4, 2026", url: SN + "beverlys-corbett-mascos-hamlin-named-nec-cross-country-runners-of-the-year/article_7a7115d9-9bef-4c13-8381-171422d7676a.html" },
+  { title: "NEC Championship Meet", sub: "Meet roundup", date: "Oct. 31, 2026", url: src(7) },
   { title: "Bay State Invitational results", sub: "Results", date: "Oct. 3, 2026", site: "athletic.net", url: src(5) },
   { title: "Falcons sweep Saugus/Winthrop", sub: "Meet roundup", date: "Sept. 30, 2026", url: src(4) },
   { title: "Swampscott at Danvers", sub: "Meet roundup", date: "Sept. 23, 2026", url: src(3) },
