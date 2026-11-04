@@ -127,7 +127,7 @@
     const tour = brackets.length > 0;
     const rest = cards.filter(Boolean);
     box.innerHTML = `<div class="wrap">
-      <div class="section-head"><h2>${tour ? "State Tournament" : "Road to the State Tournament"}</h2><span class="sub">${reveal ? esc(reveal) : tour ? "The full MIAA bracket for every Danvers team in the field" : "Where each team stands in the MIAA power rankings"}</span></div>
+      <div class="section-head"><h2>${tour ? "State Tournament" : "Road to the State Tournament"}</h2><span class="sub">${reveal ? esc(reveal) : tour ? "Every Danvers team in the MIAA field: its next game up front, the whole bracket a tap away" : "Where each team stands in the MIAA power rankings"}</span></div>
       ${tour ? `<div class="bk-tabs" role="tablist" aria-label="State tournament brackets">${brackets.map((x) => `<button type="button" role="tab" id="bkt-${x.key}" aria-controls="bk-panel" aria-selected="false" data-k="${x.key}"><svg aria-hidden="true"><use href="#i-${x.t.sport}"/></svg><span><b>${esc(x.t.name)}</b><small>No. ${DFABracket.seedOf(x.B)} seed · ${esc(x.division)}</small></span></button>`).join("")}</div>
       <div class="bk-panel card" id="bk-panel" role="tabpanel"></div>` : ""}
       ${rest.length ? `<div class="rd-grid">${rest.join("")}</div>` : ""}
@@ -138,19 +138,51 @@
     /* the bracket tabs: one division bracket at a time, linkable as #bracket-<team> */
     function show(x) {
       const P = $("#bk-panel"), size = x.t.cut, st = DFABracket.status(x.B, size), road = DFABracket.road(x.B, size);
+      const F = DFABracket.focus(x.B, size);
       box.querySelectorAll(".bk-tabs [role=tab]").forEach((b) => b.setAttribute("aria-selected", b.dataset.k === x.key));
       P.setAttribute("aria-labelledby", `bkt-${x.key}`);
+
+      /* the close-up: Danvers' current game, with the full bracket one tap away */
+      const done = F && F.won != null;
+      const side = (logo, nm, line, pts, win) => `
+        <div class="bf-team${win ? " win" : ""}">${logo}<b>${esc(nm)}</b><small>${esc(line)}</small>${done ? `<span class="bf-pts">${esc(pts)}</span>` : ""}</div>`;
+      const opp = !F ? "" : F.opp
+        ? side(window.DFA ? DFA.badge(F.oppName, "bf-logo") : `<span class="bf-logo dot">${esc(F.oppName[0])}</span>`, F.oppName, `No. ${F.opp} seed`, F.them, F.won === false)
+        : side(`<span class="bf-logo dot">?</span>`, "To be decided", F.pending ? F.pending.replace(/^the (.*) winner$/, "Winner of $1") : "", "", false);
+      const card = F ? `
+        <div class="bk-focus">
+          <div class="bf-top"><span>${esc(F.round)} · ${esc(x.division)}</span><span>${done ? `Final${F.note ? ` · ${esc(F.note)}` : ""}` : esc(F.when || "Date to be set")}</span></div>
+          <div class="bf-teams">
+            ${side(`<span class="bf-logo us"><img src="images/falcons-logo.png" alt=""></span>`, "Danvers", `No. ${F.d} seed`, F.us, F.won === true)}
+            <span class="bf-vs">${done ? "" : /Danvers/.test(F.site) ? "vs" : "at"}</span>
+            ${opp}
+          </div>
+          ${F.site || (done && F.when) ? `<p class="bf-meta">${esc([done && F.when, F.site].filter(Boolean).join(" · "))}</p>` : ""}
+          ${F.won !== false && !F.title && F.next ? `<p class="bf-next">${done ? "Next" : "The winner plays"} ${esc(F.next)} in the ${esc(F.nextRound)}</p>` : ""}
+        </div>` : "";
       P.innerHTML = `
         <div class="bk-head">
           <div class="rd-big"><b>No. ${DFABracket.seedOf(x.B)}</b><span>seed of ${x.B.seeds.length} in ${esc(x.division)}</span></div>
-          <div class="bk-now"><span class="rd-chip ${st.cls}">${esc(st.chip)}</span>${st.detail ? `<p>${esc(st.detail)}</p>` : ""}</div>
+          <div class="bk-now"><span class="rd-chip ${st.cls}">${esc(st.chip)}</span>${!F && st.detail ? `<p>${esc(st.detail)}</p>` : ""}</div>
           <div class="bk-links"><a href="${esc(x.t.href)}">${esc(x.t.name)} site</a>${x.B.url ? `<a href="${esc(x.B.url)}" target="_blank" rel="noopener">MIAA bracket ↗</a>` : ""}</div>
         </div>
-        ${road ? `<ol class="bk-road">${road}</ol>` : ""}
-        <div class="bk-scroll">${DFABracket.draw(x.B, size)}</div>`;
-      /* when the bracket is wider than the screen, scroll just far enough to show Danvers' latest game */
-      const sc = $(".bk-scroll", P), col = [...P.querySelectorAll(".bk-m.on")].pop()?.closest(".bk-col");
-      if (col) sc.scrollLeft = Math.max(0, col.offsetLeft + col.offsetWidth + 20 - sc.clientWidth);
+        ${card}
+        <div class="bk-more"><button type="button" class="bk-toggle" aria-expanded="false" aria-controls="bk-full">See full bracket</button></div>
+        <div class="bk-full" id="bk-full" hidden>
+          ${(road.match(/<li/g) || []).length > 1 ? `<ol class="bk-road">${road}</ol>` : ""}
+          <div class="bk-scroll">${DFABracket.draw(x.B, size)}</div>
+        </div>`;
+
+      const full = $("#bk-full", P), btn = $(".bk-toggle", P);
+      btn.addEventListener("click", () => {
+        full.hidden = !full.hidden;
+        btn.setAttribute("aria-expanded", !full.hidden);
+        btn.textContent = full.hidden ? "See full bracket" : "Hide full bracket";
+        if (full.hidden) return;
+        /* when the bracket is wider than the screen, scroll just far enough to show Danvers' latest game */
+        const sc = $(".bk-scroll", P), col = [...P.querySelectorAll(".bk-m.on")].pop()?.closest(".bk-col");
+        if (col) sc.scrollLeft = Math.max(0, col.offsetLeft + col.offsetWidth + 20 - sc.clientWidth);
+      });
     }
     const fromHash = () => {
       const k = (location.hash.match(/^#bracket-(.+)/) || [])[1];

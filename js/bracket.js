@@ -131,5 +131,32 @@ window.DFABracket = (function () {
     }).join("");
   }
 
-  return { build, draw, road, status, seedOf };
+  /* Danvers' current game (the latest one played, or the next one up) for the close-up card,
+     and who the winner meets in the following round */
+  function focus(B, size) {
+    const P = path(B, size);
+    const last = P.games[P.games.length - 1];
+    if (!last) return null;
+    const { m, round, opp } = last;
+    const after = P.rounds[P.rounds.findIndex((r) => r.name === round) + 1];
+    let next = "";
+    if (after && !after.pre) {
+      const other = after.games.find((x) => x.from.includes(m))?.from.find((x) => x && x !== m);
+      /* a side still being decided in the preliminary round reads "the No. 30/35 winner" */
+      const who = (s, f) => (s ? name(B, s) : f && f.a && f.b ? `the No. ${f.a}/${f.b} winner` : "");
+      if (other) {
+        const a = who(other.a, other.from[0]), b = who(other.b, other.from[1]);
+        next = other.win ? name(B, other.win) : a && b ? `${a} or ${b}` : "";
+      }
+    }
+    return {
+      d: P.d, round, opp, oppName: opp ? B.seeds[opp - 1] : null, pending: opp ? "" : pending(B, m, P.d),
+      when: m.g?.date ? when(m.g.date) : "", site: m.g?.site || "", note: m.g?.note || "",
+      us: score(m, P.d), them: opp ? score(m, opp) : "",
+      won: m.win ? m.win === P.d : null, title: round === NAMES[2],
+      next, nextRound: after ? lower(after.name) : ""
+    };
+  }
+
+  return { build, draw, road, status, seedOf, focus };
 })();

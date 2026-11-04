@@ -520,3 +520,38 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .nav a.sp-glow { animation: none; text-shadow: 0 0 10px rgba(240, 180, 41, .8); }
   .team-card.sp-glow { animation: none; box-shadow: 0 0 0 2px var(--gold), 0 0 22px 4px rgba(240, 180, 41, .6); }
 }
+
+/* ---------- State Tournament: close-up of Danvers' game, full bracket behind a button ---------- */
+.bk-focus { max-width: 760px; margin: 18px auto 0; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; background: var(--white); box-shadow: var(--shadow); }
+.bf-top { display: flex; justify-content: space-between; gap: 12px; padding: 10px 18px 9px; background: var(--navy); color: var(--white); border-bottom: 3px solid var(--gold);
+  font-family: var(--display); font-weight: 700; font-size: 15px; letter-spacing: .1em; text-transform: uppercase; }
+.bf-top span:last-child { color: var(--gold); text-align: right; }
+.bf-teams { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 12px; padding: 24px 18px 6px; text-align: center; }
+.bf-team { display: grid; justify-items: center; gap: 3px; min-width: 0; }
+.bf-logo { width: 76px !important; height: 76px !important; margin-bottom: 8px; }
+.bf-logo.us { display: grid; place-items: center; border-radius: 50%; background: var(--white); border: 3px solid var(--royal); box-shadow: 0 0 0 1px rgba(11, 31, 77, .12); }
+.bf-logo.us img { width: 72%; height: 72%; object-fit: contain; }
+.bf-logo.dot { display: grid; place-items: center; border-radius: 50%; background: var(--bg); border: 2px dashed var(--line); font-family: var(--display); font-weight: 800; font-size: 28px; color: var(--muted); }
+.bf-logo.opp-badge:not(.logo) { font-size: 26px; }
+.bf-team b { font-family: var(--display); font-weight: 800; font-size: 28px; line-height: 1.02; text-transform: uppercase; overflow-wrap: anywhere; }
+.bf-team small { font-size: 13.5px; font-weight: 600; color: var(--muted); }
+.bf-pts { margin-top: 6px; font-family: var(--display); font-weight: 800; font-size: 52px; line-height: 1; color: var(--muted); font-variant-numeric: tabular-nums; }
+.bf-team.win .bf-pts { color: var(--royal); }
+.bf-vs { align-self: center; margin-bottom: 30px; font-family: var(--display); font-weight: 800; font-size: 20px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.bf-meta { margin: 8px 18px 18px; text-align: center; font-size: 15px; color: var(--muted); }
+.bf-next { margin: 0; padding: 12px 18px 14px; border-top: 1px solid var(--line); background: var(--bg); text-align: center; font-size: 15px; }
+.bk-more { display: flex; justify-content: center; margin-top: 18px; }
+.bk-toggle { padding: 10px 22px 9px; border: 2px solid var(--royal); border-radius: 4px; background: var(--royal); color: var(--white);
+  font-family: var(--display); font-weight: 700; font-size: 16px; letter-spacing: .08em; text-transform: uppercase; transition: background .15s, color .15s; }
+.bk-toggle:hover { background: var(--royal-dk); border-color: var(--royal-dk); }
+.bk-toggle[aria-expanded="true"] { background: var(--white); color: var(--royal); }
+.bk-full { margin-top: 18px; }
+@media (max-width: 560px) {
+  .bf-top { font-size: 13px; letter-spacing: .08em; padding: 9px 14px 8px; }
+  .bf-top span { white-space: nowrap; }
+  .bf-teams { gap: 6px; padding: 20px 10px 4px; }
+  .bf-logo { width: 58px !important; height: 58px !important; }
+  .bf-team b { font-size: 21px; }
+  .bf-pts { font-size: 42px; }
+  .bf-vs { font-size: 16px; }
+}
