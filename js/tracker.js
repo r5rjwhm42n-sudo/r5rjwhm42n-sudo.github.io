@@ -164,7 +164,6 @@
         <div class="bk-head">
           <div class="rd-big"><b>No. ${DFABracket.seedOf(x.B)}</b><span>seed of ${x.B.seeds.length} in ${esc(x.division)}</span></div>
           <div class="bk-now"><span class="rd-chip ${st.cls}">${esc(st.chip)}</span>${!F && st.detail ? `<p>${esc(st.detail)}</p>` : ""}</div>
-          <div class="bk-links"><a href="${esc(x.t.href)}">${esc(x.t.name)} site</a>${x.B.url ? `<a href="${esc(x.B.url)}" target="_blank" rel="noopener">MIAA bracket ↗</a>` : ""}</div>
         </div>
         ${card}
         <div class="bk-more"><button type="button" class="bk-toggle" aria-expanded="false" aria-controls="bk-full">See full bracket</button></div>
