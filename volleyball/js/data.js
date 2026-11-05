@@ -47,8 +47,8 @@ const TEAM = {
             "Tantasqua Regional"],
     games: [
       { seeds: [32, 33], date: "2026-11-05T17:30" },
-      { seeds: [25, 40], date: "2026-11-04T17:00" },
-      { seeds: [24, 41], date: "2026-11-04T18:00", site: "Milton High School, Milton" },
+      { seeds: [25, 40], score: [3, 0], date: "2026-11-04T17:00" },
+      { seeds: [24, 41], score: [3, 0], date: "2026-11-04T18:00", site: "Milton High School, Milton" },
       { seeds: [29, 36], date: "2026-11-05T18:00" },
       { seeds: [20, 45], date: "2026-11-06T17:30" },
       { seeds: [28, 37], date: "2026-11-05T18:00" },
@@ -61,6 +61,8 @@ const TEAM = {
       { seeds: [22, 43], date: "2026-11-05T17:00" },
       { seeds: [16, 17], date: "2026-11-06T18:00" },
       { seeds: [15, 18], date: "2026-11-06T17:30" },
+      { seeds: [8, 25], date: "2026-11-06T17:30" },
+      { seeds: [9, 24], date: "2026-11-06T17:30" },
       { seeds: [14, 19], date: "2026-11-05T17:00", site: "Notre Dame Academy, Worcester" }
     ]
   },
