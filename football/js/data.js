@@ -32,14 +32,15 @@ const TEAM = {
             "Shepherd Hill Regional", "Grafton", "South High Community", "Canton", "Wayland",
             "Westfield", "Nashoba Regional", "Bedford", "Wakefield Memorial", "Ashland"],
     games: [
-      { seeds: [1, 16], date: "2026-11-05T18:00", site: "Scituate High School, Scituate" },
+      { seeds: [1, 16], score: [21, 0], date: "2026-11-05T18:00", site: "Scituate High School, Scituate" },
       { seeds: [8, 9], date: "2026-11-06T18:00", site: "Grafton High School, Grafton" },
-      { seeds: [4, 13], date: "2026-11-05T19:00", site: "Duxbury High School, Duxbury" },
+      { seeds: [4, 13], score: [35, 0], date: "2026-11-05T19:00", site: "Duxbury High School, Duxbury" },
       { seeds: [5, 12], date: "2026-11-06T18:30", site: "Walpole High School, Walpole" },
       { seeds: [2, 15], date: "2026-11-06T19:00", site: "Doucette Stadium, Tewksbury" },
       { seeds: [7, 10], date: "2026-11-06T19:00", site: "Shepherd Hill Regional High School, Dudley" },
       { seeds: [3, 14], date: "2026-11-06T18:30", site: "Morse Field, Danvers" },
-      { seeds: [6, 11], date: "2026-11-06T19:00", site: "Tantasqua Regional High School, Sturbridge" }
+      { seeds: [6, 11], date: "2026-11-06T19:00", site: "Tantasqua Regional High School, Sturbridge" },
+      { seeds: [1, 4], date: "2026-11-13T19:00" }
     ]
   },
   headCoach: "Ryan Nolan",

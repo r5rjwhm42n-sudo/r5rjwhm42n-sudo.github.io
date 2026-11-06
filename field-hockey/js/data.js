@@ -45,23 +45,26 @@ const TEAM = {
             "Wilmington", "Belchertown", "Groton-Dunstable", "Tantasqua Regional", "North Middlesex Reg.",
             "Franklin County Tech"],
     games: [
-      { seeds: [32, 33], date: "2026-11-05T16:00", site: "Groton-Dunstable Regional High School, Groton" },
-      { seeds: [31, 34], date: "2026-11-05T17:00", site: "Belchertown High School, Belchertown" },
+      { seeds: [32, 33], score: [0, 1], date: "2026-11-05T16:00", site: "Groton-Dunstable Regional High School, Groton" },
+      { seeds: [31, 34], score: [4, 1], date: "2026-11-05T17:00", site: "Belchertown High School, Belchertown" },
       { seeds: [30, 35], score: [2, 0], date: "2026-11-04T18:00", site: "Wilmington High School, Wilmington" },
       { seeds: [16, 17], date: "2026-11-07T17:00", site: "Scituate High School, Scituate" },
-      { seeds: [8, 25], date: "2026-11-05T18:00", site: "East Longmeadow High School, East Longmeadow" },
-      { seeds: [9, 24], date: "2026-11-05T16:30", site: "Medfield High School, Medfield" },
-      { seeds: [4, 29], date: "2026-11-05T18:00", site: "Victory Field, Watertown" },
-      { seeds: [13, 20], date: "2026-11-05T18:00", site: "Whitcomb Middle School, Marlborough" },
+      { seeds: [8, 25], score: [1, 0], date: "2026-11-05T18:00", site: "East Longmeadow High School, East Longmeadow" },
+      { seeds: [9, 24], score: [6, 0], date: "2026-11-05T16:30", site: "Medfield High School, Medfield" },
+      { seeds: [4, 29], score: [4, 0], date: "2026-11-05T18:00", site: "Victory Field, Watertown" },
+      { seeds: [13, 20], score: [1, 0], date: "2026-11-05T18:00", site: "Whitcomb Middle School, Marlborough" },
       { seeds: [5, 28], date: "2026-11-08T10:30", site: "Foxborough High School, Foxborough" },
       { seeds: [12, 21], date: "2026-11-07T14:00", site: "Manning Field, Lynn" },
-      { seeds: [15, 18], date: "2026-11-05T18:00", site: "Weston High School, Weston" },
+      { seeds: [15, 18], score: [6, 0], date: "2026-11-05T18:00", site: "Weston High School, Weston" },
       { seeds: [7, 26], date: "2026-11-08T13:00", site: "Dedham High School, Dedham" },
       { seeds: [10, 23], date: "2026-11-07T13:00", site: "Medway High School, Medway" },
-      { seeds: [14, 19], date: "2026-11-05T17:00", site: "SM Lorusso Complex, Walpole" },
+      { seeds: [14, 19], score: [1, 0], date: "2026-11-05T17:00", site: "SM Lorusso Complex, Walpole" },
       { seeds: [6, 27], date: "2026-11-09T17:00", site: "Gloucester High School, Gloucester" },
-      { seeds: [11, 22], date: "2026-11-05T17:00", site: "Falmouth High School, Falmouth" },
-      { seeds: [3, 30], date: "2026-11-07T16:00", site: "Dover-Sherborn High School, Dover" }
+      { seeds: [11, 22], score: [2, 1], date: "2026-11-05T17:00", site: "Falmouth High School, Falmouth" },
+      { seeds: [3, 30], date: "2026-11-07T16:00", site: "Dover-Sherborn High School, Dover" },
+      { seeds: [1, 33], date: "2026-11-08T17:00", site: "Sandwich High School, Sandwich" },
+      { seeds: [2, 31], date: "2026-11-06T18:30", site: "Uxbridge High School, Uxbridge" },
+      { seeds: [8, 9], date: "2026-11-09T17:00", site: "East Longmeadow High School, East Longmeadow" }
     ]
   },
   links: {
@@ -386,9 +389,16 @@ const SCHEDULE = [
     scrimmage: true, result: null, notes: ["Scrimmage after the regular season"] },
 
   { id: 105, date: "2026-11-05T18:00", opponent: "East Longmeadow", mascot: "Spartans", home: false, league: false,
-    postseason: true, round: "Round of 32", site: "East Longmeadow High School, East Longmeadow", result: null,
-    notes: ["MIAA Division 3 Round of 32: No. 25 Danvers at No. 8 East Longmeadow", "East Longmeadow enters 12–3–2", "The winner meets No. 9 Medfield or No. 24 Oakmont Regional in the Round of 16"],
-    sources: [{ label: "MIAA Division 3 bracket", url: "https://www.miaa.net/miaa-field-hockey-2026-division-3-state-tournament" }] }
+    postseason: true, round: "Round of 32", site: "East Longmeadow High School, East Longmeadow",
+    result: "L", us: 0, them: 1,
+    halftime: [0, 0],
+    summary: "The Falcons held No. 8 East Longmeadow scoreless into the final minutes on the road, but the Spartans scored with just under three minutes left to win 1–0 and end Danvers' season in the Division 3 Round of 32.",
+    notes: ["MIAA Division 3 Round of 32: No. 25 Danvers at No. 8 East Longmeadow", "Scoreless through three quarters", "Season-ending loss — Danvers finishes 8–9–2", "East Longmeadow moves on to host No. 9 Medfield in the Round of 16"],
+    sources: [
+      { label: "MIAA Division 3 bracket", url: "https://www.miaa.net/miaa-field-hockey-2026-division-3-state-tournament" },
+      { label: "Danvers Falcons live updates on X", url: "https://x.com/WeAreDanvers/status/2118497370292080759" },
+      { label: "Full-game replay on East Longmeadow Cable Access TV (YouTube)", url: "https://www.youtube.com/watch?v=v3s-Vyq0TkM" }
+    ] }
 ];
 
 /* ---------------------------------------------------------------------

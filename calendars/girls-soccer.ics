@@ -347,4 +347,15 @@ DESCRIPTION:Scrimmage\nSchedule and results: https://danversfalconsathletic
  s.org/soccer/schedule.html?team=girls
 URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
 END:VEVENT
+BEGIN:VEVENT
+UID:girls-soccer-107@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261109T180000
+DURATION:PT2H
+SUMMARY:Danvers Girls Soccer at Westwood
+LOCATION:Westwood High School\, Westwood
+DESCRIPTION:MIAA state tournament · Round of 32\nSchedule and results: htt
+ ps://danversfalconsathletics.org/soccer/schedule.html?team=girls
+URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+END:VEVENT
 END:VCALENDAR

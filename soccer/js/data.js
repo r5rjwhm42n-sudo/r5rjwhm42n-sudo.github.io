@@ -83,7 +83,20 @@ const TEAMS = {
                 { seeds: [3, 14], score: [28, 7], date: "2026-11-06T19:00", site: "Morse Field, Danvers" }
                 note: "OT", "2OT" or "PKs 4–3" (optional) · winner: the winning seed, only when the score is tied
        Add each game once it's set (date and site) and its score once it's played. */
-    bracket: null,
+    bracket: {
+      url: "https://www.miaa.net/miaa-girls-soccer-2026-division-2-state-tournament",
+      seeds: ["Duxbury", "Hingham", "King Philip Regional", "Masconomet", "Oliver Ames", "Milton",
+              "Notre Dame (Hingham)", "Whitman-Hanson", "Grafton", "Minnechaug", "Sharon", "Newburyport",
+              "Silver Lake Regional", "Westwood", "Wayland", "Marblehead", "Northampton", "Holliston",
+              "Danvers", "Somerset Berkley", "Burlington", "North Quincy", "Walpole", "Marshfield",
+              "Melrose", "North Attleborough", "Billerica Memorial", "Canton", "Mansfield",
+              "Nashoba Regional", "Longmeadow", "Stoughton", "Archbishop Williams", "Shepherd Hill Regional",
+              "Dartmouth", "Middleborough", "Somerville", "Bristol-Plymouth RVT", "Diman RVT", "Malden",
+              "Chelsea"],
+      games: [
+        { seeds: [14, 19], date: "2026-11-09T18:00", site: "Westwood High School, Westwood" }
+      ]
+    },
     headCoach: "Jimmy Hinchion",
     coachNote: "28th season · 425th career win on Oct. 21, 2026",
     assistants: ["Ashley Gawrys", "Shawn Hills", "Taylor Orlando", "Emma Hatch (JV)"],
@@ -393,7 +406,15 @@ const TEAMS = {
         ] },
 
       { id: 106, date: "2026-11-02T16:00", opponent: "Lynnfield", mascot: "Pioneers", home: false, league: false, site: "Lynnfield High School, Lynnfield",
-        scrimmage: true, result: null, notes: ["Scrimmage after the regular season"] }
+        scrimmage: true, result: null, notes: ["Scrimmage after the regular season"] },
+
+      { id: 107, date: "2026-11-09T18:00", opponent: "Westwood", mascot: "Wolverines", home: false, league: false,
+        postseason: true, round: "Round of 32", site: "Westwood High School, Westwood", result: null,
+        notes: ["MIAA Division 2 Round of 32: No. 19 Danvers at No. 14 Westwood", "Westwood enters 8–6–5", "The winner meets No. 3 King Philip Regional or its preliminary-round opponent in the Round of 16"],
+        sources: [
+          { label: "MIAA Division 2 bracket", url: "https://www.miaa.net/miaa-girls-soccer-2026-division-2-state-tournament" },
+          { label: "Watch live on NFHS Network", url: "https://www.nfhsnetwork.com/events/westwood-high-school-westwood-ma/gam873df5ea8e" }
+        ] }
     ],
 
     /* -----------------------------------------------------------------

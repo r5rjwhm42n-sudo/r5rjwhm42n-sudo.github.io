@@ -333,10 +333,14 @@ UID:field-hockey-105@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261105T180000
 DURATION:PT2H
-SUMMARY:Danvers Field Hockey at East Longmeadow
+SUMMARY:Danvers Field Hockey at East Longmeadow (L 0–1)
 LOCATION:East Longmeadow High School\, East Longmeadow
-DESCRIPTION:MIAA state tournament · Round of 32\nSchedule and results: htt
- ps://danversfalconsathletics.org/field-hockey/schedule.html
+DESCRIPTION:MIAA state tournament · Round of 32\nFinal: Danvers 0\, East L
+ ongmeadow 1\nThe Falcons held No. 8 East Longmeadow scoreless into the fin
+ al minutes on the road\, but the Spartans scored with just under three min
+ utes left to win 1–0 and end Danvers' season in the Division 3 Round of 
+ 32.\nSchedule and results: https://danversfalconsathletics.org/field-hocke
+ y/schedule.html
 URL:https://danversfalconsathletics.org/field-hockey/schedule.html
 END:VEVENT
 END:VCALENDAR

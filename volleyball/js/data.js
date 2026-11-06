@@ -46,24 +46,34 @@ const TEAM = {
             "Whittier RVT", "Gloucester", "Assabet Valley RVT", "Pope Francis", "Diman RVT",
             "Tantasqua Regional"],
     games: [
-      { seeds: [32, 33], date: "2026-11-05T17:30" },
+      { seeds: [32, 33], score: [3, 2], date: "2026-11-05T17:30" },
       { seeds: [25, 40], score: [3, 0], date: "2026-11-04T17:00" },
       { seeds: [24, 41], score: [3, 0], date: "2026-11-04T18:00", site: "Milton High School, Milton" },
-      { seeds: [29, 36], date: "2026-11-05T18:00" },
+      { seeds: [29, 36], score: [1, 3], date: "2026-11-05T18:00" },
       { seeds: [20, 45], date: "2026-11-06T17:30" },
-      { seeds: [28, 37], date: "2026-11-05T18:00" },
-      { seeds: [21, 44], date: "2026-11-05T17:00" },
-      { seeds: [31, 34], date: "2026-11-05T17:30" },
-      { seeds: [26, 39], date: "2026-11-05T17:00" },
-      { seeds: [23, 42], date: "2026-11-05T17:30" },
-      { seeds: [30, 35], date: "2026-11-05T18:00" },
-      { seeds: [27, 38], date: "2026-11-05T18:15" },
-      { seeds: [22, 43], date: "2026-11-05T17:00" },
+      { seeds: [28, 37], score: [2, 3], date: "2026-11-05T18:00" },
+      { seeds: [21, 44], score: [3, 0], date: "2026-11-05T17:00" },
+      { seeds: [31, 34], score: [0, 3], date: "2026-11-05T17:30" },
+      { seeds: [26, 39], score: [3, 0], date: "2026-11-05T17:00" },
+      { seeds: [23, 42], score: [3, 0], date: "2026-11-05T17:30" },
+      { seeds: [30, 35], score: [0, 3], date: "2026-11-05T18:00" },
+      { seeds: [27, 38], score: [3, 0], date: "2026-11-05T18:15" },
+      { seeds: [22, 43], score: [3, 0], date: "2026-11-05T17:00" },
       { seeds: [16, 17], date: "2026-11-06T18:00" },
       { seeds: [15, 18], date: "2026-11-06T17:30" },
       { seeds: [8, 25], date: "2026-11-06T17:30" },
       { seeds: [9, 24], date: "2026-11-06T17:30" },
-      { seeds: [14, 19], date: "2026-11-05T17:00", site: "Notre Dame Academy, Worcester" }
+      { seeds: [14, 19], score: [3, 0], date: "2026-11-05T17:00", site: "Notre Dame Academy, Worcester" },
+      { seeds: [1, 32], date: "2026-11-07T14:30" },
+      { seeds: [4, 36], date: "2026-11-07T15:00" },
+      { seeds: [5, 37], date: "2026-11-06T17:00" },
+      { seeds: [12, 21], date: "2026-11-06T15:30" },
+      { seeds: [2, 34], date: "2026-11-07T12:00" },
+      { seeds: [7, 26], date: "2026-11-06T16:30" },
+      { seeds: [10, 23], date: "2026-11-07T16:00" },
+      { seeds: [3, 35], date: "2026-11-06T16:00" },
+      { seeds: [6, 27], date: "2026-11-07T14:30" },
+      { seeds: [11, 22], date: "2026-11-07T12:00" }
     ]
   },
   address: "60 Cabot Road, Danvers, MA 01923",
@@ -558,11 +568,15 @@ const SCHEDULE = [
     scrimmage: true, result: null, notes: [] },
 
   { id: 105, date: "2026-11-05T17:00", opponent: "Notre Dame Academy", mascot: "Rebels", home: false, league: false,
-    postseason: true, round: "Round of 32", site: "Notre Dame Academy, Worcester", result: null,
-    notes: ["MIAA Division 3 Round of 32: No. 19 Danvers at No. 14 Notre Dame Academy", "Notre Dame enters 15–3", "The winner meets No. 3 Lynnfield or the No. 30 Dighton-Rehoboth–No. 35 St. Mary's winner in the Round of 16"],
+    postseason: true, round: "Round of 32", site: "Notre Dame Academy, Worcester",
+    result: "L", us: 0, them: 3,
+    sets: [[18, 25], [10, 25], [14, 25]],
+    summary: "No. 14 Notre Dame Academy ended the Falcons' season in the Division 3 Round of 32, sweeping 25–18, 25–10, 25–14 in Worcester. Danvers finished 15–6 in Sarah Griffin's first season.",
+    notes: ["MIAA Division 3 Round of 32: No. 19 Danvers at No. 14 Notre Dame Academy", "Season-ending loss — Danvers finishes 15–6", "Notre Dame moves on to face No. 3 Lynnfield in the Round of 16"],
     sources: [
       { label: "MIAA Division 3 bracket", url: "https://www.miaa.net/miaa-fall-volleyball-2026-division-3-state-tournament" },
-      { label: "Watch live on NFHS Network", url: "https://www.nfhsnetwork.com/events/notre-dame-academy-worcester-worcester-ma/gam2b29c4f396" }
+      { label: "MaxPreps box score", url: MP + "danvers-vs-notre-dame-academy-worcester/11-5-2026/?c=00aaf372-4c6f-480a-b090-e565412ff317" },
+      { label: "Match replay on NFHS Network", url: "https://www.nfhsnetwork.com/events/notre-dame-academy-worcester-worcester-ma/gam2b29c4f396" }
     ] }
 ];
 
@@ -719,6 +733,7 @@ const RECORDS = {
 const HL = HUDL_TEAM + "/watch?ot=TEAM&oi=752824&hr=";   // highlight / recap videos
 const RP = HUDL_TEAM + "/watch?b=";                        // full-match livestream replays
 const VIDEOS = [
+  { title: "Danvers at Notre Dame Academy", sub: "MIAA Round of 32 Replay · Nov. 5", season: 2026, len: "Replay", url: "https://www.nfhsnetwork.com/events/notre-dame-academy-worcester-worcester-ma/gam2b29c4f396" },
   { title: "Danvers at Beverly", sub: "Full-Match Replay · Oct. 19", season: 2026, len: "Replay", by: "BevCam (YouTube)", url: "https://www.youtube.com/watch?v=f7tc1weMt7c" },
   { title: "Danvers at Stoneham", sub: "Full-Match Replay · Oct. 9", season: 2026, len: "Replay", url: RP + "QnJvYWRjYXN0NDM0MjIyOQ%3D%3D" },
   { title: "Danvers at Winthrop", sub: "Full-Match Replay · Oct. 7", season: 2026, len: "Replay", url: RP + "QnJvYWRjYXN0NDU1MDA1Mg%3D%3D" },

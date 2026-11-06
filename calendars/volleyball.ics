@@ -367,10 +367,13 @@ UID:volleyball-105@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261105T170000
 DURATION:PT2H
-SUMMARY:Danvers Volleyball at Notre Dame Academy
+SUMMARY:Danvers Volleyball at Notre Dame Academy (L 0–3)
 LOCATION:Notre Dame Academy\, Worcester
-DESCRIPTION:MIAA state tournament · Round of 32\nSchedule and results: htt
- ps://danversfalconsathletics.org/volleyball/schedule.html
+DESCRIPTION:MIAA state tournament · Round of 32\nFinal: Danvers 0\, Notre 
+ Dame Academy 3\nNo. 14 Notre Dame Academy ended the Falcons' season in the
+  Division 3 Round of 32\, sweeping 25–18\, 25–10\, 25–14 in Worceste
+ r. Danvers finished 15–6 in Sarah Griffin's first season.\nSchedule and 
+ results: https://danversfalconsathletics.org/volleyball/schedule.html
 URL:https://danversfalconsathletics.org/volleyball/schedule.html
 END:VEVENT
 END:VCALENDAR
