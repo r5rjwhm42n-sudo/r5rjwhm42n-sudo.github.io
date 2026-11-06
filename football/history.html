@@ -44,7 +44,7 @@
 </div></section>
 
 <section class="block"><div class="wrap">
-  <div class="section-head"><h2>The Climb</h2><span class="pill">2004 to 2025</span></div>
+  <div class="section-head"><h2>The Climb</h2><span class="pill" id="chart-span"></span></div>
   <div class="card linechart" id="win-chart"></div>
 </div></section>
 
@@ -59,20 +59,28 @@
 </div></section>
 
 <section class="block"><div class="wrap">
-  <div class="grid g2" style="align-items:start">
-    <div>
-      <div class="section-head"><h2>Year by Year</h2></div>
-      <div class="card table-scroll"><table class="records">
-        <thead><tr><th>Season</th><th>Overall</th><th>League</th><th>Win %</th><th></th></tr></thead>
-        <tbody id="records"></tbody>
-      </table></div>
-      <p class="sub" style="margin-top:12px;font-size:13px">Records 2004–2025 per MaxPreps and the DHS athletics page.</p>
-    </div>
-    <div>
-      <div class="section-head"><h2>Milestones</h2></div>
-      <div class="timeline" id="timeline"></div>
-    </div>
-  </div>
+  <div class="section-head"><h2>Year by Year</h2></div>
+  <div class="card table-scroll"><table class="records">
+    <thead><tr><th>Season</th><th>Record</th><th>Win %</th><th>Coach</th><th>NEC</th><th>Postseason</th></tr></thead>
+    <tbody id="records"></tbody>
+  </table></div>
+  <button class="chip show-more" id="records-more"></button>
+  <p class="sub fine">Records are W–L–T, from the Danvers Football Record Book, which goes back to 1902. League records from 2004 on are from MaxPreps. Title years follow the school's athletics page; the record book doesn't mark 2005 or 2013 as NEC title seasons.</p>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Captains &amp; Honors</h2></div>
+  <div class="card table-scroll"><table class="records honors">
+    <thead><tr><th>Season</th><th>Captains</th><th>All-League</th><th>Notes</th></tr></thead>
+    <tbody id="honors"></tbody>
+  </table></div>
+  <button class="chip show-more" id="honors-more"></button>
+  <p class="sub fine">From the record book. "…" marks a list the book doesn't finish, and seasons it has nothing for are left out.</p>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Milestones</h2></div>
+  <div class="timeline" id="timeline"></div>
 </div></section>
 </main>
 <footer class="site-footer" id="site-footer"></footer>

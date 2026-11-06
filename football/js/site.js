@@ -351,47 +351,77 @@
   }
 
   /* ---------- HISTORY ---------- */
+  const PLAYED = SEASONS.filter((s) => s.w != null);
+  const pct = (s) => (s.w + s.t / 2) / (s.w + s.l + s.t);
+  const wlt = (s) => `${s.w}–${s.l}${s.t ? `–${s.t}` : ""}`;
+  const leagueTitle = (yr) => TITLES.find((t) => t.year === yr && /NEC|League/.test(t.label));
+
   function winChart() {
-    const data = [...SEASONS].reverse();
-    const W = 900, H = 290, L = 34, R = 18, T = 30, B = 36, top = 10;
-    const x = (i) => L + i * (W - L - R) / (data.length - 1);
+    const data = [...PLAYED].reverse();
+    const W = 900, H = 290, L = 34, R = 18, T = 24, B = 36, top = 10;
+    const y0 = data[0].year, y1 = data[data.length - 1].year;
+    const x = (yr) => L + (yr - y0) * (W - L - R) / (y1 - y0);   // by year, so seasons with no team leave a gap
     const y = (w) => T + (1 - w / top) * (H - T - B);
-    const pts = data.map((s, i) => [x(i), y(s.w)]);
-    const line = pts.map(([px, py], i) => `${i ? "L" : "M"}${px.toFixed(1)} ${py.toFixed(1)}`).join(" ");
+    const pts = data.map((s) => [x(s.year), y(s.w)]);
+    const runs = [];   // unbroken stretches of seasons
+    data.forEach((s, i) => { if (!i || s.year - data[i - 1].year > 1) runs.push([]); runs[runs.length - 1].push(pts[i]); });
+    const trace = (run) => run.map(([px, py], i) => `${i ? "L" : "M"}${px.toFixed(1)} ${py.toFixed(1)}`).join(" ");
+    const area = runs.map((run) => `${trace(run)} L${run[run.length - 1][0].toFixed(1)} ${y(0)} L${run[0][0].toFixed(1)} ${y(0)} Z`).join(" ");
     const isTitle = (s) => TITLES.some((t) => t.year === s.year);
     return `
       <div class="key"><span><i></i>Wins per season</span><span><i class="t"></i>Title or Final Four year</span></div>
-      <div class="table-scroll"><svg viewBox="0 0 ${W} ${H}" style="min-width:720px" role="img" aria-label="Wins per season, ${data[0].year} to ${data[data.length - 1].year}">
+      <div class="table-scroll"><svg viewBox="0 0 ${W} ${H}" style="min-width:720px" role="img" aria-label="Wins per season, ${y0} to ${y1}">
         ${[0, 5, 10].map((v) => `<line class="gridl" x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}"/><text x="${L - 10}" y="${y(v) + 4}" text-anchor="end">${v}</text>`).join("")}
-        <path class="area" d="${line} L${x(data.length - 1)} ${y(0)} L${x(0)} ${y(0)} Z"/>
-        <path class="ln" pathLength="1" d="${line}"/>
+        <path class="area" d="${area}"/>
+        ${runs.map((run) => `<path class="ln" pathLength="1" d="${trace(run)}"/>`).join("")}
         ${data.map((s, i) => `
-          <circle class="pt ${isTitle(s) ? "title" : ""}" cx="${pts[i][0].toFixed(1)}" cy="${pts[i][1].toFixed(1)}" r="${isTitle(s) ? 6.5 : 4.5}"><title>${s.year}: ${s.w}–${s.l}${s.note ? " · " + esc(s.note) : ""}</title></circle>
-          <text class="wv" x="${pts[i][0].toFixed(1)}" y="${(pts[i][1] - 13).toFixed(1)}" text-anchor="middle">${s.w}</text>
-          <text x="${pts[i][0].toFixed(1)}" y="${H - 10}" text-anchor="middle">’${String(s.year).slice(2)}</text>`).join("")}
+          <circle class="pt ${isTitle(s) ? "title" : ""}" cx="${pts[i][0].toFixed(1)}" cy="${pts[i][1].toFixed(1)}" r="${isTitle(s) ? 5.5 : 3}"><title>${s.year}: ${wlt(s)} · ${esc(s.coach)}${s.post && s.post !== "Did not qualify" ? " · " + esc(s.post) : ""}</title></circle>
+          ${s.year % 10 === 0 ? `<text x="${pts[i][0].toFixed(1)}" y="${H - 10}" text-anchor="middle">${s.year}</text>` : ""}`).join("")}
       </svg></div>`;
   }
 
   function history() {
     $("#banners").innerHTML = TITLES.map((t) => `<div class="banner"><img src="${LOGO}" alt=""><div class="y">${t.year}</div><div class="l">${esc(t.label)}</div></div>`).join("");
+    $("#chart-span").textContent = `${PLAYED[PLAYED.length - 1].year} to ${PLAYED[0].year}`;
     $("#win-chart").innerHTML = winChart();
     $("#timeline").innerHTML = MILESTONES.map((m) => `<div class="item"><div class="y">${esc(m.year)}</div><p>${esc(m.text)}</p></div>`).join("");
-    $("#records").innerHTML = SEASONS.map((s) => {
-      const p = s.w / (s.w + s.l);
-      return `<tr>
+
+    const SHOWN = 15;
+    $("#records").innerHTML = SEASONS.map((s, i) => {
+      const hide = i >= SHOWN ? ' class="older" hidden' : "";
+      if (s.w == null) return `<tr${hide}><td class="yr">${s.year}</td><td class="rec">–<small>${esc(s.note || "")}</small></td><td></td><td></td><td></td><td></td></tr>`;
+      const title = leagueTitle(s.year);
+      return `<tr${hide}>
         <td class="yr">${s.year}</td>
-        <td class="rec">${s.w}–${s.l}</td>
-        <td>${s.lw}–${s.ll}</td>
-        <td><div class="bar" title="${(p * 100).toFixed(0)}% wins"><i style="width:${p * 100}%"></i></div></td>
-        <td>${s.note ? `<span class="note-pill">${esc(s.note)}</span>` : ""}</td>
+        <td class="rec">${wlt(s)}${s.lw != null ? `<small>League ${s.lw}–${s.ll}</small>` : ""}${s.note ? `<small>${esc(s.note)}</small>` : ""}</td>
+        <td><div class="bar" title="${(pct(s) * 100).toFixed(0)}% (ties count as half a win)"><i style="width:${pct(s) * 100}%"></i></div></td>
+        <td>${esc(s.coach)}</td>
+        <td>${title ? `<span class="note-pill">${esc(title.label)}</span>${s.nec ? ` ${esc(s.nec)}` : ""}` : esc(s.nec || "")}</td>
+        <td>${esc(s.post || "")}</td>
       </tr>`;
     }).join("");
-    const tw = SEASONS.reduce((n, s) => n + s.w, 0), tl = SEASONS.reduce((n, s) => n + s.l, 0);
-    const best = [...SEASONS].sort((a, b) => b.w / (b.w + b.l) - a.w / (a.w + a.l))[0];
+    const more = $("#records-more");
+    more.textContent = `Show all ${SEASONS.length} seasons`;
+    more.addEventListener("click", () => { $$("#records .older").forEach((tr) => { tr.hidden = false; }); more.hidden = true; });
+
+    $("#honors").innerHTML = HONORS.map((h, i) => `<tr${i >= SHOWN ? ' class="older" hidden' : ""}>
+        <td class="yr">${h.year}</td>
+        <td>${esc(h.captains || "")}</td>
+        <td>${esc(h.allLeague || "")}</td>
+        <td>${esc(h.note || "")}</td>
+      </tr>`).join("");
+    const moreHonors = $("#honors-more");
+    moreHonors.textContent = `Show all ${HONORS.length} seasons`;
+    moreHonors.hidden = HONORS.length <= SHOWN;
+    moreHonors.addEventListener("click", () => { $$("#honors .older").forEach((tr) => { tr.hidden = false; }); moreHonors.hidden = true; });
+
+    const sum = (k) => PLAYED.reduce((n, s) => n + s[k], 0);
+    const best = [...PLAYED].sort((a, b) => pct(b) - pct(a) || b.w - a.w)[0];
+    const nec = TITLES.filter((t) => /NEC/.test(t.label));
     $("#history-tiles").innerHTML = [
-      ["NEC titles", TITLES.filter((t) => /NEC/.test(t.label)).length, "1941 · 2004 · 2005 · 2013 · 2019"],
-      [`Since ${SEASONS[SEASONS.length - 1].year}`, `${tw}–${tl}`, `${SEASONS.length} seasons`],
-      ["Best recent season", `${best.w}–${best.l}`, `${best.year}`],
+      ["NEC titles", nec.length, nec.map((t) => t.year).join(" · ")],
+      ["All-time record", `${sum("w")}–${sum("l")}`, `Plus ${sum("t")} ties · ${PLAYED.length} seasons since ${PLAYED[PLAYED.length - 1].year}`],
+      ["Best season", wlt(best), `${best.year} · ${best.coach}`],
       ["Turkey Day rival", "1964", "Gloucester, every Thanksgiving since"]
     ].map(tile).join("");
     $("#legends").innerHTML = LEGENDS.map((p, i) => `

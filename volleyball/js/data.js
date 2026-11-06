@@ -658,6 +658,32 @@ const SEASONS = [
   [2013, 0, 16, 0, "George LeVasseur", "", "Did not qualify"]
 ];
 
+/* Captains and honors by season, from the record book's Team Records tab.
+   allLeague: NEC All-Conference — (POY) = NEC Player of the Year
+   allStars:  NEC All-Stars
+   Leave out anything the book doesn't have. */
+const HONORS = [
+  { year: 2025, captains: "Angie Djoko, Diahana Kassiotis", allStars: "Gabby Lindemen" },
+  { year: 2024, captains: "Audrey Lapine, Mia Gongas, Kelly McCrea", allLeague: "Audrey Lapine", allStars: "Mia Gongas, Sophia DiPaulo" },
+  { year: 2023, captains: "Audrey Lapine, Katelyn Cicerone, Riley Devitt", allLeague: "Katelyn Cicerone, Riley Devitt, Audrey Lapine",
+    allStars: "Abby Sullivan, Maddie McClearn" },
+  { year: 2022, captains: "Emma Callahan, Maxine Lapine, Lauren McCullough", allStars: "Ava Newton" },
+  { year: 2021, captains: "Maxine Lapine, Tess Vontzalids, Alexa Simpson", allStars: "Tess Vontzalids" },
+  { year: 2020, captains: "Megan Murphy, Carly Goodhue, Lily Eldridge", allLeague: "Lily Eldridge (POY), Carly Goodhue, Megan Murphy",
+    allStars: "Shayla Saad, Alexia Simpson, Tess Vontzalids" },
+  { year: 2019, captains: "Jianna Durand, Megan Murphy, Maddie Montanari", allLeague: "Lily Eldridge (POY), Megan Murphy, Carly Goodhue, Maddie Montanari",
+    allStars: "Jianna Durand, Shayla Saad, Cassidy Malley" },
+  { year: 2018, captains: "Grace Leete, Kayla Robinson, Kaylee McHale, Chloe Sharffenberg", allLeague: "Grace Leete (NEC MVP), Carly Goodhue, Lily Eldridge, Maddie Montanari",
+    allStars: "Kaylee McHale", note: "George LeVasseur: NEC Coach of the Year" },
+  { year: 2017, captains: "Grace Leete, Lauren Tivnan, Lilly Montanari", allLeague: "Grace Leete (NEC MVP), Abby Skinner, Lilly Montanari",
+    allStars: "Kaylee McHale, Lauren Tivnan, Kayla Robinson", note: "George LeVasseur: NEC Coach of the Year" },
+  { year: 2016, captains: "Shannon Veilleux, Julia McNulty", allLeague: "Shannon Veilleux, Holly Tobin",
+    allStars: "Grace Leete, Julia McNulty, Brynn O'Neil", note: "George LeVasseur: NEC Coach of the Year" },
+  { year: 2015, captains: "Erin St. Pierre, Shannon Veilleux", allLeague: "Erin St. Pierre, Angela Saggese",
+    allStars: "Shannon Veilleux, Brynn O'Neil, Lauren McKinnon" },
+  { year: 2014, allLeague: "Erin St. Pierre", allStars: "Shannon Veilleux, Angela Saggese", note: "George LeVasseur: NEC Coach of the Year" }
+];
+
 const MILESTONES = [
   { year: "2013", text: "The earliest season in the record book: 0–16 under coach George LeVasseur." },
   { year: "2014", text: "A 12-win turnaround and a trip to the state tournament. LeVasseur is named NEC Coach of the Year." },
