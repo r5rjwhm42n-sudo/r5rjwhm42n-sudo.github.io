@@ -317,6 +317,16 @@ const SCHEDULE = [
     ] },
   { id: 10, date: "2026-11-06T18:30", opponent: "Bedford", mascot: "Buccaneers",
     home: true, league: false, postseason: true, round: "Round of 16", site: HOME_FIELD, result: null,
+    tag: "State Tournament",
+    spotlight: {
+      kicker: "Division 4 Round of 16",
+      blurb: "No. 3 Danvers opens the MIAA Division 4 state tournament at home against No. 14 Bedford. A win sends the Falcons to the quarterfinals.",
+      oppRecord: "5–3",
+      watch: REPLAY + "QnJvYWRjYXN0NDczNjA0NA%3D%3D",   // Hudl livestream
+      tickets: { label: "Tickets", note: "Tickets on GoFan", url: "https://gofan.co/app/school/MA14553" },
+      won: "On to the Quarterfinals",
+      lost: "Final"
+    },
     notes: ["MIAA Division 4 Round of 16: No. 3 Danvers hosts No. 14 Bedford", "Bedford enters 5–3 on a two-game win streak: 55–30 over Wayland and 44–34 over Acton-Boxborough", "Danvers is No. 16 in the Globe Top 20 (Nov. 2), up from 17 after the Peabody win", "The Globe's playoff preview picks two-time defending champion Scituate as the Division 4 favorite and notes Danvers has the bracket's second-highest average margin of victory (11.8)", "The higher seed hosts through the quarterfinals", "The winner meets No. 6 Tantasqua Regional or No. 11 Wayland in the quarterfinals"],
     sources: [
       { label: "Livestream on Hudl", url: REPLAY + "QnJvYWRjYXN0NDczNjA0NA%3D%3D" },

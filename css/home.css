@@ -542,7 +542,11 @@ button { font: inherit; color: inherit; cursor: pointer; }
 @keyframes sp-card-glow { 0%, 100% { box-shadow: 0 0 0 2px var(--gold), 0 0 8px 1px rgba(240, 180, 41, .35); } 50% { box-shadow: 0 0 0 2px var(--gold), 0 0 30px 6px rgba(240, 180, 41, .7); } }
 .tc-ribbon { position: absolute; z-index: 2; top: 12px; right: 12px; padding: 4px 10px 3px; border-radius: 4px; background: var(--gold); color: var(--navy);
   font-family: var(--display); font-weight: 800; font-size: 14px; letter-spacing: .1em; text-transform: uppercase; box-shadow: 0 2px 10px rgba(5, 14, 40, .35); }
+.td-g.sp-glow { border-color: var(--gold); background: rgba(240, 180, 41, .16); animation: sp-card-glow 1.8s ease-in-out infinite; }
+.td-g.sp-glow:hover { background: rgba(240, 180, 41, .28); }
+.td-g.sp-glow svg { color: var(--gold); }
 @media (prefers-reduced-motion: reduce) {
+  .td-g.sp-glow { animation: none; box-shadow: 0 0 0 2px var(--gold), 0 0 22px 4px rgba(240, 180, 41, .6); }
   .nav a.sp-glow { animation: none; text-shadow: 0 0 10px rgba(240, 180, 41, .8); }
   .team-card.sp-glow { animation: none; box-shadow: 0 0 0 2px var(--gold), 0 0 22px 4px rgba(240, 180, 41, .6); }
 }

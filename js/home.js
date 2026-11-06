@@ -226,6 +226,8 @@
     window.DFA?.weather(e).then((w) => { if (w) $("#nu-wx").innerHTML = `${w.icon}<b>${w.temp}°</b><span>${esc(w.label)}${w.rain >= 30 ? ` · ${w.rain}% rain` : ""}</span>`; });
   }
 
+  let SPOT_ON = false;   // a football spotlight game is coming up or under way: its Game Day button glows
+
   /* ---------- Big-game spotlight ----------
      A football game with spotlight: {...} in its data.js gets a banner across the top of the hub,
      from a week before kickoff until two days after the final. */
@@ -298,7 +300,8 @@
 
     /* until the final, the Football menu link and team card glow gold, and the card carries a tag */
     if (!done) {
-      $$('.nav a[href="football/"], .team-card[data-sport="football"]').forEach((el) => el.classList.add("sp-glow"));
+      SPOT_ON = true;
+      $$('.nav a[href="football/"], .team-card[data-sport="football"], #today .td-g[data-sport="football"]').forEach((el) => el.classList.add("sp-glow"));
       const media = $('.team-card[data-sport="football"] .tc-media');
       if (media) media.insertAdjacentHTML("beforeend", `<span class="tc-ribbon">${esc(g.tag || sp.kicker)}${today ? " · tonight" : ""}</span>`);
     }
@@ -317,7 +320,8 @@
         <span class="td-flag ${live ? "live" : ""}">${live ? "<i></i>Live now" : "Game day"}</span>
         <div class="td-games">${today.map((e) => {
           const on = DFA.state({ ...e, finish: e.final }, e.sport) === "live";
-          return `<a class="td-g ${on ? "on" : ""}" href="${esc(e.href)}">
+          const glow = SPOT_ON && e.sport === "football" ? " sp-glow" : "";
+          return `<a class="td-g ${on ? "on" : ""}${glow}" data-sport="${esc(e.sport)}" href="${esc(e.href)}">
             <svg aria-hidden="true"><use href="#i-${e.sport}"/></svg>
             <span><b>${esc(e.team)} ${esc(e.title)}</b><small>${on ? "Under way" : timeOf(e) || "Today"}${e.home ? " · Home" : ""}</small></span></a>`;
         }).join("")}</div></div>`;
