@@ -1,6 +1,5 @@
 /* Athletic Department newsletter page. Uses the hub's look (css/home.css):
    navy bars, white cards, 4px corners. */
-.nav a.active { color: var(--white); border-bottom-color: var(--white); }
 
 /* ---------- Hero ---------- */
 .nl-hero { position: relative; overflow: hidden; background: var(--navy); color: var(--white); }

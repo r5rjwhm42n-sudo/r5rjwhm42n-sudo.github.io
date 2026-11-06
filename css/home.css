@@ -67,6 +67,23 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .tk-res { font-size: 14px; font-weight: 700; }
 .W { color: var(--win); } .L { color: var(--loss); } .T { color: var(--tie); } .F { color: var(--royal); }
 
+/* ---------- Newsletter button (header, beside Search) ---------- */
+.news-btn { display: inline-flex; align-items: center; gap: 8px; flex: none; height: 40px; margin-left: 14px; padding: 0 14px 0 11px; border-radius: 4px; border: 1.5px solid var(--gold); background: var(--gold); color: var(--navy); font: 700 16px/1 var(--display); letter-spacing: .08em; text-transform: uppercase; text-decoration: none; transition: background .15s, border-color .15s, transform .15s; }
+.news-btn:hover { background: #ffc94d; border-color: #ffc94d; transform: translateY(-1px); }
+.news-btn svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 2.1; stroke-linecap: round; stroke-linejoin: round; }
+/* room for it next to the team links: Search shows as its icon and the links sit a little closer */
+.with-news .nav a { padding: 0 10px; }
+.with-news .dfs-open { width: 40px; padding: 0; justify-content: center; margin-left: 8px; }
+.with-news .dfs-open span { display: none; }
+@media (min-width: 1081px) { .news-btn { margin-left: 10px; padding: 0 14px; } .news-btn svg { display: none; } }
+@media (max-width: 1080px) { .news-btn { margin-left: auto; } }
+@media (min-width: 1081px) and (max-width: 1200px), (max-width: 480px) {
+  .news-btn { width: 40px; padding: 0; justify-content: center; }
+  .news-btn span { display: none; }
+  .news-btn svg { display: block; }
+}
+@media (max-width: 350px) { .site-header .with-news .brand-text { font-size: 17px; } }
+
 /* ---------- Newsletter strip (newest Athletic Department newsletter) ---------- */
 .news-strip { display: block; background: var(--white); border-bottom: 1px solid var(--line); color: var(--ink); text-decoration: none; position: relative; z-index: 2; transition: background .15s; }
 .news-strip:hover { background: #f7f9fd; }
