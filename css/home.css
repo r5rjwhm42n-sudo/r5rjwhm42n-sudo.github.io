@@ -67,6 +67,18 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .tk-res { font-size: 14px; font-weight: 700; }
 .W { color: var(--win); } .L { color: var(--loss); } .T { color: var(--tie); } .F { color: var(--royal); }
 
+/* ---------- Newsletter strip (newest Athletic Department newsletter) ---------- */
+.news-strip { display: block; background: var(--white); border-bottom: 1px solid var(--line); color: var(--ink); text-decoration: none; position: relative; z-index: 2; transition: background .15s; }
+.news-strip:hover { background: #f7f9fd; }
+.news-strip .wrap { display: flex; align-items: center; gap: 14px; padding-top: 9px; padding-bottom: 9px; }
+.ns-label { flex: none; background: var(--gold); color: var(--navy); font-family: var(--display); font-weight: 800; font-size: 14px; letter-spacing: .12em; text-transform: uppercase; padding: 4px 10px 3px; border-radius: 4px; }
+.ns-title { flex: none; font-family: var(--display); font-weight: 700; font-size: 20px; text-transform: uppercase; color: var(--navy); line-height: 1.1; }
+.ns-sub { flex: 1; min-width: 0; color: var(--muted); font-size: 15px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ns-go { flex: none; margin-left: auto; font-family: var(--display); font-weight: 700; font-size: 17px; letter-spacing: .06em; text-transform: uppercase; color: var(--royal); }
+.news-strip:hover .ns-go { color: var(--navy); }
+@media (max-width: 860px) { .ns-sub { display: none; } .ns-title { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; } }
+@media (max-width: 640px) { .news-strip .wrap { gap: 10px; } .ns-title { font-size: 17px; } .ns-go { font-size: 15px; } }
+
 /* ---------- Hero with the team photo mosaic ---------- */
 .hub-hero { position: relative; overflow: hidden; color: var(--white); background: var(--navy); }
 .mosaic { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(2, 1fr); gap: 3px; }
