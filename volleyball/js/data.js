@@ -622,7 +622,7 @@ const PLAYERS = [
   { name: "Tess Crowley", num: 11, pos: ["OH"], grade: "Jr.", captain: false },
   { name: "Sienna Lynch", num: 2, pos: ["MB"], grade: "Jr.", captain: false },
   { name: "Emma Coffin", num: 8, pos: ["OPP", "OH"], grade: "Sr.", captain: false },
-  { name: "Hannah Laskin", num: 13, pos: ["DS"], grade: "So.", captain: false },
+  { name: "Hannah Laskin", num: 13, pos: ["DS"], grade: "So.", captain: false, totals: { sp: 8, k: 0, a: 0, b: 0, d: 3, as: 0, att: 0, e: 0, r: 5 } },
   { name: "Ellie Lindeman", num: 14, pos: ["MB", "OPP"], grade: "So.", captain: false },
   { name: "Isabelle Maffei", num: 17, pos: ["L"], grade: "So.", captain: false },
   { name: "Isabella DeSouza", num: 20, pos: ["S"], grade: "Sr.", captain: false }
