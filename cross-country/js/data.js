@@ -317,7 +317,8 @@ const MEETS = [
    ROSTER
    squad:  "boys" | "girls"
    grade:  "Sr." | "Jr." | "So." | "Fr." | null
-   pr:     5K personal best, e.g. "17:42" (null = TBD)
+   pr:     fastest 5K from any season, e.g. "17:42" (athletic.net; null = no 5K yet).
+           A faster 5K in MEETS above replaces it automatically.
    tt:     preseason 2K time trial, from the team's results sheet
            (null = didn't run it; ttDistance if it wasn't 2K)
    Each runner's race-by-race results are pulled automatically from the
@@ -330,7 +331,7 @@ const RUNNERS = [
   { name: "Jason Rooney", squad: "boys", grade: "Sr.", captain: true, pr: "19:21.4", tt: null },
   { name: "Miles Pietal", squad: "boys", grade: "Jr.", captain: false, pr: "19:37.1", tt: "7:19" },
   { name: "Levi James", squad: "boys", grade: "So.", captain: false, pr: "19:20.8", tt: "7:29" },
-  { name: "Jakob Crandall", squad: "boys", grade: "Sr.", captain: false, pr: null, tt: "10:37" },
+  { name: "Jakob Crandall", squad: "boys", grade: "Sr.", captain: false, pr: "23:21.7", tt: "10:37" },
   { name: "Rowan Bartlett", squad: "boys", grade: "Fr.", captain: false, pr: null, tt: "9:19" },
   { name: "Miles LaMontagne", squad: "boys", grade: "So.", captain: false, pr: null, tt: null },
   { name: "Ethan Santiago", squad: "boys", grade: "Fr.", captain: false, pr: null, tt: "9:25" },
@@ -341,12 +342,24 @@ const RUNNERS = [
   { name: "Grace Conklin", squad: "girls", grade: "Sr.", captain: true, pr: "19:46.7", tt: "7:38" },
   { name: "Emily Sullivan", squad: "girls", grade: "Sr.", captain: true, pr: "20:46.8", tt: "8:53" },
   { name: "Madyson Danish", squad: "girls", grade: "Jr.", captain: false, pr: "21:20.8", tt: "8:28" },
-  { name: "Paige Sherman", squad: "girls", grade: "Jr.", captain: false, pr: null, tt: "9:06" },
+  { name: "Paige Sherman", squad: "girls", grade: "Jr.", captain: false, pr: "23:32.6", tt: "9:06" },
   { name: "Kylie Walsh", squad: "girls", grade: "So.", captain: false, pr: null, tt: "10:28" },
-  { name: "Makayla Cheung", squad: "girls", grade: "So.", captain: false, pr: null, tt: "11:41" },
+  { name: "Makayla Cheung", squad: "girls", grade: "So.", captain: false, pr: "28:25.7", tt: "11:41" },
   { name: "Norah Wright", squad: "girls", grade: "So.", captain: false, pr: null, tt: "10:29" },
   { name: "Yara Azzazi", squad: "girls", grade: null, captain: false, pr: null, tt: "12:26" }
 ];
+
+/* A 5K this season that beats a runner's pr replaces it, so a new PR shows up
+   everywhere as soon as the meet's finishers are added. Races at another
+   distance (a finisher note like "3K novice race") don't count. */
+(() => {
+  const secs = (t) => t.split(":").reduce((a, b) => a * 60 + Number(b), 0);
+  RUNNERS.forEach((r) => MEETS.forEach((m) => {
+    const fin = m.distance === "5K" && m[r.squad] && (m[r.squad].finishers || []).find((x) => x.name === r.name);
+    if (!fin || !fin.time || /\d(\.\d+)?\s?(K|mi)/i.test((fin.note || "").replace(/5K/gi, ""))) return;
+    if (!r.pr || secs(fin.time) < secs(r.pr)) r.pr = fin.time;
+  }));
+})();
 
 /* ---------------------------------------------------------------------
    ALL-TIME 5K LIST
