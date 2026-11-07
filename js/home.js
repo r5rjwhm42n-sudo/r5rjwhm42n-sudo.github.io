@@ -106,7 +106,8 @@
       });
       /* one entry per meet for the schedule, and one for its write-up */
       const meets = d.MEETS.map((m) => ({ ...meetEvent(m, null, null), final: squads.some(([k]) => ran(m, k)),
-        squadResults: squads.filter(([k]) => m[k]?.result).map(([k, label]) => [label, m[k].result, `${m[k].us}–${m[k].them}`]) }));
+        squadResults: squads.filter(([k]) => m[k]?.result).map(([k, label]) => [label, m[k].result, `${m[k].us}–${m[k].them}`]),
+        squadPlaces: squads.filter(([k]) => m[k]?.place).map(([k, label]) => [label, m[k].place]) }));
       const tiles = d.TITLES.filter((t) => /State Champions/.test(t.label)).map((t) => [`${t.squad === "boys" ? "Boys" : "Girls"} Cross Country`, "State champions", String(t.year), t.label]);
       return { teams, meets, rank: null,
         titles: squads.map(([k, label]) => ({ name: `${label} Cross Country`, href: "cross-country/history.html", years: d.TITLES.filter((t) => t.squad === k && /NEC/.test(t.label)).map((t) => t.year) })),
@@ -210,7 +211,7 @@
           </span>
         </div>` : ""}
       </div>
-      <a class="nu-foot" href="${esc(e.href)}">Game details <span aria-hidden="true">→</span></a>`;
+      <a class="nu-foot" href="${esc(e.href)}">Game preview <span aria-hidden="true">→</span></a>`;
     const clock = $("#clock");
     const tick = () => {
       const ms = start - Date.now();
@@ -266,7 +267,7 @@
       <div class="sp-links">
         ${!done && window.DFA ? `<a href="${DFA.mapsUrl(g)}" target="_blank" rel="noopener">Directions</a>` : ""}
         ${!done && sp.tickets ? `<a href="${esc(sp.tickets.url)}" target="_blank" rel="noopener" title="${esc(sp.tickets.note || "")}">${esc(sp.tickets.label)}</a>` : ""}
-        <button type="button" id="sp-share">Share</button>
+        <button type="button" id="sp-share">${done ? "Share the final score" : "Share this game"}</button>
       </div>
     </div>`;
 
@@ -413,12 +414,18 @@
         const won = e.squadResults.filter(([, r]) => r === "W").length;
         return won === 2 ? `Falcons sweep ${e.opponent}` : won ? `Split with ${e.opponent}` : `${e.opponent} takes both races`;
       }
-      if (e.tournament || !e.result) return `Falcons place ${e.score} at the ${e.title}`;
+      if (!e.score && e.squadPlaces?.length) {   // championship meets: each team's place, not a dual-meet score
+        const places = [...new Set(e.squadPlaces.map(([, p]) => p))];
+        return places.length === 1 ? `Falcons place ${ord(places[0])} at the ${e.title}`
+          : `${e.squadPlaces.map(([lab, p]) => `${lab} ${ord(p)}`).join(", ")} at the ${e.title}`;
+      }
+      if (e.tournament || !e.result) return e.score ? `Falcons place ${e.score} at the ${e.title}` : `Falcons run at the ${e.title}`;
       const who = e.opponent;
       return e.result === "W" ? `Falcons beat ${who} ${e.score}` : e.result === "T" ? `Falcons and ${who} tie ${e.score}` : `${who} tops the Falcons ${e.score.split("–").reverse().join("–")}`;
     };
     const score = (e) => e.squadResults?.length
       ? e.squadResults.map(([lab, r, sc]) => `<span class="ls-chip ${r}">${lab} ${r} ${sc}</span>`).join("")
+      : !e.score && e.squadPlaces?.length ? e.squadPlaces.map(([lab, p]) => `<span class="ls-chip">${lab} ${ord(p)}</span>`).join("")
       : `<span class="ls-chip ${resClass(e.result)}">${esc(resText(e))}</span>`;
     $("#latest-list").innerHTML = stories.slice(0, 6).map((e) => `<a class="story card lift" href="${esc(e.href)}">
         <div class="ls-top"><svg aria-hidden="true"><use href="#i-${e.sport}"/></svg><span>${esc(e.sport === "cross-country" ? "Cross Country" : e.team)}</span><span class="ls-date">${fmt(e.date, { month: "short", day: "numeric" })}</span></div>
@@ -426,7 +433,7 @@
           <div class="ls-score">${score(e)}</div>
           <h3>${esc(head(e))}</h3>
           <p>${esc(e.summary)}</p>
-          <span class="more">Full recap <span aria-hidden="true">→</span></span>
+          <span class="more">Read the full recap <span aria-hidden="true">→</span></span>
         </div>
       </a>`).join("");
     $("#latest").hidden = false;

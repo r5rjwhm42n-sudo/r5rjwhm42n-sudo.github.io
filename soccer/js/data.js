@@ -402,7 +402,7 @@ const TEAMS = {
         scorers: [], assists: [],
         notes: [
           "Senior Night for Emma Sutherland, Taylor Landry and Ari Fajardo",
-          "Second meeting — Danvers won 2–1 at Peabody on Sept. 28"
+          "Second meeting: Danvers won 2–1 at Peabody on Sept. 28"
         ],
         replay: GIRLS_REPLAY + "QnJvYWRjYXN0NDY5NTc2NA%3D%3D",
         sources: [
@@ -468,7 +468,7 @@ const TEAMS = {
        HISTORY — from the school's athletics page and the Danvers High
        Girls Soccer Record Book.
        ----------------------------------------------------------------- */
-    historyIntro: "A state championship, 18 conference titles and 35 straight trips to the state tournament — the seasons and the players behind one of the North Shore's most consistent programs.",
+    historyIntro: "A state championship, 18 conference titles and 35 straight trips to the state tournament: the seasons and the players behind one of the North Shore's most consistent programs.",
     banners: [
       { year: 2017, label: "MIAA D2 State Champions" },
       { year: 2009, label: "North Sectional Champions" },
@@ -482,21 +482,21 @@ const TEAMS = {
 
     /* [year, wins, losses, ties, coach, NEC finish, postseason] — null record = not in the record book */
     seasons: [
-      [2025, 11, 7, 2, "Jimmy Hinchion", "4th", "Round of 32 — lost 1–0 at Newburyport"],
-      [2024, 14, 4, 3, "Jimmy Hinchion", "2nd", "Elite 8 — lost 5–3 at Medfield"],
+      [2025, 11, 7, 2, "Jimmy Hinchion", "4th", "Round of 32: lost 1–0 at Newburyport"],
+      [2024, 14, 4, 3, "Jimmy Hinchion", "2nd", "Elite 8: lost 5–3 at Medfield"],
       [2023, 14, 4, 2, "Jimmy Hinchion", "2nd", "Round of 16"],
       [2022, 11, 4, 2, "Jimmy Hinchion", "2nd", "Round of 16"],
       [2021, 13, 2, 1, "Jimmy Hinchion", "NEC Champions", "Elite 8"],
       [2020, 11, 0, 0, "Jimmy Hinchion", "NEC Champions", "No tournament (COVID)"],
       [2019, 15, 2, 2, "Jimmy Hinchion", "NEC Champions", "First round"],
-      [2018, 18, 3, 1, "Jimmy Hinchion", "NEC Champions", "North final — lost 3–1 to Winchester"],
-      [2017, 15, 2, 1, "Jimmy Hinchion", "NEC Champions", "D2 State Champions — beat Medway 3–2 on penalty kicks"],
+      [2018, 18, 3, 1, "Jimmy Hinchion", "NEC Champions", "North final: lost 3–1 to Winchester"],
+      [2017, 15, 2, 1, "Jimmy Hinchion", "NEC Champions", "D2 State Champions: beat Medway 3–2 on penalty kicks"],
       [2016, 13, 4, 1, "Jimmy Hinchion", "3rd", "North final"],
-      [2015, 16, 4, 1, "Jimmy Hinchion", "Runner-up", "Third round — lost 5–1 to Concord-Carlisle"],
-      [2014, 11, 6, 1, "Jimmy Hinchion", "3rd", "First round — lost to North Andover on penalty kicks"],
-      [2013, 11, 6, 1, "Jimmy Hinchion", "NEC Champions", "Second round — lost 2–1 to Wilmington in OT"],
-      [2012, 14, 2, 2, "Jimmy Hinchion", "NEC Champions", "First round — lost 2–1 to Wayland in OT"],
-      [2011, 11, 5, 2, "Jimmy Hinchion", "Runner-up", "Second round — lost 4–1 to Stoneham"],
+      [2015, 16, 4, 1, "Jimmy Hinchion", "Runner-up", "Third round: lost 5–1 to Concord-Carlisle"],
+      [2014, 11, 6, 1, "Jimmy Hinchion", "3rd", "First round: lost to North Andover on penalty kicks"],
+      [2013, 11, 6, 1, "Jimmy Hinchion", "NEC Champions", "Second round: lost 2–1 to Wilmington in OT"],
+      [2012, 14, 2, 2, "Jimmy Hinchion", "NEC Champions", "First round: lost 2–1 to Wayland in OT"],
+      [2011, 11, 5, 2, "Jimmy Hinchion", "Runner-up", "Second round: lost 4–1 to Stoneham"],
       [2010, 14, 2, 2, "Jimmy Hinchion", "Runner-up", "North final"],
       [2009, 15, 0, 3, "Jimmy Hinchion", "NEC Champions", "North Champions"],
       [2008, 16, 1, 1, "Jimmy Hinchion", "NEC Champions", "First round"],
@@ -508,7 +508,7 @@ const TEAMS = {
       [2002, 16, 2, 0, "Jimmy Hinchion", "Runner-up", "North Champions"],
       [2001, 17, 0, 1, "Jimmy Hinchion", "NEC Champions", "North semifinals"],
       [2000, 15, 2, 1, "Jimmy Hinchion", "NEC Champions", "North semifinals"],
-      [1999, 14, 3, 1, "Jimmy Hinchion", "Runner-up", "First round — lost to Wakefield on penalty kicks"],
+      [1999, 14, 3, 1, "Jimmy Hinchion", "Runner-up", "First round: lost to Wakefield on penalty kicks"],
       [1998, 18, 0, 0, "Kristen Ockvist", "NEC Champions", ""],
       [1997, 16, 1, 1, "Kristen Ockvist", "", "North quarterfinals"],
       [1996, 20, 0, 1, "Gerry Hills", "NEC Champions", "North final"],
@@ -759,7 +759,7 @@ const TEAMS = {
       { id: 6, date: "2026-09-23T16:30", opponent: "Saugus", mascot: "Sachems", home: false, league: true, site: "Serino Field, Saugus",
         result: "W", us: 2, them: 1,
         halves: null,
-        summary: "Nathan Kounga scored both goals — one off an Andrew Morse free kick, the other off a cross from Alejandro Henry — to give the Falcons their first win of the season.",
+        summary: "Nathan Kounga scored both goals, one off an Andrew Morse free kick, the other off a cross from Alejandro Henry, to give the Falcons their first win of the season.",
         scorers: [["Nathan Kounga", 2]],
         assists: [["Andrew Morse", 1], ["Alejandro Henry", 1]],
         plays: [
@@ -856,7 +856,7 @@ const TEAMS = {
         halves: null,
         summary: "Masconomet won 7–0 on its home field, the same score as the first meeting in Danvers.",
         scorers: [], assists: [],
-        notes: ["Second meeting — Masconomet also won 7–0 on Sept. 21"],
+        notes: ["Second meeting: Masconomet also won 7–0 on Sept. 21"],
         sources: [{ label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/match/danvers-vs-masconomet-regional-boxford/10-21-2026/?c=72a09f70-101c-453e-998a-ab39c39bedac" }] },
       { id: 16, date: "2026-10-26T16:00", opponent: "Peabody", mascot: "Tanners", home: false, league: true, site: "Peabody Veterans Memorial HS, Peabody",
         result: "T", us: 0, them: 0,
@@ -865,7 +865,7 @@ const TEAMS = {
         scorers: [], assists: [],
         shutout: ["Drew Maioli"],
         replay: BOYS_REPLAY + "QnJvYWRjYXN0NDMxMzIyNA%3D%3D",
-        notes: ["Second meeting — Peabody won 3–0 on Sept. 28"],
+        notes: ["Second meeting: Peabody won 3–0 on Sept. 28"],
         sources: [
           { label: "Livestream on Hudl", url: BOYS_REPLAY + "QnJvYWRjYXN0NDMxMzIyNA%3D%3D" },
           { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/soccer/match/danvers-vs-peabody-veterans-memorial/10-26-2026/?c=8e9d8f0b-8683-43f8-aee6-928d7f9c9b7f" }
@@ -875,7 +875,7 @@ const TEAMS = {
         halves: null,
         summary: "Gloucester shut out the Falcons 2–0 at Deering Stadium to sweep the season series, 12 days after a 2–1 win in Gloucester.",
         scorers: [], assists: [],
-        notes: ["Senior Night", "Second meeting — Gloucester won 2–1 on Oct. 16"],
+        notes: ["Senior Night", "Second meeting: Gloucester won 2–1 on Oct. 16"],
         replay: "https://www.youtube.com/watch?v=yahxjiD2MwU", replayBy: "DCAT (YouTube)",
         sources: [
           { label: "MaxPreps recap", url: "https://www.maxpreps.com/news/pd3lzQPSx0y9xV9rrXQEww/soccer-recap-gloucester-blanks-danvers.htm" },
@@ -926,7 +926,7 @@ const TEAMS = {
        HISTORY — from the school's athletics page and the Danvers Boys
        Soccer Record Book.
        ----------------------------------------------------------------- */
-    historyIntro: "Sixteen conference titles, three sectional crowns and more than fifty seasons of Danvers soccer — the teams, the coaches and the players who wore royal blue.",
+    historyIntro: "Sixteen conference titles, three sectional crowns and more than fifty seasons of Danvers soccer: the teams, the coaches and the players who wore royal blue.",
     banners: [
       { year: 2004, label: "Sectional Champions" },
       { year: 2003, label: "Sectional Champions" },
@@ -937,17 +937,17 @@ const TEAMS = {
     historyNote: "Title years follow the school's athletics page; the season notes follow the record book, and the two don't always agree (the record book also credits 2009).",
 
     seasons: [
-      [2025, 8, 8, 3, "Sam Perel", "4th", "Preliminary round — lost 2–1 to Chelsea"],
-      [2024, 9, 8, 3, "Sam Perel", "4th", "Round of 32 — lost 2–0 to Weston"],
+      [2025, 8, 8, 3, "Sam Perel", "4th", "Preliminary round: lost 2–1 to Chelsea"],
+      [2024, 9, 8, 3, "Sam Perel", "4th", "Round of 32: lost 2–0 to Weston"],
       [2023, 4, 12, 2, "Tony Vatousios", "5th", ""],
       [2022, 3, 14, 1, "Tony Vatousios", "5th", ""],
       [2021, 6, 7, 5, "Tony Vatousios", "3rd", ""],
       [2020, 2, 6, 1, "Michael Chase", "", ""],
       [2019, 3, 11, 4, "Michael Chase", "5th", ""],
       [2018, 6, 9, 3, "Pawel Brzykcy", "4th", ""],
-      [2017, 12, 4, 4, "Pawel Brzykcy", "", "D2 North quarterfinals — lost 2–1 to Masconomet"],
-      [2016, 17, 2, 1, "Pawel Brzykcy", "NEC Champions", "D2 North semifinals — lost 2–1 to Beverly in OT"],
-      [2015, 11, 3, 5, "Michael Chase", "2nd", "First round — lost 2–0 to Masconomet"],
+      [2017, 12, 4, 4, "Pawel Brzykcy", "", "D2 North quarterfinals: lost 2–1 to Masconomet"],
+      [2016, 17, 2, 1, "Pawel Brzykcy", "NEC Champions", "D2 North semifinals: lost 2–1 to Beverly in OT"],
+      [2015, 11, 3, 5, "Michael Chase", "2nd", "First round: lost 2–0 to Masconomet"],
       [2014, 8, 8, 2, "Michael Chase", "NEC Champions", "First round"],
       [2013, 12, 3, 6, "Michael Chase", "NEC Champions", ""],
       [2012, 15, 4, 1, "Michael Chase", "NEC Champions", ""],

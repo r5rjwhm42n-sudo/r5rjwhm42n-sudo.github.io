@@ -116,7 +116,7 @@ const SCHEDULE = [
   { id: 106, game: "ssbu", week: 6, date: "2026-10-28T15:30", opponent: "Burlington", result: "W", us: 7, them: 5 },
   { id: 107, game: "ssbu", week: 7, date: "2026-11-04T15:30", opponent: null, result: null },
   { id: 108, game: "ssbu", week: 8, date: "2026-11-11T15:30", opponent: null, result: null,
-    notes: ["Veterans Day — the league does not move holiday matches on its own, so the coaches agree on a new time"] },
+    notes: ["Veterans Day: the league does not move holiday matches on its own, so the coaches agree on a new time"] },
 
   /* Rocket League — Thursdays */
   { id: 201, game: "rl", week: 1, date: "2026-09-24T15:30", opponent: "Tewksbury Memorial", result: "W", us: 3, them: 0 },
@@ -133,7 +133,7 @@ const SCHEDULE = [
    Fall 2026 high school calendar; the MSAA sets its own bracket sizes. */
 const POSTSEASON = [
   { when: "Nov. 9", text: "Last week of the regular season. Seven matches decide who moves on." },
-  { when: "Nov. 16–17", text: "Playoffs open — Smash brackets on Monday, Rocket League and Mario Kart on Tuesday. A team that forfeits three regular-season matches is not eligible." },
+  { when: "Nov. 16–17", text: "Playoffs open: Smash brackets on Monday, Rocket League and Mario Kart on Tuesday. A team that forfeits three regular-season matches is not eligible." },
   { when: "Nov. 23–27", text: "Thanksgiving week. No matches." },
   { when: "Nov. 30 – Dec. 4", text: "Later playoff rounds, down to the final two in each game." },
   { when: "Dec. 9–10", text: "Championship week: Smash on Wednesday, Rocket League and Mario Kart on Thursday." }

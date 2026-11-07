@@ -284,7 +284,7 @@ const SCHEDULE = [
     scorers: [], assists: [],
     saves: [["Eva Selaya-Mendez", 7]],
     standouts: ["Olivia Henry", "Rylee Sheppard", "Kyla Moroney"],
-    notes: ["Second meeting in nine days — Gloucester also won 5–2 on Oct. 1", "Gloucester improved to 10–0 and qualified for the Division 3 tournament", "Gloucester goalkeeper Aleena Brown made eight saves"],
+    notes: ["Second meeting in nine days: Gloucester also won 5–2 on Oct. 1", "Gloucester improved to 10–0 and qualified for the Division 3 tournament", "Gloucester goalkeeper Aleena Brown made eight saves"],
     video: HUDL_TEAM + "/watch?b=QnJvYWRjYXN0NDU5NTcyOA%3D%3D",
     sources: [
       { label: "Salem News roundups, Oct. 9 and Oct. 11", url: null },
@@ -316,7 +316,7 @@ const SCHEDULE = [
     assists: [["Kyla Moroney", 1], ["Olivia Henry", 1]],
     saves: [["Eva Selaya-Mendez", 3], ["Ellie Barnes", 4]],
     standouts: ["Lia Chiarenza"],
-    notes: ["Selaya-Mendez made 3 saves on 6 shots and Barnes 4 saves on 4 shots", "Second meeting — Danvers won 4–2 at Swampscott on Oct. 2"],
+    notes: ["Selaya-Mendez made 3 saves on 6 shots and Barnes 4 saves on 4 shots", "Second meeting: Danvers won 4–2 at Swampscott on Oct. 2"],
     sources: [
       { label: "Full-game replay on Swampscott Big Blue Athletics (YouTube)", url: "https://www.youtube.com/watch?v=T4iu4bF6mT4" },
       { label: "Salem News roundup, Oct. 15", url: null },
@@ -343,7 +343,7 @@ const SCHEDULE = [
     quarters: null,
     summary: "The Falcons scored six times under the lights at Serino Field to sweep the season series with Saugus, getting back above .500 overall and to .500 in the conference. Freshman Zoie Abell had a hat trick, and Kyla Moroney scored twice and set up two more.",
     scorers: [["Zoie Abell", 3], ["Kyla Moroney", 2]], assists: [["Kyla Moroney", 2]],
-    notes: ["Second meeting — Danvers won 2–1 at home on Sept. 17", "Saugus' Senior Night"],
+    notes: ["Second meeting: Danvers won 2–1 at home on Sept. 17", "Saugus' Senior Night"],
     sources: [
       { label: "Globe Schools Insider, Oct. 21 (stat leaders)", url: "https://www.bostonglobe.com/2026/10/21/sports/globe-schools-insider-takeaways-highlights/" },
       { label: "Full-game replay on Saugus TV (YouTube)", url: "https://www.youtube.com/watch?v=gyVKz-9KcqY" },
@@ -368,7 +368,7 @@ const SCHEDULE = [
       { when: "3rd · 5:00 left", play: "Bishop Fenwick goal", score: "1–1" },
       { when: "4th · 0:17 left", play: "Reese Robillard (Bishop Fenwick)", score: "1–2" }
     ],
-    notes: ["Second meeting — the teams tied 2–2 on Sept. 29", "Fenwick improved to 11–3–3"],
+    notes: ["Second meeting: the teams tied 2–2 on Sept. 29", "Fenwick improved to 11–3–3"],
     video: HUDL_TEAM + "/watch?b=QnJvYWRjYXN0NDcwMjg5Mw%3D%3D",
     sources: [
       { label: "Salem News roundup, Oct. 27", url: "https://www.salemnews.com/sports/tuesdays-area-roundup-robillards-last-second-tally-gives-fenwick-field-hockey-dramatic-win/article_2afefd52-4443-4517-874b-31d073f65529.html" },
@@ -380,7 +380,7 @@ const SCHEDULE = [
     quarters: null,
     summary: "The Falcons closed the regular season with a 3–1 win at Boxford Commons, turning the score around on Masconomet after the Chieftains won by the same margin at Deering Stadium on Oct. 6. The win evened Danvers at 8–8–2.",
     scorers: [], assists: [["Kyla Moroney", 2]],
-    notes: ["Regular-season finale", "Second meeting — Masconomet won 3–1 on Oct. 6", "Masconomet fell to 9–7–2"],
+    notes: ["Regular-season finale", "Second meeting: Masconomet won 3–1 on Oct. 6", "Masconomet fell to 9–7–2"],
     sources: [
       { label: "Globe Schools Insider, Oct. 31 (stat leaders)", url: "https://www.bostonglobe.com/2026/10/31/sports/globe-schools-insider-takeaways-highlights/" },
       { label: "MaxPreps box score", url: MP + "danvers-vs-masconomet-regional-boxford/10-30-2026/?c=9392ca63-588e-406f-bc6b-698388ee4941" },
@@ -395,7 +395,7 @@ const SCHEDULE = [
     result: "L", us: 0, them: 1,
     halftime: [0, 0],
     summary: "The Falcons held No. 8 East Longmeadow scoreless into the final minutes on the road, but the Spartans scored with just under three minutes left to win 1–0 and end Danvers' season in the Division 3 Round of 32.",
-    notes: ["MIAA Division 3 Round of 32: No. 25 Danvers at No. 8 East Longmeadow", "Scoreless through three quarters", "Season-ending loss — Danvers finishes 8–9–2", "East Longmeadow moves on to host No. 9 Medfield in the Round of 16"],
+    notes: ["MIAA Division 3 Round of 32: No. 25 Danvers at No. 8 East Longmeadow", "Scoreless through three quarters", "Season-ending loss: Danvers finishes 8–9–2", "East Longmeadow moves on to host No. 9 Medfield in the Round of 16"],
     sources: [
       { label: "MIAA Division 3 bracket", url: "https://www.miaa.net/miaa-field-hockey-2026-division-3-state-tournament" },
       { label: "Danvers Falcons live updates on X", url: "https://x.com/WeAreDanvers/status/2118497370292080759" },
@@ -466,7 +466,7 @@ const POSITION_GROUPS = {
    HISTORY — from the school's athletics page and the Danvers Field
    Hockey Record Book (the Google Sheet linked from that page).
    --------------------------------------------------------------------- */
-const HISTORY_INTRO = "Thirty conference titles, three sectional crowns and an 87-game league winning streak — the seasons, coaches and players behind one of the Northeastern Conference's proudest programs.";
+const HISTORY_INTRO = "Thirty conference titles, three sectional crowns and an 87-game league winning streak: the seasons, coaches and players behind one of the Northeastern Conference's proudest programs.";
 
 const BANNERS = [
   { year: 2022, label: "MIAA Division 2 Final Four" },
@@ -513,7 +513,7 @@ const SEASONS = [
   [2001, 10, 2, 3, "Barb Damon", "2nd", ""],
   [2000, 14, 0, 2, "Barb Damon", "", "Second round"],
   [1999, 7, 3, 4, "Barb Damon", "", "Quarterfinals"],
-  [1998, null, null, null, "Barb Damon", "", "Semifinals", "Unbeaten — exact record not on file"],
+  [1998, null, null, null, "Barb Damon", "", "Semifinals", "Unbeaten: exact record not on file"],
   [1997, 11, 0, 1, "Barb Damon", "", "Second round"],
   [1996, 11, 0, 1, "Barb Damon", "", "North sectional runner-up"],
   [1995, 9, 5, 0, "Barb Damon", "", ""],

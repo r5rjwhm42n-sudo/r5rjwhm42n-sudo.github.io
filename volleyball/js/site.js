@@ -167,7 +167,7 @@
     let body = "";
     if (g.summary) body += `<h4>Recap</h4><p>${esc(g.summary)}</p>`;
     if (g.cancelled) body += `<h4>Cancelled</h4><p>Originally scheduled for ${dateLong(g.date)} at ${timeOf(g.date)}, ${esc(g.site)}.</p>`;
-    else if (g.scrimmage && !g.result) body += `<h4>Preseason</h4><p>${dateLong(g.date)} · ${timeOf(g.date)}<br>${esc(g.site)}</p><p>Scrimmage — no result is kept.</p>`;
+    else if (g.scrimmage && !g.result) body += `<h4>Preseason</h4><p>${dateLong(g.date)} · ${timeOf(g.date)}<br>${esc(g.site)}</p><p>Scrimmage, so no result is kept.</p>`;
     else if (!g.result) body += `<h4>Match Time</h4><p>${esc([dayOf(g, dateLong), startOf(g)].filter(Boolean).join(" · "))}<br>${esc(g.site)}</p>`;
     if (g.result && !g.scrimmage) {
       const cells = (i) => g.sets.map((set) => `<td class="${set[i] > set[1 - i] ? "w" : ""}">${set[i]}</td>`).join("");

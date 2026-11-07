@@ -320,7 +320,7 @@
     }
 
     dialog.dfs { width: min(680px, calc(100vw - 24px)); max-width: none; max-height: none; margin: max(10vh, 24px) auto auto; padding: 0; border: 0; background: transparent; overflow: visible; color: #131a2b; }
-    dialog.dfs::backdrop { background: rgba(5,14,40,.86); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+    dialog.dfs::backdrop { background: rgba(5,14,40,.86); }
     dialog.dfs[open] .dfs-panel { animation: dfs-in .28s cubic-bezier(.2,.9,.25,1); }
     dialog.dfs[open]::backdrop { animation: dfs-fade .25s ease; }
     @keyframes dfs-in { from { opacity: 0; transform: translateY(-14px) scale(.97); } }

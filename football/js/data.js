@@ -480,9 +480,9 @@ const TITLES = [
    2004 on), nec = conference finish, post = MIAA tournament. Title years come
    from TITLES. w: null = no team that year. */
 const SEASONS = [
-  { year: 2025, w: 6, l: 5, t: 0, lw: 2, ll: 2, coach: "Ryan Nolan", nec: "2nd", post: "Division 4 Round of 16 — lost 36–20 to Ashland" },
+  { year: 2025, w: 6, l: 5, t: 0, lw: 2, ll: 2, coach: "Ryan Nolan", nec: "2nd", post: "Division 4 Round of 16: lost 36–20 to Ashland" },
   { year: 2024, w: 5, l: 6, t: 0, lw: 3, ll: 2, coach: "Ryan Nolan", nec: "3rd", post: "Lost 27–0 to Foxborough" },
-  { year: 2023, w: 8, l: 4, t: 0, lw: 3, ll: 1, coach: "Ryan Nolan", nec: "2nd", post: "Division 5 Final Four — went 2–1, lost 27–24 to Hanover" },
+  { year: 2023, w: 8, l: 4, t: 0, lw: 3, ll: 1, coach: "Ryan Nolan", nec: "2nd", post: "Division 5 Final Four: went 2–1, lost 27–24 to Hanover" },
   { year: 2022, w: 5, l: 6, t: 0, lw: 2, ll: 2, coach: "Ryan Nolan" },
   { year: 2021, w: 5, l: 6, t: 0, lw: 0, ll: 4, coach: "Ryan Nolan", post: "Went 1–1" },
   { year: 2020, w: 3, l: 4, t: 0, lw: 2, ll: 3, coach: "Ryan Nolan", note: "Played in spring 2021" },
@@ -501,7 +501,7 @@ const SEASONS = [
   { year: 2007, w: 0, l: 11, t: 0, lw: 0, ll: 5, coach: "John Sullivan" },
   { year: 2006, w: 3, l: 7, t: 0, lw: 2, ll: 6, coach: "Mike Stellato" },
   { year: 2005, w: 8, l: 3, t: 0, lw: 5, ll: 0, coach: "John Sullivan" },
-  { year: 2004, w: 8, l: 3, t: 0, lw: 8, ll: 1, coach: "John Sullivan", nec: "The first title in 63 years", post: "First round — the program's first playoff game" },
+  { year: 2004, w: 8, l: 3, t: 0, lw: 8, ll: 1, coach: "John Sullivan", nec: "The first title in 63 years", post: "First round: the program's first playoff game" },
   { year: 2003, w: 7, l: 3, t: 0, coach: "John Sullivan", nec: "3rd", post: "Did not qualify" },
   { year: 2002, w: 6, l: 4, t: 0, coach: "John Sullivan", post: "Did not qualify" },
   { year: 2001, w: 5, l: 5, t: 0, coach: "John Sullivan", post: "Did not qualify" },
@@ -671,7 +671,7 @@ const MILESTONES = [
   { year: "1902", text: "The earliest season in the record book: 5–1–1 under coach Edward Kearns." },
   { year: "1932", text: "Charlie Vye's Falcons go 9–0–1 and win the Essex County League." },
   { year: "1941", text: "Danvers wins its first Northeastern Conference championship." },
-  { year: "1964", text: "Danvers and Gloucester begin meeting on Thanksgiving morning — a tradition that continues today." },
+  { year: "1964", text: "Danvers and Gloucester begin meeting on Thanksgiving morning: a tradition that continues today." },
   { year: "1969", text: "The Falcons go 8–1, their best record in 28 years, and set a then-school record with 269 points." },
   { year: "2004–05", text: "Back-to-back NEC championships." },
   { year: "2019", text: "A 9–2 season and a perfect 4–0 league record deliver another NEC title." },
@@ -690,7 +690,7 @@ const LEGENDS = [
     bio: "A bruising runner who broke the school's single-season rushing and scoring records and led the area in scoring, before playing football and baseball at Rhode Island.",
     tags: ["School rushing record", "URI"] },
   { name: "Duke St. Pierre", pos: "Quarterback / Safety", era: "Early 1980s",
-    bio: "A two-time All-Northeastern Conference quarterback who threw for more than 2,700 yards and 33 touchdowns in his Danvers career — and led the team in rushing, too.",
+    bio: "A two-time All-Northeastern Conference quarterback who threw for more than 2,700 yards and 33 touchdowns in his Danvers career, and led the team in rushing, too.",
     tags: ["2× All-NEC QB", "33 TD passes"] },
   { name: "Brian Forster", pos: "Tight End", era: "Early 1980s",
     bio: "Caught 22 passes for 600 yards and 10 touchdowns as a senior, then helped lead Rhode Island to two NCAA Division I-AA playoff appearances.",

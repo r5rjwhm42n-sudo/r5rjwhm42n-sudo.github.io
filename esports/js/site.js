@@ -271,7 +271,7 @@
         <button class="card scoreboard" data-game="${lastG.id}" aria-label="Last match details">
           <div class="sb-top"><span>Final</span><span>${esc(g.short)} · ${esc(stage(lastG))}</span></div>
           ${row("Danvers", lastG.us, r === "W", true)}${row(opp || "Opponent", lastG.them, r === "L", false)}
-          <div class="sb-foot"><span>${esc(detail)}</span><b>Details</b></div>
+          <div class="sb-foot"><span>${esc(detail)}</span><b>Match details</b></div>
         </button>`;
     } else {
       $("#hero-story").innerHTML = `

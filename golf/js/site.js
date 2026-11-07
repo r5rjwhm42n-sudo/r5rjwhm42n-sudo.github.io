@@ -331,7 +331,7 @@
 
     /* Team: share of the 72 points in every NEC match */
     $("#scorecard").innerHTML = mp.length ? `
-      <p class="chart-note">Bar = Danvers' share of the 72 points. The line in the middle is 36 — past it is a win.</p>
+      <p class="chart-note">Bar = Danvers' share of the 72 points. The line in the middle is 36. Past it is a win.</p>
       ${mp.map((g) => `
         <button class="bar-row clickable" data-game="${g.id}">
           <div class="nm">${esc(title(g))}<small>${fmt(g.date, { month: "short", day: "numeric" })} · ${g.home ? "Home" : "Away"}</small></div>

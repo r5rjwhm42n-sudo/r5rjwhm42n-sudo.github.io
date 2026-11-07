@@ -6,6 +6,14 @@
    ===================================================================== */
 (function () {
   const ROOT = new URL("..", document.currentScript.src).href;   // the site root, from /js/common.js
+  /* A Privacy link at the end of each team site's footer links */
+  const addPrivacy = () => {
+    const row = document.querySelector(".site-footer .links");
+    if (!row || row.querySelector(".privacy-link")) return;
+    row.insertAdjacentHTML("beforeend", `<a class="privacy-link" href="${ROOT}privacy.html">Privacy</a>`);
+  };
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", addPrivacy); else addPrivacy();
+
   if ("serviceWorker" in navigator && /^https?:$/.test(location.protocol)) {
     addEventListener("load", () => navigator.serviceWorker.register("/sw.js").catch(() => {}));
   }

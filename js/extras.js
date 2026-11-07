@@ -355,12 +355,17 @@
      credit line under the Photos grid on the Media page
      ================================================================= */
   const photos = () => (SPORT === "soccer" ? TEAMS[squad()].photos : typeof PHOTOS !== "undefined" ? PHOTOS : []) || [];
+  /* team photos from the hub, for sports with no action shots yet */
+  const TEAM_PHOTO = { golf: "golf", "cross-country": "boys-xc", football: "football", "field-hockey": "field-hockey", volleyball: "volleyball" };
   function actionPhotos() {
     const list = photos();
-    const hero = document.querySelector(".hero.hero-home");
-    if (hero && list[0]) {
-      hero.style.setProperty("--shot", `url("${list[0].src}")`);
+    const hero = document.querySelector(".hero");
+    const fallback = SPORT === "soccer" ? `${squad()}-soccer` : TEAM_PHOTO[SPORT];
+    const src = list[0]?.src || (fallback && `../images/teams/${fallback}.jpg`);
+    if (hero && src) {
+      hero.style.setProperty("--shot", `url("${src}")`);
       hero.classList.add("has-shot");
+      if (!list[0]) hero.classList.add("team-shot");
     }
     const grid = document.getElementById("photos");
     const credits = [...new Set(list.map((p) => p.credit).filter(Boolean))];
@@ -413,7 +418,7 @@
           ${watch ? `<a class="dfa-btn solid" href="${watch}" target="_blank" rel="noopener">${PLAY_ICON}${live ? "Watch live" : "Where to watch"}</a>` : ""}
           ${SPORT !== "esports" ? `<a class="dfa-btn" href="${DFA.mapsUrl(g)}" target="_blank" rel="noopener">${PIN_ICON}Directions</a>` : ""}
           ${tickets ? `<a class="dfa-btn" href="${esc(tickets.url)}" target="_blank" rel="noopener">${TICKET_ICON}Tickets</a>` : ""}
-          <button class="dfa-btn" ${SPORT === "cross-country" ? "data-meet" : "data-game"}="${g.id}">Details</button>
+          <button class="dfa-btn" ${SPORT === "cross-country" ? "data-meet" : "data-game"}="${g.id}">Game details</button>
         </div>
       </div>`;
     if (!bar) {
@@ -466,8 +471,9 @@
     .dfa-btn.solid:hover { background: #e6edfc; }
     .dfa-btn.ink { border-color: var(--royal); color: var(--royal); }
     .dfa-btn.ink:hover { background: #eef2fb; }
-    .hero.has-shot { background: var(--shot) center 32% / cover, #18479f; background-blend-mode: multiply; }   /* the photo, toned team blue */
-    @media (max-width: 720px) { .hero.has-shot { background-position: center 30%; } }
+    .hero.has-shot { background: var(--shot) right 32% / cover no-repeat, #0b1f4d; }   /* full-color photo; the navy text panel is drawn in premium.css */
+    .hero.team-shot { background-position: right 45%; }
+    @media (max-width: 720px) { .hero.has-shot { background-size: 100% auto; background-position: center top; } }
     .dfa-credit { margin: 12px 0 0; font-size: 13.5px; color: var(--muted); }
     .dfa-credit a { color: var(--royal); font-weight: 600; }
     .game .opp .opp-badge { width: 38px; height: 38px; font-size: 15px; margin: -6px 10px 0 0; }
@@ -488,7 +494,7 @@
     .dfa-gd .dfa-wx-icon { color: var(--royal); }
 
     dialog.dfa-sheet { border: 0; padding: 0; background: transparent; max-width: 100vw; max-height: 100vh; overflow: visible; }
-    dialog.dfa-sheet::backdrop { background: rgba(5,14,40,.84); backdrop-filter: blur(6px); }
+    dialog.dfa-sheet::backdrop { background: rgba(5,14,40,.84); }
     .dfa-sheet figure { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 18px; padding: 16px; animation: dfa-rise .4s cubic-bezier(.2,.8,.2,1); }
     .dfa-sheet img { display: block; height: min(70vh, 860px); max-width: calc(100vw - 32px); object-fit: contain; border-radius: 4px; box-shadow: 0 30px 80px rgba(0,0,0,.55); }
     .dfa-sheet .row { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }

@@ -161,7 +161,7 @@
     let body = "";
     if (g.summary) body += `<h4>Recap</h4><p>${esc(g.summary)}</p>`;
     if (g.cancelled) body += `<h4>Cancelled</h4><p>Originally scheduled for ${dateLong(g.date)} at ${timeOf(g.date)}, ${esc(g.site)}.</p>`;
-    else if (g.scrimmage && !g.result) body += `<h4>Preseason</h4><p>${dateLong(g.date)} · ${timeOf(g.date)}<br>${esc(g.site)}</p><p>Scrimmage — no score is kept.</p>`;
+    else if (g.scrimmage && !g.result) body += `<h4>Preseason</h4><p>${dateLong(g.date)} · ${timeOf(g.date)}<br>${esc(g.site)}</p><p>Scrimmage, so no score is kept.</p>`;
     else if (!g.result) body += `<h4>Game Time</h4><p>${esc([dayOf(g, dateLong), startOf(g)].filter(Boolean).join(" · "))}<br>${esc(g.site)}</p>`;
     if (g.result && !g.scrimmage) {
       body += g.quarters

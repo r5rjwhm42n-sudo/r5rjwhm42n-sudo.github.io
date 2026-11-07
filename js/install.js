@@ -35,7 +35,7 @@
     if (ANDROID) return [[ICONS.dots, "Open the browser <b>menu</b>", "The three dots in the corner."],
                          [ICONS.add, "Tap <b>Install app</b> or <b>Add to Home screen</b>", "The Falcons icon joins your apps."]];
     if (FIREFOX) return [[ICONS.dock, "Open this page in <b>Chrome</b>, <b>Edge</b> or <b>Safari</b>", "Firefox on computers can't install sites as apps."],
-                         [ICONS.add, "Then click <b>Get the app</b> again", "It installs in one click from there."]];
+                         [ICONS.add, "Then click <b>Add to home screen</b> again", "It installs in one click from there."]];
     return [[ICONS.dock, "Click the <b>install</b> icon", "At the right end of the address bar."],
             [ICONS.add, "Choose <b>Install</b>", "The Falcons app opens in its own window."]];
   }
@@ -57,7 +57,7 @@
         <div class="app-copy">
           <h2>Put the Falcons on your ${IOS || ANDROID ? "home screen" : MAC_SAFARI ? "Dock" : "desktop"}</h2>
           <div class="eyebrow">${IOS ? "iPhone & iPad" : MAC_SAFARI ? "Mac" : ANDROID ? "Android" : "Your computer"}</div>
-          <p>Every score, schedule and game day, one tap away. It opens like an app and keeps working with a weak signal in the stands.</p>
+          <p>Scores, schedules and game-day details right from your home screen. It opens like an app and still works with a weak signal in the stands.</p>
           <ol class="app-steps">${steps().map(([ic, h, d], i) => `<li style="--i:${i}"><span class="n">${i + 1}</span><span class="ic">${ic}</span><span><b>${h}</b><small>${d}</small></span></li>`).join("")}</ol>
         </div>
       </div>`;
@@ -72,7 +72,7 @@
   const btn = document.createElement("button");
   btn.type = "button";
   btn.className = "btn btn-ghost btn-app";
-  btn.innerHTML = `${ICONS.phone}Get the app`;
+  btn.innerHTML = `Add to home screen`;
   btn.addEventListener("click", async () => {
     if (deferred) {
       deferred.prompt();

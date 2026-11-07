@@ -69,7 +69,7 @@ const MEETS = [
   {
     id: 1, date: "2026-09-09T16:00", opponent: "Beverly", mascot: "Panthers", short: "BEV",
     home: true, league: true, site: "Danvers High School", distance: "2.9 mi",
-    summary: "Opening day against a Northeastern Conference rival. Marcus Morais ran 17:54 for second in the boys race — three seconds behind the winner — and Grace Conklin (19:30) and Madyson Danish (20:47) went 2–3 in the girls race, but Beverly's depth took both meets.",
+    summary: "Opening day against a Northeastern Conference rival. Marcus Morais ran 17:54 for second in the boys race, three seconds behind the winner, and Grace Conklin (19:30) and Madyson Danish (20:47) went 2–3 in the girls race, but Beverly's depth took both meets.",
     boys: {
       result: "L", us: 31, them: 24,
       winner: { name: "Jackson Oliver", school: "Beverly", time: "17:51" },
@@ -181,7 +181,7 @@ const MEETS = [
     id: 5, date: "2026-10-03T17:00", name: "MSTCA Bay State Invitational", short: "BAY",
     home: false, league: false, site: "Wrentham Developmental Center", distance: "5K",
     headline: "Conklin runs 19:46 under the lights at Bay State",
-    summary: "Under the lights at the MSTCA's Twilight Meet, Grace Conklin ran 19:46.7 to finish 15th in the Varsity A race — the fifth-fastest 5K by a Danvers girl on athletic.net's all-time list. Marcus Morais led the boys in a personal-best 18:00.4, one of four Falcon boys to set a 5K best.",
+    summary: "Under the lights at the MSTCA's Twilight Meet, Grace Conklin ran 19:46.7 to finish 15th in the Varsity A race: the fifth-fastest 5K by a Danvers girl on athletic.net's all-time list. Marcus Morais led the boys in a personal-best 18:00.4, one of four Falcon boys to set a 5K best.",
     boys: {
       race: "Varsity A 5K · 135 finishers",
       finishers: [
@@ -197,7 +197,7 @@ const MEETS = [
         f("Emily Sullivan", 77, "22:35.8"), f("Paige Sherman", 87, "23:38.5")
       ]
     },
-    notes: ["Added to the schedule after the Ocean State Invitational was cancelled", "No team scores — Danvers ran four in each varsity race", "Three freshmen and sophomores ran the 3,000-meter novice race"],
+    notes: ["Added to the schedule after the Ocean State Invitational was cancelled", "No team scores: Danvers ran four in each varsity race", "Three freshmen and sophomores ran the 3,000-meter novice race"],
     sources: [{ label: "Results on athletic.net", url: "https://www.athletic.net/CrossCountry/meet/278830/results" }]
   },
   {
@@ -415,7 +415,7 @@ const MILESTONES = [
   { year: "1996–98", text: "Three straight NEC titles for the girls." },
   { year: "2000", text: "The girls add a fourth conference crown in five years." },
   { year: "2008", text: "Another NEC championship for the girls." },
-  { year: "2017–18", text: "The girls go back-to-back — and in 2018 the boys join them for a Danvers sweep of the NEC." },
+  { year: "2017–18", text: "The girls go back-to-back, and in 2018 the boys join them for a Danvers sweep of the NEC." },
   { year: "2021", text: "The boys win the NEC again." },
   { year: "2023", text: "The boys win the MIAA 2B divisional meet, then the MIAA Division II state championship." },
   { year: "2024", text: "Will Conklin is named NEC Boys Cross Country Runner of the Year and runs 15:53.1, the fastest 5K on the program's all-time list." },

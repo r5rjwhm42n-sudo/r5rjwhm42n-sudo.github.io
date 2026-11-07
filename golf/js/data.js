@@ -69,7 +69,7 @@ const SCHEDULE = [
     format: "stableford", result: "L", us: 170, them: 174,
     summary: "A four-point loss on a rainy day at Gannon in the first non-league match of the year, less than 24 hours after the opener. Ben Campbell led the Falcons with 28 points and Austin Patuto had 27.",
     points: [["Ben Campbell", 28], ["Austin Patuto", 27]],
-    notes: ["Stableford scoring — the higher team total wins"],
+    notes: ["Stableford scoring: the higher team total wins"],
     sources: [{ label: "DanversHighGolf on X", url: "https://x.com/GolfDanversHigh/status/2094886028473512258" }] },
 
   { id: 3, date: "2026-09-02T15:00", opponent: "St. John's Prep", mascot: "Eagles", home: false, league: false, site: "Turner Hill, Ipswich",
@@ -77,7 +77,7 @@ const SCHEDULE = [
     summary: "The Falcons' crosstown rival won a stroke-play match at Turner Hill. Tommy Surette led Danvers with a 39.",
     rounds: [["Tommy Surette", 39]],
     opp: ["Seamus O'Holleran 36", "AJ Bodnar 37", "Zach Enners 37", "LB Manning 38"],
-    notes: ["Stroke play — the lower team total wins"],
+    notes: ["Stroke play: the lower team total wins"],
     sources: [{ label: "Salem News roundup, Sept. 2", url: SN + "wednesdays-area-roundup-prep-golfers-stay-unbeaten-endicott-womens-soccer-wins-opener/article_335a3e2c-6bbf-4dea-81f3-af9ee1aa5442.html" }] },
 
   { id: 4, date: "2026-09-03T15:00", opponent: "Salem", mascot: "Witches", home: false, league: true, site: "Olde Salem Greens, Salem",
@@ -94,14 +94,14 @@ const SCHEDULE = [
     format: "stableford", result: "L", us: 149, them: 155,
     summary: "A six-point loss at Rockport closed out a stretch of five road matches in five days.",
     points: [],
-    notes: ["Stableford scoring — the higher team total wins"],
+    notes: ["Stableford scoring: the higher team total wins"],
     sources: [{ label: "Rockport Athletics final-score post on X", url: "https://x.com/RKPT_Athletics/status/2096075581871857697" }] },
 
   { id: 101, date: "2026-09-07T14:50", opponent: "Bishop Fenwick", mascot: "Crusaders", home: true, league: false, site: HOME,
     format: "stableford", result: "W", us: 174, them: 164,
     summary: "A ten-point win over Bishop Fenwick at Wenham on Labor Day, the first of two wins over the Crusaders in four days.",
     points: [],
-    notes: ["Stableford scoring — the higher team total wins"],
+    notes: ["Stableford scoring: the higher team total wins"],
     sources: [] },
 
   { id: 6, date: "2026-09-09T15:00", opponent: "Masconomet", mascot: "Chieftains", home: true, league: true, site: HOME,
@@ -119,7 +119,7 @@ const SCHEDULE = [
     format: "stableford", result: "W", us: 172, them: 166,
     summary: "Ben Campbell put up 32 points and three teammates were right behind him as Danvers edged Bishop Fenwick by six in a Stableford match.",
     points: [["Ben Campbell", 32], ["Tommy Surette", 28], ["Lucas Silva", 27], ["Anthony Sheehan", 25]],
-    notes: ["Stableford scoring — the higher team total wins"],
+    notes: ["Stableford scoring: the higher team total wins"],
     sources: [
       { label: "Salem News roundup, Sept. 10", url: SN + "thursdays-area-roundup-eagles-take-down-lasalle-on-pitch/article_604f56ae-37a6-4f8b-9345-211d145d25e9.html" },
       { label: "DanversHighGolf on X", url: "https://x.com/GolfDanversHigh/status/2098215042260865503" }
@@ -156,7 +156,7 @@ const SCHEDULE = [
 
   { id: 11, date: "2026-09-23T16:00", opponent: "Peabody", mascot: "Tanners", home: false, league: true, site: "The Meadow at Peabody",
     format: "match", result: "W", us: 57.5, them: 14.5,
-    summary: "Five seniors won big — three of them dropping just half a point — as the Falcons swept the season series with Peabody.",
+    summary: "Five seniors won big: three of them dropping just half a point, as the Falcons swept the season series with Peabody.",
     cards: [["Tommy Surette", 8.5, 0.5], ["Cole Andrews", 8.5, 0.5], ["Ryan Moore", 8.5, 0.5], ["Ben Blum", 8, 1], ["Austin Patuto", 7.5, 1.5]],
     notes: [],
     sources: [{ label: "Salem News roundup, Sept. 23", url: SN + "wednesdays-area-roundup-salem-boys-girls-cross-country-teams-each-win-twice/article_ed9c0566-4030-4ac7-916b-dab7ca2e622e.html" }] },
@@ -214,7 +214,7 @@ const SCHEDULE = [
     cards: [["Lucas Silva", 6, 3], ["Wes Maylor", 5, 4], ["Brady Swanton", 5, 4], ["Anthony Sheehan", 4.5, 4.5]],
     opp: ["Brendan O'Connor 33 (2 under)", "Cooper Wassung 37, won his match", "Jaxon DiBartolomeo won his match"],
     notes: [
-      "Final regular-season match — Danvers finishes 9–8–1, 7–5–1 in the NEC"
+      "Final regular-season match: Danvers finishes 9–8–1, 7–5–1 in the NEC"
     ],
     sources: [{ label: "Salem News roundup, Oct. 12", url: SN + "mondays-area-roundup-oconnor-sparks-masconomet-golfers-to-victory/article_3e1e8437-9990-4635-9963-19a465cf4c27.html" }] },
 
@@ -309,12 +309,12 @@ const MILESTONES = [
   { year: "1980", text: "The first Northeastern Conference golf championship listed in the school's records." },
   { year: "1990–93", text: "Three NEC titles in four seasons: 1990, 1992 and 1993." },
   { year: "2005–06", text: "Back-to-back NEC championships, capped by a sectional title in 2006." },
-  { year: "2008–11", text: "Four straight NEC championships — the longest run in program history." },
+  { year: "2008–11", text: "Four straight NEC championships: the longest run in program history." },
   { year: "2015–18", text: "Four more in a row, with a second sectional title in 2016." },
   { year: "2018", text: "NEC Player of the Year Jared Mscisz shares medalist honors with a 1-under 71 as Danvers wins the Division 2 North tournament with a 305, then finishes second in the state, six shots behind Hopkinton." },
   { year: "2021", text: "Ryan Hayes takes over as head coach." },
   { year: "2023", text: "Bobby Fish goes 10–0–2 in the regular season, is named NEC Player of the Year and finishes 11th at the Division 2 state final." },
-  { year: "2026", text: "A 9–8–1 season and a trip to the last MIAA sectional — from 2027 every fall golf match in Massachusetts switches to stroke play and sectionals give way to divisional championships." }
+  { year: "2026", text: "A 9–8–1 season and a trip to the last MIAA sectional. From 2027, every fall golf match in Massachusetts switches to stroke play and sectionals give way to divisional championships." }
 ];
 
 const LEGENDS = [

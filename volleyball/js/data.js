@@ -415,7 +415,7 @@ const SCHEDULE = [
       "Lila Osborne":       [3, 0, 3, 0, 10, 7, 0, 0, 0],
       "Hannah Tersolo":     [3, 0, 0, 0, 9, 20, 0, 0, 0]
     },
-    notes: ["10th win in a row — the longest streak of the season", "12–2 overall after the win"],
+    notes: ["10th win in a row: the longest streak of the season", "12–2 overall after the win"],
     sources: [
       { label: "Salem News roundup, Oct. 13", url: null },
       { label: "MaxPreps box score", url: MP + "danvers-vs-mystic-valley-regional-malden/10-12-2026/?c=5d640047-ec89-4671-ae4f-bad70885b787" }
@@ -458,7 +458,7 @@ const SCHEDULE = [
       "Emma Coffin":        [1, 0, 0, 0, 0, 0, 0, 0, 0]
     },
     notes: [
-      "Rivalry match — Danvers won the first meeting 3–0 on Sept. 23",
+      "Rivalry match: Danvers won the first meeting 3–0 on Sept. 23",
       "A Morgan's Message match: both teams wore blue ribbons for student-athlete mental health",
       "Sophomore libero Isabelle Maffei was called up from the JV",
       "First back-to-back losses of the season"
@@ -512,7 +512,7 @@ const SCHEDULE = [
       "Hannah Laskin":      [1, 0, 0, 0, 0, 0, 0, 0, 1]
     },
     notes: [
-      "Second meeting — Danvers won 3–1 on Sept. 25",
+      "Second meeting: Danvers won 3–1 on Sept. 25",
       "21 aces as a team"
     ],
     sources: [
@@ -536,7 +536,7 @@ const SCHEDULE = [
       "Lila Osborne":       [3, 0, 2, 0, 6, 14, 0, 0, 0]
     },
     notes: [
-      "Second meeting — Danvers won 3–2 on Sept. 30, so the Falcons swept the season series",
+      "Second meeting: Danvers won 3–2 on Sept. 30, so the Falcons swept the season series",
       "Masconomet fell to 4–11"
     ],
     sources: [
@@ -588,7 +588,7 @@ const SCHEDULE = [
       "Lila Osborne":       [3, 0, 1, 0, 5, 9, 2, 2, 2],
       "Gracie Monteiro":    [3, 1, 0, 0, 1, 0, 8, 3, 0]
     },
-    notes: ["MIAA Division 3 Round of 32: No. 19 Danvers at No. 14 Notre Dame Academy", "Season-ending loss — Danvers finishes 15–6", "Notre Dame moves on to face No. 3 Lynnfield in the Round of 16"],
+    notes: ["MIAA Division 3 Round of 32: No. 19 Danvers at No. 14 Notre Dame Academy", "Season-ending loss: Danvers finishes 15–6", "Notre Dame moves on to face No. 3 Lynnfield in the Round of 16"],
     sources: [
       { label: "MIAA Division 3 bracket", url: "https://www.miaa.net/miaa-fall-volleyball-2026-division-3-state-tournament" },
       { label: "MaxPreps box score", url: MP + "danvers-vs-notre-dame-academy-worcester/11-5-2026/?c=00aaf372-4c6f-480a-b090-e565412ff317" },
@@ -641,7 +641,7 @@ const POSITION_GROUPS = {
    HISTORY — from the school's athletics page and the Danvers Girls
    Volleyball Record Book (the Google Sheet linked from that page).
    --------------------------------------------------------------------- */
-const HISTORY_INTRO = "From 0–16 in the first season on file to a 25–1 run to the state final six years later — the seasons, coaches and players behind six straight Northeastern Conference titles.";
+const HISTORY_INTRO = "From 0–16 in the first season on file to a 25–1 run to the state final six years later: the seasons, coaches and players behind six straight Northeastern Conference titles.";
 
 const BANNERS = [
   { year: 2019, label: "Division 2 State Finalists" },

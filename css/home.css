@@ -436,7 +436,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 /* ---------- Get the app ---------- */
 .btn-app svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .app-sheet { width: min(760px, calc(100vw - 24px)); max-width: none; padding: 0; border: 0; border-radius: 6px; overflow: hidden; color: var(--ink); background: var(--white); box-shadow: 0 30px 90px rgba(3, 10, 30, .6); }
-.app-sheet::backdrop { background: rgba(5, 14, 40, .82); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+.app-sheet::backdrop { background: rgba(5, 14, 40, .82); }
 .app-sheet[open] { animation: app-in .4s cubic-bezier(.2, .9, .25, 1); }
 @keyframes app-in { from { opacity: 0; transform: translateY(30px) scale(.97); } }
 .app-x { position: absolute; top: 12px; right: 12px; z-index: 2; width: 38px; height: 38px; border-radius: 50%; border: 0; background: rgba(255, 255, 255, .9); color: var(--navy); font-size: 26px; line-height: 1; box-shadow: 0 2px 8px rgba(0, 0, 0, .2); }
