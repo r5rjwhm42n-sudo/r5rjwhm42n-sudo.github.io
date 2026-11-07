@@ -366,6 +366,8 @@
       hero.style.setProperty("--shot", `url("${src}")`);
       hero.classList.add("has-shot");
       if (!list[0]) hero.classList.add("team-shot");
+      /* the three stripes from the uniform, along the edge of the navy panel */
+      if (!hero.querySelector(".stripes")) hero.insertAdjacentHTML("afterbegin", '<span class="stripes" aria-hidden="true"><i></i><i></i><i></i></span>');
     }
     const grid = document.getElementById("photos");
     const credits = [...new Set(list.map((p) => p.credit).filter(Boolean))];
