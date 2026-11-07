@@ -62,9 +62,11 @@ const TEAM = {
       { seeds: [6, 27], date: "2026-11-09T17:00", site: "Gloucester High School, Gloucester" },
       { seeds: [11, 22], score: [2, 1], date: "2026-11-05T17:00", site: "Falmouth High School, Falmouth" },
       { seeds: [3, 30], date: "2026-11-07T16:00", site: "Dover-Sherborn High School, Dover" },
-      { seeds: [1, 33], date: "2026-11-08T17:00", site: "Sandwich High School, Sandwich" },
-      { seeds: [2, 31], date: "2026-11-06T18:30", site: "Uxbridge High School, Uxbridge" },
-      { seeds: [8, 9], date: "2026-11-09T17:00", site: "East Longmeadow High School, East Longmeadow" }
+      { seeds: [1, 33], date: "2026-11-08T16:30", site: "Sandwich High School, Sandwich" },
+      { seeds: [2, 31], score: [6, 0], date: "2026-11-06T18:30", site: "Uxbridge High School, Uxbridge" },
+      { seeds: [8, 9], date: "2026-11-09T17:00", site: "East Longmeadow High School, East Longmeadow" },
+      { seeds: [4, 13], date: "2026-11-10T15:30", site: "Victory Field, Watertown" },
+      { seeds: [2, 15], date: "2026-11-10T17:30", site: "Uxbridge High School, Uxbridge" }
     ]
   },
   links: {
@@ -549,7 +551,7 @@ const SEASONS = [
    Leave out anything the book doesn't have. "…" marks a cell that is cut
    off in the record book. */
 const HONORS = [
-  { year: 2026, captains: "Olivia Henry, Kyla Moroney, Addie Moore" },
+  { year: 2026, captains: "Olivia Henry, Kyla Moroney, Addie Moore", allLeague: "Kyla Moroney; All-Stars: Olivia Henry, Addie Moore" },
   { year: 2025, captains: "Aly McGinnity, Ava Patch", allLeague: "Kyla Moroney" },
   { year: 2024, captains: "Caroline Horn, Emma Cross", allLeague: "Caroline Horn" },
   { year: 2023, captains: "Maddie Chase, Megan McGinnity, Bobbi Serino", allLeague: "Maddie Chase (POY), Megan McGinnity, Bobbi Serino, Malana Moy",

@@ -289,15 +289,20 @@ const MEETS = [
     ]
   },
   {
-    id: 8, date: "2026-11-14T11:00", timeTbd: true, name: "MIAA Division 2 Championships", short: "MIAA", postseason: true,
+    id: 8, date: "2026-11-14T12:30", name: "MIAA Division 2 Championships", short: "MIAA", postseason: true,
     home: false, league: false, site: "Wrentham Developmental Center", distance: "5K",
     boys: null, girls: null,
     notes: [
       "Listed as \"States\" on the team schedule",
+      "Danvers runs in Wave B: girls at 12:30 p.m., boys at 1:15 p.m.",
       "Division 2 runs in three waves (A, B, C): girls at 11:00 a.m., 12:30 and 2:00 p.m., boys at 11:45 a.m., 1:15 and 2:45 p.m.",
       "The top seven teams and the top ten other individuals in each wave qualify for the state meet"
     ],
-    sources: [{ label: "MIAA cross country schedule (PDF)", url: "https://www.miaa.net/sites/default/files/2026-03/cross-country-2026-schedule.pdf" }]
+    sources: [
+      { label: "MIAA cross country schedule (PDF)", url: "https://www.miaa.net/sites/default/files/2026-03/cross-country-2026-schedule.pdf" },
+      { label: "Division 2 boys waves (PDF)", url: "https://www.miaa.net/sites/default/files/2026-10/boys-cross-country-waves-fall-2026-division-2.pdf" },
+      { label: "Division 2 girls waves (PDF)", url: "https://www.miaa.net/sites/default/files/2026-10/girls-cross-country-waves-fall-2026-division-2.pdf" }
+    ]
   },
   {
     id: 14, date: "2026-11-21T14:00", name: "MIAA State Championship Meet", short: "STA", postseason: true,

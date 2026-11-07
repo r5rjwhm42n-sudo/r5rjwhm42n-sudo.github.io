@@ -50,7 +50,7 @@ const TEAM = {
       { seeds: [25, 40], score: [3, 0], date: "2026-11-04T17:00" },
       { seeds: [24, 41], score: [3, 0], date: "2026-11-04T18:00", site: "Milton High School, Milton" },
       { seeds: [29, 36], score: [1, 3], date: "2026-11-05T18:00" },
-      { seeds: [20, 45], date: "2026-11-06T17:30" },
+      { seeds: [20, 45], score: [3, 0], date: "2026-11-06T17:30" },
       { seeds: [28, 37], score: [2, 3], date: "2026-11-05T18:00" },
       { seeds: [21, 44], score: [3, 0], date: "2026-11-05T17:00" },
       { seeds: [31, 34], score: [0, 3], date: "2026-11-05T17:30" },
@@ -59,21 +59,25 @@ const TEAM = {
       { seeds: [30, 35], score: [0, 3], date: "2026-11-05T18:00" },
       { seeds: [27, 38], score: [3, 0], date: "2026-11-05T18:15" },
       { seeds: [22, 43], score: [3, 0], date: "2026-11-05T17:00" },
-      { seeds: [16, 17], date: "2026-11-06T18:00" },
-      { seeds: [15, 18], date: "2026-11-06T17:30" },
-      { seeds: [8, 25], date: "2026-11-06T17:30" },
-      { seeds: [9, 24], date: "2026-11-06T17:30" },
+      { seeds: [16, 17], score: [3, 1], date: "2026-11-06T18:00" },
+      { seeds: [15, 18], score: [3, 1], date: "2026-11-06T17:30" },
+      { seeds: [8, 25], score: [3, 0], date: "2026-11-06T17:30" },
+      { seeds: [9, 24], score: [1, 3], date: "2026-11-06T17:30" },
       { seeds: [14, 19], score: [3, 0], date: "2026-11-05T17:00", site: "Notre Dame Academy, Worcester" },
-      { seeds: [1, 32], date: "2026-11-07T14:30" },
+      { seeds: [1, 32], date: "2026-11-07T16:00" },
       { seeds: [4, 36], date: "2026-11-07T15:00" },
-      { seeds: [5, 37], date: "2026-11-06T17:00" },
-      { seeds: [12, 21], date: "2026-11-06T15:30" },
+      { seeds: [5, 37], score: [3, 0], date: "2026-11-06T17:00" },
+      { seeds: [12, 21], score: [3, 1], date: "2026-11-06T15:30" },
       { seeds: [2, 34], date: "2026-11-07T12:00" },
-      { seeds: [7, 26], date: "2026-11-06T16:30" },
+      { seeds: [7, 26], score: [3, 2], date: "2026-11-06T16:30" },
       { seeds: [10, 23], date: "2026-11-07T16:00" },
-      { seeds: [3, 35], date: "2026-11-06T16:00" },
+      { seeds: [3, 35], score: [3, 0], date: "2026-11-06T16:00" },
       { seeds: [6, 27], date: "2026-11-07T14:30" },
-      { seeds: [11, 22], date: "2026-11-07T12:00" }
+      { seeds: [11, 22], date: "2026-11-07T12:00" },
+      { seeds: [13, 20], date: "2026-11-07T15:00" },
+      { seeds: [8, 24], date: "2026-11-08T14:00" },
+      { seeds: [3, 14], date: "2026-11-09T16:30" },
+      { seeds: [5, 12], date: "2026-11-10T17:00" }
     ]
   },
   address: "60 Cabot Road, Danvers, MA 01923",
@@ -571,7 +575,19 @@ const SCHEDULE = [
     postseason: true, round: "Round of 32", site: "Notre Dame Academy, Worcester",
     result: "L", us: 0, them: 3,
     sets: [[18, 25], [10, 25], [14, 25]],
-    summary: "No. 14 Notre Dame Academy ended the Falcons' season in the Division 3 Round of 32, sweeping 25–18, 25–10, 25–14 in Worcester. Danvers finished 15–6 in Sarah Griffin's first season.",
+    summary: "No. 14 Notre Dame Academy ended the Falcons' season in the Division 3 Round of 32, sweeping 25–18, 25–10, 25–14 in Worcester. Kendall Murphy led Danvers with six kills on 11 swings, Lauren Garofalo added four, and Hadley Brown had 11 digs. Danvers finished 15–6 in Sarah Griffin's first season.",
+    box: {
+      "Lauren Garofalo":    [3, 4, 0, 0, 5, 0, 15, 3, 10],
+      "Sienna Lynch":       [3, 3, 0, 0, 1, 0, 10, 2, 0],
+      "Gabrielle Lindeman": [3, 1, 2, 0, 6, 0, 12, 0, 27],
+      "Hadley Brown":       [3, 1, 0, 0, 11, 2, 2, 0, 24],
+      "Hannah Tersolo":     [3, 0, 0, 0, 2, 5, 1, 1, 0],
+      "Brooke Bernard":     [3, 2, 0, 0, 0, 0, 13, 5, 0],
+      "Tess Crowley":       [1, 0, 0, 0, 1, 0, 1, 1, 5],
+      "Kendall Murphy":     [3, 6, 1, 0, 1, 0, 11, 1, 0],
+      "Lila Osborne":       [3, 0, 1, 0, 5, 9, 2, 2, 2],
+      "Gracie Monteiro":    [3, 1, 0, 0, 1, 0, 8, 3, 0]
+    },
     notes: ["MIAA Division 3 Round of 32: No. 19 Danvers at No. 14 Notre Dame Academy", "Season-ending loss — Danvers finishes 15–6", "Notre Dame moves on to face No. 3 Lynnfield in the Round of 16"],
     sources: [
       { label: "MIAA Division 3 bracket", url: "https://www.miaa.net/miaa-fall-volleyball-2026-division-3-state-tournament" },
@@ -592,7 +608,7 @@ const SCHEDULE = [
    Names, numbers, grades and positions are from the team's MaxPreps
    roster; captains are from the Salem News preview (Sept. 11).
    --------------------------------------------------------------------- */
-const STATS_AS_OF = "Through 17 matches (Oct. 21, 2026)";
+const STATS_AS_OF = "Season complete: all 21 matches (through Nov. 5, 2026)";
 
 const PLAYERS = [
   { name: "Gabrielle Lindeman", num: 3, pos: ["OH"], grade: "Sr.", captain: true },

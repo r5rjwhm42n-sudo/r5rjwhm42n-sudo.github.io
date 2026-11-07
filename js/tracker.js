@@ -21,7 +21,7 @@
     { sport: "field-hockey", name: "Field Hockey", href: "field-hockey/", of: 54, cut: 32,
       dates: [["Ranking cutoff", "2026-11-01"], ["Brackets out", "2026-11-03T11:00"], ["First round", "2026-11-05"], ["State finals", "2026-11-20", "Nov. 20–21"]] },
     { sport: "cross-country", name: "Cross Country", href: "cross-country/", path: true,
-      dates: [["NEC Championship", "2026-10-31T10:00", null, "Stage Fort Park, Gloucester", "NEC"], ["Division 2 meet", "2026-11-14", null, "Wrentham Developmental Center", "Div. 2"],
+      dates: [["NEC Championship", "2026-10-31T10:00", null, "Stage Fort Park, Gloucester", "NEC"], ["Division 2 meet", "2026-11-14T12:30", null, "Wrentham Developmental Center", "Div. 2"],
               ["All-State meet", "2026-11-21T14:00", null, "Devens", "State"]] },
     { sport: "golf", name: "Golf", href: "golf/", path: true, done: { big: "11", pre: "", post: "th", line: "of 15 teams at the D2 North sectional",
         detail: "The top three teams went on to the state final" },

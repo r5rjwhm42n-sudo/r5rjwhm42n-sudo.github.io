@@ -179,8 +179,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:cross-country-8@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
-DTSTART;VALUE=DATE:20261114
-DTEND;VALUE=DATE:20261115
+DTSTART;TZID=America/New_York:20261114T123000
+DURATION:PT2H
 SUMMARY:Danvers Cross Country: MIAA Division 2 Championships
 LOCATION:Wrentham Developmental Center
 DESCRIPTION:Postseason\nSchedule and results: https://danversfalconsathleti

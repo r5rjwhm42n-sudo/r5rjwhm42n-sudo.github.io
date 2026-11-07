@@ -321,10 +321,15 @@ const SCHEDULE = [
   { id: 10, date: "2026-11-06T18:30", opponent: "Bedford", mascot: "Buccaneers",
     home: true, league: false, postseason: true, round: "Round of 16", site: HOME_FIELD,
     result: "W", us: 30, them: 27,
-    summary: "No. 3 Danvers held off No. 14 Bedford 30–27 in a downpour at Deering Stadium in the MIAA Division 4 Round of 16. Zach Fultz ran for 137 yards and three touchdowns and scored 22 points, and a late touchdown pass to Jack Houston helped the Falcons stay unbeaten at 8–0.",
+    quarters: { us: [0, 22, 0, 8], them: [7, 12, 0, 8] },
+    summary: "No. 3 Danvers held off No. 14 Bedford 30–27 in a downpour at Deering Stadium in the MIAA Division 4 Round of 16. Bedford led 7–0 after a quarter, Danvers scored 22 points in the second to lead 22–19 at halftime, and Bedford went back in front 27–22 with 7:30 left. The Falcons answered with a touchdown pass to Jack Houston and a two-point conversion to retake the lead with under five minutes to play. Zach Fultz ran for 137 yards and three touchdowns and scored 22 points as Danvers stayed unbeaten at 8–0.",
+    scoring: [
+      { q: "4th · 7:30", play: "Bedford touchdown and two-point conversion", score: "22–27" },
+      { q: "4th", play: "Jack Houston touchdown catch and two-point conversion, with under five minutes left", score: "30–27" }
+    ],
     performers: [
       { name: "Zach Fultz", line: "137 rushing yds, 3 TD, 22 points" },
-      { name: "Jack Houston", line: "Late TD catch" }
+      { name: "Jack Houston", line: "Go-ahead TD catch in the 4th quarter" }
     ],
     tag: "State Tournament",
     spotlight: {
@@ -339,6 +344,9 @@ const SCHEDULE = [
     notes: ["A 30–27 win in the MIAA Division 4 Round of 16 keeps Danvers unbeaten at 8–0", "Bedford's 27 points were the most Danvers allowed this season", "Bedford came in 5–3 on a two-game win streak: 55–30 over Wayland and 44–34 over Acton-Boxborough", "Danvers came in No. 16 in the Globe Top 20 (Nov. 2)", "Danvers hosts No. 6 Tantasqua Regional, a 27–21 winner over No. 11 Wayland, in the quarterfinals on Fri., Nov. 13"],
     sources: [
       { label: "Full-game replay on Hudl", url: REPLAY + "QnJvYWRjYXN0NDczNjA0NA%3D%3D" },
+      { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/football/game/bedford-vs-danvers/11-6-2026/?c=48b36cbd-abb6-4f44-9163-fe865e696ac7" },
+      { label: "Danvers Falcons final score on X", url: "https://x.com/WeAreDanvers/status/2118892918195007890" },
+      { label: "Danvers Falcons fourth-quarter updates on X", url: "https://x.com/WeAreDanvers/status/2118884101331566614" },
       { label: "Salem News recap", url: "https://www.salemnews.com/sports/fultzs-3-tds-late-scoring-pass-to-houston-help-unbeaten-danvers-fend-off-bedford-in/article_9ee03880-4780-4181-a35d-141cf63aa4b2.html" },
       { label: "MIAA Division 4 bracket", url: "https://www.miaa.net/miaa-football-2026-division-4-state-tournament" },
       { label: "Bedford's last game (MaxPreps)", url: "https://www.maxpreps.com/news/dfoe0HM3N0uRjdKP0slKdg/football-recap-bedford-handles-acton-boxborough.htm" },
@@ -347,8 +355,11 @@ const SCHEDULE = [
     ] },
   { id: 11, date: "2026-11-13T18:30", opponent: "Tantasqua", mascot: "Warriors",
     home: true, league: false, postseason: true, round: "Quarterfinals", site: HOME_FIELD, result: null,
-    notes: ["No. 3 Danvers hosts No. 6 Tantasqua Regional in the MIAA Division 4 quarterfinals", "Tantasqua beat No. 11 Wayland 27–21 in the Round of 16", "The winner meets No. 2 Tewksbury or No. 7 Shepherd Hill in the semifinals"],
-    sources: [{ label: "MIAA Division 4 bracket", url: "https://www.miaa.net/miaa-football-2026-division-4-state-tournament" }] },
+    notes: ["No. 3 Danvers hosts No. 6 Tantasqua Regional in the MIAA Division 4 quarterfinals", "Tantasqua (7–2) beat No. 11 Wayland 27–21 in the Round of 16", "The winner meets No. 2 Tewksbury or No. 7 Shepherd Hill in the semifinals"],
+    sources: [
+      { label: "MIAA Division 4 bracket", url: "https://www.miaa.net/miaa-football-2026-division-4-state-tournament" },
+      { label: "MaxPreps game page", url: "https://www.maxpreps.com/ma/football/game/danvers-vs-tantasqua-regional-fiskdale/11-13-2026/?c=40762c35-8a74-435e-ad4e-2d92f6fca15e" }
+    ] },
   { id: 9, date: "2026-11-26T10:00", opponent: "Gloucester", mascot: "Fishermen", home: false, league: false, site: "Newell Stadium, Gloucester", result: null,
     notes: ["Thanksgiving Day rivalry, played every Thanksgiving morning since 1964"],
     sources: [{ label: "Watch live on NFHS Network", url: "https://www.nfhsnetwork.com/events/gloucester-high-school-gloucester-ma/gam6c9d84ba83" }] }
