@@ -1972,10 +1972,11 @@ DURATION:PT2H30M
 SUMMARY:Danvers Football vs Bedford (W 30–27)
 LOCATION:Morse Field at Dr. Deering Stadium\, Danvers
 DESCRIPTION:MIAA state tournament · Round of 16\nFinal: Danvers 30\, Bedfo
- rd 27\nNo. 3 Danvers beat No. 14 Bedford 30–27 at Deering Stadium in the
-  MIAA Division 4 Round of 16\, staying unbeaten at 8–0 and moving on to 
- host a quarterfinal.\nSchedule and results: https://danversfalconsathletic
- s.org/football/schedule.html
+ rd 27\nNo. 3 Danvers held off No. 14 Bedford 30–27 in a downpour at Deer
+ ing Stadium in the MIAA Division 4 Round of 16. Zach Fultz ran for 137 yar
+ ds and three touchdowns and scored 22 points\, and a late touchdown pass t
+ o Jack Houston helped the Falcons stay unbeaten at 8–0.\nSchedule and re
+ sults: https://danversfalconsathletics.org/football/schedule.html
 URL:https://danversfalconsathletics.org/football/schedule.html
 END:VEVENT
 BEGIN:VEVENT
@@ -2010,6 +2011,18 @@ LOCATION:Online (PlayVS)
 DESCRIPTION:Rocket League · Best of 5 games\nSchedule and results: https:/
  /danversfalconsathletics.org/esports/schedule.html
 URL:https://danversfalconsathletics.org/esports/schedule.html
+END:VEVENT
+BEGIN:VEVENT
+UID:football-11@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261113T183000
+DURATION:PT2H30M
+SUMMARY:Danvers Football vs Tantasqua
+LOCATION:Morse Field at Dr. Deering Stadium\, Danvers
+DESCRIPTION:MIAA state tournament · Quarterfinals\nTickets on GoFan: https
+ ://gofan.co/app/school/MA14553\nSchedule and results: https://danversfalco
+ nsathletics.org/football/schedule.html
+URL:https://danversfalconsathletics.org/football/schedule.html
 END:VEVENT
 BEGIN:VEVENT
 UID:cross-country-8@danversfalconsathletics.org

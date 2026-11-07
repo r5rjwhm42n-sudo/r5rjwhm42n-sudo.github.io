@@ -33,14 +33,17 @@ const TEAM = {
             "Westfield", "Nashoba Regional", "Bedford", "Wakefield Memorial", "Ashland"],
     games: [
       { seeds: [1, 16], score: [21, 0], date: "2026-11-05T18:00", site: "Scituate High School, Scituate" },
-      { seeds: [8, 9], date: "2026-11-06T18:00", site: "Grafton High School, Grafton" },
+      { seeds: [8, 9], score: [17, 12], date: "2026-11-06T18:00", site: "Grafton High School, Grafton" },
       { seeds: [4, 13], score: [35, 0], date: "2026-11-05T19:00", site: "Duxbury High School, Duxbury" },
-      { seeds: [5, 12], date: "2026-11-06T18:30", site: "Walpole High School, Walpole" },
-      { seeds: [2, 15], date: "2026-11-06T19:00", site: "Doucette Stadium, Tewksbury" },
-      { seeds: [7, 10], date: "2026-11-06T19:00", site: "Shepherd Hill Regional High School, Dudley" },
+      { seeds: [5, 12], score: [48, 18], date: "2026-11-06T18:30", site: "Walpole High School, Walpole" },
+      { seeds: [2, 15], score: [35, 7], date: "2026-11-06T19:00", site: "Doucette Stadium, Tewksbury" },
+      { seeds: [7, 10], score: [22, 0], date: "2026-11-06T19:00", site: "Shepherd Hill Regional High School, Dudley" },
       { seeds: [3, 14], score: [30, 27], date: "2026-11-06T18:30", site: "Morse Field, Danvers" },
-      { seeds: [6, 11], date: "2026-11-06T19:00", site: "Tantasqua Regional High School, Sturbridge" },
-      { seeds: [1, 4], date: "2026-11-13T19:00" }
+      { seeds: [6, 11], score: [27, 21], date: "2026-11-06T19:00", site: "Tantasqua Regional High School, Sturbridge" },
+      { seeds: [1, 8], date: "2026-11-13T19:00" },
+      { seeds: [4, 5], date: "2026-11-13T19:00" },
+      { seeds: [2, 7], date: "2026-11-13T19:00", site: "Doucette Stadium, Tewksbury" },
+      { seeds: [3, 6], date: "2026-11-13T18:30", site: "Morse Field, Danvers" }
     ]
   },
   headCoach: "Ryan Nolan",
@@ -263,7 +266,7 @@ const SCHEDULE = [
       "Third straight shutout and fourth in six games; 27 points allowed all season"
     ],
     sources: [
-      { label: "Salem News game story", url: "https://www.salemnews.com/sports/unbeaten-danvers-football-pitches-third-straight-shutout-hammers-salem/article_c6f8caf9-e058-4b62-8e4b-de3e94a209ac.html" },
+      { label: "Salem News recap", url: "https://www.salemnews.com/sports/unbeaten-danvers-football-pitches-third-straight-shutout-hammers-salem/article_c6f8caf9-e058-4b62-8e4b-de3e94a209ac.html" },
       { label: "Boston Globe roundup", url: "https://www.bostonglobe.com/2026/10/23/sports/eastern-mass-football-st-johns-shrewsbury/" },
       { label: "Full-game replay on Hudl", url: REPLAY + "QnJvYWRjYXN0NDUwNzQ3NQ%3D%3D" },
       { label: "Danvers Falcons final score on X", url: "https://x.com/WeAreDanvers/status/2113792959753900212" },
@@ -309,7 +312,7 @@ const SCHEDULE = [
     ],
     sources: [
       { label: "Full-game replay on Peabody TV (YouTube)", url: "https://www.youtube.com/watch?v=JtIVvNMIin8" },
-      { label: "Salem News game story", url: "https://www.salemnews.com/sports/danvers-holds-off-peabody-in-classic-to-claim-nec-title/article_efb3db10-eee2-4c34-8635-bde6dac40ffa.html" },
+      { label: "Salem News recap", url: "https://www.salemnews.com/sports/danvers-holds-off-peabody-in-classic-to-claim-nec-title/article_efb3db10-eee2-4c34-8635-bde6dac40ffa.html" },
       { label: "Boston Globe game story", url: "https://www.bostonglobe.com/2026/10/30/sports/danvers-peabody-football/" },
       { label: "Daily Item game story", url: "https://itemlive.com/2026/10/30/peabody-comes-up-short-against-unbeaten-danvers/" },
       { label: "New England Football Journal", url: "https://nefootballjournal.com/danvers-17-peabody-14-falcons-defense-holds-on-against-tanners/" },
@@ -318,7 +321,11 @@ const SCHEDULE = [
   { id: 10, date: "2026-11-06T18:30", opponent: "Bedford", mascot: "Buccaneers",
     home: true, league: false, postseason: true, round: "Round of 16", site: HOME_FIELD,
     result: "W", us: 30, them: 27,
-    summary: "No. 3 Danvers beat No. 14 Bedford 30–27 at Deering Stadium in the MIAA Division 4 Round of 16, staying unbeaten at 8–0 and moving on to host a quarterfinal.",
+    summary: "No. 3 Danvers held off No. 14 Bedford 30–27 in a downpour at Deering Stadium in the MIAA Division 4 Round of 16. Zach Fultz ran for 137 yards and three touchdowns and scored 22 points, and a late touchdown pass to Jack Houston helped the Falcons stay unbeaten at 8–0.",
+    performers: [
+      { name: "Zach Fultz", line: "137 rushing yds, 3 TD, 22 points" },
+      { name: "Jack Houston", line: "Late TD catch" }
+    ],
     tag: "State Tournament",
     spotlight: {
       kicker: "Division 4 Round of 16",
@@ -329,14 +336,19 @@ const SCHEDULE = [
       won: "On to the Quarterfinals",
       lost: "Final"
     },
-    notes: ["A 30–27 win in the MIAA Division 4 Round of 16 keeps Danvers unbeaten at 8–0", "Bedford's 27 points were the most Danvers allowed this season", "Bedford came in 5–3 on a two-game win streak: 55–30 over Wayland and 44–34 over Acton-Boxborough", "Danvers came in No. 16 in the Globe Top 20 (Nov. 2)", "As the higher seed, Danvers hosts its quarterfinal against the winner of No. 6 Tantasqua Regional and No. 11 Wayland"],
+    notes: ["A 30–27 win in the MIAA Division 4 Round of 16 keeps Danvers unbeaten at 8–0", "Bedford's 27 points were the most Danvers allowed this season", "Bedford came in 5–3 on a two-game win streak: 55–30 over Wayland and 44–34 over Acton-Boxborough", "Danvers came in No. 16 in the Globe Top 20 (Nov. 2)", "Danvers hosts No. 6 Tantasqua Regional, a 27–21 winner over No. 11 Wayland, in the quarterfinals on Fri., Nov. 13"],
     sources: [
       { label: "Full-game replay on Hudl", url: REPLAY + "QnJvYWRjYXN0NDczNjA0NA%3D%3D" },
+      { label: "Salem News recap", url: "https://www.salemnews.com/sports/fultzs-3-tds-late-scoring-pass-to-houston-help-unbeaten-danvers-fend-off-bedford-in/article_9ee03880-4780-4181-a35d-141cf63aa4b2.html" },
       { label: "MIAA Division 4 bracket", url: "https://www.miaa.net/miaa-football-2026-division-4-state-tournament" },
       { label: "Bedford's last game (MaxPreps)", url: "https://www.maxpreps.com/news/dfoe0HM3N0uRjdKP0slKdg/football-recap-bedford-handles-acton-boxborough.htm" },
       { label: "Globe Top 20, Nov. 2", url: "https://www.bostonglobe.com/2026/11/02/sports/eastern-mass-football-and-globe-top-20/" },
       { label: "Globe playoff preview", url: "https://www.bostonglobe.com/2026/11/01/sports/miaa-football-playoff-preview/" }
     ] },
+  { id: 11, date: "2026-11-13T18:30", opponent: "Tantasqua", mascot: "Warriors",
+    home: true, league: false, postseason: true, round: "Quarterfinals", site: HOME_FIELD, result: null,
+    notes: ["No. 3 Danvers hosts No. 6 Tantasqua Regional in the MIAA Division 4 quarterfinals", "Tantasqua beat No. 11 Wayland 27–21 in the Round of 16", "The winner meets No. 2 Tewksbury or No. 7 Shepherd Hill in the semifinals"],
+    sources: [{ label: "MIAA Division 4 bracket", url: "https://www.miaa.net/miaa-football-2026-division-4-state-tournament" }] },
   { id: 9, date: "2026-11-26T10:00", opponent: "Gloucester", mascot: "Fishermen", home: false, league: false, site: "Newell Stadium, Gloucester", result: null,
     notes: ["Thanksgiving Day rivalry, played every Thanksgiving morning since 1964"],
     sources: [{ label: "Watch live on NFHS Network", url: "https://www.nfhsnetwork.com/events/gloucester-high-school-gloucester-ma/gam6c9d84ba83" }] }
@@ -366,7 +378,7 @@ const PLAYERS = [
   { name: "Zach Fultz", num: null, pos: ["RB", "DB"], grade: "Jr.", captain: false,
     stats: [["Carries", 99], ["Rush Yds", 646], ["Rush TD", 12], ["Points", 72]],
     log: { 1: "14 car, 121 yds, 23-yd TD run", 2: "56 rushing yds, TD runs of 1 and 2 yards", 3: "101 rushing yds, 3 TD",
-           5: "125 rushing yds, 2 TD", 6: "15 car, 179 yds, TD runs of 1 and 4 yards", 8: "4-yd TD run on the opening drive" } },
+           5: "125 rushing yds, 2 TD", 6: "15 car, 179 yds, TD runs of 1 and 4 yards", 8: "4-yd TD run on the opening drive", 10: "137 rushing yds, 3 TD, 22 points" } },
   { name: "Jack Houston", num: null, pos: ["RB", "LB"], grade: "Sr.", captain: true,
     stats: [["Carries", 86], ["Rush Yds", 577], ["Rush TD", 4], ["Rec Yds", 231], ["Rec TD", 5], ["Points", 54]],
     log: { 1: "16 car, 106 yds", 2: "79 rushing yds · 2 catches for 45 yards", 3: "135 rushing yds, 2 TD",

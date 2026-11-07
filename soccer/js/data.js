@@ -94,7 +94,20 @@ const TEAMS = {
               "Dartmouth", "Middleborough", "Somerville", "Bristol-Plymouth RVT", "Diman RVT", "Malden",
               "Chelsea"],
       games: [
-        { seeds: [14, 19], date: "2026-11-09T18:00", site: "Westwood High School, Westwood" }
+        { seeds: [27, 38], date: "2026-11-06T15:30" },
+        { seeds: [31, 34], date: "2026-11-07T11:30" },
+        { seeds: [32, 33], date: "2026-11-07T14:00" },
+        { seeds: [24, 41], date: "2026-11-07T14:00" },
+        { seeds: [26, 39], date: "2026-11-07T14:30" },
+        { seeds: [28, 37], date: "2026-11-07T16:30" },
+        { seeds: [30, 35], date: "2026-11-07T16:30" },
+        { seeds: [29, 36], date: "2026-11-07T17:30" },
+        { seeds: [25, 40], date: "2026-11-07T19:30" },
+        { seeds: [16, 17], date: "2026-11-08T15:00" },
+        { seeds: [14, 19], date: "2026-11-09T18:00", site: "Westwood High School, Westwood" },
+        { seeds: [15, 18], date: "2026-11-10T18:00" },
+        { seeds: [13, 20], date: "2026-11-10T18:00" },
+        { seeds: [11, 22], date: "2026-11-10T16:00" }
       ]
     },
     headCoach: "Jimmy Hinchion",

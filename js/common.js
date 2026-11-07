@@ -110,7 +110,7 @@
     "North Reading": ["#00824B", "#C8880A"], "Peabody": ["#034CB2", "#FFFFFF"], "Pingree": ["#00824B", "#FFFFFF"],
     "Pioneer Charter": ["#022C66", "#046DFF"], "Reading": ["#222222", "#CC0022"], "Rockport": ["#8F0018", "#454444"],
     "Salem": ["#CC0022", "#FFFFFF"], "Saugus": ["#CC0022", "#FFFFFF"], "St. John's Prep": ["#022C66", "#FFFFFF"],
-    "St. Mary's": ["#034CB2", "#C8880A"], "Stoneham": ["#034CB2", "#FFFFFF"], "Swampscott": ["#034CB2", "#FFFFFF"],
+    "St. Mary's": ["#034CB2", "#C8880A"], "Stoneham": ["#034CB2", "#FFFFFF"], "Swampscott": ["#034CB2", "#FFFFFF"], "Tantasqua": ["#00824B", "#C8880A"],
     "Triton": ["#034CB2", "#FFFFFF"], "Wakefield": ["#CC0022", "#FFFFFF"], "Weston": ["#CC0022", "#FFFFFF"],
     "Wilmington": ["#022C66", "#FFFFFF"], "Winthrop": ["#022C66", "#C8880A"]
   };
@@ -118,7 +118,7 @@
   const LOGOS = new Set(["andover", "arlington", "barnstable", "bedford", "beverly", "bishop-fenwick", "concord-carlisle", "east-longmeadow", "gloucester",
     "hamilton-wenham", "lynn-classical", "lynnfield", "malden-catholic", "marblehead", "masconomet", "medford", "melrose",
     "mystic-valley", "north-reading", "peabody", "pingree", "pioneer-charter", "reading", "rockport", "salem", "saugus",
-    "st-johns-prep", "stoneham", "triton", "wakefield", "weston", "wilmington", "winthrop"]);
+    "st-johns-prep", "stoneham", "tantasqua", "triton", "wakefield", "weston", "wilmington", "winthrop"]);
   const SOLID = new Set(["barnstable", "medford", "wakefield"]);   // logos drawn on a solid square, shown cropped to a circle
   const school = (name) => String(name || "").split(/\s*(?:\/|&)\s*/)[0].trim();
   const slug = (s) => s.toLowerCase().replace(/'/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
