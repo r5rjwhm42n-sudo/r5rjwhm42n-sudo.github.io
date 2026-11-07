@@ -324,11 +324,13 @@ const SCHEDULE = [
     quarters: { us: [0, 22, 0, 8], them: [7, 12, 0, 8] },
     summary: "No. 3 Danvers held off No. 14 Bedford 30–27 in a downpour at Deering Stadium in the MIAA Division 4 Round of 16. Bedford led 7–0 after a quarter, Danvers scored 22 points in the second to lead 22–19 at halftime, and Bedford went back in front 27–22 with 7:30 left. The Falcons answered with a touchdown pass to Jack Houston and a two-point conversion to retake the lead with under five minutes to play. Zach Fultz ran for 137 yards and three touchdowns and scored 22 points as Danvers stayed unbeaten at 8–0.",
     scoring: [
+      { q: "1st", play: "Bedford touchdown", score: "0–7" },
+      { q: "2nd", play: "Zach Fultz runs for three touchdowns as Danvers scores 22 points in the quarter", score: "22–19 at half" },
       { q: "4th · 7:30", play: "Bedford touchdown and two-point conversion", score: "22–27" },
       { q: "4th", play: "Jack Houston touchdown catch and two-point conversion, with under five minutes left", score: "30–27" }
     ],
     performers: [
-      { name: "Zach Fultz", line: "137 rushing yds, 3 TD, 22 points" },
+      { name: "Zach Fultz", line: "137 rushing yds, 3 TD (all in the 2nd quarter), 22 points" },
       { name: "Jack Houston", line: "Go-ahead TD catch in the 4th quarter" }
     ],
     tag: "State Tournament",
@@ -380,21 +382,23 @@ const SCHEDULE = [
    area leaders (Thursday, Oct. 29). Houston's receiving yards and
    Kaciqi's rushing yards are from the Boston Globe notebook of Oct. 26.
    Both cover six games; everything else was compiled from newspaper box
-   scores and recaps, so it is PARTIAL.
+   scores and recaps, so it is PARTIAL. Touchdown and points totals are
+   complete through Bedford (Nov. 6): Danvers scored four touchdowns there,
+   Fultz's three in the 2nd quarter and Houston's in the 4th.
    Replace with the team's official numbers when you get them.
    --------------------------------------------------------------------- */
-const STATS_AS_OF = "Through 7 games (Oct. 30, 2026) · yardage through Oct. 23";
+const STATS_AS_OF = "Touchdowns and points through 8 games (Nov. 6, 2026) · yardage through Oct. 23";
 
 const PLAYERS = [
   { name: "Zach Fultz", num: null, pos: ["RB", "DB"], grade: "Jr.", captain: false,
-    stats: [["Carries", 99], ["Rush Yds", 646], ["Rush TD", 12], ["Points", 72]],
+    stats: [["Carries", 99], ["Rush Yds", 646], ["Rush TD", 15], ["Points", 94]],
     log: { 1: "14 car, 121 yds, 23-yd TD run", 2: "56 rushing yds, TD runs of 1 and 2 yards", 3: "101 rushing yds, 3 TD",
-           5: "125 rushing yds, 2 TD", 6: "15 car, 179 yds, TD runs of 1 and 4 yards", 8: "4-yd TD run on the opening drive", 10: "137 rushing yds, 3 TD, 22 points" } },
+           5: "125 rushing yds, 2 TD", 6: "15 car, 179 yds, TD runs of 1 and 4 yards", 8: "4-yd TD run on the opening drive", 10: "137 rushing yds, 3 TD runs in the 2nd quarter, 22 points" } },
   { name: "Jack Houston", num: null, pos: ["RB", "LB"], grade: "Sr.", captain: true,
-    stats: [["Carries", 86], ["Rush Yds", 577], ["Rush TD", 4], ["Rec Yds", 231], ["Rec TD", 5], ["Points", 54]],
+    stats: [["Carries", 86], ["Rush Yds", 577], ["Rush TD", 4], ["Rec Yds", 231], ["Rec TD", 6], ["Points", 60]],
     log: { 1: "16 car, 106 yds", 2: "79 rushing yds · 2 catches for 45 yards", 3: "135 rushing yds, 2 TD",
            5: "TD catches of 15 and 11 yards from Nate Wise", 6: "59 rushing yds, 2-yd TD run · 11-yard TD catch",
-           7: "32-yd TD run · 2 TD catches from Nate Wise" } },
+           7: "32-yd TD run · 2 TD catches from Nate Wise", 10: "Go-ahead TD catch in the 4th quarter" } },
   { name: "Evan Kaciqi", num: null, pos: ["RB", "DB"], grade: "So.", captain: false,
     stats: [["Rush Yds", 295], ["Rush TD", 2]],
     log: { 1: "21 car, 114 yds, 1-yd TD run (varsity debut)", 6: "12 car, 111 yds, 25-yd TD run" } },
