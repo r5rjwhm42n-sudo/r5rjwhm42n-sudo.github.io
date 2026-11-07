@@ -319,34 +319,32 @@ const MEETS = [
    grade:  "Sr." | "Jr." | "So." | "Fr." | null
    pr:     fastest 5K from any season, e.g. "17:42" (athletic.net; null = no 5K yet).
            A faster 5K in MEETS above replaces it automatically.
-   tt:     preseason 2K time trial, from the team's results sheet
-           (null = didn't run it; ttDistance if it wasn't 2K)
    Each runner's race-by-race results are pulled automatically from the
    finishers lists in MEETS above — spell names the same in both places.
    --------------------------------------------------------------------- */
 const STATS_AS_OF = "Through 8 meets (Oct. 21, 2026)";
 
 const RUNNERS = [
-  { name: "Marcus Morais", squad: "boys", grade: "Sr.", captain: false, pr: "18:00.4", tt: "6:57" },
-  { name: "Jason Rooney", squad: "boys", grade: "Sr.", captain: true, pr: "19:21.4", tt: null },
-  { name: "Miles Pietal", squad: "boys", grade: "Jr.", captain: false, pr: "19:37.1", tt: "7:19" },
-  { name: "Levi James", squad: "boys", grade: "So.", captain: false, pr: "19:20.8", tt: "7:29" },
-  { name: "Jakob Crandall", squad: "boys", grade: "Sr.", captain: false, pr: "23:21.7", tt: "10:37" },
-  { name: "Rowan Bartlett", squad: "boys", grade: "Fr.", captain: false, pr: null, tt: "9:19" },
-  { name: "Miles LaMontagne", squad: "boys", grade: "So.", captain: false, pr: null, tt: null },
-  { name: "Ethan Santiago", squad: "boys", grade: "Fr.", captain: false, pr: null, tt: "9:25" },
-  { name: "Colin Wilhelm", squad: "boys", grade: "Jr.", captain: false, pr: null, tt: "9:36" },
-  { name: "Anis Lmal", squad: "boys", grade: "So.", captain: false, pr: null, tt: null },
-  { name: "Samuel Lawler", squad: "boys", grade: "So.", captain: false, pr: null, tt: "4:25", ttDistance: "800 m" },
+  { name: "Marcus Morais", squad: "boys", grade: "Sr.", captain: false, pr: "18:00.4" },
+  { name: "Jason Rooney", squad: "boys", grade: "Sr.", captain: true, pr: "19:21.4" },
+  { name: "Miles Pietal", squad: "boys", grade: "Jr.", captain: false, pr: "19:37.1" },
+  { name: "Levi James", squad: "boys", grade: "So.", captain: false, pr: "19:20.8" },
+  { name: "Jakob Crandall", squad: "boys", grade: "Sr.", captain: false, pr: "23:21.7" },
+  { name: "Rowan Bartlett", squad: "boys", grade: "Fr.", captain: false, pr: null },
+  { name: "Miles LaMontagne", squad: "boys", grade: "So.", captain: false, pr: null },
+  { name: "Ethan Santiago", squad: "boys", grade: "Fr.", captain: false, pr: null },
+  { name: "Colin Wilhelm", squad: "boys", grade: "Jr.", captain: false, pr: null },
+  { name: "Anis Lmal", squad: "boys", grade: "So.", captain: false, pr: null },
+  { name: "Samuel Lawler", squad: "boys", grade: "So.", captain: false, pr: null },
 
-  { name: "Grace Conklin", squad: "girls", grade: "Sr.", captain: true, pr: "19:46.7", tt: "7:38" },
-  { name: "Emily Sullivan", squad: "girls", grade: "Sr.", captain: true, pr: "20:46.8", tt: "8:53" },
-  { name: "Madyson Danish", squad: "girls", grade: "Jr.", captain: false, pr: "21:20.8", tt: "8:28" },
-  { name: "Paige Sherman", squad: "girls", grade: "Jr.", captain: false, pr: "23:32.6", tt: "9:06" },
-  { name: "Kylie Walsh", squad: "girls", grade: "So.", captain: false, pr: null, tt: "10:28" },
-  { name: "Makayla Cheung", squad: "girls", grade: "So.", captain: false, pr: "28:25.7", tt: "11:41" },
-  { name: "Norah Wright", squad: "girls", grade: "So.", captain: false, pr: null, tt: "10:29" },
-  { name: "Yara Azzazi", squad: "girls", grade: null, captain: false, pr: null, tt: "12:26" }
+  { name: "Grace Conklin", squad: "girls", grade: "Sr.", captain: true, pr: "19:46.7" },
+  { name: "Emily Sullivan", squad: "girls", grade: "Sr.", captain: true, pr: "20:46.8" },
+  { name: "Madyson Danish", squad: "girls", grade: "Jr.", captain: false, pr: "21:20.8" },
+  { name: "Paige Sherman", squad: "girls", grade: "Jr.", captain: false, pr: "23:32.6" },
+  { name: "Kylie Walsh", squad: "girls", grade: "So.", captain: false, pr: null },
+  { name: "Makayla Cheung", squad: "girls", grade: "So.", captain: false, pr: "28:25.7" },
+  { name: "Norah Wright", squad: "girls", grade: "So.", captain: false, pr: null },
+  { name: "Yara Azzazi", squad: "girls", grade: null, captain: false, pr: null }
 ];
 
 /* A 5K this season that beats a runner's pr replaces it, so a new PR shows up
