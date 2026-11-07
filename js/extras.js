@@ -133,16 +133,16 @@
 
     /* header: badge, school, sport, FINAL + date */
     x.beginPath(); x.arc(P + 58, 136, 64, 0, Math.PI * 2); x.fillStyle = "#fff"; x.fill();
-    x.lineWidth = 7; x.strokeStyle = "#f0b429"; x.beginPath(); x.arc(P + 58, 136, 60, 0, Math.PI * 2); x.stroke();
+    x.lineWidth = 7; x.strokeStyle = "#7fb2ff"; x.beginPath(); x.arc(P + 58, 136, 60, 0, Math.PI * 2); x.stroke();
     if (img) x.drawImage(img, P + 58 - 46, 136 - 46, 92, 92);
     x.fillStyle = "#c5d4f5"; spaced(.18); font(700, 30); x.fillText("DANVERS FALCONS", P + 150, 116); spaced(.01);
     x.fillStyle = "#fff"; fit(m.sport.toUpperCase(), 520, 72); x.fillText(m.sport.toUpperCase(), P + 148, 180); spaced(0);
-    pill("FINAL", W - P, 82, "#f0b429", "#0b1f4d", 34, "right");
+    pill("FINAL", W - P, 82, "#7fb2ff", "#0b1f4d", 34, "right");
     x.fillStyle = "#dbe5fb"; font(600, 30, B); x.textAlign = "right";
     x.fillText(fmt(m.date, { weekday: "short", month: "short", day: "numeric", year: "numeric" }), W - P, 188); x.textAlign = "left";
 
     /* matchup line with a gold slash */
-    x.save(); x.translate(P, 262); x.transform(1, 0, -.25, 1, 0, 0); x.fillStyle = "#f0b429"; x.fillRect(0, 0, 14, 54); x.restore();
+    x.save(); x.translate(P, 262); x.transform(1, 0, -.25, 1, 0, 0); x.fillStyle = "#7fb2ff"; x.fillRect(0, 0, 14, 54); x.restore();
     spaced(.14); font(700, 24);
     const tw = m.tag ? x.measureText(m.tag.toUpperCase()).width + 30 : 0;
     x.fillStyle = "#fff"; spaced(.06);
@@ -177,7 +177,7 @@
       x.fillStyle = "#fff"; font(800, 330); x.fillText(String(m.place).toUpperCase(), P - 6, y + 300);
       const w = x.measureText(String(m.place).toUpperCase()).width;
       x.fillStyle = "#dbe5fb"; spaced(.06); font(700, 54); x.fillText(`OF ${m.of} TEAMS`, P + w + 26, y + 220);
-      x.fillStyle = "#f0b429"; font(800, 54); x.fillText(m.detail, P + w + 26, y + 290); spaced(0);
+      x.fillStyle = "#7fb2ff"; font(800, 54); x.fillText(m.detail, P + w + 26, y + 290); spaced(0);
       y += 400;
     } else if (m.kind === "xc") {
       m.rows.forEach(([k, r], i) => {
@@ -220,7 +220,7 @@
       const top = Math.max(y, 860) + Math.max(0, (room - h(fit)) / 2);
       x.fillStyle = "rgba(255,255,255,.08)"; x.strokeStyle = "rgba(255,255,255,.18)"; x.lineWidth = 2;
       x.beginPath(); x.roundRect(P, top, W - P * 2, h(fit), 6); x.fill(); x.stroke();
-      x.fillStyle = "#f0b429"; spaced(.16); font(800, 28); x.fillText(m.heading.toUpperCase(), P + 36, top + 54); spaced(0);
+      x.fillStyle = "#7fb2ff"; spaced(.16); font(800, 28); x.fillText(m.heading.toUpperCase(), P + 36, top + 54); spaced(0);
       let ly = top + 108;
       for (const [k, lines] of fit) {
         x.fillStyle = "#c5d4f5"; spaced(.06); font(700, 30); x.fillText(String(k).toUpperCase(), P + 36, ly); spaced(0);
@@ -232,7 +232,7 @@
 
     /* footer */
     x.fillStyle = "#c5d4f5"; spaced(.16); font(700, 28); x.fillText(SITE.toUpperCase(), P, H - 70);
-    x.fillStyle = "#f0b429"; x.textAlign = "right"; x.fillText("#GOFALCONS", W - P, H - 70); x.textAlign = "left"; spaced(0);
+    x.fillStyle = "#7fb2ff"; x.textAlign = "right"; x.fillText("#GOFALCONS", W - P, H - 70); x.textAlign = "left"; spaced(0);
     return c;
   }
 
@@ -466,8 +466,8 @@
     .dfa-btn.solid:hover { background: #e6edfc; }
     .dfa-btn.ink { border-color: var(--royal); color: var(--royal); }
     .dfa-btn.ink:hover { background: #eef2fb; }
-    .hero.has-shot { background: linear-gradient(115deg, rgba(11,31,77,.97) 0%, rgba(11,31,77,.9) 40%, rgba(24,71,159,.74) 72%, rgba(36,89,194,.58) 100%), var(--shot) center 32% / cover; }
-    @media (max-width: 720px) { .hero.has-shot { background: linear-gradient(180deg, rgba(11,31,77,.9) 0%, rgba(11,31,77,.78) 55%, rgba(24,71,159,.72) 100%), var(--shot) center 30% / cover; } }
+    .hero.has-shot { background: var(--shot) center 32% / cover, #18479f; background-blend-mode: multiply; }   /* the photo, toned team blue */
+    @media (max-width: 720px) { .hero.has-shot { background-position: center 30%; } }
     .dfa-credit { margin: 12px 0 0; font-size: 13.5px; color: var(--muted); }
     .dfa-credit a { color: var(--royal); font-weight: 600; }
     .game .opp .opp-badge { width: 38px; height: 38px; font-size: 15px; margin: -6px 10px 0 0; }
@@ -475,7 +475,7 @@
     .scoreline .team .opp-badge { order: 2; }
     .dfa-btn svg, .dfa-share svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none; }
     .dfa-share { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; font: 800 16px/1 var(--display); letter-spacing: .1em; text-transform: uppercase;
-      padding: 10px 17px 9px; border: 0; border-radius: 4px; background: #f0b429; color: #0b1f4d; cursor: pointer;
+      padding: 10px 17px 9px; border: 0; border-radius: 4px; background: #7fb2ff; color: #0b1f4d; cursor: pointer;
       box-shadow: 0 8px 20px rgba(0,0,0,.28); transition: transform .15s, box-shadow .15s; }
     .dfa-share:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(0,0,0,.34); }
     .dfa-share:disabled { opacity: .8; cursor: progress; }
@@ -494,24 +494,21 @@
     .dfa-sheet .row { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
     @keyframes dfa-rise { from { opacity: 0; transform: translateY(24px) scale(.96); } }
 
-    .dfa-gameday { position: relative; overflow: hidden; color: #fff; border-bottom: 3px solid #f0b429;
-      background: linear-gradient(90deg, #0b1f4d, #18479f 55%, #0b1f4d); }
-    .dfa-gameday::before { content: ""; position: absolute; inset: 0; pointer-events: none;
-      background: linear-gradient(100deg, transparent 35%, rgba(255,255,255,.13) 48%, transparent 60%);
-      transform: translateX(-100%); animation: dfa-sheen 4s ease-in-out infinite; }
+    .dfa-gameday { position: relative; overflow: hidden; color: #fff;
+      background: #0b1f4d; }
     .dfa-gameday .wrap { position: relative; display: flex; align-items: center; gap: 12px 20px; flex-wrap: wrap; padding-top: 14px; padding-bottom: 14px; }
     .dfa-state { display: inline-flex; align-items: center; gap: 8px; font: 800 15px/1 var(--display); letter-spacing: .16em; text-transform: uppercase;
-      padding: 8px 12px 7px; border-radius: 4px; background: #f0b429; color: #0b1f4d; }
-    .dfa-state.live { background: #d92d27; color: #fff; }
+      padding: 0; color: #7fb2ff; }
+    .dfa-state.live { color: #ff7a70; }
     .dfa-state.live i { width: 9px; height: 9px; border-radius: 50%; background: #fff; animation: dfa-pulse 1.3s ease-out infinite; }
     .dfa-match { font: 800 24px/1.05 var(--display); text-transform: uppercase; letter-spacing: .01em; }
-    .dfa-meta { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-top: 3px; font-size: 15px; color: #dbe5fb; }
+    .dfa-meta { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-top: 3px; font-size: 15px; color: #c3cce0; }
     .dfa-actions { margin-left: auto; display: flex; flex-wrap: wrap; gap: 8px; }
     @keyframes dfa-sheen { 60%, 100% { transform: translateX(100%); } }
     @keyframes dfa-pulse { 0% { box-shadow: 0 0 0 0 rgba(255,255,255,.8); } 100% { box-shadow: 0 0 0 10px rgba(255,255,255,0); } }
 
-    .dfa-found { outline: 4px solid #f0b429; outline-offset: 4px; animation: dfa-glow 1.1s ease-in-out 3; }
-    @keyframes dfa-glow { 50% { outline-color: rgba(240,180,41,.25); transform: translateY(-3px); } }
+    .dfa-found { outline: 4px solid #7fb2ff; outline-offset: 4px; animation: dfa-glow 1.1s ease-in-out 3; }
+    @keyframes dfa-glow { 50% { outline-color: rgba(127,178,255,.25); transform: translateY(-3px); } }
     @media (prefers-reduced-motion: reduce) { .dfa-gameday::before, .dfa-state.live i, .dfa-found { animation: none; } }
     @media (max-width: 640px) { .dfa-actions { margin-left: 0; } .dfa-match { font-size: 21px; } }`;
   document.head.appendChild(css);

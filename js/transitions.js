@@ -46,7 +46,7 @@
           <path d="${hash}" stroke="#fff" stroke-opacity=".16" stroke-width="3"/>
           <g fill="#fff" fill-opacity=".13">${nums}</g>
         </g>
-        <path class="trail" d="${path}" pathLength="1" fill="none" stroke="#f0b429" stroke-width="${R(10 * s)}" stroke-linecap="round" stroke-dasharray="1" stroke-dashoffset="1"/>
+        <path class="trail" d="${path}" pathLength="1" fill="none" stroke="#7fb2ff" stroke-width="${R(10 * s)}" stroke-linecap="round" stroke-dasharray="1" stroke-dashoffset="1"/>
         ${mover(path, .15, .95, `
           <g transform="scale(${s})"><g class="spiral fx">
             <ellipse rx="76" ry="43" fill="#fff"/>
@@ -73,7 +73,7 @@
           <path clip-path="url(#${id})" d="${mesh}" stroke="#fff" stroke-opacity=".3" stroke-width="2.2"/>
           <path class="draw" style="--d:.1s;--t:.5s" pathLength="1" d="M${R(gx)} ${ground}V${R(gy)}H${R(gx + gw)}V${ground}" fill="none" stroke="#fff" stroke-width="${R(14 * s)}" stroke-linejoin="round"/>
         </g>
-        <circle class="ring fx" style="--d:.88s" cx="${R(tx)}" cy="${R(ty)}" r="${R(70 * s)}" fill="none" stroke="#f0b429" stroke-width="6"/>
+        <circle class="ring fx" style="--d:.88s" cx="${R(tx)}" cy="${R(ty)}" r="${R(70 * s)}" fill="none" stroke="#7fb2ff" stroke-width="6"/>
         <circle class="ring fx" style="--d:1s" cx="${R(tx)}" cy="${R(ty)}" r="${R(70 * s)}" fill="none" stroke="#fff" stroke-width="4"/>
         ${mover(path, .12, .75, `
           <g transform="scale(${R(1.8 * s)}) translate(-32 -32)"><g class="ball-in fx">
@@ -101,15 +101,15 @@
         <g class="stick" style="transform-box:view-box;transform-origin:${R(px)}px ${py}px">
           <g transform="translate(${R(px)} ${py}) scale(${R(ss)})">
             <path d="M0 0L26 520C33 586 12 634 -34 628C-60 624 -62 598 -42 592" fill="none" stroke="#fff" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M-6 -6L4 150" stroke="#f0b429" stroke-width="24" stroke-linecap="round"/>
+            <path d="M-6 -6L4 150" stroke="#7fb2ff" stroke-width="24" stroke-linecap="round"/>
           </g>
         </g>
-        <path class="draw" style="--d:.42s;--t:.5s" pathLength="1" d="M${R(bx)} ${R(by)}Q${R(W * .5)} ${R(by - 90 * s)} ${R(W - 130 * s)} ${R(cy + 30 * s)}" fill="none" stroke="#f0b429" stroke-width="${R(8 * s)}" stroke-linecap="round" stroke-opacity=".85"/>
+        <path class="draw" style="--d:.42s;--t:.5s" pathLength="1" d="M${R(bx)} ${R(by)}Q${R(W * .5)} ${R(by - 90 * s)} ${R(W - 130 * s)} ${R(cy + 30 * s)}" fill="none" stroke="#7fb2ff" stroke-width="${R(8 * s)}" stroke-linecap="round" stroke-opacity=".85"/>
         <g transform="translate(${R(bx)} ${R(by)})">
           <animateMotion path="${rel}" begin="0.42s" dur="0.5s" fill="freeze" calcMode="spline" keyTimes="0;1" keyPoints="0;1" keySplines=".1 .6 .3 1"/>
           <circle r="${R(22 * s)}" fill="#fff"/>
         </g>
-        <circle class="ring fx" style="--d:.9s" cx="${R(W - 130 * s)}" cy="${R(cy + 30 * s)}" r="${R(60 * s)}" fill="none" stroke="#f0b429" stroke-width="6"/>`;
+        <circle class="ring fx" style="--d:.9s" cx="${R(W - 130 * s)}" cy="${R(cy + 30 * s)}" r="${R(60 * s)}" fill="none" stroke="#7fb2ff" stroke-width="6"/>`;
     },
 
     /* Set and spike: the ball floats over the net, then gets hammered down */
@@ -127,11 +127,11 @@
           <rect x="${R(netX - 16 * s)}" y="280" width="${R(32 * s)}" height="200" fill="#fff" fill-opacity=".08" stroke="#fff" stroke-opacity=".5" stroke-width="3"/>
           <path d="${mesh}" stroke="#fff" stroke-opacity=".4" stroke-width="2"/>
           <path d="M${R(netX - 22 * s)} 280h${R(44 * s)}" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
-          <path d="M${R(netX)} 280V180" stroke="#f0b429" stroke-width="6" stroke-dasharray="14 10"/>
+          <path d="M${R(netX)} 280V180" stroke="#7fb2ff" stroke-width="6" stroke-dasharray="14 10"/>
         </g>
-        <path class="swing" pathLength="1" d="M${R(netX - 250 * s)} 70Q${R(netX - 60 * s)} 40 ${R(netX - 40 * s)} 250" fill="none" stroke="#f0b429" stroke-width="${R(12 * s)}" stroke-linecap="round" stroke-dasharray="1" stroke-dashoffset="1"/>
-        <path class="floor-flash" d="M${R(land - 160 * s)} ${floor}H${R(land + 160 * s)}" stroke="#f0b429" stroke-width="8" stroke-linecap="round"/>
-        <ellipse class="ring fx" style="--d:1.04s" cx="${R(land)}" cy="${floor}" rx="${R(90 * s)}" ry="${R(22 * s)}" fill="none" stroke="#f0b429" stroke-width="6"/>
+        <path class="swing" pathLength="1" d="M${R(netX - 250 * s)} 70Q${R(netX - 60 * s)} 40 ${R(netX - 40 * s)} 250" fill="none" stroke="#7fb2ff" stroke-width="${R(12 * s)}" stroke-linecap="round" stroke-dasharray="1" stroke-dashoffset="1"/>
+        <path class="floor-flash" d="M${R(land - 160 * s)} ${floor}H${R(land + 160 * s)}" stroke="#7fb2ff" stroke-width="8" stroke-linecap="round"/>
+        <ellipse class="ring fx" style="--d:1.04s" cx="${R(land)}" cy="${floor}" rx="${R(90 * s)}" ry="${R(22 * s)}" fill="none" stroke="#7fb2ff" stroke-width="6"/>
         <ellipse class="ring fx" style="--d:1.14s" cx="${R(land)}" cy="${floor}" rx="${R(90 * s)}" ry="${R(22 * s)}" fill="none" stroke="#fff" stroke-width="4"/>
         <path class="vb-curve" d="${curve}" fill="none" stroke="none"/>
         ${mover(path, .12, .95, `
@@ -152,8 +152,8 @@
         <path class="draw xc-course" style="--d:.15s;--t:.95s" pathLength="1" d="${course}" fill="none" stroke="#fff" stroke-width="${R(9 * s)}" stroke-linecap="round"/>
         <g class="xc-flags"></g>
         ${mover(course, .15, .95, `
-          <circle class="runner-ring fx" r="${R(26 * s)}" fill="none" stroke="#f0b429" stroke-width="4"/>
-          <circle r="${R(14 * s)}" fill="#f0b429" stroke="#fff" stroke-width="4"/>`, `keySplines=".45 .05 .2 1"`)}`;
+          <circle class="runner-ring fx" r="${R(26 * s)}" fill="none" stroke="#7fb2ff" stroke-width="4"/>
+          <circle r="${R(14 * s)}" fill="#7fb2ff" stroke="#fff" stroke-width="4"/>`, `keySplines=".45 .05 .2 1"`)}`;
     },
 
     /* Sink it: a breaking putt rolls across the green and drops */
@@ -170,9 +170,9 @@
         <ellipse cx="${R(cx)}" cy="${cy}" rx="${R(30 * s)}" ry="${R(11 * s)}" fill="#06102b" stroke="#fff" stroke-opacity=".35" stroke-width="3"/>
         <g class="pop" style="--d:.12s;transform-box:fill-box;transform-origin:50% 100%">
           <path d="M${R(cx)} ${cy}V${R(cy - pole)}" stroke="#fff" stroke-width="${R(6 * s)}" stroke-linecap="round"/>
-          <path class="flag" style="transform-box:fill-box;transform-origin:0 50%" d="M${R(cx)} ${R(cy - pole)}L${R(cx + 128 * s)} ${R(cy - pole + 36 * s)}L${R(cx)} ${R(cy - pole + 72 * s)}Z" fill="#f0b429"/>
+          <path class="flag" style="transform-box:fill-box;transform-origin:0 50%" d="M${R(cx)} ${R(cy - pole)}L${R(cx + 128 * s)} ${R(cy - pole + 36 * s)}L${R(cx)} ${R(cy - pole + 72 * s)}Z" fill="#7fb2ff"/>
         </g>
-        <ellipse class="ring fx" style="--d:1.03s" cx="${R(cx)}" cy="${cy}" rx="${R(46 * s)}" ry="${R(16 * s)}" fill="none" stroke="#f0b429" stroke-width="5"/>
+        <ellipse class="ring fx" style="--d:1.03s" cx="${R(cx)}" cy="${cy}" rx="${R(46 * s)}" ry="${R(16 * s)}" fill="none" stroke="#7fb2ff" stroke-width="5"/>
         <ellipse class="ring fx" style="--d:1.13s" cx="${R(cx)}" cy="${cy}" rx="${R(46 * s)}" ry="${R(16 * s)}" fill="none" stroke="#fff" stroke-width="4"/>
         <g transform="translate(${R(sx)} ${sy})">
           <animateMotion path="${rel}" begin="0.2s" dur="0.84s" fill="freeze" calcMode="spline" keyTimes="0;1" keyPoints="0;1" keySplines=".2 .7 .35 1"/>
@@ -186,7 +186,7 @@
       const cx = W > 900 ? W * .64 : W * .5, cy = 370;
       let seed = 7, px = "";
       const rnd = () => ((seed = (seed * 16807) % 2147483647) - 1) / 2147483646;
-      const colors = ["#ffffff", "#f0b429", "#8fb0ff", "#ffffff"];
+      const colors = ["#ffffff", "#7fb2ff", "#8fb0ff", "#ffffff"];
       for (let i = 0; i < 44; i++) {
         const a = (i / 44) * Math.PI * 2 + rnd() * .4, dist = (190 + rnd() * 340) * s, size = (12 + rnd() * 28) * s;
         px += `<rect class="px fx" x="${R(cx - size / 2)}" y="${R(cy - size / 2)}" width="${R(size)}" height="${R(size)}" fill="${colors[i % 4]}"`
@@ -202,9 +202,9 @@
         ${px}
         <g transform="translate(${R(cx - 32 * sc)} ${R(cy - 35 * sc)}) scale(${R(sc)})">
           <path class="draw" style="--d:.2s;--t:.75s" pathLength="1" d="M20 20h24c7 0 11 5 12.5 13l2.2 12.5c1 6-5.5 9.5-9.5 5.2L42 43H22l-7.2 7.7c-4 4.3-10.5.8-9.5-5.2L7.5 33C9 25 13 20 20 20z" fill="none" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/>
-          <path class="pop fx" style="--d:.78s" d="M19 28v10M14 33h10" stroke="#f0b429" stroke-width="2.4" stroke-linecap="round"/>
-          <circle class="pop fx" style="--d:.86s" cx="43" cy="30" r="2.6" fill="#f0b429"/>
-          <circle class="pop fx" style="--d:.92s" cx="49" cy="36" r="2.6" fill="#f0b429"/>
+          <path class="pop fx" style="--d:.78s" d="M19 28v10M14 33h10" stroke="#7fb2ff" stroke-width="2.4" stroke-linecap="round"/>
+          <circle class="pop fx" style="--d:.86s" cx="43" cy="30" r="2.6" fill="#7fb2ff"/>
+          <circle class="pop fx" style="--d:.92s" cx="49" cy="36" r="2.6" fill="#7fb2ff"/>
         </g>`;
     }
   };
@@ -232,7 +232,7 @@
         return `<g transform="translate(${R(p.x)} ${R(p.y)}) scale(${R(s)})">
           <g class="pop" style="--d:${R(.15 + .95 * f)}s;transform-box:fill-box;transform-origin:50% 100%">
             <path d="M0 0V-86" stroke="#fff" stroke-width="5"/>
-            <path d="M0 -86L46 -72L0 -58Z" fill="#f0b429"/>
+            <path d="M0 -86L46 -72L0 -58Z" fill="#7fb2ff"/>
             <text x="0" y="-100" text-anchor="middle" font-size="30" fill="#fff">${label}</text>
           </g></g>`;
       }).join("");

@@ -55,8 +55,8 @@
           </div>
         </div>
         <div class="app-copy">
-          <div class="eyebrow">${IOS ? "iPhone & iPad" : MAC_SAFARI ? "Mac" : ANDROID ? "Android" : "Your computer"}</div>
           <h2>Put the Falcons on your ${IOS || ANDROID ? "home screen" : MAC_SAFARI ? "Dock" : "desktop"}</h2>
+          <div class="eyebrow">${IOS ? "iPhone & iPad" : MAC_SAFARI ? "Mac" : ANDROID ? "Android" : "Your computer"}</div>
           <p>Every score, schedule and game day, one tap away. It opens like an app and keeps working with a weak signal in the stands.</p>
           <ol class="app-steps">${steps().map(([ic, h, d], i) => `<li style="--i:${i}"><span class="n">${i + 1}</span><span class="ic">${ic}</span><span><b>${h}</b><small>${d}</small></span></li>`).join("")}</ol>
         </div>

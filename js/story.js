@@ -282,7 +282,7 @@
     .st.playing .st-play svg { animation: st-spin 1s linear infinite; }
     @keyframes st-spin { to { transform: rotate(360deg); } }
     .st-card { overflow: hidden; padding: 0; }
-    .st-top { display: flex; align-items: center; gap: 14px 28px; flex-wrap: wrap; padding: 16px 20px; color: #fff; background: linear-gradient(115deg, var(--navy), var(--royal) 70%, #2459c2); }
+    .st-top { display: flex; align-items: center; gap: 14px 28px; flex-wrap: wrap; padding: 16px 20px; color: #fff; background: var(--navy); }
     .st-top span { display: block; font: 700 12.5px/1 var(--display); letter-spacing: .14em; text-transform: uppercase; color: #b9c6e6; margin-bottom: 4px; }
     .st-rec b { font: 800 44px/1 var(--display); font-variant-numeric: tabular-nums; }
     .st-now { flex: 1; min-width: 220px; padding-left: 24px; border-left: 1px solid rgba(255,255,255,.2); }
@@ -337,11 +337,11 @@
     .st-bar.on { opacity: 1; }
     .st-bar .nm { font-weight: 700; font-size: 14.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .st-bar .tr { height: 26px; border-radius: 4px; background: #eef2f9; overflow: hidden; }
-    .st-bar .tr i { display: block; height: 100%; width: var(--w, 0); border-radius: 4px; background: linear-gradient(90deg, var(--royal), #3a6fd8); transition: width .55s cubic-bezier(.3,.7,.3,1); }
-    .st-bar.lead .tr i { background: linear-gradient(90deg, #d79a12, var(--gold)); }
+    .st-bar .tr i { display: block; height: 100%; width: var(--w, 0); border-radius: 4px; background: var(--royal); transition: width .55s cubic-bezier(.3,.7,.3,1); }
+    .st-bar.lead .tr i { background: var(--gold); }
     .st-bar b { font: 800 22px var(--display); color: var(--navy); text-align: right; font-variant-numeric: tabular-nums; }
     .st-beats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
-    .st-beat { padding: 14px 16px; border-top: 4px solid var(--gold); }
+    .st-beat { padding: 14px 16px; border-top: 0; }
     .st-beat .k { font: 700 13px var(--display); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
     .st-beat .v { font: 800 46px/1 var(--display); color: var(--royal); margin: 6px 0 4px; font-variant-numeric: tabular-nums; }
     .st-beat .d { font-size: 13.5px; color: var(--muted); line-height: 1.35; }

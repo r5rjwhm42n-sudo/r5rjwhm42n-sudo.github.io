@@ -1,0 +1,304 @@
+/* =====================================================================
+   Look layer, loaded last on every page.
+   Loud where sports should be loud: big all-caps condensed headlines and
+   team names, blue-toned photos, angled hero edges, gold numbers, navy
+   color blocks, cards that lift.
+   Quiet where AI templates get noisy: no tag pills, no small spaced-out
+   capital labels, no little labels above headlines, no colored stripes on
+   the edges of boxes, no borders or shadows on resting cards, no
+   gradients, no numbered sections.
+   ===================================================================== */
+:root {
+  --r: 3px;
+  --shadow: none;
+  --shadow-up: none;
+  --line: #e2e6ee;
+  --on-dark: #c8d3ee;   /* the one muted text color on blue and navy */
+  --lift: 0 16px 34px rgba(11, 31, 77, .18);
+  --gold: #7fb2ff;      /* no gold at Danvers: the accent is a lighter Falcons blue */
+}
+
+/* ---------- Type ---------- */
+*, *::before, *::after { text-transform: none !important; letter-spacing: normal !important; box-shadow: none !important; text-shadow: none !important; }
+/* the big stuff shouts */
+h1, h2, h3, .brand-text, .nav a, .btn, .bk-toggle, .chip, .bk-tabs b, .sc .who, .tk-who, .game .opp, .sb-row .nm,
+.sp-name b, .bf-team b, .wk-title, .leader .who, .ns-title, .nu-title, .next-game h3, .player-top h3, .banner .y,
+.bar-row .nm, .perf .n, .scoreline .team, .td-g b, .dfa-match, .trad-total .k, .fact-k, .tc-go, .story .more,
+.nu-foot, .section-head .more, .ls-chip, .clock-live, .hero::after { text-transform: uppercase !important; }
+h1, h2, h3 { font-weight: 800; line-height: .95; }
+.game .opp small { text-transform: none !important; }
+
+/* ---------- Header: royal bar, crest overlapping the score strip ---------- */
+.brand-text small { font-family: var(--body); font-weight: 600; font-size: 13.5px; color: var(--on-dark); margin-top: 2px; }
+.nav a { color: #e3eaff; }
+.nav a.sp-glow { animation: none; color: #fff; }
+.news-btn { background: #fff; border-color: #fff; color: var(--royal); }
+.news-btn:hover { background: #dce8ff; border-color: #dce8ff; }
+.news-btn:hover { transform: none; }
+.scores-label, .ticker-label { font-family: var(--body); font-weight: 600; font-size: 14px; }
+.ticker-label .dot { display: none; }
+.ticker-view { -webkit-mask-image: none; mask-image: none; }
+.sc, .tk { border-right: 0; }
+.sc .when, .tk-when { font-weight: 600; font-size: 12.5px; color: var(--muted); }
+.sc.next { background: none; }
+.sc.next .who { color: var(--royal); }
+.sc .res.cx { font-size: 13px; }
+
+/* ---------- Newsletter strip ---------- */
+.ns-label { background: none; padding: 0; color: var(--royal); font-family: var(--body); font-weight: 800; font-size: 15px; }
+.ns-go { font-family: var(--body); font-weight: 700; font-size: 15px; }
+
+/* ---------- Heroes: blue-toned photo, angled bottom edge, giant outlined FALCONS ---------- */
+.hero { background: var(--royal); clip-path: polygon(0 0, 100% 0, 100% calc(100% - 46px), 0 100%); }
+.hero::before { display: none; }
+.hero.has-shot::before { content: ""; display: block; position: absolute; inset: 0; width: auto; transform: none; background: rgba(11, 31, 77, .3); }
+.hero::after { content: "Falcons"; display: block; position: absolute; right: -.03em; bottom: -.16em; left: auto; top: auto; width: auto; height: auto;
+  background: none; opacity: 1; filter: none; pointer-events: none; white-space: nowrap;
+  font: 800 clamp(150px, 23vw, 330px)/1 var(--display); color: transparent; -webkit-text-stroke: 2px rgba(255, 255, 255, .13); }
+.hero h1 { margin: 0 0 12px; }
+.hero h1 em { font-style: normal; color: #a8c9ff; }
+.hero p { color: #e3eaff; }
+.hero-home .wrap { padding-bottom: 110px; }
+.page-banner .wrap { padding-bottom: 92px; }
+
+.hub-hero { background: var(--royal); clip-path: polygon(0 0, 100% 0, 100% calc(100% - 46px), 0 100%); }
+.mosaic img { filter: grayscale(1) contrast(1.12); mix-blend-mode: multiply; }
+.hub-hero::before { background: rgba(11, 31, 77, .5); }
+.hub-hero::after { display: none; }
+.hero-in { padding-bottom: 116px; }
+.hub-hero h1 { margin: 0 0 18px; font-size: clamp(54px, 8vw, 104px); }
+.lede { color: #e3eaff; }
+.hs { border-right: 0; padding-right: 0; margin-right: 46px; }
+.hs-v { color: #fff; }
+.hs-k { font: 700 15px var(--body); color: #fff; }
+.hs-d { color: var(--on-dark); }
+
+/* The small line that used to sit above headlines now sits under them */
+.eyebrow { display: block; background: none !important; padding: 0 !important; border-radius: 0; font-family: var(--body); font-weight: 700; font-size: 16px; color: var(--muted); }
+.hero .eyebrow, .modal-head .eyebrow, .hub-hero .eyebrow { color: #fff; margin-bottom: 20px; }
+.modal-head .eyebrow { margin: 10px 0 0; }
+
+/* ---------- Buttons ---------- */
+.btn { font-family: var(--display); font-weight: 800; font-size: 19px; padding: 11px 26px 10px; border-width: 2px; border-radius: var(--r); transition: background .15s, color .15s, transform .15s; }
+.btn:hover { transform: translateY(-2px); }
+.btn-primary, .btn-gold { background: #fff; color: var(--royal); border-color: #fff; }
+.btn-primary:hover, .btn-gold:hover { background: #dce8ff; border-color: #dce8ff; }
+.btn-ghost { border-color: #fff; color: #fff; }
+.btn-ghost:hover { background: #fff; color: var(--royal); }
+
+/* ---------- Cards: no borders, no resting shadows, lift on hover ---------- */
+.card, .team-card { border: 0; border-radius: var(--r); }
+.card.lift, .team-card { transition: transform .18s, box-shadow .18s; }
+.card.lift:hover, .team-card:hover { transform: translateY(-5px); box-shadow: var(--lift) !important; border-color: transparent; }
+.team-card:hover .tc-media img { transform: scale(1.06); }
+
+/* No colored stripes on the edges of boxes */
+.tile, .leader, .next-game, .notice, .fact, .book, .howto, .about, .news, .titles, .banner,
+.formats .howto, .wk:first-child, .bk-road li, .bk-focus, .spotlight, .today, .site-footer,
+.hero-home.spot, .spot-board .sb-top, .bf-top { border-top: 0; border-left: 0; border-bottom: 0; }
+.notice { border: 0; background: #eef4ff; }
+.wk:first-child { border-color: transparent; }
+
+/* ---------- Section titles: big and plain ---------- */
+.section-head { border-bottom: 0; padding-bottom: 0; margin-bottom: 20px; }
+.section-head h2 { padding-left: 0; font-size: clamp(38px, 4.8vw, 54px); color: var(--navy); }
+.section-head h2::before { content: none; display: none; }
+.section-head .more { font-family: var(--display); font-weight: 800; font-size: 18px; }
+.section-head .more::after { content: none; }
+.section-head .sub { display: none; }
+
+/* Navy color blocks between the light sections (hub) */
+.block.alt { background: var(--navy); border: 0; color: #fff; }
+.block.alt .section-head h2 { color: #fff; }
+.block.alt .gal figcaption, .block.alt .credit, .block.alt > .wrap > p, .block.alt .fine { color: var(--on-dark); }
+.block.alt .gal figcaption b { color: #fff; }
+.block.alt .credit a { color: #fff; }
+
+/* ---------- Tags and pills become plain text ---------- */
+.pill, .tag, .tbd, .note-pill, .pos, .wk-ha, .tc-rank, .rd-chip, .ls-chip, .sp-flag, .td-flag, .cap {
+  display: inline; background: none !important; padding: 0 !important; border: 0 !important; border-radius: 0 !important;
+  font-family: var(--body); font-size: inherit; font-weight: 700; color: var(--muted); white-space: normal;
+}
+.tag.big, .tag.special, .note-pill { color: var(--royal); font-weight: 800; }
+.tag.home { color: var(--muted); }
+.game .meta, .tags { gap: 0; }
+.game .meta > * + *::before, .tags > * + *::before { content: "·"; margin: 0 7px; color: var(--muted); font-weight: 400; }
+.game .meta > :not(.tag):not(.vs) { flex-basis: 100%; margin-top: 2px; }
+.game .meta > :not(.tag):not(.vs)::before { content: none; }
+.tc-season, .tc-squad, .tc-ribbon { display: none; }
+
+/* ---------- Small labels: sentence case, body font ---------- */
+.tile .k, .leader .cat, .next-game .k, .tc-recs-k, .rec small, .tc-games dt, .rd-recs dt, .rd-scale, .fact-team,
+.bk-road span, .bk-col h4, .datebox .w, .player-stats span, .countdown span, .cl span, .sp-clock .cl small,
+.plays .q, .sb-top, .nu-when, .wk-team, .wk-date span, .ls-top, .rd-top, .bf-top, .nu-top, .banner .l, table.line th,
+.gal figcaption b, .viewer figcaption {
+  font-family: var(--body); font-weight: 700;
+}
+.tile .k, .leader .cat, .tc-recs-k, .rec small, .tc-games dt, .rd-recs dt, .fact-team, .bk-col h4,
+.player-stats span, .plays .q, .rd-scale { font-size: 13.5px; color: var(--muted); }
+
+/* ---------- Strip under the sport heroes ---------- */
+.next-game .k { color: var(--gold); font-size: 15px; }
+.next-game .meta { color: var(--on-dark); }
+.countdown { gap: 22px; }
+.countdown div { background: none; padding: 0; min-width: 0; text-align: left; }
+.countdown span { font-size: 13px; color: var(--on-dark); }
+.sb-top { font-size: 14.5px; }
+.sb-top span:last-child { font-weight: 600; }
+.sb-row .dot { border: 0; }
+
+/* ---------- Game lists ---------- */
+.datebox { border: 0; background: none; border-radius: 0; text-align: left; }
+.datebox .m { background: none !important; color: var(--royal); font-family: var(--display); font-weight: 800; font-size: 17px; padding: 0; text-transform: uppercase !important; }
+.datebox .d { color: var(--navy); line-height: .95; font-size: 38px; }
+.datebox .w { font-weight: 600; font-size: 12.5px; padding: 0; }
+.game:hover { background: #f3f6fd; }
+.game .opp small { font-family: var(--body); font-weight: 700; font-size: 14px; }
+.result .wl { display: inline; width: auto; height: auto; margin-right: 8px; background: none !important; font-size: inherit; vertical-align: 0; }
+.result .wl.W { color: var(--win); }
+.result .wl.L { color: var(--loss); }
+.result.cancelled { border: 0; padding: 0; font-size: 14px; }
+.chev { display: none; }
+
+/* ---------- Tables ---------- */
+table th { border-radius: 0 !important; }
+
+/* ---------- Filters become bold text tabs ---------- */
+.chip, .bk-tabs button { font-family: var(--display); font-weight: 800; font-size: 19px; background: none; border: 0; border-bottom: 3px solid transparent; border-radius: 0; padding: 4px 1px 3px; margin-right: 18px; color: var(--muted); }
+.chip:hover, .bk-tabs button:hover { color: var(--navy); border-color: transparent; }
+.chip[aria-pressed="true"], .bk-tabs button[aria-selected="true"] { background: none; color: var(--royal); border-bottom-color: var(--royal); }
+.bk-tabs [aria-selected="true"] small { color: var(--muted); }
+.bk-tabs b { font-weight: 800; font-size: 19px; }
+.bk-tabs small { font-family: var(--body); }
+.show-more { margin-right: auto; color: var(--royal); }
+
+/* ---------- Players: jersey numbers ---------- */
+.cap { color: #fff; }
+.pos { color: #e3eaff; font-size: 14px; }
+.player-stats { border-bottom: 0; }
+.player-stats div { border-right: 0; }
+
+/* ---------- Game popup ---------- */
+.modal-head { background: var(--royal); }
+.modal-body h4 { color: var(--royal); border-bottom: 0; padding-bottom: 0; font-size: 22px; text-transform: uppercase !important; }
+.srcs a { border: 0; padding: 0; margin-right: 12px; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.srcs a:hover { background: none; }
+
+/* ---------- History: pennants and the timeline ---------- */
+.banner .l { font-size: 13px; font-weight: 600; }
+.timeline { border-left: 0; margin-left: 0; padding-left: 0; }
+.timeline .item { display: grid; grid-template-columns: 130px 1fr; gap: 24px; padding: 0 0 24px; }
+.timeline .item::before { display: none; }
+.timeline .y { font-size: 34px; }
+.timeline p { margin: 0; }
+.legend .role { font-family: var(--body); font-weight: 600; font-size: 14px; }
+.legend .rank { display: none; }
+.legend .tag { font-size: 14px; }
+.quicklinks .arrow { display: none; }
+
+/* ---------- Photos and video ---------- */
+.photo figcaption, .thumb { background-image: none !important; }
+.photo figcaption { background: var(--navy) !important; }
+.gal figcaption b { font-size: 15px; }
+
+/* ---------- Hub: next game card ---------- */
+.nu-top { font-family: var(--body); font-weight: 800; font-size: 15px; background: var(--royal); color: #fff; }
+.nu-when { color: var(--royal); font-size: 14px; }
+.nu-logo { border: 0; }
+.clock { gap: 0; }
+.cl { background: none; color: var(--navy); text-align: left; padding: 0; }
+.cl span { font-size: 13px; color: var(--muted); }
+.clock-live { background: none; color: var(--win); text-align: left; padding: 0; font-size: 26px; }
+.nu-extra { border-top: 0; }
+.nu-acts a { border: 0; padding: 0; margin-left: 12px; font-family: var(--body); font-weight: 700; font-size: 14.5px; }
+.nu-acts a:hover { background: none; color: var(--navy); }
+.nu-foot { border-top: 0; font-family: var(--display); font-weight: 800; font-size: 18px; }
+
+/* ---------- Hub: team cards (names sit under the photos) ---------- */
+.tc-media { background: var(--royal); }
+.tc-media::after, .tc-media.art::before { display: none; }
+.tc-head { position: static; color: var(--navy); }
+.tc-head h3 { font-size: 36px; }
+.feature .tc-head h3 { font-size: 52px; }
+.tc-blurb { display: none; }
+.tc-rank { font-size: 14px; font-weight: 600; }
+.tc-go { font-family: var(--display); font-weight: 800; font-size: 18px; }
+.tc-go span[aria-hidden] { display: none; }
+.team-card.sp-glow { animation: none; }
+
+/* ---------- Hub: coming up, results, tradition ---------- */
+.wk-date { background: none; color: var(--navy); text-align: left; padding: 0; }
+.wk-date span { color: var(--royal); font-size: 13px; }
+.wk-team { color: var(--muted); font-size: 13.5px; }
+.wk-ha { font-weight: 600; font-size: 13.5px; }
+.ls-top, .rd-top { font-size: 14px; }
+.ls-chip { font-family: var(--display); font-weight: 800; font-size: 24px; color: var(--ink); }
+.ls-chip.W { color: var(--win); }
+.ls-chip.L { color: var(--loss); }
+.ls-chip.T { color: var(--tie); }
+.trad-total { border-bottom: 0; }
+
+/* ---------- Hub: state tournament ---------- */
+.rd-chip { color: var(--royal); font-weight: 800; }
+.rd-chip.in { color: var(--win); }
+.rd-chip.bubble { color: #18479f; }
+.rd-chip.done { color: var(--muted); }
+.rd-dates { border-top: 0; }
+.bk-tabs { gap: 0; }
+.bk-tabs button { padding: 8px 2px 6px 0; }
+.block.alt .bk-tabs button { color: var(--on-dark); }
+.block.alt .bk-tabs button[aria-selected="true"] { color: #fff; border-bottom-color: #fff; }
+.block.alt .bk-tabs small, .block.alt .bk-tabs [aria-selected="true"] small { color: var(--on-dark); }
+.bk-road li { background: #fff; }
+.bk-scroll { border-top: 0; }
+.bf-top span:last-child { color: var(--gold); }
+.bf-logo.us, .bf-logo.dot { border: 0; }
+.bf-next { border-top: 0; }
+.bk-toggle { border: 2px solid #fff; background: #fff; color: var(--royal); font-weight: 800; font-size: 18px; border-radius: var(--r); }
+.bk-toggle:hover { background: #dce8ff; border-color: #dce8ff; }
+.bk-toggle[aria-expanded="true"] { background: #fff; color: var(--navy); border-color: #fff; }
+
+/* ---------- Hub: big-game banner and game-day bar ---------- */
+.spotlight::before { filter: grayscale(1); opacity: .45; }
+.spotlight::after { background: rgba(11, 31, 77, .72); }
+.sp-label { font-family: var(--body); font-weight: 800; font-size: 16px; color: var(--gold); }
+.sp-flag { color: #fff; }
+.sp-flag.live { color: #ff7a70; }
+.sp-flag i { display: none; }
+.sp-vs { font-family: var(--body); font-weight: 700; font-size: 16px; }
+.sp-clock .cl + .cl { border-left: 0; }
+.sp-clock .cl small { font-family: var(--body); font-size: 13px; }
+.today { background: var(--navy) !important; }
+.today::before { display: none !important; }
+.td-flag { color: var(--gold); }
+.td-flag.live { color: #ff7a70; }
+.td-flag i { display: none; }
+.td-g { border: 0; }
+.td-g.on, .td-g.sp-glow { border: 0; animation: none; }
+
+/* ---------- Get-the-app sheet ---------- */
+.app-phone { background: var(--royal); }
+.app-phone::before { display: none; }
+.app-screen { background: #12306f; }
+.app-steps li, .app-steps .ic { border: 0; }
+
+/* ---------- Season story widget (injected by a script, so !important) ---------- */
+.st-play { border-width: 2px !important; font-family: var(--display) !important; font-weight: 800 !important; text-transform: uppercase !important; border-radius: var(--r) !important; }
+.st-now { border-left: 0 !important; }
+.st-now em { background: none !important; padding: 0 !important; }
+.st-now em.W { color: #4fd18b !important; } .st-now em.L { color: #ff7a70 !important; }
+.st-form i { background: none !important; width: auto !important; }
+.st-form i.W { color: #4fd18b !important; } .st-form i.L { color: #ff7a70 !important; } .st-form i.T { color: var(--on-dark) !important; }
+
+@media (max-width: 640px) {
+  .hero, .hub-hero { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 26px), 0 100%); }
+  .hero::after { font-size: 120px; }
+  .timeline .item { grid-template-columns: 1fr; gap: 2px; }
+  .hs { margin-right: 26px; }
+  .banner { padding-left: 6px; padding-right: 6px; }
+  .banner .y { font-size: 36px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card.lift:hover, .team-card:hover, .btn:hover { transform: none; }
+  .team-card:hover .tc-media img { transform: none; }
+}

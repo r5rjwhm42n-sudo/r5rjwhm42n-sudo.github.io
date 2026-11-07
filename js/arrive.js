@@ -19,8 +19,8 @@
   css.textContent = `
     html.tx-arriving body::after {
       content: ""; position: fixed; inset: 0; z-index: 10000; pointer-events: none;
-      background: linear-gradient(115deg, #0b1f4d 0%, #18479f 62%, #2459c2 100%);
-      box-shadow: 0 7px 0 #f0b429;
+      background: #0b1f4d;
+      box-shadow: 0 7px 0 #7fb2ff;
     }
     html.tx-arriving.tx-lift body::after {
       transform: translateY(calc(-100% - 10px));

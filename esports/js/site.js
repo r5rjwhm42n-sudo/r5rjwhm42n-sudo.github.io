@@ -194,8 +194,8 @@
     return `
       <div class="modal-head">
         <button class="modal-close" aria-label="Close">✕</button>
-        <div class="eyebrow">${dateLong(m.date)} · ${esc(g.short)} · ${esc(stage(m))}${m.off ? ` · ${esc(m.off)}` : m.result ? ` · ${outcome[m.result]}` : ""}</div>
         ${head}
+        <div class="eyebrow">${dateLong(m.date)} · ${esc(g.short)} · ${esc(stage(m))}${m.off ? ` · ${esc(m.off)}` : m.result ? ` · ${outcome[m.result]}` : ""}</div>
       </div>
       <div class="modal-body">${body}</div>`;
   }
@@ -253,8 +253,8 @@
         ? (opp ? `Falcons beat ${esc(opp)} ${lastG.us}–${lastG.them} in ${esc(g.short)}` : `Falcons win ${esc(g.short)} series, ${lastG.us}–${lastG.them}`)
         : (opp ? `Falcons fall to ${esc(opp)}, ${lastG.them}–${lastG.us}, in ${esc(g.short)}` : `Falcons drop ${esc(g.short)} series, ${lastG.them}–${lastG.us}`);
       $("#hero-story").innerHTML = `
-        <div class="eyebrow">Final · ${dateShort(lastG.date)} · ${esc(stage(lastG))}</div>
         <h1>${headline}</h1>
+        <div class="eyebrow">Final · ${dateShort(lastG.date)} · ${esc(stage(lastG))}</div>
         <p>${esc(lastG.summary || `The Falcons are ${rec(of(g.id))} in ${g.short} and ${record} across all games this season.`)}</p>
         <div class="btn-row">
           <button class="btn btn-primary" data-game="${lastG.id}">Match recap</button>
@@ -271,12 +271,12 @@
         <button class="card scoreboard" data-game="${lastG.id}" aria-label="Last match details">
           <div class="sb-top"><span>Final</span><span>${esc(g.short)} · ${esc(stage(lastG))}</span></div>
           ${row("Danvers", lastG.us, r === "W", true)}${row(opp || "Opponent", lastG.them, r === "L", false)}
-          <div class="sb-foot"><span>${esc(detail)}</span><b>Details ›</b></div>
+          <div class="sb-foot"><span>${esc(detail)}</span><b>Details</b></div>
         </button>`;
     } else {
       $("#hero-story").innerHTML = `
-        <div class="eyebrow">${esc(TEAM.seasonLabel)} season</div>
         <h1>${esc(TEAM.name)} ${esc(TEAM.sport)}</h1>
+        <div class="eyebrow">${esc(TEAM.seasonLabel)} season</div>
         <p>${esc(GAMES.map((g) => g.name).join(", ").replace(/, ([^,]*)$/, " and $1"))}. The Falcons compete online in the Massachusetts state league, with a state title on the line in every game.</p>
         <div class="btn-row">
           <a class="btn btn-primary" href="schedule.html">Full schedule</a>
@@ -290,7 +290,7 @@
               <span class="dot">${g.size}v${g.size}</span>
               <span class="nm">${esc(g.short)}</span><span class="pts">${esc(g.day.slice(0, 3))}</span>
             </div>`).join("")}
-          <div class="sb-foot"><span>Regular season ${fmt(SEASON_DAYS[0], { month: "short", day: "numeric" })} – ${fmt(SEASON_DAYS[SEASON_DAYS.length - 1], { month: "short", day: "numeric" })}</span><b>Schedule ›</b></div>
+          <div class="sb-foot"><span>Regular season ${fmt(SEASON_DAYS[0], { month: "short", day: "numeric" })} – ${fmt(SEASON_DAYS[SEASON_DAYS.length - 1], { month: "short", day: "numeric" })}</span><b>Schedule</b></div>
         </a>`;
     }
 

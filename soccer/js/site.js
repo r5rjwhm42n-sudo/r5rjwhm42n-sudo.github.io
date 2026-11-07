@@ -157,7 +157,7 @@
           <div class="w">${g.dateTbd ? "&nbsp;" : fmt(g.date, { weekday: "short" })}</div>
         </div>
         <div>
-          <div class="opp"><small>${vs(g).toUpperCase()}</small>${esc(g.opponent)}</div>
+          <div class="opp"><small>${vs(g)}</small>${esc(g.opponent)}</div>
           <div class="meta">
             <span class="tag ${g.home ? "home" : ""}">${g.home ? "Home" : "Away"}</span>
             <span class="tag">${kind(g)}</span>
@@ -212,8 +212,8 @@
     return `
       <div class="modal-head">
         <button class="modal-close" aria-label="Close">✕</button>
-        <div class="eyebrow">${esc(dayOf(g, dateLong))} · ${g.home ? "Home" : "Away"} · ${kind(g)}${g.cancelled ? " · Cancelled" : g.result ? ` · ${outcome[g.result]}` : ""}</div>
         ${head}
+        <div class="eyebrow">${esc(dayOf(g, dateLong))} · ${g.home ? "Home" : "Away"} · ${kind(g)}${g.cancelled ? " · Cancelled" : g.result ? ` · ${outcome[g.result]}` : ""}</div>
       </div>
       <div class="modal-body">${body}</div>`;
   }
@@ -252,8 +252,8 @@
         T: `Falcons and ${esc(prev.opponent)} play to a ${prev.us}–${prev.them} draw`
       }[prev.result];
       $("#hero-story").innerHTML = `
-        <div class="eyebrow">Final · ${dateShort(prev.date)}</div>
         <h1>${headline}</h1>
+        <div class="eyebrow">Final · ${dateShort(prev.date)}</div>
         <p>${esc(prev.summary || `The Falcons are ${record} through ${plural(played.length, "game")}.`)}</p>
         <div class="btn-row">
           <button class="btn btn-primary" data-game="${prev.id}">Game recap</button>
@@ -271,12 +271,12 @@
         <button class="card scoreboard" data-game="${prev.id}" aria-label="Last game details">
           <div class="sb-top"><span>Final</span><span>${prev.home ? "Home" : "Away"} · ${kind(prev)}</span></div>
           ${prev.home ? opp + dan : dan + opp}
-          <div class="sb-foot"><span>${scorers ? `Goals: ${esc(scorers)}` : ""}</span><b>Game details ›</b></div>
+          <div class="sb-foot"><span>${scorers ? `Goals: ${esc(scorers)}` : ""}</span><b>Game details</b></div>
         </button>`;
     } else {
       $("#hero-story").innerHTML = `
-        <div class="eyebrow">${SEASON} season</div>
         <h1>${esc(SCHOOL.name)} ${esc(T.label)}</h1>
+        <div class="eyebrow">${SEASON} season</div>
         <p>Scores, stats, history and highlights from ${esc(SCHOOL.school)} ${esc(T.label.toLowerCase())}.</p>
         <div class="btn-row"><a class="btn btn-primary" href="${to("schedule.html")}">Full schedule</a></div>`;
     }

@@ -121,7 +121,7 @@
           <div class="w">${m.dateTbd ? "&nbsp;" : fmt(m.date, { weekday: "short" })}</div>
         </div>
         <div>
-          <div class="opp">${m.name ? esc(m.name) : `<small>${vs(m).toUpperCase()}</small>${esc(m.opponent)}`}</div>
+          <div class="opp">${m.name ? esc(m.name) : `<small>${vs(m)}</small>${esc(m.opponent)}`}</div>
           <div class="meta">
             ${where(m) ? `<span class="tag ${m.home ? "home" : ""}">${where(m)}</span>` : ""}
             <span class="tag">${kind(m)}</span>
@@ -156,8 +156,8 @@
     return `
       <div class="modal-head">
         <button class="modal-close" aria-label="Close">✕</button>
-        <div class="eyebrow">${[dateLong(m), where(m), kind(m)].filter(Boolean).join(" · ")}${m.tag ? ` · ${esc(m.tag)}` : ""}${m.cancelled ? " · Cancelled" : ""}</div>
         <h2>${title(m)} ${esc(m.mascot || "")}</h2>
+        <div class="eyebrow">${[dateLong(m), where(m), kind(m)].filter(Boolean).join(" · ")}${m.tag ? ` · ${esc(m.tag)}` : ""}${m.cancelled ? " · Cancelled" : ""}</div>
         ${isDone(m) ? `<div class="modal-res">${SQUADS.filter(([k]) => ran(m, k)).map(([k, label]) => `<span>${label} <b>${resText(m[k])}</b></span>`).join("")}<span class="low">${m.opponent ? "Low score wins" : esc(m.distance || "")}</span></div>` : ""}
       </div>
       <div class="modal-body">${body}</div>`;
@@ -202,8 +202,8 @@
         : w ? `Falcons split with ${esc(last.opponent)}`
         : `Falcons fall to ${esc(last.opponent)}`;
       $("#hero-story").innerHTML = `
-        <div class="eyebrow">Final · ${dateShort(last)}</div>
         <h1>${head}</h1>
+        <div class="eyebrow">Final · ${dateShort(last)}</div>
         <p>${esc(last.summary || "")}</p>
         <div class="btn-row">
           <button class="btn btn-primary" data-meet="${last.id}">Meet recap</button>
@@ -227,12 +227,12 @@
               <span class="pts">${r.place ? ord(r.place) : top?.place ? ord(top.place) : "–"}</span>
             </div>`;
           }).join("")}
-          <div class="sb-foot"><span>${esc(last.opponent ? firsts.join(" · ") : last.site || "")}</span><b>Meet recap ›</b></div>
+          <div class="sb-foot"><span>${esc(last.opponent ? firsts.join(" · ") : last.site || "")}</span><b>Meet recap</b></div>
         </button>`;
     } else {
       $("#hero-story").innerHTML = `
-        <div class="eyebrow">${TEAM.season} season</div>
         <h1>${esc(TEAM.name)} Cross Country</h1>
+        <div class="eyebrow">${TEAM.season} season</div>
         <p>Results, runners, history and photos from ${esc(TEAM.school)} boys and girls cross country.</p>
         <div class="btn-row"><a class="btn btn-primary" href="schedule.html">Full schedule</a></div>`;
     }

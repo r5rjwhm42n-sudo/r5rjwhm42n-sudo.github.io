@@ -103,7 +103,7 @@
           <div class="w">${g.dateTbd ? "&nbsp;" : fmt(g.date, { weekday: "short" })}</div>
         </div>
         <div>
-          <div class="opp"><small>${vs(g).toUpperCase()}</small>${esc(g.opponent)}</div>
+          <div class="opp"><small>${vs(g)}</small>${esc(g.opponent)}</div>
           <div class="meta">
             <span class="tag ${g.home ? "home" : ""}">${g.home ? "Home" : "Away"}</span>
             <span class="tag">${kind(g)}</span>
@@ -150,8 +150,8 @@
     return `
       <div class="modal-head">
         <button class="modal-close" aria-label="Close">✕</button>
-        <div class="eyebrow">${esc(dayOf(g, dateLong))} · ${g.home ? "Home" : "Away"} · ${kind(g)}${g.cancelled ? " · Cancelled" : g.result ? ` · ${g.result === "W" ? "Win" : "Loss"}` : ""}</div>
         ${head}
+        <div class="eyebrow">${esc(dayOf(g, dateLong))} · ${g.home ? "Home" : "Away"} · ${kind(g)}${g.cancelled ? " · Cancelled" : g.result ? ` · ${g.result === "W" ? "Win" : "Loss"}` : ""}</div>
       </div>
       <div class="modal-body">${body}</div>`;
   }
@@ -193,8 +193,8 @@
       const slug = big.opponent.toLowerCase().replace(/[^a-z0-9]+/g, "-");
       $(".hero-home").classList.add("spot");
       $("#hero-story").innerHTML = `
-        <div class="eyebrow spot-eyebrow">${esc(big.tag || sp.kicker)} · ${esc(when)} ${timeOf(big.date)}</div>
         <h1>Danvers ${vs(big)} <em>${esc(big.opponent)}</em></h1>
+        <div class="eyebrow spot-eyebrow">${esc(big.tag || sp.kicker)} · ${esc(when)} ${timeOf(big.date)}</div>
         <p>${esc(sp.blurb)}</p>
         <div class="btn-row">
           ${sp.watch ? `<a class="btn btn-gold" href="${esc(sp.watch)}" target="_blank" rel="noopener">Watch live</a>` : ""}
@@ -205,13 +205,13 @@
           <div class="sb-top"><span>${esc(big.tag || sp.kicker)}</span><span>${esc(when)}</span></div>
           <div class="sb-row"><img src="${LOGO}" alt=""><span class="nm">Danvers</span><span class="rec">${record}</span></div>
           <div class="sb-row"><img src="../images/opponents/${slug}.png" alt="" class="opp-img" onerror="this.style.visibility='hidden'"><span class="nm">${esc(big.opponent)}</span><span class="rec">${esc((sp.oppRecord || "").split(" · ")[0])}</span></div>
-          <div class="sb-foot"><span>${vs(big) === "at" ? "At " : ""}${esc(big.site)} · ${timeOf(big.date)}</span><b>Preview ›</b></div>
+          <div class="sb-foot"><span>${vs(big) === "at" ? "At " : ""}${esc(big.site)} · ${timeOf(big.date)}</span><b>Preview</b></div>
         </button>`;
     } else if (last) {
       const won = last.result === "W";
       $("#hero-story").innerHTML = `
-        <div class="eyebrow">Final · ${dateShort(last.date)}</div>
         <h1>${won ? `Falcons beat ${esc(last.opponent)} ${last.us}–${last.them}, move to ${record}` : `Falcons fall to ${esc(last.opponent)}, ${last.them}–${last.us}`}</h1>
+        <div class="eyebrow">Final · ${dateShort(last.date)}</div>
         <p>${esc(last.summary || "")}</p>
         <div class="btn-row">
           <button class="btn btn-primary" data-game="${last.id}">Game recap</button>
@@ -228,12 +228,12 @@
         <button class="card scoreboard" data-game="${last.id}" aria-label="Last game details">
           <div class="sb-top"><span>Final</span><span>${last.home ? "Home" : "Away"} · ${kind(last)}</span></div>
           ${last.home ? opp + dan : dan + opp}
-          <div class="sb-foot"><span>${esc((last.performers || []).slice(0, 2).map((p) => `${p.name.split(" ").pop()}: ${p.line}`).join(" · "))}</span><b>Box score ›</b></div>
+          <div class="sb-foot"><span>${esc((last.performers || []).slice(0, 2).map((p) => `${p.name.split(" ").pop()}: ${p.line}`).join(" · "))}</span><b>Box score</b></div>
         </button>`;
     } else {
       $("#hero-story").innerHTML = `
-        <div class="eyebrow">${TEAM.season} season</div>
         <h1>${esc(TEAM.name)} Football</h1>
+        <div class="eyebrow">${TEAM.season} season</div>
         <p>Scores, stats, history and highlights from ${esc(TEAM.school)} football.</p>
         <div class="btn-row"><a class="btn btn-primary" href="schedule.html">Full schedule</a></div>`;
     }

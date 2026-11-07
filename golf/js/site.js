@@ -138,7 +138,7 @@
           <div class="w">${fmt(g.date, { weekday: "short" })}</div>
         </div>
         <div>
-          <div class="opp">${vs(g) ? `<small>${vs(g).toUpperCase()}</small>` : ""}${esc(g.opponent)}</div>
+          <div class="opp">${vs(g) ? `<small>${vs(g)}</small>` : ""}${esc(g.opponent)}</div>
           <div class="meta">
             <span class="tag ${g.home ? "home" : ""}">${g.tournament ? "Tournament" : g.home ? "Home" : "Away"}</span>
             <span class="tag">${kind(g)}</span>
@@ -197,8 +197,8 @@
     return `
       <div class="modal-head">
         <button class="modal-close" aria-label="Close">✕</button>
-        <div class="eyebrow">${dateLong(g.date)} · ${g.tournament ? (g.league ? "NEC tournament" : "MIAA tournament") : `${g.home ? "Home" : "Away"} · ${kind(g)}`}${off(g) ? ` · ${offLabel(g)}` : g.result ? ` · ${outcome[g.result]}` : g.finish ? ` · ${g.finish} of ${g.fieldSize}` : ""}</div>
         ${head}
+        <div class="eyebrow">${dateLong(g.date)} · ${g.tournament ? (g.league ? "NEC tournament" : "MIAA tournament") : `${g.home ? "Home" : "Away"} · ${kind(g)}`}${off(g) ? ` · ${offLabel(g)}` : g.result ? ` · ${outcome[g.result]}` : g.finish ? ` · ${g.finish} of ${g.fieldSize}` : ""}</div>
       </div>
       <div class="modal-body">${body}</div>`;
   }
@@ -235,8 +235,8 @@
 
     if (lastG?.finish) {
       $("#hero-story").innerHTML = `
-        <div class="eyebrow">Final · ${dateShort(lastG.date)}</div>
         <h1>Falcons finish ${esc(lastG.finish)} at the ${esc(lastG.opponent)}</h1>
+        <div class="eyebrow">Final · ${dateShort(lastG.date)}</div>
         <p>${esc(lastG.summary || "")}</p>
         <div class="btn-row">
           <button class="btn btn-primary" data-game="${lastG.id}">Full results</button>
@@ -249,7 +249,7 @@
           ${(lastG.field || []).map(([t, n], i) => `
             <div class="sb-row"><span class="dot">${i + 1}</span><span class="nm">${esc(t)}</span><span class="pts">${n}</span></div>`).join("")}
           <div class="sb-row win"><img src="${LOGO}" alt=""><span class="nm">${esc(lastG.finish)} Danvers</span><span class="pts">${lastG.us}</span></div>
-          <div class="sb-foot"><span>${esc(tops.join(" · "))}</span><b>Leaderboard ›</b></div>
+          <div class="sb-foot"><span>${esc(tops.join(" · "))}</span><b>Leaderboard</b></div>
         </button>`;
     } else if (lastG) {
       const r = lastG.result;
@@ -257,8 +257,8 @@
         : r === "T" ? `Falcons and ${esc(lastG.opponent)} finish level, ${lastG.us}–${lastG.them}`
         : `Falcons fall to ${esc(lastG.opponent)}, ${lastG.them}–${lastG.us}`;
       $("#hero-story").innerHTML = `
-        <div class="eyebrow">Final · ${dateShort(lastG.date)}</div>
         <h1>${headline}</h1>
+        <div class="eyebrow">Final · ${dateShort(lastG.date)}</div>
         <p>${esc(lastG.summary || "")}</p>
         <div class="btn-row">
           <button class="btn btn-primary" data-game="${lastG.id}">Match recap</button>
@@ -278,12 +278,12 @@
         <button class="card scoreboard" data-game="${lastG.id}" aria-label="Last match details">
           <div class="sb-top"><span>Final</span><span>${lastG.home ? "Home" : "Away"} · ${kind(lastG)} · ${FORMAT[lastG.format]}</span></div>
           ${lastG.home ? opp + dan : dan + opp}
-          <div class="sb-foot"><span>${esc(tops.slice(0, 2).join(" · "))}</span><b>Scorecard ›</b></div>
+          <div class="sb-foot"><span>${esc(tops.slice(0, 2).join(" · "))}</span><b>Scorecard</b></div>
         </button>`;
     } else {
       $("#hero-story").innerHTML = `
-        <div class="eyebrow">${TEAM.season} season</div>
         <h1>${esc(TEAM.name)} ${esc(TEAM.sport)}</h1>
+        <div class="eyebrow">${TEAM.season} season</div>
         <p>Scores, results, history and coverage of ${esc(TEAM.school)} golf.</p>
         <div class="btn-row"><a class="btn btn-primary" href="schedule.html">Full schedule</a></div>`;
     }
