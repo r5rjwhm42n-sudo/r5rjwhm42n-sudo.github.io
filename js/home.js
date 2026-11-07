@@ -132,6 +132,7 @@
   const resText = (e) => (e.result ? `${e.result} ${e.score}` : e.score || "Final");
 
   rotatePhotos();
+  heroSlides();
   lightbox();
 
   Promise.all(FOLDERS.map(load)).then((all) => {
@@ -165,7 +166,7 @@
     renderSpotlight(all[FOLDERS.indexOf("football")]);
     renderHeroStats(S, UPCOMING);
     renderCards(S);
-    renderWeek(UPCOMING.slice(0, 8));
+    renderMatchCentre(FINALS.slice(0, 8), UPCOMING.slice(0, 12), EVENTS);
     renderLatest(S);
     renderTitles(S);
     renderGallery(S);
@@ -384,19 +385,49 @@
     });
   }
 
-  /* ---------- Coming up ---------- */
-  function renderWeek(list) {
+  /* ---------- Match Centre: recent results, then what's next, in one row ---------- */
+  function renderMatchCentre(finals, upcoming, events) {
     const box = $("#week-list");
-    if (!list.length) { box.innerHTML = `<p class="empty">No games on the calendar right now. Check each team's schedule for the postseason.</p>`; return; }
-    box.innerHTML = list.map((e) => `<a class="wk card lift" href="${esc(e.href)}">
-        <div class="wk-date"><span>${fmt(e.date, { weekday: "short" })}</span><b>${fmt(e.date, { day: "numeric" })}</b><span>${fmt(e.date, { month: "short" })}</span></div>
-        <div class="wk-main">
-          <div class="wk-team"><svg aria-hidden="true"><use href="#i-${e.sport}"/></svg>${esc(e.team)}</div>
-          <div class="wk-title">${esc(e.title)}</div>
-          <div class="wk-meta">${[timeOf(e), e.site].filter(Boolean).map(esc).join(" · ")}</div>
-        </div>
-        ${e.home ? `<span class="wk-ha home">Home</span>` : e.home === false ? `<span class="wk-ha">Away</span>` : ""}
-      </a>`).join("");
+    if (!finals.length && !upcoming.length) { box.innerHTML = `<p class="empty">No games on the calendar right now. Check each team's schedule for the postseason.</p>`; return; }
+    const crest = `<span class="mc-crest"><img src="images/falcons-logo.png" alt=""></span>`;
+    const opp = (e) => (window.DFA && e.opponent ? DFA.badge(e.opponent, "md") : `<span class="mc-crest none"></span>`);
+    const sideUs = `<div class="mc-side">${crest}<b>Danvers</b></div>`;
+    const sideThem = (e) => `<div class="mc-side">${opp(e)}<b>${esc(e.opponent)}</b></div>`;
+    /* a meet's write-up entry knows both squads' places; per-squad result items don't */
+    const meetOf = (e) => (e.sport === "cross-country" ? events.find((m) => m.sport === "cross-country" && m.date === e.date && m.title === e.title) : null);
+    const seen = new Set();
+    const finalCards = [...finals].reverse().filter((e) => {
+      const key = `${e.sport}|${e.date}|${e.title}`;   // one card per cross country meet, not one per squad
+      if (seen.has(key)) return false;
+      seen.add(key); return true;
+    }).map((e) => {
+      const m = meetOf(e);
+      const parts = m?.squadResults?.length ? m.squadResults.map(([lab, r, sc]) => `<span class="${r}">${lab} ${r} ${sc}</span>`)
+        : m?.squadPlaces?.length ? m.squadPlaces.map(([lab, p]) => `<span>${lab} ${ord(p)}</span>`)
+        : [`<span class="${resClass(e.result)}">${esc(resText(e))}</span>`];
+      const head = e.opponent && !e.tournament && !m ? `<div class="mc-teams">${sideUs}<div class="mc-mid mc-score">${parts.join("")}</div>${sideThem(e)}</div>`
+        : `<div class="mc-event"><b>${esc(e.title)}</b><div class="mc-score">${parts.join("")}</div></div>`;
+      return `<a class="mc-card final" href="${esc(e.href)}">
+        <div class="mc-top"><span>${esc(e.sport === "cross-country" ? "Cross Country" : e.team)}</span><span>Final · ${fmt(e.date, { month: "short", day: "numeric" })}</span></div>
+        ${head}
+        <div class="mc-foot">${esc(e.site || "")}</div></a>`;
+    });
+    const upCards = upcoming.map((e, i) => {
+      const when = `<b>${fmt(e.date, { weekday: "short" })}</b>${esc(fmt(e.date, { month: "short", day: "numeric" }))}${e.timeTbd ? "" : `<span>${esc(timeOf(e))}</span>`}`;
+      const head = e.opponent && !e.tournament ? `<div class="mc-teams">${sideUs}<div class="mc-mid mc-when">${when}</div>${sideThem(e)}</div>`
+        : `<div class="mc-event"><b>${esc(e.title)}</b><div class="mc-when">${when}</div></div>`;
+      return `<a class="mc-card upcoming${i === 0 ? " next" : ""}" href="${esc(e.href)}">
+        <div class="mc-top"><span>${esc(e.team)}</span><span>${i === 0 ? "Next up" : e.home ? "Home" : e.home === false ? "Away" : ""}</span></div>
+        ${head}
+        <div class="mc-foot">${esc(e.site || "")}</div></a>`;
+    });
+    box.innerHTML = finalCards.join("") + upCards.join("");
+    /* open on the next game, with the recent results a scroll to the left */
+    const first = $(".mc-card.next", box);
+    if (first) box.scrollLeft = first.offsetLeft - box.offsetLeft - 4;
+    const step = () => Math.max(260, box.clientWidth * 0.8);
+    $(".mc-prev")?.addEventListener("click", () => box.scrollBy({ left: -step(), behavior: calm ? "auto" : "smooth" }));
+    $(".mc-next")?.addEventListener("click", () => box.scrollBy({ left: step(), behavior: calm ? "auto" : "smooth" }));
   }
 
   /* ---------- Latest result from every team ---------- */
@@ -501,6 +532,29 @@
       if (calm) return;
       setTimeout(() => setInterval(() => show((at = (at + 1) % imgs.length)), 5000), i * 700);
     });
+  }
+
+  /* ---------- Hero: one team photo at a time, full width, slowly zooming ---------- */
+  function heroSlides() {
+    const imgs = $$(".slides .slide");
+    const name = $("#slide-team"), dots = $("#slide-dots");
+    if (!imgs.length || !name) return;
+    let at = 0, timer = null;
+    dots.innerHTML = imgs.map((im, i) => `<button type="button" aria-label="Show the ${esc(im.dataset.team)} photo"${i === 0 ? ' aria-current="true"' : ""}></button>`).join("");
+    const show = (n) => {
+      at = (n + imgs.length) % imgs.length;
+      imgs.forEach((im, i) => { im.classList.toggle("on", i === at); if (i === at) im.loading = "eager"; });
+      $$("button", dots).forEach((b, i) => b.toggleAttribute("aria-current", i === at));
+      name.textContent = imgs[at].dataset.team;
+      name.href = imgs[at].dataset.href;
+    };
+    const start = () => { if (!calm) timer = setInterval(() => show(at + 1), 6500); };
+    dots.addEventListener("click", (ev) => {
+      const i = $$("button", dots).indexOf(ev.target.closest("button"));
+      if (i < 0) return;
+      clearInterval(timer); show(i); start();
+    });
+    show(0); start();
   }
 
   /* ---------- Full-size team photos ---------- */

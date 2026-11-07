@@ -94,9 +94,9 @@
 
   let logo = null;
   const loadLogo = () => (logo = logo || new Promise((ok) => { const i = new Image(); i.onload = () => ok(i); i.onerror = () => ok(null); i.src = "images/falcons-logo.png"; }));
-  const fontsReady = () => Promise.all(['800 120px "Saira Condensed"', '700 40px "Saira Condensed"', '600 34px "Source Sans 3"', '700 34px "Source Sans 3"']
+  const fontsReady = () => Promise.all(['800 120px "Barlow Condensed"', '700 40px "Barlow Condensed"', '600 34px "Barlow"', '700 34px "Barlow"']
     .map((f) => document.fonts.load(f).catch(() => null)));
-  const D = '"Saira Condensed", "Arial Narrow", Impact, sans-serif', B = '"Source Sans 3", -apple-system, "Segoe UI", sans-serif';
+  const D = '"Barlow Condensed", "Arial Narrow", Impact, sans-serif', B = '"Barlow", -apple-system, "Segoe UI", sans-serif';
 
   async function draw(m) {
     const W = 1080, H = 1350, P = 92;
@@ -366,8 +366,6 @@
       hero.style.setProperty("--shot", `url("${src}")`);
       hero.classList.add("has-shot");
       if (!list[0]) hero.classList.add("team-shot");
-      /* the three stripes from the uniform, along the edge of the navy panel */
-      if (!hero.querySelector(".stripes")) hero.insertAdjacentHTML("afterbegin", '<span class="stripes" aria-hidden="true"><i></i><i></i><i></i></span>');
     }
     const grid = document.getElementById("photos");
     const credits = [...new Set(list.map((p) => p.credit).filter(Boolean))];
@@ -473,9 +471,8 @@
     .dfa-btn.solid:hover { background: #e6edfc; }
     .dfa-btn.ink { border-color: var(--royal); color: var(--royal); }
     .dfa-btn.ink:hover { background: #eef2fb; }
-    .hero.has-shot { background: var(--shot) right 32% / cover no-repeat, #0b1f4d; }   /* full-color photo; the navy text panel is drawn in premium.css */
-    .hero.team-shot { background-position: right 45%; }
-    @media (max-width: 720px) { .hero.has-shot { background-size: 100% auto; background-position: center top; } }
+    .hero.has-shot { background: var(--shot) center 32% / cover no-repeat, #06102a; }   /* full-width photo; the shade for the text is in premium.css */
+    .hero.team-shot { background-position: center 45%; }
     .dfa-credit { margin: 12px 0 0; font-size: 13.5px; color: var(--muted); }
     .dfa-credit a { color: var(--royal); font-weight: 600; }
     .game .opp .opp-badge { width: 38px; height: 38px; font-size: 15px; margin: -6px 10px 0 0; }

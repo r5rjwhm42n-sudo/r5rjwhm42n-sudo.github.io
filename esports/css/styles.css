@@ -16,8 +16,8 @@
   --tie: #6d7890;
   --r: 4px;
   --shadow: 0 1px 2px rgba(11, 31, 77, .06), 0 6px 18px rgba(11, 31, 77, .07);
-  --display: "Saira Condensed", "Arial Narrow", Impact, sans-serif;
-  --body: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --display: "Barlow Condensed", "Arial Narrow", Impact, sans-serif;
+  --body: "Barlow", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 * { box-sizing: border-box; }

@@ -19,7 +19,7 @@
 <meta name="twitter:image" content="https://danversfalconsathletics.org/images/og/hub.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="images/falcons-logo.png">
 <link rel="stylesheet" href="css/home.css">
 <link rel="stylesheet" href="css/transitions.css">
@@ -28,7 +28,6 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Falcons">
-<link rel="stylesheet" href="css/dark.css">
 <link rel="stylesheet" href="css/premium.css">
 </head>
 <body>
@@ -75,17 +74,16 @@
 <section class="spotlight" id="spotlight" hidden aria-label="Big game"></section>
 
 <section class="hub-hero">
-  <div class="mosaic" aria-hidden="true">
-    <img src="images/teams/football.jpg" alt="" style="--pos:50% 72%">
-    <img src="images/teams/girls-soccer.jpg" alt="" style="--pos:50% 46%">
-    <img src="images/teams/field-hockey.jpg" alt="" style="--pos:50% 58%">
-    <img src="images/teams/volleyball.jpg" alt="" style="--pos:50% 50%">
-    <img src="images/teams/boys-xc.jpg" alt="" style="--pos:50% 45%">
-    <img src="images/teams/boys-soccer.jpg" alt="" style="--pos:50% 60%">
-    <img src="images/teams/golf.jpg" alt="" style="--pos:50% 45%">
-    <img src="images/teams/girls-xc.jpg" alt="" style="--pos:50% 45%">
+  <div class="slides" aria-hidden="true">
+    <img class="slide on" src="images/teams/football.jpg" alt="" style="--pos:50% 72%" data-team="Football" data-href="football/">
+    <img class="slide" src="images/teams/girls-soccer.jpg" alt="" style="--pos:50% 46%" data-team="Girls Soccer" data-href="soccer/?team=girls" loading="lazy">
+    <img class="slide" src="images/teams/field-hockey.jpg" alt="" style="--pos:50% 58%" data-team="Field Hockey" data-href="field-hockey/" loading="lazy">
+    <img class="slide" src="images/teams/volleyball.jpg" alt="" style="--pos:50% 50%" data-team="Volleyball" data-href="volleyball/" loading="lazy">
+    <img class="slide" src="images/teams/boys-xc.jpg" alt="" style="--pos:50% 45%" data-team="Boys Cross Country" data-href="cross-country/" loading="lazy">
+    <img class="slide" src="images/teams/boys-soccer.jpg" alt="" style="--pos:50% 60%" data-team="Boys Soccer" data-href="soccer/?team=boys" loading="lazy">
+    <img class="slide" src="images/teams/golf.jpg" alt="" style="--pos:50% 45%" data-team="Golf" data-href="golf/" loading="lazy">
+    <img class="slide" src="images/teams/girls-xc.jpg" alt="" style="--pos:50% 45%" data-team="Girls Cross Country" data-href="cross-country/" loading="lazy">
   </div>
-  <span class="stripes" aria-hidden="true"><i></i><i></i><i></i></span>
   <div class="wrap hero-in">
     <div>
       <h1>Every Falcon,<br>every score</h1>
@@ -93,12 +91,20 @@
       <div class="hero-stats" id="hero-stats"></div>
       <div class="btn-row">
         <a class="btn btn-primary" href="#teams">See every team</a>
-        <a class="btn btn-ghost" href="#week">This week's games</a>
+        <a class="btn btn-ghost" href="#week">Match Centre</a>
       </div>
     </div>
     <div class="card next-up" id="next-up" hidden></div>
   </div>
+  <div class="wrap slide-bar"><a class="slide-team" id="slide-team" href="football/">Football</a><span class="slide-dots" id="slide-dots"></span></div>
 </section>
+
+<section class="block match" id="week"><div class="wrap">
+  <div class="section-head"><h2>Match Centre</h2>
+    <span class="mc-nav"><button type="button" class="mc-prev" aria-label="Earlier games">‹</button><button type="button" class="mc-next" aria-label="Later games">›</button></span></div>
+  <div class="mc-track" id="week-list"><p class="empty">Loading the schedule…</p></div>
+  <div class="light" data-addcal="all-sports" data-label="Add every Danvers game to your calendar"></div>
+</div></section>
 
 <section class="block" id="teams"><div class="wrap">
   <div class="section-head"><h2>Teams</h2></div>
@@ -190,12 +196,6 @@
       </div>
     </a>
   </div>
-</div></section>
-
-<section class="block alt" id="week"><div class="wrap">
-  <div class="section-head"><h2>Coming Up</h2></div>
-  <div class="week-grid" id="week-list"><p class="empty">Loading the schedule…</p></div>
-  <div class="light" data-addcal="all-sports" data-label="Add every Danvers game to your calendar"></div>
 </div></section>
 
 <section class="block" id="road" hidden></section>

@@ -147,7 +147,7 @@
   css.textContent = `
     .opp-badge { display: inline-grid; place-items: center; flex: none; width: 30px; height: 30px; border-radius: 50%; vertical-align: middle;
       background: var(--c1); color: #fff; box-shadow: inset 0 0 0 2.5px var(--c2), 0 0 0 1px rgba(11, 31, 77, .12);
-      font: 800 13px/1 "Saira Condensed", "Arial Narrow", sans-serif; letter-spacing: .02em; text-transform: uppercase; }
+      font: 800 13px/1 "Barlow Condensed", "Arial Narrow", sans-serif; letter-spacing: .02em; text-transform: uppercase; }
     .opp-badge.md { width: 46px; height: 46px; font-size: 19px; box-shadow: inset 0 0 0 3px var(--c2), 0 0 0 1px rgba(11, 31, 77, .12); }
     .opp-badge.lg { width: 56px; height: 56px; font-size: 22px; box-shadow: inset 0 0 0 3.5px var(--c2), 0 0 0 2px rgba(255, 255, 255, .9); }
     /* the logo sits inside the white circle at its own shape, with the school-color ring as the border */

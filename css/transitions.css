@@ -26,7 +26,7 @@
 /* ---------- the sport name ---------- */
 .tx-title {
   position: absolute; left: max(6vw, 20px); bottom: 11vh; right: 6vw;
-  font-family: "Saira Condensed", "Arial Narrow", Impact, sans-serif; text-transform: uppercase;
+  font-family: "Barlow Condensed", "Arial Narrow", Impact, sans-serif; text-transform: uppercase;
 }
 .tx-kicker {
   display: inline-block; background: #fff; color: #18479f; font-weight: 700; letter-spacing: .14em;
@@ -58,7 +58,7 @@
 /* ---------- the scene ---------- */
 .tx-scene { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; animation: tx-scene-out .32s 1.08s ease-in forwards; }
 @keyframes tx-scene-out { to { opacity: 0; transform: scale(1.04); } }
-.tx-scene text { font-family: "Saira Condensed", "Arial Narrow", Impact, sans-serif; font-weight: 800; }
+.tx-scene text { font-family: "Barlow Condensed", "Arial Narrow", Impact, sans-serif; font-weight: 800; }
 .tx .fx { transform-box: fill-box; transform-origin: center; }
 .tx .draw { stroke-dasharray: 1; stroke-dashoffset: 1; animation: tx-draw var(--t, .8s) var(--d, .2s) var(--e, cubic-bezier(.45, .05, .2, 1)) forwards; }
 .tx .fade { opacity: 0; animation: tx-fadein var(--t, .35s) var(--d, .1s) ease-out forwards; }
