@@ -154,7 +154,7 @@
           <div class="bf-top"><span>${esc(F.round)} · ${esc(x.division)}</span><span>${done ? `Final${F.note ? ` · ${esc(F.note)}` : ""}` : esc(F.when || "Date to be set")}</span></div>
           <div class="bf-teams">
             ${side(`<span class="bf-logo us"><img src="images/falcons-logo.png" alt=""></span>`, "Danvers", `No. ${F.d} seed`, F.us, F.won === true)}
-            <span class="bf-vs">${done ? "" : /Danvers/.test(F.site) ? "vs" : "at"}</span>
+            <span class="bf-vs">${done ? "" : !F.site || /Danvers/.test(F.site) ? "vs" : "at"}</span>
             ${opp}
           </div>
           ${F.site || (done && F.when) ? `<p class="bf-meta">${esc([done && F.when, F.site].filter(Boolean).join(" · "))}</p>` : ""}

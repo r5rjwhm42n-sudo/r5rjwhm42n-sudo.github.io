@@ -38,7 +38,7 @@ const TEAM = {
       { seeds: [5, 12], date: "2026-11-06T18:30", site: "Walpole High School, Walpole" },
       { seeds: [2, 15], date: "2026-11-06T19:00", site: "Doucette Stadium, Tewksbury" },
       { seeds: [7, 10], date: "2026-11-06T19:00", site: "Shepherd Hill Regional High School, Dudley" },
-      { seeds: [3, 14], date: "2026-11-06T18:30", site: "Morse Field, Danvers" },
+      { seeds: [3, 14], score: [30, 27], date: "2026-11-06T18:30", site: "Morse Field, Danvers" },
       { seeds: [6, 11], date: "2026-11-06T19:00", site: "Tantasqua Regional High School, Sturbridge" },
       { seeds: [1, 4], date: "2026-11-13T19:00" }
     ]
@@ -316,20 +316,22 @@ const SCHEDULE = [
       { label: "MaxPreps recap", url: "https://www.maxpreps.com/news/zjHXfVc68k2APXOq1YAq7g/football-recap-danvers-edges-past-peabody-veterans-memorial.htm" }
     ] },
   { id: 10, date: "2026-11-06T18:30", opponent: "Bedford", mascot: "Buccaneers",
-    home: true, league: false, postseason: true, round: "Round of 16", site: HOME_FIELD, result: null,
+    home: true, league: false, postseason: true, round: "Round of 16", site: HOME_FIELD,
+    result: "W", us: 30, them: 27,
+    summary: "No. 3 Danvers beat No. 14 Bedford 30–27 at Deering Stadium in the MIAA Division 4 Round of 16, staying unbeaten at 8–0 and moving on to host a quarterfinal.",
     tag: "State Tournament",
     spotlight: {
       kicker: "Division 4 Round of 16",
       blurb: "No. 3 Danvers opens the MIAA Division 4 state tournament at home against No. 14 Bedford. A win sends the Falcons to the quarterfinals.",
-      oppRecord: "5–3",
+      oppRecord: "5–4",   // Bedford's record after the game
       watch: REPLAY + "QnJvYWRjYXN0NDczNjA0NA%3D%3D",   // Hudl livestream
       tickets: { label: "Tickets", note: "Tickets on GoFan", url: "https://gofan.co/app/school/MA14553" },
       won: "On to the Quarterfinals",
       lost: "Final"
     },
-    notes: ["MIAA Division 4 Round of 16: No. 3 Danvers hosts No. 14 Bedford", "Bedford enters 5–3 on a two-game win streak: 55–30 over Wayland and 44–34 over Acton-Boxborough", "Danvers is No. 16 in the Globe Top 20 (Nov. 2), up from 17 after the Peabody win", "The Globe's playoff preview picks two-time defending champion Scituate as the Division 4 favorite and notes Danvers has the bracket's second-highest average margin of victory (11.8)", "The higher seed hosts through the quarterfinals", "The winner meets No. 6 Tantasqua Regional or No. 11 Wayland in the quarterfinals"],
+    notes: ["A 30–27 win in the MIAA Division 4 Round of 16 keeps Danvers unbeaten at 8–0", "Bedford's 27 points were the most Danvers allowed this season", "Bedford came in 5–3 on a two-game win streak: 55–30 over Wayland and 44–34 over Acton-Boxborough", "Danvers came in No. 16 in the Globe Top 20 (Nov. 2)", "As the higher seed, Danvers hosts its quarterfinal against the winner of No. 6 Tantasqua Regional and No. 11 Wayland"],
     sources: [
-      { label: "Livestream on Hudl", url: REPLAY + "QnJvYWRjYXN0NDczNjA0NA%3D%3D" },
+      { label: "Full-game replay on Hudl", url: REPLAY + "QnJvYWRjYXN0NDczNjA0NA%3D%3D" },
       { label: "MIAA Division 4 bracket", url: "https://www.miaa.net/miaa-football-2026-division-4-state-tournament" },
       { label: "Bedford's last game (MaxPreps)", url: "https://www.maxpreps.com/news/dfoe0HM3N0uRjdKP0slKdg/football-recap-bedford-handles-acton-boxborough.htm" },
       { label: "Globe Top 20, Nov. 2", url: "https://www.bostonglobe.com/2026/11/02/sports/eastern-mass-football-and-globe-top-20/" },
@@ -680,6 +682,7 @@ const LEGENDS = [
    --------------------------------------------------------------------- */
 const HL = HUDL_TEAM + "/boys-varsity-football/watch?ot=TEAM&oi=33811&hr=";
 const VIDEOS = [
+  { title: "Danvers vs. Bedford", sub: "Full-Game Replay · Nov. 6", season: 2026, len: "Replay", url: REPLAY + "QnJvYWRjYXN0NDczNjA0NA%3D%3D" },
   { title: "Danvers at Peabody", sub: "Full-Game Replay · Oct. 30", season: 2026, len: "Replay", by: "Peabody TV (YouTube)", url: "https://www.youtube.com/watch?v=JtIVvNMIin8" },
   { title: "Danvers vs. Salem", sub: "Full-Game Replay · Oct. 23", season: 2026, len: "Replay", url: REPLAY + "QnJvYWRjYXN0NDUwNzQ3NQ%3D%3D" },
   { title: "Danvers at Masconomet", sub: "Full-Game Replay · Oct. 16", season: 2026, len: "Replay", url: REPLAY + "QnJvYWRjYXN0NDUwNzQ3MQ%3D%3D" },

@@ -140,11 +140,13 @@ UID:football-10@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261106T183000
 DURATION:PT2H30M
-SUMMARY:Danvers Football vs Bedford
+SUMMARY:Danvers Football vs Bedford (W 30–27)
 LOCATION:Morse Field at Dr. Deering Stadium\, Danvers
-DESCRIPTION:MIAA state tournament · Round of 16\nTickets on GoFan: https:/
- /gofan.co/app/school/MA14553\nSchedule and results: https://danversfalcons
- athletics.org/football/schedule.html
+DESCRIPTION:MIAA state tournament · Round of 16\nFinal: Danvers 30\, Bedfo
+ rd 27\nNo. 3 Danvers beat No. 14 Bedford 30–27 at Deering Stadium in the
+  MIAA Division 4 Round of 16\, staying unbeaten at 8–0 and moving on to 
+ host a quarterfinal.\nSchedule and results: https://danversfalconsathletic
+ s.org/football/schedule.html
 URL:https://danversfalconsathletics.org/football/schedule.html
 END:VEVENT
 BEGIN:VEVENT
