@@ -7,19 +7,16 @@
        to the other sports (first visit: a one-time note under the button)
      · hover effects: button sweeps and arrows, a pull toward the mouse, card tilt
        and shine, and a dot-and-ring cursor (the last three for a mouse only)
-     · sound effects made in the browser (no sound files), with an on/off
-       switch in the header that every page remembers
+     · sound effects made in the browser (no sound files), always on
    ===================================================================== */
 (function () {
   const ROOT = new URL("..", document.currentScript.src).href;   // the site root, from /js/fx.js
   const ON_HUB = !!document.querySelector(".hub-hero");
   const OUT = 'target="_blank" rel="noopener"';
 
-  /* ---------- Sound: plays from the visitor's first click; the header switch turns it off ---------- */
+  /* ---------- Sound: always on; it plays from the visitor's first click, tap or key press (browsers allow nothing sooner) ---------- */
   const Sound = (function () {
-    let ctx = null, master = null, on = true, last = 0, kicked = false;
-    const read = () => { try { on = localStorage.getItem("df-sound") !== "off"; } catch (e) { /* storage blocked: stay on */ } };
-    read();
+    let ctx = null, master = null, last = 0, kicked = false;
     function make() {
       if (ctx) return;
       try {
@@ -40,14 +37,16 @@
         try { const s = ctx.createBufferSource(); s.buffer = ctx.createBuffer(1, 1, 22050); s.connect(ctx.destination); s.start(0); } catch (e) { /* not needed elsewhere */ }
       }
     }
-    /* Chrome and Edge let a page reached by clicking a link on this site play sound straight away, so a visitor
-       who has already clicked doesn't have to click again on every page; elsewhere this just waits for the next click */
+    /* a visitor who already clicked on this site may hear sound on the next page straight away where the
+       browser says so (Chrome, Edge, Firefox); everywhere else the player is made during the first click,
+       which is the one way Safari reliably allows */
     function wake() {
-      if (!on || ctx) return;
+      if (ctx) return;
       const policy = navigator.getAutoplayPolicy ? navigator.getAutoplayPolicy("audiocontext") : null;
+      const ua = navigator.userActivation;
       let fromHere = false;
       try { fromHere = new URL(document.referrer).origin === location.origin; } catch (e) { /* no referrer */ }
-      if (policy === "allowed" || (policy === null && fromHere)) make();
+      if (policy === "allowed" || (policy === null && fromHere && ua && ua.hasBeenActive)) make();
     }
     function ready() {
       if (!ctx) return false;
@@ -59,7 +58,7 @@
       return !ua || ua.isActive;
     }
     function tone(o) {
-      if (!on || !ready()) return;
+      if (!ready()) return;
       const t = ctx.currentTime + (o.delay || 0), osc = ctx.createOscillator(), g = ctx.createGain();
       osc.type = o.type || "sine";
       osc.frequency.setValueAtTime(o.f, t);
@@ -71,7 +70,7 @@
       osc.start(t); osc.stop(t + o.d + .03);
     }
     function noise(o) {
-      if (!on || !ready()) return;
+      if (!ready()) return;
       const t = ctx.currentTime, len = Math.floor(ctx.sampleRate * o.d), buf = ctx.createBuffer(1, len, ctx.sampleRate), data = buf.getChannelData(0);
       for (let i = 0; i < len; i++) data[i] = Math.random() * 2 - 1;
       const src = ctx.createBufferSource(), f = ctx.createBiquadFilter(), g = ctx.createGain();
@@ -86,16 +85,12 @@
       src.start(t); src.stop(t + o.d + .02);
     }
     return {
-      get on() { return on; },
-      set(v) { on = v; try { localStorage.setItem("df-sound", v ? "on" : "off"); } catch (e) { /* this page only */ } },
-      read,
       unlock,
       wake,
       revive() { if (ctx && ctx.state !== "running") ctx.resume().catch(() => {}); },
-      hover() { const n = performance.now(); if (n - last < 70) return; last = n; tone({ f: 2100, d: .035, g: .014, type: "triangle" }); },   // soft tick
+      hover() { const n = performance.now(); if (n - last < 70) return; last = n; tone({ f: 2100, d: .035, g: .024, type: "triangle" }); },   // soft tick
       click() { tone({ f: 660, f2: 320, d: .09, g: .055 }); },                                     // tap
       swish() { noise({ d: .34, g: .06, from: 500, to: 5600 }); },                                 // a menu opens, a tab changes
-      chime() { tone({ f: 784, d: .22, g: .035 }); tone({ f: 1175, d: .3, g: .03, delay: .08 }); tone({ f: 1568, d: .35, g: .02, delay: .16 }); },   // sound turned on
     };
   })();
 
@@ -285,6 +280,15 @@
        It goes when they open the Menu, close the note, or after 8 seconds, and never comes back. */
     const hint = menuHint(btn, name, pages);
 
+    /* the end of each section says what's next, with a bobbing arrow, so nobody stops scrolling too soon */
+    const parts = pages.filter((p) => p.id);
+    parts.forEach((p, n) => {
+      const next = parts[n + 1], sec = document.getElementById(p.id);
+      if (!next || !sec) return;
+      sec.insertAdjacentHTML("beforeend", `<div class="wrap fx-next-wrap"><a class="fx-next" href="#${next.id}" aria-label="Next up: ${next.label}">` +
+        `<span class="fx-next-k" aria-hidden="true">Next up</span><b aria-hidden="true">${next.label}</b><span class="fx-next-arrow" aria-hidden="true"></span></a></div>`);
+    });
+
     /* sections sit just below the sticky header when jumped to */
     const headRoom = () => document.documentElement.style.setProperty("--fx-head", `${header ? header.offsetHeight : 0}px`);
     headRoom();
@@ -447,11 +451,12 @@
   }, { passive: true });
   document.addEventListener("pointerout", (e) => { if (!e.relatedTarget) { untilt(); unpull(); } });
 
-  /* custom cursor (homepage and newsletter): a small dot, and a ring that follows a beat behind and grows over anything clickable */
+  /* custom cursor (homepage and newsletter): a small dot right on the mouse (it is the pointer; the normal one hides),
+     and a ring that follows a beat behind and grows over anything clickable */
   const CLICKABLE = `a[href], button, [role="button"], [role="tab"], input, select, textarea, label, summary, ${CARDS}`;
   /* rows and buttons that turn royal under the mouse, and buttons that turn white */
   const TURNS_DARK = ".game, .tb, .addcal.light .btn";
-  const TURNS_LIGHT = ".btn, .fx-menu-btn, .fx-menu-close, .fx-sound";
+  const TURNS_LIGHT = ".btn, .fx-menu-btn, .fx-menu-close";
   function onDark(el, x, y) {
     if (el.closest(TURNS_DARK)) return true;
     if (el.closest(TURNS_LIGHT)) return false;
@@ -482,6 +487,7 @@
     dot.setAttribute("aria-hidden", "true");
     ring.setAttribute("aria-hidden", "true");
     document.body.append(ring, dot);
+    document.documentElement.classList.add("fx-circle-pointer");   // the dot and circle replace the normal pointer (see fx.css)
     let mx = 0, my = 0, rx = 0, ry = 0, raf = 0, shown = false;
     const follow = () => {
       rx += (mx - rx) * .2;
@@ -500,8 +506,9 @@
     addEventListener("pointerover", (e) => {
       if (e.pointerType !== "mouse") return;
       const t = e.target;
-      /* windows that open on top of the page (videos, the app sheet) keep the normal pointer */
-      const away = t.tagName === "IFRAME" || !!t.closest("dialog[open]");
+      /* windows that open on top of the page (videos, the app sheet) and typing spots keep the normal pointer */
+      const away = t.tagName === "IFRAME" || !!t.closest("dialog[open]") ||
+        !!t.closest('input:not([type="checkbox"], [type="radio"], [type="range"], [type="button"], [type="submit"]), textarea, select, [contenteditable="true"]');
       const dark = !away && onDark(t, e.clientX, e.clientY);
       ring.classList.toggle("gone", away);
       dot.classList.toggle("gone", away);
@@ -524,39 +531,7 @@
     document.documentElement.classList.add("fx-sport-cursor");
   } else if (MOUSE.matches && MOTION_OK.matches) cursor();
 
-  /* ---------- Sound effects ---------- */
-  /* the on/off switch, in the header next to search */
-  /* (on small phones the team-site header is full, so there the switch sits at the top of the Menu instead) */
-  function soundSwitch() {
-    const bar = document.querySelector(".site-header .hbar");
-    if (!bar) return;
-    const make = (extra) => {
-      const sw = document.createElement("button");
-      sw.type = "button";
-      sw.className = `fx-sound${extra}`;
-      sw.setAttribute("aria-label", "Sound effects");
-      sw.innerHTML = '<span class="fx-eq" aria-hidden="true"><i></i><i></i><i></i></span><span class="fx-sound-label"></span>';
-      sw.addEventListener("click", () => { Sound.set(!Sound.on); paint(); if (Sound.on) Sound.chime(); });
-      return sw;
-    };
-    const switches = [make("")];
-    bar.insertBefore(switches[0], bar.querySelector(".dfs-open, .fx-menu-btn"));
-    const close = document.querySelector(".fx-menu-close");
-    if (close) {
-      switches.push(make(" fx-sound-menu"));
-      close.before(switches[1]);
-    }
-    const paint = () => switches.forEach((sw) => {
-      sw.setAttribute("aria-pressed", String(Sound.on));
-      sw.querySelector(".fx-sound-label").textContent = Sound.on ? "Sound on" : "Sound off";
-    });
-    paint();
-    /* coming back with the browser's back button, or a change in another tab */
-    addEventListener("pageshow", () => { Sound.read(); paint(); });
-    addEventListener("storage", (e) => { if (e.key === "df-sound") { Sound.read(); paint(); } });
-  }
-  soundSwitch();
-
+  /* ---------- Sound effects (always on) ---------- */
   /* sound can start on any click, tap or key press (browsers differ on which one counts) */
   Sound.wake();
   ["pointerdown", "pointerup", "mousedown", "touchend", "click"].forEach((type) => document.addEventListener(type, Sound.unlock, { capture: true, passive: true }));
@@ -564,7 +539,7 @@
 
   /* a tap on every click: on press with a mouse; on phones when the tap lands (that's when they allow sound) */
   let pressType = "mouse";
-  const tapTarget = (t) => !t.closest(".fx-sound") && t.closest("a, button");
+  const tapTarget = (t) => t.closest("a, button");
   document.addEventListener("pointerdown", (e) => {
     pressType = e.pointerType;
     if (e.pointerType === "mouse" && tapTarget(e.target)) Sound.click();
@@ -576,7 +551,7 @@
   document.addEventListener("keydown", (e) => {
     Sound.unlock();
     const a = document.activeElement;
-    if ((e.key === "Enter" || e.key === " ") && a && a.matches("a, button") && !a.matches(".fx-sound")) Sound.click();
+    if ((e.key === "Enter" || e.key === " ") && a && a.matches("a, button")) Sound.click();
   }, true);
 
   /* a soft tick on hover (mouse only) */
@@ -594,7 +569,7 @@
   let pressed = null;
   document.addEventListener("click", (e) => {
     const el = e.target.closest(SWITCHES);
-    pressed = el && !el.matches(".fx-menu-btn, .fx-sound") ? { el, was: isOn(el) } : null;   // the Menu button swishes on its own
+    pressed = el && !el.matches(".fx-menu-btn") ? { el, was: isOn(el) } : null;   // the Menu button swishes on its own
   }, true);
   document.addEventListener("click", () => {
     if (pressed && !pressed.was && (!pressed.el.isConnected || isOn(pressed.el))) Sound.swish();
