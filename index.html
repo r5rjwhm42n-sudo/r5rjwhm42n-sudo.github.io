@@ -19,7 +19,7 @@
 <meta name="twitter:image" content="https://danversfalconsathletics.org/images/og/hub.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,600;1,700;1,800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="images/falcons-logo.png">
 <link rel="stylesheet" href="css/home.css">
 <link rel="stylesheet" href="css/transitions.css">
@@ -59,154 +59,75 @@
   <a class="news-btn" href="newsletter/" title="Athletic Department newsletter" aria-label="Athletic Department newsletter"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4.5h12.5v15H6.5A2.5 2.5 0 0 1 4 17z"/><path d="M16.5 8.5H20v8.5a2.5 2.5 0 0 1-2.5 2.5"/><path d="M7.5 8.5h5.5M7.5 12h5.5M7.5 15.5h3.5"/></svg><span>Newsletter</span></a>
 </div></header>
 
+<div class="today" id="today" hidden></div>
+
+<main>
+<section class="spotlight" id="spotlight" hidden aria-label="Big game"></section>
+
+<!-- One big slide per team, like a club home page. The first slide is the
+     welcome; home.js adds a slide for every team from its data.js. -->
+<section class="hub-hero" id="top" aria-roledescription="carousel" aria-label="Danvers Falcons teams">
+  <div class="hx-track" id="hx-track">
+    <article class="hx-slide on" data-name="Welcome">
+      <img class="hx-photo" src="football/images/action/football-under-the-lights.jpg" alt="" style="--pos:50% 35%">
+      <div class="wrap hx-copy">
+        <h1>Every Falcon,<br><em>every score</em></h1>
+        <p class="lede">Scores, schedules and history for every Danvers High team, updated after every game.</p>
+        <div class="hero-stats" id="hero-stats"></div>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="#teams">See every team</a>
+          <a class="btn btn-ghost" href="#week">Fixtures &amp; results</a>
+        </div>
+      </div>
+    </article>
+  </div>
+  <button type="button" class="hx-arrow prev" aria-label="Previous slide">‹</button>
+  <button type="button" class="hx-arrow next" aria-label="Next slide">›</button>
+  <div class="hx-dots" id="hx-dots"></div>
+</section>
+
+<!-- live scores on a bright strip right across the page -->
 <div class="ticker" id="ticker" hidden>
-  <div class="ticker-label"><span class="dot"></span>Scores</div>
+  <div class="ticker-label">Scores</div>
   <div class="ticker-view"><div class="ticker-track" id="ticker-track"></div></div>
 </div>
 
-<div class="today" id="today" hidden></div>
+<!-- next game and last game, side by side -->
+<section class="gp" id="gp" hidden aria-label="Next game and last game"><div class="wrap gp-grid" id="gp-grid"></div></section>
 
 <a class="news-strip" id="news-strip" href="newsletter/" hidden>
   <span class="wrap"><span class="ns-label">New</span><span class="ns-title"></span><span class="ns-sub"></span><span class="ns-go">Read the newsletter →</span></span>
 </a>
 
-<main>
-<section class="spotlight" id="spotlight" hidden aria-label="Big game"></section>
-
-<section class="hub-hero">
-  <div class="slides" aria-hidden="true">
-    <img class="slide on" src="images/teams/football.jpg" alt="" style="--pos:50% 72%" data-team="Football" data-href="football/">
-    <img class="slide" src="images/teams/girls-soccer.jpg" alt="" style="--pos:50% 46%" data-team="Girls Soccer" data-href="soccer/?team=girls" loading="lazy">
-    <img class="slide" src="images/teams/field-hockey.jpg" alt="" style="--pos:50% 58%" data-team="Field Hockey" data-href="field-hockey/" loading="lazy">
-    <img class="slide" src="images/teams/volleyball.jpg" alt="" style="--pos:50% 50%" data-team="Volleyball" data-href="volleyball/" loading="lazy">
-    <img class="slide" src="images/teams/boys-xc.jpg" alt="" style="--pos:50% 45%" data-team="Boys Cross Country" data-href="cross-country/" loading="lazy">
-    <img class="slide" src="images/teams/boys-soccer.jpg" alt="" style="--pos:50% 60%" data-team="Boys Soccer" data-href="soccer/?team=boys" loading="lazy">
-    <img class="slide" src="images/teams/golf.jpg" alt="" style="--pos:50% 45%" data-team="Golf" data-href="golf/" loading="lazy">
-    <img class="slide" src="images/teams/girls-xc.jpg" alt="" style="--pos:50% 45%" data-team="Girls Cross Country" data-href="cross-country/" loading="lazy">
-  </div>
-  <div class="wrap hero-in">
-    <div>
-      <h1>Every Falcon,<br>every score</h1>
-      <p class="lede">Scores, schedules and history for every Danvers High team.</p>
-      <div class="hero-stats" id="hero-stats"></div>
-      <div class="btn-row">
-        <a class="btn btn-primary" href="#teams">See every team</a>
-        <a class="btn btn-ghost" href="#week">Match Centre</a>
-      </div>
-    </div>
-    <div class="card next-up" id="next-up" hidden></div>
-  </div>
-  <div class="wrap slide-bar"><a class="slide-team" id="slide-team" href="football/">Football</a><span class="slide-dots" id="slide-dots"></span></div>
-</section>
+<section class="block" id="latest" hidden><div class="wrap">
+  <div class="section-head"><h2>Latest <em>news</em></h2></div>
+  <div class="news" id="latest-list"></div>
+</div></section>
 
 <section class="block match" id="week"><div class="wrap">
-  <div class="section-head"><h2>Match Centre</h2>
+  <div class="section-head"><h2>Fixtures <em>&amp; results</em></h2>
     <span class="mc-nav"><button type="button" class="mc-prev" aria-label="Earlier games">‹</button><button type="button" class="mc-next" aria-label="Later games">›</button></span></div>
   <div class="mc-track" id="week-list"><p class="empty">Loading the schedule…</p></div>
   <div class="light" data-addcal="all-sports" data-label="Add every Danvers game to your calendar"></div>
 </div></section>
 
 <section class="block" id="teams"><div class="wrap">
-  <div class="section-head"><h2>Teams</h2></div>
-  <div class="teams-grid">
-    <a class="team-card feature" href="football/" data-sport="football">
-      <div class="tc-media">
-        <img src="images/teams/football.jpg" alt="The 2026 Danvers football team" style="--pos:50% 74%">
-        <span class="tc-season">Fall</span>
-        <div class="tc-head"><h3>Football</h3></div>
-      </div>
-      <div class="tc-body">
-        <p class="tc-blurb">Season leaders, game-by-game stats, conference titles and Falcon greats.</p>
-        <div class="tc-live"></div>
-        <span class="tc-go">Football site <span aria-hidden="true">→</span></span>
-      </div>
-    </a>
-    <a class="team-card" href="soccer/" data-sport="soccer">
-      <div class="tc-media multi">
-        <img class="on" src="images/teams/girls-soccer.jpg" alt="The 2026 Danvers girls soccer team" data-squad="Girls" style="--pos:50% 46%">
-        <img src="images/teams/boys-soccer.jpg" alt="The 2026 Danvers boys soccer team" data-squad="Boys" style="--pos:50% 60%" loading="lazy">
-        <span class="tc-season">Fall · Boys &amp; Girls</span><span class="tc-squad">Girls</span>
-        <div class="tc-head"><h3>Soccer</h3></div>
-      </div>
-      <div class="tc-body">
-        <p class="tc-blurb">Both teams in one place, with schedules, scorers and record books.</p>
-        <div class="tc-live"></div>
-        <span class="tc-go">Soccer site <span aria-hidden="true">→</span></span>
-      </div>
-    </a>
-    <a class="team-card" href="field-hockey/" data-sport="field-hockey">
-      <div class="tc-media">
-        <img src="images/teams/field-hockey.jpg" alt="The 2026 Danvers field hockey team" style="--pos:50% 58%">
-        <span class="tc-season">Fall</span>
-        <div class="tc-head"><h3>Field Hockey</h3></div>
-      </div>
-      <div class="tc-body">
-        <p class="tc-blurb">Results, stat leaders and the program's record book.</p>
-        <div class="tc-live"></div>
-        <span class="tc-go">Field hockey site <span aria-hidden="true">→</span></span>
-      </div>
-    </a>
-    <a class="team-card" href="volleyball/" data-sport="volleyball">
-      <div class="tc-media">
-        <img src="images/teams/volleyball.jpg" alt="The 2026 Danvers volleyball team" style="--pos:50% 52%" loading="lazy">
-        <span class="tc-season">Fall · Girls</span>
-        <div class="tc-head"><h3>Volleyball</h3></div>
-      </div>
-      <div class="tc-body">
-        <p class="tc-blurb">Match box scores, kills and aces leaders, and season history.</p>
-        <div class="tc-live"></div>
-        <span class="tc-go">Volleyball site <span aria-hidden="true">→</span></span>
-      </div>
-    </a>
-    <a class="team-card" href="cross-country/" data-sport="cross-country">
-      <div class="tc-media multi">
-        <img class="on" src="images/teams/boys-xc.jpg" alt="The 2026 Danvers boys cross country team" data-squad="Boys" style="--pos:50% 45%" loading="lazy">
-        <img src="images/teams/girls-xc.jpg" alt="The 2026 Danvers girls cross country team" data-squad="Girls" style="--pos:50% 45%" loading="lazy">
-        <span class="tc-season">Fall · Boys &amp; Girls</span><span class="tc-squad">Boys</span>
-        <div class="tc-head"><h3>Cross Country</h3></div>
-      </div>
-      <div class="tc-body">
-        <p class="tc-blurb">Meet results, runner profiles and records going back two decades.</p>
-        <div class="tc-live"></div>
-        <span class="tc-go">Cross country site <span aria-hidden="true">→</span></span>
-      </div>
-    </a>
-    <a class="team-card" href="golf/" data-sport="golf">
-      <div class="tc-media">
-        <img src="images/teams/golf.jpg" alt="The 2026 Danvers golf team" style="--pos:50% 42%" loading="lazy">
-        <span class="tc-season">Fall</span>
-        <div class="tc-head"><h3>Golf</h3></div>
-      </div>
-      <div class="tc-body">
-        <p class="tc-blurb">Match play, Stableford and stroke play results, plus player stats.</p>
-        <div class="tc-live"></div>
-        <span class="tc-go">Golf site <span aria-hidden="true">→</span></span>
-      </div>
-    </a>
-    <a class="team-card" href="esports/" data-sport="esports">
-      <div class="tc-media art">
-        <svg aria-hidden="true"><use href="#i-esports"/></svg>
-        <span class="tc-season">Varsity</span>
-        <div class="tc-head"><h3>Esports</h3></div>
-      </div>
-      <div class="tc-body">
-        <p class="tc-blurb">Series results for each game title, plus the roster and team history.</p>
-        <div class="tc-live"></div>
-        <span class="tc-go">Esports site <span aria-hidden="true">→</span></span>
-      </div>
-    </a>
+  <div class="section-head"><h2>Pick your <em>team</em></h2></div>
+  <div class="tiles" id="team-tiles">
+    <a class="tile-t" href="football/" data-sport="football"><img src="images/teams/football.jpg" alt="The 2026 Danvers football team" style="--pos:50% 74%" loading="lazy"><span class="tt-name">Football</span><span class="tt-rec"></span></a>
+    <a class="tile-t" href="soccer/" data-sport="soccer"><img src="images/teams/girls-soccer.jpg" alt="The 2026 Danvers girls soccer team" style="--pos:50% 46%" loading="lazy"><span class="tt-name">Soccer</span><span class="tt-rec"></span></a>
+    <a class="tile-t" href="field-hockey/" data-sport="field-hockey"><img src="images/teams/field-hockey.jpg" alt="The 2026 Danvers field hockey team" style="--pos:50% 58%" loading="lazy"><span class="tt-name">Field Hockey</span><span class="tt-rec"></span></a>
+    <a class="tile-t" href="volleyball/" data-sport="volleyball"><img src="images/teams/volleyball.jpg" alt="The 2026 Danvers volleyball team" style="--pos:50% 50%" loading="lazy"><span class="tt-name">Volleyball</span><span class="tt-rec"></span></a>
+    <a class="tile-t" href="cross-country/" data-sport="cross-country"><img src="images/teams/boys-xc.jpg" alt="The 2026 Danvers boys cross country team" style="--pos:50% 45%" loading="lazy"><span class="tt-name">Cross Country</span><span class="tt-rec"></span></a>
+    <a class="tile-t" href="golf/" data-sport="golf"><img src="images/teams/golf.jpg" alt="The 2026 Danvers golf team" style="--pos:50% 45%" loading="lazy"><span class="tt-name">Golf</span><span class="tt-rec"></span></a>
+    <a class="tile-t art" href="esports/" data-sport="esports"><svg aria-hidden="true"><use href="#i-esports"/></svg><span class="tt-name">Esports</span><span class="tt-rec"></span></a>
   </div>
 </div></section>
 
 <section class="block" id="road" hidden></section>
 
-<section class="block alt" id="latest" hidden><div class="wrap">
-  <div class="section-head"><h2>Latest Results</h2></div>
-  <div class="stories" id="latest-list"></div>
-</div></section>
-
 <section class="block" id="photos"><div class="wrap">
-  <div class="section-head"><h2>Photos</h2></div>
+  <div class="section-head"><h2>In <em>pictures</em></h2></div>
   <div class="gallery" id="gallery-grid">
     <figure class="gal"><button type="button" data-full="images/teams/football.jpg" data-cap="Football · 2026"><img src="images/teams/football.jpg" alt="The 2026 Danvers football team" loading="lazy"></button><figcaption><b>Football</b></figcaption></figure>
     <figure class="gal"><button type="button" data-full="images/teams/girls-soccer.jpg" data-cap="Girls Soccer · 2026"><img src="images/teams/girls-soccer.jpg" alt="The 2026 Danvers girls soccer team" loading="lazy"></button><figcaption><b>Girls Soccer</b></figcaption></figure>
@@ -220,10 +141,10 @@
   <p class="credit">Team photos from the Danvers High School athletics pages (Danvers Public Schools).</p>
 </div></section>
 
-<section class="block alt" id="tradition"><div class="wrap">
-  <div class="section-head"><h2>A Winning Tradition</h2></div>
+<section class="block" id="tradition"><div class="wrap">
+  <div class="section-head"><h2>A winning <em>tradition</em></h2></div>
   <div class="trad">
-    <div class="card trad-main">
+    <div class="trad-main">
       <div class="trad-total"><b id="titles-total">—</b><div><div class="k">Conference titles</div><div class="d">Northeastern Conference championships won by <span id="titles-programs">these</span> Falcons programs. Hover a bar for the years.</div></div></div>
       <div class="title-bars" id="title-bars"></div>
     </div>
@@ -232,10 +153,16 @@
 </div></section>
 </main>
 
-<footer class="site-footer"><div class="wrap">
-  <span>A Danvers High School DECA student project. Not the official school website.</span>
-  <span>Official athletics: <a href="https://www.danversfalconsathletics.com/" target="_blank" rel="noopener">Falcons Athletics</a> · <a class="privacy-link" href="privacy.html">Privacy</a></span>
-</div></footer>
+<footer class="site-footer">
+  <div class="wrap foot-big">
+    <img src="images/falcons-logo.png" alt="">
+    <div><b>Go Falcons</b><span>Danvers High School · Northeastern Conference</span></div>
+  </div>
+  <div class="wrap foot-small">
+    <span>A Danvers High School DECA student project. Not the official school website.</span>
+    <span>Official athletics: <a href="https://www.danversfalconsathletics.com/" target="_blank" rel="noopener">Falcons Athletics</a> · <a class="privacy-link" href="privacy.html">Privacy</a></span>
+  </div>
+</footer>
 
 <dialog class="viewer" id="viewer" aria-label="Team photo">
   <button class="viewer-close" type="button" aria-label="Close">×</button>

@@ -131,8 +131,6 @@
   const resClass = (r) => (r === "W" || r === "L" || r === "T" ? r : "F");
   const resText = (e) => (e.result ? `${e.result} ${e.score}` : e.score || "Final");
 
-  rotatePhotos();
-  heroSlides();
   lightbox();
 
   Promise.all(FOLDERS.map(load)).then((all) => {
@@ -162,10 +160,12 @@
 
     renderTicker(FINALS.slice(0, 16));
     renderToday(UPCOMING);
-    renderNext(UPCOMING[0]);
+    renderPanels(UPCOMING, FINALS);
     renderSpotlight(all[FOLDERS.indexOf("football")]);
     renderHeroStats(S, UPCOMING);
-    renderCards(S);
+    renderTiles(S);
+    renderTeamSlides(S);
+    heroCarousel();
     renderMatchCentre(FINALS.slice(0, 8), UPCOMING.slice(0, 12), EVENTS);
     renderLatest(S);
     renderTitles(S);
@@ -189,43 +189,55 @@
     bar.hidden = false;
   }
 
-  /* ---------- Next game + countdown ---------- */
-  function renderNext(e) {
-    const box = $("#next-up");
-    if (!e) return;
-    const start = new Date(e.date).getTime();
-    box.innerHTML = `
-      <div class="nu-top"><span>Next up</span><span>${esc(e.team)}</span></div>
-      <div class="nu-body">
-        <div class="nu-when">${[fmt(e.date, { weekday: "long", month: "short", day: "numeric" }), timeOf(e)].filter(Boolean).map(esc).join(" · ")}</div>
-        <div class="nu-match">
-          <span class="nu-logo"><img src="images/falcons-logo.png" alt=""></span>${window.DFA?.hasColors(e.opponent) ? DFA.badge(e.opponent, "lg nu-opp") : ""}
-          <div><div class="nu-title">${esc(e.title)}</div>${e.mascot ? `<div class="nu-mascot">${esc(e.mascot)}</div>` : ""}</div>
-        </div>
-        <div class="clock" id="clock" aria-live="off"></div>
-        <div class="nu-site">${[esc(e.site || ""), e.home ? "<b>Home</b>" : e.home === false ? "Away" : ""].filter(Boolean).join(" · ")}</div>
-        ${window.DFA ? `<div class="nu-extra">
-          <span class="nu-wx" id="nu-wx"></span>
-          <span class="nu-acts">
-            <a href="${DFA.mapsUrl(e)}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Directions</a>
-            ${e.tickets ? `<a href="${esc(e.tickets.url)}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9V6h18v3a3 3 0 0 0 0 6v3H3v-3a3 3 0 0 0 0-6z"/><path d="M14 6v12" stroke-dasharray="2 2.5"/></svg>Tickets</a>` : ""}
-          </span>
-        </div>` : ""}
-      </div>
-      <a class="nu-foot" href="${esc(e.href)}">Game preview <span aria-hidden="true">→</span></a>`;
-    const clock = $("#clock");
+  /* ---------- Next game and last game, side by side ---------- */
+  function renderPanels(upcoming, finals) {
+    const next = upcoming.find((e) => e.opponent && !e.tournament) || upcoming[0];
+    const last = finals.find((e) => e.opponent && !e.tournament && e.result);
+    if (!next && !last) return;
+    const crest = `<span class="gp-crest"><img src="images/falcons-logo.png" alt=""></span>`;
+    const opp = (e) => (window.DFA && e.opponent ? DFA.badge(e.opponent, "lg") : "");
+    const side = (logo, name) => `<div class="gp-side">${logo}<b>${esc(name)}</b></div>`;
+    const panels = [];
+    if (next) {
+      const match = next.opponent && !next.tournament
+        ? `<div class="gp-match">${side(crest, "Danvers")}<span class="gp-vs">${next.home ? "vs" : "at"}</span>${side(opp(next), next.opponent)}</div>`
+        : `<div class="gp-match single"><b>${esc(next.title)}</b></div>`;
+      panels.push(`<article class="gp-panel next">
+        <div class="gp-h"><span>Next game</span><span>${esc(next.team)}</span></div>
+        <p class="gp-meta">${[fmt(next.date, { weekday: "long", month: "long", day: "numeric" }), timeOf(next), next.home ? "Home" : next.home === false ? "Away" : ""].filter(Boolean).map(esc).join(" · ")}</p>
+        ${match}
+        <div class="gp-clock" id="gp-clock" aria-live="off"></div>
+        <p class="gp-site">${esc(next.site || "")}</p>
+        <div class="gp-acts"><a class="btn btn-primary" href="${esc(next.href)}">Game preview</a>${window.DFA ? `<a class="btn btn-line" href="${DFA.mapsUrl(next)}" target="_blank" rel="noopener">Directions</a>` : ""}</div>
+      </article>`);
+    }
+    if (last) {
+      const [us, them] = String(last.score).split("–");
+      panels.push(`<article class="gp-panel last">
+        <div class="gp-h"><span>Last game</span><span>${esc(last.team)}</span></div>
+        <p class="gp-meta">${esc(fmt(last.date, { weekday: "long", month: "long", day: "numeric" }))} · Final</p>
+        <div class="gp-match">${side(crest, "Danvers")}
+          <div class="gp-score ${resClass(last.result)}"><b>${esc(us)}</b><i>–</i><b>${esc(them)}</b></div>
+          ${side(opp(last), last.opponent)}</div>
+        ${last.summary ? `<p class="gp-sum">${esc(last.summary)}</p>` : ""}
+        <div class="gp-acts"><a class="btn btn-primary" href="${esc(last.href)}">Read the recap</a></div>
+      </article>`);
+    }
+    $("#gp-grid").innerHTML = panels.join("");
+    $("#gp").hidden = false;
+    const clock = $("#gp-clock");
+    if (!next || !clock) return;
+    const start = new Date(next.date).getTime();
     const tick = () => {
       const ms = start - Date.now();
       if (ms <= 0) { clock.innerHTML = `<div class="clock-live">Under way now</div>`; return false; }
-      const d = Math.floor(ms / 864e5), h = Math.floor(ms / HOUR) % 24, m = Math.floor(ms / 6e4) % 60, s = Math.floor(ms / 1e3) % 60;
+      const d = Math.floor(ms / 864e5), h = Math.floor(ms / HOUR) % 24, m = Math.floor(ms / 6e4) % 60, sec = Math.floor(ms / 1e3) % 60;
       const cell = (v, l) => `<div class="cl"><b>${String(v).padStart(2, "0")}</b><span>${l}</span></div>`;
-      clock.innerHTML = cell(d, "Days") + cell(h, "Hrs") + cell(m, "Min") + cell(s, "Sec");
+      clock.innerHTML = cell(d, "Days") + cell(h, "Hrs") + cell(m, "Min") + cell(sec, "Sec");
       clock.setAttribute("aria-label", `Starts in ${d} days, ${h} hours and ${m} minutes`);
       return true;
     };
     if (tick()) { const id = setInterval(() => tick() || clearInterval(id), 1000); }
-    box.hidden = false;
-    window.DFA?.weather(e).then((w) => { if (w) $("#nu-wx").innerHTML = `${w.icon}<b>${w.temp}°</b><span>${esc(w.label)}${w.rain >= 30 ? ` · ${w.rain}% rain` : ""}</span>`; });
   }
 
   let SPOT_ON = false;   // a football spotlight game is coming up or under way: its Game Day button glows
@@ -361,28 +373,93 @@
     });
   }
 
-  /* ---------- Team cards ---------- */
-  function renderCards(S) {
-    $$(".team-card[data-sport]").forEach((card) => {
-      const s = S[card.dataset.sport];
+  /* ---------- Photos for each team: its newest action shot, else its team photo ---------- */
+  const TEAM_PHOTO = { football: "football", "field-hockey": "field-hockey", volleyball: "volleyball", golf: "golf", "cross-country": "boys-xc" };
+  const SPORTS = [["football", "Football"], ["soccer", "Soccer"], ["field-hockey", "Field Hockey"], ["volleyball", "Volleyball"],
+                  ["cross-country", "Cross Country"], ["golf", "Golf"], ["esports", "Esports"]];
+  function photoFor(S, sport, team) {
+    const own = (S[sport]?.photos || []).find((p) => !team || !p.team || p.team === team);
+    if (own) return `${sport}/${own.src}`;
+    if (sport === "soccer") return `images/teams/${/boys/i.test(team || "") ? "boys" : "girls"}-soccer.jpg`;
+    return TEAM_PHOTO[sport] ? `images/teams/${TEAM_PHOTO[sport]}.jpg` : null;
+  }
+  const recsOf = (s) => s.teams.filter((t) => t.record);
+
+  /* ---------- Team tiles: the record on each photo ---------- */
+  function renderTiles(S) {
+    $$(".tile-t[data-sport]").forEach((tile) => {
+      const s = S[tile.dataset.sport];
       if (!s) return;
+      $(".tt-rec", tile).innerHTML = recsOf(s).map((t) => `${t.label ? `<small>${esc(t.label)}</small>` : ""}${esc(t.record)}`).join(" ");
+    });
+  }
+
+  /* ---------- Hero: a big slide for every team ---------- */
+  function renderTeamSlides(S) {
+    const track = $("#hx-track");
+    if (!track) return;
+    track.insertAdjacentHTML("beforeend", SPORTS.filter(([k]) => S[k]).map(([key, name]) => {
+      const s = S[key];
       const all = s.meets || s.teams.flatMap((t) => t.events);
-      const last = finalsOf(all)[0];
-      const next = upcomingOf(all)[0];
-      const recs = s.teams.filter((t) => t.record).map((t) => `<span class="rec">${t.label ? `<small>${esc(t.label)}</small>` : ""}<b>${esc(t.record)}</b></span>`).join("");
+      const last = finalsOf(all)[0], next = upcomingOf(all)[0];
+      const photo = photoFor(S, key, key === "soccer" ? "Girls Soccer" : null);
       const rank = s.rank || s.teams.map((t) => t.rank && `${t.label}: ${t.rank.replace(/ power rankings$/, "")}`).filter(Boolean).join(" · ");
+      const recs = recsOf(s).map((t) => `<span class="hx-rec"><b>${esc(t.record)}</b><small>${esc(t.label ? `${t.label} record` : "Record")}</small></span>`).join("");
+      const team = (e) => (s.teams.length > 1 && !s.meets ? `${e.team.split(" ")[0]} · ` : "");
       const lastRes = last && (last.squadResults?.length
         ? last.squadResults.map(([lab, r, sc]) => `${lab} <b class="${r}">${r} ${sc}</b>`).join(", ")
         : `<b class="${resClass(last.result)}">${esc(resText(last))}</b>`);
-      const sport = (e) => (s.teams.length > 1 && !s.meets ? `${e.team.split(" ")[0]} · ` : "");
-      card.querySelector(".tc-live").innerHTML = `
-        ${recs ? `<div class="tc-recs">${recs}<span class="tc-recs-k">${s.teams.length > 1 ? "Records" : "Record"}</span></div>` : `<div class="tc-recs"><span class="tc-recs-k">Season under way</span></div>`}
-        ${rank ? `<div class="tc-rank">${esc(rank)}</div>` : ""}
-        <dl class="tc-games">
-          ${last ? `<div><dt>Last</dt><dd>${sport(last)}${esc(last.title)} · ${lastRes}</dd></div>` : ""}
-          ${next ? `<div><dt>Next</dt><dd>${sport(next)}${esc(next.title)} · ${dayShort(next.date)}${next.timeTbd ? "" : `, ${timeOf(next)}`}</dd></div>` : ""}
-        </dl>`;
+      return `<article class="hx-slide" data-name="${esc(name)}" data-sport="${key}">
+        ${photo ? `<img class="hx-photo" src="${esc(photo)}" alt="" loading="lazy">` : `<div class="hx-photo art"><svg aria-hidden="true"><use href="#i-${key}"/></svg></div>`}
+        <div class="wrap hx-copy">
+          <h2 class="hx-title">${esc(name)}</h2>
+          ${recs ? `<div class="hx-recs">${recs}</div>` : ""}
+          ${rank ? `<p class="hx-rank">${esc(rank)}</p>` : ""}
+          <dl class="hx-games">
+            ${last ? `<div><dt>Last</dt><dd>${team(last)}${esc(last.title)} · ${lastRes}</dd></div>` : ""}
+            ${next ? `<div><dt>Next</dt><dd>${team(next)}${esc(next.title)} · ${esc(dayShort(next.date))}${next.timeTbd ? "" : `, ${esc(timeOf(next))}`}</dd></div>` : ""}
+          </dl>
+          <div class="btn-row"><a class="btn btn-primary" href="${key}/">${esc(name)} site</a><a class="btn btn-ghost" href="${key}/schedule.html">Schedule</a></div>
+        </div>
+      </article>`;
+    }).join(""));
+  }
+
+  /* ---------- Hero carousel: arrows, a strip of team names, swipes, auto-advance ---------- */
+  function heroCarousel() {
+    const hero = $(".hub-hero"), slides = $$(".hx-slide"), dots = $("#hx-dots");
+    if (!hero || slides.length < 2) return;
+    let at = 0, timer = null;
+    dots.innerHTML = slides.map((sl, i) => `<button type="button"${i === 0 ? ' aria-current="true"' : ""}>${esc(sl.dataset.name)}</button>`).join("");
+    const show = (n) => {
+      at = (n + slides.length) % slides.length;
+      slides.forEach((sl, i) => {
+        const on = i === at;
+        sl.classList.toggle("on", on);
+        sl.inert = !on;
+        const img = $(".hx-photo", sl);
+        if (on && img?.loading === "lazy") img.loading = "eager";
+      });
+      $$("button", dots).forEach((b, i) => b.toggleAttribute("aria-current", i === at));
+    };
+    const stop = () => clearInterval(timer);
+    const start = () => { stop(); if (!calm) timer = setInterval(() => show(at + 1), 7000); };
+    const go = (n) => { show(n); start(); };
+    $(".hx-arrow.prev", hero).addEventListener("click", () => go(at - 1));
+    $(".hx-arrow.next", hero).addEventListener("click", () => go(at + 1));
+    dots.addEventListener("click", (ev) => { const i = $$("button", dots).indexOf(ev.target.closest("button")); if (i >= 0) go(i); });
+    hero.addEventListener("mouseenter", stop);
+    hero.addEventListener("mouseleave", start);
+    hero.addEventListener("focusin", stop);
+    hero.addEventListener("keydown", (ev) => { if (ev.key === "ArrowLeft") go(at - 1); if (ev.key === "ArrowRight") go(at + 1); });
+    let x0 = null;
+    hero.addEventListener("touchstart", (ev) => { x0 = ev.touches[0].clientX; }, { passive: true });
+    hero.addEventListener("touchend", (ev) => {
+      if (x0 == null) return;
+      const dx = ev.changedTouches[0].clientX - x0; x0 = null;
+      if (Math.abs(dx) > 50) go(at + (dx < 0 ? 1 : -1));
     });
+    show(0); start();
   }
 
   /* ---------- Match Centre: recent results, then what's next, in one row ---------- */
@@ -458,15 +535,26 @@
       ? e.squadResults.map(([lab, r, sc]) => `<span class="ls-chip ${r}">${lab} ${r} ${sc}</span>`).join("")
       : !e.score && e.squadPlaces?.length ? e.squadPlaces.map(([lab, p]) => `<span class="ls-chip">${lab} ${ord(p)}</span>`).join("")
       : `<span class="ls-chip ${resClass(e.result)}">${esc(resText(e))}</span>`;
-    $("#latest-list").innerHTML = stories.slice(0, 6).map((e) => `<a class="story card lift" href="${esc(e.href)}">
-        <div class="ls-top"><svg aria-hidden="true"><use href="#i-${e.sport}"/></svg><span>${esc(e.sport === "cross-country" ? "Cross Country" : e.team)}</span><span class="ls-date">${fmt(e.date, { month: "short", day: "numeric" })}</span></div>
-        <div class="ls-body">
-          <div class="ls-score">${score(e)}</div>
-          <h3>${esc(head(e))}</h3>
-          <p>${esc(e.summary)}</p>
+    const name = (e) => (e.sport === "cross-country" ? "Cross Country" : e.team);
+    const when = (e) => fmt(e.date, { month: "short", day: "numeric" });
+    const [lead, ...rest] = stories;
+    const photo = photoFor(S, lead.sport, lead.team);
+    $("#latest-list").innerHTML = `
+      <a class="news-lead" href="${esc(lead.href)}">
+        ${photo ? `<img src="${esc(photo)}" alt="" loading="lazy">` : ""}
+        <div class="nl-box">
+          <span class="nl-meta">${esc(name(lead))} · ${esc(when(lead))}</span>
+          <div class="ls-score">${score(lead)}</div>
+          <h3>${esc(head(lead))}</h3>
+          <p>${esc(lead.summary)}</p>
           <span class="more">Read the full recap <span aria-hidden="true">→</span></span>
         </div>
-      </a>`).join("");
+      </a>
+      <div class="news-list">${rest.slice(0, 5).map((e, i) => `<a class="news-item${i === 0 ? " hot" : ""}" href="${esc(e.href)}">
+          <span class="ni-meta">${esc(name(e))} · ${esc(when(e))}</span>
+          <b>${esc(head(e))}</b>
+          <span class="ls-score">${score(e)}</span>
+        </a>`).join("")}</div>`;
     $("#latest").hidden = false;
   }
 
@@ -518,43 +606,6 @@
     $("#gallery-grid").insertAdjacentHTML("beforeend", extra.slice(0, 12).map((p) => `<figure class="gal">
         <button type="button" data-full="${esc(p.src)}" data-cap="${esc(p.caption)}"><img src="${esc(p.src)}" alt="${esc(p.caption)}" loading="lazy"></button>
         <figcaption><b>${esc(p.team)}</b> ${esc(p.caption)}</figcaption></figure>`).join(""));
-  }
-
-  /* ---------- Soccer and cross country cards fade between the girls and boys photos ---------- */
-  function rotatePhotos() {
-    $$(".tc-media").forEach((m, i) => {
-      const imgs = $$("img", m);
-      if (imgs.length < 2) return;
-      const tag = $(".tc-squad", m);
-      let at = 0;
-      const show = (n) => { imgs.forEach((im, j) => im.classList.toggle("on", j === n)); if (tag) tag.textContent = imgs[n].dataset.squad || ""; };
-      show(0);
-      if (calm) return;
-      setTimeout(() => setInterval(() => show((at = (at + 1) % imgs.length)), 5000), i * 700);
-    });
-  }
-
-  /* ---------- Hero: one team photo at a time, full width, slowly zooming ---------- */
-  function heroSlides() {
-    const imgs = $$(".slides .slide");
-    const name = $("#slide-team"), dots = $("#slide-dots");
-    if (!imgs.length || !name) return;
-    let at = 0, timer = null;
-    dots.innerHTML = imgs.map((im, i) => `<button type="button" aria-label="Show the ${esc(im.dataset.team)} photo"${i === 0 ? ' aria-current="true"' : ""}></button>`).join("");
-    const show = (n) => {
-      at = (n + imgs.length) % imgs.length;
-      imgs.forEach((im, i) => { im.classList.toggle("on", i === at); if (i === at) im.loading = "eager"; });
-      $$("button", dots).forEach((b, i) => b.toggleAttribute("aria-current", i === at));
-      name.textContent = imgs[at].dataset.team;
-      name.href = imgs[at].dataset.href;
-    };
-    const start = () => { if (!calm) timer = setInterval(() => show(at + 1), 6500); };
-    dots.addEventListener("click", (ev) => {
-      const i = $$("button", dots).indexOf(ev.target.closest("button"));
-      if (i < 0) return;
-      clearInterval(timer); show(i); start();
-    });
-    show(0); start();
   }
 
   /* ---------- Full-size team photos ---------- */

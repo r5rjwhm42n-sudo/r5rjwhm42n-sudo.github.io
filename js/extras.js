@@ -355,6 +355,42 @@
      credit line under the Photos grid on the Media page
      ================================================================= */
   const photos = () => (SPORT === "soccer" ? TEAMS[squad()].photos : typeof PHOTOS !== "undefined" ? PHOTOS : []) || [];
+  /* Team home pages, laid out like a club site: the record in a big diamond on
+     the hero, and the next game and last game side by side right under it */
+  function clubLayout() {
+    const hero = document.querySelector(".hero.hero-home");
+    const strip = document.getElementById("scorestrip");
+    if (!hero || !strip || hero.dataset.club) return;
+    hero.dataset.club = "1";
+    const rec = strip.querySelector(".tile");
+    if (rec) {
+      const v = rec.querySelector(".v"), k = rec.querySelector(".k");
+      hero.querySelector(".wrap").insertAdjacentHTML("beforeend",
+        `<div class="hero-diamond" aria-hidden="true"><div><b>${esc(v ? v.textContent : "")}</b><span>${esc(k ? k.textContent : "")}</span></div></div>`);
+    }
+    const next = strip.querySelector(".next-game");
+    const last = document.querySelector("#scoreboard .scoreboard");
+    if (!next && !last) return;
+    const sec = document.createElement("section");
+    sec.className = "gp team-gp";
+    sec.setAttribute("aria-label", "Next and last game");
+    sec.innerHTML = `<div class="wrap gp-grid"></div>`;
+    const panel = (cls, label, el) => {
+      const p = document.createElement("div");
+      p.className = `gp-panel ${cls}`;
+      p.innerHTML = `<div class="gp-h"><span>${esc(label)}</span></div>`;
+      p.appendChild(el);
+      sec.firstChild.appendChild(p);
+    };
+    if (next) panel("next", next.querySelector(".k")?.textContent || "Next game", next);
+    if (last) panel("last", "Last game", last);
+    hero.after(sec);
+    /* the scoreboard's old spot on the hero is empty now: drop it so the diamond takes its place */
+    const old = document.getElementById("scoreboard");
+    if (old && !old.children.length) old.remove();
+  }
+  clubLayout();
+
   /* team photos from the hub, for sports with no action shots yet */
   const TEAM_PHOTO = { golf: "golf", "cross-country": "boys-xc", football: "football", "field-hockey": "field-hockey", volleyball: "volleyball" };
   function actionPhotos() {
