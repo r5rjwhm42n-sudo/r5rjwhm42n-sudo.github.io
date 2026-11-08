@@ -2,8 +2,8 @@
    Shared effects for every page (hub, newsletter and all team sites).
    Load it last: <script src="(path to)/js/fx.js"></script>
      · the site footer, drawn into <footer id="site-footer">
-     · team sites: a round Menu button with a full-screen menu, and
-       "All sports" / "[Sport] home" buttons in the header
+     · team sites: a round Menu button with a full-screen menu, which holds
+       "All sports" / "[Sport] home" and every page of every sport
    ===================================================================== */
 (function () {
   const ROOT = new URL("..", document.currentScript.src).href;   // the site root, from /js/fx.js
@@ -91,13 +91,7 @@
     }).sort((a, b) => PAGE_ORDER.indexOf(a.file) - PAGE_ORDER.indexOf(b.file));
     const homeHref = (pages.find((p) => p.file === "index.html") || { href: "index.html" }).href;
 
-    /* header: back buttons, then the Menu button at the end */
-    const back = document.createElement("div");
-    back.className = "fx-back";
-    back.innerHTML = `<a class="fx-pill" href="${ROOT}#teams"><span class="fx-arr" aria-hidden="true">← </span>All sports</a>` +
-      (onHome ? "" : `<a class="fx-pill" href="${homeHref}"><span class="fx-arr" aria-hidden="true">← </span>${name} home</a>`);
-    const search = bar.querySelector(".dfs-open");
-    bar.insertBefore(back, search || null);
+    /* header: the Menu button at the end */
     const btn = document.createElement("button");
     btn.type = "button";
     btn.className = "fx-menu-btn";
@@ -116,6 +110,8 @@
     menu.setAttribute("aria-modal", "true");
     menu.setAttribute("aria-label", "Menu");
     let i = 0;
+    const pill = (href, label) => `<a class="fx-pill" href="${href}" style="--i:${i++}"><span class="fx-arr" aria-hidden="true">←</span>${label}</a>`;
+    const backs = pill(`${ROOT}#teams`, "All sports") + (onHome ? "" : pill(homeHref, `${name} home`));
     const link = (href, label, current) =>
       `<li><a href="${href}" style="--i:${i++}"${current ? ' aria-current="page"' : ""}>${label}${current ? '<small aria-hidden="true">You’re here</small>' : ""}</a></li>`;
     menu.innerHTML = `
@@ -123,6 +119,7 @@
         <span class="fx-menu-tag">Danvers Falcons · ${team ? team.textContent : name}</span>
         <button class="fx-menu-close" type="button" aria-label="Close menu">×</button>
       </div>
+      <div class="wrap fx-menu-back">${backs}</div>
       <div class="wrap fx-menu-body">
         <nav aria-labelledby="fx-m-this"><h2 id="fx-m-this">This sport</h2><ul>${pages.map((p) => link(p.href, p.label, p.current)).join("")}</ul></nav>
         <nav aria-labelledby="fx-m-other"><h2 id="fx-m-other">Other sports</h2><ul>${TEAMS.filter(([d]) => d !== dir).map(([d, n]) => link(`${ROOT}${d}/`, n, false)).join("")}</ul></nav>
