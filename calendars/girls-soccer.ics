@@ -34,8 +34,8 @@ DURATION:PT2H
 SUMMARY:Danvers Girls Soccer at Medford (scrimmage) (T 0–0)
 LOCATION:Medford High School\, Medford
 DESCRIPTION:Scrimmage\nFinal: Danvers 0\, Medford 0\nSchedule and results: 
- https://danversfalconsathletics.org/soccer/schedule.html?team=girls
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+ https://danversfalconsathletics.org/soccer/?team=girls#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:girls-soccer-102@danversfalconsathletics.org
@@ -45,8 +45,8 @@ DURATION:PT2H
 SUMMARY:Danvers Girls Soccer at Pingree (scrimmage)
 LOCATION:Pingree School\, South Hamilton
 DESCRIPTION:Scrimmage\nSchedule and results: https://danversfalconsathletic
- s.org/soccer/schedule.html?team=girls
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+ s.org/soccer/?team=girls#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:girls-soccer-103@danversfalconsathletics.org
@@ -56,8 +56,8 @@ DURATION:PT2H
 SUMMARY:Danvers Girls Soccer at Arlington (scrimmage)
 LOCATION:Peirce Field\, Arlington
 DESCRIPTION:Scrimmage\nSchedule and results: https://danversfalconsathletic
- s.org/soccer/schedule.html?team=girls
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+ s.org/soccer/?team=girls#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:girls-soccer-104@danversfalconsathletics.org
@@ -67,8 +67,8 @@ DURATION:PT2H
 SUMMARY:Danvers Girls Soccer at Weston (scrimmage)
 LOCATION:Weston High School\, Weston
 DESCRIPTION:Scrimmage\nSchedule and results: https://danversfalconsathletic
- s.org/soccer/schedule.html?team=girls
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+ s.org/soccer/?team=girls#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:girls-soccer-105@danversfalconsathletics.org
@@ -78,8 +78,8 @@ DURATION:PT2H
 SUMMARY:Danvers Girls Soccer at Lynnfield (scrimmage)
 LOCATION:Lynnfield High School\, Lynnfield
 DESCRIPTION:Scrimmage\nSchedule and results: https://danversfalconsathletic
- s.org/soccer/schedule.html?team=girls
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+ s.org/soccer/?team=girls#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:girls-soccer-1@danversfalconsathletics.org
@@ -92,9 +92,9 @@ DESCRIPTION:Northeastern Conference\nFinal: Danvers 2\, Marblehead 2\nThe F
  alcons twice came back from a goal down in the first half of the season op
  ener but couldn't find a winner despite a 20–7 edge in shots. Mia St. Pi
  erre scored from a tough angle and Emma Sutherland got the second equalize
- r.\nSchedule and results: https://danversfalconsathletics.org/soccer/sched
- ule.html?team=girls
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+ r.\nSchedule and results: https://danversfalconsathletics.org/soccer/?team
+ =girls#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:girls-soccer-2@danversfalconsathletics.org
@@ -106,9 +106,9 @@ LOCATION:Dr. Deering Stadium\, Danvers
 DESCRIPTION:Northeastern Conference\nFinal: Danvers 9\, Winthrop 1\nMia St.
   Pierre and Rylee Sullivan both had hat tricks\, and Emma Sutherland added
   two goals and two assists as Danvers rolled to its first win.\nSchedule a
- nd results: https://danversfalconsathletics.org/soccer/schedule.html?team=
- girls
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+ nd results: https://danversfalconsathletics.org/soccer/?team=girls#schedul
+ e
+URL:https://danversfalconsathletics.org/soccer/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:girls-soccer-3@danversfalconsathletics.org
@@ -120,9 +120,8 @@ LOCATION:Beverly High School\, Beverly
 DESCRIPTION:Northeastern Conference\nFinal: Danvers 2\, Beverly 3\nRylee Su
  llivan scored both Danvers goals and the Falcons led 2–1\, but Beverly c
  ame back to win by a goal. Taylor Landry played well in goal.\nSchedule an
- d results: https://danversfalconsathletics.org/soccer/schedule.html?team=g
- irls
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+ d results: https://danversfalconsathletics.org/soccer/?team=girls#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:girls-soccer-4@danversfalconsathletics.org
@@ -134,9 +133,9 @@ LOCATION:Morse Field\, Danvers
 DESCRIPTION:Non-league\nFinal: Danvers 2\, North Reading 1\nEmma Sutherland
   set up Rylee Sullivan's sixth goal of the season and then scored the go-a
  head goal herself in a non-league win on Danvers Youth Soccer Night.\nSche
- dule and results: https://danversfalconsathletics.org/soccer/schedule.html
- ?team=girls
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+ dule and results: https://danversfalconsathletics.org/soccer/?team=girls#s
+ chedule
+URL:https://danversfalconsathletics.org/soccer/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:girls-soccer-5@danversfalconsathletics.org
@@ -148,8 +147,8 @@ LOCATION:Masconomet Regional\, Boxford
 DESCRIPTION:Northeastern Conference\nFinal: Danvers 1\, Masconomet 5\nA tou
  gh loss to a very talented Masconomet team. Mia St. Pierre scored a beauti
  ful goal and played well in the middle of the field.\nSchedule and results
- : https://danversfalconsathletics.org/soccer/schedule.html?team=girls
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+ : https://danversfalconsathletics.org/soccer/?team=girls#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:girls-soccer-6@danversfalconsathletics.org
@@ -161,9 +160,9 @@ LOCATION:Dr. Deering Stadium\, Danvers
 DESCRIPTION:Northeastern Conference\nFinal: Danvers 6\, Saugus 0\nKaia Glov
  er scored twice and Mia St. Pierre had a goal and two assists in a home sh
  utout. Goalkeepers Taylor Landry and Stella Shairs shared the clean sheet.
- \nSchedule and results: https://danversfalconsathletics.org/soccer/schedul
- e.html?team=girls
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+ \nSchedule and results: https://danversfalconsathletics.org/soccer/?team=g
+ irls#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:girls-soccer-7@danversfalconsathletics.org
@@ -175,8 +174,8 @@ LOCATION:Morse Field\, Danvers
 DESCRIPTION:Non-league\nFinal: Danvers 1\, Melrose 1\nNine minutes into the
   second half\, Mia St. Pierre took a feed from Emma Sutherland and scored 
  the tying goal.\nSchedule and results: https://danversfalconsathletics.org
- /soccer/schedule.html?team=girls
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+ /soccer/?team=girls#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:girls-soccer-8@danversfalconsathletics.org
@@ -189,9 +188,9 @@ DESCRIPTION:Northeastern Conference\nFinal: Danvers 2\, Peabody 1\nIn a rai
  n and wind storm\, Rylee Sullivan tied it before halftime off an Emma Suth
  erland pass\, then set up Mia St. Pierre's winner in the first minute of t
  he second half as the Falcons stretched their unbeaten run to three.\nSche
- dule and results: https://danversfalconsathletics.org/soccer/schedule.html
- ?team=girls
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+ dule and results: https://danversfalconsathletics.org/soccer/?team=girls#s
+ chedule
+URL:https://danversfalconsathletics.org/soccer/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:girls-soccer-9@danversfalconsathletics.org
@@ -203,8 +202,8 @@ LOCATION:Piper Field\, Marblehead
 DESCRIPTION:Northeastern Conference\nFinal: Danvers 0\, Marblehead 3\nDanve
  rs carried the play early but fell behind and couldn't recover\, getting s
  hut out for the first time this fall.\nSchedule and results: https://danve
- rsfalconsathletics.org/soccer/schedule.html?team=girls
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+ rsfalconsathletics.org/soccer/?team=girls#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:girls-soccer-10@danversfalconsathletics.org
@@ -217,8 +216,8 @@ DESCRIPTION:Non-league\nFinal: Danvers 2\, Bishop Fenwick 2\nRylee Sullivan
   scored with five minutes left to earn a draw on the road. Emma Sutherland
   had put Danvers ahead in the 12th minute\, and the Falcons held a big edg
  e in shots on goal.\nSchedule and results: https://danversfalconsathletics
- .org/soccer/schedule.html?team=girls
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+ .org/soccer/?team=girls#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:girls-soccer-11@danversfalconsathletics.org
@@ -231,9 +230,9 @@ DESCRIPTION:Northeastern Conference\nFinal: Danvers 3\, Swampscott 0\nIn wh
  at coach Jimmy Hinchion called his team's best win of the season\, Rylee S
  ullivan scored in the first half and Mia St. Pierre and Emma Sutherland ad
  ded goals after the break. Taylor Landry earned the shutout in goal.\nSche
- dule and results: https://danversfalconsathletics.org/soccer/schedule.html
- ?team=girls
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+ dule and results: https://danversfalconsathletics.org/soccer/?team=girls#s
+ chedule
+URL:https://danversfalconsathletics.org/soccer/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:girls-soccer-12@danversfalconsathletics.org
@@ -246,8 +245,8 @@ DESCRIPTION:Non-league\nFinal: Danvers 4\, Lynnfield 0\nIn what coach Jimmy
   Hinchion called the team's most complete game of the season\, Rylee Sulli
  van scored twice\, Mia St. Pierre had a goal and an assist\, and Taylor La
  ndry kept another clean sheet.\nSchedule and results: https://danversfalco
- nsathletics.org/soccer/schedule.html?team=girls
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+ nsathletics.org/soccer/?team=girls#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:girls-soccer-13@danversfalconsathletics.org
@@ -260,8 +259,8 @@ DESCRIPTION:Northeastern Conference\nFinal: Danvers 0\, Beverly 2\nBeverly
  scored twice in the second half to complete a season sweep. Danvers had it
  s chances but couldn't crack the Panthers' defense\, which posted its four
  th straight shutout.\nSchedule and results: https://danversfalconsathletic
- s.org/soccer/schedule.html?team=girls
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+ s.org/soccer/?team=girls#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:girls-soccer-14@danversfalconsathletics.org
@@ -274,8 +273,8 @@ DESCRIPTION:Non-league\nFinal: Danvers 1\, Andover 1\nJunior captain Maddie
   Hanas scored in the first half off a Rylee Sullivan assist\, and the Falc
  ons held on through a defensive second half for a road draw that moved the
  m a step closer to the state tournament.\nSchedule and results: https://da
- nversfalconsathletics.org/soccer/schedule.html?team=girls
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+ nversfalconsathletics.org/soccer/?team=girls#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:girls-soccer-15@danversfalconsathletics.org
@@ -288,8 +287,8 @@ DESCRIPTION:Northeastern Conference\nFinal: Danvers 1\, Salem 2\nMia St. Pi
  erre scored with eight minutes to go\, but Danvers couldn't find the equal
  izer. A long-range strike by Jackie Fritz held up as the winner\, and Sale
  m beat Danvers for the first time in close to 20 years.\nSchedule and resu
- lts: https://danversfalconsathletics.org/soccer/schedule.html?team=girls
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+ lts: https://danversfalconsathletics.org/soccer/?team=girls#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:girls-soccer-16@danversfalconsathletics.org
@@ -304,8 +303,8 @@ DESCRIPTION:Northeastern Conference\nFinal: Danvers 3\, Masconomet 2\nOn Pi
  onomet\, a month after losing 5–1 in Boxford. The win clinched a state t
  ournament berth for the 35th straight season and was coach Jimmy Hinchion'
  s 425th career victory.\nSchedule and results: https://danversfalconsathle
- tics.org/soccer/schedule.html?team=girls
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+ tics.org/soccer/?team=girls#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:girls-soccer-17@danversfalconsathletics.org
@@ -317,9 +316,8 @@ LOCATION:Dr. Deering Stadium\, Danvers
 DESCRIPTION:Northeastern Conference\nFinal: Danvers 0\, Peabody 1\nOn Senio
  r Night for Emma Sutherland\, Taylor Landry and Ari Fajardo\, Peabody scor
  ed the only goal to win 1–0 and split the season series.\nSchedule and r
- esults: https://danversfalconsathletics.org/soccer/schedule.html?team=girl
- s
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+ esults: https://danversfalconsathletics.org/soccer/?team=girls#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:girls-soccer-18@danversfalconsathletics.org
@@ -333,8 +331,8 @@ DESCRIPTION:Northeastern Conference\nFinal: Danvers 7\, Gloucester 1\nDanve
  \, its most in a game since the 9–1 rout of Winthrop in September. Kaitl
  yn Rosa and Paige Dembowski scored twice each\, and eight different Falcon
  s had a goal or an assist.\nSchedule and results: https://danversfalconsat
- hletics.org/soccer/schedule.html?team=girls
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+ hletics.org/soccer/?team=girls#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:girls-soccer-106@danversfalconsathletics.org
@@ -344,8 +342,8 @@ DURATION:PT2H
 SUMMARY:Danvers Girls Soccer at Lynnfield (scrimmage)
 LOCATION:Lynnfield High School\, Lynnfield
 DESCRIPTION:Scrimmage\nSchedule and results: https://danversfalconsathletic
- s.org/soccer/schedule.html?team=girls
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+ s.org/soccer/?team=girls#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:girls-soccer-107@danversfalconsathletics.org
@@ -355,7 +353,7 @@ DURATION:PT2H
 SUMMARY:Danvers Girls Soccer at Westwood
 LOCATION:Westwood High School\, Westwood
 DESCRIPTION:MIAA state tournament · Round of 32\nSchedule and results: htt
- ps://danversfalconsathletics.org/soccer/schedule.html?team=girls
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=girls
+ ps://danversfalconsathletics.org/soccer/?team=girls#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=girls#schedule
 END:VEVENT
 END:VCALENDAR

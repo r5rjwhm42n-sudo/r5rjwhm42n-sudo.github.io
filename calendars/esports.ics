@@ -35,8 +35,8 @@ SUMMARY:Danvers Esports: Smash vs Tewksbury Memorial (W 3–2)
 LOCATION:Online (PlayVS)
 DESCRIPTION:Super Smash Bros. Ultimate · Best of 5 sets\nFinal: Danvers 3\
  , Tewksbury Memorial 2\nSchedule and results: https://danversfalconsathlet
- ics.org/esports/schedule.html
-URL:https://danversfalconsathletics.org/esports/schedule.html
+ ics.org/esports/#schedule
+URL:https://danversfalconsathletics.org/esports/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:esports-201@danversfalconsathletics.org
@@ -47,8 +47,8 @@ SUMMARY:Danvers Esports: Rocket League vs Tewksbury Memorial (W 3–0)
 LOCATION:Online (PlayVS)
 DESCRIPTION:Rocket League · Best of 5 games\nFinal: Danvers 3\, Tewksbury 
  Memorial 0\nSchedule and results: https://danversfalconsathletics.org/espo
- rts/schedule.html
-URL:https://danversfalconsathletics.org/esports/schedule.html
+ rts/#schedule
+URL:https://danversfalconsathletics.org/esports/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:esports-102@danversfalconsathletics.org
@@ -59,8 +59,8 @@ SUMMARY:Danvers Esports: Smash vs Oliver Ames (L 0–6)
 LOCATION:Online (PlayVS)
 DESCRIPTION:Super Smash Bros. Ultimate · Best of 5 sets\nFinal: Danvers 0\
  , Oliver Ames 6\nSchedule and results: https://danversfalconsathletics.org
- /esports/schedule.html
-URL:https://danversfalconsathletics.org/esports/schedule.html
+ /esports/#schedule
+URL:https://danversfalconsathletics.org/esports/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:esports-202@danversfalconsathletics.org
@@ -70,9 +70,9 @@ DURATION:PT1H30M
 SUMMARY:Danvers Esports: Rocket League vs Dracut (W 6–0)
 LOCATION:Online (PlayVS)
 DESCRIPTION:Rocket League · Best of 5 games\nFinal: Danvers 6\, Dracut 0\n
- Schedule and results: https://danversfalconsathletics.org/esports/schedule
- .html
-URL:https://danversfalconsathletics.org/esports/schedule.html
+ Schedule and results: https://danversfalconsathletics.org/esports/#schedul
+ e
+URL:https://danversfalconsathletics.org/esports/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:esports-103@danversfalconsathletics.org
@@ -83,8 +83,8 @@ SUMMARY:Danvers Esports: Smash vs Natick (L 4–7)
 LOCATION:Online (PlayVS)
 DESCRIPTION:Super Smash Bros. Ultimate · Best of 5 sets\nFinal: Danvers 4\
  , Natick 7\nSchedule and results: https://danversfalconsathletics.org/espo
- rts/schedule.html
-URL:https://danversfalconsathletics.org/esports/schedule.html
+ rts/#schedule
+URL:https://danversfalconsathletics.org/esports/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:esports-203@danversfalconsathletics.org
@@ -94,9 +94,9 @@ DURATION:PT1H30M
 SUMMARY:Danvers Esports: Rocket League vs Natick (W 7–4)
 LOCATION:Online (PlayVS)
 DESCRIPTION:Rocket League · Best of 5 games\nFinal: Danvers 7\, Natick 4\n
- Schedule and results: https://danversfalconsathletics.org/esports/schedule
- .html
-URL:https://danversfalconsathletics.org/esports/schedule.html
+ Schedule and results: https://danversfalconsathletics.org/esports/#schedul
+ e
+URL:https://danversfalconsathletics.org/esports/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:esports-104@danversfalconsathletics.org
@@ -107,8 +107,8 @@ SUMMARY:Danvers Esports: Smash vs Attleboro (L 2–3)
 LOCATION:Online (PlayVS)
 DESCRIPTION:Super Smash Bros. Ultimate · Best of 5 sets\nFinal: Danvers 2\
  , Attleboro 3\nSchedule and results: https://danversfalconsathletics.org/e
- sports/schedule.html
-URL:https://danversfalconsathletics.org/esports/schedule.html
+ sports/#schedule
+URL:https://danversfalconsathletics.org/esports/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:esports-204@danversfalconsathletics.org
@@ -118,9 +118,9 @@ DURATION:PT1H30M
 SUMMARY:Danvers Esports: Rocket League vs Leicester (W 3–1)
 LOCATION:Online (PlayVS)
 DESCRIPTION:Rocket League · Best of 5 games\nFinal: Danvers 3\, Leicester 
- 1\nSchedule and results: https://danversfalconsathletics.org/esports/sched
- ule.html
-URL:https://danversfalconsathletics.org/esports/schedule.html
+ 1\nSchedule and results: https://danversfalconsathletics.org/esports/#sche
+ dule
+URL:https://danversfalconsathletics.org/esports/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:esports-105@danversfalconsathletics.org
@@ -131,8 +131,8 @@ SUMMARY:Danvers Esports: Smash vs Littleton (W 6–4)
 LOCATION:Online (PlayVS)
 DESCRIPTION:Super Smash Bros. Ultimate · Best of 5 sets\nFinal: Danvers 6\
  , Littleton 4\nSchedule and results: https://danversfalconsathletics.org/e
- sports/schedule.html
-URL:https://danversfalconsathletics.org/esports/schedule.html
+ sports/#schedule
+URL:https://danversfalconsathletics.org/esports/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:esports-205@danversfalconsathletics.org
@@ -142,9 +142,9 @@ DURATION:PT1H30M
 SUMMARY:Danvers Esports: Rocket League vs Littleton (L 0–3)
 LOCATION:Online (PlayVS)
 DESCRIPTION:Rocket League · Best of 5 games\nFinal: Danvers 0\, Littleton 
- 3\nSchedule and results: https://danversfalconsathletics.org/esports/sched
- ule.html
-URL:https://danversfalconsathletics.org/esports/schedule.html
+ 3\nSchedule and results: https://danversfalconsathletics.org/esports/#sche
+ dule
+URL:https://danversfalconsathletics.org/esports/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:esports-106@danversfalconsathletics.org
@@ -155,8 +155,8 @@ SUMMARY:Danvers Esports: Smash vs Burlington (W 7–5)
 LOCATION:Online (PlayVS)
 DESCRIPTION:Super Smash Bros. Ultimate · Best of 5 sets\nFinal: Danvers 7\
  , Burlington 5\nSchedule and results: https://danversfalconsathletics.org/
- esports/schedule.html
-URL:https://danversfalconsathletics.org/esports/schedule.html
+ esports/#schedule
+URL:https://danversfalconsathletics.org/esports/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:esports-206@danversfalconsathletics.org
@@ -166,9 +166,9 @@ DURATION:PT1H30M
 SUMMARY:Danvers Esports: Rocket League vs Tri-County (L 0–3)
 LOCATION:Online (PlayVS)
 DESCRIPTION:Rocket League · Best of 5 games\nFinal: Danvers 0\, Tri-County
-  3\nSchedule and results: https://danversfalconsathletics.org/esports/sche
- dule.html
-URL:https://danversfalconsathletics.org/esports/schedule.html
+  3\nSchedule and results: https://danversfalconsathletics.org/esports/#sch
+ edule
+URL:https://danversfalconsathletics.org/esports/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:esports-107@danversfalconsathletics.org
@@ -178,8 +178,8 @@ DURATION:PT1H30M
 SUMMARY:Danvers Esports: Smash (Week 7)
 LOCATION:Online (PlayVS)
 DESCRIPTION:Super Smash Bros. Ultimate · Best of 5 sets\nSchedule and resu
- lts: https://danversfalconsathletics.org/esports/schedule.html
-URL:https://danversfalconsathletics.org/esports/schedule.html
+ lts: https://danversfalconsathletics.org/esports/#schedule
+URL:https://danversfalconsathletics.org/esports/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:esports-207@danversfalconsathletics.org
@@ -189,8 +189,8 @@ DURATION:PT1H30M
 SUMMARY:Danvers Esports: Rocket League (Week 7)
 LOCATION:Online (PlayVS)
 DESCRIPTION:Rocket League · Best of 5 games\nSchedule and results: https:/
- /danversfalconsathletics.org/esports/schedule.html
-URL:https://danversfalconsathletics.org/esports/schedule.html
+ /danversfalconsathletics.org/esports/#schedule
+URL:https://danversfalconsathletics.org/esports/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:esports-108@danversfalconsathletics.org
@@ -200,8 +200,8 @@ DURATION:PT1H30M
 SUMMARY:Danvers Esports: Smash (Week 8)
 LOCATION:Online (PlayVS)
 DESCRIPTION:Super Smash Bros. Ultimate · Best of 5 sets\nSchedule and resu
- lts: https://danversfalconsathletics.org/esports/schedule.html
-URL:https://danversfalconsathletics.org/esports/schedule.html
+ lts: https://danversfalconsathletics.org/esports/#schedule
+URL:https://danversfalconsathletics.org/esports/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:esports-208@danversfalconsathletics.org
@@ -211,7 +211,7 @@ DURATION:PT1H30M
 SUMMARY:Danvers Esports: Rocket League (Week 8)
 LOCATION:Online (PlayVS)
 DESCRIPTION:Rocket League · Best of 5 games\nSchedule and results: https:/
- /danversfalconsathletics.org/esports/schedule.html
-URL:https://danversfalconsathletics.org/esports/schedule.html
+ /danversfalconsathletics.org/esports/#schedule
+URL:https://danversfalconsathletics.org/esports/#schedule
 END:VEVENT
 END:VCALENDAR
