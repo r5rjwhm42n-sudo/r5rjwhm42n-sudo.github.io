@@ -349,6 +349,7 @@ figure { margin: 0; }
   .brand-text small { font-size: 12px; }
   .scores-label { padding-left: 20px; font-size: 13px; }
   .g2, .g3 { grid-template-columns: 1fr; }
+  .grid > * { min-width: 0; }
   .g4, .strip { grid-template-columns: repeat(2, 1fr); }
   .hero::after { width: 260px; height: 260px; }
   .game { grid-template-columns: 60px 1fr; gap: 10px 14px; padding: 12px; }
