@@ -366,7 +366,7 @@
     if (rec) {
       const v = rec.querySelector(".v"), k = rec.querySelector(".k");
       hero.querySelector(".wrap").insertAdjacentHTML("beforeend",
-        `<div class="hero-diamond" aria-hidden="true"><div><b>${esc(v ? v.textContent : "")}</b><span>${esc(k ? k.textContent : "")}</span></div></div>`);
+        `<div class="hero-rec" aria-hidden="true"><span>${esc(k ? k.textContent : "")}</span><b>${esc(v ? v.textContent : "")}</b></div>`);
     }
     const next = strip.querySelector(".next-game");
     const last = document.querySelector("#scoreboard .scoreboard");
@@ -383,7 +383,7 @@
       sec.firstChild.appendChild(p);
     };
     if (next) panel("next", next.querySelector(".k")?.textContent || "Next game", next);
-    if (last) panel("last", "Last game", last);
+    if (last) panel("last", hero.classList.contains("spot") ? "Big game" : "Last game", last);   // a big-game week shows the upcoming game there
     hero.after(sec);
     /* the scoreboard's old spot on the hero is empty now: drop it so the diamond takes its place */
     const old = document.getElementById("scoreboard");
@@ -398,10 +398,14 @@
     const hero = document.querySelector(".hero");
     const fallback = SPORT === "soccer" ? `${squad()}-soccer` : TEAM_PHOTO[SPORT];
     const src = list[0]?.src || (fallback && `../images/teams/${fallback}.jpg`);
-    if (hero && src) {
-      hero.style.setProperty("--shot", `url("${src}")`);
+    if (hero && src && !hero.querySelector(".hero-frame")) {
       hero.classList.add("has-shot");
       if (!list[0]) hero.classList.add("team-shot");
+      /* the photo sits in a slanted frame on the right, the sport's name rolls past behind it */
+      const word = esc(label() || "Falcons");
+      hero.insertAdjacentHTML("afterbegin",
+        `<div class="mq" aria-hidden="true"><div class="mq-run">${`<span>${word}</span>`.repeat(6)}</div></div>` +
+        `<div class="hero-frame-wrap" aria-hidden="true"><span class="frame-line"></span><figure class="hero-frame"><img src="${esc(src)}" alt=""></figure></div>`);
     }
     const grid = document.getElementById("photos");
     const credits = [...new Set(list.map((p) => p.credit).filter(Boolean))];
@@ -507,8 +511,7 @@
     .dfa-btn.solid:hover { background: #e6edfc; }
     .dfa-btn.ink { border-color: var(--royal); color: var(--royal); }
     .dfa-btn.ink:hover { background: #eef2fb; }
-    .hero.has-shot { background: var(--shot) center 32% / cover no-repeat, #06102a; }   /* full-width photo; the shade for the text is in premium.css */
-    .hero.team-shot { background-position: center 45%; }
+
     .dfa-credit { margin: 12px 0 0; font-size: 13.5px; color: var(--muted); }
     .dfa-credit a { color: var(--royal); font-weight: 600; }
     .game .opp .opp-badge { width: 38px; height: 38px; font-size: 15px; margin: -6px 10px 0 0; }

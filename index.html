@@ -19,7 +19,7 @@
 <meta name="twitter:image" content="https://danversfalconsathletics.org/images/og/hub.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,600;1,700;1,800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800;900&family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,600;1,700;1,800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="images/falcons-logo.png">
 <link rel="stylesheet" href="css/home.css">
 <link rel="stylesheet" href="css/transitions.css">
@@ -64,26 +64,35 @@
 <main>
 <section class="spotlight" id="spotlight" hidden aria-label="Big game"></section>
 
-<!-- One big slide per team, like a club home page. The first slide is the
-     welcome; home.js adds a slide for every team from its data.js. -->
-<section class="hub-hero" id="top" aria-roledescription="carousel" aria-label="Danvers Falcons teams">
-  <div class="hx-track" id="hx-track">
-    <article class="hx-slide on" data-name="Welcome">
-      <img class="hx-photo" src="football/images/action/football-under-the-lights.jpg" alt="" style="--pos:50% 35%">
-      <div class="wrap hx-copy">
-        <h1>Every Falcon,<br><em>every score</em></h1>
-        <p class="lede">Scores, schedules and history for every Danvers High team, updated after every game.</p>
-        <div class="hero-stats" id="hero-stats"></div>
-        <div class="btn-row">
-          <a class="btn btn-primary" href="#teams">See every team</a>
-          <a class="btn btn-ghost" href="#week">Fixtures &amp; results</a>
-        </div>
+<section class="hub-hero" id="top">
+  <div class="mq mq-a" aria-hidden="true"><div class="mq-run"><span>Danvers Falcons</span><span>Danvers Falcons</span><span>Danvers Falcons</span><span>Danvers Falcons</span></div></div>
+  <div class="mq mq-b" aria-hidden="true"><div class="mq-run"><span>Every score</span><span>Every team</span><span>Every score</span><span>Every team</span></div></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1>Every Falcon<span>Every score</span></h1>
+      <p class="lede">Scores, schedules and history for every Danvers High team, updated after every game.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="#teams">Pick your team</a>
+        <a class="btn btn-ghost" href="#week">Fixtures &amp; results</a>
       </div>
-    </article>
+      <div class="hero-stats" id="hero-stats"></div>
+    </div>
+    <div class="frame-zone">
+      <div class="hero-frame-wrap"><span class="frame-line" aria-hidden="true"></span>
+        <figure class="hero-frame" id="hero-frame">
+          <img class="on" src="images/teams/football.jpg" alt="The 2026 Danvers football team" style="--pos:50% 72%" data-team="Football">
+          <img src="images/teams/girls-soccer.jpg" alt="The 2026 Danvers girls soccer team" style="--pos:50% 46%" data-team="Girls Soccer" loading="lazy">
+          <img src="images/teams/field-hockey.jpg" alt="The 2026 Danvers field hockey team" style="--pos:50% 58%" data-team="Field Hockey" loading="lazy">
+          <img src="images/teams/volleyball.jpg" alt="The 2026 Danvers volleyball team" style="--pos:50% 50%" data-team="Volleyball" loading="lazy">
+          <img src="images/teams/boys-xc.jpg" alt="The 2026 Danvers boys cross country team" style="--pos:50% 45%" data-team="Boys Cross Country" loading="lazy">
+          <img src="images/teams/boys-soccer.jpg" alt="The 2026 Danvers boys soccer team" style="--pos:50% 60%" data-team="Boys Soccer" loading="lazy">
+          <img src="images/teams/golf.jpg" alt="The 2026 Danvers golf team" style="--pos:50% 45%" data-team="Golf" loading="lazy">
+          <img src="images/teams/girls-xc.jpg" alt="The 2026 Danvers girls cross country team" style="--pos:50% 45%" data-team="Girls Cross Country" loading="lazy">
+        </figure>
+      </div>
+      <p class="frame-cap" aria-live="off"><i></i><span id="frame-cap">Football</span></p>
+    </div>
   </div>
-  <button type="button" class="hx-arrow prev" aria-label="Previous slide">‹</button>
-  <button type="button" class="hx-arrow next" aria-label="Next slide">›</button>
-  <div class="hx-dots" id="hx-dots"></div>
 </section>
 
 <!-- live scores on a bright strip right across the page -->
@@ -94,6 +103,68 @@
 
 <!-- next game and last game, side by side -->
 <section class="gp" id="gp" hidden aria-label="Next game and last game"><div class="wrap gp-grid" id="gp-grid"></div></section>
+
+<section class="block teams-x" id="teams"><div class="wrap">
+  <div class="section-head"><h2>Pick your <em>team</em></h2></div>
+  <div class="trows">
+    <a class="trow" href="football/" data-sport="football">
+      <span class="trow-ic"><svg aria-hidden="true"><use href="#i-football"/></svg></span>
+      <span class="trow-name">Football</span>
+      <span class="trow-rec"></span>
+      <span class="trow-next"></span>
+      <span class="trow-pic"><img src="images/teams/football.jpg" alt="" loading="lazy" style="--pos:50% 74%"></span>
+      <span class="trow-go" aria-hidden="true">→</span>
+    </a>
+    <a class="trow" href="soccer/" data-sport="soccer">
+      <span class="trow-ic"><svg aria-hidden="true"><use href="#i-soccer"/></svg></span>
+      <span class="trow-name">Soccer</span>
+      <span class="trow-rec"></span>
+      <span class="trow-next"></span>
+      <span class="trow-pic"><img src="images/teams/girls-soccer.jpg" alt="" loading="lazy" style="--pos:50% 46%"></span>
+      <span class="trow-go" aria-hidden="true">→</span>
+    </a>
+    <a class="trow" href="field-hockey/" data-sport="field-hockey">
+      <span class="trow-ic"><svg aria-hidden="true"><use href="#i-field-hockey"/></svg></span>
+      <span class="trow-name">Field Hockey</span>
+      <span class="trow-rec"></span>
+      <span class="trow-next"></span>
+      <span class="trow-pic"><img src="images/teams/field-hockey.jpg" alt="" loading="lazy" style="--pos:50% 58%"></span>
+      <span class="trow-go" aria-hidden="true">→</span>
+    </a>
+    <a class="trow" href="volleyball/" data-sport="volleyball">
+      <span class="trow-ic"><svg aria-hidden="true"><use href="#i-volleyball"/></svg></span>
+      <span class="trow-name">Volleyball</span>
+      <span class="trow-rec"></span>
+      <span class="trow-next"></span>
+      <span class="trow-pic"><img src="images/teams/volleyball.jpg" alt="" loading="lazy" style="--pos:50% 50%"></span>
+      <span class="trow-go" aria-hidden="true">→</span>
+    </a>
+    <a class="trow" href="cross-country/" data-sport="cross-country">
+      <span class="trow-ic"><svg aria-hidden="true"><use href="#i-cross-country"/></svg></span>
+      <span class="trow-name">Cross Country</span>
+      <span class="trow-rec"></span>
+      <span class="trow-next"></span>
+      <span class="trow-pic"><img src="images/teams/boys-xc.jpg" alt="" loading="lazy" style="--pos:50% 45%"></span>
+      <span class="trow-go" aria-hidden="true">→</span>
+    </a>
+    <a class="trow" href="golf/" data-sport="golf">
+      <span class="trow-ic"><svg aria-hidden="true"><use href="#i-golf"/></svg></span>
+      <span class="trow-name">Golf</span>
+      <span class="trow-rec"></span>
+      <span class="trow-next"></span>
+      <span class="trow-pic"><img src="images/teams/golf.jpg" alt="" loading="lazy" style="--pos:50% 45%"></span>
+      <span class="trow-go" aria-hidden="true">→</span>
+    </a>
+    <a class="trow" href="esports/" data-sport="esports">
+      <span class="trow-ic"><svg aria-hidden="true"><use href="#i-esports"/></svg></span>
+      <span class="trow-name">Esports</span>
+      <span class="trow-rec"></span>
+      <span class="trow-next"></span>
+      <span class="trow-pic art"><svg aria-hidden="true"><use href="#i-esports"/></svg></span>
+      <span class="trow-go" aria-hidden="true">→</span>
+    </a>
+  </div>
+</div></section>
 
 <a class="news-strip" id="news-strip" href="newsletter/" hidden>
   <span class="wrap"><span class="ns-label">New</span><span class="ns-title"></span><span class="ns-sub"></span><span class="ns-go">Read the newsletter →</span></span>
@@ -111,18 +182,7 @@
   <div class="light" data-addcal="all-sports" data-label="Add every Danvers game to your calendar"></div>
 </div></section>
 
-<section class="block" id="teams"><div class="wrap">
-  <div class="section-head"><h2>Pick your <em>team</em></h2></div>
-  <div class="tiles" id="team-tiles">
-    <a class="tile-t" href="football/" data-sport="football"><img src="images/teams/football.jpg" alt="The 2026 Danvers football team" style="--pos:50% 74%" loading="lazy"><span class="tt-name">Football</span><span class="tt-rec"></span></a>
-    <a class="tile-t" href="soccer/" data-sport="soccer"><img src="images/teams/girls-soccer.jpg" alt="The 2026 Danvers girls soccer team" style="--pos:50% 46%" loading="lazy"><span class="tt-name">Soccer</span><span class="tt-rec"></span></a>
-    <a class="tile-t" href="field-hockey/" data-sport="field-hockey"><img src="images/teams/field-hockey.jpg" alt="The 2026 Danvers field hockey team" style="--pos:50% 58%" loading="lazy"><span class="tt-name">Field Hockey</span><span class="tt-rec"></span></a>
-    <a class="tile-t" href="volleyball/" data-sport="volleyball"><img src="images/teams/volleyball.jpg" alt="The 2026 Danvers volleyball team" style="--pos:50% 50%" loading="lazy"><span class="tt-name">Volleyball</span><span class="tt-rec"></span></a>
-    <a class="tile-t" href="cross-country/" data-sport="cross-country"><img src="images/teams/boys-xc.jpg" alt="The 2026 Danvers boys cross country team" style="--pos:50% 45%" loading="lazy"><span class="tt-name">Cross Country</span><span class="tt-rec"></span></a>
-    <a class="tile-t" href="golf/" data-sport="golf"><img src="images/teams/golf.jpg" alt="The 2026 Danvers golf team" style="--pos:50% 45%" loading="lazy"><span class="tt-name">Golf</span><span class="tt-rec"></span></a>
-    <a class="tile-t art" href="esports/" data-sport="esports"><svg aria-hidden="true"><use href="#i-esports"/></svg><span class="tt-name">Esports</span><span class="tt-rec"></span></a>
-  </div>
-</div></section>
+
 
 <section class="block" id="road" hidden></section>
 
@@ -154,12 +214,9 @@
 </main>
 
 <footer class="site-footer">
-  <div class="wrap foot-big">
-    <img src="images/falcons-logo.png" alt="">
-    <div><b>Go Falcons</b><span>Danvers High School · Northeastern Conference</span></div>
-  </div>
+  <div class="mq mq-foot" aria-hidden="true"><div class="mq-run"><span>Go Falcons</span><span>Go Falcons</span><span>Go Falcons</span><span>Go Falcons</span></div></div>
   <div class="wrap foot-small">
-    <span>A Danvers High School DECA student project. Not the official school website.</span>
+    <span><img src="images/falcons-logo.png" alt="" class="foot-crest">A Danvers High School DECA student project. Not the official school website.</span>
     <span>Official athletics: <a href="https://www.danversfalconsathletics.com/" target="_blank" rel="noopener">Falcons Athletics</a> · <a class="privacy-link" href="privacy.html">Privacy</a></span>
   </div>
 </footer>
