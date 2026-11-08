@@ -4,6 +4,8 @@
      · the site footer, drawn into <footer id="site-footer">
      · team sites: a round Menu button with a full-screen menu, which holds
        "All sports" / "[Sport] home" and every page of every sport
+       (first visit: a one-time note under the button), and "More Falcons [Sport]"
+       cards at the end of each page to the sport's other pages
      · hover effects: button sweeps and arrows, a pull toward the mouse, card tilt
        and shine, and a dot-and-ring cursor (the last three for a mouse only)
      · sound effects made in the browser (no sound files), with an on/off
@@ -203,6 +205,7 @@
       document.documentElement.classList.add("fx-menu-open");
       Sound.swish();
       menu.querySelector(".fx-menu-close").focus();
+      hint.done();
     };
     const close = () => {
       if (menu.hidden) return;
@@ -223,6 +226,118 @@
     });
     /* leaving the page by a menu link: put the page back the way it was for the back button */
     addEventListener("pagehide", () => { menu.hidden = true; menu.classList.remove("open"); btn.setAttribute("aria-expanded", "false"); document.documentElement.classList.remove("fx-menu-open"); });
+
+    /* a visitor's first time on any team site: a one-time note under the Menu button, which pulses a few times.
+       It goes when they open the Menu, close the note, or after 8 seconds, and never comes back. */
+    const hint = menuHint(btn, name, pages);
+
+    /* the end of every page but the home page (it has its own): cards to this sport's other pages */
+    if (!onHome) moreCards(dir, file, team ? team.textContent : name, pages);
+  }
+
+  /* the card words come from each sport's home page "More Falcons" cards; only Schedule is new */
+  const MORE = {
+    football: {
+      "schedule.html": ["Schedule", "Every game this season with kickoff times, places and final scores."],
+      "stats.html": ["Roster &amp; Stats", "Every player by position with game-by-game numbers."],
+      "history.html": ["History", "Conference titles, year-by-year records and the Falcon greats."],
+      "media.html": ["Highlights &amp; Replays", "Game recaps and highlights straight from the team's Hudl."],
+    },
+    soccer: {
+      "schedule.html": ["Schedule", "Every game this season with dates, places and final scores."],
+      "stats.html": ["Roster &amp; Stats", "Every player by position with goals, assists and a game-by-game log."],
+      "history.html": ["History", "Championship banners, the record book and every season on file."],
+      "media.html": ["Highlights &amp; Replays", "Game recaps and highlights straight from the team's Hudl."],
+    },
+    "field-hockey": {
+      "schedule.html": ["Schedule", "Every game this season with dates, places and final scores."],
+      "stats.html": ["Roster &amp; Stats", "Every player by position with goals, assists, saves and a game-by-game log."],
+      "history.html": ["History", "Thirty conference titles, the record book and every season on file."],
+      "media.html": ["Highlights &amp; Replays", "Game recaps and highlights straight from the team's Hudl."],
+    },
+    volleyball: {
+      "schedule.html": ["Schedule", "Every match this season with dates, places and final scores."],
+      "stats.html": ["Roster &amp; Stats", "Every player by position with kills, aces, blocks, digs, assists and a match-by-match log."],
+      "history.html": ["History", "Six straight conference titles, a trip to the state final, the record book and every season on file."],
+      "media.html": ["Highlights &amp; Replays", "Match recaps and highlights straight from the team's Hudl."],
+    },
+    "cross-country": {
+      "schedule.html": ["Schedule", "Every meet this season with dates, courses and results."],
+      "runners.html": ["Roster &amp; Results", "Every runner, boys and girls, with meet-by-meet finishes."],
+      "history.html": ["History", "Conference titles, a state championship and the Falcon standouts."],
+      "media.html": ["In the News", "Meet write-ups and results from around the North Shore."],
+    },
+    golf: {
+      "schedule.html": ["Schedule", "Every match this season with courses and final scores."],
+      "stats.html": ["Roster &amp; Results", "Every player with match-by-match results and points won."],
+      "history.html": ["History", "Fourteen conference titles, sectional crowns and the Falcons who led the way."],
+      "media.html": ["In the News", "Match coverage from the local papers."],
+    },
+    esports: {
+      "schedule.html": ["Schedule", "Every match this season with dates and results."],
+      "stats.html": ["The Team", "The adviser, the two games the Falcons play, state standings and how to join."],
+      "history.html": ["History", "Every Massachusetts state champion so far, and the banner the Falcons are chasing."],
+      "media.html": ["Follow the Team", "The school's team page and the state league."],
+    },
+  };
+  function moreCards(dir, file, team, pages) {
+    const main = document.querySelector("main");
+    const words = MORE[dir];
+    if (!main || !words) return;
+    const cards = pages.filter((p) => p.file !== "index.html" && p.file !== file && words[p.file]);
+    if (!cards.length) return;
+    const sec = document.createElement("section");
+    sec.className = "block fx-more";
+    sec.innerHTML = `<div class="wrap">
+        <div class="section-head"><h2>More Falcons ${team}</h2></div>
+        <div class="grid g3 quicklinks">${cards.map((p) => `<a class="card lift" href="${p.href}"><span class="arrow">→</span><h3>${words[p.file][0]}</h3><p>${words[p.file][1]}</p></a>`).join("")}</div>
+      </div>`;
+    main.appendChild(sec);
+  }
+
+  function menuHint(btn, name, pages) {
+    const KEY = "df-menu-hint";
+    const header = btn.closest(".site-header");
+    let seen = true;
+    try { seen = localStorage.getItem(KEY) === "seen"; } catch (e) { /* storage blocked: skip the note */ }
+    const remember = () => { try { localStorage.setItem(KEY, "seen"); } catch (e) { /* this page only */ } };
+    if (seen || !header) return { done() {} };
+
+    const tip = document.createElement("div");
+    tip.className = "fx-hint";
+    tip.setAttribute("role", "status");
+    const list = pages.filter((p) => p.file !== "index.html").map((p) => p.label).join(", ");
+    tip.innerHTML = `<b>All the ${name.toLowerCase()} pages are in here</b><span>${list}</span><button type="button" class="fx-hint-x" aria-label="Close this note">×</button>`;
+    header.appendChild(tip);
+    /* sit just under the Menu button, with the little pointer under its middle */
+    const place = () => {
+      const r = btn.getBoundingClientRect(), h = header.getBoundingClientRect();
+      const right = Math.max(12, h.right - r.right);
+      tip.style.top = `${r.bottom - h.top + 12}px`;
+      tip.style.right = `${right}px`;
+      tip.style.setProperty("--ax", `${h.right - (r.left + r.width / 2) - right - 7}px`);
+    };
+    let timer = 0, gone = false;
+    const done = () => {
+      if (gone) return;
+      gone = true;
+      remember();
+      clearTimeout(timer);
+      removeEventListener("resize", place);
+      btn.classList.remove("fx-nudge");
+      tip.classList.remove("show");
+      setTimeout(() => tip.remove(), 400);
+    };
+    tip.querySelector(".fx-hint-x").addEventListener("click", done);
+    timer = setTimeout(() => {
+      place();
+      addEventListener("resize", place);
+      tip.classList.add("show");
+      btn.classList.add("fx-nudge");
+      remember();   // shown once is enough, even if they leave before it closes
+      timer = setTimeout(done, 8000);
+    }, 1200);
+    return { done };
   }
 
   sportMenu();
