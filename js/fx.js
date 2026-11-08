@@ -484,11 +484,14 @@
     ring.setAttribute("aria-hidden", "true");
     const shape = SPORT && SPORT_SHAPE[SPORT[0]];
     if (shape) {
+      /* team sites: the shape IS the pointer (the normal one is hidden), so it sits exactly on the mouse,
+         with a tiny dot in its middle marking the exact spot a click lands */
       ring.classList.add("fx-ring-sport");
+      dot.classList.add("fx-cursor-sport");
+      document.documentElement.classList.add("fx-sport-pointer");
       ring.innerHTML = `<svg viewBox="-4 -4 72 72"><g fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">${shape}</g></svg>`;
     }
-    document.body.append(ring);
-    if (!shape) document.body.append(dot);   // on team sites the shape is enough
+    document.body.append(ring, dot);
     let mx = 0, my = 0, rx = 0, ry = 0, raf = 0, shown = false;
     const follow = () => {
       rx += (mx - rx) * .2;
@@ -502,13 +505,15 @@
       mx = e.clientX; my = e.clientY;
       if (!shown) { rx = mx; ry = my; shown = true; document.documentElement.classList.add("fx-has-cursor"); }
       dot.style.transform = `translate(${mx}px, ${my}px)`;
-      if (!raf) raf = requestAnimationFrame(follow);
+      if (shape) ring.style.transform = dot.style.transform;   // no trailing: it's the pointer
+      else if (!raf) raf = requestAnimationFrame(follow);
     }, { passive: true });
     addEventListener("pointerover", (e) => {
       if (e.pointerType !== "mouse") return;
       const t = e.target;
-      /* windows that open on top of the page (videos, the app sheet) keep the normal pointer */
-      const away = t.tagName === "IFRAME" || !!t.closest("dialog[open]");
+      /* windows that open on top of the page (videos, the app sheet) keep the normal pointer, and so do typing spots */
+      const away = t.tagName === "IFRAME" || !!t.closest("dialog[open]") ||
+        (shape && !!t.closest('input:not([type="checkbox"], [type="radio"], [type="range"], [type="button"], [type="submit"]), textarea, select, [contenteditable="true"]'));
       const dark = !away && onDark(t, e.clientX, e.clientY);
       ring.classList.toggle("gone", away);
       dot.classList.toggle("gone", away);
