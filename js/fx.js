@@ -174,17 +174,17 @@
     menu.setAttribute("aria-modal", "true");
     menu.setAttribute("aria-label", "Menu");
     let i = 0;
-    const pill = (href, label) => `<a class="fx-pill" href="${href}" style="--i:${i++}"><span class="fx-arr" aria-hidden="true">←</span>${label}</a>`;
-    const backs = pill(`${ROOT}#teams`, "All sports") + (onHome ? "" : pill(homeHref, `${name} home`));
     const link = (href, label, current) =>
       `<li><a href="${href}" style="--i:${i++}"${current ? ' aria-current="page"' : ""}>${label}${current ? '<small aria-hidden="true">You’re here</small>' : ""}</a></li>`;
+    /* "Back to": all sports, and this sport's home (not shown on the home page itself) */
+    const backs = link(`${ROOT}#teams`, "All sports", false) + (onHome ? "" : link(homeHref, `${name} home`, false));
     menu.innerHTML = `
       <div class="wrap fx-menu-top">
         <span class="fx-menu-tag">Danvers Falcons · ${team ? team.textContent : name}</span>
         <button class="fx-menu-close" type="button" aria-label="Close menu">×</button>
       </div>
-      <div class="wrap fx-menu-back">${backs}</div>
       <div class="wrap fx-menu-body">
+        <nav class="fx-menu-back" aria-labelledby="fx-m-back"><h2 id="fx-m-back">Back to</h2><ul>${backs}</ul></nav>
         <nav aria-labelledby="fx-m-this"><h2 id="fx-m-this">This sport</h2><ul>${pages.map((p) => link(p.href, p.label, p.current)).join("")}</ul></nav>
         <nav aria-labelledby="fx-m-other"><h2 id="fx-m-other">Other sports</h2><ul>${TEAMS.filter(([d]) => d !== dir).map(([d, n]) => link(`${ROOT}${d}/`, n, false)).join("")}</ul></nav>
       </div>`;
@@ -299,7 +299,7 @@
   const CLICKABLE = `a[href], button, [role="button"], [role="tab"], input, select, textarea, label, summary, ${CARDS}`;
   /* rows and buttons that turn royal under the mouse, and buttons that turn white */
   const TURNS_DARK = ".game, .tb, .addcal.light .btn";
-  const TURNS_LIGHT = ".btn, .fx-pill, .fx-menu-btn, .fx-menu-close, .fx-sound";
+  const TURNS_LIGHT = ".btn, .fx-menu-btn, .fx-menu-close, .fx-sound";
   function onDark(el, x, y) {
     if (el.closest(TURNS_DARK)) return true;
     if (el.closest(TURNS_LIGHT)) return false;
