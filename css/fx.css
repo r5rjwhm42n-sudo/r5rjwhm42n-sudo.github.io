@@ -167,6 +167,58 @@ html.fx-has-cursor .fx-cursor, html.fx-has-cursor .fx-ring { display: block; }
   .topbar a, .section-head .more, .fx-foot ul a, .fx-legal a, .tile .d a, .credit a, .dfa-credit a, .sp-links a, .tc-go, .story .more { transition: color .2s; }
 }
 
+/* =====================================================================
+   SOUND SWITCH (header, every page)
+   ===================================================================== */
+.fx-sound { display: inline-flex; align-items: center; justify-content: center; gap: 9px; flex: none; height: 40px; margin-left: 14px; padding: 0 15px; border-radius: 999px;
+  border: 1.5px solid rgba(255, 255, 255, .6); background: transparent; color: var(--white); font: 700 13px/1 var(--body); letter-spacing: .08em; text-transform: uppercase;
+  cursor: pointer; transition: background .2s, color .2s, border-color .2s; }
+.fx-sound:hover { background: var(--white); border-color: var(--white); color: var(--royal); }
+.fx-sound[aria-pressed="false"] { color: #c5d4f5; border-color: rgba(255, 255, 255, .35); }
+.fx-sound[aria-pressed="false"]:hover { color: var(--royal); border-color: var(--white); }
+.fx-eq { display: flex; align-items: flex-end; gap: 2px; height: 14px; }
+.fx-eq i { width: 3px; height: 4px; background: currentColor; border-radius: 1px; }
+.fx-sound[aria-pressed="true"] .fx-eq i { animation: fx-eq 1s cubic-bezier(.16, 1, .3, 1) infinite; }
+.fx-sound[aria-pressed="true"] .fx-eq i:nth-child(2) { animation-delay: -.35s; }
+.fx-sound[aria-pressed="true"] .fx-eq i:nth-child(3) { animation-delay: -.7s; }
+@keyframes fx-eq { 0%, 100% { height: 4px; } 50% { height: 14px; } }
+/* the words show only on team sites with room; the homepage and newsletter headers hold the team links, so bars only there */
+html:not(.fx-sport) .fx-sound { width: 40px; padding: 0; margin-left: 8px; }
+html:not(.fx-sport) .fx-sound-label { display: none; }
+.fx-sound-menu { display: none; margin-left: auto; height: 54px; width: 54px !important; padding: 0 !important; }
+@media (max-width: 1100px) {
+  .fx-sound { width: 40px; padding: 0; }
+  .fx-sound-label { display: none; }
+}
+@media (max-width: 720px) {
+  .site-header .fx-sound { order: 2; margin-left: 10px; }   /* stays beside search, which search.js moves to order 2 */
+  .fx-sport .site-header .dfs-open { margin-left: 8px; }
+}
+@media (max-width: 600px) {
+  /* phones: the header buttons a little smaller so all of them fit beside the logo */
+  .fx-sport .site-header .fx-sound, .fx-sport .site-header .dfs-open { width: 36px; height: 36px; margin-left: 6px; }
+  .fx-sport .site-header .fx-menu-btn { width: 44px; height: 44px; margin-left: 6px; }
+}
+@media (max-width: 389px) {
+  /* small phones: team sites keep the switch in the Menu; the homepage tightens its three buttons */
+  .fx-sport .site-header .fx-sound { display: none; }
+  .fx-sound-menu { display: inline-flex; }
+  .site-header .with-news .news-btn, .site-header .with-news .dfs-open, .site-header .with-news .fx-sound { width: 34px; height: 34px; margin-left: 6px; }
+}
+@media (max-width: 359px) {
+  /* the smallest phones: the homepage logo leaves room for only two buttons, so its switch steps out
+     (the setting is shared, and every team site's Menu has the switch); team sites tighten once more */
+  .site-header .with-news .fx-sound { display: none; }
+  .fx-sport .site-header .dfs-open { width: 34px; height: 34px; margin-left: 4px; }
+  .fx-sport .site-header .fx-menu-btn { width: 40px; height: 40px; margin-left: 4px; font-size: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  /* still bars instead of bouncing ones */
+  .fx-sound[aria-pressed="true"] .fx-eq i { animation: none; height: 8px; }
+  .fx-sound[aria-pressed="true"] .fx-eq i:nth-child(2) { height: 14px; }
+  .fx-sound[aria-pressed="true"] .fx-eq i:nth-child(3) { height: 10px; }
+}
+
 @media (max-width: 980px) {
   .fx-foot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .fx-foot-grid > :first-child { grid-column: 1 / -1; }

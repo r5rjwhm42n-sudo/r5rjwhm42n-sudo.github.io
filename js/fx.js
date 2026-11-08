@@ -6,12 +6,74 @@
        "All sports" / "[Sport] home" and every page of every sport
      · hover effects: button sweeps and arrows, a pull toward the mouse, card tilt
        and shine, and a dot-and-ring cursor (the last three for a mouse only)
+     · sound effects made in the browser (no sound files), with an on/off
+       switch in the header that every page remembers
    ===================================================================== */
 (function () {
   const ROOT = new URL("..", document.currentScript.src).href;   // the site root, from /js/fx.js
   const ON_HUB = !!document.querySelector(".hub-hero");
   const OUT = 'target="_blank" rel="noopener"';
-  const FX = { sound: { hover() {}, click() {}, swish() {}, chime() {} } };   // the sounds come in below
+
+  /* ---------- Sound: plays from the visitor's first click; the header switch turns it off ---------- */
+  const Sound = (function () {
+    let ctx = null, master = null, on = true, last = 0;
+    const read = () => { try { on = localStorage.getItem("df-sound") !== "off"; } catch (e) { /* storage blocked: stay on */ } };
+    read();
+    function unlock() {
+      if (!ctx) {
+        try {
+          const AC = window.AudioContext || window.webkitAudioContext;
+          ctx = new AC();
+          master = ctx.createGain();
+          master.gain.value = .9;
+          master.connect(ctx.destination);
+        } catch (e) { ctx = null; }
+      }
+      if (ctx && ctx.state === "suspended") ctx.resume().catch(() => {});
+    }
+    function ready() {
+      if (!ctx) return false;
+      if (ctx.state === "suspended") ctx.resume().catch(() => {});
+      return true;
+    }
+    function tone(o) {
+      if (!on || !ready()) return;
+      const t = ctx.currentTime + (o.delay || 0), osc = ctx.createOscillator(), g = ctx.createGain();
+      osc.type = o.type || "sine";
+      osc.frequency.setValueAtTime(o.f, t);
+      if (o.f2) osc.frequency.exponentialRampToValueAtTime(o.f2, t + o.d);
+      g.gain.setValueAtTime(.0001, t);
+      g.gain.exponentialRampToValueAtTime(o.g, t + .008);
+      g.gain.exponentialRampToValueAtTime(.0001, t + o.d);
+      osc.connect(g); g.connect(master);
+      osc.start(t); osc.stop(t + o.d + .03);
+    }
+    function noise(o) {
+      if (!on || !ready()) return;
+      const t = ctx.currentTime, len = Math.floor(ctx.sampleRate * o.d), buf = ctx.createBuffer(1, len, ctx.sampleRate), data = buf.getChannelData(0);
+      for (let i = 0; i < len; i++) data[i] = Math.random() * 2 - 1;
+      const src = ctx.createBufferSource(), f = ctx.createBiquadFilter(), g = ctx.createGain();
+      src.buffer = buf;
+      f.type = "bandpass"; f.Q.value = 1.3;
+      f.frequency.setValueAtTime(o.from, t);
+      f.frequency.exponentialRampToValueAtTime(o.to, t + o.d);
+      g.gain.setValueAtTime(.0001, t);
+      g.gain.exponentialRampToValueAtTime(o.g, t + o.d * .35);
+      g.gain.exponentialRampToValueAtTime(.0001, t + o.d);
+      src.connect(f); f.connect(g); g.connect(master);
+      src.start(t); src.stop(t + o.d + .02);
+    }
+    return {
+      get on() { return on; },
+      set(v) { on = v; try { localStorage.setItem("df-sound", v ? "on" : "off"); } catch (e) { /* this page only */ } },
+      read,
+      unlock,
+      hover() { const n = performance.now(); if (n - last < 70) return; last = n; tone({ f: 2100, d: .035, g: .014, type: "triangle" }); },   // soft tick
+      click() { tone({ f: 660, f2: 320, d: .09, g: .055 }); },                                     // tap
+      swish() { noise({ d: .34, g: .06, from: 500, to: 5600 }); },                                 // a menu opens, a tab changes
+      chime() { tone({ f: 784, d: .22, g: .035 }); tone({ f: 1175, d: .3, g: .03, delay: .08 }); tone({ f: 1568, d: .35, g: .02, delay: .16 }); },   // sound turned on
+    };
+  })();
 
   /* ---------- Footer ---------- */
   const TEAMS = [["football", "Football"], ["soccer", "Soccer"], ["field-hockey", "Field hockey"], ["volleyball", "Volleyball"],
@@ -128,7 +190,7 @@
       </div>`;
     document.body.appendChild(menu);
 
-    const focusables = () => [...menu.querySelectorAll("a[href], button")];
+    const focusables = () => [...menu.querySelectorAll("a[href], button")].filter((el) => el.getClientRects().length);   // only the ones showing
     const open = () => {
       const r = btn.getBoundingClientRect();
       menu.style.setProperty("--cx", `${r.left + r.width / 2}px`);
@@ -139,7 +201,7 @@
       menu.classList.add("open");
       btn.setAttribute("aria-expanded", "true");
       document.documentElement.classList.add("fx-menu-open");
-      FX.sound.swish();
+      Sound.swish();
       menu.querySelector(".fx-menu-close").focus();
     };
     const close = () => {
@@ -237,7 +299,7 @@
   const CLICKABLE = `a[href], button, [role="button"], [role="tab"], input, select, textarea, label, summary, ${CARDS}`;
   /* rows and buttons that turn royal under the mouse, and buttons that turn white */
   const TURNS_DARK = ".game, .tb, .addcal.light .btn";
-  const TURNS_LIGHT = ".btn, .fx-pill, .fx-menu-btn, .fx-menu-close";
+  const TURNS_LIGHT = ".btn, .fx-pill, .fx-menu-btn, .fx-menu-close, .fx-sound";
   function onDark(el, x, y) {
     if (el.closest(TURNS_DARK)) return true;
     if (el.closest(TURNS_LIGHT)) return false;
@@ -288,4 +350,75 @@
     document.addEventListener("pointerout", (e) => { if (!e.relatedTarget) hide(); });
   }
   if (MOUSE.matches && MOTION_OK.matches) cursor();
+
+  /* ---------- Sound effects ---------- */
+  /* the on/off switch, in the header next to search */
+  /* (on small phones the team-site header is full, so there the switch sits at the top of the Menu instead) */
+  function soundSwitch() {
+    const bar = document.querySelector(".site-header .hbar");
+    if (!bar) return;
+    const make = (extra) => {
+      const sw = document.createElement("button");
+      sw.type = "button";
+      sw.className = `fx-sound${extra}`;
+      sw.setAttribute("aria-label", "Sound effects");
+      sw.innerHTML = '<span class="fx-eq" aria-hidden="true"><i></i><i></i><i></i></span><span class="fx-sound-label"></span>';
+      sw.addEventListener("click", () => { Sound.set(!Sound.on); paint(); if (Sound.on) Sound.chime(); });
+      return sw;
+    };
+    const switches = [make("")];
+    bar.insertBefore(switches[0], bar.querySelector(".dfs-open, .fx-menu-btn"));
+    const close = document.querySelector(".fx-menu-close");
+    if (close) {
+      switches.push(make(" fx-sound-menu"));
+      close.before(switches[1]);
+    }
+    const paint = () => switches.forEach((sw) => {
+      sw.setAttribute("aria-pressed", String(Sound.on));
+      sw.querySelector(".fx-sound-label").textContent = Sound.on ? "Sound on" : "Sound off";
+    });
+    paint();
+    /* coming back with the browser's back button, or a change in another tab */
+    addEventListener("pageshow", () => { Sound.read(); paint(); });
+    addEventListener("storage", (e) => { if (e.key === "df-sound") { Sound.read(); paint(); } });
+  }
+  soundSwitch();
+
+  /* a tap on every click (the first click also turns sound on for the visit) */
+  document.addEventListener("pointerdown", (e) => {
+    Sound.unlock();
+    if (e.target.closest(".fx-sound")) return;
+    if (e.target.closest("a, button")) Sound.click();
+  }, true);
+  document.addEventListener("keydown", (e) => {
+    Sound.unlock();
+    const a = document.activeElement;
+    if ((e.key === "Enter" || e.key === " ") && a && a.matches("a, button") && !a.matches(".fx-sound")) Sound.click();
+  }, true);
+
+  /* a soft tick on hover (mouse only) */
+  const HOVERABLE = `a[href], button, [role="button"], [role="tab"], summary, ${CARDS}`;
+  let lastHover = null;
+  document.addEventListener("pointerover", (e) => {
+    if (e.pointerType !== "mouse") return;
+    const t = e.target.closest(HOVERABLE);
+    if (t && t !== lastHover) { lastHover = t; Sound.hover(); } else if (!t) lastHover = null;
+  });
+
+  /* a swish when a menu or dropdown opens, or a tab or filter changes */
+  const SWITCHES = '[aria-expanded], [role="tab"], [aria-pressed]';
+  const isOn = (el) => ["aria-expanded", "aria-selected", "aria-pressed"].some((a) => el.getAttribute(a) === "true");
+  let pressed = null;
+  document.addEventListener("click", (e) => {
+    const el = e.target.closest(SWITCHES);
+    pressed = el && !el.matches(".fx-menu-btn, .fx-sound") ? { el, was: isOn(el) } : null;   // the Menu button swishes on its own
+  }, true);
+  document.addEventListener("click", () => {
+    if (pressed && !pressed.was && (!pressed.el.isConnected || isOn(pressed.el))) Sound.swish();
+    pressed = null;
+  });
+  /* pop-up windows: game details, search, the app sheet */
+  new MutationObserver((list) => {
+    if (list.some((m) => m.target.matches("dialog[open], details[open]"))) Sound.swish();
+  }).observe(document.body, { subtree: true, attributes: true, attributeFilter: ["open"] });
 })();
