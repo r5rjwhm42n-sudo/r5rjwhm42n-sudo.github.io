@@ -119,24 +119,6 @@
     e.currentTarget.setAttribute("aria-expanded", open);
   });
   const otherKey = Object.keys(TEAMS).find((k) => k !== teamKey);
-  $("#site-footer").innerHTML = `
-    <div class="wrap foot-top">
-      <span class="badge"><img src="${LOGO}" alt=""></span>
-      <div class="go">Go Falcons<small>${esc(SCHOOL.school)} ${esc(T.label)}</small></div>
-    </div>
-    <div class="wrap foot-bot">
-      <div>
-        ${esc(SCHOOL.address)}<br>
-        ${esc(SCHOOL.conference)} · ${esc(T.division)} · Head Coach ${esc(T.headCoach)}
-      </div>
-      <div class="links">
-        <a href="${to(here, otherKey)}">${esc(TEAMS[otherKey].label)}</a>
-        <a href="${T.links.hudl}" target="_blank" rel="noopener">Hudl</a>
-        <a href="${T.links.arbiter}" target="_blank" rel="noopener">School schedule</a>
-        <a href="${T.links.maxpreps}" target="_blank" rel="noopener">MaxPreps</a>
-        <a href="${SCHOOL.athletics}" target="_blank" rel="noopener">Falcons Athletics</a>
-      </div>
-    </div>`;
   /* Links written in the HTML pages keep the chosen team too */
   $$('main a[href$=".html"]').forEach((a) => { a.href = to(a.getAttribute("href")); });
 

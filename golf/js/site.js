@@ -100,22 +100,6 @@
     const open = $(".nav").classList.toggle("open");
     e.currentTarget.setAttribute("aria-expanded", open);
   });
-  $("#site-footer").innerHTML = `
-    <div class="wrap foot-top">
-      <span class="badge"><img src="${LOGO}" alt=""></span>
-      <div class="go">Go Falcons<small>${esc(TEAM.school)} ${esc(TEAM.sport)}</small></div>
-    </div>
-    <div class="wrap foot-bot">
-      <div>
-        ${esc(TEAM.address)} · Home course: ${esc(TEAM.homeCourse)}<br>
-        ${esc(TEAM.conference)} · ${esc(TEAM.division)} · Head Coach ${esc(TEAM.headCoach)}
-      </div>
-      <div class="links">
-        <a href="${TEAM.links.schedule}" target="_blank" rel="noopener">School Schedule</a>
-        <a href="${TEAM.links.school}" target="_blank" rel="noopener">DHS Golf</a>
-        <a href="${TEAM.links.athletics}" target="_blank" rel="noopener">Falcons Athletics</a>
-      </div>
-    </div>`;
   /* Scroll the top strip so the next match is in view */
   const nextChip = $(".sc.next");
   if (nextChip) $(".scores-track").scrollLeft = Math.max(0, nextChip.offsetLeft - $(".scores-track").offsetLeft - 340);

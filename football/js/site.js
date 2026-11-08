@@ -69,23 +69,6 @@
     const open = $(".nav").classList.toggle("open");
     e.currentTarget.setAttribute("aria-expanded", open);
   });
-  $("#site-footer").innerHTML = `
-    <div class="wrap foot-top">
-      <span class="badge"><img src="${LOGO}" alt=""></span>
-      <div class="go">Go Falcons<small>${esc(TEAM.school)} Football</small></div>
-    </div>
-    <div class="wrap foot-bot">
-      <div>
-        ${esc(TEAM.address)}<br>
-        ${esc(TEAM.conference)} · ${esc(TEAM.division)} · Head Coach ${esc(TEAM.headCoach)}<br>
-        <span class="disclaimer">A Danvers High School DECA student project. Not the official school website.</span>
-      </div>
-      <div class="links">
-        <a href="${TEAM.links.hudl}" target="_blank" rel="noopener">Hudl</a>
-        <a href="${TEAM.links.athletics}" target="_blank" rel="noopener">Falcons Athletics</a>
-        <a href="${TEAM.links.maxpreps}" target="_blank" rel="noopener">MaxPreps</a>
-      </div>
-    </div>`;
 
   /* ---------- Pieces reused across pages ---------- */
   function gameRow(g) {

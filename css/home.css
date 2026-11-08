@@ -263,9 +263,6 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .tip { position: fixed; z-index: 100; max-width: 320px; background: var(--navy); color: var(--white); font-size: 13px; line-height: 1.4; padding: 7px 10px; border-radius: 4px; box-shadow: 0 6px 18px rgba(5, 14, 40, .3); pointer-events: none; }
 
 /* ---------- Footer ---------- */
-.site-footer { background: var(--navy); color: #b9c6e6; font-size: 14px; padding: 22px 0; }
-.site-footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px 24px; }
-.site-footer a { color: var(--white); font-weight: 600; }
 
 /* ---------- Smaller screens ---------- */
 @media (max-width: 1080px) {

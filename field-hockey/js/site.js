@@ -103,23 +103,6 @@
     const open = $(".nav").classList.toggle("open");
     e.currentTarget.setAttribute("aria-expanded", open);
   });
-  $("#site-footer").innerHTML = `
-    <div class="wrap foot-top">
-      <span class="badge"><img src="${LOGO}" alt=""></span>
-      <div class="go">Go Falcons<small>${esc(T.school)} ${esc(T.sport)}</small></div>
-    </div>
-    <div class="wrap foot-bot">
-      <div>
-        ${esc(T.address)}<br>
-        ${esc(T.conference)} · ${esc(T.division)} · Head Coach ${esc(T.headCoach)}
-      </div>
-      <div class="links">
-        <a href="${T.links.hudl}" target="_blank" rel="noopener">Hudl</a>
-        <a href="${T.links.maxpreps}" target="_blank" rel="noopener">MaxPreps</a>
-        <a href="${T.links.school}" target="_blank" rel="noopener">School Page</a>
-        <a href="${T.links.athletics}" target="_blank" rel="noopener">Falcons Athletics</a>
-      </div>
-    </div>`;
   /* ---------- Pieces reused across pages ---------- */
   function gameRow(g) {
     const d = new Date(g.date);
