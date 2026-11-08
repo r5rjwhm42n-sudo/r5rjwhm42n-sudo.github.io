@@ -34,8 +34,8 @@ DURATION:PT2H
 SUMMARY:Danvers Field Hockey at Wilmington (scrimmage)
 LOCATION:Wilmington\, MA
 DESCRIPTION:Scrimmage\nSchedule and results: https://danversfalconsathletic
- s.org/field-hockey/schedule.html
-URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+ s.org/field-hockey/#schedule
+URL:https://danversfalconsathletics.org/field-hockey/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:field-hockey-102@danversfalconsathletics.org
@@ -45,8 +45,8 @@ DURATION:PT2H
 SUMMARY:Danvers Field Hockey at Weston (scrimmage)
 LOCATION:Weston\, MA
 DESCRIPTION:Scrimmage\nSchedule and results: https://danversfalconsathletic
- s.org/field-hockey/schedule.html
-URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+ s.org/field-hockey/#schedule
+URL:https://danversfalconsathletics.org/field-hockey/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:field-hockey-103@danversfalconsathletics.org
@@ -56,8 +56,8 @@ DURATION:PT2H
 SUMMARY:Danvers Field Hockey vs Manchester Essex & 8 others (scrimmage)
 LOCATION:Danvers High School
 DESCRIPTION:Scrimmage\nSchedule and results: https://danversfalconsathletic
- s.org/field-hockey/schedule.html
-URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+ s.org/field-hockey/#schedule
+URL:https://danversfalconsathletics.org/field-hockey/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:field-hockey-1@danversfalconsathletics.org
@@ -70,8 +70,8 @@ DESCRIPTION:Northeastern Conference\nFinal: Danvers 2\, Marblehead 6\nSenio
  r captain Kyla Moroney and freshman Zoie Abell each had a goal and an assi
  st in the Labor Day opener\, but Marblehead pulled away on the Falcons' ho
  me turf.\nSchedule and results: https://danversfalconsathletics.org/field-
- hockey/schedule.html
-URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+ hockey/#schedule
+URL:https://danversfalconsathletics.org/field-hockey/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:field-hockey-2@danversfalconsathletics.org
@@ -84,8 +84,8 @@ DESCRIPTION:Non-league\nFinal: Danvers 4\, Hamilton-Wenham 3\nThe Falcons c
  ame from behind three separate times for their first win. Kyla Moroney had
   a hat trick and set up Zoie Abell's goal\, and freshman goalkeeper Ellie 
  Barnes made 14 saves.\nSchedule and results: https://danversfalconsathleti
- cs.org/field-hockey/schedule.html
-URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+ cs.org/field-hockey/#schedule
+URL:https://danversfalconsathletics.org/field-hockey/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:field-hockey-3@danversfalconsathletics.org
@@ -98,8 +98,8 @@ DESCRIPTION:Northeastern Conference\nFinal: Danvers 8\, Peabody 3\nFreshman
   Zoie Abell scored four goals\, and Kyla Moroney (a goal and three assists
  ) and Addie Moore (four assists) also finished with four points as Danvers
   built a 5–0 halftime lead at Deering Stadium.\nSchedule and results: ht
- tps://danversfalconsathletics.org/field-hockey/schedule.html
-URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+ tps://danversfalconsathletics.org/field-hockey/#schedule
+URL:https://danversfalconsathletics.org/field-hockey/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:field-hockey-4@danversfalconsathletics.org
@@ -112,8 +112,8 @@ DESCRIPTION:Northeastern Conference\nFinal: Danvers 2\, Saugus 1\nUnder the
   lights at Deering Stadium\, Kyla Moroney tied it 50 seconds before halfti
  me and won it on a penalty stroke in the third quarter. Danvers earned 15 
  corners and put 27 shots on goal in its third straight win.\nSchedule and 
- results: https://danversfalconsathletics.org/field-hockey/schedule.html
-URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+ results: https://danversfalconsathletics.org/field-hockey/#schedule
+URL:https://danversfalconsathletics.org/field-hockey/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:field-hockey-5@danversfalconsathletics.org
@@ -125,9 +125,9 @@ LOCATION:Ipswich High School
 DESCRIPTION:Non-league\nFinal: Danvers 2\, Ipswich 6\nIt was 1–1 after on
  e quarter before Ipswich took control in the second. Kyla Moroney had a go
  al and an assist\, and the two Danvers goalkeepers combined for 11 saves.\
- nSchedule and results: https://danversfalconsathletics.org/field-hockey/sc
- hedule.html
-URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+ nSchedule and results: https://danversfalconsathletics.org/field-hockey/#s
+ chedule
+URL:https://danversfalconsathletics.org/field-hockey/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:field-hockey-6@danversfalconsathletics.org
@@ -140,8 +140,8 @@ DESCRIPTION:Northeastern Conference\nFinal: Danvers 0\, Beverly 2\nThe Falc
  ons played their rival to a scoreless first half and held Beverly to six c
  orners\, but the unbeaten-in-the-league Panthers scored in the third and f
  ourth quarters. Eva Selaya-Mendez made 11 saves.\nSchedule and results: ht
- tps://danversfalconsathletics.org/field-hockey/schedule.html
-URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+ tps://danversfalconsathletics.org/field-hockey/#schedule
+URL:https://danversfalconsathletics.org/field-hockey/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:field-hockey-7@danversfalconsathletics.org
@@ -154,8 +154,8 @@ DESCRIPTION:Non-league\nFinal: Danvers 2\, Bishop Fenwick 2\nZoie Abell bur
  ied a pass from Kyla Moroney off a penalty corner with no time left on the
   clock to earn a tie at one-loss Bishop Fenwick. Moroney scored the first 
  Danvers goal and Eva Selaya-Mendez stopped 11 shots.\nSchedule and results
- : https://danversfalconsathletics.org/field-hockey/schedule.html
-URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+ : https://danversfalconsathletics.org/field-hockey/#schedule
+URL:https://danversfalconsathletics.org/field-hockey/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:field-hockey-8@danversfalconsathletics.org
@@ -168,8 +168,8 @@ DESCRIPTION:Northeastern Conference\nFinal: Danvers 2\, Gloucester 5\nFirst
  -half goals from Zoie Abell and Addie Moore\, both set up by Kyla Moroney\
  , had Danvers level with unbeaten Gloucester at halftime before a tough th
  ird quarter. Eva Selaya-Mendez made a career-high 21 saves.\nSchedule and 
- results: https://danversfalconsathletics.org/field-hockey/schedule.html
-URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+ results: https://danversfalconsathletics.org/field-hockey/#schedule
+URL:https://danversfalconsathletics.org/field-hockey/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:field-hockey-9@danversfalconsathletics.org
@@ -182,9 +182,8 @@ DESCRIPTION:Northeastern Conference\nFinal: Danvers 4\, Swampscott 2\nDown
  a goal at halftime\, the Falcons scored three unanswered in the second hal
  f. Olivia Henry and Kyla Moroney each had a goal and an assist\, Addie Moo
  re scored\, and sophomore Elynne Silva got her first varsity goal.\nSchedu
- le and results: https://danversfalconsathletics.org/field-hockey/schedule.
- html
-URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+ le and results: https://danversfalconsathletics.org/field-hockey/#schedule
+URL:https://danversfalconsathletics.org/field-hockey/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:field-hockey-10@danversfalconsathletics.org
@@ -197,8 +196,8 @@ DESCRIPTION:Northeastern Conference\nFinal: Danvers 1\, Masconomet 3\nKyla
  Moroney finished a pass from Olivia Henry just 50 seconds in for a 1–0 l
  ead\, but the defending conference champions answered with three. Eva Sela
  ya-Mendez made six saves.\nSchedule and results: https://danversfalconsath
- letics.org/field-hockey/schedule.html
-URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+ letics.org/field-hockey/#schedule
+URL:https://danversfalconsathletics.org/field-hockey/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:field-hockey-11@danversfalconsathletics.org
@@ -212,8 +211,8 @@ DESCRIPTION:Northeastern Conference\nFinal: Danvers 0\, Gloucester 5\nUnbea
   state tournament berth. Olivia Henry made plays at both ends\, Rylee Shep
  pard was strong on defense\, and Kyla Moroney was double-teamed for most o
  f the afternoon. Eva Selaya-Mendez made seven saves.\nSchedule and results
- : https://danversfalconsathletics.org/field-hockey/schedule.html
-URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+ : https://danversfalconsathletics.org/field-hockey/#schedule
+URL:https://danversfalconsathletics.org/field-hockey/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:field-hockey-12@danversfalconsathletics.org
@@ -227,8 +226,8 @@ DESCRIPTION:Non-league\nFinal: Danvers 5\, Malden Catholic 1\nDown 1–0 af
  ur times in the final quarter. Captain Kyla Moroney had her second hat tri
  ck of the season and an assist\, and freshman Zoie Abell added two goals a
  nd two assists.\nSchedule and results: https://danversfalconsathletics.org
- /field-hockey/schedule.html
-URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+ /field-hockey/#schedule
+URL:https://danversfalconsathletics.org/field-hockey/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:field-hockey-13@danversfalconsathletics.org
@@ -240,9 +239,9 @@ LOCATION:Blocksidge Field\, Swampscott
 DESCRIPTION:Northeastern Conference\nFinal: Danvers 3\, Swampscott 3\nA bac
  k-and-forth game under the lights at Blocksidge Field ended level. Freshma
  n Zoie Abell scored twice and Kyla Moroney had a goal and an assist.\nSche
- dule and results: https://danversfalconsathletics.org/field-hockey/schedul
- e.html
-URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+ dule and results: https://danversfalconsathletics.org/field-hockey/#schedu
+ le
+URL:https://danversfalconsathletics.org/field-hockey/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:field-hockey-14@danversfalconsathletics.org
@@ -256,8 +255,8 @@ DESCRIPTION:Northeastern Conference\nFinal: Danvers 5\, Marblehead 3\nDown
  s: Kyla Moroney (a goal and two assists)\, Olivia Henry (a goal and an ass
  ist) and Addie Moore (a goal). Senior Mia Calabro and freshman Zoie Abell 
  each added a goal and an assist.\nSchedule and results: https://danversfal
- consathletics.org/field-hockey/schedule.html
-URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+ consathletics.org/field-hockey/#schedule
+URL:https://danversfalconsathletics.org/field-hockey/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:field-hockey-15@danversfalconsathletics.org
@@ -271,8 +270,8 @@ DESCRIPTION:Northeastern Conference\nFinal: Danvers 6\, Saugus 2\nThe Falco
  eries with Saugus\, getting back above .500 overall and to .500 in the con
  ference. Freshman Zoie Abell had a hat trick\, and Kyla Moroney scored twi
  ce and set up two more.\nSchedule and results: https://danversfalconsathle
- tics.org/field-hockey/schedule.html
-URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+ tics.org/field-hockey/#schedule
+URL:https://danversfalconsathletics.org/field-hockey/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:field-hockey-16@danversfalconsathletics.org
@@ -284,8 +283,8 @@ LOCATION:Manning Bowl\, Lynn
 DESCRIPTION:Non-league\nFinal: Danvers 0\, St. Mary's 5\nA day after the wi
  n at Saugus\, the Falcons were shut out by St. Mary's on the turf at the M
  anning Bowl in a non-league game.\nSchedule and results: https://danversfa
- lconsathletics.org/field-hockey/schedule.html
-URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+ lconsathletics.org/field-hockey/#schedule
+URL:https://danversfalconsathletics.org/field-hockey/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:field-hockey-17@danversfalconsathletics.org
@@ -299,8 +298,8 @@ DESCRIPTION:Non-league\nFinal: Danvers 1\, Bishop Fenwick 2\nKyla Moroney g
  d it late in the third quarter and Reese Robillard scored the winner with 
  17 seconds left. A month earlier Danvers had tied the Crusaders with a goa
  l at the final whistle.\nSchedule and results: https://danversfalconsathle
- tics.org/field-hockey/schedule.html
-URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+ tics.org/field-hockey/#schedule
+URL:https://danversfalconsathletics.org/field-hockey/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:field-hockey-18@danversfalconsathletics.org
@@ -313,9 +312,9 @@ DESCRIPTION:Northeastern Conference\nFinal: Danvers 3\, Masconomet 1\nThe F
  alcons closed the regular season with a 3–1 win at Boxford Commons\, tur
  ning the score around on Masconomet after the Chieftains won by the same m
  argin at Deering Stadium on Oct. 6. The win evened Danvers at 8–8–2.\n
- Schedule and results: https://danversfalconsathletics.org/field-hockey/sch
- edule.html
-URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+ Schedule and results: https://danversfalconsathletics.org/field-hockey/#sc
+ hedule
+URL:https://danversfalconsathletics.org/field-hockey/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:field-hockey-104@danversfalconsathletics.org
@@ -325,8 +324,8 @@ DURATION:PT2H
 SUMMARY:Danvers Field Hockey at Woburn (scrimmage)
 LOCATION:Woburn High School Stadium\, Woburn
 DESCRIPTION:Scrimmage\nSchedule and results: https://danversfalconsathletic
- s.org/field-hockey/schedule.html
-URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+ s.org/field-hockey/#schedule
+URL:https://danversfalconsathletics.org/field-hockey/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:field-hockey-105@danversfalconsathletics.org
@@ -340,7 +339,7 @@ DESCRIPTION:MIAA state tournament · Round of 32\nFinal: Danvers 0\, East L
  al minutes on the road\, but the Spartans scored with just under three min
  utes left to win 1–0 and end Danvers' season in the Division 3 Round of 
  32.\nSchedule and results: https://danversfalconsathletics.org/field-hocke
- y/schedule.html
-URL:https://danversfalconsathletics.org/field-hockey/schedule.html
+ y/#schedule
+URL:https://danversfalconsathletics.org/field-hockey/#schedule
 END:VEVENT
 END:VCALENDAR

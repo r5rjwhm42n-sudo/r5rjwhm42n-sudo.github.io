@@ -34,8 +34,8 @@ DURATION:PT2H
 SUMMARY:Danvers Boys Soccer vs St. Mary's (scrimmage)
 LOCATION:Dr. Deering Stadium\, Danvers
 DESCRIPTION:Scrimmage\nSchedule and results: https://danversfalconsathletic
- s.org/soccer/schedule.html?team=boys
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+ s.org/soccer/?team=boys#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:boys-soccer-102@danversfalconsathletics.org
@@ -45,8 +45,8 @@ DURATION:PT2H
 SUMMARY:Danvers Boys Soccer at Mystic Valley (scrimmage) (T 0–0)
 LOCATION:Mystic Valley athletic complex\, Malden
 DESCRIPTION:Scrimmage\nFinal: Danvers 0\, Mystic Valley 0\nSchedule and res
- ults: https://danversfalconsathletics.org/soccer/schedule.html?team=boys
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+ ults: https://danversfalconsathletics.org/soccer/?team=boys#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:boys-soccer-1@danversfalconsathletics.org
@@ -56,9 +56,9 @@ DURATION:PT2H
 SUMMARY:Danvers Boys Soccer at Marblehead (L 0–7)
 LOCATION:Piper Field\, Marblehead
 DESCRIPTION:Northeastern Conference\nFinal: Danvers 0\, Marblehead 7\nSched
- ule and results: https://danversfalconsathletics.org/soccer/schedule.html?
- team=boys
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+ ule and results: https://danversfalconsathletics.org/soccer/?team=boys#sch
+ edule
+URL:https://danversfalconsathletics.org/soccer/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:boys-soccer-2@danversfalconsathletics.org
@@ -68,9 +68,9 @@ DURATION:PT2H
 SUMMARY:Danvers Boys Soccer at Winthrop (L 0–7)
 LOCATION:Miller Field\, Winthrop
 DESCRIPTION:Northeastern Conference\nFinal: Danvers 0\, Winthrop 7\nSchedul
- e and results: https://danversfalconsathletics.org/soccer/schedule.html?te
- am=boys
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+ e and results: https://danversfalconsathletics.org/soccer/?team=boys#sched
+ ule
+URL:https://danversfalconsathletics.org/soccer/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:boys-soccer-3@danversfalconsathletics.org
@@ -83,8 +83,8 @@ DESCRIPTION:Northeastern Conference\nFinal: Danvers 0\, Beverly 5\nDanvers
  trailed by a goal at halftime\, but four second-half Beverly goals put it 
  away. The Falcons\, who don't have a single starter back from last year\, 
  lost five players to cramping early in the second half.\nSchedule and resu
- lts: https://danversfalconsathletics.org/soccer/schedule.html?team=boys
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+ lts: https://danversfalconsathletics.org/soccer/?team=boys#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:boys-soccer-4@danversfalconsathletics.org
@@ -96,8 +96,8 @@ LOCATION:Morse Field\, Danvers
 DESCRIPTION:Non-league\nFinal: Danvers 0\, Pioneer Charter 4\nDown just a g
  oal at halftime\, the young Falcons couldn't find the equalizer and gave u
  p three in the second half.\nSchedule and results: https://danversfalconsa
- thletics.org/soccer/schedule.html?team=boys
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+ thletics.org/soccer/?team=boys#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:boys-soccer-5@danversfalconsathletics.org
@@ -107,9 +107,9 @@ DURATION:PT2H
 SUMMARY:Danvers Boys Soccer vs Masconomet (L 0–7)
 LOCATION:Dr. Deering Stadium\, Danvers
 DESCRIPTION:Northeastern Conference\nFinal: Danvers 0\, Masconomet 7\nSched
- ule and results: https://danversfalconsathletics.org/soccer/schedule.html?
- team=boys
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+ ule and results: https://danversfalconsathletics.org/soccer/?team=boys#sch
+ edule
+URL:https://danversfalconsathletics.org/soccer/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:boys-soccer-6@danversfalconsathletics.org
@@ -122,8 +122,8 @@ DESCRIPTION:Northeastern Conference\nFinal: Danvers 2\, Saugus 1\nNathan Ko
  unga scored both goals — one off an Andrew Morse free kick\, the other o
  ff a cross from Alejandro Henry — to give the Falcons their first win of
   the season.\nSchedule and results: https://danversfalconsathletics.org/so
- ccer/schedule.html?team=boys
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+ ccer/?team=boys#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:boys-soccer-7@danversfalconsathletics.org
@@ -134,9 +134,9 @@ SUMMARY:Danvers Boys Soccer vs Peabody (L 0–3)
 LOCATION:Dr. Deering Stadium\, Danvers
 DESCRIPTION:Northeastern Conference\nFinal: Danvers 0\, Peabody 3\nPeabody 
  led 1–0 at the half on a penalty kick and added two more after the break
- .\nSchedule and results: https://danversfalconsathletics.org/soccer/schedu
- le.html?team=boys
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+ .\nSchedule and results: https://danversfalconsathletics.org/soccer/?team=
+ boys#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:boys-soccer-8@danversfalconsathletics.org
@@ -148,8 +148,8 @@ LOCATION:Dr. Deering Stadium\, Danvers
 DESCRIPTION:Northeastern Conference\nFinal: Danvers 0\, Marblehead 7\nMissi
  ng three starters to injury\, the Falcons played much better in the second
   half\, giving up just one goal after the break.\nSchedule and results: ht
- tps://danversfalconsathletics.org/soccer/schedule.html?team=boys
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+ tps://danversfalconsathletics.org/soccer/?team=boys#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:boys-soccer-9@danversfalconsathletics.org
@@ -159,9 +159,9 @@ DURATION:PT2H
 SUMMARY:Danvers Boys Soccer vs Swampscott (L 0–3)
 LOCATION:Dr. Deering Stadium\, Danvers
 DESCRIPTION:Northeastern Conference\nFinal: Danvers 0\, Swampscott 3\nSched
- ule and results: https://danversfalconsathletics.org/soccer/schedule.html?
- team=boys
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+ ule and results: https://danversfalconsathletics.org/soccer/?team=boys#sch
+ edule
+URL:https://danversfalconsathletics.org/soccer/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:boys-soccer-10@danversfalconsathletics.org
@@ -171,8 +171,8 @@ DURATION:PT2H
 SUMMARY:Danvers Boys Soccer at Bishop Fenwick (L 0–2)
 LOCATION:Donaldson Field\, Peabody
 DESCRIPTION:Non-league\nFinal: Danvers 0\, Bishop Fenwick 2\nSchedule and r
- esults: https://danversfalconsathletics.org/soccer/schedule.html?team=boys
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+ esults: https://danversfalconsathletics.org/soccer/?team=boys#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:boys-soccer-11@danversfalconsathletics.org
@@ -184,8 +184,8 @@ LOCATION:Manning Field\, Lynn
 DESCRIPTION:Non-league\nFinal: Danvers 1\, Lynn Classical 2\nSophomore Andr
  ew Morse finished a pass from classmate Mateo Musta to give the Falcons th
  e lead\, but Lynn Classical answered with two goals.\nSchedule and results
- : https://danversfalconsathletics.org/soccer/schedule.html?team=boys
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+ : https://danversfalconsathletics.org/soccer/?team=boys#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:boys-soccer-12@danversfalconsathletics.org
@@ -196,8 +196,8 @@ SUMMARY:Danvers Boys Soccer at Beverly (L 0–7)
 LOCATION:Beverly High School\, Beverly
 DESCRIPTION:Northeastern Conference\nFinal: Danvers 0\, Beverly 7\nBeverly 
  completed the season sweep with a convincing home win.\nSchedule and resul
- ts: https://danversfalconsathletics.org/soccer/schedule.html?team=boys
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+ ts: https://danversfalconsathletics.org/soccer/?team=boys#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:boys-soccer-13@danversfalconsathletics.org
@@ -211,8 +211,8 @@ DESCRIPTION:Non-league\nFinal: Danvers 1\, Gloucester 2\nMatthew McCrea sco
  a shot that deflected off a Danvers defender and won it about five minutes
   from the end off a corner kick. "Danvers is a nice young team\, they put 
  up a good fight\," Gloucester coach Armando Marnoto said.\nSchedule and re
- sults: https://danversfalconsathletics.org/soccer/schedule.html?team=boys
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+ sults: https://danversfalconsathletics.org/soccer/?team=boys#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:boys-soccer-14@danversfalconsathletics.org
@@ -224,8 +224,8 @@ LOCATION:Dr. Deering Stadium\, Danvers
 DESCRIPTION:Northeastern Conference\nFinal: Danvers 0\, Salem 2\nA scoreles
  s first half gave way to two second-half goals from Salem senior captain H
  enry Beauparlant.\nSchedule and results: https://danversfalconsathletics.o
- rg/soccer/schedule.html?team=boys
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+ rg/soccer/?team=boys#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:boys-soccer-15@danversfalconsathletics.org
@@ -237,8 +237,8 @@ LOCATION:Masconomet Regional\, Boxford
 DESCRIPTION:Northeastern Conference\nFinal: Danvers 0\, Masconomet 7\nMasco
  nomet won 7–0 on its home field\, the same score as the first meeting in
   Danvers.\nSchedule and results: https://danversfalconsathletics.org/socce
- r/schedule.html?team=boys
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+ r/?team=boys#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:boys-soccer-16@danversfalconsathletics.org
@@ -251,8 +251,8 @@ DESCRIPTION:Northeastern Conference\nFinal: Danvers 0\, Peabody 0\nGoalkeep
  er Drew Maioli kept a clean sheet as Danvers held Peabody scoreless on the
   road for a 0–0 draw\, a month after the Tanners won 3–0 in Danvers. T
  he tie ended a nine-game losing streak.\nSchedule and results: https://dan
- versfalconsathletics.org/soccer/schedule.html?team=boys
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+ versfalconsathletics.org/soccer/?team=boys#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:boys-soccer-17@danversfalconsathletics.org
@@ -264,8 +264,8 @@ LOCATION:Dr. Deering Stadium\, Danvers
 DESCRIPTION:Northeastern Conference\nFinal: Danvers 0\, Gloucester 2\nGlouc
  ester shut out the Falcons 2–0 at Deering Stadium to sweep the season se
  ries\, 12 days after a 2–1 win in Gloucester.\nSchedule and results: htt
- ps://danversfalconsathletics.org/soccer/schedule.html?team=boys
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+ ps://danversfalconsathletics.org/soccer/?team=boys#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:boys-soccer-18@danversfalconsathletics.org
@@ -276,7 +276,7 @@ SUMMARY:Danvers Boys Soccer vs Essex Tech (L 0–4)
 LOCATION:Morse Field\, Danvers
 DESCRIPTION:Non-league\nFinal: Danvers 0\, Essex Tech 4\nEssex Tech shut ou
  t the Falcons 4–0 at Morse Field in the season finale.\nSchedule and res
- ults: https://danversfalconsathletics.org/soccer/schedule.html?team=boys
-URL:https://danversfalconsathletics.org/soccer/schedule.html?team=boys
+ ults: https://danversfalconsathletics.org/soccer/?team=boys#schedule
+URL:https://danversfalconsathletics.org/soccer/?team=boys#schedule
 END:VEVENT
 END:VCALENDAR
