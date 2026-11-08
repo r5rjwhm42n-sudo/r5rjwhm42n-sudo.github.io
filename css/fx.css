@@ -172,23 +172,13 @@ html.fx-has-cursor .fx-cursor, html.fx-has-cursor .fx-ring { display: block; }
 .fx-ring.on-dark.big { background: rgba(255, 255, 255, .14); }
 .fx-cursor.on-dark { background: var(--white); }
 .fx-ring.gone, .fx-cursor.gone { opacity: 0; }
-/* team sites: the ring is that sport's shape, small and very see-through: royal on light, white on dark */
-.fx-ring.fx-ring-sport { width: 42px; height: 42px; margin: -21px 0 0 -21px; border: 0; border-radius: 0; background: none; color: var(--royal); opacity: .4;
-  transition: width .35s cubic-bezier(.16, 1, .3, 1), height .35s cubic-bezier(.16, 1, .3, 1), margin .35s cubic-bezier(.16, 1, .3, 1), opacity .3s, color .3s; }
-.fx-ring-sport svg { display: block; width: 100%; height: 100%; overflow: visible; }
-.fx-ring.fx-ring-sport.big { width: 58px; height: 58px; margin: -29px 0 0 -29px; background: none; opacity: .55; }
-.fx-ring.fx-ring-sport.on-dark { color: var(--white); }
-.fx-ring.fx-ring-sport.gone { opacity: 0; }
-.fx-cursor.fx-cursor-sport { width: 4px; height: 4px; margin: -2px 0 0 -2px; opacity: .75; }
-/* the normal pointer hides while the shape is showing; it comes back for typing spots, pop-ups (they sit above
-   the page, where the shape can't go) and videos */
+/* team sites: the pointer itself is that sport's drawing (set by js/fx.js); stronger over anything clickable;
+   typing spots keep the text cursor */
 @media (hover: hover) and (pointer: fine) {
-  html.fx-sport-pointer.fx-has-cursor, html.fx-sport-pointer.fx-has-cursor body,
-  html.fx-sport-pointer.fx-has-cursor body :not(dialog[open], dialog[open] *, iframe, select,
-    input:not([type="checkbox"], [type="radio"], [type="range"], [type="button"], [type="submit"]), textarea, [contenteditable="true"]) { cursor: none !important; }
-  /* pointers are inherited, so these get theirs back outright (their insides then follow) */
-  html.fx-sport-pointer.fx-has-cursor :is(dialog[open], iframe, select) { cursor: auto !important; }
-  html.fx-sport-pointer.fx-has-cursor :is(input:not([type="checkbox"], [type="radio"], [type="range"], [type="button"], [type="submit"]), textarea, [contenteditable="true"]) { cursor: text !important; }
+  html.fx-sport-cursor, html.fx-sport-cursor * { cursor: var(--fx-sport-cursor), auto !important; }
+  html.fx-sport-cursor :is(a[href], button, [role="button"], [role="tab"], label, summary, select, [data-game], .team-card, .card.lift),
+  html.fx-sport-cursor :is(a[href], button, [role="button"], [role="tab"], label, summary, [data-game], .team-card, .card.lift) * { cursor: var(--fx-sport-cursor-hot), pointer !important; }
+  html.fx-sport-cursor :is(input:not([type="checkbox"], [type="radio"], [type="range"], [type="button"], [type="submit"]), textarea, [contenteditable="true"]) { cursor: text !important; }
 }
 
 @media (prefers-reduced-motion: reduce) {

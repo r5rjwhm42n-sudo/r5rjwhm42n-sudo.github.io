@@ -447,8 +447,7 @@
   }, { passive: true });
   document.addEventListener("pointerout", (e) => { if (!e.relatedTarget) { untilt(); unpull(); } });
 
-  /* custom cursor: a small dot, and a ring that follows a beat behind and grows over anything clickable
-     (on team sites the ring is that sport's shape instead, and the normal pointer stays) */
+  /* custom cursor (homepage and newsletter): a small dot, and a ring that follows a beat behind and grows over anything clickable */
   const CLICKABLE = `a[href], button, [role="button"], [role="tab"], input, select, textarea, label, summary, ${CARDS}`;
   /* rows and buttons that turn royal under the mouse, and buttons that turn white */
   const TURNS_DARK = ".game, .tb, .addcal.light .btn";
@@ -466,7 +465,7 @@
     }
     return false;
   }
-  /* team sites: the ring becomes that sport's shape (drawings match the homepage's sport icons; the shoe and golf ball are new) */
+  /* team sites: the pointer is that sport (drawings match the homepage's sport icons; the shoe and golf ball are new) */
   const SPORT_SHAPE = {
     football: '<g transform="rotate(-35 32 32)"><path d="M5 32C13 17 51 17 59 32C51 47 13 47 5 32Z"/><path d="M23 32h18M27 28v8M32 28v8M37 28v8"/><path d="M14 25.5v13M50 25.5v13"/></g>',
     soccer: '<circle cx="32" cy="32" r="26"/><path d="M32 22l9.5 6.9-3.6 11.2H26.1l-3.6-11.2z" fill="currentColor"/><path d="M32 22V6M41.5 28.9l15.2-4.9M37.9 40.1l9.4 12.9M26.1 40.1l-9.4 12.9M22.5 28.9L7.3 24"/>',
@@ -482,15 +481,6 @@
     ring.className = "fx-ring";
     dot.setAttribute("aria-hidden", "true");
     ring.setAttribute("aria-hidden", "true");
-    const shape = SPORT && SPORT_SHAPE[SPORT[0]];
-    if (shape) {
-      /* team sites: the shape IS the pointer (the normal one is hidden), so it sits exactly on the mouse,
-         with a tiny dot in its middle marking the exact spot a click lands */
-      ring.classList.add("fx-ring-sport");
-      dot.classList.add("fx-cursor-sport");
-      document.documentElement.classList.add("fx-sport-pointer");
-      ring.innerHTML = `<svg viewBox="-4 -4 72 72"><g fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">${shape}</g></svg>`;
-    }
     document.body.append(ring, dot);
     let mx = 0, my = 0, rx = 0, ry = 0, raf = 0, shown = false;
     const follow = () => {
@@ -505,15 +495,13 @@
       mx = e.clientX; my = e.clientY;
       if (!shown) { rx = mx; ry = my; shown = true; document.documentElement.classList.add("fx-has-cursor"); }
       dot.style.transform = `translate(${mx}px, ${my}px)`;
-      if (shape) ring.style.transform = dot.style.transform;   // no trailing: it's the pointer
-      else if (!raf) raf = requestAnimationFrame(follow);
+      if (!raf) raf = requestAnimationFrame(follow);
     }, { passive: true });
     addEventListener("pointerover", (e) => {
       if (e.pointerType !== "mouse") return;
       const t = e.target;
-      /* windows that open on top of the page (videos, the app sheet) keep the normal pointer, and so do typing spots */
-      const away = t.tagName === "IFRAME" || !!t.closest("dialog[open]") ||
-        (shape && !!t.closest('input:not([type="checkbox"], [type="radio"], [type="range"], [type="button"], [type="submit"]), textarea, select, [contenteditable="true"]'));
+      /* windows that open on top of the page (videos, the app sheet) keep the normal pointer */
+      const away = t.tagName === "IFRAME" || !!t.closest("dialog[open]");
       const dark = !away && onDark(t, e.clientX, e.clientY);
       ring.classList.toggle("gone", away);
       dot.classList.toggle("gone", away);
@@ -523,7 +511,18 @@
     });
     document.addEventListener("pointerout", (e) => { if (!e.relatedTarget) hide(); });
   }
-  if (MOUSE.matches && MOTION_OK.matches) cursor();
+  /* team sites: the pointer itself is that sport (a small see-through drawing, drawn by the computer like any
+     pointer, so nothing sits on top of it); stronger over anything clickable. The dot and circle are for the homepage. */
+  const shape = SPORT && SPORT_SHAPE[SPORT[0]];
+  if (shape) {
+    const pointer = (opacity) => `url("data:image/svg+xml,${encodeURIComponent(
+      `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="-4 -4 72 72" opacity="${opacity}">` +
+      `<defs><g id="a" fill="none" stroke-linecap="round" stroke-linejoin="round">${shape}</g></defs>` +
+      '<use href="#a" stroke="#fff" stroke-width="9" color="#fff"/><use href="#a" stroke="#18479f" stroke-width="5" color="#18479f"/></svg>')}") 16 16`;
+    document.documentElement.style.setProperty("--fx-sport-cursor", pointer(.4));
+    document.documentElement.style.setProperty("--fx-sport-cursor-hot", pointer(.6));
+    document.documentElement.classList.add("fx-sport-cursor");
+  } else if (MOUSE.matches && MOTION_OK.matches) cursor();
 
   /* ---------- Sound effects ---------- */
   /* the on/off switch, in the header next to search */
