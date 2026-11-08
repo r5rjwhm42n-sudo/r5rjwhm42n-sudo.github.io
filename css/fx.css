@@ -143,14 +143,20 @@ html body .addcal.light .btn-ghost { --fx-sweep: var(--royal); }
 /* Custom cursor: a small dot and a ring that grows over anything clickable */
 .fx-cursor, .fx-ring { position: fixed; left: 0; top: 0; z-index: 1000; border-radius: 50%; pointer-events: none; display: none; }
 html.fx-has-cursor .fx-cursor, html.fx-has-cursor .fx-ring { display: block; }
-.fx-cursor { width: 8px; height: 8px; margin: -4px 0 0 -4px; background: var(--royal); }
-.fx-ring { width: 40px; height: 40px; margin: -20px 0 0 -20px; border: 1.5px solid rgba(24, 71, 159, .5);
+.fx-cursor { width: 6px; height: 6px; margin: -3px 0 0 -3px; background: var(--royal); }
+.fx-ring { width: 32px; height: 32px; margin: -16px 0 0 -16px; border: 1.5px solid rgba(24, 71, 159, .5);
   transition: width .35s cubic-bezier(.16, 1, .3, 1), height .35s cubic-bezier(.16, 1, .3, 1), margin .35s cubic-bezier(.16, 1, .3, 1), background .3s, border-color .3s; }
-.fx-ring.big { width: 72px; height: 72px; margin: -36px 0 0 -36px; background: rgba(24, 71, 159, .1); border-color: rgba(24, 71, 159, .25); }
+.fx-ring.big { width: 56px; height: 56px; margin: -28px 0 0 -28px; background: rgba(24, 71, 159, .1); border-color: rgba(24, 71, 159, .25); }
 .fx-ring.on-dark { border-color: rgba(255, 255, 255, .75); }
 .fx-ring.on-dark.big { background: rgba(255, 255, 255, .14); }
 .fx-cursor.on-dark { background: var(--white); }
 .fx-ring.gone, .fx-cursor.gone { opacity: 0; }
+/* team sites: the pointer is that sport's drawing (set by js/fx.js), so the dot steps aside; typing spots keep the text cursor */
+@media (hover: hover) and (pointer: fine) {
+  html.fx-sport-cursor, html.fx-sport-cursor * { cursor: var(--fx-sport-cursor), auto !important; }
+  html.fx-sport-cursor :is(input:not([type="checkbox"], [type="radio"], [type="range"], [type="button"], [type="submit"]), textarea, [contenteditable="true"]) { cursor: text !important; }
+  html.fx-sport-cursor .fx-cursor { display: none !important; }
+}
 
 @media (prefers-reduced-motion: reduce) {
   .btn { transition: none; }
