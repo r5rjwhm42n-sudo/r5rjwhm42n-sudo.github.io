@@ -4,6 +4,8 @@
      · the site footer, drawn into <footer id="site-footer">
      · team sites: a round Menu button with a full-screen menu, which holds
        "All sports" / "[Sport] home" and every page of every sport
+     · hover effects: button sweeps and arrows, a pull toward the mouse, card tilt
+       and shine, and a dot-and-ring cursor (the last three for a mouse only)
    ===================================================================== */
 (function () {
   const ROOT = new URL("..", document.currentScript.src).href;   // the site root, from /js/fx.js
@@ -162,4 +164,128 @@
   }
 
   sportMenu();
+
+  /* ---------- Hover effects ---------- */
+  /* every button gets an arrow that tilts on hover: a "↗" already in the label is used, otherwise a "→" is added
+     (not on the calendar dropdown or buttons that carry their own icon) */
+  const ARROW = /\s*([↗→])\s*$/;
+  function arrow(btn) {
+    if (btn.querySelector(".fx-ico, svg") || btn.classList.contains("addcal-toggle")) return;
+    const last = btn.lastChild;
+    const m = last && last.nodeType === 3 && last.data.match(ARROW);
+    if (m) last.data = last.data.replace(ARROW, "");
+    btn.insertAdjacentHTML("beforeend", `<span class="fx-ico${m && m[1] === "↗" ? " ext" : ""}" aria-hidden="true">${m ? m[1] : "→"}</span>`);
+  }
+  const arrows = (root) => root.querySelectorAll && root.querySelectorAll(".btn").forEach(arrow);
+  arrows(document);
+  /* the pages draw some buttons after loading, and some set a button's words later */
+  new MutationObserver((list) => list.forEach((m) => {
+    const btn = m.target.closest && m.target.closest(".btn");
+    if (btn) arrow(btn);
+    m.addedNodes.forEach((n) => { if (n.nodeType === 1) { if (n.matches(".btn")) arrow(n); else arrows(n); } });
+  })).observe(document.body, { childList: true, subtree: true });
+
+  /* tilt, pull and the custom cursor: only with a mouse, and never with reduced motion */
+  const MOUSE = matchMedia("(hover: hover) and (pointer: fine)");
+  const MOTION_OK = matchMedia("(prefers-reduced-motion: no-preference)");
+  const fancy = (e) => e.pointerType === "mouse" && MOUSE.matches && MOTION_OK.matches;
+  const CARDS = ".team-card, .card.lift, .card.scoreboard, .card.next-game";
+  const PULL = ".btn, .fx-menu-btn";
+
+  let tilted = null, pulled = null;
+  const untilt = () => {
+    if (!tilted) return;
+    tilted.classList.remove("fx-tilting");
+    tilted.style.removeProperty("transform");
+    tilted = null;
+  };
+  const unpull = () => {
+    if (!pulled) return;
+    pulled.style.removeProperty("transform");
+    pulled = null;
+  };
+  addEventListener("pointermove", (e) => {
+    if (!fancy(e)) { untilt(); unpull(); return; }
+    /* cards: lean toward the mouse, with a soft shine under it */
+    const card = e.target.closest(CARDS);
+    if (card !== tilted) untilt();
+    if (card) {
+      const r = card.getBoundingClientRect();
+      const x = e.clientX - r.left, y = e.clientY - r.top;
+      const amt = r.width > 600 ? 3 : 6;
+      tilted = card;
+      card.classList.add("fx-tilting");
+      card.style.transform = `perspective(1000px) rotateX(${(-(y / r.height - .5) * amt).toFixed(2)}deg) rotateY(${((x / r.width - .5) * amt).toFixed(2)}deg) translateY(-4px)`;
+      card.style.setProperty("--fx-gx", `${x}px`);
+      card.style.setProperty("--fx-gy", `${y}px`);
+    }
+    /* buttons: pull slightly toward the mouse */
+    const btn = e.target.closest(PULL);
+    if (btn !== pulled) unpull();
+    if (btn) {
+      pulled = btn;
+      /* measure from where the button's center sits at rest, minus the pull it already has */
+      const r = btn.getBoundingClientRect(), t = getComputedStyle(btn).transform;
+      const now = t && t !== "none" ? new DOMMatrixReadOnly(t) : { e: 0, f: 0 };
+      const dx = (e.clientX - (r.left + r.width / 2 - now.e)) * .2, dy = (e.clientY - (r.top + r.height / 2 - now.f)) * .32;
+      btn.style.transform = `translate(${dx.toFixed(1)}px, ${dy.toFixed(1)}px)${btn.matches(".fx-menu-btn") ? " scale(1.06)" : ""}`;
+    }
+  }, { passive: true });
+  document.addEventListener("pointerout", (e) => { if (!e.relatedTarget) { untilt(); unpull(); } });
+
+  /* custom cursor: a small dot, and a ring that follows a beat behind and grows over anything clickable */
+  const CLICKABLE = `a[href], button, [role="button"], [role="tab"], input, select, textarea, label, summary, ${CARDS}`;
+  /* rows and buttons that turn royal under the mouse, and buttons that turn white */
+  const TURNS_DARK = ".game, .tb, .addcal.light .btn";
+  const TURNS_LIGHT = ".btn, .fx-pill, .fx-menu-btn, .fx-menu-close";
+  function onDark(el, x, y) {
+    if (el.closest(TURNS_DARK)) return true;
+    if (el.closest(TURNS_LIGHT)) return false;
+    /* look down through everything under the mouse until something solid: a photo, or a background color */
+    for (const n of document.elementsFromPoint(x, y)) {
+      if (n.tagName === "IMG" || n.tagName === "VIDEO") return true;
+      const cs = getComputedStyle(n);
+      if (/url\(/.test(cs.backgroundImage)) return true;   // photos
+      const c = cs.backgroundColor.match(/[\d.]+/g);
+      if (c && (c.length < 4 || +c[3] > .5)) return .2126 * c[0] + .7152 * c[1] + .0722 * c[2] < 140;
+    }
+    return false;
+  }
+  function cursor() {
+    const dot = document.createElement("div"), ring = document.createElement("div");
+    dot.className = "fx-cursor";
+    ring.className = "fx-ring";
+    dot.setAttribute("aria-hidden", "true");
+    ring.setAttribute("aria-hidden", "true");
+    document.body.append(ring, dot);
+    let mx = 0, my = 0, rx = 0, ry = 0, raf = 0, shown = false;
+    const follow = () => {
+      rx += (mx - rx) * .2;
+      ry += (my - ry) * .2;
+      ring.style.transform = `translate(${rx.toFixed(1)}px, ${ry.toFixed(1)}px)`;
+      raf = Math.abs(mx - rx) + Math.abs(my - ry) > .2 ? requestAnimationFrame(follow) : 0;
+    };
+    const hide = () => { document.documentElement.classList.remove("fx-has-cursor"); shown = false; };
+    addEventListener("pointermove", (e) => {
+      if (!fancy(e)) { hide(); return; }
+      mx = e.clientX; my = e.clientY;
+      if (!shown) { rx = mx; ry = my; shown = true; document.documentElement.classList.add("fx-has-cursor"); }
+      dot.style.transform = `translate(${mx}px, ${my}px)`;
+      if (!raf) raf = requestAnimationFrame(follow);
+    }, { passive: true });
+    addEventListener("pointerover", (e) => {
+      if (e.pointerType !== "mouse") return;
+      const t = e.target;
+      /* windows that open on top of the page (videos, the app sheet) keep the normal pointer */
+      const away = t.tagName === "IFRAME" || !!t.closest("dialog[open]");
+      const dark = !away && onDark(t, e.clientX, e.clientY);
+      ring.classList.toggle("gone", away);
+      dot.classList.toggle("gone", away);
+      ring.classList.toggle("big", !away && !!t.closest(CLICKABLE));
+      ring.classList.toggle("on-dark", dark);
+      dot.classList.toggle("on-dark", dark);
+    });
+    document.addEventListener("pointerout", (e) => { if (!e.relatedTarget) hide(); });
+  }
+  if (MOUSE.matches && MOTION_OK.matches) cursor();
 })();

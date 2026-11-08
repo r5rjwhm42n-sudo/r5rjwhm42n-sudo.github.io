@@ -89,6 +89,84 @@ html.fx-menu-open { overflow: hidden; }
   .fx-menu-btn:hover { transform: none; }
 }
 
+/* =====================================================================
+   HOVER EFFECTS (mouse; the tilt, pull and cursor are added by js/fx.js
+   only for a mouse that can hover, and never with reduced motion)
+   ===================================================================== */
+/* Buttons: a color sweeps up from the bottom, the arrow tilts 45° */
+.btn, .fx-pill { position: relative; overflow: hidden; isolation: isolate; }
+.btn::before, .fx-pill::before { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--fx-sweep, var(--royal-dk));   /* the button's own corners clip it */
+  transform: translateY(101%); transition: transform .45s cubic-bezier(.16, 1, .3, 1); }
+.btn { transition: background .15s, color .15s, border-color .15s, transform .4s cubic-bezier(.16, 1, .3, 1); }   /* a smooth way back after the pull */
+.btn .fx-ico { display: inline-block; line-height: 1; transition: transform .45s cubic-bezier(.16, 1, .3, 1); }
+.btn-primary { --fx-sweep: #d4e1fb; }   /* white button: a pale blue sweeps up */
+.btn-ghost { --fx-sweep: var(--white); }   /* outline on blue: white sweeps up, text turns royal */
+.btn-gold { --fx-sweep: #ffc845; }
+.fx-pill { --fx-sweep: var(--white); }
+html body .addcal.light .btn-primary { --fx-sweep: var(--navy); }
+html body .addcal.light .btn-ghost { --fx-sweep: var(--royal); }
+
+/* Result and list rows: royal sweeps in from the left, the text turns white */
+.game, .tb { position: relative; isolation: isolate; }
+.game { overflow: hidden; }
+.game::before, .tb::before { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--royal); border-radius: inherit;
+  transform: scaleX(0); transform-origin: left; transition: transform .55s cubic-bezier(.16, 1, .3, 1); }
+.game .opp, .game .meta, .game .result, .game .chev, .tb-name, .tb-n, .tb-last { transition: color .3s; }
+
+/* Links: an underline that draws in from the left */
+.topbar a, .section-head .more, .fx-foot ul a, .fx-legal a, .tile .d a, .credit a, .dfa-credit a, .sp-links a, .tc-go, .story .more {
+  text-decoration: none; background-image: linear-gradient(currentColor, currentColor); background-repeat: no-repeat;
+  background-position: 0 100%; background-size: 0 2px; transition: background-size .35s cubic-bezier(.16, 1, .3, 1), color .2s; }
+
+/* Cards: tilt in 3D with a soft shine that follows the mouse */
+.team-card, .card.lift, .card.scoreboard, .card.next-game { position: relative; }
+.team-card::after, .card.lift::after, .card.scoreboard::after, .card.next-game::after {
+  content: ""; position: absolute; inset: 0; z-index: 3; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity .4s;
+  background: radial-gradient(circle 260px at var(--fx-gx, 50%) var(--fx-gy, 50%), var(--fx-glare, rgba(24, 71, 159, .13)), transparent 65%); }
+.card.next-game, .quicklinks .card { --fx-glare: rgba(255, 255, 255, .2); }
+.fx-tilting { transition: transform .12s linear !important; }
+.fx-tilting::after { opacity: 1; }
+
+@media (hover: hover) {
+  .btn:hover::before, .fx-pill:hover::before { transform: none; }
+  .btn:hover .fx-ico { transform: rotate(-45deg); }
+  .btn:hover .fx-ico.ext { transform: rotate(45deg); }
+  .btn-primary:hover { background: var(--white); border-color: var(--white); }
+  .btn-ghost:hover { background: transparent; color: var(--royal); }
+  .btn-gold:hover { background: var(--gold); border-color: var(--gold); }
+  html body .addcal.light .btn-primary:hover { background: var(--royal); border-color: var(--royal); }
+  html body .addcal.light .btn-ghost:hover { background: transparent; color: var(--white); }
+  .fx-pill:hover { background: transparent; }
+
+  .game:hover::before, .tb:hover::before { transform: none; }
+  .game:hover .opp, .game:hover .opp small, .game:hover .meta, .game:hover .result, .game:hover .result.upcoming, .game:hover .chev,
+  .tb:hover .tb-name, .tb:hover .tb-n, .tb:hover .tb-last { color: var(--white); }
+  .game:hover .result.cancelled { border-color: rgba(255, 255, 255, .6); }
+  .tb:hover .tb-bar { background: var(--white); }
+
+  .topbar a:hover, .section-head .more:hover, .fx-foot ul a:hover, .fx-legal a:hover, .tile .d a:hover, .credit a:hover, .dfa-credit a:hover, .sp-links a:hover,
+  .team-card:hover .tc-go, .story:hover .more { text-decoration: none; background-size: 100% 2px; }
+}
+.topbar a:focus-visible, .section-head .more:focus-visible, .fx-foot ul a:focus-visible, .fx-legal a:focus-visible { background-size: 100% 2px; }
+
+/* Custom cursor: a small dot and a ring that grows over anything clickable */
+.fx-cursor, .fx-ring { position: fixed; left: 0; top: 0; z-index: 1000; border-radius: 50%; pointer-events: none; display: none; }
+html.fx-has-cursor .fx-cursor, html.fx-has-cursor .fx-ring { display: block; }
+.fx-cursor { width: 8px; height: 8px; margin: -4px 0 0 -4px; background: var(--royal); }
+.fx-ring { width: 40px; height: 40px; margin: -20px 0 0 -20px; border: 1.5px solid rgba(24, 71, 159, .5);
+  transition: width .35s cubic-bezier(.16, 1, .3, 1), height .35s cubic-bezier(.16, 1, .3, 1), margin .35s cubic-bezier(.16, 1, .3, 1), background .3s, border-color .3s; }
+.fx-ring.big { width: 72px; height: 72px; margin: -36px 0 0 -36px; background: rgba(24, 71, 159, .1); border-color: rgba(24, 71, 159, .25); }
+.fx-ring.on-dark { border-color: rgba(255, 255, 255, .75); }
+.fx-ring.on-dark.big { background: rgba(255, 255, 255, .14); }
+.fx-cursor.on-dark { background: var(--white); }
+.fx-ring.gone, .fx-cursor.gone { opacity: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  .btn { transition: none; }
+  .btn::before, .fx-pill::before, .btn .fx-ico, .game::before, .tb::before { transition: none; }
+  .topbar a, .section-head .more, .fx-foot ul a, .fx-legal a, .tile .d a, .credit a, .dfa-credit a, .sp-links a, .tc-go, .story .more { transition: color .2s; }
+}
+
 @media (max-width: 980px) {
   .fx-foot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .fx-foot-grid > :first-child { grid-column: 1 / -1; }
