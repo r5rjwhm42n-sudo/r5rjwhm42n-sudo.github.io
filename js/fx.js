@@ -351,8 +351,8 @@
   }
   if (MOUSE.matches && MOTION_OK.matches) cursor();
 
-  /* team sites: the pointer becomes that sport, a see-through line drawing in royal with a thin white edge
-     so it shows on light and dark (drawings match the homepage's sport icons; the shoe and golf ball are new) */
+  /* team sites: the pointer becomes that sport, a small (24px), very see-through (40%) line drawing in royal
+     with a thin white edge so it shows on light and dark (drawings match the homepage's sport icons; the shoe and golf ball are new) */
   const SPORT_CURSOR = {
     football: '<g transform="rotate(-35 32 32)"><path d="M5 32C13 17 51 17 59 32C51 47 13 47 5 32Z"/><path d="M23 32h18M27 28v8M32 28v8M37 28v8"/><path d="M14 25.5v13M50 25.5v13"/></g>',
     soccer: '<circle cx="32" cy="32" r="26"/><path d="M32 22l9.5 6.9-3.6 11.2H26.1l-3.6-11.2z" fill="currentColor"/><path d="M32 22V6M41.5 28.9l15.2-4.9M37.9 40.1l9.4 12.9M26.1 40.1l-9.4 12.9M22.5 28.9L7.3 24"/>',
@@ -363,10 +363,10 @@
     esports: '<path d="M20 20h24c7 0 11 5 12.5 13l2.2 12.5c1 6-5.5 9.5-9.5 5.2L42 43H22l-7.2 7.7c-4 4.3-10.5.8-9.5-5.2L7.5 33C9 25 13 20 20 20z"/><path d="M19 28v10M14 33h10"/><circle cx="43" cy="30" r="2.4" fill="currentColor"/><circle cx="49" cy="36" r="2.4" fill="currentColor"/>',
   };
   if (SPORT && SPORT_CURSOR[SPORT[0]]) {
-    const svg = '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="-4 -4 72 72" opacity=".8">' +
+    const svg = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="-4 -4 72 72" opacity=".4">' +
       `<defs><g id="a" fill="none" stroke-linecap="round" stroke-linejoin="round">${SPORT_CURSOR[SPORT[0]]}</g></defs>` +
-      '<use href="#a" stroke="#fff" stroke-width="9" color="#fff"/><use href="#a" stroke="#18479f" stroke-width="5" color="#18479f"/></svg>';
-    document.documentElement.style.setProperty("--fx-sport-cursor", `url("data:image/svg+xml,${encodeURIComponent(svg)}") 16 16`);
+      '<use href="#a" stroke="#fff" stroke-width="10" color="#fff"/><use href="#a" stroke="#18479f" stroke-width="6" color="#18479f"/></svg>';
+    document.documentElement.style.setProperty("--fx-sport-cursor", `url("data:image/svg+xml,${encodeURIComponent(svg)}") 12 12`);
     document.documentElement.classList.add("fx-sport-cursor");
   }
 
