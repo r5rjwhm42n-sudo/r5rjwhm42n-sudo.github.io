@@ -198,7 +198,7 @@
         <p>${esc(last.summary || "")}</p>
         <div class="btn-row">
           <button class="btn btn-primary" data-game="${last.id}">Game recap</button>
-          <a class="btn btn-ghost" href="schedule.html">Full schedule</a>
+          <a class="btn btn-ghost" href="#schedule">Full schedule</a>
         </div>`;
       const row = (name, pts, win, logo) => `
         <div class="sb-row ${win ? "win" : ""}">
@@ -218,7 +218,7 @@
         <div class="eyebrow">${TEAM.season} season</div>
         <h1>${esc(TEAM.name)} Football</h1>
         <p>Scores, stats, history and highlights from ${esc(TEAM.school)} football.</p>
-        <div class="btn-row"><a class="btn btn-primary" href="schedule.html">Full schedule</a></div>`;
+        <div class="btn-row"><a class="btn btn-primary" href="#schedule">Full schedule</a></div>`;
     }
 
     $("#scorestrip").innerHTML =
@@ -232,9 +232,6 @@
         <div class="countdown" id="countdown"></div>
       </button>` : `<div class="card next-game"><div><div class="k">Season complete</div><h3>Final record ${record}</h3></div></div>`) +
       tile(["Points", `${pf}–${pa}`, `${(pf / (played.length || 1)).toFixed(1)} scored · ${(pa / (played.length || 1)).toFixed(1)} allowed per game`]);
-
-    $("#home-leaders").innerHTML = leaders();
-    $("#home-games").innerHTML = [...past.slice(-2), ...upcoming.slice(0, 3)].map(gameRow).join("");
 
     if (next && startOf(next)) {   // counts down once the kickoff is set
       const tick = () => {
@@ -444,7 +441,10 @@
     $("#photos").closest("section").hidden = !PHOTOS.length;   // no photos yet: leave the section out
   }
 
-  ({ home, stats, schedule, history, media })[page]?.();
+  /* one long page: every part fills its own section (a problem in one doesn't stop the rest) */
+  for (const part of [home, schedule, stats, history, media]) {
+    try { part(); } catch (e) { console.error(e); }
+  }
 
   /* ---------- Light motion: sections fade in, big numbers count up once ---------- */
   const still = matchMedia("(prefers-reduced-motion: reduce)").matches;

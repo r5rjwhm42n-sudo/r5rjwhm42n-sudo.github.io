@@ -1,5 +1,5 @@
 /* =====================================================================
-   Season story, at the top of each team's History page. It replays the
+   Season story, at the top of each team's History section. It replays the
    season one game at a time: the record line climbs with every win and
    dips with every loss, the record ticks over, and the team's leaders
    race each other (rushing yards, goals or kills) as the games go by.
@@ -7,7 +7,8 @@
    ===================================================================== */
 (function () {
   const SPORT = location.pathname.split("/").filter(Boolean)[0];
-  if (SPORT === "esports" || document.body.dataset.page !== "history") return;
+  const HISTORY = document.getElementById("history");   // the History part of a team's one long page
+  if (SPORT === "esports" || !(HISTORY || document.body.dataset.page === "history")) return;
   const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const md = (iso) => new Date(iso).toLocaleDateString("en-US", { month: "short", day: "numeric" });
   const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -191,7 +192,7 @@
       <div class="st-beats">${B.map(([k, v, d], i) => `<div class="card st-beat" style="--i:${i}"><div class="k">${esc(k)}</div><div class="v">${esc(v)}</div><div class="d">${esc(d)}</div></div>`).join("")}</div>
     </div>
   </div>`;
-  const banner = document.querySelector("main .page-banner");
+  const banner = (HISTORY || document.querySelector("main")).querySelector(".page-banner");
   banner ? banner.after(sec) : document.querySelector("main")?.prepend(sec);
 
   /* ---------- Playback ---------- */

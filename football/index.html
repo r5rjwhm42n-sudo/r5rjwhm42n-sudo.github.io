@@ -33,40 +33,162 @@
 <body data-page="home">
 <header class="site-header" id="site-header"></header>
 <main>
+<div class="fx-chapter" id="top">
 <div class="hero hero-home"><div class="wrap">
   <div id="hero-story"></div>
   <div id="scoreboard"></div>
 </div></div>
 
 <div class="wrap home-strip"><div class="strip" id="scorestrip"></div></div>
+</div>
+
+<div class="fx-chapter" id="schedule">
+<div class="hero page-banner"><div class="wrap">
+  <div class="eyebrow">2026 Season</div>
+  <h1>Schedule &amp; Results</h1>
+  <p>Tap any game for the recap, scoring summary and top performers.</p>
+  <div data-addcal="football"></div>
+</div></div>
 
 <section class="block"><div class="wrap">
-  <div class="section-head"><h2>Season Leaders</h2><a class="more" href="stats.html">All stats</a></div>
-  <div class="leaders" id="home-leaders"></div>
+  <div class="strip" id="sched-tiles"></div>
 </div></section>
 
 <section class="block"><div class="wrap">
-  <div class="section-head"><h2>Games</h2><a class="more" href="schedule.html">Full schedule</a></div>
-  <div class="card gamelist" id="home-games"></div>
-  <div class="light" data-addcal="football"></div>
+  <div class="section-head"><h2>Results</h2></div>
+  <div class="card gamelist" id="results"></div>
 </div></section>
 
 <section class="block"><div class="wrap">
-  <div class="section-head"><h2>More Falcons Football</h2></div>
-  <div class="grid g3 quicklinks">
-    <a class="card lift" href="history.html"><span class="arrow">→</span><h3>History</h3><p>Conference titles, year-by-year records and the Falcon greats.</p></a>
-    <a class="card lift" href="media.html"><span class="arrow">→</span><h3>Highlights &amp; Replays</h3><p>Game recaps and highlights straight from the team's Hudl.</p></a>
-    <a class="card lift" href="stats.html"><span class="arrow">→</span><h3>Roster &amp; Stats</h3><p>Every player by position with game-by-game numbers.</p></a>
+  <div class="section-head"><h2>Upcoming</h2></div>
+  <div class="card gamelist" id="upcoming"></div>
+</div></section>
+</div>
+
+<div class="fx-chapter" id="stats">
+<div class="hero page-banner"><div class="wrap">
+  <div class="eyebrow">2026 Season</div>
+  <h1>Player Stats</h1>
+  <p>Filter by position group or search for a player. Each card shows season totals and a game-by-game log.</p>
+</div></div>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Team</h2><span class="pill" id="stats-asof"></span></div>
+  <div class="strip" id="team-tiles"></div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Leaders</h2></div>
+  <div class="leaders" id="leaders"></div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Rushing</h2><span class="pill">Yards by game</span></div>
+  <div class="card chart" id="rushing"></div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Players</h2></div>
+  <div class="filters" id="filters"></div>
+  <div class="grid g3" id="players"></div>
+</div></section>
+</div>
+
+<div class="fx-chapter" id="history">
+<div class="hero page-banner"><div class="wrap">
+  <div class="eyebrow">Tradition</div>
+  <h1>Falcons History</h1>
+  <p>More than a century of Danvers football — the championships, the seasons and the players who wore royal blue.</p>
+</div></div>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Banners</h2></div>
+  <div class="banners" id="banners"></div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>The Climb</h2><span class="pill" id="chart-span"></span></div>
+  <div class="card linechart" id="win-chart"></div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="strip" id="history-tiles"></div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Falcon Greats</h2></div>
+  <p class="sub">Former Danvers players who went on to star in college and the pros.</p>
+  <div class="grid g3" id="legends"></div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Year by Year</h2></div>
+  <div class="card table-scroll"><table class="records">
+    <thead><tr><th>Season</th><th>Record</th><th>Win %</th><th>Coach</th><th>NEC</th><th>Postseason</th></tr></thead>
+    <tbody id="records"></tbody>
+  </table></div>
+  <button class="chip show-more" id="records-more"></button>
+  <p class="sub fine">Records are W–L–T, from the Danvers Football Record Book, which goes back to 1902. League records from 2004 on are from MaxPreps. Title years follow the school's athletics page; the record book doesn't mark 2005 or 2013 as NEC title seasons.</p>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Captains &amp; Honors</h2></div>
+  <div class="card table-scroll"><table class="records honors">
+    <thead><tr><th>Season</th><th>Captains</th><th>All-League</th><th>Notes</th></tr></thead>
+    <tbody id="honors"></tbody>
+  </table></div>
+  <button class="chip show-more" id="honors-more"></button>
+  <p class="sub fine">From the record book. "…" marks a list the book doesn't finish, and seasons it has nothing for are left out.</p>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Milestones</h2></div>
+  <div class="timeline" id="timeline"></div>
+</div></section>
+</div>
+
+<div class="fx-chapter" id="media">
+<div class="hero page-banner"><div class="wrap">
+  <div class="eyebrow">Highlights &amp; Replays</div>
+  <h1>Game Film</h1>
+  <p>Recaps, highlights and full-game replays from the Falcons' Hudl page.</p>
+</div></div>
+
+<section class="block"><div class="wrap">
+  <div class="card cta">
+    <div><h3>Watch the Falcons on Hudl</h3><p>Livestreams, full-game replays and every highlight reel.</p></div>
+    <div class="btn-row">
+      <a class="btn btn-primary" id="hudl-home" target="_blank" rel="noopener">Team Page ↗</a>
+      <a class="btn btn-ghost" id="hudl-video" target="_blank" rel="noopener">All Video ↗</a>
+    </div>
   </div>
 </div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Highlights</h2></div>
+  <p class="sub">Hudl doesn't allow its videos to play on other sites, so each card opens the video on Hudl.</p>
+  <div class="filters" id="video-filters"></div>
+  <div class="grid g3" id="videos"></div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Photos</h2></div>
+  <div class="grid g4" id="photos"></div>
+</div></section>
+</div>
 </main>
 <footer class="site-footer" id="site-footer"><div class="wrap"><p>A Danvers High School DECA student project. Not the official school website.</p></div></footer>
 <script src="js/data.js"></script>
 <script src="js/site.js"></script>
+<script>
+  document.getElementById("hudl-home").href = TEAM.links.hudl;
+  document.getElementById("hudl-video").href = TEAM.links.hudlVideo;
+</script>
 <script src="../js/common.js"></script>
 <script src="../js/extras.js"></script>
 <script src="../js/search.js"></script>
 <script src="../js/addcal.js"></script>
+<script src="../js/story.js"></script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "012041330fec4a07ad02e32f49e725f2"}'></script><!-- End Cloudflare Web Analytics -->
 <script src="../js/fx.js"></script>
 </body>

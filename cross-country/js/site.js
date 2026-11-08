@@ -190,7 +190,7 @@
         <p>${esc(last.summary || "")}</p>
         <div class="btn-row">
           <button class="btn btn-primary" data-meet="${last.id}">Meet recap</button>
-          <a class="btn btn-ghost" href="schedule.html">Full schedule</a>
+          <a class="btn btn-ghost" href="#schedule">Full schedule</a>
         </div>`;
       const firsts = SQUADS.flatMap(([k]) => (last[k]?.finishers || []).filter((f) => f.place).slice(0, 1).map((f) => `${last2(f.name)} ${ord(f.place)}`));
       $("#scoreboard").innerHTML = `
@@ -217,7 +217,7 @@
         <div class="eyebrow">${TEAM.season} season</div>
         <h1>${esc(TEAM.name)} Cross Country</h1>
         <p>Results, runners, history and photos from ${esc(TEAM.school)} boys and girls cross country.</p>
-        <div class="btn-row"><a class="btn btn-primary" href="schedule.html">Full schedule</a></div>`;
+        <div class="btn-row"><a class="btn btn-primary" href="#schedule">Full schedule</a></div>`;
     }
 
     $("#scorestrip").innerHTML =
@@ -231,9 +231,6 @@
         <div class="countdown" id="countdown"></div>
       </button>` : `<div class="card next-game"><div><div class="k">Season complete</div><h3>Boys ${rec("boys")} · Girls ${rec("girls")}</h3></div></div>`) +
       tile(["Girls", rec("girls"), "Dual-meet record"]);
-
-    $("#home-leaders").innerHTML = leaders();
-    $("#home-meets").innerHTML = [...past.slice(-2), ...upcoming.slice(0, 3)].map(meetRow).join("");
 
     if (next && !next.dateTbd) {
       const tick = () => {
@@ -397,7 +394,10 @@
     $("#photos").closest("section").hidden = !PHOTOS.length;   // no photos yet: leave the section out
   }
 
-  ({ home, runners, schedule, history, media })[page]?.();
+  /* one long page: every part fills its own section (a problem in one doesn't stop the rest) */
+  for (const part of [home, schedule, runners, history, media]) {
+    try { part(); } catch (e) { console.error(e); }
+  }
 
   /* ---------- Light motion: sections fade in, big numbers count up once ---------- */
   const still = matchMedia("(prefers-reduced-motion: reduce)").matches;

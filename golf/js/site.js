@@ -224,7 +224,7 @@
         <p>${esc(lastG.summary || "")}</p>
         <div class="btn-row">
           <button class="btn btn-primary" data-game="${lastG.id}">Full results</button>
-          <a class="btn btn-ghost" href="schedule.html">Full schedule</a>
+          <a class="btn btn-ghost" href="#schedule">Full schedule</a>
         </div>`;
       const tops = (lastG.rounds || []).slice(0, 2).map(([n, s]) => `${last(n)} ${s}`);
       $("#scoreboard").innerHTML = `
@@ -246,7 +246,7 @@
         <p>${esc(lastG.summary || "")}</p>
         <div class="btn-row">
           <button class="btn btn-primary" data-game="${lastG.id}">Match recap</button>
-          <a class="btn btn-ghost" href="schedule.html">Full schedule</a>
+          <a class="btn btn-ghost" href="#schedule">Full schedule</a>
         </div>`;
       const row = (name, pts, win, logo) => `
         <div class="sb-row ${win ? "win" : ""}">
@@ -269,7 +269,7 @@
         <div class="eyebrow">${TEAM.season} season</div>
         <h1>${esc(TEAM.name)} ${esc(TEAM.sport)}</h1>
         <p>Scores, results, history and coverage of ${esc(TEAM.school)} golf.</p>
-        <div class="btn-row"><a class="btn btn-primary" href="schedule.html">Full schedule</a></div>`;
+        <div class="btn-row"><a class="btn btn-primary" href="#schedule">Full schedule</a></div>`;
     }
 
     $("#scorestrip").innerHTML =
@@ -283,9 +283,6 @@
         <div class="countdown" id="countdown"></div>
       </button>` : `<div class="card next-game"><div><div class="k">Season complete</div><h3>Final record ${record}</h3></div></div>`) +
       tile(["Match-play points", `${won}–${lost}`, `${perMatch} of 72 per NEC match`]);
-
-    $("#home-leaders").innerHTML = leaders();
-    $("#home-games").innerHTML = [...finished.slice(-2), ...upcoming.slice(0, 3)].map(gameRow).join("");
 
     if (next) {
       const tick = () => {
@@ -466,7 +463,10 @@
     $("#photos").closest("section").hidden = !PHOTOS.length;   // no photos yet: leave the section out
   }
 
-  ({ home, stats, schedule, history, media })[page]?.();
+  /* one long page: every part fills its own section (a problem in one doesn't stop the rest) */
+  for (const part of [home, schedule, stats, history, media]) {
+    try { part(); } catch (e) { console.error(e); }
+  }
 
   /* ---------- Light motion: sections fade in, big numbers count up once ---------- */
   const still = matchMedia("(prefers-reduced-motion: reduce)").matches;

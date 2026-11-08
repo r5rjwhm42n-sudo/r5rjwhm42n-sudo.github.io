@@ -87,7 +87,7 @@ const calendar = (name, about, events) => [
 /* ---------- one adapter per site: its data.js -> a list of events ---------- */
 const vs = (home) => (home === false ? "at" : "vs");
 const final = (g) => (g.result ? ` (${g.result} ${g.us}–${g.them})` : "");
-const page = (dir, query = "") => `${SITE}/${dir}/schedule.html${query}`;
+const page = (dir, query = "") => `${SITE}/${dir}/${query}#schedule`;   // the schedule section of the team's one page
 
 /* Football, soccer, field hockey and volleyball games all look alike */
 const games = (key, label, dir, list, minutes, query, extra = () => []) => list

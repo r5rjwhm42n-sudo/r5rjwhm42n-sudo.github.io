@@ -5,7 +5,7 @@
    the saved copy; images and fonts come from the saved copy first.
    Bump VERSION to clear old saved copies.
    ===================================================================== */
-const VERSION = "dfa-v3";
+const VERSION = "dfa-v4";
 const CORE = [
   "/", "/offline.html", "/css/home.css", "/js/home.js", "/js/common.js", "/css/fx.css", "/js/fx.js",
   "/images/falcons-logo.png", "/images/icons/icon-192.png", "/manifest.webmanifest"

@@ -236,7 +236,7 @@
         <p>${esc(prev.summary || `The Falcons are ${record} through ${plural(played.length, "match", "es")}.`)}</p>
         <div class="btn-row">
           <button class="btn btn-primary" data-game="${prev.id}">Match recap</button>
-          <a class="btn btn-ghost" href="schedule.html">Full schedule</a>
+          <a class="btn btn-ghost" href="#schedule">Full schedule</a>
         </div>`;
       const row = (name, pts, win, logo) => `
         <div class="sb-row ${win ? "win" : ""}">
@@ -257,7 +257,7 @@
         <div class="eyebrow">${SEASON} season</div>
         <h1>${esc(T.name)} ${esc(T.sport)}</h1>
         <p>Scores, stats, history and highlights from ${esc(T.school)} ${esc(T.sport.toLowerCase())}.</p>
-        <div class="btn-row"><a class="btn btn-primary" href="schedule.html">Full schedule</a></div>`;
+        <div class="btn-row"><a class="btn btn-primary" href="#schedule">Full schedule</a></div>`;
     }
 
     $("#scorestrip").innerHTML =
@@ -273,9 +273,6 @@
       (seed ? `<a class="card tile rank-tile" href="/#bracket-volleyball"><div class="k">State tournament</div><div class="v">#${seed}</div><div class="d">seed in ${esc(T.division.replace("MIAA ", ""))} · see the bracket →</div></a>`
        : R ? `<a class="card tile rank-tile" href="${R.url}" target="_blank" rel="noopener"><div class="k">MIAA ${esc(T.division.replace("MIAA ", ""))}</div><div class="v">#${R.rank}</div><div class="d">of ${R.of} in the power rankings · ${esc(R.asOf)} ↗</div></a>`
          : tile(["Sets", `${setsWon}–${setsLost}`, `${plural(sweeps, "sweep")} · ${plural(fiveSetWins, "five-set win")}`]));
-
-    $("#home-leaders").innerHTML = leaders(["kills", "assists", "digs"]);
-    $("#home-games").innerHTML = [...past.slice(-2), ...upcoming.slice(0, 3)].map(gameRow).join("");
 
     if (next && startOf(next)) {   // counts down once the start time is set
       const tick = () => {
@@ -543,7 +540,10 @@
     $("#photos").closest("section").hidden = !PHOTOS.length;   // no photos yet: leave the section out
   }
 
-  ({ home, stats, schedule, history, media })[page]?.();
+  /* one long page: every part fills its own section (a problem in one doesn't stop the rest) */
+  for (const part of [home, schedule, stats, history, media]) {
+    try { part(); } catch (e) { console.error(e); }
+  }
 
   /* ---------- Light motion: sections fade in, big numbers count up once ---------- */
   const still = matchMedia("(prefers-reduced-motion: reduce)").matches;

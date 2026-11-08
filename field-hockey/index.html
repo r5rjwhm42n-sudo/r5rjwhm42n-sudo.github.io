@@ -33,32 +33,174 @@
 <body data-page="home">
 <header class="site-header" id="site-header"></header>
 <main>
+<div class="fx-chapter" id="top">
 <div class="hero hero-home"><div class="wrap">
   <div id="hero-story"></div>
   <div id="scoreboard"></div>
 </div></div>
 
 <div class="wrap home-strip"><div class="strip" id="scorestrip"></div></div>
+</div>
+
+<div class="fx-chapter" id="schedule">
+<div class="hero page-banner"><div class="wrap">
+  <div class="eyebrow">2026 Season · Field Hockey</div>
+  <h1>Schedule &amp; Results</h1>
+  <p>Tap any game for the recap, goal scorers, saves and standout players.</p>
+  <div data-addcal="field-hockey"></div>
+</div></div>
 
 <section class="block"><div class="wrap">
-  <div class="section-head"><h2>Season Leaders</h2><a class="more" href="stats.html">All stats</a></div>
-  <div class="leaders" id="home-leaders"></div>
+  <div class="strip" id="sched-tiles"></div>
 </div></section>
 
 <section class="block"><div class="wrap">
-  <div class="section-head"><h2>Games</h2><a class="more" href="schedule.html">Full schedule</a></div>
-  <div class="card gamelist" id="home-games"></div>
-  <div class="light" data-addcal="field-hockey"></div>
+  <div class="section-head"><h2>Results</h2></div>
+  <div class="card gamelist" id="results"></div>
 </div></section>
 
 <section class="block"><div class="wrap">
-  <div class="section-head"><h2>More Falcons Field Hockey</h2></div>
-  <div class="grid g3 quicklinks">
-    <a class="card lift" href="history.html"><span class="arrow">→</span><h3>History</h3><p>Thirty conference titles, the record book and every season on file.</p></a>
-    <a class="card lift" href="media.html"><span class="arrow">→</span><h3>Highlights &amp; Replays</h3><p>Game recaps and highlights straight from the team's Hudl.</p></a>
-    <a class="card lift" href="stats.html"><span class="arrow">→</span><h3>Roster &amp; Stats</h3><p>Every player by position with goals, assists, saves and a game-by-game log.</p></a>
+  <div class="section-head"><h2>Upcoming</h2><span class="pill" id="rank-pill"></span></div>
+  <div class="card gamelist" id="upcoming"></div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>NEC Standings</h2><span class="pill">Northeastern Conference</span></div>
+  <div class="card table-scroll"><table class="records standings" id="standings"></table></div>
+  <p class="sub fine" id="standings-note"></p>
+</div></section>
+
+<section class="block" id="preseason-block" hidden><div class="wrap">
+  <div class="section-head"><h2>Preseason</h2><span class="pill">Scrimmages · not counted in the record</span></div>
+  <div class="card gamelist" id="preseason"></div>
+</div></section>
+</div>
+
+<div class="fx-chapter" id="stats">
+<div class="hero page-banner"><div class="wrap">
+  <div class="eyebrow">2026 Season · Field Hockey</div>
+  <h1>Player Stats</h1>
+  <p>Filter by position or search for a player. Each card shows season totals and a game-by-game log.</p>
+</div></div>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Team</h2><span class="pill" id="stats-asof"></span></div>
+  <div class="strip" id="team-tiles"></div>
+  <p class="sub coach-line" id="coach-line"></p>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Leaders</h2></div>
+  <div class="leaders" id="leaders"></div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Scoring</h2><span class="pill">Goals + assists = points</span></div>
+  <div class="card chart" id="scoring"></div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Roster</h2><span class="pill">Tap a column to sort</span></div>
+  <div class="card table-scroll"><table class="records sheet" id="sheet"></table></div>
+  <p class="sub fine" id="sheet-note"></p>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Players</h2></div>
+  <div class="filters" id="filters"></div>
+  <div class="grid g3" id="players"></div>
+</div></section>
+</div>
+
+<div class="fx-chapter" id="history">
+<div class="hero page-banner"><div class="wrap">
+  <div class="eyebrow">Tradition · Field Hockey</div>
+  <h1>Falcons History</h1>
+  <p id="history-intro"></p>
+</div></div>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Banners</h2></div>
+  <div class="banners" id="banners"></div>
+  <div class="card titles" id="nec-titles"></div>
+  <p class="sub fine" id="history-note"></p>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>The Climb</h2><span class="pill" id="chart-span"></span></div>
+  <div class="card linechart" id="win-chart"></div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="strip" id="history-tiles"></div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Falcon Greats</h2></div>
+  <p class="sub">Award winners, record holders and the coach who built the program, from the school's record book.</p>
+  <div class="grid g3" id="legends"></div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Record Book</h2><a class="more" id="record-book-link" target="_blank" rel="noopener">Full record book</a></div>
+  <div id="record-book"></div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Year by Year</h2></div>
+  <div class="card table-scroll"><table class="records">
+    <thead><tr><th>Season</th><th>Record</th><th>Win %</th><th>Coach</th><th>NEC</th><th>Postseason</th></tr></thead>
+    <tbody id="records"></tbody>
+  </table></div>
+  <button class="chip show-more" id="records-more"></button>
+  <p class="sub fine">Records are W–L–T, from the school's record book. Blank cells are seasons the book doesn't have details for, and its individual records list only what is on file.</p>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Captains &amp; Honors</h2></div>
+  <div class="card table-scroll"><table class="records honors">
+    <thead><tr><th>Season</th><th>Captains</th><th>All-League</th><th>All-Stars</th><th>Notes</th></tr></thead>
+    <tbody id="honors"></tbody>
+  </table></div>
+  <button class="chip show-more" id="honors-more"></button>
+  <p class="sub fine">From the record book's Team Records tab. POY = NEC Player of the Year. "…" marks a name cut off in the book, and seasons it has nothing for are left out.</p>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Milestones</h2></div>
+  <div class="timeline" id="timeline"></div>
+</div></section>
+</div>
+
+<div class="fx-chapter" id="media">
+<div class="hero page-banner"><div class="wrap">
+  <div class="eyebrow">Highlights &amp; Replays · Field Hockey</div>
+  <h1>Game Film</h1>
+  <p>Replays and highlights from the Falcons' Hudl page.</p>
+</div></div>
+
+<section class="block"><div class="wrap">
+  <div class="card cta">
+    <div><h3>Watch the Falcons on Hudl</h3><p>Livestreams, full-game replays and every highlight reel.</p></div>
+    <div class="btn-row">
+      <a class="btn btn-primary" id="hudl-home" target="_blank" rel="noopener">Team Page ↗</a>
+      <a class="btn btn-ghost" id="hudl-video" target="_blank" rel="noopener">All Video ↗</a>
+    </div>
   </div>
 </div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Highlights</h2></div>
+  <p class="sub">Hudl doesn't allow its videos to play on other sites, so each card opens the reel on Hudl.</p>
+  <div class="filters" id="video-filters"></div>
+  <div class="grid g3" id="videos"></div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Photos</h2></div>
+  <div class="grid g4" id="photos"></div>
+</div></section>
+</div>
 </main>
 <footer class="site-footer" id="site-footer"><div class="wrap"><p>A Danvers High School DECA student project. Not the official school website.</p></div></footer>
 <script src="js/data.js"></script>
@@ -67,6 +209,7 @@
 <script src="../js/extras.js"></script>
 <script src="../js/search.js"></script>
 <script src="../js/addcal.js"></script>
+<script src="../js/story.js"></script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "012041330fec4a07ad02e32f49e725f2"}'></script><!-- End Cloudflare Web Analytics -->
 <script src="../js/fx.js"></script>
 </body>

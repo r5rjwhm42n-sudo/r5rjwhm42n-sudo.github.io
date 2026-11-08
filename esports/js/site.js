@@ -242,7 +242,7 @@
         <p>${esc(lastG.summary || `The Falcons are ${rec(of(g.id))} in ${g.short} and ${record} across all games this season.`)}</p>
         <div class="btn-row">
           <button class="btn btn-primary" data-game="${lastG.id}">Match recap</button>
-          <a class="btn btn-ghost" href="schedule.html">Full schedule</a>
+          <a class="btn btn-ghost" href="#schedule">Full schedule</a>
         </div>`;
       const row = (name, pts, win, logo) => `
         <div class="sb-row ${win ? "win" : ""}">
@@ -263,11 +263,11 @@
         <h1>${esc(TEAM.name)} ${esc(TEAM.sport)}</h1>
         <p>${esc(GAMES.map((g) => g.name).join(", ").replace(/, ([^,]*)$/, " and $1"))}. The Falcons compete online in the Massachusetts state league, with a state title on the line in every game.</p>
         <div class="btn-row">
-          <a class="btn btn-primary" href="schedule.html">Full schedule</a>
-          <a class="btn btn-ghost" href="schedule.html#format">How matches work</a>
+          <a class="btn btn-primary" href="#schedule">Full schedule</a>
+          <a class="btn btn-ghost" href="#format">How matches work</a>
         </div>`;
       $("#scoreboard").innerHTML = `
-        <a class="card scoreboard matchdays" href="schedule.html">
+        <a class="card scoreboard matchdays" href="#schedule">
           <div class="sb-top"><span>Match days</span><span>${esc(TEAM.matchTime)} · Online</span></div>
           ${GAMES.map((g) => `
             <div class="sb-row win">
@@ -294,7 +294,7 @@
       (STAND.length
         ? (() => {
             const [best, ...rest] = [...STAND].sort((a, b) => a.pos - b.pos);
-            return `<a class="card tile lift" href="stats.html#standings-block"><div class="k">State standings</div><div class="v count">${ord(best.pos)}</div>
+            return `<a class="card tile lift" href="#standings-block"><div class="k">State standings</div><div class="v count">${ord(best.pos)}</div>
               <div class="d">in ${esc(GAME[best.game].short)}${rest.map((s) => ` · ${ord(s.pos)} in ${esc(GAME[s.game].short)}`).join("")}</div></a>`;
           })()
         : tile(played.length
@@ -310,7 +310,6 @@
         ${TEAM.meets ? `<div><dt>Practice</dt><dd>${or(TEAM.meets)}</dd></div>` : ""}
         <div><dt>League</dt><dd>${esc(TEAM.league)} · ${esc(TEAM.platform)}</dd></div>
       </dl>`;
-    $("#home-games").innerHTML = [...played.slice(-2), ...upcoming.slice(0, 4)].map(gameRow).join("");
 
     if (next) {
       const tick = () => {
@@ -517,7 +516,10 @@
     $("#photos").closest("section").hidden = !PHOTOS.length;
   }
 
-  ({ home, stats, schedule, history, media })[page]?.();
+  /* one long page: every part fills its own section (a problem in one doesn't stop the rest) */
+  for (const part of [home, schedule, stats, history, media]) {
+    try { part(); } catch (e) { console.error(e); }
+  }
 
   /* ---------- Light motion: sections fade in, big numbers count up once ---------- */
   const still = matchMedia("(prefers-reduced-motion: reduce)").matches;

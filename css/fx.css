@@ -55,6 +55,11 @@
 .fx-menu-btn.fx-nudge { animation: fx-nudge 1.5s ease-out 3; }
 @keyframes fx-nudge { from { box-shadow: 0 0 0 0 rgba(255, 255, 255, .8); } to { box-shadow: 0 0 0 16px rgba(255, 255, 255, 0); } }
 
+/* each team site is one long page: a jump lands just below the sticky header */
+.fx-sport main [id] { scroll-margin-top: calc(var(--fx-head, 70px) + 8px); }
+.fx-sport main .fx-chapter { scroll-margin-top: var(--fx-head, 70px); }
+.fx-chapter:focus { outline: none; }   /* focus moves to the section for keyboard and screen-reader users; no box around it */
+
 /* ---------- Team sites: the full-screen menu ---------- */
 html.fx-menu-open { overflow: hidden; }
 .fx-menu { position: fixed; inset: 0; z-index: 900; display: flex; flex-direction: column; overflow-y: auto; background: var(--royal); color: var(--white); }

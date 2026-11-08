@@ -2,10 +2,9 @@
    Shared effects for every page (hub, newsletter and all team sites).
    Load it last: <script src="(path to)/js/fx.js"></script>
      · the site footer, drawn into <footer id="site-footer">
-     · team sites: a round Menu button with a full-screen menu, which holds
-       "All sports" / "[Sport] home" and every page of every sport
-       (first visit: a one-time note under the button), and "More Falcons [Sport]"
-       cards at the end of each page to the sport's other pages
+     · team sites: a round Menu button with a full-screen menu that jumps to each
+       section of the sport's one long page ("You're here" follows the scroll) and
+       to the other sports (first visit: a one-time note under the button)
      · hover effects: button sweeps and arrows, a pull toward the mouse, card tilt
        and shine, and a dot-and-ring cursor (the last three for a mouse only)
      · sound effects made in the browser (no sound files), with an on/off
@@ -154,7 +153,7 @@
 
   footer();
 
-  /* ---------- Sport pages: one round Menu button, plus "All sports" and "[Sport] home" ---------- */
+  /* ---------- Team sites: one round Menu button and a full-screen menu ---------- */
   const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const here = location.href.startsWith(ROOT) ? location.href.slice(ROOT.length).split(/[?#]/)[0] : "";
   const SPORT = TEAMS.find(([dir]) => here.split("/")[0] === dir);
@@ -163,6 +162,8 @@
   const FILM = ["football", "soccer", "field-hockey", "volleyball"];   // their media pages are game film and highlights
   const pageName = (file, label, dir) =>
     file === "stats.html" && label === "Stats" ? "Roster & stats" : file === "media.html" ? (FILM.includes(dir) ? "Highlights" : "Media") : label;
+  /* each team site is one long page; the old pages are its sections */
+  const SECTION_OF = { "index.html": "top", "schedule.html": "schedule", "stats.html": "stats", "runners.html": "runners", "history.html": "history", "media.html": "media" };
 
   function sportMenu() {
     const bar = document.querySelector(".site-header .hbar");
@@ -173,10 +174,11 @@
     const file = (here.split("/")[1] || "index.html");
     const onHome = file === "index.html";
 
-    /* the sport's pages come from the site's own menu, so soccer keeps its ?team= */
+    /* the sport's parts come from the site's own menu (names and order); on the one long page each is a jump to its section */
     const pages = [...siteNav.querySelectorAll("a")].map((a) => {
       const f = a.getAttribute("href").split("?")[0];
-      return { href: a.getAttribute("href"), file: f, label: pageName(f, a.textContent.trim(), dir), current: a.classList.contains("active") };
+      const id = SECTION_OF[f], sec = id && document.getElementById(id);
+      return { href: sec ? `#${id}` : a.getAttribute("href"), file: f, id: sec ? id : null, label: pageName(f, a.textContent.trim(), dir), current: !sec && a.classList.contains("active") };
     }).sort((a, b) => PAGE_ORDER.indexOf(a.file) - PAGE_ORDER.indexOf(b.file));
     const homeHref = (pages.find((p) => p.file === "index.html") || { href: "index.html" }).href;
 
@@ -199,8 +201,9 @@
     menu.setAttribute("aria-modal", "true");
     menu.setAttribute("aria-label", "Menu");
     let i = 0;
-    const link = (href, label, current) =>
-      `<li><a href="${href}" style="--i:${i++}"${current ? ' aria-current="page"' : ""}>${label}${current ? '<small aria-hidden="true">You’re here</small>' : ""}</a></li>`;
+    const HERE = '<small aria-hidden="true">You’re here</small>';
+    const link = (href, label, current, section) =>
+      `<li><a href="${href}" style="--i:${i++}"${section ? ` data-section="${section}"` : ""}${current ? ' aria-current="page"' : ""}>${label}${current ? HERE : ""}</a></li>`;
     /* "Back to": all sports, and this sport's home (not shown on the home page itself) */
     const backs = link(`${ROOT}#teams`, "All sports", false) + (onHome ? "" : link(homeHref, `${name} home`, false));
     menu.innerHTML = `
@@ -210,13 +213,32 @@
       </div>
       <div class="wrap fx-menu-body">
         <nav class="fx-menu-back" aria-labelledby="fx-m-back"><h2 id="fx-m-back">Back to</h2><ul>${backs}</ul></nav>
-        <nav aria-labelledby="fx-m-this"><h2 id="fx-m-this">This sport</h2><ul>${pages.map((p) => link(p.href, p.label, p.current)).join("")}</ul></nav>
+        <nav aria-labelledby="fx-m-this"><h2 id="fx-m-this">This sport</h2><ul>${pages.map((p) => link(p.href, p.label, p.current, p.id)).join("")}</ul></nav>
         <nav aria-labelledby="fx-m-other"><h2 id="fx-m-other">Other sports</h2><ul>${TEAMS.filter(([d]) => d !== dir).map(([d, n]) => link(`${ROOT}${d}/`, n, false)).join("")}</ul></nav>
       </div>`;
     document.body.appendChild(menu);
 
     const focusables = () => [...menu.querySelectorAll("a[href], button")].filter((el) => el.getClientRects().length);   // only the ones showing
+
+    /* "You're here": the section that's on screen when the menu opens (the last one whose top has passed
+       a line a quarter of the way down the screen, under the header) */
+    const chapters = pages.filter((p) => p.id).map((p) => document.getElementById(p.id));
+    const header = document.querySelector(".site-header");
+    const markHere = () => {
+      if (!chapters.length) return;
+      const line = (header ? header.getBoundingClientRect().bottom : 0) + innerHeight * .25;
+      let cur = chapters[0];
+      chapters.forEach((c) => { if (c.getBoundingClientRect().top <= line) cur = c; });
+      menu.querySelectorAll("a[data-section]").forEach((a) => {
+        const on = a.dataset.section === cur.id;
+        a.querySelector("small")?.remove();
+        if (on) { a.setAttribute("aria-current", "location"); a.insertAdjacentHTML("beforeend", HERE); }
+        else a.removeAttribute("aria-current");
+      });
+    };
+
     const open = () => {
+      markHere();
       const r = btn.getBoundingClientRect();
       menu.style.setProperty("--cx", `${r.left + r.width / 2}px`);
       menu.style.setProperty("--cy", `${r.top + r.height / 2}px`);
@@ -230,15 +252,24 @@
       menu.querySelector(".fx-menu-close").focus();
       hint.done();
     };
-    const close = () => {
+    const close = (refocus = true) => {
       if (menu.hidden) return;
       menu.hidden = true;
       menu.classList.remove("open");
       btn.setAttribute("aria-expanded", "false");
       document.documentElement.classList.remove("fx-menu-open");
-      btn.focus();
+      if (refocus) btn.focus();
     };
     btn.addEventListener("click", open);
+    /* a section link: close the menu and glide there (straight there with reduced motion); keyboard focus moves with it */
+    menu.addEventListener("click", (e) => {
+      const a = e.target.closest("a[data-section]");
+      const sec = a && document.getElementById(a.dataset.section);
+      if (!sec) return;
+      e.preventDefault();
+      close(false);
+      jump(sec);
+    });
     menu.querySelector(".fx-menu-close").addEventListener("click", close);
     menu.addEventListener("keydown", (e) => {
       if (e.key === "Escape") { e.preventDefault(); close(); return; }
@@ -254,68 +285,51 @@
        It goes when they open the Menu, close the note, or after 8 seconds, and never comes back. */
     const hint = menuHint(btn, name, pages);
 
-    /* the end of every page but the home page (it has its own): cards to this sport's other pages */
-    if (!onHome) moreCards(dir, file, team ? team.textContent : name, pages);
+    /* sections sit just below the sticky header when jumped to */
+    const headRoom = () => document.documentElement.style.setProperty("--fx-head", `${header ? header.offsetHeight : 0}px`);
+    headRoom();
+    addEventListener("resize", headRoom);
+    /* arriving with a section in the address (an old page's address, a search result): land on it once everything is drawn */
+    const want = location.hash.length > 1 && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (want && chapters.includes(want)) addEventListener("load", () => jump(want, { smooth: false, focus: false }), { once: true });
+    /* in-page links to a section ("Full schedule"): the same glide as the menu */
+    document.addEventListener("click", (e) => {
+      const a = e.target.closest('main a[href^="#"]');
+      const sec = a && document.getElementById(a.getAttribute("href").slice(1));
+      if (!sec || !chapters.includes(sec)) return;
+      e.preventDefault();
+      jump(sec);
+    });
   }
 
-  /* the card words come from each sport's home page "More Falcons" cards; only Schedule is new */
-  const MORE = {
-    football: {
-      "schedule.html": ["Schedule", "Every game this season with kickoff times, places and final scores."],
-      "stats.html": ["Roster &amp; Stats", "Every player by position with game-by-game numbers."],
-      "history.html": ["History", "Conference titles, year-by-year records and the Falcon greats."],
-      "media.html": ["Highlights &amp; Replays", "Game recaps and highlights straight from the team's Hudl."],
-    },
-    soccer: {
-      "schedule.html": ["Schedule", "Every game this season with dates, places and final scores."],
-      "stats.html": ["Roster &amp; Stats", "Every player by position with goals, assists and a game-by-game log."],
-      "history.html": ["History", "Championship banners, the record book and every season on file."],
-      "media.html": ["Highlights &amp; Replays", "Game recaps and highlights straight from the team's Hudl."],
-    },
-    "field-hockey": {
-      "schedule.html": ["Schedule", "Every game this season with dates, places and final scores."],
-      "stats.html": ["Roster &amp; Stats", "Every player by position with goals, assists, saves and a game-by-game log."],
-      "history.html": ["History", "Thirty conference titles, the record book and every season on file."],
-      "media.html": ["Highlights &amp; Replays", "Game recaps and highlights straight from the team's Hudl."],
-    },
-    volleyball: {
-      "schedule.html": ["Schedule", "Every match this season with dates, places and final scores."],
-      "stats.html": ["Roster &amp; Stats", "Every player by position with kills, aces, blocks, digs, assists and a match-by-match log."],
-      "history.html": ["History", "Six straight conference titles, a trip to the state final, the record book and every season on file."],
-      "media.html": ["Highlights &amp; Replays", "Match recaps and highlights straight from the team's Hudl."],
-    },
-    "cross-country": {
-      "schedule.html": ["Schedule", "Every meet this season with dates, courses and results."],
-      "runners.html": ["Roster &amp; Results", "Every runner, boys and girls, with meet-by-meet finishes."],
-      "history.html": ["History", "Conference titles, a state championship and the Falcon standouts."],
-      "media.html": ["In the News", "Meet write-ups and results from around the North Shore."],
-    },
-    golf: {
-      "schedule.html": ["Schedule", "Every match this season with courses and final scores."],
-      "stats.html": ["Roster &amp; Results", "Every player with match-by-match results and points won."],
-      "history.html": ["History", "Fourteen conference titles, sectional crowns and the Falcons who led the way."],
-      "media.html": ["In the News", "Match coverage from the local papers."],
-    },
-    esports: {
-      "schedule.html": ["Schedule", "Every match this season with dates and results."],
-      "stats.html": ["The Team", "The adviser, the two games the Falcons play, state standings and how to join."],
-      "history.html": ["History", "Every Massachusetts state champion so far, and the banner the Falcons are chasing."],
-      "media.html": ["Follow the Team", "The school's team page and the state league."],
-    },
-  };
-  function moreCards(dir, file, team, pages) {
-    const main = document.querySelector("main");
-    const words = MORE[dir];
-    if (!main || !words) return;
-    const cards = pages.filter((p) => p.file !== "index.html" && p.file !== file && words[p.file]);
-    if (!cards.length) return;
-    const sec = document.createElement("section");
-    sec.className = "block fx-more";
-    sec.innerHTML = `<div class="wrap">
-        <div class="section-head"><h2>More Falcons ${team}</h2></div>
-        <div class="grid g3 quicklinks">${cards.map((p) => `<a class="card lift" href="${p.href}"><span class="arrow">→</span><h3>${words[p.file][0]}</h3><p>${words[p.file][1]}</p></a>`).join("")}</div>
-      </div>`;
-    main.appendChild(sec);
+  /* go to a section of the long page: a glide (straight there with reduced motion), then it stays lined up under the
+     header while photos and logos above finish loading and push things down; scrolling yourself stops that at once */
+  let jumpRun = 0;
+  function jump(sec, { smooth = !REDUCED, focus = true } = {}) {
+    const run = ++jumpRun;
+    const html = document.documentElement, header = document.querySelector(".site-header");
+    const toGo = () => (sec.id === "top" ? -scrollY : sec.getBoundingClientRect().top - (header ? header.getBoundingClientRect().bottom : 0));
+    const instant = (dy) => { const was = html.style.scrollBehavior; html.style.scrollBehavior = "auto"; scrollBy(0, dy); html.style.scrollBehavior = was; };
+    if (smooth) scrollBy({ top: toGo(), behavior: "smooth" }); else instant(toGo());
+    history.replaceState(null, "", sec.id === "top" ? location.pathname + location.search : `#${sec.id}`);
+    if (focus) { sec.setAttribute("tabindex", "-1"); sec.focus({ preventScroll: true }); }
+
+    const TAKEOVER = ["wheel", "touchstart", "keydown", "pointerdown"];
+    const stop = () => { if (run === jumpRun) jumpRun++; TAKEOVER.forEach((t) => removeEventListener(t, stop, true)); };
+    TAKEOVER.forEach((t) => addEventListener(t, stop, { capture: true, passive: true }));
+    const t0 = performance.now();
+    let lastY = scrollY, still = t0;
+    const tick = () => {
+      if (run !== jumpRun) return;
+      const now = performance.now();
+      if (Math.abs(scrollY - lastY) > .5) { lastY = scrollY; still = now; }   // still gliding
+      else if (now - still > 150) {   // settled: line it back up if something above changed height
+        const d = toGo();
+        if (Math.abs(d) > 2) { instant(d); lastY = scrollY; still = now; }
+      }
+      if (now - t0 < 2500) requestAnimationFrame(tick); else stop();
+    };
+    requestAnimationFrame(tick);
   }
 
   function menuHint(btn, name, pages) {
@@ -330,7 +344,7 @@
     tip.className = "fx-hint";
     tip.setAttribute("role", "status");
     const list = pages.filter((p) => p.file !== "index.html").map((p) => p.label).join(", ");
-    tip.innerHTML = `<b>All the ${name.toLowerCase()} pages are in here</b><span>${list}</span><button type="button" class="fx-hint-x" aria-label="Close this note">×</button>`;
+    tip.innerHTML = `<b>Jump to any part of the ${name.toLowerCase()} page</b><span>${list}</span><button type="button" class="fx-hint-x" aria-label="Close this note">×</button>`;
     header.appendChild(tip);
     /* sit just under the Menu button, with the little pointer under its middle */
     const place = () => {

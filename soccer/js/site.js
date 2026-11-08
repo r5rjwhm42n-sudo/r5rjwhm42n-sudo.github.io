@@ -239,7 +239,7 @@
         <p>${esc(prev.summary || `The Falcons are ${record} through ${plural(played.length, "game")}.`)}</p>
         <div class="btn-row">
           <button class="btn btn-primary" data-game="${prev.id}">Game recap</button>
-          <a class="btn btn-ghost" href="${to("schedule.html")}">Full schedule</a>
+          <a class="btn btn-ghost" href="#schedule">Full schedule</a>
         </div>`;
       const row = (name, pts, win, logo) => `
         <div class="sb-row ${win ? "win" : ""}">
@@ -260,7 +260,7 @@
         <div class="eyebrow">${SEASON} season</div>
         <h1>${esc(SCHOOL.name)} ${esc(T.label)}</h1>
         <p>Scores, stats, history and highlights from ${esc(SCHOOL.school)} ${esc(T.label.toLowerCase())}.</p>
-        <div class="btn-row"><a class="btn btn-primary" href="${to("schedule.html")}">Full schedule</a></div>`;
+        <div class="btn-row"><a class="btn btn-primary" href="#schedule">Full schedule</a></div>`;
     }
 
     const n = played.length || 1;
@@ -276,9 +276,7 @@
       </button>` : `<div class="card next-game"><div><div class="k">Regular season complete</div><h3>Final record ${record}</h3></div></div>`) +
       tile(["Goals", `${gf}–${ga}`, `${(gf / n).toFixed(1)} scored · ${(ga / n).toFixed(1)} allowed per game`]);
 
-    $("#home-leaders").innerHTML = leaders();
     const ahead = next ? upcoming.slice(upcoming.indexOf(next)) : [];
-    $("#home-games").innerHTML = [...SCHEDULE.filter((g) => !ahead.includes(g)).slice(-2), ...ahead.slice(0, 3)].map(gameRow).join("");
 
     if (next && startOf(next)) {   // counts down once the start time is set
       const tick = () => {
@@ -507,7 +505,10 @@
     $("#photos").closest("section").hidden = !T.photos.length;   // no photos yet: leave the section out
   }
 
-  ({ home, stats, schedule, history, media })[page]?.();
+  /* one long page: every part fills its own section (a problem in one doesn't stop the rest) */
+  for (const part of [home, schedule, stats, history, media]) {
+    try { part(); } catch (e) { console.error(e); }
+  }
 
   /* ---------- Light motion: sections fade in, big numbers count up once ---------- */
   const still = matchMedia("(prefers-reduced-motion: reduce)").matches;

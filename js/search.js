@@ -62,24 +62,24 @@
         const q = k ? `?team=${k}` : "";
         const games = sport === "soccer" ? d.TEAMS[k].schedule.filter((g) => !g.scrimmage) : (d.SCHEDULE || []).filter((g) => !g.scrimmage);
         const rec = sport === "cross-country" ? "" : record(games, /soccer|field-hockey/.test(sport));
-        add({ type: "team", sport, title: name, sub: [rec && `${rec} this fall`, "Team site"].filter(Boolean).join(" · "), right: "Team", href: `${site}index.html${q}`,
+        add({ type: "team", sport, title: name, sub: [rec && `${rec} this fall`, "Team site"].filter(Boolean).join(" · "), right: "Team", href: `${site}${q}`,
               keys: `${sport} falcons team home ${k || ""}` });
         const pages = sport === "cross-country" ? [["schedule", "Schedule & results"], ["runners", "Runners"], ["history", "History"], ["media", "Media"]]
           : [["schedule", "Schedule & results"], ["stats", "Stats & roster"], ["history", "History"], ["media", "Media & highlights"]];
-        pages.forEach(([p, what]) => add({ type: "page", sport, title: `${name} ${what}`, right: "Page", href: `${site}${p}.html${q}`, keys: `${p} roster scores` }));
+        pages.forEach(([p, what]) => add({ type: "page", sport, title: `${name} ${what}`, right: "Page", href: `${site}${q}#${p}`, keys: `${p} roster scores` }));   // sections of the team's one page
       });
 
       /* athletes */
       if (sport === "soccer") {
         ["girls", "boys"].forEach((k) => {
           const T = d.TEAMS[k], goals = tally(T.schedule, "scorers"), assists = tally(T.schedule, "assists");
-          T.players.forEach((p) => add({ type: "athlete", sport, title: p.name, href: `${site}stats.html?team=${k}#p=${encodeURIComponent(p.name)}`,
+          T.players.forEach((p) => add({ type: "athlete", sport, title: p.name, href: `${site}?team=${k}#p=${encodeURIComponent(p.name)}`,
             sub: [T.short ? `${T.short} Soccer` : T.label, p.pos?.join("/"), p.grade, p.num != null && `#${p.num}`,
                   goals[p.name] && plural(goals[p.name], "goal"), assists[p.name] && plural(assists[p.name], "assist")].filter(Boolean).join(" · "),
             right: p.captain ? "Captain" : "", keys: "player athlete" }));
         });
       } else if (sport === "cross-country") {
-        (d.RUNNERS || []).forEach((p) => add({ type: "athlete", sport, title: p.name, href: `${site}runners.html#p=${encodeURIComponent(p.name)}`,
+        (d.RUNNERS || []).forEach((p) => add({ type: "athlete", sport, title: p.name, href: `${site}#p=${encodeURIComponent(p.name)}`,
           sub: [`${p.squad === "girls" ? "Girls" : "Boys"} Cross Country`, p.grade, p.pr && `PR ${p.pr}`].filter(Boolean).join(" · "),
           right: p.captain ? "Captain" : "", keys: "runner athlete" }));
       } else {
@@ -91,7 +91,7 @@
           const stat = sport === "football" ? p.stats?.[0] && `${p.stats[0][1]} ${p.stats[0][0].toLowerCase()}`
             : sport === "field-hockey" ? goals[p.name] && plural(goals[p.name], "goal")
             : sport === "volleyball" ? kills[p.name] && `${kills[p.name]} kills` : null;
-          add({ type: "athlete", sport, title: p.name, href: `${site}stats.html#p=${encodeURIComponent(p.name)}`,
+          add({ type: "athlete", sport, title: p.name, href: `${site}#p=${encodeURIComponent(p.name)}`,
             sub: [label, p.pos?.join("/"), p.grade, p.num != null && `#${p.num}`, stat].filter(Boolean).join(" · "),
             right: p.captain ? "Captain" : "", keys: "player athlete" });
         });
@@ -112,7 +112,7 @@
         else if (!g.dateTbd && new Date(g.date) > Date.now() - 3 * 36e5) { right = "Upcoming"; cls = "up"; }
         add({ type: "game", sport, title: `${name} ${vs}`, date: g.date, right, cls,
               sub: [!g.dateTbd && fmt(g.date, { weekday: "short", month: "short", day: "numeric" }), !g.timeTbd && !g.dateTbd && fmt(g.date, { hour: "numeric", minute: "2-digit" }), g.site].filter(Boolean).join(" · "),
-              href: `${site}schedule.html${q}#g=${g.id}`,
+              href: `${site}${q}#g=${g.id}`,
               keys: `${g.opponent || ""} ${g.mascot || ""} ${g.postseason || g.tournament ? "playoff tournament postseason" : ""} ${g.date ? fmt(g.date, { month: "long" }) : ""} game match` });
       });
       if (sport === "soccer") ["girls", "boys"].forEach((k) => gameRows(d.TEAMS[k].schedule.filter((g) => !g.scrimmage), d.TEAMS[k].short ? `${d.TEAMS[k].short} Soccer` : d.TEAMS[k].label, `?team=${k}`));

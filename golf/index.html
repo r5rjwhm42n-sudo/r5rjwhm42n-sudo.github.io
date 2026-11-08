@@ -33,40 +33,170 @@
 <body data-page="home">
 <header class="site-header" id="site-header"></header>
 <main>
+<div class="fx-chapter" id="top">
 <div class="hero hero-home"><div class="wrap">
   <div id="hero-story"></div>
   <div id="scoreboard"></div>
 </div></div>
 
 <div class="wrap home-strip"><div class="strip" id="scorestrip"></div></div>
+</div>
+
+<div class="fx-chapter" id="schedule">
+<div class="hero page-banner"><div class="wrap">
+  <div class="eyebrow">2026 Season</div>
+  <h1>Schedule &amp; Results</h1>
+  <p>Tap any match for the recap, individual results and course.</p>
+  <div data-addcal="golf"></div>
+</div></div>
 
 <section class="block"><div class="wrap">
-  <div class="section-head"><h2>Season Leaders</h2><a class="more" href="stats.html">All players</a></div>
-  <div class="leaders" id="home-leaders"></div>
+  <div class="strip" id="sched-tiles"></div>
 </div></section>
 
 <section class="block"><div class="wrap">
-  <div class="section-head"><h2>Matches</h2><a class="more" href="schedule.html">Full schedule</a></div>
-  <div class="card gamelist" id="home-games"></div>
-  <div class="light" data-addcal="golf"></div>
-</div></section>
-
-<section class="block"><div class="wrap">
-  <div class="section-head"><h2>More Falcons Golf</h2></div>
-  <div class="grid g3 quicklinks">
-    <a class="card lift" href="history.html"><span class="arrow">→</span><h3>History</h3><p>Fourteen conference titles, sectional crowns and the Falcons who led the way.</p></a>
-    <a class="card lift" href="media.html"><span class="arrow">→</span><h3>In the News</h3><p>Match coverage from the local papers.</p></a>
-    <a class="card lift" href="stats.html"><span class="arrow">→</span><h3>Roster &amp; Results</h3><p>Every player with match-by-match results and points won.</p></a>
+  <div class="card howto">
+    <h3>How the scoring works</h3>
+    <p><strong>NEC match play.</strong> League matches are eight-on-eight over nine holes. Each head-to-head match is worth 9 points, so there are 72 points on offer and 36.5 wins it. A golfer who wins 6–3 took six of the nine points in their match.</p>
+    <p><strong>Non-league matches</strong> use the other team's format: Stableford points, where the higher total wins, or stroke play, where the lower total wins.</p>
+    <p><strong>Postseason</strong> is 18 holes of stroke play: six golfers a team, best four scores count. This is the last season of match play: from 2027 the MIAA moves every fall golf match to stroke play and replaces sectionals with divisional championships.</p>
   </div>
 </div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Upcoming</h2></div>
+  <div class="card gamelist" id="upcoming"></div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Results</h2></div>
+  <div class="card gamelist" id="results"></div>
+</div></section>
+</div>
+
+<div class="fx-chapter" id="stats">
+<div class="hero page-banner"><div class="wrap">
+  <div class="eyebrow">2026 Season</div>
+  <h1>Players &amp; Results</h1>
+  <p>Filter by class or search for a player. Each card shows a golfer's wins, points and match-by-match results.</p>
+</div></div>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Team</h2><span class="pill" id="stats-asof"></span></div>
+  <div class="strip" id="team-tiles"></div>
+  <p class="sub coach-line" id="coach-line"></p>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Leaders</h2></div>
+  <div class="leaders" id="leaders"></div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Match-Play Scorecard</h2><span class="pill">Points out of 72</span></div>
+  <div class="card chart" id="scorecard"></div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Points Won</h2><span class="pill">Reported matches</span></div>
+  <div class="card chart" id="points"></div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Players</h2></div>
+  <div class="filters" id="filters"></div>
+  <div class="grid g3" id="players"></div>
+</div></section>
+</div>
+
+<div class="fx-chapter" id="history">
+<div class="hero page-banner"><div class="wrap">
+  <div class="eyebrow">Tradition</div>
+  <h1>Falcons History</h1>
+  <p>Fourteen Northeastern Conference championships, two sectional titles and a run to second in the state.</p>
+</div></div>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Banners</h2></div>
+  <div class="banners" id="banners"></div>
+  <div class="card titles" id="nec-titles"></div>
+  <p class="sub fine">Title years are from the Danvers High athletics golf page. The 2018 sectional and state results are from newspaper coverage that fall.</p>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="strip" id="history-tiles"></div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Falcon Standouts</h2></div>
+  <p class="sub">Danvers golfers who earned the Northeastern Conference's top honors.</p>
+  <div class="grid g3" id="legends"></div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Recent Seasons</h2><span class="pill">2021 to 2026</span></div>
+  <div class="card linechart" id="win-chart"></div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="grid g2" style="align-items:start">
+    <div>
+      <div class="section-head"><h2>Year by Year</h2></div>
+      <div class="card table-scroll"><table class="records">
+        <thead><tr><th>Season</th><th>Overall</th><th>League</th><th>Win %</th><th></th></tr></thead>
+        <tbody id="records"></tbody>
+      </table></div>
+      <p class="sub fine">Regular-season records for 2021–2026 from the school's schedule page.</p>
+    </div>
+    <div>
+      <div class="section-head"><h2>Milestones</h2></div>
+      <div class="timeline" id="timeline"></div>
+    </div>
+  </div>
+</div></section>
+</div>
+
+<div class="fx-chapter" id="media">
+<div class="hero page-banner"><div class="wrap">
+  <div class="eyebrow">In the News</div>
+  <h1>From the Course</h1>
+  <p>Match coverage from the local papers.</p>
+</div></div>
+
+<section class="block"><div class="wrap">
+  <div class="card cta">
+    <div><h3>Follow the Falcons</h3><p>Tee times, courses and scores, straight from the school.</p></div>
+    <div class="btn-row">
+      <a class="btn btn-primary" id="link-schedule" target="_blank" rel="noopener">School Schedule ↗</a>
+      <a class="btn btn-ghost" id="link-athletics" target="_blank" rel="noopener">Falcons Athletics ↗</a>
+    </div>
+  </div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>In the News</h2></div>
+  <p class="sub">Each card opens the story on the newspaper's own site, which may ask readers to subscribe.</p>
+  <div class="grid g2" id="news"></div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Photos</h2></div>
+  <div class="grid g4" id="photos"></div>
+</div></section>
+</div>
 </main>
 <footer class="site-footer" id="site-footer"><div class="wrap"><p>A Danvers High School DECA student project. Not the official school website.</p></div></footer>
 <script src="js/data.js"></script>
 <script src="js/site.js"></script>
+<script>
+  document.getElementById("link-schedule").href = TEAM.links.schedule;
+  document.getElementById("link-athletics").href = TEAM.links.athletics;
+</script>
 <script src="../js/common.js"></script>
 <script src="../js/extras.js"></script>
 <script src="../js/search.js"></script>
 <script src="../js/addcal.js"></script>
+<script src="../js/story.js"></script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "012041330fec4a07ad02e32f49e725f2"}'></script><!-- End Cloudflare Web Analytics -->
 <script src="../js/fx.js"></script>
 </body>
