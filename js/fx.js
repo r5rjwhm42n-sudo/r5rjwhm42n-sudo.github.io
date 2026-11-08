@@ -280,14 +280,42 @@
        It goes when they open the Menu, close the note, or after 8 seconds, and never comes back. */
     const hint = menuHint(btn, name, pages);
 
-    /* the end of each section says what's next, with a bobbing arrow, so nobody stops scrolling too soon */
-    const parts = pages.filter((p) => p.id);
-    parts.forEach((p, n) => {
-      const next = parts[n + 1], sec = document.getElementById(p.id);
-      if (!next || !sec) return;
-      sec.insertAdjacentHTML("beforeend", `<div class="wrap fx-next-wrap"><a class="fx-next" href="#${next.id}" aria-label="Next up: ${next.label}">` +
-        `<span class="fx-next-k" aria-hidden="true">Next up</span><b aria-hidden="true">${next.label}</b><span class="fx-next-arrow" aria-hidden="true"></span></a></div>`);
-    });
+    /* "Next up": a small note in the bottom corner names the section after the one on screen, so nobody stops
+       scrolling too soon; it comes in once the visitor starts scrolling, goes on the last section, and a click glides there */
+    const parts = pages.filter((p) => p.id && document.getElementById(p.id));
+    if (parts.length > 1) {
+      const nx = document.createElement("a");
+      nx.className = "fx-next";
+      nx.innerHTML = '<span class="fx-next-txt" aria-hidden="true"><span class="fx-next-k">Next up</span><b></b></span><span class="fx-next-arrow" aria-hidden="true"></span>';
+      document.body.appendChild(nx);
+      let next = null, queued = false;
+      const place = () => {
+        queued = false;
+        const line = (header ? header.getBoundingClientRect().bottom : 0) + innerHeight * .25;
+        let n = 0;
+        parts.forEach((p, k) => { if (document.getElementById(p.id).getBoundingClientRect().top <= line) n = k; });
+        const want = parts[n + 1] || null;
+        if (want && want !== next) {
+          nx.href = `#${want.id}`;
+          nx.querySelector("b").textContent = want.label;
+          nx.setAttribute("aria-label", `Next up: ${want.label}`);
+        }
+        next = want;
+        const on = !!next && scrollY > 60;
+        nx.classList.toggle("on", on);
+        nx.tabIndex = on ? 0 : -1;
+      };
+      addEventListener("scroll", () => { if (!queued) { queued = true; requestAnimationFrame(place); } }, { passive: true });
+      addEventListener("resize", place);
+      addEventListener("load", place, { once: true });
+      place();
+      nx.addEventListener("click", (e) => {
+        const sec = next && document.getElementById(next.id);
+        if (!sec) return;
+        e.preventDefault();
+        jump(sec);
+      });
+    }
 
     /* sections sit just below the sticky header when jumped to */
     const headRoom = () => document.documentElement.style.setProperty("--fx-head", `${header ? header.offsetHeight : 0}px`);

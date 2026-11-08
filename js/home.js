@@ -473,7 +473,10 @@
   /* ---------- Photos: action shots from every site's PHOTOS join the team photos ---------- */
   function renderGallery(S) {
     const NAMES_BY = { football: "Football", soccer: "Soccer", "field-hockey": "Field Hockey", volleyball: "Volleyball", "cross-country": "Cross Country", golf: "Golf", esports: "Esports" };
-    const extra = Object.keys(NAMES_BY).flatMap((key) => (S[key]?.photos || []).map((p) => ({ ...p, src: `${key}/${p.src}`, team: p.team || NAMES_BY[key] })));
+    /* one sport at a time (each site's newest first), so the 12 shown aren't all from the team with the most photos */
+    const lists = Object.keys(NAMES_BY).map((key) => (S[key]?.photos || []).map((p) => ({ ...p, src: `${key}/${p.src}`, team: p.team || NAMES_BY[key] })));
+    const extra = [];
+    for (let i = 0; lists.some((l) => i < l.length); i++) lists.forEach((l) => { if (l[i]) extra.push(l[i]); });
     if (!extra.length) return;
     const credits = [...new Set(extra.map((p) => p.credit).filter(Boolean))];
     if (credits.length) $(".credit").insertAdjacentHTML("beforeend", ` Action shots: ${credits.map((c) => c.startsWith("@") ? `<a href="https://www.instagram.com/${esc(c.slice(1))}/" target="_blank" rel="noopener">${esc(c)}</a> on Instagram` : esc(c)).join(", ")}.`);

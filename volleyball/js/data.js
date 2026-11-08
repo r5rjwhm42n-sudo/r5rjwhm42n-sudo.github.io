@@ -805,6 +805,26 @@ const VIDEOS = [
 
 /* credit shows under the Photos grid; the first photo is also the home page backdrop and link preview */
 const PHOTOS = [
+  { src: "images/action/waiting-on-the-serve.jpg", caption: "Waiting on the serve", credit: "@danversfalconsathletics" },
+  { src: "images/action/senior-night-salem-02.jpg", caption: "Senior Night vs. Salem", credit: "@northshorebostonphotography" },
+  { src: "images/action/senior-night-salem-03.jpg", caption: "Senior Night vs. Salem", credit: "@northshorebostonphotography" },
+  { src: "images/action/senior-night-salem-04.jpg", caption: "Senior Night vs. Salem", credit: "@northshorebostonphotography" },
+  { src: "images/action/senior-night-salem-05.jpg", caption: "Senior Night vs. Salem", credit: "@northshorebostonphotography" },
+  { src: "images/action/senior-night-salem-06.jpg", caption: "Senior Night vs. Salem", credit: "@northshorebostonphotography" },
+  { src: "images/action/senior-night-salem-07.jpg", caption: "Senior Night vs. Salem", credit: "@northshorebostonphotography" },
+  { src: "images/action/senior-night-salem-08.jpg", caption: "Senior Night vs. Salem", credit: "@northshorebostonphotography" },
+  { src: "images/action/senior-night-salem-09.jpg", caption: "Senior Night vs. Salem", credit: "@northshorebostonphotography" },
+  { src: "images/action/senior-night-salem-10.jpg", caption: "Senior Night vs. Salem", credit: "@northshorebostonphotography" },
+  { src: "images/action/senior-night-salem-11.jpg", caption: "Senior Night vs. Salem", credit: "@northshorebostonphotography" },
+  { src: "images/action/senior-night-salem-12.jpg", caption: "Senior Night vs. Salem", credit: "@northshorebostonphotography" },
+  { src: "images/action/senior-night-salem-13.jpg", caption: "Senior Night vs. Salem", credit: "@northshorebostonphotography" },
+  { src: "images/action/senior-night-salem-14.jpg", caption: "Senior Night vs. Salem", credit: "@northshorebostonphotography" },
+  { src: "images/action/senior-night-salem-15.jpg", caption: "Senior Night vs. Salem", credit: "@northshorebostonphotography" },
+  { src: "images/action/senior-night-salem-16.jpg", caption: "Senior Night vs. Salem", credit: "@northshorebostonphotography" },
+  { src: "images/action/senior-night-salem-17.jpg", caption: "Senior Night vs. Salem", credit: "@northshorebostonphotography" },
+  { src: "images/action/senior-night-salem-18.jpg", caption: "Senior Night vs. Salem", credit: "@northshorebostonphotography" },
+  { src: "images/action/senior-night-salem-19.jpg", caption: "Senior Night vs. Salem", credit: "@northshorebostonphotography" },
+  { src: "images/action/senior-night-salem-20.jpg", caption: "Senior Night vs. Salem", credit: "@northshorebostonphotography" },
   { src: "images/action/gabrielle-lindeman.jpg", caption: "Gabrielle Lindeman fires up the Falcons", credit: "@danversfalconsathletics" },
   { src: "images/action/celebrating-a-point.jpg", caption: "Celebrating a point", credit: "@danversfalconsathletics" }
 ];

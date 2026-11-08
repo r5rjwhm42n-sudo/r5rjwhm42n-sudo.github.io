@@ -723,6 +723,25 @@ const VIDEOS = [
 
 /* credit shows under the Photos grid; the first photo is also the home page backdrop and link preview */
 const PHOTOS = [
+  { src: "images/action/woburn-scrimmage-01.jpg", caption: "Scrimmage vs. Woburn", credit: "@northshorebostonphotography" },
+  { src: "images/action/woburn-scrimmage-02.jpg", caption: "Scrimmage vs. Woburn", credit: "@northshorebostonphotography" },
+  { src: "images/action/woburn-scrimmage-03.jpg", caption: "Scrimmage vs. Woburn", credit: "@northshorebostonphotography" },
+  { src: "images/action/woburn-scrimmage-04.jpg", caption: "Scrimmage vs. Woburn", credit: "@northshorebostonphotography" },
+  { src: "images/action/woburn-scrimmage-05.jpg", caption: "Scrimmage vs. Woburn", credit: "@northshorebostonphotography" },
+  { src: "images/action/woburn-scrimmage-07.jpg", caption: "Scrimmage vs. Woburn", credit: "@northshorebostonphotography" },
+  { src: "images/action/woburn-scrimmage-08.jpg", caption: "Scrimmage vs. Woburn", credit: "@northshorebostonphotography" },
+  { src: "images/action/woburn-scrimmage-09.jpg", caption: "Scrimmage vs. Woburn", credit: "@northshorebostonphotography" },
+  { src: "images/action/woburn-scrimmage-10.jpg", caption: "Scrimmage vs. Woburn", credit: "@northshorebostonphotography" },
+  { src: "images/action/woburn-scrimmage-11.jpg", caption: "Scrimmage vs. Woburn", credit: "@northshorebostonphotography" },
+  { src: "images/action/woburn-scrimmage-12.jpg", caption: "Scrimmage vs. Woburn", credit: "@northshorebostonphotography" },
+  { src: "images/action/woburn-scrimmage-13.jpg", caption: "Scrimmage vs. Woburn", credit: "@northshorebostonphotography" },
+  { src: "images/action/woburn-scrimmage-15.jpg", caption: "Scrimmage vs. Woburn", credit: "@northshorebostonphotography" },
+  { src: "images/action/woburn-scrimmage-16.jpg", caption: "Scrimmage vs. Woburn", credit: "@northshorebostonphotography" },
+  { src: "images/action/woburn-scrimmage-17.jpg", caption: "Scrimmage vs. Woburn", credit: "@northshorebostonphotography" },
+  { src: "images/action/woburn-scrimmage-18.jpg", caption: "Scrimmage vs. Woburn", credit: "@northshorebostonphotography" },
+  { src: "images/action/woburn-scrimmage-19.jpg", caption: "Scrimmage vs. Woburn", credit: "@northshorebostonphotography" },
+  { src: "images/action/woburn-scrimmage-20.jpg", caption: "Scrimmage vs. Woburn", credit: "@northshorebostonphotography" },
+  { src: "images/action/pushing-upfield.jpg", caption: "Pushing the ball upfield", credit: "@danversfalconsathletics" },
   { src: "images/action/driving-upfield.jpg", caption: "Driving the ball upfield", credit: "@danversfalconsathletics" },
   { src: "images/action/battle-for-the-ball.jpg", caption: "Battling for the ball", credit: "@danversfalconsathletics" },
   { src: "images/action/controlling-the-ball.jpg", caption: "Controlling the ball", credit: "@danversfalconsathletics" }

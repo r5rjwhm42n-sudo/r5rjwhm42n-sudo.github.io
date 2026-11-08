@@ -733,5 +733,32 @@ const VIDEOS = [
 /* Example: { src: "photos/marblehead-01.jpg", caption: "Houston breaks one vs. Marblehead", game: "vs. Marblehead" }
    credit shows under the Photos grid; the first photo is also the home page backdrop and link preview. */
 const PHOTOS = [
+  { src: "images/action/bedford-round-of-16-03.jpg", caption: "Round of 16 vs. Bedford", credit: "@northshorebostonphotography" },
+  { src: "images/action/bedford-round-of-16-02.jpg", caption: "Round of 16 vs. Bedford", credit: "@northshorebostonphotography" },
+  { src: "images/action/bedford-round-of-16-04.jpg", caption: "Round of 16 vs. Bedford", credit: "@northshorebostonphotography" },
+  { src: "images/action/bedford-round-of-16-06.jpg", caption: "Round of 16 vs. Bedford", credit: "@northshorebostonphotography" },
+  { src: "images/action/bedford-round-of-16-07.jpg", caption: "Round of 16 vs. Bedford", credit: "@northshorebostonphotography" },
+  { src: "images/action/bedford-round-of-16-11.jpg", caption: "Round of 16 vs. Bedford", credit: "@northshorebostonphotography" },
+  { src: "images/action/bedford-round-of-16-17.jpg", caption: "Round of 16 vs. Bedford", credit: "@northshorebostonphotography" },
+  { src: "images/action/bedford-round-of-16-18.jpg", caption: "Round of 16 vs. Bedford", credit: "@northshorebostonphotography" },
+  { src: "images/action/bedford-round-of-16-19.jpg", caption: "Round of 16 vs. Bedford", credit: "@northshorebostonphotography" },
+  { src: "images/action/bedford-round-of-16-b-11.jpg", caption: "Round of 16 vs. Bedford", credit: "@northshorebostonphotography" },
+  { src: "images/action/bedford-round-of-16-b-18.jpg", caption: "Round of 16 vs. Bedford", credit: "@northshorebostonphotography" },
+  { src: "images/action/bedford-round-of-16-b-19.jpg", caption: "Round of 16 vs. Bedford", credit: "@northshorebostonphotography" },
+  { src: "images/action/peabody-nec-title-01.jpg", caption: "NEC title game at Peabody", credit: "@northshorebostonphotography" },
+  { src: "images/action/peabody-nec-title-02.jpg", caption: "NEC title game at Peabody", credit: "@northshorebostonphotography" },
+  { src: "images/action/peabody-nec-title-03.jpg", caption: "NEC title game at Peabody", credit: "@northshorebostonphotography" },
+  { src: "images/action/peabody-nec-title-04.jpg", caption: "NEC title game at Peabody", credit: "@northshorebostonphotography" },
+  { src: "images/action/peabody-nec-title-05.jpg", caption: "NEC title game at Peabody", credit: "@northshorebostonphotography" },
+  { src: "images/action/peabody-nec-title-07.jpg", caption: "NEC title game at Peabody", credit: "@northshorebostonphotography" },
+  { src: "images/action/peabody-nec-title-08.jpg", caption: "NEC title game at Peabody", credit: "@northshorebostonphotography" },
+  { src: "images/action/peabody-nec-title-09.jpg", caption: "NEC title game at Peabody", credit: "@northshorebostonphotography" },
+  { src: "images/action/peabody-nec-title-10.jpg", caption: "NEC title game at Peabody", credit: "@northshorebostonphotography" },
+  { src: "images/action/peabody-nec-title-11.jpg", caption: "NEC title game at Peabody", credit: "@northshorebostonphotography" },
+  { src: "images/action/peabody-nec-title-13.jpg", caption: "NEC title game at Peabody", credit: "@northshorebostonphotography" },
+  { src: "images/action/peabody-nec-title-18.jpg", caption: "NEC title game at Peabody", credit: "@northshorebostonphotography" },
+  { src: "images/action/peabody-nec-title-19.jpg", caption: "NEC title game at Peabody", credit: "@northshorebostonphotography" },
+  { src: "images/action/peabody-nec-title-20.jpg", caption: "NEC title game at Peabody", credit: "@northshorebostonphotography" },
+  { src: "images/action/falcons-on-the-move.jpg", caption: "The Falcons on the move", credit: "@danversfalconsathletics" },
   { src: "images/action/football-under-the-lights.jpg", caption: "The Falcons under the lights", credit: "@danversfalconsathletics" }
 ];

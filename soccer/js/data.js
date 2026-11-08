@@ -685,7 +685,8 @@ const TEAMS = {
     ],
     photos: [
       { src: "images/action/girls-emma-sutherland.jpg", caption: "Emma Sutherland pushes the ball upfield", credit: "@danversfalconsathletics" },
-      { src: "images/action/girls-ella-cangiano.jpg", caption: "Ella Cangiano sets up a throw-in", credit: "@danversfalconsathletics" }
+      { src: "images/action/girls-ella-cangiano.jpg", caption: "Ella Cangiano sets up a throw-in", credit: "@danversfalconsathletics" },
+      { src: "images/action/girls-dribbling-upfield.jpg", caption: "Dribbling upfield", credit: "@danversfalconsathletics" }
     ]
   },
 
@@ -1120,7 +1121,8 @@ const TEAMS = {
       { src: "images/action/boys-on-the-attack.jpg", caption: "The Falcons on the attack", credit: "@danversfalconsathletics" },
       { src: "images/action/boys-lining-up-a-shot.jpg", caption: "Lining up a shot", credit: "@danversfalconsathletics" },
       { src: "images/action/boys-ball-in-the-air.jpg", caption: "Chasing a ball in the air", credit: "@danversfalconsathletics" },
-      { src: "images/action/boys-moving-upfield.jpg", caption: "Moving the ball upfield", credit: "@danversfalconsathletics" }
+      { src: "images/action/boys-moving-upfield.jpg", caption: "Moving the ball upfield", credit: "@danversfalconsathletics" },
+      { src: "images/action/boys-scramble-at-the-goal.jpg", caption: "A scramble in front of the goal", credit: "@danversfalconsathletics" }
     ]
   }
 };
