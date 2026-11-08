@@ -473,14 +473,14 @@
   /* ---------- Photos: action shots from every site's PHOTOS join the team photos ---------- */
   function renderGallery(S) {
     const NAMES_BY = { football: "Football", soccer: "Soccer", "field-hockey": "Field Hockey", volleyball: "Volleyball", "cross-country": "Cross Country", golf: "Golf", esports: "Esports" };
-    /* one sport at a time (each site's newest first), so the 12 shown aren't all from the team with the most photos */
+    /* every team site's action shots, one sport at a time (each site's newest first) so the sports mix all the way down */
     const lists = Object.keys(NAMES_BY).map((key) => (S[key]?.photos || []).map((p) => ({ ...p, src: `${key}/${p.src}`, team: p.team || NAMES_BY[key] })));
     const extra = [];
     for (let i = 0; lists.some((l) => i < l.length); i++) lists.forEach((l) => { if (l[i]) extra.push(l[i]); });
     if (!extra.length) return;
     const credits = [...new Set(extra.map((p) => p.credit).filter(Boolean))];
-    if (credits.length) $(".credit").insertAdjacentHTML("beforeend", ` Action shots: ${credits.map((c) => c.startsWith("@") ? `<a href="https://www.instagram.com/${esc(c.slice(1))}/" target="_blank" rel="noopener">${esc(c)}</a> on Instagram` : esc(c)).join(", ")}.`);
-    $("#gallery-grid").insertAdjacentHTML("beforeend", extra.slice(0, 12).map((p) => `<figure class="gal">
+    if (credits.length) $("#photos .credit").insertAdjacentHTML("beforeend", ` Action shots: ${credits.map((c) => c.startsWith("@") ? `<a href="https://www.instagram.com/${esc(c.slice(1))}/" target="_blank" rel="noopener">${esc(c)}</a> on Instagram` : esc(c)).join(", ")}.`);
+    $("#gallery-grid").insertAdjacentHTML("beforeend", extra.map((p) => `<figure class="gal">
         <button type="button" data-full="${esc(p.src)}" data-cap="${esc(p.caption)}"><img src="${esc(p.src)}" alt="${esc(p.caption)}" loading="lazy"></button>
         <figcaption><b>${esc(p.team)}</b> ${esc(p.caption)}</figcaption></figure>`).join(""));
   }
