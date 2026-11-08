@@ -18,25 +18,46 @@
 
   /* ---------- Sound: plays from the visitor's first click; the header switch turns it off ---------- */
   const Sound = (function () {
-    let ctx = null, master = null, on = true, last = 0;
+    let ctx = null, master = null, on = true, last = 0, kicked = false;
     const read = () => { try { on = localStorage.getItem("df-sound") !== "off"; } catch (e) { /* storage blocked: stay on */ } };
     read();
+    function make() {
+      if (ctx) return;
+      try {
+        const AC = window.AudioContext || window.webkitAudioContext;
+        ctx = new AC();
+        master = ctx.createGain();
+        master.gain.value = .9;
+        master.connect(ctx.destination);
+      } catch (e) { ctx = null; }
+    }
+    /* browsers only let a page play sound after a click, tap or key press on it; this runs on each of those */
     function unlock() {
-      if (!ctx) {
-        try {
-          const AC = window.AudioContext || window.webkitAudioContext;
-          ctx = new AC();
-          master = ctx.createGain();
-          master.gain.value = .9;
-          master.connect(ctx.destination);
-        } catch (e) { ctx = null; }
+      make();
+      if (!ctx || ctx.state === "running") return;
+      ctx.resume().catch(() => {});
+      if (!kicked) {   // older iPhones only open up once something actually plays during the tap: a silent blip
+        kicked = true;
+        try { const s = ctx.createBufferSource(); s.buffer = ctx.createBuffer(1, 1, 22050); s.connect(ctx.destination); s.start(0); } catch (e) { /* not needed elsewhere */ }
       }
-      if (ctx && ctx.state === "suspended") ctx.resume().catch(() => {});
+    }
+    /* Chrome and Edge let a page reached by clicking a link on this site play sound straight away, so a visitor
+       who has already clicked doesn't have to click again on every page; elsewhere this just waits for the next click */
+    function wake() {
+      if (!on || ctx) return;
+      const policy = navigator.getAutoplayPolicy ? navigator.getAutoplayPolicy("audiocontext") : null;
+      let fromHere = false;
+      try { fromHere = new URL(document.referrer).origin === location.origin; } catch (e) { /* no referrer */ }
+      if (policy === "allowed" || (policy === null && fromHere)) make();
     }
     function ready() {
       if (!ctx) return false;
-      if (ctx.state === "suspended") ctx.resume().catch(() => {});
-      return true;
+      if (ctx.state === "running") return true;
+      ctx.resume().catch(() => {});
+      /* not allowed to play yet: only queue a sound during the click or key press that starts it,
+         so hover ticks don't pile up and all play at once later */
+      const ua = navigator.userActivation;
+      return !ua || ua.isActive;
     }
     function tone(o) {
       if (!on || !ready()) return;
@@ -70,6 +91,8 @@
       set(v) { on = v; try { localStorage.setItem("df-sound", v ? "on" : "off"); } catch (e) { /* this page only */ } },
       read,
       unlock,
+      wake,
+      revive() { if (ctx && ctx.state !== "running") ctx.resume().catch(() => {}); },
       hover() { const n = performance.now(); if (n - last < 70) return; last = n; tone({ f: 2100, d: .035, g: .014, type: "triangle" }); },   // soft tick
       click() { tone({ f: 660, f2: 320, d: .09, g: .055 }); },                                     // tap
       swish() { noise({ d: .34, g: .06, from: 500, to: 5600 }); },                                 // a menu opens, a tab changes
@@ -516,11 +539,21 @@
   }
   soundSwitch();
 
-  /* a tap on every click (the first click also turns sound on for the visit) */
+  /* sound can start on any click, tap or key press (browsers differ on which one counts) */
+  Sound.wake();
+  ["pointerdown", "pointerup", "mousedown", "touchend", "click"].forEach((type) => document.addEventListener(type, Sound.unlock, { capture: true, passive: true }));
+  addEventListener("pageshow", (e) => { if (e.persisted) Sound.revive(); });   // back to a page the browser kept in memory
+
+  /* a tap on every click: on press with a mouse; on phones when the tap lands (that's when they allow sound) */
+  let pressType = "mouse";
+  const tapTarget = (t) => !t.closest(".fx-sound") && t.closest("a, button");
   document.addEventListener("pointerdown", (e) => {
-    Sound.unlock();
-    if (e.target.closest(".fx-sound")) return;
-    if (e.target.closest("a, button")) Sound.click();
+    pressType = e.pointerType;
+    if (e.pointerType === "mouse" && tapTarget(e.target)) Sound.click();
+  }, true);
+  document.addEventListener("click", (e) => {
+    if (pressType !== "mouse" && e.detail > 0 && tapTarget(e.target)) Sound.click();
+    pressType = "mouse";
   }, true);
   document.addEventListener("keydown", (e) => {
     Sound.unlock();
