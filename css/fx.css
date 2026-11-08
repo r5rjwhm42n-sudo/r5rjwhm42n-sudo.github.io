@@ -179,6 +179,17 @@ html.fx-has-cursor .fx-cursor, html.fx-has-cursor .fx-ring { display: block; }
 .fx-ring.fx-ring-sport.big { width: 58px; height: 58px; margin: -29px 0 0 -29px; background: none; opacity: .55; }
 .fx-ring.fx-ring-sport.on-dark { color: var(--white); }
 .fx-ring.fx-ring-sport.gone { opacity: 0; }
+.fx-cursor.fx-cursor-sport { width: 4px; height: 4px; margin: -2px 0 0 -2px; opacity: .75; }
+/* the normal pointer hides while the shape is showing; it comes back for typing spots, pop-ups (they sit above
+   the page, where the shape can't go) and videos */
+@media (hover: hover) and (pointer: fine) {
+  html.fx-sport-pointer.fx-has-cursor, html.fx-sport-pointer.fx-has-cursor body,
+  html.fx-sport-pointer.fx-has-cursor body :not(dialog[open], dialog[open] *, iframe, select,
+    input:not([type="checkbox"], [type="radio"], [type="range"], [type="button"], [type="submit"]), textarea, [contenteditable="true"]) { cursor: none !important; }
+  /* pointers are inherited, so these get theirs back outright (their insides then follow) */
+  html.fx-sport-pointer.fx-has-cursor :is(dialog[open], iframe, select) { cursor: auto !important; }
+  html.fx-sport-pointer.fx-has-cursor :is(input:not([type="checkbox"], [type="radio"], [type="range"], [type="button"], [type="submit"]), textarea, [contenteditable="true"]) { cursor: text !important; }
+}
 
 @media (prefers-reduced-motion: reduce) {
   .btn { transition: none; }
