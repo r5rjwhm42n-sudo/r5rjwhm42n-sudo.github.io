@@ -295,7 +295,8 @@
   }, { passive: true });
   document.addEventListener("pointerout", (e) => { if (!e.relatedTarget) { untilt(); unpull(); } });
 
-  /* custom cursor: a small dot, and a ring that follows a beat behind and grows over anything clickable */
+  /* custom cursor: a small dot, and a ring that follows a beat behind and grows over anything clickable
+     (on team sites the ring is that sport's shape instead, and the normal pointer stays) */
   const CLICKABLE = `a[href], button, [role="button"], [role="tab"], input, select, textarea, label, summary, ${CARDS}`;
   /* rows and buttons that turn royal under the mouse, and buttons that turn white */
   const TURNS_DARK = ".game, .tb, .addcal.light .btn";
@@ -313,13 +314,29 @@
     }
     return false;
   }
+  /* team sites: the ring becomes that sport's shape (drawings match the homepage's sport icons; the shoe and golf ball are new) */
+  const SPORT_SHAPE = {
+    football: '<g transform="rotate(-35 32 32)"><path d="M5 32C13 17 51 17 59 32C51 47 13 47 5 32Z"/><path d="M23 32h18M27 28v8M32 28v8M37 28v8"/><path d="M14 25.5v13M50 25.5v13"/></g>',
+    soccer: '<circle cx="32" cy="32" r="26"/><path d="M32 22l9.5 6.9-3.6 11.2H26.1l-3.6-11.2z" fill="currentColor"/><path d="M32 22V6M41.5 28.9l15.2-4.9M37.9 40.1l9.4 12.9M26.1 40.1l-9.4 12.9M22.5 28.9L7.3 24"/>',
+    "field-hockey": '<path d="M48 5L24 45c-3 6-10 8-14 5-3-2-2-6 1-6"/><circle cx="44" cy="52" r="5" fill="currentColor"/>',
+    volleyball: '<circle cx="32" cy="32" r="26"/><path d="M32 32c0-11 5-20 14-24.5M32 32c-9.5 5.5-20 5.5-27.5.5M32 32c9.5 5.5 14.5 14.5 13.5 24.5"/>',
+    "cross-country": '<path d="M7 40c0-7 2-14 6-19l9 4c3-3 5-7 6-11l8 4c4 9 12 13 21 15 3 1 5 4 5 7z"/><path d="M6 40h52c0 4-2 7-6 7H11c-3 0-5-3-5-7z"/><path d="M30 20l5 2.5M33 25l5 2.5"/>',   // a running shoe
+    golf: '<circle cx="32" cy="26" r="18"/><path d="M22 47h20l-7 5v9h-6v-9z"/>',   // a ball on a tee
+    esports: '<path d="M20 20h24c7 0 11 5 12.5 13l2.2 12.5c1 6-5.5 9.5-9.5 5.2L42 43H22l-7.2 7.7c-4 4.3-10.5.8-9.5-5.2L7.5 33C9 25 13 20 20 20z"/><path d="M19 28v10M14 33h10"/><circle cx="43" cy="30" r="2.4" fill="currentColor"/><circle cx="49" cy="36" r="2.4" fill="currentColor"/>',
+  };
   function cursor() {
     const dot = document.createElement("div"), ring = document.createElement("div");
     dot.className = "fx-cursor";
     ring.className = "fx-ring";
     dot.setAttribute("aria-hidden", "true");
     ring.setAttribute("aria-hidden", "true");
-    document.body.append(ring, dot);
+    const shape = SPORT && SPORT_SHAPE[SPORT[0]];
+    if (shape) {
+      ring.classList.add("fx-ring-sport");
+      ring.innerHTML = `<svg viewBox="-4 -4 72 72"><g fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">${shape}</g></svg>`;
+    }
+    document.body.append(ring);
+    if (!shape) document.body.append(dot);   // on team sites the shape is enough
     let mx = 0, my = 0, rx = 0, ry = 0, raf = 0, shown = false;
     const follow = () => {
       rx += (mx - rx) * .2;
@@ -350,25 +367,6 @@
     document.addEventListener("pointerout", (e) => { if (!e.relatedTarget) hide(); });
   }
   if (MOUSE.matches && MOTION_OK.matches) cursor();
-
-  /* team sites: the pointer becomes that sport, a small (24px), very see-through (40%) line drawing in royal
-     with a thin white edge so it shows on light and dark (drawings match the homepage's sport icons; the shoe and golf ball are new) */
-  const SPORT_CURSOR = {
-    football: '<g transform="rotate(-35 32 32)"><path d="M5 32C13 17 51 17 59 32C51 47 13 47 5 32Z"/><path d="M23 32h18M27 28v8M32 28v8M37 28v8"/><path d="M14 25.5v13M50 25.5v13"/></g>',
-    soccer: '<circle cx="32" cy="32" r="26"/><path d="M32 22l9.5 6.9-3.6 11.2H26.1l-3.6-11.2z" fill="currentColor"/><path d="M32 22V6M41.5 28.9l15.2-4.9M37.9 40.1l9.4 12.9M26.1 40.1l-9.4 12.9M22.5 28.9L7.3 24"/>',
-    "field-hockey": '<path d="M48 5L24 45c-3 6-10 8-14 5-3-2-2-6 1-6"/><circle cx="44" cy="52" r="5" fill="currentColor"/>',
-    volleyball: '<circle cx="32" cy="32" r="26"/><path d="M32 32c0-11 5-20 14-24.5M32 32c-9.5 5.5-20 5.5-27.5.5M32 32c9.5 5.5 14.5 14.5 13.5 24.5"/>',
-    "cross-country": '<path d="M7 40c0-7 2-14 6-19l9 4c3-3 5-7 6-11l8 4c4 9 12 13 21 15 3 1 5 4 5 7z"/><path d="M6 40h52c0 4-2 7-6 7H11c-3 0-5-3-5-7z"/><path d="M30 20l5 2.5M33 25l5 2.5"/>',   // a running shoe
-    golf: '<circle cx="32" cy="26" r="18"/><path d="M22 47h20l-7 5v9h-6v-9z"/>',   // a ball on a tee
-    esports: '<path d="M20 20h24c7 0 11 5 12.5 13l2.2 12.5c1 6-5.5 9.5-9.5 5.2L42 43H22l-7.2 7.7c-4 4.3-10.5.8-9.5-5.2L7.5 33C9 25 13 20 20 20z"/><path d="M19 28v10M14 33h10"/><circle cx="43" cy="30" r="2.4" fill="currentColor"/><circle cx="49" cy="36" r="2.4" fill="currentColor"/>',
-  };
-  if (SPORT && SPORT_CURSOR[SPORT[0]]) {
-    const svg = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="-4 -4 72 72" opacity=".4">' +
-      `<defs><g id="a" fill="none" stroke-linecap="round" stroke-linejoin="round">${SPORT_CURSOR[SPORT[0]]}</g></defs>` +
-      '<use href="#a" stroke="#fff" stroke-width="10" color="#fff"/><use href="#a" stroke="#18479f" stroke-width="6" color="#18479f"/></svg>';
-    document.documentElement.style.setProperty("--fx-sport-cursor", `url("data:image/svg+xml,${encodeURIComponent(svg)}") 12 12`);
-    document.documentElement.classList.add("fx-sport-cursor");
-  }
 
   /* ---------- Sound effects ---------- */
   /* the on/off switch, in the header next to search */
