@@ -460,4 +460,7 @@ const NEWS = [
 ];
 
 /* Example: { src: "photos/marblehead-01.jpg", caption: "The start at Marblehead", meet: "at Marblehead" } */
-const PHOTOS = [];
+const PHOTOS = [
+  { src: "images/action/on-the-course-boys.jpg", caption: "On the course", credit: "@danversfalconsathletics" },
+  { src: "images/action/on-the-course-girls.jpg", caption: "On the course", credit: "@danversfalconsathletics" }
+];

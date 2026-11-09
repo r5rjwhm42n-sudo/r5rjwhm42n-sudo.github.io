@@ -389,6 +389,7 @@ figure { margin: 0; }
   .brand-text small { font-size: 12px; }
   .scores-label { padding-left: 20px; font-size: 13px; }
   .g2, .g3 { grid-template-columns: 1fr; }
+  .grid > * { min-width: 0; }
   .g4, .strip { grid-template-columns: repeat(2, 1fr); }
   .hero::after { width: 260px; height: 260px; }
   .game { grid-template-columns: 60px 1fr; gap: 10px 14px; padding: 12px; }
@@ -407,6 +408,11 @@ figure { margin: 0; }
   .bar-row { grid-template-columns: 1fr 70px; }
   .bar-row .nm { grid-column: 1 / -1; }
   .section-head h2 { font-size: 34px; }
+}
+@media (max-width: 480px) {
+  .book { padding: 14px 12px 8px; }
+  .book li { gap: 8px; }
+  .tb-links a:nth-child(2) { display: none; }   /* the school athletics link: the team switch leaves no room for it */
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }

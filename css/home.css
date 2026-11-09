@@ -228,6 +228,10 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .gal figcaption { margin-top: 8px; font-size: 14px; color: var(--muted); }
 .gal figcaption b { font-family: var(--display); font-weight: 700; font-size: 18px; letter-spacing: .04em; text-transform: uppercase; color: var(--navy); margin-right: 4px; }
 .credit { margin: 18px 0 0; font-size: 13.5px; color: var(--muted); }
+/* 2026 Photos: two action shots per team show at first; "More photos" opens the rest (royal sweeps up on hover, text turns white) */
+.gal-more { display: flex; justify-content: center; margin-top: 24px; }
+.gal-more .btn { background: var(--white); color: var(--royal); border-color: var(--royal); --fx-sweep: var(--royal); }
+@media (hover: hover) { .gal-more .btn:hover { color: var(--white); } }
 .viewer { padding: 0; border: 0; background: transparent; max-width: min(1240px, 94vw); max-height: 94vh; overflow: visible; }
 .viewer::backdrop { background: rgba(5, 14, 40, .88); }
 .viewer figure { margin: 0; }

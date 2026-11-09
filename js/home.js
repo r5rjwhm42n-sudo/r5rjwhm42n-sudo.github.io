@@ -473,13 +473,31 @@
   /* ---------- Photos: action shots from every site's PHOTOS join the team photos ---------- */
   function renderGallery(S) {
     const NAMES_BY = { football: "Football", soccer: "Soccer", "field-hockey": "Field Hockey", volleyball: "Volleyball", "cross-country": "Cross Country", golf: "Golf", esports: "Esports" };
-    const extra = Object.keys(NAMES_BY).flatMap((key) => (S[key]?.photos || []).map((p) => ({ ...p, src: `${key}/${p.src}`, team: p.team || NAMES_BY[key] })));
+    /* every team site's action shots, one team at a time (each site's newest first) so the sports mix all the way down;
+       the first SHOW of each team show at once and "More photos" opens the rest */
+    const SHOW = 2;
+    const all = Object.keys(NAMES_BY).flatMap((key) => (S[key]?.photos || []).map((p) => ({ ...p, src: `${key}/${p.src}`, team: p.team || NAMES_BY[key] })));
+    const lists = [...new Set(all.map((p) => p.team))].map((t) => all.filter((p) => p.team === t));   // girls and boys soccer count as two teams
+    const first = [], rest = [];
+    for (let i = 0; lists.some((l) => i < l.length); i++) lists.forEach((l) => { if (l[i]) (i < SHOW ? first : rest).push(l[i]); });
+    const extra = first.concat(rest);
     if (!extra.length) return;
     const credits = [...new Set(extra.map((p) => p.credit).filter(Boolean))];
-    if (credits.length) $(".credit").insertAdjacentHTML("beforeend", ` Action shots: ${credits.map((c) => c.startsWith("@") ? `<a href="https://www.instagram.com/${esc(c.slice(1))}/" target="_blank" rel="noopener">${esc(c)}</a> on Instagram` : esc(c)).join(", ")}.`);
-    $("#gallery-grid").insertAdjacentHTML("beforeend", extra.slice(0, 12).map((p) => `<figure class="gal">
+    if (credits.length) $("#photos .credit").insertAdjacentHTML("beforeend", ` Action shots: ${credits.map((c) => c.startsWith("@") ? `<a href="https://www.instagram.com/${esc(c.slice(1))}/" target="_blank" rel="noopener">${esc(c)}</a> on Instagram` : esc(c)).join(", ")}.`);
+    const fig = (p, more) => `<figure class="gal"${more ? " data-more hidden" : ""}>
         <button type="button" data-full="${esc(p.src)}" data-cap="${esc(p.caption)}"><img src="${esc(p.src)}" alt="${esc(p.caption)}" loading="lazy"></button>
-        <figcaption><b>${esc(p.team)}</b> ${esc(p.caption)}</figcaption></figure>`).join(""));
+        <figcaption><b>${esc(p.team)}</b> ${esc(p.caption)}</figcaption></figure>`;
+    $("#gallery-grid").insertAdjacentHTML("beforeend", first.map((p) => fig(p)).join("") + rest.map((p) => fig(p, true)).join(""));
+    if (!rest.length) return;
+    $("#gallery-grid").insertAdjacentHTML("afterend", `<div class="gal-more"><button class="btn" type="button" aria-expanded="false" aria-controls="gallery-grid"><span class="gal-more-t">More photos</span></button></div>`);
+    const more = $(".gal-more .btn");
+    more.addEventListener("click", () => {
+      const open = more.getAttribute("aria-expanded") !== "true";
+      $$("#gallery-grid [data-more]").forEach((f) => { f.hidden = !open; });
+      more.setAttribute("aria-expanded", String(open));
+      $(".gal-more-t", more).textContent = open ? "Fewer photos" : "More photos";   // only the words: the arrow fx.js adds stays
+      if (!open) $("#photos").scrollIntoView({ behavior: calm ? "auto" : "smooth", block: "start" });   // back up to the gallery's top
+    });
   }
 
   /* ---------- Soccer and cross country cards fade between the girls and boys photos ---------- */
