@@ -40,8 +40,8 @@ const TEAM = {
       { seeds: [7, 10], score: [22, 0], date: "2026-11-06T19:00", site: "Shepherd Hill Regional High School, Dudley" },
       { seeds: [3, 14], score: [30, 27], date: "2026-11-06T18:30", site: "Morse Field, Danvers" },
       { seeds: [6, 11], score: [27, 21], date: "2026-11-06T19:00", site: "Tantasqua Regional High School, Sturbridge" },
-      { seeds: [1, 8], date: "2026-11-13T19:00" },
-      { seeds: [4, 5], date: "2026-11-13T19:00" },
+      { seeds: [1, 8], date: "2026-11-13T19:00", site: "Scituate High School, Scituate" },
+      { seeds: [4, 5], date: "2026-11-13T19:00", site: "Duxbury High School, Duxbury" },
       { seeds: [2, 7], date: "2026-11-13T19:00", site: "Doucette Stadium, Tewksbury" },
       { seeds: [3, 6], date: "2026-11-13T18:30", site: "Morse Field, Danvers" }
     ]
@@ -343,7 +343,7 @@ const SCHEDULE = [
       won: "On to the Quarterfinals",
       lost: "Final"
     },
-    notes: ["A 30–27 win in the MIAA Division 4 Round of 16 keeps Danvers unbeaten at 8–0", "Bedford's 27 points were the most Danvers allowed this season", "Bedford came in 5–3 on a two-game win streak: 55–30 over Wayland and 44–34 over Acton-Boxborough", "Danvers came in No. 16 in the Globe Top 20 (Nov. 2)", "Danvers hosts No. 6 Tantasqua Regional, a 27–21 winner over No. 11 Wayland, in the quarterfinals on Fri., Nov. 13"],
+    notes: ["A 30–27 win in the MIAA Division 4 Round of 16 keeps Danvers unbeaten at 8–0", "Bedford's 27 points were the most Danvers allowed this season", "Bedford came in 5–3 on a two-game win streak: 55–30 over Wayland and 44–34 over Acton-Boxborough", "Danvers came in No. 16 in the Globe Top 20 (Nov. 2)", "Danvers hosts No. 6 Tantasqua Regional, a 27–21 winner over No. 11 Wayland, in the quarterfinals on Fri., Nov. 13", "Zach Fultz was named one of the Boston Globe's players of the week"],
     sources: [
       { label: "Full-game replay on Hudl", url: REPLAY + "QnJvYWRjYXN0NDczNjA0NA%3D%3D" },
       { label: "MaxPreps box score", url: "https://www.maxpreps.com/ma/football/game/bedford-vs-danvers/11-6-2026/?c=48b36cbd-abb6-4f44-9163-fe865e696ac7" },
@@ -353,12 +353,14 @@ const SCHEDULE = [
       { label: "MIAA Division 4 bracket", url: "https://www.miaa.net/miaa-football-2026-division-4-state-tournament" },
       { label: "Bedford's last game (MaxPreps)", url: "https://www.maxpreps.com/news/dfoe0HM3N0uRjdKP0slKdg/football-recap-bedford-handles-acton-boxborough.htm" },
       { label: "Globe Top 20, Nov. 2", url: "https://www.bostonglobe.com/2026/11/02/sports/eastern-mass-football-and-globe-top-20/" },
-      { label: "Globe playoff preview", url: "https://www.bostonglobe.com/2026/11/01/sports/miaa-football-playoff-preview/" }
+      { label: "Globe playoff preview", url: "https://www.bostonglobe.com/2026/11/01/sports/miaa-football-playoff-preview/" },
+      { label: "Globe players of the week, Nov. 9", url: "https://www.bostonglobe.com/2026/11/09/sports/eastern-mass-high-school-football-players-of-the-week/" }
     ] },
   { id: 11, date: "2026-11-13T18:30", opponent: "Tantasqua", mascot: "Warriors",
     home: true, league: false, postseason: true, round: "Quarterfinals", site: HOME_FIELD, result: null,
-    notes: ["No. 3 Danvers hosts No. 6 Tantasqua Regional in the MIAA Division 4 quarterfinals", "Tantasqua (7–2) beat No. 11 Wayland 27–21 in the Round of 16", "The winner meets No. 2 Tewksbury or No. 7 Shepherd Hill in the semifinals"],
+    notes: ["No. 3 Danvers hosts No. 6 Tantasqua Regional in the MIAA Division 4 quarterfinals", "Tantasqua (7–2) beat No. 11 Wayland 27–21 in the Round of 16", "The winner meets No. 2 Tewksbury or No. 7 Shepherd Hill in the semifinals", "Danvers comes in No. 19 in the Boston Globe Top 20 (Nov. 9)"],
     sources: [
+      { label: "Globe Top 20, Nov. 9", url: "https://www.bostonglobe.com/2026/11/09/sports/eastern-mass-football-globe-top-20/" },
       { label: "MIAA Division 4 bracket", url: "https://www.miaa.net/miaa-football-2026-division-4-state-tournament" },
       { label: "MaxPreps game page", url: "https://www.maxpreps.com/ma/football/game/danvers-vs-tantasqua-regional-fiskdale/11-13-2026/?c=40762c35-8a74-435e-ad4e-2d92f6fca15e" }
     ] },
