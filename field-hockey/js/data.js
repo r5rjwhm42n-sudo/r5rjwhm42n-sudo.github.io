@@ -104,7 +104,7 @@ const TEAM = {
    saves:    [ [goalkeeper, saves], ... ]
    shutout:  [ goalkeeper(s) who kept the clean sheet ]
    plays:    goal-by-goal summary, when it is known (optional)
-   standouts: not shown (recaps show stats only)
+   standouts: players the game recap singled out
    video:    link to the full-game replay (optional)
 
    Player goals, assists, saves, shutouts and game logs on the Stats

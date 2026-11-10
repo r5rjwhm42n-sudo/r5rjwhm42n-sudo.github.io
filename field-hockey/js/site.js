@@ -163,6 +163,7 @@
       if (g.saves?.length) body += `<h4>In Goal</h4><div class="perf">${g.saves.map(([name, n]) => `<div class="row"><span class="n">${esc(name)}</span><span>${plural(n, "save")}</span></div>`).join("")}</div>`;
       if (g.shutout?.length) body += `<p class="assist-line">${g.shutout.map(esc).join(" and ")} ${g.shutout.length > 1 ? "shared" : "earned"} the shutout.</p>`;
     }
+    if (g.standouts?.length) body += `<h4>Also Stood Out</h4><div class="srcs">${g.standouts.map((n) => `<span class="tag">${esc(n)}</span>`).join("")}</div>`;
     if (g.notes?.length) body += `<h4>Notes</h4><ul>${g.notes.map((n) => `<li>${esc(n)}</li>`).join("")}</ul>`;
     const srcs = [
       ...(g.video ? [{ label: "Full-game replay on Hudl", url: g.video }] : []),

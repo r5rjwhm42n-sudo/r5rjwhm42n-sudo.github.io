@@ -43,7 +43,7 @@ const MORSE = "Morse Field, Danvers";
    scorers:  [ [player, goals], ... ]    assists: [ [player, assists], ... ]
    shutout:  [ goalkeeper(s) who kept the clean sheet ]
    plays:    goal-by-goal summary, when it is known (optional)
-   standouts: not shown (recaps show stats only)
+   standouts: players the game recap singled out
    video:    link to the Hudl game recap (optional)
    replay:   link to the full-game replay (optional) — Hudl, or another school's or
              town's stream on YouTube or the NFHS Network

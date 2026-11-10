@@ -73,7 +73,7 @@ const HOME_FIELD = "Morse Field at Dr. Deering Stadium, Danvers";
    quarters: { us:[q1,q2,q3,q4], them:[...] }  (optional)
    half: [us, them] halftime score, used when quarters aren't published
    scoring: list of scoring plays (optional; q "—" = quarter not published)
-   performers: not shown (recaps show stats only)    notes: short bullet points
+   performers: top performers    notes: short bullet points
    postseason: true for an MIAA state tournament game; round names it ("Round of 16",
                "Quarterfinals", "Semifinals", "State final") and it is listed as
                "MIAA <round>" instead of NEC / Non-league

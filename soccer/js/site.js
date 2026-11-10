@@ -178,6 +178,7 @@
       }
       if (g.shutout?.length) body += `<h4>In Goal</h4><p>${g.shutout.map(esc).join(" and ")} ${g.shutout.length > 1 ? "shared" : "earned"} the shutout.</p>`;
     }
+    if (g.standouts?.length) body += `<h4>Also Stood Out</h4><div class="srcs">${g.standouts.map((n) => `<span class="tag">${esc(n)}</span>`).join("")}</div>`;
     if (g.notes?.length) body += `<h4>Notes</h4><ul>${g.notes.map((n) => `<li>${esc(n)}</li>`).join("")}</ul>`;
     const srcs = [
       ...(g.video ? [{ label: "Highlights on Hudl", url: g.video }] : []),
