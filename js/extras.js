@@ -47,8 +47,11 @@
   /* What the graphic shows for each sport */
   function model(g) {
     const m = { sport: label(), date: g.date, kind: "score", result: g.result, us: g.us, them: g.them,
-                opponent: g.opponent, matchup: matchup(g), tag: kind(g), heading: "Top performers", lines: [] };
-    if (SPORT === "football") m.lines = (g.performers || []).slice(0, 3).map((p) => [p.name, p.line]);
+                opponent: g.opponent, matchup: matchup(g), tag: kind(g), heading: "", lines: [] };
+    if (SPORT === "football") {   // stats only: the line score
+      m.heading = g.quarters ? "Line score" : "";
+      if (g.quarters) m.lines = [["Danvers", g.quarters.us.join("   ")], [g.opponent, g.quarters.them.join("   ")]];
+    }
     if (SPORT === "soccer" || SPORT === "field-hockey") {
       m.heading = "Scoring";
       if (g.scorers?.length) m.lines.push(["Goals", list(g.scorers)]);

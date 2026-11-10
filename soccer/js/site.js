@@ -58,7 +58,7 @@
   /* ---------- Player numbers, added up from the game lists in data.js ---------- */
   const tally = {};
   const line = (name) => (tally[name] ??= { g: 0, a: 0, so: 0, games: {} });
-  const mark = (name, id) => (line(name).games[id] ??= { g: 0, a: 0, so: 0, shared: false, cited: false });
+  const mark = (name, id) => (line(name).games[id] ??= { g: 0, a: 0, so: 0, shared: false });
   played.forEach((g) => {
     (g.scorers || []).forEach(([name, n]) => { line(name).g += n; mark(name, g.id).g += n; });
     (g.assists || []).forEach(([name, n]) => { line(name).a += n; mark(name, g.id).a += n; });
@@ -66,7 +66,6 @@
       line(name).so += 1 / all.length;
       Object.assign(mark(name, g.id), { so: 1, shared: all.length > 1 });
     });
-    (g.standouts || []).forEach((name) => { mark(name, g.id).cited = true; });
   });
   const PLAYERS = T.players.map((p) => {
     const t = tally[p.name] || { g: 0, a: 0, so: 0, games: {} };
@@ -75,7 +74,7 @@
   });
   const logLine = (x) => [
     x.g && plural(x.g, "goal"), x.a && plural(x.a, "assist"), x.so && (x.shared ? "Shared shutout" : "Shutout")
-  ].filter(Boolean).join(", ") || "Standout in the recap";
+  ].filter(Boolean).join(", ");
 
   /* ---------- Top bar, header, scoreboard strip, footer ---------- */
   const NAV = [["index.html", "Home", "home"], ["stats.html", "Stats", "stats"], ["schedule.html", "Schedule", "schedule"],
@@ -179,7 +178,6 @@
       }
       if (g.shutout?.length) body += `<h4>In Goal</h4><p>${g.shutout.map(esc).join(" and ")} ${g.shutout.length > 1 ? "shared" : "earned"} the shutout.</p>`;
     }
-    if (g.standouts?.length) body += `<h4>Also Stood Out</h4><div class="srcs">${g.standouts.map((n) => `<span class="tag">${esc(n)}</span>`).join("")}</div>`;
     if (g.notes?.length) body += `<h4>Notes</h4><ul>${g.notes.map((n) => `<li>${esc(n)}</li>`).join("")}</ul>`;
     const srcs = [
       ...(g.video ? [{ label: "Highlights on Hudl", url: g.video }] : []),

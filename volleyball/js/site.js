@@ -177,7 +177,6 @@
         if (t.att) body += `<p class="assist-line"><b>Team hitting:</b> ${hitPct(t)} (${plural(t.k, "kill")}, ${plural(t.e, "error")}, ${t.att} attempts)</p>`;
       }
     }
-    if (g.standouts?.length) body += `<h4>Also Stood Out</h4><div class="srcs">${g.standouts.map((n) => `<span class="tag">${esc(n)}</span>`).join("")}</div>`;
     if (g.notes?.length) body += `<h4>Notes</h4><ul>${g.notes.map((n) => `<li>${esc(n)}</li>`).join("")}</ul>`;
     const srcs = [
       ...(g.sources || []),

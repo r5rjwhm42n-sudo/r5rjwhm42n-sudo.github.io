@@ -123,9 +123,6 @@
         ? `<h4>Scoring Summary</h4><div class="plays">${g.scoring.map((s) => `<div class="row"><span class="q">${esc(s.q)}</span><span>${esc(s.play)}</span>${s.score ? `<span class="sc">${esc(s.score)}</span>` : ""}</div>`).join("")}</div>`
         : "";
     }
-    if (g.performers?.length) {
-      body += `<h4>Top Performers</h4><div class="perf">${g.performers.map((p) => `<div class="row"><span class="n">${esc(p.name)}</span><span>${esc(p.line)}</span></div>`).join("")}</div>`;
-    }
     if (g.notes?.length) body += `<h4>Notes</h4><ul>${g.notes.map((n) => `<li>${esc(n)}</li>`).join("")}</ul>`;
     const srcs = [...(g.sources || []), ...(g.cancelled ? [] : [{ label: g.result ? "Film on Hudl" : "Watch live on Hudl", url: TEAM.links.hudl }])];
     if (srcs.length) body += `<h4>Links</h4><div class="srcs">${srcs.map((s) => `<a href="${s.url}" target="_blank" rel="noopener">${esc(s.label)} ↗</a>`).join("")}</div>`;
@@ -211,7 +208,7 @@
         <button class="card scoreboard" data-game="${last.id}" aria-label="Last game details">
           <div class="sb-top"><span>Final</span><span>${last.home ? "Home" : "Away"} · ${kind(last)}</span></div>
           ${last.home ? opp + dan : dan + opp}
-          <div class="sb-foot"><span>${esc((last.performers || []).slice(0, 2).map((p) => `${p.name.split(" ").pop()}: ${p.line}`).join(" · "))}</span><b>Box score ›</b></div>
+          <div class="sb-foot"><span>${esc(last.site || "")}</span><b>Box score ›</b></div>
         </button>`;
     } else {
       $("#hero-story").innerHTML = `

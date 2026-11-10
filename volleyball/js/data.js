@@ -116,7 +116,7 @@ const TEAM = {
              "Player Name": [sets played, kills, aces, blocks, digs, assists,
                              attack attempts, attack errors, serve receptions]
              Hitting % is (kills − errors) ÷ attempts, for players and the team.
-   standouts: extra players to call out (optional)
+   standouts: not shown (recaps show stats only)
 
    Player totals, the season stat sheet and match logs on the Stats page
    are added up from the box lines, so a result is typed in once. Player names here must match
