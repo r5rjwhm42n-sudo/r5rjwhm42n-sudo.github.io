@@ -81,6 +81,9 @@
 /* a long "through Nov. 6" label beside a section heading wraps on phones instead of running off the side of the page */
 @media (max-width: 600px) { .section-head .pill { white-space: normal; max-width: 100%; } }
 
+/* a player with no stats yet: just the blue name box, not stretched to the height of the cards beside it */
+.card.player:not(:has(> .player-stats, > .player-log)) { align-self: start; }
+
 /* ---------- Team sites: the full-screen menu ---------- */
 html.fx-menu-open { overflow: hidden; }
 .fx-menu { position: fixed; inset: 0; z-index: 900; display: flex; flex-direction: column; overflow-y: auto; background: var(--royal); color: var(--white); }
