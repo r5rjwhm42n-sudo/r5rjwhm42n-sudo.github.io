@@ -1982,10 +1982,13 @@ UID:girls-soccer-107@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261109T180000
 DURATION:PT2H
-SUMMARY:Danvers Girls Soccer at Westwood
+SUMMARY:Danvers Girls Soccer at Westwood (L 0–1)
 LOCATION:Westwood High School\, Westwood
-DESCRIPTION:MIAA state tournament · Round of 32\nSchedule and results: htt
- ps://danversfalconsathletics.org/soccer/?team=girls#schedule
+DESCRIPTION:MIAA state tournament · Round of 32\nFinal: Danvers 0\, Westwo
+ od 1\nThe Falcons' season ended at Westwood\, where the 14th-seeded Wolver
+ ines won 1–0 in the MIAA Division 2 Round of 32. Danvers finishes 8–7
+ –4.\nSchedule and results: https://danversfalconsathletics.org/soccer/?t
+ eam=girls#schedule
 URL:https://danversfalconsathletics.org/soccer/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
