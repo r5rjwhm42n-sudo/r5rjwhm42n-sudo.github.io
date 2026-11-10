@@ -104,21 +104,23 @@ const TEAMS = {
         { seeds: [29, 36], score: [2, 0], date: "2026-11-07T17:30", site: "Mansfield High School, Mansfield" },
         { seeds: [25, 40], score: [8, 0], date: "2026-11-07T19:30", site: "Fred Green Field, Melrose" },
         { seeds: [16, 17], score: [0, 1], date: "2026-11-08T15:00", site: "Marblehead High School, Marblehead" },
-        { seeds: [14, 19], date: "2026-11-09T18:00", site: "Westwood High School, Westwood" },
+        { seeds: [14, 19], score: [1, 0], date: "2026-11-09T18:00", site: "Westwood High School, Westwood" },
         { seeds: [15, 18], date: "2026-11-10T18:00", site: "Wayland High School, Wayland" },
         { seeds: [13, 20], date: "2026-11-10T18:00", site: "Silver Lake Regional High School, Kingston" },
         { seeds: [11, 22], date: "2026-11-10T16:00", site: "Sharon High School, Sharon" },
         { seeds: [6, 38], score: [3, 2], date: "2026-11-08T17:30", site: "Milton High School, Milton" },
-        { seeds: [12, 21], date: "2026-11-09T18:00", site: "Newburyport High School, Newburyport" },
+        { seeds: [12, 21], score: [2, 0], date: "2026-11-09T18:00", site: "Newburyport High School, Newburyport" },
         { seeds: [10, 23], date: "2026-11-09T19:00", site: "Minnechaug Regional High School, Wilbraham" },
-        { seeds: [4, 29], date: "2026-11-09T14:00", site: "Masconomet Regional High School, Boxford" },
-        { seeds: [5, 28], date: "2026-11-09T16:30", site: "Oliver Ames High School, North Easton" },
-        { seeds: [1, 32], date: "2026-11-09T18:00", site: "Duxbury High School, Duxbury" },
-        { seeds: [2, 34], date: "2026-11-09T18:00", site: "Hingham High School, Hingham" },
-        { seeds: [3, 30], date: "2026-11-09T18:00", site: "King Philip Regional High School, Wrentham" },
-        { seeds: [8, 25], date: "2026-11-09T18:00", site: "Whitman-Hanson Regional High School, Whitman" },
+        { seeds: [4, 29], score: [5, 0], date: "2026-11-09T14:00", site: "Masconomet Regional High School, Boxford" },
+        { seeds: [5, 28], score: [1, 0], date: "2026-11-09T16:30", site: "Oliver Ames High School, North Easton" },
+        { seeds: [1, 32], score: [3, 0], date: "2026-11-09T18:00", site: "Duxbury High School, Duxbury" },
+        { seeds: [2, 34], score: [8, 0], date: "2026-11-09T18:00", site: "Hingham High School, Hingham" },
+        { seeds: [3, 30], score: [5, 0], date: "2026-11-09T18:00", site: "King Philip Regional High School, Wrentham" },
+        { seeds: [8, 25], score: [2, 1], date: "2026-11-09T18:00", site: "Whitman-Hanson Regional High School, Whitman" },
         { seeds: [7, 26], date: "2026-11-10T16:00", site: "Notre Dame Academy, Hingham" },
-        { seeds: [9, 24], date: "2026-11-10T18:00", site: "Grafton High School, Grafton" }
+        { seeds: [9, 24], date: "2026-11-10T18:00", site: "Grafton High School, Grafton" },
+        { seeds: [1, 17], date: "2026-11-11T16:30", site: "Duxbury High School, Duxbury" },
+        { seeds: [3, 14], date: "2026-11-12T18:00", site: "King Philip Regional High School, Wrentham" }
       ]
     },
     headCoach: "Jimmy Hinchion",
@@ -433,11 +435,16 @@ const TEAMS = {
         scrimmage: true, result: null, notes: ["Scrimmage after the regular season"] },
 
       { id: 107, date: "2026-11-09T18:00", opponent: "Westwood", mascot: "Wolverines", home: false, league: false,
-        postseason: true, round: "Round of 32", site: "Westwood High School, Westwood", result: null,
-        notes: ["MIAA Division 2 Round of 32: No. 19 Danvers at No. 14 Westwood", "Westwood enters 8–6–5", "The winner meets the No. 3 King Philip Regional–No. 30 Nashoba Regional winner in the Round of 16"],
+        postseason: true, round: "Round of 32", site: "Westwood High School, Westwood",
+        result: "L", us: 0, them: 1,
+        halves: null,
+        summary: "The Falcons' season ended at Westwood, where the 14th-seeded Wolverines won 1–0 in the MIAA Division 2 Round of 32. Danvers finishes 8–7–4.",
+        scorers: [], assists: [],
+        notes: ["MIAA Division 2 Round of 32: No. 19 Danvers at No. 14 Westwood", "Season over: Danvers finishes 8–7–4", "Westwood (9–6–5) plays No. 3 King Philip Regional in the Round of 16 on Thu., Nov. 12"],
+        replay: "https://www.nfhsnetwork.com/events/westwood-high-school-westwood-ma/gam873df5ea8e", replayBy: "NFHS Network",
         sources: [
-          { label: "MIAA Division 2 bracket", url: "https://www.miaa.net/miaa-girls-soccer-2026-division-2-state-tournament" },
-          { label: "Watch live on NFHS Network", url: "https://www.nfhsnetwork.com/events/westwood-high-school-westwood-ma/gam873df5ea8e" }
+          { label: "MIAA Division 2 bracket (final score)", url: "https://www.miaa.net/miaa-girls-soccer-2026-division-2-state-tournament" },
+          { label: "Game on NFHS Network", url: "https://www.nfhsnetwork.com/events/westwood-high-school-westwood-ma/gam873df5ea8e" }
         ] }
     ],
 
