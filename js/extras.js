@@ -15,7 +15,7 @@
   const fmt = (iso, o) => new Date(iso).toLocaleString("en-US", o);
   const squad = () => document.body.dataset.team || (typeof DEFAULT_TEAM !== "undefined" ? DEFAULT_TEAM : "girls");
   const LABELS = { football: "Football", "field-hockey": "Field Hockey", volleyball: "Volleyball", golf: "Golf", "cross-country": "Cross Country", esports: "Esports" };
-  const label = () => (SPORT === "soccer" ? `${squad() === "boys" ? "Boys" : "Girls"} Soccer` : LABELS[SPORT] || "");
+  const label = () => (SPORT === "soccer" ? `${squad() === "boys" ? "Boys" : "Girls"} Soccer` : LABELS[SPORT] || document.body.dataset.sportLabel || "");
 
   /* ---------- this sport's games ---------- */
   function games() {

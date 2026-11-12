@@ -151,14 +151,17 @@
   /* ---------- Team sites: one round Menu button and a full-screen menu ---------- */
   const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const here = location.href.startsWith(ROOT) ? location.href.slice(ROOT.length).split(/[?#]/)[0] : "";
-  const SPORT = TEAMS.find(([dir]) => here.split("/")[0] === dir);
+  /* team sites built but not opened yet: they work like the others (Menu, sections) but aren't listed in any
+     footer or menu. To open one, move its entry up into TEAMS and add it to the homepage. */
+  const NOT_OPEN_YET = [["basketball", "Basketball"], ["hockey", "Hockey"], ["wrestling", "Wrestling"]];
+  const SPORT = [...TEAMS, ...NOT_OPEN_YET].find(([dir]) => here.split("/")[0] === dir);
   /* the sport's own pages, in this order, with the names visitors know them by */
-  const PAGE_ORDER = ["index.html", "schedule.html", "stats.html", "runners.html", "history.html", "media.html"];
+  const PAGE_ORDER = ["index.html", "schedule.html", "stats.html", "runners.html", "seasons.html", "history.html", "media.html"];
   const FILM = ["football", "soccer", "field-hockey", "volleyball"];   // their media pages are game film and highlights
   const pageName = (file, label, dir) =>
     file === "stats.html" && label === "Stats" ? "Roster & stats" : file === "media.html" ? (FILM.includes(dir) ? "Highlights" : "Media") : label;
   /* each team site is one long page; the old pages are its sections */
-  const SECTION_OF = { "index.html": "top", "schedule.html": "schedule", "stats.html": "stats", "runners.html": "runners", "history.html": "history", "media.html": "media" };
+  const SECTION_OF = { "index.html": "top", "schedule.html": "schedule", "stats.html": "stats", "runners.html": "runners", "seasons.html": "seasons", "history.html": "history", "media.html": "media" };
 
   function sportMenu() {
     const bar = document.querySelector(".site-header .hbar");

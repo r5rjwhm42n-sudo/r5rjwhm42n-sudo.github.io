@@ -1,0 +1,58 @@
+/* =====================================================================
+   Extra pieces for the winter team sites (basketball, hockey, wrestling),
+   loaded after each site's css/styles.css. Same colors, fonts and
+   variables as the fall sites; this only styles what's new here.
+   ===================================================================== */
+
+/* home: the season opener on the scoreboard card */
+.scoreboard.spot-board { box-shadow: 0 0 0 2px var(--white), 0 16px 40px rgba(5, 14, 40, .45); }
+.sb-row .rec { font-family: var(--display); font-weight: 800; font-size: 30px; line-height: 1; color: var(--muted); font-variant-numeric: tabular-nums; }
+.spot-board .sb-row .nm { color: var(--ink); }
+
+/* a tile whose value is a few words, not a number */
+.tile .v .words { display: block; font-size: 26px; line-height: 1.08; padding: 6px 0 4px; white-space: normal; text-transform: uppercase; }
+.tile .v.long:has(.words) { white-space: normal; padding: 0; }
+
+/* team: coaching staff and the program write-up */
+.staffer { padding: 16px 18px 18px; border-top: 4px solid var(--royal); }
+.staffer .k { font-family: var(--display); font-weight: 700; font-size: 15px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.staffer h3 { font-size: 30px; line-height: 1.02; margin-top: 4px; }
+.staffer p { margin: 8px 0 0; font-size: 14px; color: var(--muted); }
+.prose { padding: 22px 26px; }
+.prose p { margin: 0 0 12px; max-width: 78ch; }
+.prose p:last-child { margin-bottom: 0; }
+
+/* past seasons: a row of season tabs, that season's honors, and its games */
+.season-tabs { margin-bottom: 18px; }
+.chip[aria-selected="true"] { background: var(--royal); border-color: var(--royal); color: var(--white); }
+.season-honors { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 0 28px; margin: 18px 0 0; padding: 6px 22px; }
+.season-honors[hidden] { display: none; }
+.season-honors div { padding: 12px 0; }
+.season-honors dt { font-family: var(--display); font-weight: 700; font-size: 15px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.season-honors dd { margin: 2px 0 0; font-weight: 600; }
+.game.past { grid-template-columns: 70px 1fr auto; cursor: default; }
+.season-photo { margin: 22px 0 0; border-radius: var(--r); overflow: hidden; box-shadow: var(--shadow); background: var(--white); }
+.season-photo[hidden] { display: none; }
+.season-photo img { width: 100%; height: auto; }
+.season-photo figcaption { padding: 10px 16px 12px; font-size: 14px; color: var(--muted); }
+
+/* history: record-book cards with long numbers (1,024) and season labels (2025–26) */
+.book li { grid-template-columns: minmax(52px, auto) 1fr; }
+.records .yr { white-space: nowrap; }
+
+/* history: individual state champions */
+.champions td:first-child { width: 90px; }
+
+/* media: link and news cards (same card the golf and cross country sites use) */
+.news { display: flex; flex-direction: column; padding: 20px 22px 22px; text-decoration: none; color: inherit; border-top: 4px solid var(--royal); }
+.news .when { font-family: var(--display); font-weight: 700; font-size: 15px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.news h3 { font-size: 25px; line-height: 1.05; margin: 8px 0 10px; }
+.news p { margin: 0 0 14px; font-size: 15px; color: var(--muted); flex: 1; }
+.news .go { font-size: 14px; font-weight: 700; color: var(--royal); }
+
+@media (max-width: 720px) {
+  .game.past { grid-template-columns: 60px 1fr; }
+  .staffer h3 { font-size: 26px; }
+  .prose { padding: 18px 18px; }
+  .tile .v .words { font-size: 21px; }
+}
