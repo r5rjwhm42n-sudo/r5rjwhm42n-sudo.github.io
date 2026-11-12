@@ -358,9 +358,10 @@ const SCHEDULE = [
     ] },
   { id: 11, date: "2026-11-13T18:30", opponent: "Tantasqua", mascot: "Warriors",
     home: true, league: false, postseason: true, round: "Quarterfinals", site: HOME_FIELD, result: null,
-    notes: ["No. 3 Danvers hosts No. 6 Tantasqua Regional in the MIAA Division 4 quarterfinals", "Tantasqua (7–2) beat No. 11 Wayland 27–21 in the Round of 16", "The winner meets No. 2 Tewksbury or No. 7 Shepherd Hill in the semifinals", "Danvers comes in No. 19 in the Boston Globe Top 20 (Nov. 9)"],
+    notes: ["No. 3 Danvers hosts No. 6 Tantasqua Regional in the MIAA Division 4 quarterfinals", "Tantasqua (7–2) beat No. 11 Wayland 27–21 in the Round of 16", "The winner meets No. 2 Tewksbury or No. 7 Shepherd Hill in the semifinals", "Danvers comes in No. 19 in the Boston Globe Top 20 (Nov. 9)", "Tantasqua averages 34.0 points a game; Danvers scores 28.9 and allows 8.5"],
     sources: [
       { label: "Globe Top 20, Nov. 9", url: "https://www.bostonglobe.com/2026/11/09/sports/eastern-mass-football-globe-top-20/" },
+      { label: "MaxPreps game preview", url: "https://www.maxpreps.com/news/6xgxQ_iE6Eyo_8DAU7WYRw/football-preview-tantasqua-regional-and-danvers-both-bring-winning-streaks-into-this-one--official-tickets.htm" },
       { label: "MIAA Division 4 bracket", url: "https://www.miaa.net/miaa-football-2026-division-4-state-tournament" },
       { label: "MaxPreps game page", url: "https://www.maxpreps.com/ma/football/game/danvers-vs-tantasqua-regional-fiskdale/11-13-2026/?c=40762c35-8a74-435e-ad4e-2d92f6fca15e" }
     ] },
