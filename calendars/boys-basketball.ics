@@ -1,0 +1,227 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Danvers Falcons Team Sites//Schedules//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Danvers Boys Basketball
+X-WR-CALDESC:Danvers Boys Basketball schedule and results from danversfalco
+ nsathletics.org
+X-WR-TIMEZONE:America/New_York
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:boys-basketball-1@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261211T170000
+DURATION:PT1H45M
+SUMMARY:Danvers Boys Basketball at Marblehead
+LOCATION:Marblehead High School\, Marblehead
+DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
+ cs.org/basketball/?team=boys#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-basketball-2@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261216T183000
+DURATION:PT1H45M
+SUMMARY:Danvers Boys Basketball at Essex Tech
+LOCATION:Essex Tech\, Hathorne
+DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
+ cs.org/basketball/?team=boys#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-basketball-3@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261218T190000
+DURATION:PT1H45M
+SUMMARY:Danvers Boys Basketball at Winthrop
+LOCATION:Winthrop High School\, Winthrop
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/basketball/?team=boys#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-basketball-4@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261228T163000
+DURATION:PT1H45M
+SUMMARY:Danvers Boys Basketball vs Excel Academy
+LOCATION:Danvers High School Field House\, Danvers
+DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
+ cs.org/basketball/?team=boys#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-basketball-5@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270104T190000
+DURATION:PT1H45M
+SUMMARY:Danvers Boys Basketball at Masconomet
+LOCATION:Masconomet Regional High School\, Boxford
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/basketball/?team=boys#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-basketball-6@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270107T190000
+DURATION:PT1H45M
+SUMMARY:Danvers Boys Basketball vs Marblehead
+LOCATION:Danvers High School Field House\, Danvers
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/basketball/?team=boys#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-basketball-7@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270110T130000
+DURATION:PT1H45M
+SUMMARY:Danvers Boys Basketball vs Peabody
+LOCATION:Danvers High School Field House\, Danvers
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/basketball/?team=boys#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-basketball-8@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270112T190000
+DURATION:PT1H45M
+SUMMARY:Danvers Boys Basketball vs Salem
+LOCATION:Danvers High School Field House\, Danvers
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/basketball/?team=boys#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-basketball-9@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270115T190000
+DURATION:PT1H45M
+SUMMARY:Danvers Boys Basketball at Beverly
+LOCATION:Beverly High School\, Beverly
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/basketball/?team=boys#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-basketball-10@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270119T190000
+DURATION:PT1H45M
+SUMMARY:Danvers Boys Basketball at Peabody
+LOCATION:Peabody Veterans Memorial High School\, Peabody
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/basketball/?team=boys#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-basketball-11@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270122T190000
+DURATION:PT1H45M
+SUMMARY:Danvers Boys Basketball at Gloucester
+LOCATION:Gloucester High School\, Gloucester
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/basketball/?team=boys#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-basketball-12@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270129T190000
+DURATION:PT1H45M
+SUMMARY:Danvers Boys Basketball vs Masconomet
+LOCATION:Danvers High School Field House\, Danvers
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/basketball/?team=boys#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-basketball-13@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270202T190000
+DURATION:PT1H45M
+SUMMARY:Danvers Boys Basketball vs Saugus
+LOCATION:Danvers High School Field House\, Danvers
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/basketball/?team=boys#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-basketball-14@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270204T190000
+DURATION:PT1H45M
+SUMMARY:Danvers Boys Basketball vs Bishop Fenwick
+LOCATION:Danvers High School Field House\, Danvers
+DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
+ cs.org/basketball/?team=boys#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-basketball-15@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270205T190000
+DURATION:PT1H45M
+SUMMARY:Danvers Boys Basketball at Marblehead
+LOCATION:Marblehead High School\, Marblehead
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/basketball/?team=boys#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-basketball-16@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270208T190000
+DURATION:PT1H45M
+SUMMARY:Danvers Boys Basketball vs Beverly
+LOCATION:Danvers High School Field House\, Danvers
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/basketball/?team=boys#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-basketball-17@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270211T190000
+DURATION:PT1H45M
+SUMMARY:Danvers Boys Basketball at Swampscott
+LOCATION:Swampscott High School\, Swampscott
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/basketball/?team=boys#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-basketball-18@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270216T190000
+DURATION:PT1H45M
+SUMMARY:Danvers Boys Basketball vs Wakefield
+LOCATION:Danvers High School Field House\, Danvers
+DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
+ cs.org/basketball/?team=boys#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
+END:VEVENT
+END:VCALENDAR

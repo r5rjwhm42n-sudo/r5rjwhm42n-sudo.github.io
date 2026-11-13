@@ -1,0 +1,249 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Danvers Falcons Team Sites//Schedules//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Danvers Girls Hockey
+X-WR-CALDESC:Danvers Girls Hockey schedule and results from danversfalconsa
+ thletics.org
+X-WR-TIMEZONE:America/New_York
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:girls-hockey-1@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261211T180000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Hockey vs Gloucester
+LOCATION:Raymond J. Bourque Arena\, Endicott College\, Beverly
+DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
+ alconsathletics.org/hockey/?team=girls#schedule
+URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-hockey-2@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261216T190000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Hockey at St. Mary's
+LOCATION:Connery Memorial Rink\, Lynn
+DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
+ alconsathletics.org/hockey/?team=girls#schedule
+URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-hockey-3@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261219T160000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Hockey at Peabody/Lynnfield/North Reading
+LOCATION:McVann-O'Keefe Rink\, Peabody
+DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
+ alconsathletics.org/hockey/?team=girls#schedule
+URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-hockey-4@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261223T160000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Hockey at Grafton
+LOCATION:Buffone Arena\, Worcester
+DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
+ alconsathletics.org/hockey/?team=girls#schedule
+URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-hockey-5@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261226T164000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Hockey at Masconomet
+LOCATION:Valley Forum\, Haverhill
+DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
+ alconsathletics.org/hockey/?team=girls#schedule
+URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-hockey-6@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261230T140000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Hockey vs Woburn
+LOCATION:Raymond J. Bourque Arena\, Endicott College\, Beverly
+DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
+ alconsathletics.org/hockey/?team=girls#schedule
+URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-hockey-7@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270102T140000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Hockey vs Wakefield
+LOCATION:Raymond J. Bourque Arena\, Endicott College\, Beverly
+DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
+ alconsathletics.org/hockey/?team=girls#schedule
+URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-hockey-8@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270106T160000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Hockey at Gloucester
+LOCATION:Dorothy Talbot Rink\, Gloucester
+DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
+ alconsathletics.org/hockey/?team=girls#schedule
+URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-hockey-9@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270109T180000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Hockey at Brookline
+LOCATION:Walter Brown Arena\, Boston
+DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
+ alconsathletics.org/hockey/?team=girls#schedule
+URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-hockey-10@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270111T193000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Hockey vs Melrose
+LOCATION:Raymond J. Bourque Arena\, Endicott College\, Beverly
+DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
+ alconsathletics.org/hockey/?team=girls#schedule
+URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-hockey-11@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270113T163000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Hockey vs Medford/Malden
+LOCATION:Raymond J. Bourque Arena\, Endicott College\, Beverly
+DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
+ alconsathletics.org/hockey/?team=girls#schedule
+URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-hockey-12@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270116T180000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Hockey vs Winthrop
+LOCATION:Raymond J. Bourque Arena\, Endicott College\, Beverly
+DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
+ alconsathletics.org/hockey/?team=girls#schedule
+URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-hockey-13@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270120T173000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Hockey vs Masconomet
+LOCATION:Raymond J. Bourque Arena\, Endicott College\, Beverly
+DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
+ alconsathletics.org/hockey/?team=girls#schedule
+URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-hockey-14@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270123T121000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Hockey at Bishop Fenwick
+LOCATION:Essex Sports Center\, Middleton
+DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
+ alconsathletics.org/hockey/?team=girls#schedule
+URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-hockey-15@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270127T190000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Hockey at Medford/Malden
+LOCATION:LoConte Rink\, Medford
+DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
+ alconsathletics.org/hockey/?team=girls#schedule
+URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-hockey-16@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270203T193000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Hockey at Marblehead
+LOCATION:O'Keefe Center\, Salem State University\, Salem
+DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
+ alconsathletics.org/hockey/?team=girls#schedule
+URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-hockey-17@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270206T130000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Hockey at Winthrop
+LOCATION:Larsen Rink\, Winthrop
+DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
+ alconsathletics.org/hockey/?team=girls#schedule
+URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-hockey-18@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270210T193000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Hockey vs Newburyport
+LOCATION:Raymond J. Bourque Arena\, Endicott College\, Beverly
+DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
+ alconsathletics.org/hockey/?team=girls#schedule
+URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-hockey-19@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270213T180000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Hockey vs Peabody/Lynnfield/North Reading
+LOCATION:Raymond J. Bourque Arena\, Endicott College\, Beverly
+DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
+ alconsathletics.org/hockey/?team=girls#schedule
+URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-hockey-20@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;VALUE=DATE:20270217
+DTEND;VALUE=DATE:20270218
+SUMMARY:Danvers Girls Hockey at Andover
+LOCATION:Breakaway Ice Center\, Tewksbury
+DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
+ alconsathletics.org/hockey/?team=girls#schedule
+URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
+END:VEVENT
+END:VCALENDAR

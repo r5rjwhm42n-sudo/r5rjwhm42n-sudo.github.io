@@ -118,7 +118,16 @@ const TEAMS = {
     players: [],
     pastIntro: "The last three winters: each season's record, coach, captains and honors.",
     past: [
-      { season: "2025–26", record: "3–23", coach: "Tom Savage", finish: "9th", allStars: "Logan Jacques", games: [], gamesNote: "Meet-by-meet results for this season aren't on file. The season record is from the school's record book." },
+      {
+        season: "2025–26",
+        record: "3–23",
+        coach: "Tom Savage",
+        finish: "9th",
+        allStars: "Logan Jacques",
+        games: [],
+        gamesNote: "Meet-by-meet results for this season aren't on file. The season record is from the school's record book.",
+        photo: { src: "../images/teams/wrestling.jpg", caption: "The 2025–26 Danvers wrestling team. Photo from the Danvers High School athletics page." }
+      },
       { season: "2024–25", record: "1–13–2", coach: "Jake Almon", finish: "10th", allLeague: "Logan Jacques, JJ Rand", games: [], gamesNote: "Meet-by-meet results for this season aren't on file. The season record is from the school's record book." },
       {
         season: "2023–24",

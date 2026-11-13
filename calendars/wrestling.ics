@@ -1,0 +1,128 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Danvers Falcons Team Sites//Schedules//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Danvers Wrestling
+X-WR-CALDESC:Danvers Wrestling schedule and results from danversfalconsathl
+ etics.org
+X-WR-TIMEZONE:America/New_York
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:wrestling-1@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261205T090000
+DURATION:PT2H30M
+SUMMARY:Danvers Wrestling at North Shore Practice Meet (scrimmage)
+LOCATION:Marblehead High School\, Marblehead
+DESCRIPTION:Scrimmage\nSchedule and results: https://danversfalconsathletic
+ s.org/wrestling/#schedule
+URL:https://danversfalconsathletics.org/wrestling/#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:wrestling-2@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261216T173000
+DURATION:PT2H30M
+SUMMARY:Danvers Wrestling at Saugus
+LOCATION:Saugus High School\, Saugus
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/wrestling/#schedule
+URL:https://danversfalconsathletics.org/wrestling/#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:wrestling-3@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261219T090000
+DURATION:PT2H30M
+SUMMARY:Danvers Wrestling vs Triton
+LOCATION:Danvers High School\, Danvers
+DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
+ cs.org/wrestling/#schedule
+URL:https://danversfalconsathletics.org/wrestling/#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:wrestling-4@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;VALUE=DATE:20261219
+DTEND;VALUE=DATE:20261220
+SUMMARY:Danvers Wrestling vs Essex Tech
+LOCATION:Danvers High School\, Danvers
+DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
+ cs.org/wrestling/#schedule
+URL:https://danversfalconsathletics.org/wrestling/#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:wrestling-5@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;VALUE=DATE:20261219
+DTEND;VALUE=DATE:20261220
+SUMMARY:Danvers Wrestling vs East Boston
+LOCATION:Danvers High School\, Danvers
+DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
+ cs.org/wrestling/#schedule
+URL:https://danversfalconsathletics.org/wrestling/#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:wrestling-6@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270106T173000
+DURATION:PT2H30M
+SUMMARY:Danvers Wrestling vs Salem
+LOCATION:Danvers High School\, Danvers
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/wrestling/#schedule
+URL:https://danversfalconsathletics.org/wrestling/#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:wrestling-7@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270113T190000
+DURATION:PT2H30M
+SUMMARY:Danvers Wrestling at Gloucester
+LOCATION:Gloucester High School\, Gloucester
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/wrestling/#schedule
+URL:https://danversfalconsathletics.org/wrestling/#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:wrestling-8@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270127T193000
+DURATION:PT2H30M
+SUMMARY:Danvers Wrestling at Beverly
+LOCATION:Beverly High School\, Beverly
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/wrestling/#schedule
+URL:https://danversfalconsathletics.org/wrestling/#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:wrestling-9@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270202T173000
+DURATION:PT2H30M
+SUMMARY:Danvers Wrestling vs Pentucket
+LOCATION:Danvers High School\, Danvers
+DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
+ cs.org/wrestling/#schedule
+URL:https://danversfalconsathletics.org/wrestling/#schedule
+END:VEVENT
+END:VCALENDAR

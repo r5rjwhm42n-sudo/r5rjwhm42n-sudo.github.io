@@ -14,8 +14,9 @@
   const ord = (n) => n + (["th", "st", "nd", "rd"][(n % 100 - 20) % 10] || ["th", "st", "nd", "rd"][n % 100] || "th");
 
   const SPORTS = [["football", "Football"], ["soccer", "Soccer"], ["field-hockey", "Field Hockey"], ["volleyball", "Volleyball"],
-                  ["cross-country", "Cross Country"], ["golf", "Golf"], ["esports", "Esports"]];
-  const NAMES = ["TEAM", "TEAMS", "SCHEDULE", "MEETS", "GAMES", "PLAYERS", "RUNNERS"];
+                  ["cross-country", "Cross Country"], ["golf", "Golf"], ["esports", "Esports"],
+                  ["basketball", "Basketball"], ["hockey", "Hockey"], ["wrestling", "Wrestling"]];
+  const NAMES = ["TEAM", "TEAMS", "SCHEDULE", "MEETS", "GAMES", "PLAYERS", "RUNNERS", "SPORT"];
 
   /* Sport icons, the same drawings as the hub's (added to the page when it doesn't have them) */
   const SPRITE = `<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -26,6 +27,9 @@
     <symbol id="i-cross-country" viewBox="0 0 64 64"><circle cx="32" cy="36" r="22"/><path d="M26 6h12M32 6v8M48 18l4-4M32 36l9-9"/><circle cx="32" cy="36" r="2.5" fill="currentColor"/></symbol>
     <symbol id="i-golf" viewBox="0 0 64 64"><path d="M26 54V7"/><path d="M26 8l22 8-22 8z" fill="currentColor"/><ellipse cx="26" cy="54" rx="18" ry="4.5"/><circle cx="47" cy="47" r="3.5" fill="currentColor"/></symbol>
     <symbol id="i-esports" viewBox="0 0 64 64"><path d="M20 20h24c7 0 11 5 12.5 13l2.2 12.5c1 6-5.5 9.5-9.5 5.2L42 43H22l-7.2 7.7c-4 4.3-10.5.8-9.5-5.2L7.5 33C9 25 13 20 20 20z"/><path d="M19 28v10M14 33h10"/><circle cx="43" cy="30" r="2.4" fill="currentColor"/><circle cx="49" cy="36" r="2.4" fill="currentColor"/></symbol>
+    <symbol id="i-basketball" viewBox="0 0 64 64"><circle cx="32" cy="32" r="26"/><path d="M6 32h52M32 6v52M13.6 13.6c8.6 8.6 8.6 28.2 0 36.8M50.4 13.6c-8.6 8.6-8.6 28.2 0 36.8"/></symbol>
+    <symbol id="i-hockey" viewBox="0 0 64 64"><path d="M46 5L28 42c-1.6 3.4-5 5.5-8.8 5.5H7v7h13.5"/><ellipse cx="47" cy="51" rx="10" ry="4.5" fill="currentColor"/></symbol>
+    <symbol id="i-wrestling" viewBox="0 0 64 64"><rect x="6" y="6" width="52" height="52" rx="5"/><circle cx="32" cy="32" r="18"/><circle cx="32" cy="32" r="5" fill="currentColor"/></symbol>
     <symbol id="i-page" viewBox="0 0 64 64"><path d="M16 6h22l12 12v40H16z"/><path d="M38 6v12h12M24 32h18M24 41h18M24 50h10"/></symbol>
   </defs></svg>`;
   const ICON_SEARCH = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg>';
@@ -55,9 +59,23 @@
       const d = all[i];
       if (!d) return;
       const site = `${ROOT}${sport}/`;
+      /* the winter sites (basketball, hockey, wrestling) keep their data alike: SPORT, and TEAMS with one or two teams */
+      const winter = d.SPORT && d.TEAMS ? Object.keys(d.TEAMS).map((k, _, keys) => [k, d.TEAMS[k], keys.length > 1 ? `?team=${k}` : ""]) : null;
+      if (winter) winter.forEach(([k, T, q]) => {
+        const games = T.schedule.filter((g) => !g.scrimmage);
+        const rec = record(games, d.SPORT.ties !== false);
+        add({ type: "team", sport, title: T.label, sub: [rec && `${rec} this winter`, "Team site"].filter(Boolean).join(" · "), right: "Team", href: `${site}${q}`,
+              keys: `${sport} falcons team home ${k} ${T.teamName || ""}` });
+        [["schedule", "Schedule & results"], ["stats", "Team & roster"], ["seasons", "Past seasons"], ["history", "History & record book"], ["media", "Media"]]
+          .forEach(([p, what]) => add({ type: "page", sport, title: `${T.label} ${what}`, right: "Page", href: `${site}${q}#${p}`, keys: `${p} roster scores coaches records` }));
+        (T.players || []).forEach((p) => add({ type: "athlete", sport, title: p.name, href: `${site}${q}#p=${encodeURIComponent(p.name)}`,
+          sub: [T.label, p.pos?.join("/"), p.grade, p.num != null && `#${p.num}`].filter(Boolean).join(" · "), right: p.captain ? "Captain" : "", keys: "player athlete" }));
+        (T.legends || []).forEach((p) => add({ type: "athlete", sport, title: p.name, href: `${site}${q}#history`,
+          sub: [T.label, p.role].filter(Boolean).join(" · "), right: "Falcon great", keys: "history record book legend great" }));
+      });
 
       /* the team site and its pages */
-      const squads = sport === "soccer" ? [["girls", "Girls Soccer"], ["boys", "Boys Soccer"]] : [[null, label]];
+      const squads = winter ? [] : sport === "soccer" ? [["girls", "Girls Soccer"], ["boys", "Boys Soccer"]] : [[null, label]];
       squads.forEach(([k, name]) => {
         const q = k ? `?team=${k}` : "";
         const games = sport === "soccer" ? d.TEAMS[k].schedule.filter((g) => !g.scrimmage) : (d.SCHEDULE || []).filter((g) => !g.scrimmage);
@@ -70,7 +88,7 @@
       });
 
       /* athletes */
-      if (sport === "soccer") {
+      if (winter) { /* added above */ } else if (sport === "soccer") {
         ["girls", "boys"].forEach((k) => {
           const T = d.TEAMS[k], goals = tally(T.schedule, "scorers"), assists = tally(T.schedule, "assists");
           T.players.forEach((p) => add({ type: "athlete", sport, title: p.name, href: `${site}?team=${k}#p=${encodeURIComponent(p.name)}`,
@@ -115,7 +133,8 @@
               href: `${site}${q}#g=${g.id}`,
               keys: `${g.opponent || ""} ${g.mascot || ""} ${g.postseason || g.tournament ? "playoff tournament postseason" : ""} ${g.date ? fmt(g.date, { month: "long" }) : ""} game match` });
       });
-      if (sport === "soccer") ["girls", "boys"].forEach((k) => gameRows(d.TEAMS[k].schedule.filter((g) => !g.scrimmage), d.TEAMS[k].short ? `${d.TEAMS[k].short} Soccer` : d.TEAMS[k].label, `?team=${k}`));
+      if (winter) winter.forEach(([, T, q]) => gameRows(T.schedule.filter((g) => !g.scrimmage).map((g) => ({ ...g, tournament: false })), T.label, q));
+      else if (sport === "soccer") ["girls", "boys"].forEach((k) => gameRows(d.TEAMS[k].schedule.filter((g) => !g.scrimmage), d.TEAMS[k].short ? `${d.TEAMS[k].short} Soccer` : d.TEAMS[k].label, `?team=${k}`));
       else if (sport === "cross-country") gameRows(d.MEETS || [], "Cross Country", "");
       else if (sport === "esports") {
         const title = Object.fromEntries((d.GAMES || []).map((x) => [x.id, x.short]));

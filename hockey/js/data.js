@@ -110,6 +110,7 @@ const TEAMS = {
         post: "Won at Westfield 4–1, then lost in the Round of 16 at Shawsheen Tech, 4–0",
         captains: "Drew Godfried and Thomas Fish",
         allLeague: "Drew Godfried and Cooper Dunham",
+        photo: { src: "../images/teams/boys-hockey.jpg", caption: "The 2025–26 Danvers boys hockey team. Photo from the Danvers High School athletics page." },
         allStars: "Owen Swanton, Evan Morey",
         awards: "Thomas Fish, MIAA Bruins Sportsmanship Award",
         games: [
@@ -441,6 +442,7 @@ const TEAMS = {
         post: "Lost in the Round of 32 to Malden Catholic",
         awards: "Ashley Freitas, NEHL All-Star and MIAA Bruins Sportsmanship Award",
         games: [],
+        photo: { src: "../images/teams/girls-hockey.jpg", caption: "Members of the 2025–26 Beverly/Danvers/Ipswich girls hockey team. Photo from the Danvers High School athletics page." },
         gamesNote: "Game-by-game results for the co-op team aren't on file yet."
       }
     ],

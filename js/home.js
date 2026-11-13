@@ -17,7 +17,11 @@
   const ord = (n) => n + (["th", "st", "nd", "rd"][(n % 100 - 20) % 10] || ["th", "st", "nd", "rd"][n % 100] || "th");
 
   /* ---------- Load each team's data.js in its own scope ---------- */
-  const NAMES = ["TEAM", "TEAMS", "SCHEDULE", "MEETS", "GAMES", "TITLES", "NEC_TITLES", "HISTORY_TILE", "PHOTOS"];
+  const NAMES = ["TEAM", "TEAMS", "SCHEDULE", "MEETS", "GAMES", "TITLES", "NEC_TITLES", "HISTORY_TILE", "PHOTOS", "SPORT"];
+  /* the front page (index.html) shows the season being played; a season that's over keeps its own page (fall.html).
+     Each page says which it is with <body data-season>. */
+  const SEASON = document.body.dataset.season || "fall";
+  const BY_SEASON = { fall: ["football", "soccer", "field-hockey", "volleyball", "golf", "cross-country", "esports"], winter: ["basketball", "hockey", "wrestling"] };
   const load = (folder) =>
     fetch(`${folder}/js/data.js`)
       .then((r) => (r.ok ? r.text() : Promise.reject(r.status)))
@@ -123,7 +127,24 @@
     }
   };
 
-  const FOLDERS = Object.keys(ADAPT);
+  /* the winter sites (basketball, hockey, wrestling) all keep their data the same way: SPORT and TEAMS */
+  const winter = (folder) => (d) => {
+    const keys = Object.keys(d.TEAMS);
+    const teams = keys.map((k) => {
+      const T = d.TEAMS[k], q = keys.length > 1 ? `?team=${k}` : "";
+      const ev = T.schedule.filter((g) => !g.scrimmage).map((g) => ({ ...gameEvent(folder, T.label, `${folder}/${q}#schedule`, g),
+        title: g.name || `${g.neutral ? "vs" : vs(g)} ${g.opponent}`, tournament: !!g.name }));
+      return { key: k, label: keys.length > 1 ? T.short.replace(/\s*\(.*\)$/, "") : null, events: ev, record: record(ev.filter((e) => e.result), d.SPORT.ties !== false),
+        last: T.past?.[0] ? `${T.past[0].record} in ${T.past[0].season}` : null,
+        tile: T.historyTile, titleLabel: T.label, href: `${folder}/${q}#history`, necTitles: T.necTitles, photos: (T.photos || []).map((p) => ({ ...p, team: T.label })) };
+    });
+    return { teams, rank: null, photos: teams.flatMap((t) => t.photos),
+      titles: teams.map((t) => ({ name: t.titleLabel, href: t.href, years: t.necTitles || [] })),
+      tiles: teams.filter((t) => t.tile).map((t) => [t.titleLabel, ...t.tile]) };
+  };
+  BY_SEASON.winter.forEach((f) => { ADAPT[f] = winter(f); });
+
+  const FOLDERS = BY_SEASON[SEASON] || BY_SEASON.fall;
   const upcomingOf = (ev) => ev.filter((e) => !e.final && !e.off && !e.dateTbd && new Date(e.date).getTime() > NOW - 3 * HOUR)
     .sort((a, b) => new Date(a.date) - new Date(b.date));
   const finalsOf = (ev) => ev.filter((e) => e.final).sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -140,7 +161,7 @@
       try {
         S[f] = ADAPT[f](all[i]);
         /* soccer keeps a photo list per team */
-        S[f].photos = all[i].PHOTOS || (all[i].TEAMS ? ["girls", "boys"].flatMap((k) => (all[i].TEAMS[k].photos || []).map((p) => ({ ...p, team: all[i].TEAMS[k].label }))) : []);
+        S[f].photos = S[f].photos || all[i].PHOTOS || (all[i].TEAMS ? ["girls", "boys"].flatMap((k) => (all[i].TEAMS[k].photos || []).map((p) => ({ ...p, team: all[i].TEAMS[k].label }))) : []);
       } catch (e) { console.warn(`Hub: could not read ${f} data`, e); }
     });
     if (!Object.keys(S).length) return;
@@ -340,7 +361,7 @@
     const week = upcoming.filter((e) => new Date(e.date).getTime() < NOW + 7 * 24 * HOUR).length;
     const stat = (v, k, d) => `<div class="hs"><div class="hs-v" data-count="${v}">${v}</div><div class="hs-k">${k}</div><div class="hs-d">${d}</div></div>`;
     $("#hero-stats").innerHTML =
-      stat(w, "Wins this fall", "Games, matches and meets won") +
+      stat(w, `Wins this ${SEASON}`, "Games, matches and meets won") +
       stat(week, week === 1 ? "Game this week" : "Games this week", "Meets and matches included") +
       stat(titles, "Conference titles", "All-time, across the programs");
     countUp($$("#hero-stats [data-count]"));
@@ -374,7 +395,10 @@
         : `<b class="${resClass(last.result)}">${esc(resText(last))}</b>`);
       const sport = (e) => (s.teams.length > 1 && !s.meets ? `${e.team.split(" ")[0]} · ` : "");
       card.querySelector(".tc-live").innerHTML = `
-        ${recs ? `<div class="tc-recs">${recs}<span class="tc-recs-k">${s.teams.length > 1 ? "Records" : "Record"}</span></div>` : `<div class="tc-recs"><span class="tc-recs-k">Season under way</span></div>`}
+        ${recs ? `<div class="tc-recs">${recs}<span class="tc-recs-k">${s.teams.length > 1 ? "Records" : "Record"}</span></div>`
+          : !last && next ? `<div class="tc-recs"><span class="tc-recs-k">Opens ${dayShort(next.date)}</span></div>${
+              s.teams.some((t) => t.last) ? `<div class="tc-rank">Last season: ${s.teams.filter((t) => t.last).map((t) => esc(`${t.label ? `${t.label} ` : ""}${t.last.split(" in ")[0]}`)).join(" · ")}</div>` : ""}`
+          : `<div class="tc-recs"><span class="tc-recs-k">Season under way</span></div>`}
         ${rank ? `<div class="tc-rank">${esc(rank)}</div>` : ""}
         <dl class="tc-games">
           ${last ? `<div><dt>Last</dt><dd>${sport(last)}${esc(last.title)} · ${lastRes}</dd></div>` : ""}
@@ -450,7 +474,7 @@
       </a>`;
     }).join("");
     /* one fact per program first, then any extras */
-    const lists = ["field-hockey", "cross-country", "soccer", "volleyball"].map((k) => [...(S[k]?.tiles || [])]);
+    const lists = (SEASON === "fall" ? ["field-hockey", "cross-country", "soccer", "volleyball"] : FOLDERS).map((k) => [...(S[k]?.tiles || [])]);
     const tiles = [];
     while (tiles.length < 4 && lists.some((l) => l.length)) lists.forEach((l) => l.length && tiles.length < 4 && tiles.push(l.shift()));
     $("#tradition-tiles").innerHTML = tiles.map(([team, k, v, d]) => `<div class="card fact">
@@ -472,7 +496,9 @@
 
   /* ---------- Photos: action shots from every site's PHOTOS join the team photos ---------- */
   function renderGallery(S) {
-    const NAMES_BY = { football: "Football", soccer: "Soccer", "field-hockey": "Field Hockey", volleyball: "Volleyball", "cross-country": "Cross Country", golf: "Golf", esports: "Esports" };
+    const NAMES_BY = { football: "Football", soccer: "Soccer", "field-hockey": "Field Hockey", volleyball: "Volleyball", "cross-country": "Cross Country", golf: "Golf", esports: "Esports",
+      basketball: "Basketball", hockey: "Hockey", wrestling: "Wrestling" };
+    if (!$("#gallery-grid")) return;
     /* every team site's action shots, one team at a time (each site's newest first) so the sports mix all the way down;
        the first SHOW of each team show at once and "More photos" opens the rest */
     const SHOW = 2;

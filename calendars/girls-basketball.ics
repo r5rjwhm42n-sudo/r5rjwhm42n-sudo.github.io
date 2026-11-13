@@ -1,0 +1,249 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Danvers Falcons Team Sites//Schedules//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Danvers Girls Basketball
+X-WR-CALDESC:Danvers Girls Basketball schedule and results from danversfalc
+ onsathletics.org
+X-WR-TIMEZONE:America/New_York
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:girls-basketball-1@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261207T180000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Basketball vs Somerville (scrimmage)
+LOCATION:Danvers High School Field House\, Danvers
+DESCRIPTION:Scrimmage\nSchedule and results: https://danversfalconsathletic
+ s.org/basketball/?team=girls#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-basketball-2@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261211T190000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Basketball at Peabody
+LOCATION:Peabody Veterans Memorial High School\, Peabody
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/basketball/?team=girls#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-basketball-3@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261214T180000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Basketball at Melrose
+LOCATION:Melrose High School\, Melrose
+DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
+ cs.org/basketball/?team=girls#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-basketball-4@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261218T183000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Basketball vs Winthrop
+LOCATION:Danvers High School Field House\, Danvers
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/basketball/?team=girls#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-basketball-5@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261228T170000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Basketball vs Hamilton-Wenham
+LOCATION:Danvers High School Field House\, Danvers
+DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
+ cs.org/basketball/?team=girls#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-basketball-6@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270104T183000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Basketball vs Masconomet
+LOCATION:Danvers High School Field House\, Danvers
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/basketball/?team=girls#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-basketball-7@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270107T180000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Basketball at Marblehead
+LOCATION:Marblehead High School\, Marblehead
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/basketball/?team=girls#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-basketball-8@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270111T183000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Basketball at Wakefield
+LOCATION:Wakefield Memorial High School\, Wakefield
+DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
+ cs.org/basketball/?team=girls#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-basketball-9@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270113T183000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Basketball vs Melrose
+LOCATION:Danvers High School Field House\, Danvers
+DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
+ cs.org/basketball/?team=girls#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-basketball-10@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270119T183000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Basketball vs Peabody
+LOCATION:Danvers High School Field House\, Danvers
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/basketball/?team=girls#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-basketball-11@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270122T190000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Basketball vs Gloucester
+LOCATION:Danvers High School Field House\, Danvers
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/basketball/?team=girls#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-basketball-12@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270127T183000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Basketball at Manchester Essex
+LOCATION:Manchester Essex Regional High School\, Manchester
+DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
+ cs.org/basketball/?team=girls#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-basketball-13@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270129T181500
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Basketball at Masconomet
+LOCATION:Masconomet Regional High School\, Boxford
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/basketball/?team=girls#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-basketball-14@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270202T180000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Basketball at Saugus
+LOCATION:Saugus High School\, Saugus
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/basketball/?team=girls#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-basketball-15@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270204T183000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Basketball vs Manchester Essex
+LOCATION:Danvers High School Field House\, Danvers
+DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
+ cs.org/basketball/?team=girls#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-basketball-16@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270205T183000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Basketball vs Marblehead
+LOCATION:Danvers High School Field House\, Danvers
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/basketball/?team=girls#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-basketball-17@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270208T180000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Basketball at Beverly
+LOCATION:Beverly High School\, Beverly
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/basketball/?team=girls#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-basketball-18@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270211T183000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Basketball vs Swampscott
+LOCATION:Danvers High School Field House\, Danvers
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/basketball/?team=girls#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-basketball-19@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270214T160000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Basketball vs Beverly
+LOCATION:Danvers High School Field House\, Danvers
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/basketball/?team=girls#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-basketball-20@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270216T173000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Basketball vs Greater Lawrence Tech
+LOCATION:Danvers High School Field House\, Danvers
+DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
+ cs.org/basketball/?team=girls#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
+END:VEVENT
+END:VCALENDAR

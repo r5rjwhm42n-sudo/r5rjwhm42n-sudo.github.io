@@ -95,15 +95,31 @@
   })();
 
   /* ---------- Footer ---------- */
-  const TEAMS = [["football", "Football"], ["soccer", "Soccer"], ["field-hockey", "Field hockey"], ["volleyball", "Volleyball"],
-                 ["cross-country", "Cross country"], ["golf", "Golf"], ["esports", "Esports"]];
+  /* The front page shows the season being played (winter); the fall sports keep their own front page, fall.html,
+     one switch away. Footers and menus list the sports of the season the visitor is in, plus that switch. */
+  const FALL = [["football", "Football"], ["soccer", "Soccer"], ["field-hockey", "Field hockey"], ["volleyball", "Volleyball"],
+                ["cross-country", "Cross country"], ["golf", "Golf"], ["esports", "Esports"]];
+  const WINTER = [["basketball", "Basketball"], ["hockey", "Hockey"], ["wrestling", "Wrestling"]];
+  const here = location.href.startsWith(ROOT) ? location.href.slice(ROOT.length).split(/[?#]/)[0] : "";
+  const IN_FALL = document.body.dataset.season === "fall" || FALL.some(([dir]) => here.split("/")[0] === dir);
+  const TEAMS = IN_FALL ? FALL : WINTER;
+  const FRONT = IN_FALL ? `${ROOT}fall.html` : ROOT;                       // this season's front page
+  /* the Fall | Winter switch: the same control as a team site's Girls | Boys switch */
+  const seasons = (cls = "", style = "") => `<div class="fx-seasons ${cls}" role="group" aria-label="Choose a season"${style}>
+      <a href="${ROOT}fall.html"${IN_FALL ? ' class="on" aria-current="true"' : ""}>Fall</a><a href="${ROOT}"${IN_FALL ? "" : ' class="on" aria-current="true"'}>Winter</a></div>`;
+  /* on the two front pages it sits at the start of the top bar, and beside "Pick Your Team" */
+  if (ON_HUB) {
+    const bar = document.querySelector(".topbar .wrap"), head = document.querySelector("#teams .section-head");
+    if (bar) bar.insertAdjacentHTML("afterbegin", seasons());
+    if (head) head.insertAdjacentHTML("beforeend", seasons("light"));
+  }
   /* homepage sections; "State tournament" and "Latest results" only show when there's something in them */
   const SEASON = [["week", "Coming up"], ["road", "State tournament"], ["latest", "Latest results"], ["photos", "Photos"], ["tradition", "A winning tradition"]];
 
   function footer() {
     const foot = document.getElementById("site-footer");
     if (!foot) return;
-    const home = (id) => (ON_HUB ? `#${id}` : `${ROOT}#${id}`);
+    const home = (id) => (ON_HUB ? `#${id}` : `${FRONT}#${id}`);
     foot.className = "fx-foot";
     foot.innerHTML = `
       <div class="wrap">
@@ -114,8 +130,8 @@
           </div>
           <nav aria-labelledby="fx-teams"><h2 id="fx-teams">Teams</h2><ul>
             ${TEAMS.map(([dir, name]) => `<li><a href="${ROOT}${dir}/">${name}</a></li>`).join("")}
-          </ul></nav>
-          <nav aria-labelledby="fx-season"><h2 id="fx-season">This season</h2><ul>
+          </ul>${seasons("light")}</nav>
+          <nav aria-labelledby="fx-season"><h2 id="fx-season">${IN_FALL ? "Fall season" : "This season"}</h2><ul>
             ${SEASON.map(([id, name]) => `<li data-section="${id}"><a href="${home(id)}">${name}</a></li>`).join("")}
           </ul></nav>
           <nav aria-labelledby="fx-follow"><h2 id="fx-follow">Follow</h2><ul>
@@ -150,11 +166,7 @@
 
   /* ---------- Team sites: one round Menu button and a full-screen menu ---------- */
   const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const here = location.href.startsWith(ROOT) ? location.href.slice(ROOT.length).split(/[?#]/)[0] : "";
-  /* team sites built but not opened yet: they work like the others (Menu, sections) but aren't listed in any
-     footer or menu. To open one, move its entry up into TEAMS and add it to the homepage. */
-  const NOT_OPEN_YET = [["basketball", "Basketball"], ["hockey", "Hockey"], ["wrestling", "Wrestling"]];
-  const SPORT = [...TEAMS, ...NOT_OPEN_YET].find(([dir]) => here.split("/")[0] === dir);
+  const SPORT = TEAMS.find(([dir]) => here.split("/")[0] === dir);
   /* the sport's own pages, in this order, with the names visitors know them by */
   const PAGE_ORDER = ["index.html", "schedule.html", "stats.html", "runners.html", "seasons.html", "history.html", "media.html"];
   const FILM = ["football", "soccer", "field-hockey", "volleyball"];   // their media pages are game film and highlights
@@ -203,7 +215,7 @@
     const link = (href, label, current, section) =>
       `<li><a href="${href}" style="--i:${i++}"${section ? ` data-section="${section}"` : ""}${current ? ' aria-current="page"' : ""}>${label}${current ? HERE : ""}</a></li>`;
     /* "Back to": all sports, and this sport's home (not shown on the home page itself) */
-    const backs = link(`${ROOT}#teams`, "All sports", false) + (onHome ? "" : link(homeHref, `${name} home`, false));
+    const backs = link(`${FRONT}#teams`, IN_FALL ? "Fall sports" : "All sports", false) + (onHome ? "" : link(homeHref, `${name} home`, false));
     menu.innerHTML = `
       <div class="wrap fx-menu-top">
         <span class="fx-menu-tag">Danvers Falcons · ${team ? team.textContent : name}</span>
@@ -212,7 +224,8 @@
       <div class="wrap fx-menu-body">
         <nav class="fx-menu-back" aria-labelledby="fx-m-back"><h2 id="fx-m-back">Back to</h2><ul>${backs}</ul></nav>
         <nav aria-labelledby="fx-m-this"><h2 id="fx-m-this">This sport</h2><ul>${pages.map((p) => link(p.href, p.label, p.current, p.id)).join("")}</ul></nav>
-        <nav aria-labelledby="fx-m-other"><h2 id="fx-m-other">Other sports</h2><ul>${TEAMS.filter(([d]) => d !== dir).map(([d, n]) => link(`${ROOT}${d}/`, n, false)).join("")}</ul></nav>
+        <nav aria-labelledby="fx-m-other"><h2 id="fx-m-other">Other sports</h2><ul>${TEAMS.filter(([d]) => d !== dir).map(([d, n]) => link(`${ROOT}${d}/`, n, false)).join("")}</ul>
+          ${seasons("big", ` style="--i:${i++}"`)}</nav>
       </div>`;
     document.body.appendChild(menu);
 

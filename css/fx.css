@@ -240,3 +240,26 @@ html.fx-has-cursor .fx-cursor, html.fx-has-cursor .fx-ring { display: block; }
   .fx-word span { transition: color .3s; }
   .fx-word span:hover { transform: none; }
 }
+
+/* ---------- The Fall | Winter switch: the same control as a team site's Girls | Boys switch ---------- */
+.fx-seasons { display: inline-flex; flex: none; align-self: center; padding: 2px; border-radius: 4px; background: rgba(255, 255, 255, .12); }
+.fx-seasons a, .topbar .fx-seasons a { padding: 2px 14px 1px; border-radius: 4px; font-family: var(--display); font-weight: 700; font-size: 16px; line-height: 1.5; letter-spacing: .08em;
+  text-transform: uppercase; text-decoration: none; color: #c5d4f5; background-image: none; transition: background .15s, color .15s; }
+.fx-seasons a:hover, .topbar .fx-seasons a:hover { color: var(--white); text-decoration: none; }
+.fx-seasons a.on, .topbar .fx-seasons a.on { background: var(--white); color: var(--royal); }
+/* on a light background */
+.fx-seasons.light { background: #e2e8f5; }
+.fx-seasons.light a { color: var(--royal); }
+.fx-seasons.light a:hover { color: var(--navy); }
+.fx-seasons.light a.on { background: var(--royal); color: var(--white); }
+.fx-foot .fx-seasons { margin-top: 16px; }
+.section-head .fx-seasons { margin-left: auto; }
+.section-head .fx-seasons + .sub, .section-head .sub:has(+ .fx-seasons) { margin-left: 0; }
+/* in the full-screen menu, under "Other sports" */
+.fx-menu .fx-seasons { margin-top: 24px; opacity: 0; transform: translateY(24px); }
+.fx-menu.open .fx-seasons { animation: fx-rise .6s cubic-bezier(.16, 1, .3, 1) forwards; animation-delay: calc(120ms + var(--i, 0) * 45ms); }
+.fx-menu .fx-seasons a { font-size: 22px; padding: 6px 22px 5px; }
+@media (max-width: 720px) {
+  .fx-seasons a, .topbar .fx-seasons a { padding: 3px 16px 2px; }
+  .topbar .wrap:has(> .fx-seasons) { flex-wrap: wrap; align-items: center; gap: 8px 14px; }
+}

@@ -153,7 +153,20 @@ function feeds(root) {
     lines: [`${GAME[m.game].name} · ${GAME[m.game].series}`, m.result ? `Final: Danvers ${m.us}, ${m.opponent || "opponent"} ${m.them}` : null, m.summary || null]
   }));
 
-  const all = [football, girls, boys, hockey, volleyball, golf, crossCountry, esports].flat();
+  /* the winter sites keep their data alike (SPORT, and TEAMS with one or two teams): one feed per team */
+  const winter = (dir, minutes) => {
+    const d = load(root, dir, "TEAMS");
+    const keys = Object.keys(d.TEAMS);
+    return keys.map((k) => {
+      const T = d.TEAMS[k], key = keys.length > 1 ? `${k}-${dir}` : dir;
+      const list = games(key, T.label, dir, T.schedule.map((g) => (g.name ? { ...g, opponent: g.name } : g)), minutes, keys.length > 1 ? `?team=${k}` : "");
+      if (T.noLeague) list.forEach((e) => { if (e.lines[0] === "Non-league") e.lines[0] = T.league || null; });
+      return [key, `Danvers ${T.label}`, list];
+    });
+  };
+  const winterFeeds = [...winter("basketball", 105), ...winter("hockey", 105), ...winter("wrestling", 150)];
+
+  const all = [football, girls, boys, hockey, volleyball, golf, crossCountry, esports, ...winterFeeds.map((f) => f[2])].flat();
   return [
     ["football", "Danvers Football", football],
     ["girls-soccer", "Danvers Girls Soccer", girls],
@@ -163,6 +176,7 @@ function feeds(root) {
     ["golf", "Danvers Golf", golf],
     ["cross-country", "Danvers Cross Country", crossCountry],
     ["esports", "Danvers Esports", esports],
+    ...winterFeeds,
     ["all-sports", "Danvers Falcons", all]
   ];
 }

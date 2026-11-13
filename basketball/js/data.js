@@ -87,6 +87,7 @@ const TEAMS = {
         coach: "Jabari Clarke",
         finish: "4th in Lynch",
         captains: "Connor DiTomaso, Luca Tirella, Kyle Sillars",
+        photo: { src: "../images/teams/boys-basketball.jpg", caption: "The 2025–26 Danvers boys basketball team. Photo from the Danvers High School athletics page." },
         allStars: "Kyle Sillars, Luca Tirella",
         games: [
           ["2025-12-12", 0, "Marblehead", "NEC", "L", 51, 58, ""],
@@ -353,6 +354,7 @@ const TEAMS = {
         finish: "NEC Champions",
         post: "Lost in the Round of 32 at Mansfield, 51–48",
         captains: "Angie Djoko, Lila Flynn, Kayda Brown",
+        photo: { src: "../images/teams/girls-basketball.jpg", caption: "The 2025–26 Danvers girls basketball team. Photo from the Danvers High School athletics page." },
         allStars: "Kayda Brown, Annabel Boyd, Sienna Lynch",
         awards: "Angie Djoko, NEC Player of the Year · Dave Chisholm, NEC Coach of the Year · 19–2 is the school record",
         games: [
