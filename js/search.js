@@ -15,7 +15,8 @@
 
   const SPORTS = [["football", "Football"], ["soccer", "Soccer"], ["field-hockey", "Field Hockey"], ["volleyball", "Volleyball"],
                   ["cross-country", "Cross Country"], ["golf", "Golf"], ["esports", "Esports"],
-                  ["basketball", "Basketball"], ["hockey", "Hockey"], ["wrestling", "Wrestling"]];
+                  ["basketball", "Basketball"], ["hockey", "Hockey"], ["wrestling", "Wrestling"],
+                  ["indoor-track", "Indoor Track"], ["swim-dive", "Swim & Dive"], ["gymnastics", "Gymnastics"]];
   const NAMES = ["TEAM", "TEAMS", "SCHEDULE", "MEETS", "GAMES", "PLAYERS", "RUNNERS", "SPORT"];
 
   /* Sport icons, the same drawings as the hub's (added to the page when it doesn't have them) */
@@ -30,6 +31,9 @@
     <symbol id="i-basketball" viewBox="0 0 64 64"><circle cx="32" cy="32" r="26"/><path d="M6 32h52M32 6v52M13.6 13.6c8.6 8.6 8.6 28.2 0 36.8M50.4 13.6c-8.6 8.6-8.6 28.2 0 36.8"/></symbol>
     <symbol id="i-hockey" viewBox="0 0 64 64"><path d="M46 5L28 42c-1.6 3.4-5 5.5-8.8 5.5H7v7h13.5"/><ellipse cx="47" cy="51" rx="10" ry="4.5" fill="currentColor"/></symbol>
     <symbol id="i-wrestling" viewBox="0 0 64 64"><rect x="6" y="6" width="52" height="52" rx="5"/><circle cx="32" cy="32" r="18"/><circle cx="32" cy="32" r="5" fill="currentColor"/></symbol>
+    <symbol id="i-indoor-track" viewBox="0 0 64 64"><rect x="5" y="14" width="54" height="36" rx="18"/><rect x="16" y="25" width="32" height="14" rx="7"/></symbol>
+    <symbol id="i-swim-dive" viewBox="0 0 64 64"><circle cx="44" cy="17" r="5.5" fill="currentColor"/><path d="M12 33l15-11 9 8 9-3"/><path d="M5 43c4.5-5 9-5 13.500 0s9 5 13.500 0 9-5 13.500 0 9 5 13.500 0M5 55c4.500-5 9-5 13.500 0s9 5 13.500 0 9-5 13.500 0 9 5 13.500 0"/></symbol>
+    <symbol id="i-gymnastics" viewBox="0 0 64 64"><path d="M21 5v19M43 5v19"/><circle cx="21" cy="35" r="11"/><circle cx="43" cy="35" r="11"/><path d="M8 58h48"/></symbol>
     <symbol id="i-page" viewBox="0 0 64 64"><path d="M16 6h22l12 12v40H16z"/><path d="M38 6v12h12M24 32h18M24 41h18M24 50h10"/></symbol>
   </defs></svg>`;
   const ICON_SEARCH = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg>';

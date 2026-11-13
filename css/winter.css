@@ -59,3 +59,4 @@
   .prose { padding: 18px 18px; }
   .tile .v .words { font-size: 21px; }
 }
+.strip[hidden] { display: none; }

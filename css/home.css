@@ -587,7 +587,5 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .bf-vs { font-size: 16px; }
 }
 
-/* ---------- winter front page: five team photos ---------- */
-.mosaic.winter { grid-template-columns: repeat(3, 1fr); }
-@media (max-width: 720px) { .mosaic.winter { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(3, 1fr); } }
+/* ---------- winter front page: nine team photos ---------- */
 @media (min-width: 1081px) { body[data-season="winter"] .gallery { grid-template-columns: repeat(5, 1fr); } }

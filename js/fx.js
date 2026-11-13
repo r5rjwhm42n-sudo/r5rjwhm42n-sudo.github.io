@@ -99,7 +99,8 @@
      one switch away. Footers and menus list the sports of the season the visitor is in, plus that switch. */
   const FALL = [["football", "Football"], ["soccer", "Soccer"], ["field-hockey", "Field hockey"], ["volleyball", "Volleyball"],
                 ["cross-country", "Cross country"], ["golf", "Golf"], ["esports", "Esports"]];
-  const WINTER = [["basketball", "Basketball"], ["hockey", "Hockey"], ["wrestling", "Wrestling"]];
+  const WINTER = [["basketball", "Basketball"], ["hockey", "Hockey"], ["wrestling", "Wrestling"],
+                  ["indoor-track", "Indoor track"], ["swim-dive", "Swim & dive"], ["gymnastics", "Gymnastics"]];
   const here = location.href.startsWith(ROOT) ? location.href.slice(ROOT.length).split(/[?#]/)[0] : "";
   const IN_FALL = document.body.dataset.season === "fall" || FALL.some(([dir]) => here.split("/")[0] === dir);
   const TEAMS = IN_FALL ? FALL : WINTER;

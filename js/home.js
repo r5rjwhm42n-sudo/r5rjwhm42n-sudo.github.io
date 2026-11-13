@@ -21,7 +21,7 @@
   /* the front page (index.html) shows the season being played; a season that's over keeps its own page (fall.html).
      Each page says which it is with <body data-season>. */
   const SEASON = document.body.dataset.season || "fall";
-  const BY_SEASON = { fall: ["football", "soccer", "field-hockey", "volleyball", "golf", "cross-country", "esports"], winter: ["basketball", "hockey", "wrestling"] };
+  const BY_SEASON = { fall: ["football", "soccer", "field-hockey", "volleyball", "golf", "cross-country", "esports"], winter: ["basketball", "hockey", "wrestling", "indoor-track", "swim-dive", "gymnastics"] };
   const load = (folder) =>
     fetch(`${folder}/js/data.js`)
       .then((r) => (r.ok ? r.text() : Promise.reject(r.status)))
@@ -396,7 +396,7 @@
       const sport = (e) => (s.teams.length > 1 && !s.meets ? `${e.team.split(" ")[0]} · ` : "");
       card.querySelector(".tc-live").innerHTML = `
         ${recs ? `<div class="tc-recs">${recs}<span class="tc-recs-k">${s.teams.length > 1 ? "Records" : "Record"}</span></div>`
-          : !last && next ? `<div class="tc-recs"><span class="tc-recs-k">Opens ${dayShort(next.date)}</span></div>${
+          : !last && (next || s.teams.some((t) => t.last)) ? `<div class="tc-recs"><span class="tc-recs-k">${next ? `Opens ${dayShort(next.date)}` : "Schedule coming soon"}</span></div>${
               s.teams.some((t) => t.last) ? `<div class="tc-rank">Last season: ${s.teams.filter((t) => t.last).map((t) => esc(`${t.label ? `${t.label} ` : ""}${t.last.split(" in ")[0]}`)).join(" · ")}</div>` : ""}`
           : `<div class="tc-recs"><span class="tc-recs-k">Season under way</span></div>`}
         ${rank ? `<div class="tc-rank">${esc(rank)}</div>` : ""}
@@ -497,7 +497,7 @@
   /* ---------- Photos: action shots from every site's PHOTOS join the team photos ---------- */
   function renderGallery(S) {
     const NAMES_BY = { football: "Football", soccer: "Soccer", "field-hockey": "Field Hockey", volleyball: "Volleyball", "cross-country": "Cross Country", golf: "Golf", esports: "Esports",
-      basketball: "Basketball", hockey: "Hockey", wrestling: "Wrestling" };
+      basketball: "Basketball", hockey: "Hockey", wrestling: "Wrestling", "indoor-track": "Indoor Track", "swim-dive": "Swim & Dive", gymnastics: "Gymnastics" };
     if (!$("#gallery-grid")) return;
     /* every team site's action shots, one team at a time (each site's newest first) so the sports mix all the way down;
        the first SHOW of each team show at once and "More photos" opens the rest */

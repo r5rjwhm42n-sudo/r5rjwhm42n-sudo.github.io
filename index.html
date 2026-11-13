@@ -44,6 +44,9 @@
     <symbol id="i-basketball" viewBox="0 0 64 64"><circle cx="32" cy="32" r="26"/><path d="M6 32h52M32 6v52M13.6 13.6c8.6 8.6 8.6 28.2 0 36.8M50.4 13.6c-8.6 8.6-8.6 28.2 0 36.8"/></symbol>
     <symbol id="i-hockey" viewBox="0 0 64 64"><path d="M46 5L28 42c-1.6 3.4-5 5.5-8.8 5.5H7v7h13.5"/><ellipse cx="47" cy="51" rx="10" ry="4.5" fill="currentColor"/></symbol>
     <symbol id="i-wrestling" viewBox="0 0 64 64"><rect x="6" y="6" width="52" height="52" rx="5"/><circle cx="32" cy="32" r="18"/><circle cx="32" cy="32" r="5" fill="currentColor"/></symbol>
+    <symbol id="i-indoor-track" viewBox="0 0 64 64"><rect x="5" y="14" width="54" height="36" rx="18"/><rect x="16" y="25" width="32" height="14" rx="7"/></symbol>
+    <symbol id="i-swim-dive" viewBox="0 0 64 64"><circle cx="44" cy="17" r="5.5" fill="currentColor"/><path d="M12 33l15-11 9 8 9-3"/><path d="M5 43c4.5-5 9-5 13.500 0s9 5 13.500 0 9-5 13.500 0 9 5 13.500 0M5 55c4.500-5 9-5 13.500 0s9 5 13.500 0 9-5 13.500 0 9 5 13.500 0"/></symbol>
+    <symbol id="i-gymnastics" viewBox="0 0 64 64"><path d="M21 5v19M43 5v19"/><circle cx="21" cy="35" r="11"/><circle cx="43" cy="35" r="11"/><path d="M8 58h48"/></symbol>
   </defs>
 </svg>
 
@@ -57,7 +60,7 @@
     <span class="brand-text">Danvers Falcons<small>Team Sites</small></span>
   </a>
   <nav class="nav" aria-label="Teams">
-    <a href="basketball/">Basketball</a><a href="hockey/">Hockey</a><a href="wrestling/">Wrestling</a>
+    <a href="basketball/">Basketball</a><a href="hockey/">Hockey</a><a href="wrestling/">Wrestling</a><a href="indoor-track/">Indoor Track</a><a href="swim-dive/">Swim &amp; Dive</a><a href="gymnastics/">Gymnastics</a>
   </nav>
   <a class="news-btn" href="newsletter/" title="Athletic Department newsletter" aria-label="Athletic Department newsletter"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4.5h12.5v15H6.5A2.5 2.5 0 0 1 4 17z"/><path d="M16.5 8.5H20v8.5a2.5 2.5 0 0 1-2.5 2.5"/><path d="M7.5 8.5h5.5M7.5 12h5.5M7.5 15.5h3.5"/></svg><span>Newsletter</span></a>
 </div></header>
@@ -77,13 +80,15 @@
 <section class="spotlight" id="spotlight" hidden aria-label="Big game"></section>
 
 <section class="hub-hero">
-  <div class="mosaic winter" aria-hidden="true">
+  <div class="mosaic" aria-hidden="true">
     <img src="images/teams/boys-basketball.jpg" alt="" style="--pos:50% 40%">
     <img src="images/teams/girls-hockey.jpg" alt="" style="--pos:50% 45%">
     <img src="images/teams/wrestling.jpg" alt="" style="--pos:50% 62%">
     <img src="images/teams/girls-basketball.jpg" alt="" style="--pos:50% 30%">
     <img src="images/teams/boys-hockey.jpg" alt="" style="--pos:50% 55%">
-    <img src="images/teams/boys-basketball.jpg" alt="" style="--pos:50% 0%">
+    <img src="images/teams/girls-indoor-track.jpg" alt="" style="--pos:50% 45%">
+    <img src="images/teams/gymnastics.jpg" alt="" style="--pos:50% 35%">
+    <img src="images/teams/swim-dive.jpg" alt="" style="--pos:50% 40%">
   </div>
   <div class="wrap hero-in">
     <div>
@@ -111,7 +116,7 @@
         <div class="tc-head"><h3>Basketball</h3></div>
       </div>
       <div class="tc-body">
-        <p class="tc-blurb">Both teams in one place: schedules, the last three seasons game by game, 1,000-point scorers and state title teams.</p>
+        <p class="tc-blurb">Both teams in one place: schedules, the last three seasons game by game and the state title teams.</p>
         <div class="tc-live"></div>
         <span class="tc-go">Basketball site <span aria-hidden="true">→</span></span>
       </div>
@@ -141,6 +146,43 @@
         <span class="tc-go">Wrestling site <span aria-hidden="true">→</span></span>
       </div>
     </a>
+    <a class="team-card feature" href="indoor-track/" data-sport="indoor-track">
+      <div class="tc-media multi">
+        <img class="on" src="images/teams/boys-indoor-track.jpg" alt="The 2025–26 Danvers boys indoor track team" data-squad="Boys" style="--pos:50% 52%" loading="lazy">
+        <img src="images/teams/girls-indoor-track.jpg" alt="The 2025–26 Danvers girls indoor track team" data-squad="Girls" style="--pos:50% 45%" loading="lazy">
+        <span class="tc-season">Winter · Boys &amp; Girls</span><span class="tc-squad">Boys</span>
+        <div class="tc-head"><h3>Indoor Track</h3></div>
+      </div>
+      <div class="tc-body">
+        <p class="tc-blurb">Boys and girls meets, from the field house to the NEC Championship at the Reggie Lewis Center.</p>
+        <div class="tc-live"></div>
+        <span class="tc-go">Indoor track site <span aria-hidden="true">→</span></span>
+      </div>
+    </a>
+    <a class="team-card" href="swim-dive/" data-sport="swim-dive">
+      <div class="tc-media">
+        <img src="images/teams/swim-dive.jpg" alt="The 2025–26 Danvers swim and dive team" style="--pos:50% 40%" loading="lazy">
+        <span class="tc-season">Winter · Co-ed</span>
+        <div class="tc-head"><h3>Swim &amp; Dive</h3></div>
+      </div>
+      <div class="tc-body">
+        <p class="tc-blurb">The co-ed team, its coaches and home pool, with meets added as they are posted.</p>
+        <div class="tc-live"></div>
+        <span class="tc-go">Swim &amp; dive site <span aria-hidden="true">→</span></span>
+      </div>
+    </a>
+    <a class="team-card" href="gymnastics/" data-sport="gymnastics">
+      <div class="tc-media">
+        <img src="images/teams/gymnastics.jpg" alt="The 2025–26 Danvers gymnastics team" style="--pos:50% 35%" loading="lazy">
+        <span class="tc-season">Winter</span>
+        <div class="tc-head"><h3>Gymnastics</h3></div>
+      </div>
+      <div class="tc-body">
+        <p class="tc-blurb">Meets, coaches and the co-op team with Lynnfield.</p>
+        <div class="tc-live"></div>
+        <span class="tc-go">Gymnastics site <span aria-hidden="true">→</span></span>
+      </div>
+    </a>
   </div>
 </div></section>
 
@@ -163,6 +205,10 @@
     <figure class="gal"><button type="button" data-full="images/teams/boys-hockey.jpg" data-cap="Boys Hockey · 2025–26"><img src="images/teams/boys-hockey.jpg" alt="The 2025–26 Danvers boys hockey team" loading="lazy"></button><figcaption><b>Boys Hockey</b> 2025–26</figcaption></figure>
     <figure class="gal"><button type="button" data-full="images/teams/girls-hockey.jpg" data-cap="Girls Hockey · 2025–26"><img src="images/teams/girls-hockey.jpg" alt="Members of the 2025–26 Beverly/Danvers/Ipswich girls hockey team" loading="lazy"></button><figcaption><b>Girls Hockey</b> 2025–26</figcaption></figure>
     <figure class="gal"><button type="button" data-full="images/teams/wrestling.jpg" data-cap="Wrestling · 2025–26"><img src="images/teams/wrestling.jpg" alt="The 2025–26 Danvers wrestling team" loading="lazy"></button><figcaption><b>Wrestling</b> 2025–26</figcaption></figure>
+    <figure class="gal"><button type="button" data-full="images/teams/boys-indoor-track.jpg" data-cap="Boys Indoor Track · 2025–26"><img src="images/teams/boys-indoor-track.jpg" alt="The 2025–26 Danvers boys indoor track team" loading="lazy"></button><figcaption><b>Boys Indoor Track</b> 2025–26</figcaption></figure>
+    <figure class="gal"><button type="button" data-full="images/teams/girls-indoor-track.jpg" data-cap="Girls Indoor Track · 2025–26"><img src="images/teams/girls-indoor-track.jpg" alt="The 2025–26 Danvers girls indoor track team" loading="lazy"></button><figcaption><b>Girls Indoor Track</b> 2025–26</figcaption></figure>
+    <figure class="gal"><button type="button" data-full="images/teams/swim-dive.jpg" data-cap="Swim &amp; Dive · 2025–26"><img src="images/teams/swim-dive.jpg" alt="The 2025–26 Danvers swim and dive team" loading="lazy"></button><figcaption><b>Swim &amp; Dive</b> 2025–26</figcaption></figure>
+    <figure class="gal"><button type="button" data-full="images/teams/gymnastics.jpg" data-cap="Gymnastics · 2025–26"><img src="images/teams/gymnastics.jpg" alt="The 2025–26 Danvers gymnastics team" loading="lazy"></button><figcaption><b>Gymnastics</b> 2025–26</figcaption></figure>
   </div>
   <p class="credit">Team photos from the Danvers High School athletics pages (Danvers Public Schools).</p>
 </div></section>

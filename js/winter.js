@@ -42,7 +42,7 @@
   const played = GAMES.filter((g) => g.result);
   const NOW = Date.now();
   const awaiting = (g) => !g.result && !g.cancelled && !g.dateTbd && new Date(g.date) < NOW - 3 * 36e5;
-  const upcoming = GAMES.filter((g) => !g.result && !g.cancelled);
+  const upcoming = GAMES.filter((g) => !g.result && !g.place && !g.cancelled);
   const next = upcoming.find((g) => !awaiting(g));
   const count = (list, r) => list.filter((g) => g.result === r).length;
   const TIES = S.ties !== false;
@@ -99,7 +99,8 @@
 
   /* ---------- Top bar, header, schedule strip ---------- */
   const NAV = [["index.html", "Home"], ["schedule.html", "Schedule"], ["stats.html", "Team"], ["seasons.html", "Past seasons"],
-               ["history.html", "History"], ["media.html", "Media"]];
+               ["history.html", "History"], ["media.html", "Media"]]
+    .filter(([href]) => href !== "history.html" || (T.seasons || []).length || (T.banners || []).length || (T.milestones || []).length);   // no History link for a team with none on file
   const header = $("#site-header");
   header.insertAdjacentHTML("beforebegin", `
     <div class="topbar"><div class="wrap">
@@ -328,9 +329,10 @@
       ...(played.length ? [[S.scoreWord, `${pf}–${pa}`, `${plural(played.length, S.game)} played`]]
         : next ? [["Opener", fmt(next.date, { month: "short", day: "numeric" }), esc(`${vs(next)} ${who(next)}${startOf(next) ? ` · ${startOf(next)}` : ""}`.trim())]] : [])
     ].map(tile).join("");
-    const done = GAMES.filter((g) => g.result || g.cancelled || awaiting(g));
+    $("#sched-tiles").hidden = !T.schedule.length;   // nothing to count until the schedule is posted
+    const done = GAMES.filter((g) => g.result || g.place || g.cancelled || awaiting(g));
     const ahead = GAMES.filter((g) => !done.includes(g));
-    $("#upcoming").innerHTML = ahead.length ? ahead.map(gameRow).join("") : `<div class="empty">Regular season complete.</div>`;
+    $("#upcoming").innerHTML = ahead.length ? ahead.map(gameRow).join("") : `<div class="empty">${GAMES.length ? "Regular season complete." : esc(T.noScheduleNote || "The schedule hasn't been posted yet.")}</div>`;
     $("#results").innerHTML = [...done].reverse().map(gameRow).join("");
     hide($("#results"), !done.length);
     $("#preseason").innerHTML = PRESEASON.map(gameRow).join("");

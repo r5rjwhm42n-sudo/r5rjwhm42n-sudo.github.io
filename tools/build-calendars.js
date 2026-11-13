@@ -164,7 +164,8 @@ function feeds(root) {
       return [key, `Danvers ${T.label}`, list];
     });
   };
-  const winterFeeds = [...winter("basketball", 105), ...winter("hockey", 105), ...winter("wrestling", 150)];
+  const winterFeeds = [...winter("basketball", 105), ...winter("hockey", 105), ...winter("wrestling", 150),
+                       ...winter("indoor-track", 180), ...winter("swim-dive", 120), ...winter("gymnastics", 120)];
 
   const all = [football, girls, boys, hockey, volleyball, golf, crossCountry, esports, ...winterFeeds.map((f) => f[2])].flat();
   return [

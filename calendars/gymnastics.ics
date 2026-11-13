@@ -1,0 +1,95 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Danvers Falcons Team Sites//Schedules//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Danvers Gymnastics
+X-WR-CALDESC:Danvers Gymnastics schedule and results from danversfalconsath
+ letics.org
+X-WR-TIMEZONE:America/New_York
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:gymnastics-1@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261218T193000
+DURATION:PT2H
+SUMMARY:Danvers Gymnastics at Beverly
+LOCATION:Sterling YMCA\, Beverly
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/gymnastics/#schedule
+URL:https://danversfalconsathletics.org/gymnastics/#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:gymnastics-2@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261220T120000
+DURATION:PT2H
+SUMMARY:Danvers Gymnastics vs Masconomet
+LOCATION:Yellow Jackets Gymnastics\, Peabody
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/gymnastics/#schedule
+URL:https://danversfalconsathletics.org/gymnastics/#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:gymnastics-3@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270103T140000
+DURATION:PT2H
+SUMMARY:Danvers Gymnastics vs Hamilton-Wenham
+LOCATION:Yellow Jackets Gymnastics\, Peabody
+DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
+ cs.org/gymnastics/#schedule
+URL:https://danversfalconsathletics.org/gymnastics/#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:gymnastics-4@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270116T173000
+DURATION:PT2H
+SUMMARY:Danvers Gymnastics vs Winthrop
+LOCATION:Yellow Jackets Gymnastics\, Peabody
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/gymnastics/#schedule
+URL:https://danversfalconsathletics.org/gymnastics/#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:gymnastics-5@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270117T120000
+DURATION:PT2H
+SUMMARY:Danvers Gymnastics vs Essex Tech
+LOCATION:Yellow Jackets Gymnastics\, Peabody
+DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
+ cs.org/gymnastics/#schedule
+URL:https://danversfalconsathletics.org/gymnastics/#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:gymnastics-6@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270131T170000
+DURATION:PT2H
+SUMMARY:Danvers Gymnastics at Bishop Fenwick
+LOCATION:Legends Gymnastics\, North Andover
+DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
+ cs.org/gymnastics/#schedule
+URL:https://danversfalconsathletics.org/gymnastics/#schedule
+END:VEVENT
+END:VCALENDAR
