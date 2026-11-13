@@ -41,6 +41,7 @@
 /* history: record-book cards with long numbers (1,024) and season labels (2025–26) */
 .book li { grid-template-columns: minmax(52px, auto) 1fr; }
 .records .yr { white-space: nowrap; }
+.show-more[hidden] { display: none !important; }
 
 /* history: individual state champions */
 .champions td:first-child { width: 90px; }

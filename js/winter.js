@@ -29,7 +29,7 @@
   document.body.dataset.sportLabel = T.label;   // read by the shared share-a-result image
   const to = (href, key = teamKey) => (MANY ? `${href}?team=${key}` : href);
   if (MANY) document.title = document.title.replace(S.name, T.label);
-  $$("[data-t]").forEach((el) => { el.textContent = { label: T.label, season: S.season, intro: T.historyIntro || "", past: T.pastIntro || "The last three winters, game by game, with each season's record, captains and honors." }[el.dataset.t]; });
+  $$("[data-t]").forEach((el) => { el.textContent = { label: T.label, season: S.season, intro: T.historyIntro || "", bygame: `${S.game} by ${S.game}`.replace(/\b[a-z]/g, (c) => c.toUpperCase()).replace(" By ", " by "), past: T.pastIntro || "The last three winters, game by game, with each season's record, captains and honors." }[el.dataset.t]; });
   const US = T.teamName || "Danvers";   // a co-op team plays under its own name
 
   /* the shared scripts (share image, forecast, game-day bar) read these */
