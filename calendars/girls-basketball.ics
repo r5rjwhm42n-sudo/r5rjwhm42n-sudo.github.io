@@ -84,7 +84,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:girls-basketball-6@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
-DTSTART;TZID=America/New_York:20270104T183000
+DTSTART;TZID=America/New_York:20270104T153000
 DURATION:PT1H45M
 SUMMARY:Danvers Girls Basketball vs Masconomet
 LOCATION:Danvers High School Field House\, Danvers
@@ -139,7 +139,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:girls-basketball-11@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
-DTSTART;TZID=America/New_York:20270122T190000
+DTSTART;TZID=America/New_York:20270122T183000
 DURATION:PT1H45M
 SUMMARY:Danvers Girls Basketball vs Gloucester
 LOCATION:Danvers High School Field House\, Danvers

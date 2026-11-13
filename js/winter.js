@@ -413,7 +413,7 @@
             <div class="opp"><small>${isHome ? "VS" : "AT"}</small>${esc(opp)}</div>
             <div class="meta">
               <span class="tag ${isHome ? "home" : ""}">${isHome ? "Home" : "Away"}</span>
-              <span class="tag">${esc(type)}</span>
+              ${type ? `<span class="tag">${esc(type)}</span>` : ""}
               ${result && note ? `<span>${esc(note)}</span>` : ""}
             </div>
           </div>
