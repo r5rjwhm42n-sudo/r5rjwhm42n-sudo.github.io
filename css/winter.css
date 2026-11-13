@@ -8,6 +8,8 @@
 .scoreboard.spot-board { box-shadow: 0 0 0 2px var(--white), 0 16px 40px rgba(5, 14, 40, .45); }
 .sb-row .rec { font-family: var(--display); font-weight: 800; font-size: 30px; line-height: 1; color: var(--muted); font-variant-numeric: tabular-nums; }
 .spot-board .sb-row .nm { color: var(--ink); }
+.sb-row .rec { flex: none; white-space: nowrap; }
+.spot-board .sb-row .nm { min-width: 0; overflow-wrap: anywhere; line-height: 1.05; }
 
 /* a tile whose value is a few words, not a number */
 .tile .v .words { display: block; font-size: 26px; line-height: 1.08; padding: 6px 0 4px; white-space: normal; text-transform: uppercase; }

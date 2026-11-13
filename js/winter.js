@@ -29,7 +29,7 @@
   document.body.dataset.sportLabel = T.label;   // read by the shared share-a-result image
   const to = (href, key = teamKey) => (MANY ? `${href}?team=${key}` : href);
   if (MANY) document.title = document.title.replace(S.name, T.label);
-  $$("[data-t]").forEach((el) => { el.textContent = { label: T.label, season: S.season, intro: T.historyIntro || "" }[el.dataset.t]; });
+  $$("[data-t]").forEach((el) => { el.textContent = { label: T.label, season: S.season, intro: T.historyIntro || "", past: T.pastIntro || "The last three winters, game by game, with each season's record, captains and honors." }[el.dataset.t]; });
   const US = T.teamName || "Danvers";   // a co-op team plays under its own name
 
   /* the shared scripts (share image, forecast, game-day bar) read these */
@@ -243,7 +243,7 @@
     const row = (name, right, win, logo) => `
       <div class="sb-row ${win ? "win" : ""}">
         ${logo ? `<img src="${LOGO}" alt="">` : `<span class="dot">${esc(name[0])}</span>`}
-        <span class="nm">${esc(name)}</span><span class="${typeof right === "number" ? "pts" : "rec"}">${right}</span>
+        <span class="nm">${esc(name).replace(/\//g, "/<wbr>")}</span><span class="${typeof right === "number" ? "pts" : "rec"}">${right}</span>
       </div>`;
 
     if (prev) {
