@@ -28,7 +28,7 @@
     ["Newburyport", 42.812, -70.877], ["Haverhill", 42.776, -71.077], ["Bradford", 42.776, -71.077], ["Stoneham", 42.48, -71.099],
     ["Malden", 42.425, -71.066], ["Everett", 42.408, -71.054], ["Wakefield", 42.506, -71.073], ["Arlington", 42.415, -71.157],
     ["Medford", 42.418, -71.106], ["Weston", 42.367, -71.303], ["Middleton", 42.595, -71.016], ["Topsfield", 42.637, -70.95],
-    ["East Longmeadow", 42.064, -72.513], ["Worcester", 42.262, -71.802],
+    ["East Longmeadow", 42.064, -72.513], ["Worcester", 42.262, -71.802], ["Billerica", 42.558, -71.269],
     ["Danvers", 42.575, -70.93]
   ];
   const HOME = [42.575, -70.93];

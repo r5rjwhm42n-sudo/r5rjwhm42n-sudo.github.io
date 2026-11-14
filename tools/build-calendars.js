@@ -112,6 +112,7 @@ function feeds(root) {
   const gf = load(root, "golf", "SCHEDULE");
   const xc = load(root, "cross-country", "MEETS");
   const es = load(root, "esports", "GAMES, SCHEDULE");
+  const ch = load(root, "cheer", "TEAMS").TEAMS.varsity;
 
   const ticketLine = (t) => (t ? `${t.note || "Tickets"}: ${t.url}` : null);
   const football = games("football", "Football", "football", fb.SCHEDULE, 150, "",
@@ -153,7 +154,14 @@ function feeds(root) {
     lines: [`${GAME[m.game].name} · ${GAME[m.game].series}`, m.result ? `Final: Danvers ${m.us}, ${m.opponent || "opponent"} ${m.them}` : null, m.summary || null]
   }));
 
-  const all = [football, girls, boys, hockey, volleyball, golf, crossCountry, esports].flat();
+  const cheer = ch.schedule.filter((g) => !g.cancelled && !g.dateTbd).map((g) => ({
+    uid: `cheer-${g.id}`, date: g.date, allDay: !!g.timeTbd, minutes: 120, url: page("cheer"),
+    title: `Danvers Cheer: ${g.name}${g.place ? ` (${g.place})` : ""}`,
+    location: g.site,
+    lines: [g.kind || null, g.tag || null, g.place ? `Result: ${g.place}${g.score != null ? `, ${g.score}` : ""}` : null, g.summary || null, ...(g.place ? [] : (g.notes || []).slice(0, 2))]
+  }));
+
+  const all = [football, girls, boys, hockey, volleyball, golf, crossCountry, esports, cheer].flat();
   return [
     ["football", "Danvers Football", football],
     ["girls-soccer", "Danvers Girls Soccer", girls],
@@ -163,6 +171,7 @@ function feeds(root) {
     ["golf", "Danvers Golf", golf],
     ["cross-country", "Danvers Cross Country", crossCountry],
     ["esports", "Danvers Esports", esports],
+    ["cheer", "Danvers Cheer", cheer],
     ["all-sports", "Danvers Falcons", all]
   ];
 }

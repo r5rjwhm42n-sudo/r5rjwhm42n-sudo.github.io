@@ -1978,6 +1978,17 @@ DESCRIPTION:MIAA state tournament · Round of 16\nFinal: Danvers 30\, Bedfo
 URL:https://danversfalconsathletics.org/football/#schedule
 END:VEVENT
 BEGIN:VEVENT
+UID:cheer-1@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;VALUE=DATE:20261107
+DTEND;VALUE=DATE:20261108
+SUMMARY:Danvers Cheer: NEC Championship (Qualified)
+LOCATION:Gloucester High School\, Gloucester
+DESCRIPTION:NEC\nResult: Qualified\nSchedule and results: https://danversfa
+ lconsathletics.org/cheer/#schedule
+URL:https://danversfalconsathletics.org/cheer/#schedule
+END:VEVENT
+BEGIN:VEVENT
 UID:girls-soccer-107@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261109T180000
@@ -2043,6 +2054,20 @@ DESCRIPTION:Postseason\nSchedule and results: https://danversfalconsathleti
 URL:https://danversfalconsathletics.org/cross-country/#schedule
 END:VEVENT
 BEGIN:VEVENT
+UID:cheer-2@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261115T161500
+DURATION:PT2H
+SUMMARY:Danvers Cheer: MSAA North Regional
+LOCATION:Billerica Memorial High School\, Billerica
+DESCRIPTION:MSAA regional\nDivision 3\nDanvers competes in Division 3 and i
+ s 7th of 13 teams to take the mat (No. 44 in the day's order)\nRegistratio
+ n at 3:35 PM and report to warm-up at 4:15 PM\; the afternoon session star
+ ts at 2:30 PM\nSchedule and results: https://danversfalconsathletics.org/c
+ heer/#schedule
+URL:https://danversfalconsathletics.org/cheer/#schedule
+END:VEVENT
+BEGIN:VEVENT
 UID:cross-country-14@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261121T140000
@@ -2052,6 +2077,19 @@ LOCATION:Devens
 DESCRIPTION:Postseason\nSchedule and results: https://danversfalconsathleti
  cs.org/cross-country/#schedule
 URL:https://danversfalconsathletics.org/cross-country/#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:cheer-3@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261123
+SUMMARY:Danvers Cheer: MSAA State Finals
+LOCATION:Worcester State University\, Worcester
+DESCRIPTION:MSAA state finals\nIf qualified\nFor the teams that qualify at 
+ the regionals\nSession 1 starts at 10:30 AM and session 2 at about 2:45 PM
+ \; the order of appearance comes out after the regionals\nSchedule and res
+ ults: https://danversfalconsathletics.org/cheer/#schedule
+URL:https://danversfalconsathletics.org/cheer/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:football-9@danversfalconsathletics.org

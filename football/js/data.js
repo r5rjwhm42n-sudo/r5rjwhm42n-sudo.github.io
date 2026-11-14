@@ -294,8 +294,9 @@ const SCHEDULE = [
     ],
     tag: "NEC Title Game",
     /* spotlight: a big-game banner across the top of the hub and the football home page.
-       It shows for the week before the game and for two days after the final. The
-       background is the first photo in PHOTOS below. */
+       It shows for the week before the game and for two days after the final (until:
+       "2026-11-19T23:59" keeps a big result up longer). The background is the first
+       photo in PHOTOS below. */
     spotlight: {
       kicker: "NEC Title Game",
       blurb: "A Danvers win clinches the Northeastern Conference title, the program's first since 2019.",
@@ -362,6 +363,14 @@ const SCHEDULE = [
     home: true, league: false, postseason: true, round: "Quarterfinals", site: HOME_FIELD,
     result: "W", us: 40, them: 35,
     quarters: { us: [7, 14, 13, 6], them: [7, 7, 14, 7] },
+    spotlight: {
+      kicker: "Division 4 Quarterfinal",
+      blurb: "No. 3 Danvers hosts No. 6 Tantasqua Regional in the MIAA Division 4 quarterfinals. A win sends the Falcons to the semifinals.",
+      oppRecord: "7–3",   // Tantasqua's record after the game
+      until: "2026-11-19T23:59",   // the win stays on the front page until semifinal week
+      won: "On to the Semifinals",
+      lost: "Final"
+    },
     summary: "Danvers outlasted No. 6 Tantasqua Regional 40–35 at Deering Stadium to reach the MIAA Division 4 semifinals and stay unbeaten at 9–0. The teams were tied 7–7 after a quarter before the Falcons put up 14 points in the second to lead 21–14 at halftime. Danvers scored 13 more in the third, but Tantasqua answered with 14 of its own to stay within 34–28, and each team scored once more in the fourth quarter. Tantasqua's 35 points were the most anyone has scored on Danvers this season.",
     tag: "State Tournament",
     notes: ["A 40–35 win over No. 6 Tantasqua sends Danvers to the MIAA Division 4 semifinals at 9–0", "Danvers led 21–14 at halftime and 34–28 after three quarters", "Tantasqua's 35 points are the most Danvers has allowed this season, topping Bedford's 27 a week earlier", "The win ended Tantasqua's three-game winning streak; the Warriors finish their season against Shepherd Hill on Thanksgiving", "Next: No. 2 Tewksbury (9–1), a 49–14 winner over Shepherd Hill, in the semifinals", "Scoring plays and player stats haven't been published yet"],

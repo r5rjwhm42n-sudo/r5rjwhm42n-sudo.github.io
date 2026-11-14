@@ -120,6 +120,17 @@
         result: m.result || null, score: m.result ? `${m.us}–${m.them}` : null, final: !!m.result, off: !!m.off, summary: m.summary || null
       }));
       return { teams: [{ label: null, events: ev, record: record(ev.filter((e) => e.result)) }], rank: null, titles: [] };
+    },
+    /* cheer competes for placings: each competition is an event with its place (and score) once it's over */
+    cheer(d) {
+      const T = d.TEAMS.varsity;
+      const ev = T.schedule.filter((g) => !g.scrimmage).map((g) => ({
+        sport: "cheer", team: "Cheer", href: "cheer/#schedule", date: g.date, timeTbd: g.timeTbd, dateTbd: !!g.dateTbd, dates: g.dates,
+        home: null, site: g.site, opponent: null, title: g.name || g.opponent, tournament: true,
+        result: null, score: g.place ? `${g.place}${g.score != null ? ` · ${g.score}` : ""}` : null, final: !!g.place, off: !!g.cancelled,
+        summary: g.summary || null, headline: g.headline || null
+      }));
+      return { teams: [{ label: null, events: ev, record: null }], rank: null, titles: [], photos: [] };
     }
   };
 
@@ -235,7 +246,8 @@
     const box = $("#spotlight");
     const g = d?.SCHEDULE?.find((x) => {
       const t = new Date(x.date).getTime();
-      return x.spotlight && !x.cancelled && NOW > t - 7 * 864e5 && NOW < t + (x.result ? 2 * 864e5 : 12 * HOUR);
+      const until = x.spotlight?.until ? new Date(x.spotlight.until).getTime() : t + (x.result ? 2 * 864e5 : 12 * HOUR);   // until: keep a big result up longer
+      return x.spotlight && !x.cancelled && NOW > t - 7 * 864e5 && NOW < until;
     });
     if (!box || !g) return;
     const sp = g.spotlight, start = new Date(g.date).getTime(), done = !!g.result;
@@ -473,7 +485,7 @@
 
   /* ---------- Photos: action shots from every site's PHOTOS join the team photos ---------- */
   function renderGallery(S) {
-    const NAMES_BY = { football: "Football", soccer: "Soccer", "field-hockey": "Field Hockey", volleyball: "Volleyball", "cross-country": "Cross Country", golf: "Golf", esports: "Esports" };
+    const NAMES_BY = { football: "Football", soccer: "Soccer", "field-hockey": "Field Hockey", volleyball: "Volleyball", "cross-country": "Cross Country", golf: "Golf", esports: "Esports", cheer: "Cheer" };
     /* every team site's action shots, one team at a time (each site's newest first) so the sports mix all the way down;
        the first SHOW of each team show at once and "More photos" opens the rest */
     const SHOW = 2;
