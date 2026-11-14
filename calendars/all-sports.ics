@@ -2976,7 +2976,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:girls-basketball-15@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
-DTSTART;TZID=America/New_York:20270204T183000
+DTSTART;TZID=America/New_York:20270204T173000
 DURATION:PT1H45M
 SUMMARY:Danvers Girls Basketball vs Manchester Essex
 LOCATION:Danvers High School Field House\, Danvers

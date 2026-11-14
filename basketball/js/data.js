@@ -369,7 +369,7 @@ const TEAMS = {
       { id: 12, date: "2027-01-27T18:30", opponent: "Manchester Essex", mascot: "Hornets", home: false, league: false, site: "Manchester Essex Regional High School, Manchester", result: null },
       { id: 13, date: "2027-01-29T18:15", opponent: "Masconomet", mascot: "Chieftains", home: false, league: true, site: "Masconomet Regional High School, Boxford", result: null },
       { id: 14, date: "2027-02-02T18:00", opponent: "Saugus", mascot: "Sachems", home: false, league: true, site: "Saugus High School, Saugus", result: null },
-      { id: 15, date: "2027-02-04T18:30", opponent: "Manchester Essex", mascot: "Hornets", home: true, league: false, site: "Danvers High School Field House, Danvers", result: null },
+      { id: 15, date: "2027-02-04T17:30", opponent: "Manchester Essex", mascot: "Hornets", home: true, league: false, site: "Danvers High School Field House, Danvers", result: null },
       { id: 16, date: "2027-02-05T18:30", opponent: "Marblehead", mascot: "Magicians", home: true, league: true, site: "Danvers High School Field House, Danvers", result: null },
       { id: 17, date: "2027-02-08T18:00", opponent: "Beverly", mascot: "Panthers", home: false, league: true, site: "Beverly High School, Beverly", result: null },
       { id: 18, date: "2027-02-11T18:30", opponent: "Swampscott", mascot: "Big Blue", home: true, league: true, site: "Danvers High School Field House, Danvers", result: null },
