@@ -29,6 +29,17 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:girls-indoor-track-1@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261210T163000
+DURATION:PT3H
+SUMMARY:Danvers Girls Indoor Track at NEC meet at Marblehead
+LOCATION:Site to be announced
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/indoor-track/?team=girls#schedule
+URL:https://danversfalconsathletics.org/indoor-track/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-indoor-track-2@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261217T163000
 DURATION:PT3H
 SUMMARY:Danvers Girls Indoor Track at NEC meet at Swampscott
@@ -38,7 +49,7 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/indoor-track/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:girls-indoor-track-2@danversfalconsathletics.org
+UID:girls-indoor-track-3@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261228T140000
 DURATION:PT3H
@@ -49,7 +60,7 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/indoor-track/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:girls-indoor-track-3@danversfalconsathletics.org
+UID:girls-indoor-track-4@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261229T093000
 DURATION:PT3H
@@ -60,7 +71,7 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/indoor-track/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:girls-indoor-track-4@danversfalconsathletics.org
+UID:girls-indoor-track-5@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270106T163000
 DURATION:PT3H
@@ -72,7 +83,7 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/indoor-track/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:girls-indoor-track-5@danversfalconsathletics.org
+UID:girls-indoor-track-6@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270113T163000
 DURATION:PT3H
@@ -83,7 +94,7 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/indoor-track/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:girls-indoor-track-6@danversfalconsathletics.org
+UID:girls-indoor-track-7@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270120T163000
 DURATION:PT3H
@@ -94,7 +105,7 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/indoor-track/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:girls-indoor-track-7@danversfalconsathletics.org
+UID:girls-indoor-track-8@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270127T163000
 DURATION:PT3H
@@ -105,7 +116,7 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/indoor-track/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:girls-indoor-track-8@danversfalconsathletics.org
+UID:girls-indoor-track-9@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270130T083000
 DURATION:PT3H

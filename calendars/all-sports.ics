@@ -2119,10 +2119,32 @@ DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261207T180000
 DURATION:PT1H45M
 SUMMARY:Danvers Girls Basketball vs Somerville (scrimmage)
-LOCATION:Danvers High School Field House\, Danvers
+LOCATION:Danvers High School\, Danvers
 DESCRIPTION:Scrimmage\nSchedule and results: https://danversfalconsathletic
  s.org/basketball/?team=girls#schedule
 URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-indoor-track-1@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261210T163000
+DURATION:PT3H
+SUMMARY:Danvers Boys Indoor Track at NEC meet at Marblehead
+LOCATION:Marblehead High School\, Marblehead
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/indoor-track/?team=boys#schedule
+URL:https://danversfalconsathletics.org/indoor-track/?team=boys#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-indoor-track-1@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261210T163000
+DURATION:PT3H
+SUMMARY:Danvers Girls Indoor Track at NEC meet at Marblehead
+LOCATION:Site to be announced
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/indoor-track/?team=girls#schedule
+URL:https://danversfalconsathletics.org/indoor-track/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:boys-basketball-1@danversfalconsathletics.org
@@ -2130,7 +2152,7 @@ DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261211T170000
 DURATION:PT1H45M
 SUMMARY:Danvers Boys Basketball at Marblehead
-LOCATION:Marblehead High School\, Marblehead
+LOCATION:Salem Academy Charter School (Read Gymnasium)\, Salem
 DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
  cs.org/basketball/?team=boys#schedule
 URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
@@ -2174,7 +2196,7 @@ DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261214T180000
 DURATION:PT1H45M
 SUMMARY:Danvers Girls Basketball at Melrose
-LOCATION:Melrose High School\, Melrose
+LOCATION:Melrose Middle School\, Melrose
 DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
  cs.org/basketball/?team=girls#schedule
 URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
@@ -2202,6 +2224,17 @@ DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
 URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
+UID:boys-hockey-2@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261216T183000
+DURATION:PT1H45M
+SUMMARY:Danvers Boys Hockey at Essex Tech
+LOCATION:Essex Sports Center\, Middleton
+DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
+ cs.org/hockey/?team=boys#schedule
+URL:https://danversfalconsathletics.org/hockey/?team=boys#schedule
+END:VEVENT
+BEGIN:VEVENT
 UID:girls-hockey-2@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261216T190000
@@ -2213,7 +2246,7 @@ DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-indoor-track-1@danversfalconsathletics.org
+UID:boys-indoor-track-2@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261217T163000
 DURATION:PT3H
@@ -2224,7 +2257,7 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/indoor-track/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:girls-indoor-track-1@danversfalconsathletics.org
+UID:girls-indoor-track-2@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261217T163000
 DURATION:PT3H
@@ -2240,7 +2273,7 @@ DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261218T183000
 DURATION:PT1H45M
 SUMMARY:Danvers Girls Basketball vs Winthrop
-LOCATION:Danvers High School Field House\, Danvers
+LOCATION:Danvers High School Gym\, Danvers
 DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
  alconsathletics.org/basketball/?team=girls#schedule
 URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
@@ -2273,7 +2306,7 @@ DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261219T090000
 DURATION:PT2H30M
 SUMMARY:Danvers Wrestling vs Triton
-LOCATION:Danvers High School\, Danvers
+LOCATION:Danvers High School (Vye Gym)\, Danvers
 DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
  cs.org/wrestling/#schedule
 URL:https://danversfalconsathletics.org/wrestling/#schedule
@@ -2284,7 +2317,7 @@ DTSTAMP:20260801T000000Z
 DTSTART;VALUE=DATE:20261219
 DTEND;VALUE=DATE:20261220
 SUMMARY:Danvers Wrestling vs Essex Tech
-LOCATION:Danvers High School\, Danvers
+LOCATION:Danvers High School (Vye Gym)\, Danvers
 DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
  cs.org/wrestling/#schedule
 URL:https://danversfalconsathletics.org/wrestling/#schedule
@@ -2295,7 +2328,7 @@ DTSTAMP:20260801T000000Z
 DTSTART;VALUE=DATE:20261219
 DTEND;VALUE=DATE:20261220
 SUMMARY:Danvers Wrestling vs East Boston
-LOCATION:Danvers High School\, Danvers
+LOCATION:Danvers High School (Vye Gym)\, Danvers
 DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
  cs.org/wrestling/#schedule
 URL:https://danversfalconsathletics.org/wrestling/#schedule
@@ -2312,7 +2345,7 @@ DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-hockey-2@danversfalconsathletics.org
+UID:boys-hockey-3@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261219T193000
 DURATION:PT1H45M
@@ -2334,6 +2367,17 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/gymnastics/#schedule
 END:VEVENT
 BEGIN:VEVENT
+UID:boys-hockey-4@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261223T160000
+DURATION:PT1H45M
+SUMMARY:Danvers Boys Hockey vs Winthrop
+LOCATION:Raymond J. Bourque Arena\, Endicott College\, Beverly
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/hockey/?team=boys#schedule
+URL:https://danversfalconsathletics.org/hockey/?team=boys#schedule
+END:VEVENT
+BEGIN:VEVENT
 UID:girls-hockey-4@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261223T160000
@@ -2345,7 +2389,7 @@ DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-hockey-3@danversfalconsathletics.org
+UID:boys-hockey-5@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261226T160000
 DURATION:PT1H45M
@@ -2367,7 +2411,18 @@ DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-indoor-track-2@danversfalconsathletics.org
+UID:boys-hockey-6@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;VALUE=DATE:20261227
+DTEND;VALUE=DATE:20261228
+SUMMARY:Danvers Boys Hockey vs Holiday Tournament: final round
+LOCATION:Site to be announced
+DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
+ cs.org/hockey/?team=boys#schedule
+URL:https://danversfalconsathletics.org/hockey/?team=boys#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-indoor-track-3@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261228T140000
 DURATION:PT3H
@@ -2378,7 +2433,7 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/indoor-track/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:girls-indoor-track-2@danversfalconsathletics.org
+UID:girls-indoor-track-3@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261228T140000
 DURATION:PT3H
@@ -2394,7 +2449,7 @@ DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261228T163000
 DURATION:PT1H45M
 SUMMARY:Danvers Boys Basketball vs Excel Academy
-LOCATION:Danvers High School Field House\, Danvers
+LOCATION:Gloucester High School Field House\, Gloucester
 DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
  cs.org/basketball/?team=boys#schedule
 URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
@@ -2405,13 +2460,13 @@ DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261228T170000
 DURATION:PT1H45M
 SUMMARY:Danvers Girls Basketball vs Hamilton-Wenham
-LOCATION:Danvers High School Field House\, Danvers
+LOCATION:Danvers High School Gym\, Danvers
 DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
  cs.org/basketball/?team=girls#schedule
 URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-indoor-track-3@danversfalconsathletics.org
+UID:boys-indoor-track-4@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261229T093000
 DURATION:PT3H
@@ -2422,7 +2477,7 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/indoor-track/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:girls-indoor-track-3@danversfalconsathletics.org
+UID:girls-indoor-track-4@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261229T093000
 DURATION:PT3H
@@ -2433,7 +2488,30 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/indoor-track/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-hockey-4@danversfalconsathletics.org
+UID:boys-basketball-5@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261229T163000
+DURATION:PT1H45M
+SUMMARY:Danvers Boys Basketball vs Game at Gloucester: opponent to be annou
+ nced
+LOCATION:Gloucester High School Field House\, Gloucester
+DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
+ cs.org/basketball/?team=boys#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-basketball-6@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261229T183000
+DURATION:PT1H45M
+SUMMARY:Danvers Girls Basketball vs Home game: opponent to be announced
+LOCATION:Danvers High School\, Danvers
+DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
+ cs.org/basketball/?team=girls#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-hockey-7@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261230T120000
 DURATION:PT1H45M
@@ -2453,6 +2531,17 @@ LOCATION:Raymond J. Bourque Arena\, Endicott College\, Beverly
 DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
  alconsathletics.org/hockey/?team=girls#schedule
 URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:wrestling-6@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270102T090000
+DURATION:PT2H30M
+SUMMARY:Danvers Wrestling vs Home quad meet: Foxborough and two more teams
+LOCATION:Danvers High School (Vye Gym)\, Danvers
+DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
+ cs.org/wrestling/#schedule
+URL:https://danversfalconsathletics.org/wrestling/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:girls-hockey-7@danversfalconsathletics.org
@@ -2477,9 +2566,9 @@ DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
 URL:https://danversfalconsathletics.org/gymnastics/#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:girls-basketball-6@danversfalconsathletics.org
+UID:girls-basketball-7@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
-DTSTART;TZID=America/New_York:20270104T153000
+DTSTART;TZID=America/New_York:20270104T183000
 DURATION:PT1H45M
 SUMMARY:Danvers Girls Basketball vs Masconomet
 LOCATION:Danvers High School Field House\, Danvers
@@ -2488,7 +2577,7 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-basketball-5@danversfalconsathletics.org
+UID:boys-basketball-6@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270104T190000
 DURATION:PT1H45M
@@ -2510,7 +2599,7 @@ DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-indoor-track-4@danversfalconsathletics.org
+UID:boys-indoor-track-5@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270106T163000
 DURATION:PT3H
@@ -2522,7 +2611,7 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/indoor-track/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:girls-indoor-track-4@danversfalconsathletics.org
+UID:girls-indoor-track-5@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270106T163000
 DURATION:PT3H
@@ -2534,18 +2623,29 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/indoor-track/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:wrestling-6@danversfalconsathletics.org
+UID:wrestling-7@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270106T173000
 DURATION:PT2H30M
 SUMMARY:Danvers Wrestling vs Salem
-LOCATION:Danvers High School\, Danvers
+LOCATION:Danvers High School (Vye Gym)\, Danvers
 DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
  alconsathletics.org/wrestling/#schedule
 URL:https://danversfalconsathletics.org/wrestling/#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:girls-basketball-7@danversfalconsathletics.org
+UID:boys-hockey-8@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270106T180000
+DURATION:PT1H45M
+SUMMARY:Danvers Boys Hockey at Gloucester
+LOCATION:Dorothy Talbot Rink\, Gloucester
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/hockey/?team=boys#schedule
+URL:https://danversfalconsathletics.org/hockey/?team=boys#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-basketball-8@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270107T180000
 DURATION:PT1H45M
@@ -2556,25 +2656,25 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-basketball-6@danversfalconsathletics.org
+UID:boys-basketball-7@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270107T190000
 DURATION:PT1H45M
 SUMMARY:Danvers Boys Basketball vs Marblehead
-LOCATION:Danvers High School Field House\, Danvers
+LOCATION:Danvers High School Gym\, Danvers
 DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
  alconsathletics.org/basketball/?team=boys#schedule
 URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-hockey-5@danversfalconsathletics.org
+UID:boys-hockey-9@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
-DTSTART;TZID=America/New_York:20270108T193000
+DTSTART;TZID=America/New_York:20270109T140000
 DURATION:PT1H45M
-SUMMARY:Danvers Boys Hockey vs Winthrop
-LOCATION:Raymond J. Bourque Arena\, Endicott College\, Beverly
-DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
- alconsathletics.org/hockey/?team=boys#schedule
+SUMMARY:Danvers Boys Hockey vs Newton North
+LOCATION:Walter Brown Arena\, Boston University\, Boston
+DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
+ cs.org/hockey/?team=boys#schedule
 URL:https://danversfalconsathletics.org/hockey/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
@@ -2589,18 +2689,18 @@ DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-basketball-7@danversfalconsathletics.org
+UID:boys-basketball-8@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270110T130000
 DURATION:PT1H45M
 SUMMARY:Danvers Boys Basketball vs Peabody
-LOCATION:Danvers High School Field House\, Danvers
+LOCATION:Danvers High School Gym\, Danvers
 DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
  alconsathletics.org/basketball/?team=boys#schedule
 URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:girls-basketball-8@danversfalconsathletics.org
+UID:girls-basketball-9@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270111T183000
 DURATION:PT1H45M
@@ -2622,18 +2722,18 @@ DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-basketball-8@danversfalconsathletics.org
+UID:boys-basketball-9@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270112T190000
 DURATION:PT1H45M
 SUMMARY:Danvers Boys Basketball vs Salem
-LOCATION:Danvers High School Field House\, Danvers
+LOCATION:Danvers High School Gym\, Danvers
 DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
  alconsathletics.org/basketball/?team=boys#schedule
 URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-indoor-track-5@danversfalconsathletics.org
+UID:boys-indoor-track-6@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270113T163000
 DURATION:PT3H
@@ -2655,7 +2755,7 @@ DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:girls-indoor-track-5@danversfalconsathletics.org
+UID:girls-indoor-track-6@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270113T163000
 DURATION:PT3H
@@ -2666,18 +2766,18 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/indoor-track/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:girls-basketball-9@danversfalconsathletics.org
+UID:girls-basketball-10@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270113T183000
 DURATION:PT1H45M
 SUMMARY:Danvers Girls Basketball vs Melrose
-LOCATION:Danvers High School Field House\, Danvers
+LOCATION:Danvers High School\, Danvers
 DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
  cs.org/basketball/?team=girls#schedule
 URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-hockey-6@danversfalconsathletics.org
+UID:boys-hockey-10@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270113T190000
 DURATION:PT1H45M
@@ -2688,7 +2788,7 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/hockey/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:wrestling-7@danversfalconsathletics.org
+UID:wrestling-8@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270113T190000
 DURATION:PT2H30M
@@ -2699,7 +2799,7 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/wrestling/#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-basketball-9@danversfalconsathletics.org
+UID:boys-basketball-10@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270115T190000
 DURATION:PT1H45M
@@ -2732,7 +2832,7 @@ DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-hockey-7@danversfalconsathletics.org
+UID:boys-hockey-11@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270116T200000
 DURATION:PT1H45M
@@ -2754,7 +2854,7 @@ DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
 URL:https://danversfalconsathletics.org/gymnastics/#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-hockey-8@danversfalconsathletics.org
+UID:boys-hockey-12@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270118T120000
 DURATION:PT1H45M
@@ -2765,18 +2865,18 @@ DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
 URL:https://danversfalconsathletics.org/hockey/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:girls-basketball-10@danversfalconsathletics.org
+UID:girls-basketball-11@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270119T183000
 DURATION:PT1H45M
 SUMMARY:Danvers Girls Basketball vs Peabody
-LOCATION:Danvers High School Field House\, Danvers
+LOCATION:Danvers High School\, Danvers
 DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
  alconsathletics.org/basketball/?team=girls#schedule
 URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-basketball-10@danversfalconsathletics.org
+UID:boys-basketball-11@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270119T190000
 DURATION:PT1H45M
@@ -2787,7 +2887,7 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-indoor-track-6@danversfalconsathletics.org
+UID:boys-indoor-track-7@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270120T163000
 DURATION:PT3H
@@ -2798,7 +2898,7 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/indoor-track/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:girls-indoor-track-6@danversfalconsathletics.org
+UID:girls-indoor-track-7@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270120T163000
 DURATION:PT3H
@@ -2820,18 +2920,29 @@ DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:girls-basketball-11@danversfalconsathletics.org
+UID:wrestling-9@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270120T183000
+DURATION:PT2H30M
+SUMMARY:Danvers Wrestling at Marblehead/Swampscott
+LOCATION:Marblehead High School\, Marblehead
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/wrestling/#schedule
+URL:https://danversfalconsathletics.org/wrestling/#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:girls-basketball-12@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270122T183000
 DURATION:PT1H45M
 SUMMARY:Danvers Girls Basketball vs Gloucester
-LOCATION:Danvers High School Field House\, Danvers
+LOCATION:Danvers High School Gym\, Danvers
 DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
  alconsathletics.org/basketball/?team=girls#schedule
 URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-basketball-11@danversfalconsathletics.org
+UID:boys-basketball-12@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270122T190000
 DURATION:PT1H45M
@@ -2840,6 +2951,17 @@ LOCATION:Gloucester High School\, Gloucester
 DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
  alconsathletics.org/basketball/?team=boys#schedule
 URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:wrestling-10@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270123T100000
+DURATION:PT2H30M
+SUMMARY:Danvers Wrestling at Quad meet at North Reading
+LOCATION:North Reading High School\, North Reading
+DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
+ cs.org/wrestling/#schedule
+URL:https://danversfalconsathletics.org/wrestling/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:girls-hockey-14@danversfalconsathletics.org
@@ -2853,7 +2975,7 @@ DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-hockey-9@danversfalconsathletics.org
+UID:boys-hockey-13@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270123T150000
 DURATION:PT1H45M
@@ -2864,7 +2986,7 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/hockey/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-indoor-track-7@danversfalconsathletics.org
+UID:boys-indoor-track-8@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270127T163000
 DURATION:PT3H
@@ -2875,7 +2997,7 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/indoor-track/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:girls-indoor-track-7@danversfalconsathletics.org
+UID:girls-indoor-track-8@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270127T163000
 DURATION:PT3H
@@ -2886,7 +3008,7 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/indoor-track/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:girls-basketball-12@danversfalconsathletics.org
+UID:girls-basketball-13@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270127T183000
 DURATION:PT1H45M
@@ -2908,7 +3030,7 @@ DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:wrestling-8@danversfalconsathletics.org
+UID:wrestling-11@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270127T193000
 DURATION:PT2H30M
@@ -2919,7 +3041,7 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/wrestling/#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:girls-basketball-13@danversfalconsathletics.org
+UID:girls-basketball-14@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270129T181500
 DURATION:PT1H45M
@@ -2930,7 +3052,7 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-basketball-12@danversfalconsathletics.org
+UID:boys-basketball-13@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270129T190000
 DURATION:PT1H45M
@@ -2941,7 +3063,7 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-indoor-track-8@danversfalconsathletics.org
+UID:boys-indoor-track-9@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270130T083000
 DURATION:PT3H
@@ -2952,7 +3074,7 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/indoor-track/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:girls-indoor-track-8@danversfalconsathletics.org
+UID:girls-indoor-track-9@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270130T083000
 DURATION:PT3H
@@ -2961,6 +3083,17 @@ LOCATION:Reggie Lewis Center\, Boston
 DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
  alconsathletics.org/indoor-track/?team=girls#schedule
 URL:https://danversfalconsathletics.org/indoor-track/?team=girls#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-hockey-14@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270130T200000
+DURATION:PT1H45M
+SUMMARY:Danvers Boys Hockey vs Gloucester
+LOCATION:Raymond J. Bourque Arena\, Endicott College\, Beverly
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/hockey/?team=boys#schedule
+URL:https://danversfalconsathletics.org/hockey/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:gymnastics-6@danversfalconsathletics.org
@@ -2974,18 +3107,18 @@ DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
 URL:https://danversfalconsathletics.org/gymnastics/#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:wrestling-9@danversfalconsathletics.org
+UID:wrestling-12@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270202T173000
 DURATION:PT2H30M
 SUMMARY:Danvers Wrestling vs Pentucket
-LOCATION:Danvers High School\, Danvers
+LOCATION:Danvers High School (Vye Gym)\, Danvers
 DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
  cs.org/wrestling/#schedule
 URL:https://danversfalconsathletics.org/wrestling/#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:girls-basketball-14@danversfalconsathletics.org
+UID:girls-basketball-15@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270202T180000
 DURATION:PT1H45M
@@ -2996,12 +3129,12 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-basketball-13@danversfalconsathletics.org
+UID:boys-basketball-14@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270202T190000
 DURATION:PT1H45M
 SUMMARY:Danvers Boys Basketball vs Saugus
-LOCATION:Danvers High School Field House\, Danvers
+LOCATION:Danvers High School Gym\, Danvers
 DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
  alconsathletics.org/basketball/?team=boys#schedule
 URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
@@ -3018,7 +3151,7 @@ DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:girls-basketball-15@danversfalconsathletics.org
+UID:girls-basketball-16@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270204T173000
 DURATION:PT1H45M
@@ -3029,7 +3162,7 @@ DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
 URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-basketball-14@danversfalconsathletics.org
+UID:boys-basketball-15@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270204T190000
 DURATION:PT1H45M
@@ -3040,26 +3173,15 @@ DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
 URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:girls-basketball-16@danversfalconsathletics.org
+UID:girls-basketball-17@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270205T183000
 DURATION:PT1H45M
 SUMMARY:Danvers Girls Basketball vs Marblehead
-LOCATION:Danvers High School Field House\, Danvers
+LOCATION:Danvers High School Gym\, Danvers
 DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
  alconsathletics.org/basketball/?team=girls#schedule
 URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
-END:VEVENT
-BEGIN:VEVENT
-UID:boys-basketball-15@danversfalconsathletics.org
-DTSTAMP:20260801T000000Z
-DTSTART;TZID=America/New_York:20270205T190000
-DURATION:PT1H45M
-SUMMARY:Danvers Boys Basketball at Marblehead
-LOCATION:Marblehead High School\, Marblehead
-DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
- alconsathletics.org/basketball/?team=boys#schedule
-URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:girls-hockey-17@danversfalconsathletics.org
@@ -3073,7 +3195,7 @@ DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-hockey-10@danversfalconsathletics.org
+UID:boys-hockey-15@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270206T180000
 DURATION:PT1H45M
@@ -3084,7 +3206,7 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/hockey/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:girls-basketball-17@danversfalconsathletics.org
+UID:girls-basketball-18@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270208T180000
 DURATION:PT1H45M
@@ -3100,7 +3222,7 @@ DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270208T190000
 DURATION:PT1H45M
 SUMMARY:Danvers Boys Basketball vs Beverly
-LOCATION:Danvers High School Field House\, Danvers
+LOCATION:Danvers High School Gym\, Danvers
 DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
  alconsathletics.org/basketball/?team=boys#schedule
 URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
@@ -3117,7 +3239,7 @@ DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-hockey-11@danversfalconsathletics.org
+UID:boys-hockey-16@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270210T201500
 DURATION:PT1H45M
@@ -3128,12 +3250,12 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/hockey/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:girls-basketball-18@danversfalconsathletics.org
+UID:girls-basketball-19@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270211T183000
 DURATION:PT1H45M
 SUMMARY:Danvers Girls Basketball vs Swampscott
-LOCATION:Danvers High School Field House\, Danvers
+LOCATION:Danvers High School Gym\, Danvers
 DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
  alconsathletics.org/basketball/?team=girls#schedule
 URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
@@ -3150,12 +3272,12 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-hockey-12@danversfalconsathletics.org
+UID:boys-hockey-17@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270213T150000
 DURATION:PT1H45M
 SUMMARY:Danvers Boys Hockey at Marblehead
-LOCATION:O'Keefe Center\, Salem State University\, Salem
+LOCATION:Rockett Arena\, Salem State University\, Salem
 DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
  alconsathletics.org/hockey/?team=boys#schedule
 URL:https://danversfalconsathletics.org/hockey/?team=boys#schedule
@@ -3172,29 +3294,29 @@ DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/hockey/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-basketball-19@danversfalconsathletics.org
+UID:boys-basketball-18@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270214T100000
 DURATION:PT1H45M
-SUMMARY:Danvers Boys Basketball vs Home game: opponent to be announced
+SUMMARY:Danvers Boys Basketball vs Salem Academy
 LOCATION:Danvers High School Field House\, Danvers
 DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
  cs.org/basketball/?team=boys#schedule
 URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:girls-basketball-19@danversfalconsathletics.org
+UID:girls-basketball-20@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
-DTSTART;TZID=America/New_York:20270214T160000
+DTSTART;TZID=America/New_York:20270214T120000
 DURATION:PT1H45M
 SUMMARY:Danvers Girls Basketball vs Beverly
-LOCATION:Danvers High School Field House\, Danvers
+LOCATION:Danvers High School Gym\, Danvers
 DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
  alconsathletics.org/basketball/?team=girls#schedule
 URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-hockey-13@danversfalconsathletics.org
+UID:boys-hockey-18@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270215T150000
 DURATION:PT1H45M
@@ -3205,9 +3327,9 @@ DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
 URL:https://danversfalconsathletics.org/hockey/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:girls-basketball-20@danversfalconsathletics.org
+UID:girls-basketball-21@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
-DTSTART;TZID=America/New_York:20270216T173000
+DTSTART;TZID=America/New_York:20270216T170000
 DURATION:PT1H45M
 SUMMARY:Danvers Girls Basketball vs Greater Lawrence Tech
 LOCATION:Danvers High School Field House\, Danvers
@@ -3216,7 +3338,7 @@ DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
 URL:https://danversfalconsathletics.org/basketball/?team=girls#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-basketball-18@danversfalconsathletics.org
+UID:boys-basketball-19@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270216T190000
 DURATION:PT1H45M
@@ -3225,6 +3347,17 @@ LOCATION:Danvers High School Field House\, Danvers
 DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
  cs.org/basketball/?team=boys#schedule
 URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-hockey-19@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;VALUE=DATE:20270217
+DTEND;VALUE=DATE:20270218
+SUMMARY:Danvers Boys Hockey vs Newburyport Bank Classic: final round
+LOCATION:Site to be announced
+DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
+ cs.org/hockey/?team=boys#schedule
+URL:https://danversfalconsathletics.org/hockey/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:girls-hockey-20@danversfalconsathletics.org

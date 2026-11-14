@@ -38,10 +38,10 @@ const TEAMS = {
     label: "Boys Indoor Track",
     short: "Boys",
     headCoach: "Tom Walsh",
-    heroTitle: "Falcons open Dec. 17 at Swampscott",
-    preview: "The indoor season starts Thursday, Dec. 17 with a conference meet at Swampscott. The Falcons host two meets in the field house in January, and the NEC Championship is Saturday, Jan. 30 at the Reggie Lewis Center. Practice begins Monday, Nov. 30.",
+    heroTitle: "Falcons open Dec. 10 at Marblehead",
+    preview: "The indoor season starts Thursday, Dec. 10 with a conference meet at Marblehead, then Swampscott on Dec. 17. The Falcons host two meets in the field house in January, and the NEC Championship is Saturday, Jan. 30 at the Reggie Lewis Center. Practice begins Monday, Nov. 30.",
     stripTile: ["NEC Championship", "Jan 30", "Reggie Lewis Center, Boston"],
-    scheduleNote: "The schedule is from the Falcons athletics site and can change. State divisional and All-State meets follow the conference championship for athletes who qualify.",
+    scheduleNote: "The schedule is from the school's ArbiterLive page and the Falcons athletics site, and can change. State divisional and All-State meets follow the conference championship for athletes who qualify.",
     links: { school: "https://danverspublicschools.org/dhs/athletics/winter-track-and-field/", schedule: "https://www.arbiterlive.com/Teams?entityId=5538" },
     staff: [["Head coach", "Tom Walsh"], ["Assistant coaches", "Tim West, Pat Hennessey & Jeff Bartlett"]],
     about: [
@@ -53,6 +53,17 @@ const TEAMS = {
     schedule: [
       {
         id: 1,
+        date: "2026-12-10T16:30",
+        name: "NEC meet at Marblehead",
+        opponent: "Marblehead and one more team",
+        home: false,
+        league: true,
+        site: "Marblehead High School, Marblehead",
+        result: null,
+        notes: ["The season opener: a conference meet with Marblehead and one other team", "The school's schedule lists it at Marblehead"]
+      },
+      {
+        id: 2,
         date: "2026-12-17T16:30",
         name: "NEC meet at Swampscott",
         opponent: "Swampscott, Masconomet and Salem",
@@ -64,7 +75,7 @@ const TEAMS = {
         notes: ["The season opener: a conference meet with Swampscott, Masconomet and Salem"]
       },
       {
-        id: 2,
+        id: 3,
         date: "2026-12-28T14:00",
         name: "NEC Invitational",
         opponent: "NEC Invitational",
@@ -77,7 +88,7 @@ const TEAMS = {
         notes: ["Doors open at 2:00 PM", "Every Northeastern Conference team in one meet"]
       },
       {
-        id: 3,
+        id: 4,
         date: "2026-12-29T09:30",
         name: "NEC Freshman/Sophomore Championship",
         opponent: "NEC Freshman/Sophomore Championship",
@@ -90,7 +101,7 @@ const TEAMS = {
         notes: ["The conference championship for ninth and tenth graders"]
       },
       {
-        id: 4,
+        id: 5,
         date: "2027-01-06T16:30",
         name: "Home meet: Beverly, Saugus and Winthrop",
         opponent: "Beverly, Saugus and Winthrop",
@@ -102,7 +113,7 @@ const TEAMS = {
         notes: ["Beverly, Saugus and Winthrop come to the Danvers field house"]
       },
       {
-        id: 5,
+        id: 6,
         date: "2027-01-13T16:30",
         name: "NEC meet at Swampscott",
         opponent: "Swampscott and Peabody",
@@ -114,7 +125,7 @@ const TEAMS = {
         notes: ["A conference meet with Swampscott and Peabody"]
       },
       {
-        id: 6,
+        id: 7,
         date: "2027-01-20T16:30",
         opponent: "Gloucester",
         mascot: "Fishermen",
@@ -125,7 +136,7 @@ const TEAMS = {
         notes: ["A double dual at Gloucester: Danvers faces Gloucester while Winthrop faces Masconomet"]
       },
       {
-        id: 7,
+        id: 8,
         date: "2027-01-27T16:30",
         name: "Home meet: Salem and Saugus",
         opponent: "Salem and Saugus",
@@ -137,7 +148,7 @@ const TEAMS = {
         notes: ["Salem and Saugus come to the Danvers field house"]
       },
       {
-        id: 8,
+        id: 9,
         date: "2027-01-30T08:30",
         name: "NEC Championship Meet",
         opponent: "NEC Championship Meet",
@@ -185,10 +196,10 @@ const TEAMS = {
     label: "Girls Indoor Track",
     short: "Girls",
     headCoach: "Erin St. Pierre",
-    heroTitle: "Falcons open Dec. 17 at Swampscott",
-    preview: "The indoor season starts Thursday, Dec. 17 with a conference meet at Swampscott. The Falcons host two meets in the field house in January, and the NEC Championship is Saturday, Jan. 30 at the Reggie Lewis Center. Practice begins Monday, Nov. 30.",
+    heroTitle: "Falcons open Dec. 10 at Marblehead",
+    preview: "The indoor season starts Thursday, Dec. 10 with a conference meet at Marblehead, then Swampscott on Dec. 17. The Falcons host two meets in the field house in January, and the NEC Championship is Saturday, Jan. 30 at the Reggie Lewis Center. Practice begins Monday, Nov. 30.",
     stripTile: ["NEC Championship", "Jan 30", "Reggie Lewis Center, Boston"],
-    scheduleNote: "The schedule is from the Falcons athletics site and can change. State divisional and All-State meets follow the conference championship for athletes who qualify.",
+    scheduleNote: "The schedule is from the school's ArbiterLive page and the Falcons athletics site, and can change. State divisional and All-State meets follow the conference championship for athletes who qualify.",
     links: { school: "https://danverspublicschools.org/dhs/athletics/winter-track-and-field/", schedule: "https://www.arbiterlive.com/Teams?entityId=5538" },
     staff: [["Head coach", "Erin St. Pierre"], ["Assistant coaches", "Tim West, Pat Hennessey & Jeff Bartlett"]],
     about: [
@@ -200,6 +211,17 @@ const TEAMS = {
     schedule: [
       {
         id: 1,
+        date: "2026-12-10T16:30",
+        name: "NEC meet at Marblehead",
+        opponent: "Marblehead and one more team",
+        home: false,
+        league: true,
+        site: "Site to be announced",
+        result: null,
+        notes: ["The season opener: a conference meet with Marblehead and one other team", "The school's schedule lists it at Marblehead; the girls' site is still to be announced"]
+      },
+      {
+        id: 2,
         date: "2026-12-17T16:30",
         name: "NEC meet at Swampscott",
         opponent: "Swampscott, Masconomet and Salem",
@@ -211,7 +233,7 @@ const TEAMS = {
         notes: ["The season opener: a conference meet with Swampscott, Masconomet and Salem"]
       },
       {
-        id: 2,
+        id: 3,
         date: "2026-12-28T14:00",
         name: "NEC Invitational",
         opponent: "NEC Invitational",
@@ -224,7 +246,7 @@ const TEAMS = {
         notes: ["Doors open at 2:00 PM", "Every Northeastern Conference team in one meet"]
       },
       {
-        id: 3,
+        id: 4,
         date: "2026-12-29T09:30",
         name: "NEC Freshman/Sophomore Championship",
         opponent: "NEC Freshman/Sophomore Championship",
@@ -237,7 +259,7 @@ const TEAMS = {
         notes: ["The conference championship for ninth and tenth graders"]
       },
       {
-        id: 4,
+        id: 5,
         date: "2027-01-06T16:30",
         name: "Home meet: Beverly, Saugus and Winthrop",
         opponent: "Beverly, Saugus and Winthrop",
@@ -249,7 +271,7 @@ const TEAMS = {
         notes: ["Beverly, Saugus and Winthrop come to the Danvers field house"]
       },
       {
-        id: 5,
+        id: 6,
         date: "2027-01-13T16:30",
         name: "NEC meet at Swampscott",
         opponent: "Swampscott and Peabody",
@@ -261,7 +283,7 @@ const TEAMS = {
         notes: ["A conference meet with Swampscott and Peabody"]
       },
       {
-        id: 6,
+        id: 7,
         date: "2027-01-20T16:30",
         opponent: "Gloucester",
         mascot: "Fishermen",
@@ -272,7 +294,7 @@ const TEAMS = {
         notes: ["A double dual at Gloucester: Danvers faces Gloucester while Winthrop faces Masconomet"]
       },
       {
-        id: 7,
+        id: 8,
         date: "2027-01-27T16:30",
         name: "Home meet: Salem and Saugus",
         opponent: "Salem and Saugus",
@@ -284,7 +306,7 @@ const TEAMS = {
         notes: ["Salem and Saugus come to the Danvers field house"]
       },
       {
-        id: 8,
+        id: 9,
         date: "2027-01-30T08:30",
         name: "NEC Championship Meet",
         opponent: "NEC Championship Meet",

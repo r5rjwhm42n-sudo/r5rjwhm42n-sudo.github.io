@@ -32,7 +32,7 @@ DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261211T170000
 DURATION:PT1H45M
 SUMMARY:Danvers Boys Basketball at Marblehead
-LOCATION:Marblehead High School\, Marblehead
+LOCATION:Salem Academy Charter School (Read Gymnasium)\, Salem
 DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
  cs.org/basketball/?team=boys#schedule
 URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
@@ -65,13 +65,25 @@ DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261228T163000
 DURATION:PT1H45M
 SUMMARY:Danvers Boys Basketball vs Excel Academy
-LOCATION:Danvers High School Field House\, Danvers
+LOCATION:Gloucester High School Field House\, Gloucester
 DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
  cs.org/basketball/?team=boys#schedule
 URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:boys-basketball-5@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261229T163000
+DURATION:PT1H45M
+SUMMARY:Danvers Boys Basketball vs Game at Gloucester: opponent to be annou
+ nced
+LOCATION:Gloucester High School Field House\, Gloucester
+DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
+ cs.org/basketball/?team=boys#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-basketball-6@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270104T190000
 DURATION:PT1H45M
@@ -82,23 +94,12 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-basketball-6@danversfalconsathletics.org
+UID:boys-basketball-7@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270107T190000
 DURATION:PT1H45M
 SUMMARY:Danvers Boys Basketball vs Marblehead
-LOCATION:Danvers High School Field House\, Danvers
-DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
- alconsathletics.org/basketball/?team=boys#schedule
-URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
-END:VEVENT
-BEGIN:VEVENT
-UID:boys-basketball-7@danversfalconsathletics.org
-DTSTAMP:20260801T000000Z
-DTSTART;TZID=America/New_York:20270110T130000
-DURATION:PT1H45M
-SUMMARY:Danvers Boys Basketball vs Peabody
-LOCATION:Danvers High School Field House\, Danvers
+LOCATION:Danvers High School Gym\, Danvers
 DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
  alconsathletics.org/basketball/?team=boys#schedule
 URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
@@ -106,16 +107,27 @@ END:VEVENT
 BEGIN:VEVENT
 UID:boys-basketball-8@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
-DTSTART;TZID=America/New_York:20270112T190000
+DTSTART;TZID=America/New_York:20270110T130000
 DURATION:PT1H45M
-SUMMARY:Danvers Boys Basketball vs Salem
-LOCATION:Danvers High School Field House\, Danvers
+SUMMARY:Danvers Boys Basketball vs Peabody
+LOCATION:Danvers High School Gym\, Danvers
 DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
  alconsathletics.org/basketball/?team=boys#schedule
 URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:boys-basketball-9@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270112T190000
+DURATION:PT1H45M
+SUMMARY:Danvers Boys Basketball vs Salem
+LOCATION:Danvers High School Gym\, Danvers
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/basketball/?team=boys#schedule
+URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:boys-basketball-10@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270115T190000
 DURATION:PT1H45M
@@ -126,7 +138,7 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-basketball-10@danversfalconsathletics.org
+UID:boys-basketball-11@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270119T190000
 DURATION:PT1H45M
@@ -137,7 +149,7 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-basketball-11@danversfalconsathletics.org
+UID:boys-basketball-12@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270122T190000
 DURATION:PT1H45M
@@ -148,7 +160,7 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-basketball-12@danversfalconsathletics.org
+UID:boys-basketball-13@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270129T190000
 DURATION:PT1H45M
@@ -159,18 +171,18 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-basketball-13@danversfalconsathletics.org
+UID:boys-basketball-14@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270202T190000
 DURATION:PT1H45M
 SUMMARY:Danvers Boys Basketball vs Saugus
-LOCATION:Danvers High School Field House\, Danvers
+LOCATION:Danvers High School Gym\, Danvers
 DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
  alconsathletics.org/basketball/?team=boys#schedule
 URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-basketball-14@danversfalconsathletics.org
+UID:boys-basketball-15@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270204T190000
 DURATION:PT1H45M
@@ -181,23 +193,12 @@ DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
 URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-basketball-15@danversfalconsathletics.org
-DTSTAMP:20260801T000000Z
-DTSTART;TZID=America/New_York:20270205T190000
-DURATION:PT1H45M
-SUMMARY:Danvers Boys Basketball at Marblehead
-LOCATION:Marblehead High School\, Marblehead
-DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
- alconsathletics.org/basketball/?team=boys#schedule
-URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
-END:VEVENT
-BEGIN:VEVENT
 UID:boys-basketball-16@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270208T190000
 DURATION:PT1H45M
 SUMMARY:Danvers Boys Basketball vs Beverly
-LOCATION:Danvers High School Field House\, Danvers
+LOCATION:Danvers High School Gym\, Danvers
 DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
  alconsathletics.org/basketball/?team=boys#schedule
 URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
@@ -214,18 +215,18 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-basketball-19@danversfalconsathletics.org
+UID:boys-basketball-18@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270214T100000
 DURATION:PT1H45M
-SUMMARY:Danvers Boys Basketball vs Home game: opponent to be announced
+SUMMARY:Danvers Boys Basketball vs Salem Academy
 LOCATION:Danvers High School Field House\, Danvers
 DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
  cs.org/basketball/?team=boys#schedule
 URL:https://danversfalconsathletics.org/basketball/?team=boys#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:boys-basketball-18@danversfalconsathletics.org
+UID:boys-basketball-19@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270216T190000
 DURATION:PT1H45M
