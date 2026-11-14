@@ -21,7 +21,7 @@
   /* the front page (index.html) shows the season being played; a season that's over keeps its own page (fall.html).
      Each page says which it is with <body data-season>. */
   const SEASON = document.body.dataset.season || "fall";
-  const BY_SEASON = { fall: ["football", "soccer", "field-hockey", "volleyball", "golf", "cross-country", "esports"], winter: ["basketball", "hockey", "wrestling", "indoor-track", "swim-dive", "gymnastics"] };
+  const BY_SEASON = { fall: ["football", "soccer", "field-hockey", "volleyball", "golf", "cross-country", "esports", "cheer"], winter: ["basketball", "hockey", "wrestling", "indoor-track", "swim-dive", "gymnastics"] };
   const load = (folder) =>
     fetch(`${folder}/js/data.js`)
       .then((r) => (r.ok ? r.text() : Promise.reject(r.status)))
@@ -30,9 +30,9 @@
 
   /* ---------- Turn each site's data into one list of events ----------
      ev: { sport, team, href, date, title, opponent, home, site, result, score, final, summary, headline } */
-  const vs = (g) => (g.home ? "vs" : "at");
+  const vs = (g) => (g.home || g.neutral ? "vs" : "at");
   const gameEvent = (sport, team, href, g) => ({
-    sport, team, href, date: g.date, timeTbd: g.timeTbd, dateTbd: !!g.dateTbd, home: g.home, site: g.site,
+    sport, team, href, date: g.date, timeTbd: g.timeTbd, dateTbd: !!g.dateTbd, dates: g.dates, home: g.neutral ? null : g.home, site: g.site,
     opponent: g.opponent, mascot: g.mascot,
     title: g.tournament ? g.opponent : `${vs(g)} ${g.opponent}`,
     result: g.result || null,
@@ -124,6 +124,17 @@
         result: m.result || null, score: m.result ? `${m.us}–${m.them}` : null, final: !!m.result, off: !!m.off, summary: m.summary || null
       }));
       return { teams: [{ label: null, events: ev, record: record(ev.filter((e) => e.result)) }], rank: null, titles: [] };
+    },
+    /* cheer competes for placings: each competition is an event with its place (and score) once it's over */
+    cheer(d) {
+      const T = d.TEAMS.varsity;
+      const ev = T.schedule.filter((g) => !g.scrimmage).map((g) => ({
+        sport: "cheer", team: "Cheer", href: "cheer/#schedule", date: g.date, timeTbd: g.timeTbd, dateTbd: !!g.dateTbd, dates: g.dates,
+        home: null, site: g.site, opponent: null, title: g.name || g.opponent, tournament: true,
+        result: null, score: g.place ? `${g.place}${g.score != null ? ` · ${g.score}` : ""}` : null, final: !!g.place, off: !!g.cancelled,
+        summary: g.summary || null, headline: g.headline || null
+      }));
+      return { teams: [{ label: null, events: ev, record: null }], rank: null, titles: [], photos: [] };
     }
   };
 
@@ -256,7 +267,8 @@
     const box = $("#spotlight");
     const g = d?.SCHEDULE?.find((x) => {
       const t = new Date(x.date).getTime();
-      return x.spotlight && !x.cancelled && NOW > t - 7 * 864e5 && NOW < t + (x.result ? 2 * 864e5 : 12 * HOUR);
+      const until = x.spotlight?.until ? new Date(x.spotlight.until).getTime() : t + (x.result ? 2 * 864e5 : 12 * HOUR);   // until: keep a big result up longer
+      return x.spotlight && !x.cancelled && NOW > t - 7 * 864e5 && NOW < until;
     });
     if (!box || !g) return;
     const sp = g.spotlight, start = new Date(g.date).getTime(), done = !!g.result;
@@ -387,7 +399,8 @@
       if (!s) return;
       const all = s.meets || s.teams.flatMap((t) => t.events);
       const last = finalsOf(all)[0];
-      const next = upcomingOf(all)[0];
+      /* the card's "Next" also counts a playoff game whose day isn't set yet (it shows the round's days) */
+      const next = all.filter((e) => !e.final && !e.off && new Date(e.date).getTime() > NOW - 3 * HOUR).sort((a, b) => new Date(a.date) - new Date(b.date))[0];
       const recs = s.teams.filter((t) => t.record).map((t) => `<span class="rec">${t.label ? `<small>${esc(t.label)}</small>` : ""}<b>${esc(t.record)}</b></span>`).join("");
       const rank = s.rank || s.teams.map((t) => t.rank && `${t.label}: ${t.rank.replace(/ power rankings$/, "")}`).filter(Boolean).join(" · ");
       const lastRes = last && (last.squadResults?.length
@@ -402,7 +415,7 @@
         ${rank ? `<div class="tc-rank">${esc(rank)}</div>` : ""}
         <dl class="tc-games">
           ${last ? `<div><dt>Last</dt><dd>${sport(last)}${esc(last.title)} · ${lastRes}</dd></div>` : ""}
-          ${next ? `<div><dt>Next</dt><dd>${sport(next)}${esc(next.title)} · ${dayShort(next.date)}${next.timeTbd ? "" : `, ${timeOf(next)}`}</dd></div>` : ""}
+          ${next ? `<div><dt>Next</dt><dd>${sport(next)}${esc(next.title)} · ${next.dateTbd ? esc(next.dates || "Date TBA") : `${dayShort(next.date)}${next.timeTbd ? "" : `, ${timeOf(next)}`}`}</dd></div>` : ""}
         </dl>`;
     });
   }
@@ -496,7 +509,7 @@
 
   /* ---------- Photos: action shots from every site's PHOTOS join the team photos ---------- */
   function renderGallery(S) {
-    const NAMES_BY = { football: "Football", soccer: "Soccer", "field-hockey": "Field Hockey", volleyball: "Volleyball", "cross-country": "Cross Country", golf: "Golf", esports: "Esports",
+    const NAMES_BY = { football: "Football", soccer: "Soccer", "field-hockey": "Field Hockey", volleyball: "Volleyball", "cross-country": "Cross Country", golf: "Golf", esports: "Esports", cheer: "Cheer",
       basketball: "Basketball", hockey: "Hockey", wrestling: "Wrestling", "indoor-track": "Indoor Track", "swim-dive": "Swim & Dive", gymnastics: "Gymnastics" };
     if (!$("#gallery-grid")) return;
     /* every team site's action shots, one team at a time (each site's newest first) so the sports mix all the way down;

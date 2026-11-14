@@ -1,7 +1,9 @@
 /* =====================================================================
-   Danvers Falcons winter team sites (basketball, hockey, wrestling):
-   page rendering. Each site's content lives in its own js/data.js:
-     SPORT  what the sport calls things (game, start, periods, stats)
+   Danvers Falcons team sites built on one engine (cheer, and the winter
+   sports): page rendering. Each site's content lives in its own js/data.js:
+     SPORT  what the sport calls things (game, start, periods, stats);
+            compete: true for a sport scored by placings at competitions
+            (cheer), not wins and losses
      SCHOOL the school
      TEAMS  one entry per team on the site (boys, girls); a site with
             one team shows no team switch
@@ -39,9 +41,10 @@
 
   const GAMES = T.schedule.filter((g) => !g.scrimmage);
   const PRESEASON = T.schedule.filter((g) => g.scrimmage);
-  const played = GAMES.filter((g) => g.result);
+  const COMPETE = !!S.compete;   // placings and scores at competitions instead of wins and losses
+  const played = GAMES.filter((g) => g.result || (COMPETE && g.place));
   const NOW = Date.now();
-  const awaiting = (g) => !g.result && !g.cancelled && !g.dateTbd && new Date(g.date) < NOW - 3 * 36e5;
+  const awaiting = (g) => !g.result && !g.place && !g.cancelled && !g.dateTbd && new Date(g.date) < NOW - 3 * 36e5;
   const upcoming = GAMES.filter((g) => !g.result && !g.place && !g.cancelled);
   const next = upcoming.find((g) => !awaiting(g));
   const count = (list, r) => list.filter((g) => g.result === r).length;
@@ -61,8 +64,9 @@
   const multi = (g) => !!g.name;   // a tournament or multi-team meet goes by its own name
   const vs = (g) => (multi(g) ? "" : g.home ? "vs" : "at");
   const who = (g) => (multi(g) ? g.name : g.opponent);
-  const kind = (g) => (g.scrimmage ? "Scrimmage" : g.postseason ? `MIAA ${g.round || "tournament"}` : g.tournament ? "Tournament" : g.league ? "NEC" : "Non-league");
+  const kind = (g) => g.kind || (g.scrimmage ? "Scrimmage" : g.postseason ? `MIAA ${g.round || "tournament"}` : g.tournament ? "Tournament" : g.league ? "NEC" : "Non-league");
   const outcome = { W: "Win", L: "Loss", T: "Tie" };
+  const placing = (g) => `${g.place}${g.score != null ? ` · ${g.score}` : ""}`;
   const plural = (n, word) => `${n} ${word}${n === 1 ? "" : word.endsWith("s") ? "es" : "s"}`;
   const cap = (s) => s[0].toUpperCase() + s.slice(1);
   const last = (name) => name.split(" ").slice(1).join(" ") || name;
@@ -129,7 +133,7 @@
           <button class="sc ${g === next ? "next" : ""}" data-game="${g.id}">
             <div class="when">${esc(dayOf(g, dateShort))}${g.result ? " · Final" : ""}</div>
             <div class="who">${vs(g)} ${esc(who(g))}</div>
-            <div class="res ${g.cancelled ? "cx" : g.result || (awaiting(g) ? "cx" : "up")}">${g.cancelled ? "Cancelled" : g.result ? `${g.result} ${g.us}–${g.them}` : awaiting(g) ? "" : startOf(g) || esc(g.round || "Time TBA")}</div>
+            <div class="res ${g.cancelled ? "cx" : g.result || (g.place ? "pl" : awaiting(g) ? "cx" : "up")}">${g.cancelled ? "Cancelled" : g.result ? `${g.result} ${g.us}–${g.them}` : g.place ? esc(placing(g)) : awaiting(g) ? "" : startOf(g) || esc(g.round || "Time TBA")}</div>
           </button>`).join("")}</div>
       </div></div>`);
     const track = $(".scores-track"), focus = $(".sc.next", track) || $(".sc:last-child", track);
@@ -147,7 +151,7 @@
       ? `<div class="result cancelled">Cancelled</div>`
       : g.result
       ? `<div class="result"><span class="wl ${g.result}">${g.result}</span>${g.us}–${g.them}</div>`
-      : g.place ? `<div class="result upcoming">${esc(g.place)}</div>`
+      : g.place ? `<div class="result placed">${esc(g.place)}${g.score != null ? `<small>${esc(g.score)}</small>` : ""}</div>`
       : awaiting(g) ? `<div class="result cancelled">${g.scrimmage ? "Scrimmage" : ""}</div>`
       : `<div class="result upcoming">${startOf(g) || "Time TBA"}</div>`;
     return `
@@ -160,7 +164,7 @@
         <div>
           <div class="opp">${vs(g) ? `<small>${vs(g).toUpperCase()}</small>` : ""}${esc(who(g))}</div>
           <div class="meta">
-            <span class="tag ${g.home ? "home" : ""}">${g.home ? "Home" : g.neutral ? "Neutral" : "Away"}</span>
+            ${COMPETE ? "" : `<span class="tag ${g.home ? "home" : ""}">${g.home ? "Home" : g.neutral ? "Neutral" : "Away"}</span>`}
             <span class="tag">${kind(g)}</span>
             ${g.tag ? `<span class="tag">${esc(g.tag)}</span>` : ""}
             <span>${esc(g.site || "")}</span>
@@ -182,6 +186,7 @@
     let body = "";
     if (g.summary) body += `<h4>Recap</h4><p>${esc(g.summary)}</p>`;
     if (g.cancelled) body += `<h4>Cancelled</h4><p>Originally scheduled for ${dateLong(g.date)} at ${timeOf(g.date)}${g.site ? `, ${esc(g.site)}` : ""}.</p>`;
+    else if (g.place) body += `<h4>Result</h4><p>${esc(g.place)}${g.score != null ? ` · score ${esc(g.score)}` : ""}${g.division ? `<br>${esc(g.division)}` : ""}${g.site ? `<br>${esc(g.site)}` : ""}</p>`;
     else if (!g.result) body += `<h4>${g.scrimmage ? "Scrimmage" : esc(S.start)}</h4><p>${esc([dayOf(g, dateLong), startOf(g) || "Time to be announced"].filter(Boolean).join(" · "))}${g.site ? `<br>${esc(g.site)}` : ""}</p>`;
     if (g.field?.length) body += `<h4>The Field</h4><div class="srcs">${g.field.map((n) => `<span class="tag">${esc(n)}</span>`).join("")}</div>`;
     if (g.result && g.line) {
@@ -210,7 +215,7 @@
     return `
       <div class="modal-head">
         <button class="modal-close" aria-label="Close">✕</button>
-        <div class="eyebrow">${esc(dayOf(g, dateLong))} · ${g.home ? "Home" : g.neutral ? "Neutral site" : "Away"} · ${kind(g)}${g.cancelled ? " · Cancelled" : g.result ? ` · ${outcome[g.result]}` : ""}</div>
+        <div class="eyebrow">${esc(dayOf(g, dateLong))} · ${COMPETE ? "" : `${g.home ? "Home" : g.neutral ? "Neutral site" : "Away"} · `}${kind(g)}${g.cancelled ? " · Cancelled" : g.result ? ` · ${outcome[g.result]}` : ""}</div>
         ${head}
       </div>
       <div class="modal-body">${body}</div>`;
@@ -239,7 +244,7 @@
 
   /* ---------- HOME ---------- */
   function home() {
-    const prev = played[played.length - 1];
+    const prev = COMPETE ? null : played[played.length - 1];
     const lastYear = (T.past || [])[0];
     const row = (name, right, win, logo) => `
       <div class="sb-row ${win ? "win" : ""}">
@@ -272,7 +277,7 @@
     } else {
       /* before the first game: the season ahead, with the opener on the board */
       $("#hero-story").innerHTML = `
-        <div class="eyebrow">${esc(S.season)} season${next ? ` · Opens ${esc(dayOf(next, dateShort))}` : ""}</div>
+        <div class="eyebrow">${esc(S.season)} season${next ? ` · ${COMPETE && played.length ? "Next" : "Opens"} ${esc(dayOf(next, dateShort))}` : ""}</div>
         <h1>${esc(T.heroTitle || `${SCHOOL.name} ${T.label}`)}</h1>
         <p>${esc(T.preview || "")}</p>
         <div class="btn-row">
@@ -280,11 +285,11 @@
           ${lastYear ? `<a class="btn btn-ghost" href="#seasons">Last season</a>` : ""}
         </div>`;
       if (next) {
-        const dan = row(US, lastYear ? esc(lastYear.record) : "", false, true);
+        const dan = row(US, T.boardTag ? esc(T.boardTag) : lastYear ? esc(lastYear.record) : "", false, true);
         const opp = row(who(next), "", false, false);
         $("#scoreboard").innerHTML = `
-          <button class="card scoreboard spot-board" data-game="${next.id}" aria-label="Season opener details">
-            <div class="sb-top"><span>Season opener</span><span>${esc(dayOf(next, dateShort))}</span></div>
+          <button class="card scoreboard spot-board" data-game="${next.id}" aria-label="${played.length ? `Next ${S.game}` : "Season opener"} details">
+            <div class="sb-top"><span>${played.length ? `Next ${S.game}` : "Season opener"}</span><span>${esc(dayOf(next, dateShort))}</span></div>
             ${next.home ? opp + dan : dan + opp}
             <div class="sb-foot"><span>${esc([next.site, startOf(next)].filter(Boolean).join(" · "))}</span><b>Details ›</b></div>
           </button>`;
@@ -293,7 +298,8 @@
 
     const n = played.length || 1;
     $("#scorestrip").innerHTML =
-      (played.length ? tile(["Record", record, T.noLeague ? esc(T.league || "") : `NEC ${rec((g) => g.league)}`])
+      (COMPETE && played.length ? tile(["Latest", esc(played[played.length - 1].place), esc(who(played[played.length - 1]))])
+        : played.length ? tile(["Record", record, T.noLeague ? esc(T.league || "") : `NEC ${rec((g) => g.league)}`])
         : lastYear ? tile(["Last season", esc(lastYear.record), esc(finishLine(lastYear.finish) || lastYear.post || "")]) : "") +
       (next ? `<button class="card next-game" data-game="${next.id}">
         <div>
@@ -303,7 +309,7 @@
         </div>
         <div class="countdown" id="countdown"></div>
       </button>` : GAMES.length ? `<div class="card next-game"><div><div class="k">Regular season complete</div><h3>Final record ${record}</h3></div></div>` : "") +
-      (played.length ? tile([S.scoreWord, `${pf}–${pa}`, `${(pf / n).toFixed(1)} scored · ${(pa / n).toFixed(1)} allowed per ${S.game}`])
+      (played.length && !COMPETE ? tile([S.scoreWord, `${pf}–${pa}`, `${(pf / n).toFixed(1)} scored · ${(pa / n).toFixed(1)} allowed per ${S.game}`])
         : T.stripTile ? tile(T.stripTile) : "");
 
     if (next && startOf(next)) {
@@ -322,13 +328,17 @@
   /* ---------- SCHEDULE ---------- */
   function schedule() {
     const homeN = GAMES.filter((g) => g.home).length;
-    $("#sched-tiles").innerHTML = [
+    $("#sched-tiles").innerHTML = (COMPETE ? [
+      [cap(S.games), GAMES.length, `${played.length} done · ${GAMES.length - played.length} to go`],
+      ...(T.schedTiles || []),
+      ...(next ? [["Next", fmt(next.date, { month: "short", day: "numeric" }), esc(who(next))]] : [])
+    ] : [
       ["Overall", record, played.length ? `Home ${rec((g) => g.home)} · Away ${rec((g) => !g.home)}` : `Opens ${next ? esc(dayOf(next, dateShort)) : "soon"}`],
       ...(T.noLeague ? [] : [["NEC", rec((g) => g.league), `${GAMES.filter((g) => g.league).length} conference ${S.games}`]]),
       [cap(S.games), GAMES.length, `${homeN} home · ${GAMES.length - homeN} away${T.scheduleNote ? "" : ""}`],
       ...(played.length ? [[S.scoreWord, `${pf}–${pa}`, `${plural(played.length, S.game)} played`]]
         : next ? [["Opener", fmt(next.date, { month: "short", day: "numeric" }), esc(`${vs(next)} ${who(next)}${startOf(next) ? ` · ${startOf(next)}` : ""}`.trim())]] : [])
-    ].map(tile).join("");
+    ]).map(tile).join("");
     $("#sched-tiles").hidden = !T.schedule.length;   // nothing to count until the schedule is posted
     const done = GAMES.filter((g) => g.result || g.place || g.cancelled || awaiting(g));
     const ahead = GAMES.filter((g) => !done.includes(g));
@@ -400,7 +410,8 @@
     $("#season-tabs").innerHTML = past.map((s, i) => `<button class="chip" role="tab" aria-selected="${!i}" data-i="${i}">${esc(s.season)}</button>`).join("");
     const pastRow = ([date, isHome, opp, type, result, us, them, note]) => {
       const d = new Date(`${date}T12:00`);
-      const res = result ? `<div class="result"><span class="wl ${result}">${result}</span>${us}–${them}</div>`
+      const res = ["W", "L", "T"].includes(result) ? `<div class="result"><span class="wl ${result}">${result}</span>${us}–${them}</div>`
+        : result ? `<div class="result placed">${esc(result)}${us != null ? `<small>${esc(us)}</small>` : ""}</div>`   // a placing, with its score
         : `<div class="result cancelled">${esc(note || "No score")}</div>`;
       return `
         <div class="game past ${result ? "" : "is-cancelled"}">
@@ -410,9 +421,9 @@
             <div class="w">${fmt(d, { weekday: "short" })}</div>
           </div>
           <div>
-            <div class="opp"><small>${isHome ? "VS" : "AT"}</small>${esc(opp)}</div>
+            <div class="opp">${COMPETE ? "" : `<small>${isHome ? "VS" : "AT"}</small>`}${esc(opp)}</div>
             <div class="meta">
-              <span class="tag ${isHome ? "home" : ""}">${isHome ? "Home" : "Away"}</span>
+              ${COMPETE ? "" : `<span class="tag ${isHome ? "home" : ""}">${isHome ? "Home" : "Away"}</span>`}
               ${type ? `<span class="tag">${esc(type)}</span>` : ""}
               ${result && note ? `<span>${esc(note)}</span>` : ""}
             </div>
@@ -423,16 +434,16 @@
     const draw = () => {
       const s = past[active];
       const games = s.games || [];
-      const done = games.filter((g) => g[4]);
+      const done = games.filter((g) => ["W", "L", "T"].includes(g[4]));
       const us = done.reduce((n, g) => n + g[5], 0), them = done.reduce((n, g) => n + g[6], 0);
-      $("#season-tiles").innerHTML = [
+      $("#season-tiles").innerHTML = (s.tiles ? s.tiles.map(([k, v, d]) => [esc(k), esc(v), esc(d || "")]) : [
         ["Record", esc(s.record), esc(s.coach ? `Coach ${s.coach}` : "")],
         ...(s.finish ? [["Conference", finishOf(s.finish)[0].length > 5 ? `<span class="words">${esc(finishOf(s.finish)[0])}</span>` : esc(finishOf(s.finish)[0]), esc(finishOf(s.finish)[1] || T.league || SCHOOL.conference)]] : []),
         ...(s.post ? [["Postseason", `<span class="words">${esc(s.post)}</span>`, "MIAA state tournament"]] : []),
         ...(done.length ? [[S.scoreWord, `${us}–${them}`, `${(us / done.length).toFixed(1)} scored · ${(them / done.length).toFixed(1)} allowed per ${S.game}`]] : [])
-      ].map(tile).join("");
+      ]).map(tile).join("");
       $("#season-honors").innerHTML = [
-        s.captains && ["Captains", s.captains], s.allLeague && ["All-conference", s.allLeague], s.allStars && ["NEC All-Stars", s.allStars], s.awards && ["Awards", s.awards]
+        s.captains && ["Captains", s.captains], s.allLeague && ["All-conference", s.allLeague], s.allStars && ["NEC All-Stars", s.allStars], s.awards && ["Awards", s.awards], s.roster && [s.rosterTitle || "Team", s.roster]
       ].filter(Boolean).map(([k, v]) => `<div><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join("");
       $("#season-honors").hidden = !$("#season-honors").innerHTML;
       $("#season-games").innerHTML = games.length ? games.map(pastRow).join("") : `<div class="empty">${esc(s.gamesNote || "Game-by-game results for this season aren't on file.")}</div>`;
@@ -508,7 +519,8 @@
         ...(T.historyTile ? [T.historyTile] : [])
       ].map(tile).join("");
     }
-    hide($("#history-tiles"), !full.length);
+    if (!full.length && T.historyTiles) $("#history-tiles").innerHTML = T.historyTiles.map(([k, v, d]) => tile([esc(k), esc(v), esc(d || "")])).join("");
+    hide($("#history-tiles"), !full.length && !T.historyTiles);
 
     $("#legends").innerHTML = (T.legends || []).map((p, i) => `
       <article class="card legend">

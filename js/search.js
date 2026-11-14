@@ -14,7 +14,7 @@
   const ord = (n) => n + (["th", "st", "nd", "rd"][(n % 100 - 20) % 10] || ["th", "st", "nd", "rd"][n % 100] || "th");
 
   const SPORTS = [["football", "Football"], ["soccer", "Soccer"], ["field-hockey", "Field Hockey"], ["volleyball", "Volleyball"],
-                  ["cross-country", "Cross Country"], ["golf", "Golf"], ["esports", "Esports"],
+                  ["cross-country", "Cross Country"], ["golf", "Golf"], ["esports", "Esports"], ["cheer", "Cheer"],
                   ["basketball", "Basketball"], ["hockey", "Hockey"], ["wrestling", "Wrestling"],
                   ["indoor-track", "Indoor Track"], ["swim-dive", "Swim & Dive"], ["gymnastics", "Gymnastics"]];
   const NAMES = ["TEAM", "TEAMS", "SCHEDULE", "MEETS", "GAMES", "PLAYERS", "RUNNERS", "SPORT"];
@@ -34,6 +34,7 @@
     <symbol id="i-indoor-track" viewBox="0 0 64 64"><rect x="5" y="14" width="54" height="36" rx="18"/><rect x="16" y="25" width="32" height="14" rx="7"/></symbol>
     <symbol id="i-swim-dive" viewBox="0 0 64 64"><circle cx="44" cy="17" r="5.5" fill="currentColor"/><path d="M12 33l15-11 9 8 9-3"/><path d="M5 43c4.5-5 9-5 13.500 0s9 5 13.500 0 9-5 13.500 0 9 5 13.500 0M5 55c4.500-5 9-5 13.500 0s9 5 13.500 0 9-5 13.500 0 9 5 13.500 0"/></symbol>
     <symbol id="i-gymnastics" viewBox="0 0 64 64"><path d="M21 5v19M43 5v19"/><circle cx="21" cy="35" r="11"/><circle cx="43" cy="35" r="11"/><path d="M8 58h48"/></symbol>
+    <symbol id="i-cheer" viewBox="0 0 64 64"><path d="M8 27v11h9l27 15V12L17 27z"/><path d="M17 38l4 15h8l-3-12"/><path d="M51 23c4 4 4 15 0 19M56 17c7 7 7 24 0 31"/></symbol>
     <symbol id="i-page" viewBox="0 0 64 64"><path d="M16 6h22l12 12v40H16z"/><path d="M38 6v12h12M24 32h18M24 41h18M24 50h10"/></symbol>
   </defs></svg>`;
   const ICON_SEARCH = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg>';
@@ -63,12 +64,12 @@
       const d = all[i];
       if (!d) return;
       const site = `${ROOT}${sport}/`;
-      /* the winter sites (basketball, hockey, wrestling) keep their data alike: SPORT, and TEAMS with one or two teams */
+      /* the sites built on the shared engine (cheer, and the winter sites) keep their data alike: SPORT, and TEAMS with one or two teams */
       const winter = d.SPORT && d.TEAMS ? Object.keys(d.TEAMS).map((k, _, keys) => [k, d.TEAMS[k], keys.length > 1 ? `?team=${k}` : ""]) : null;
       if (winter) winter.forEach(([k, T, q]) => {
         const games = T.schedule.filter((g) => !g.scrimmage);
         const rec = record(games, d.SPORT.ties !== false);
-        add({ type: "team", sport, title: T.label, sub: [rec && `${rec} this winter`, "Team site"].filter(Boolean).join(" · "), right: "Team", href: `${site}${q}`,
+        add({ type: "team", sport, title: T.label, sub: [rec && `${rec} this ${d.SPORT.season.includes("–") ? "winter" : "fall"}`, "Team site"].filter(Boolean).join(" · "), right: "Team", href: `${site}${q}`,
               keys: `${sport} falcons team home ${k} ${T.teamName || ""}` });
         [["schedule", "Schedule & results"], ["stats", "Team & roster"], ["seasons", "Past seasons"], ["history", "History & record book"], ["media", "Media"]]
           .forEach(([p, what]) => add({ type: "page", sport, title: `${T.label} ${what}`, right: "Page", href: `${site}${q}#${p}`, keys: `${p} roster scores coaches records` }));
@@ -122,13 +123,14 @@
       /* games, matches and meets */
       const gameRows = (list, name, q) => list.forEach((g) => {
         if (sport === "esports" && !g.opponent) return;
-        const vs = g.tournament || g.name ? (g.name || g.opponent) : `${g.home === false || (!g.home && sport !== "cross-country") ? "at" : "vs"} ${g.opponent}`;
+        const vs = g.tournament || g.name ? (g.name || g.opponent) : `${!g.neutral && (g.home === false || (!g.home && sport !== "cross-country")) ? "at" : "vs"} ${g.opponent}`;
         let right = "", cls = "";
         if (sport === "cross-country") {
           const parts = [["Boys", g.boys], ["Girls", g.girls]].filter(([, r]) => r && (r.result || r.place));
           right = parts.map(([k, r]) => (r.result ? `${k[0]} ${r.result}` : `${k[0]} ${ord(r.place)}`)).join(" · ");
           cls = parts.length ? "done" : "";
         } else if (g.result) { right = `${g.result} ${g.us}–${g.them}`; cls = g.result; }
+        else if (g.place) { right = g.place; cls = "done"; }
         else if (g.finish) { right = `${g.finish}${g.fieldSize ? ` of ${g.fieldSize}` : ""}`; cls = "done"; }
         else if (g.cancelled || g.off || g.noResult) right = "Off";
         else if (!g.dateTbd && new Date(g.date) > Date.now() - 3 * 36e5) { right = "Upcoming"; cls = "up"; }

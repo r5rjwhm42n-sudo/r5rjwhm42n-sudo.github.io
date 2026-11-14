@@ -1978,6 +1978,17 @@ DESCRIPTION:MIAA state tournament · Round of 16\nFinal: Danvers 30\, Bedfo
 URL:https://danversfalconsathletics.org/football/#schedule
 END:VEVENT
 BEGIN:VEVENT
+UID:cheer-1@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;VALUE=DATE:20261107
+DTEND;VALUE=DATE:20261108
+SUMMARY:Danvers Cheer: NEC Championship (Qualified)
+LOCATION:Gloucester High School\, Gloucester
+DESCRIPTION:NEC\nResult: Qualified\nSchedule and results: https://danversfa
+ lconsathletics.org/cheer/#schedule
+URL:https://danversfalconsathletics.org/cheer/#schedule
+END:VEVENT
+BEGIN:VEVENT
 UID:girls-soccer-107@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261109T180000
@@ -2018,11 +2029,17 @@ UID:football-11@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261113T183000
 DURATION:PT2H30M
-SUMMARY:Danvers Football vs Tantasqua
+SUMMARY:Danvers Football vs Tantasqua (W 40–35)
 LOCATION:Morse Field at Dr. Deering Stadium\, Danvers
-DESCRIPTION:MIAA state tournament · Quarterfinals\nTickets on GoFan: https
- ://gofan.co/app/school/MA14553\nSchedule and results: https://danversfalco
- nsathletics.org/football/#schedule
+DESCRIPTION:MIAA state tournament · Quarterfinals\nFinal: Danvers 40\, Tan
+ tasqua 35\nDanvers outlasted No. 6 Tantasqua Regional 40–35 at Deering S
+ tadium to reach the MIAA Division 4 semifinals and stay unbeaten at 9–0.
+  The teams were tied 7–7 after a quarter before the Falcons put up 14 po
+ ints in the second to lead 21–14 at halftime. Danvers scored 13 more in 
+ the third\, but Tantasqua answered with 14 of its own to stay within 34–
+ 28\, and each team scored once more in the fourth quarter. Tantasqua's 35 
+ points were the most anyone has scored on Danvers this season.\nSchedule a
+ nd results: https://danversfalconsathletics.org/football/#schedule
 URL:https://danversfalconsathletics.org/football/#schedule
 END:VEVENT
 BEGIN:VEVENT
@@ -2037,6 +2054,20 @@ DESCRIPTION:Postseason\nSchedule and results: https://danversfalconsathleti
 URL:https://danversfalconsathletics.org/cross-country/#schedule
 END:VEVENT
 BEGIN:VEVENT
+UID:cheer-2@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261115T161500
+DURATION:PT2H
+SUMMARY:Danvers Cheer: MSAA North Regional
+LOCATION:Billerica Memorial High School\, Billerica
+DESCRIPTION:MSAA regional\nDivision 3\nDanvers competes in Division 3 and i
+ s 7th of 13 teams to take the mat (No. 44 in the day's order)\nRegistratio
+ n at 3:35 PM and report to warm-up at 4:15 PM\; the afternoon session star
+ ts at 2:30 PM\nSchedule and results: https://danversfalconsathletics.org/c
+ heer/#schedule
+URL:https://danversfalconsathletics.org/cheer/#schedule
+END:VEVENT
+BEGIN:VEVENT
 UID:cross-country-14@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261121T140000
@@ -2046,6 +2077,19 @@ LOCATION:Devens
 DESCRIPTION:Postseason\nSchedule and results: https://danversfalconsathleti
  cs.org/cross-country/#schedule
 URL:https://danversfalconsathletics.org/cross-country/#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:cheer-3@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261123
+SUMMARY:Danvers Cheer: MSAA State Finals
+LOCATION:Worcester State University\, Worcester
+DESCRIPTION:MSAA state finals\nIf qualified\nFor the teams that qualify at 
+ the regionals\nSession 1 starts at 10:30 AM and session 2 at about 2:45 PM
+ \; the order of appearance comes out after the regionals\nSchedule and res
+ ults: https://danversfalconsathletics.org/cheer/#schedule
+URL:https://danversfalconsathletics.org/cheer/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:football-9@danversfalconsathletics.org
@@ -2305,7 +2349,7 @@ UID:boys-hockey-3@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261226T160000
 DURATION:PT1H45M
-SUMMARY:Danvers Boys Hockey at Marblehead
+SUMMARY:Danvers Boys Hockey vs Marblehead
 LOCATION:Dorothy Talbot Rink\, Gloucester
 DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
  cs.org/hockey/?team=boys#schedule

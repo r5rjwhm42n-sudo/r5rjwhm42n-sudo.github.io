@@ -26,7 +26,7 @@
   const team = () => (SPORT === "soccer" ? TEAMS[squad()] : typeof TEAM !== "undefined" ? TEAM : {});
   const ran = (m, k) => m[k] && (m[k].result || m[k].place || m[k].finishers?.length);
   const finished = (g) => (SPORT === "cross-country" ? ran(g, "boys") || ran(g, "girls") : !!(g.result || g.finish));
-  const matchup = (g) => (g.name ? g.name : g.tournament ? g.opponent : `${g.home === false || (!g.home && SPORT !== "cross-country") ? "at" : "vs"} ${g.opponent}`);
+  const matchup = (g) => (g.name ? g.name : g.tournament ? g.opponent : `${!g.neutral && (g.home === false || (!g.home && SPORT !== "cross-country")) ? "at" : "vs"} ${g.opponent}`);
   const kind = (g) => (g.scrimmage ? "Scrimmage" : g.postseason ? "Postseason" : g.tournament ? (g.league ? "NEC tournament" : "MIAA tournament") : g.league ? "NEC" : "Non-league");
 
   function watchUrl(g) {

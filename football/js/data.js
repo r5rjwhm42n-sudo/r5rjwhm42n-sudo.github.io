@@ -40,10 +40,10 @@ const TEAM = {
       { seeds: [7, 10], score: [22, 0], date: "2026-11-06T19:00", site: "Shepherd Hill Regional High School, Dudley" },
       { seeds: [3, 14], score: [30, 27], date: "2026-11-06T18:30", site: "Morse Field, Danvers" },
       { seeds: [6, 11], score: [27, 21], date: "2026-11-06T19:00", site: "Tantasqua Regional High School, Sturbridge" },
-      { seeds: [1, 8], date: "2026-11-13T19:00", site: "Scituate High School, Scituate" },
+      { seeds: [1, 8], score: [49, 7], date: "2026-11-13T19:00", site: "Scituate High School, Scituate" },
       { seeds: [4, 5], date: "2026-11-13T19:00", site: "Duxbury High School, Duxbury" },
-      { seeds: [2, 7], date: "2026-11-13T19:00", site: "Doucette Stadium, Tewksbury" },
-      { seeds: [3, 6], date: "2026-11-13T18:30", site: "Morse Field, Danvers" }
+      { seeds: [2, 7], score: [49, 14], date: "2026-11-13T19:00", site: "Doucette Stadium, Tewksbury" },
+      { seeds: [3, 6], score: [40, 35], date: "2026-11-13T18:30", site: "Morse Field, Danvers" }
     ]
   },
   headCoach: "Ryan Nolan",
@@ -80,6 +80,8 @@ const HOME_FIELD = "Morse Field at Dr. Deering Stadium, Danvers";
    dateTbd:  true until the MIAA sets the day: date then only places the game in the
              list and dates (the round's days, e.g. "Nov 6–7") is shown instead
    timeTbd:  true when the day is set but the kickoff time isn't
+   neutral:  true for a game at a neutral site (state semifinals and finals): shown as
+             "vs" and "Neutral" instead of home or away
    --------------------------------------------------------------------- */
 const SCHEDULE = [
   {
@@ -292,8 +294,9 @@ const SCHEDULE = [
     ],
     tag: "NEC Title Game",
     /* spotlight: a big-game banner across the top of the hub and the football home page.
-       It shows for the week before the game and for two days after the final. The
-       background is the first photo in PHOTOS below. */
+       It shows for the week before the game and for two days after the final (until:
+       "2026-11-19T23:59" keeps a big result up longer). The background is the first
+       photo in PHOTOS below. */
     spotlight: {
       kicker: "NEC Title Game",
       blurb: "A Danvers win clinches the Northeastern Conference title, the program's first since 2019.",
@@ -357,13 +360,36 @@ const SCHEDULE = [
       { label: "Globe players of the week, Nov. 9", url: "https://www.bostonglobe.com/2026/11/09/sports/eastern-mass-high-school-football-players-of-the-week/" }
     ] },
   { id: 11, date: "2026-11-13T18:30", opponent: "Tantasqua", mascot: "Warriors",
-    home: true, league: false, postseason: true, round: "Quarterfinals", site: HOME_FIELD, result: null,
-    notes: ["No. 3 Danvers hosts No. 6 Tantasqua Regional in the MIAA Division 4 quarterfinals", "Tantasqua (7–2) beat No. 11 Wayland 27–21 in the Round of 16", "The winner meets No. 2 Tewksbury or No. 7 Shepherd Hill in the semifinals", "Danvers comes in No. 19 in the Boston Globe Top 20 (Nov. 9)", "Tantasqua averages 34.0 points a game; Danvers scores 28.9 and allows 8.5"],
+    home: true, league: false, postseason: true, round: "Quarterfinals", site: HOME_FIELD,
+    result: "W", us: 40, them: 35,
+    quarters: { us: [7, 14, 13, 6], them: [7, 7, 14, 7] },
+    spotlight: {
+      kicker: "Division 4 Quarterfinal",
+      blurb: "No. 3 Danvers hosts No. 6 Tantasqua Regional in the MIAA Division 4 quarterfinals. A win sends the Falcons to the semifinals.",
+      oppRecord: "7–3",   // Tantasqua's record after the game
+      until: "2026-11-19T23:59",   // the win stays on the front page until semifinal week
+      won: "On to the Semifinals",
+      lost: "Final"
+    },
+    summary: "Danvers outlasted No. 6 Tantasqua Regional 40–35 at Deering Stadium to reach the MIAA Division 4 semifinals and stay unbeaten at 9–0. The teams were tied 7–7 after a quarter before the Falcons put up 14 points in the second to lead 21–14 at halftime. Danvers scored 13 more in the third, but Tantasqua answered with 14 of its own to stay within 34–28, and each team scored once more in the fourth quarter. Tantasqua's 35 points were the most anyone has scored on Danvers this season.",
+    tag: "State Tournament",
+    notes: ["A 40–35 win over No. 6 Tantasqua sends Danvers to the MIAA Division 4 semifinals at 9–0", "Danvers led 21–14 at halftime and 34–28 after three quarters", "Tantasqua's 35 points are the most Danvers has allowed this season, topping Bedford's 27 a week earlier", "The win ended Tantasqua's three-game winning streak; the Warriors finish their season against Shepherd Hill on Thanksgiving", "Next: No. 2 Tewksbury (9–1), a 49–14 winner over Shepherd Hill, in the semifinals", "Scoring plays and player stats haven't been published yet"],
     sources: [
+      { label: "MaxPreps final and score by quarter", url: "https://www.maxpreps.com/ma/football/game/danvers-vs-tantasqua-regional-fiskdale/11-13-2026/?c=40762c35-8a74-435e-ad4e-2d92f6fca15e" },
+      { label: "MaxPreps recap", url: "https://www.maxpreps.com/news/v1g6ZTiuFkaIIXniaoingw/football-recap-tantasqua-regionals-three-game-winning-streak-comes-to-an-end.htm" },
+      { label: "Boston Globe scoreboard, Nov. 13", url: "https://www.bostonglobe.com/sports/high-schools/football/scoreboard/?date=2026-11-13" },
       { label: "Globe Top 20, Nov. 9", url: "https://www.bostonglobe.com/2026/11/09/sports/eastern-mass-football-globe-top-20/" },
       { label: "MaxPreps game preview", url: "https://www.maxpreps.com/news/6xgxQ_iE6Eyo_8DAU7WYRw/football-preview-tantasqua-regional-and-danvers-both-bring-winning-streaks-into-this-one--official-tickets.htm" },
       { label: "MIAA Division 4 bracket", url: "https://www.miaa.net/miaa-football-2026-division-4-state-tournament" },
-      { label: "MaxPreps game page", url: "https://www.maxpreps.com/ma/football/game/danvers-vs-tantasqua-regional-fiskdale/11-13-2026/?c=40762c35-8a74-435e-ad4e-2d92f6fca15e" }
+      { label: "Salem News preview", url: "https://www.salemnews.com/sports/moving-the-chains-playoff-quarterfinal-matchups-on-tap-tonight-for-danvers-peabody-sjp/article_2a8c07e3-5f68-4434-8f8e-15899d5d3b71.html" }
+    ] },
+  { id: 12, date: "2026-11-20T00:00", dateTbd: true, dates: "Nov 20–21", opponent: "Tewksbury", mascot: "Redmen",
+    home: false, neutral: true, league: false, postseason: true, round: "Semifinals", site: "Neutral site to be announced", result: null,
+    tag: "State Tournament",
+    notes: ["MIAA Division 4 semifinals: No. 3 Danvers (9–0) vs. No. 2 Tewksbury Memorial (9–1)", "Tewksbury beat No. 7 Shepherd Hill 49–14 in the quarterfinals", "Semifinals are played at neutral sites; the MIAA hasn't announced this game's date, time or site yet", "Expected the weekend before Thanksgiving, Nov. 20–21", "The winner plays for the Division 4 state title"],
+    sources: [
+      { label: "MIAA Division 4 bracket", url: "https://www.miaa.net/miaa-football-2026-division-4-state-tournament" },
+      { label: "Tewksbury 49, Shepherd Hill 14 (MaxPreps)", url: "https://www.maxpreps.com/ma/football/game/shepherd-hill-regional-dudley-vs-tewksbury-memorial/11-13-2026/?c=a25582ba-4d94-459c-9793-03ecf523088e" }
     ] },
   { id: 9, date: "2026-11-26T10:00", opponent: "Gloucester", mascot: "Fishermen", home: false, league: false, site: "Newell Stadium, Gloucester", result: null,
     notes: ["Thanksgiving Day rivalry, played every Thanksgiving morning since 1964"],
