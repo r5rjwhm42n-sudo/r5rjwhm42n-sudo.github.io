@@ -38,14 +38,14 @@ const TEAMS = {
     headCoach: "Meghan Beaulieu",
     heroTitle: "Falcons are back in the pool Nov. 30",
     preview: "The co-ed swimming and diving team begins practice Monday, Nov. 30 at St. John's Prep, its home pool. This winter's meets will be added here as soon as the schedule is posted.",
-    stripTile: ["Home pool", "8 lanes", "St. John's Prep · 25 yards"],
+    stripTile: ["State tournament", "D2 North", "Boys and girls · MIAA"],
     noScheduleNote: "This winter's meets haven't been posted yet. Practice begins Monday, Nov. 30 at St. John's Prep.",
     scheduleNote: "The meet schedule will be added as soon as it is posted. The school's ArbiterLive page has the latest.",
     links: { school: "https://danverspublicschools.org/dhs/athletics/swimming-and-diving/", schedule: "https://www.arbiterlive.com/Teams?entityId=5538" },
     staff: [["Head coach", "Meghan Beaulieu", "A Danvers High graduate who swam at Babson College"], ["Assistant coaches", "Graham Beck, Ezra Lombardi & Maddie Butler"]],
     about: [
       "Danvers has a co-ed swimming and diving program at the varsity and junior varsity levels. Boys and girls practice together five to six days a week, with a meet most weeks.",
-      "Home meets are at St. John's Prep, an eight-lane, 25-yard pool with starting blocks and a diving board. The Falcons swim in the Northeastern Conference against Beverly, Marblehead, Peabody and Swampscott, and swimmers and divers qualify each year for the NEC meet at Salem State University.",
+      "Home meets are at St. John's Prep, an eight-lane, 25-yard pool with starting blocks and a diving board. The Falcons swim in the Northeastern Conference against Beverly, Marblehead, Peabody and Swampscott, and swimmers and divers qualify each year for the NEC meet at Salem State University. In the MIAA state tournament, the boys and girls both compete in Division 2 North.",
       "Head coach Meghan Beaulieu played soccer, swam and played softball at Danvers High before swimming at Babson College. She teaches business at the high school. Program information from the school's team page."
     ],
     rosterNote: "The 2026–27 roster will be posted after practice begins Monday, Nov. 30.",
