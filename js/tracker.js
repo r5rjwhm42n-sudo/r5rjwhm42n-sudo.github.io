@@ -25,10 +25,7 @@
               ["All-State meet", "2026-11-21T14:00", null, "Devens", "State"]] },
     { sport: "golf", name: "Golf", href: "golf/", path: true, done: { big: "11", pre: "", post: "th", line: "of 15 teams at the D2 North sectional",
         detail: "The top three teams went on to the state final" },
-      dates: [["D2 North sectional", "2026-10-20", null, "Bradford Country Club", "Sectional"], ["NEC Open", "2026-10-21", null, "Tedesco Country Club", "NEC Open"]] },
-    { sport: "cheer", name: "Cheer", href: "cheer/", path: true,
-      dates: [["NEC Championship", "2026-11-07", null, "Gloucester High School", "NEC"], ["North Regional", "2026-11-15T16:15", null, "Billerica Memorial High School", "Regional"],
-              ["State finals", "2026-11-22", null, "Worcester State University", "States"]] }
+      dates: [["D2 North sectional", "2026-10-20", null, "Bradford Country Club", "Sectional"], ["NEC Open", "2026-10-21", null, "Tedesco Country Club", "NEC Open"]] }
   ];
   const REVEALS = [["Football brackets", "2026-11-01T13:00"], ["Field hockey brackets", "2026-11-03T11:00"], ["Volleyball brackets", "2026-11-03T13:00"], ["Soccer brackets", "2026-11-05T13:00"]];
   const RULE = "MIAA power rankings. In soccer, volleyball and field hockey the top 32 in each division qualify, and teams below that at .500 or better (ties count as half a win) get a play-in game. Football takes the top 16 teams with at least three wins.";

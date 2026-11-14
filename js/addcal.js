@@ -16,7 +16,7 @@
   const NAMES = {
     football: "Danvers Football", "girls-soccer": "Danvers Girls Soccer", "boys-soccer": "Danvers Boys Soccer",
     "field-hockey": "Danvers Field Hockey", volleyball: "Danvers Volleyball", golf: "Danvers Golf",
-    "cross-country": "Danvers Cross Country", esports: "Danvers Esports", cheer: "Danvers Cheer", "all-sports": "Danvers Falcons"
+    "cross-country": "Danvers Cross Country", esports: "Danvers Esports", "all-sports": "Danvers Falcons"
   };
   const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const ahead = (iso) => new Date(iso).getTime() + 12 * 36e5 > Date.now();

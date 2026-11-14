@@ -95,19 +95,20 @@
   })();
 
   /* ---------- Footer ---------- */
-  /* The front page shows the season being played (winter); the fall sports keep their own front page, fall.html,
+  /* The front page (index.html) shows the fall sports; the winter sports have their own front page, winter.html,
      one switch away. Footers and menus list the sports of the season the visitor is in, plus that switch. */
   const FALL = [["football", "Football"], ["soccer", "Soccer"], ["field-hockey", "Field hockey"], ["volleyball", "Volleyball"],
-                ["cross-country", "Cross country"], ["golf", "Golf"], ["esports", "Esports"], ["cheer", "Cheer"]];
+                ["cross-country", "Cross country"], ["golf", "Golf"], ["esports", "Esports"]];
   const WINTER = [["basketball", "Basketball"], ["hockey", "Hockey"], ["wrestling", "Wrestling"],
                   ["indoor-track", "Indoor track"], ["swim-dive", "Swim & dive"], ["gymnastics", "Gymnastics"]];
   const here = location.href.startsWith(ROOT) ? location.href.slice(ROOT.length).split(/[?#]/)[0] : "";
-  const IN_FALL = document.body.dataset.season === "fall" || FALL.some(([dir]) => here.split("/")[0] === dir);
+  const IN_WINTER = document.body.dataset.season === "winter" || WINTER.some(([dir]) => here.split("/")[0] === dir);
+  const IN_FALL = !IN_WINTER;   // every other page (the front page, the newsletter) belongs to the fall
   const TEAMS = IN_FALL ? FALL : WINTER;
-  const FRONT = IN_FALL ? `${ROOT}fall.html` : ROOT;                       // this season's front page
+  const FRONT = IN_FALL ? ROOT : `${ROOT}winter.html`;                     // this season's front page
   /* the Fall | Winter switch: the same control as a team site's Girls | Boys switch */
   const seasons = (cls = "", style = "") => `<div class="fx-seasons ${cls}" role="group" aria-label="Choose a season"${style}>
-      <a href="${ROOT}fall.html"${IN_FALL ? ' class="on" aria-current="true"' : ""}>Fall</a><a href="${ROOT}"${IN_FALL ? "" : ' class="on" aria-current="true"'}>Winter</a></div>`;
+      <a href="${ROOT}"${IN_FALL ? ' class="on" aria-current="true"' : ""}>Fall</a><a href="${ROOT}winter.html"${IN_FALL ? "" : ' class="on" aria-current="true"'}>Winter</a></div>`;
   /* on the two front pages it sits at the start of the top bar, and beside "Pick Your Team" */
   if (ON_HUB) {
     const bar = document.querySelector(".topbar .wrap"), head = document.querySelector("#teams .section-head");
@@ -216,7 +217,7 @@
     const link = (href, label, current, section) =>
       `<li><a href="${href}" style="--i:${i++}"${section ? ` data-section="${section}"` : ""}${current ? ' aria-current="page"' : ""}>${label}${current ? HERE : ""}</a></li>`;
     /* "Back to": all sports, and this sport's home (not shown on the home page itself) */
-    const backs = link(`${FRONT}#teams`, IN_FALL ? "Fall sports" : "All sports", false) + (onHome ? "" : link(homeHref, `${name} home`, false));
+    const backs = link(`${FRONT}#teams`, IN_FALL ? "All sports" : "Winter sports", false) + (onHome ? "" : link(homeHref, `${name} home`, false));
     menu.innerHTML = `
       <div class="wrap fx-menu-top">
         <span class="fx-menu-tag">Danvers Falcons · ${team ? team.textContent : name}</span>

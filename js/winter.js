@@ -112,7 +112,7 @@
         ${KEYS.map((key) => `<a href="${to("./", key)}" class="${key === teamKey ? "on" : ""}"${key === teamKey ? ' aria-current="true"' : ""}>${esc(TEAMS[key].short)}</a>`).join("")}
       </div>` : ""}
       <span class="tb-info">${esc([SCHOOL.school, T.league || SCHOOL.conference, T.division].filter(Boolean).join(" · "))}</span>
-      <span class="tb-links">${T.links?.school ? `<a href="${T.links.school}" target="_blank" rel="noopener">DHS ${esc(T.label)}</a>` : ""}<a href="${SCHOOL.athletics}" target="_blank" rel="noopener">Falcons Athletics</a><a href="../">All Sports</a></span>
+      <span class="tb-links">${T.links?.school ? `<a href="${T.links.school}" target="_blank" rel="noopener">DHS ${esc(T.label)}</a>` : ""}<a href="${SCHOOL.athletics}" target="_blank" rel="noopener">Falcons Athletics</a><a href="${S.season.includes("–") ? "../winter.html" : "../"}">All Sports</a></span>
     </div></div>`);
   header.innerHTML = `
     <div class="wrap hbar">

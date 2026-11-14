@@ -14,7 +14,7 @@
   const ord = (n) => n + (["th", "st", "nd", "rd"][(n % 100 - 20) % 10] || ["th", "st", "nd", "rd"][n % 100] || "th");
 
   const SPORTS = [["football", "Football"], ["soccer", "Soccer"], ["field-hockey", "Field Hockey"], ["volleyball", "Volleyball"],
-                  ["cross-country", "Cross Country"], ["golf", "Golf"], ["esports", "Esports"], ["cheer", "Cheer"],
+                  ["cross-country", "Cross Country"], ["golf", "Golf"], ["esports", "Esports"],
                   ["basketball", "Basketball"], ["hockey", "Hockey"], ["wrestling", "Wrestling"],
                   ["indoor-track", "Indoor Track"], ["swim-dive", "Swim & Dive"], ["gymnastics", "Gymnastics"]];
   const NAMES = ["TEAM", "TEAMS", "SCHEDULE", "MEETS", "GAMES", "PLAYERS", "RUNNERS", "SPORT"];
