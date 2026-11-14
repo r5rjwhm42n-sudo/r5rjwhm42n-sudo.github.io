@@ -26,9 +26,9 @@
 
   /* ---------- Turn each site's data into one list of events ----------
      ev: { sport, team, href, date, title, opponent, home, site, result, score, final, summary, headline } */
-  const vs = (g) => (g.home ? "vs" : "at");
+  const vs = (g) => (g.home || g.neutral ? "vs" : "at");
   const gameEvent = (sport, team, href, g) => ({
-    sport, team, href, date: g.date, timeTbd: g.timeTbd, dateTbd: !!g.dateTbd, home: g.home, site: g.site,
+    sport, team, href, date: g.date, timeTbd: g.timeTbd, dateTbd: !!g.dateTbd, dates: g.dates, home: g.neutral ? null : g.home, site: g.site,
     opponent: g.opponent, mascot: g.mascot,
     title: g.tournament ? g.opponent : `${vs(g)} ${g.opponent}`,
     result: g.result || null,
@@ -366,7 +366,8 @@
       if (!s) return;
       const all = s.meets || s.teams.flatMap((t) => t.events);
       const last = finalsOf(all)[0];
-      const next = upcomingOf(all)[0];
+      /* the card's "Next" also counts a playoff game whose day isn't set yet (it shows the round's days) */
+      const next = all.filter((e) => !e.final && !e.off && new Date(e.date).getTime() > NOW - 3 * HOUR).sort((a, b) => new Date(a.date) - new Date(b.date))[0];
       const recs = s.teams.filter((t) => t.record).map((t) => `<span class="rec">${t.label ? `<small>${esc(t.label)}</small>` : ""}<b>${esc(t.record)}</b></span>`).join("");
       const rank = s.rank || s.teams.map((t) => t.rank && `${t.label}: ${t.rank.replace(/ power rankings$/, "")}`).filter(Boolean).join(" · ");
       const lastRes = last && (last.squadResults?.length
@@ -378,7 +379,7 @@
         ${rank ? `<div class="tc-rank">${esc(rank)}</div>` : ""}
         <dl class="tc-games">
           ${last ? `<div><dt>Last</dt><dd>${sport(last)}${esc(last.title)} · ${lastRes}</dd></div>` : ""}
-          ${next ? `<div><dt>Next</dt><dd>${sport(next)}${esc(next.title)} · ${dayShort(next.date)}${next.timeTbd ? "" : `, ${timeOf(next)}`}</dd></div>` : ""}
+          ${next ? `<div><dt>Next</dt><dd>${sport(next)}${esc(next.title)} · ${next.dateTbd ? esc(next.dates || "Date TBA") : `${dayShort(next.date)}${next.timeTbd ? "" : `, ${timeOf(next)}`}`}</dd></div>` : ""}
         </dl>`;
     });
   }

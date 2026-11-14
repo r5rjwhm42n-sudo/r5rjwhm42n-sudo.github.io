@@ -100,7 +100,7 @@
       /* games, matches and meets */
       const gameRows = (list, name, q) => list.forEach((g) => {
         if (sport === "esports" && !g.opponent) return;
-        const vs = g.tournament || g.name ? (g.name || g.opponent) : `${g.home === false || (!g.home && sport !== "cross-country") ? "at" : "vs"} ${g.opponent}`;
+        const vs = g.tournament || g.name ? (g.name || g.opponent) : `${!g.neutral && (g.home === false || (!g.home && sport !== "cross-country")) ? "at" : "vs"} ${g.opponent}`;
         let right = "", cls = "";
         if (sport === "cross-country") {
           const parts = [["Boys", g.boys], ["Girls", g.girls]].filter(([, r]) => r && (r.result || r.place));

@@ -30,7 +30,8 @@
   const dayOf = (g, f) => (g.dateTbd ? g.dates : f(g.date));
   const startOf = (g) => (g.dateTbd || g.timeTbd ? "" : timeOf(g.date));
   const kind = (g) => (g.postseason ? `MIAA ${g.round || "tournament"}` : g.league ? "NEC" : "Non-league");
-  const vs = (g) => (g.home ? "vs" : "at");
+  const vs = (g) => (g.home || g.neutral ? "vs" : "at");
+  const where = (g) => (g.home ? "Home" : g.neutral ? "Neutral" : "Away");
   const seed = TEAM.bracket?.seeds ? TEAM.bracket.seeds.findIndex((s) => /^Danvers\b/.test(s)) + 1 : 0;   // once the MIAA bracket is out
   const initials = (name) => name.split(" ").map((w) => w[0]).join("").slice(0, 2);
   const tile = ([k, v, d]) => `<div class="card tile"><div class="k">${k}</div><div class="v count">${v}</div><div class="d">${d}</div></div>`;
@@ -88,7 +89,7 @@
         <div>
           <div class="opp"><small>${vs(g).toUpperCase()}</small>${esc(g.opponent)}</div>
           <div class="meta">
-            <span class="tag ${g.home ? "home" : ""}">${g.home ? "Home" : "Away"}</span>
+            <span class="tag ${g.home ? "home" : ""}">${where(g)}</span>
             <span class="tag">${kind(g)}</span>
             ${g.tag ? `<span class="tag big">${esc(g.tag)}</span>` : ""}
             <span>${esc(g.site)}</span>
@@ -133,7 +134,7 @@
     return `
       <div class="modal-head">
         <button class="modal-close" aria-label="Close">✕</button>
-        <div class="eyebrow">${esc(dayOf(g, dateLong))} · ${g.home ? "Home" : "Away"} · ${kind(g)}${g.cancelled ? " · Cancelled" : g.result ? ` · ${g.result === "W" ? "Win" : "Loss"}` : ""}</div>
+        <div class="eyebrow">${esc(dayOf(g, dateLong))} · ${where(g)} · ${kind(g)}${g.cancelled ? " · Cancelled" : g.result ? ` · ${g.result === "W" ? "Win" : "Loss"}` : ""}</div>
         ${head}
       </div>
       <div class="modal-body">${body}</div>`;
@@ -209,7 +210,7 @@
       const opp = row(last.opponent, last.them, !won, false);
       $("#scoreboard").innerHTML = `
         <button class="card scoreboard" data-game="${last.id}" aria-label="Last game details">
-          <div class="sb-top"><span>Final</span><span>${last.home ? "Home" : "Away"} · ${kind(last)}</span></div>
+          <div class="sb-top"><span>Final</span><span>${where(last)} · ${kind(last)}</span></div>
           ${last.home ? opp + dan : dan + opp}
           <div class="sb-foot"><span>${esc((last.performers || []).slice(0, 2).map((p) => `${p.name.split(" ").pop()}: ${p.line}`).join(" · "))}</span><b>Box score ›</b></div>
         </button>`;
