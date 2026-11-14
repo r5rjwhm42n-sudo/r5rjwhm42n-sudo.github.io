@@ -131,7 +131,7 @@
         add({ type: "game", sport, title: `${name} ${vs}`, date: g.date, right, cls,
               sub: [!g.dateTbd && fmt(g.date, { weekday: "short", month: "short", day: "numeric" }), !g.timeTbd && !g.dateTbd && fmt(g.date, { hour: "numeric", minute: "2-digit" }), g.site].filter(Boolean).join(" · "),
               href: `${site}${q}#g=${g.id}`,
-              keys: `${g.opponent || ""} ${g.mascot || ""} ${g.postseason || g.tournament ? "playoff tournament postseason" : ""} ${g.date ? fmt(g.date, { month: "long" }) : ""} game match` });
+              keys: `${g.opponent || ""} ${g.mascot || ""} ${g.tag || ""} ${g.name || ""} ${g.postseason || g.tournament ? "playoff tournament postseason" : ""} ${g.date ? fmt(g.date, { month: "long" }) : ""} game match` });
       });
       if (winter) winter.forEach(([, T, q]) => gameRows(T.schedule.filter((g) => !g.scrimmage).map((g) => ({ ...g, tournament: false })), T.label, q));
       else if (sport === "soccer") ["girls", "boys"].forEach((k) => gameRows(d.TEAMS[k].schedule.filter((g) => !g.scrimmage), d.TEAMS[k].short ? `${d.TEAMS[k].short} Soccer` : d.TEAMS[k].label, `?team=${k}`));

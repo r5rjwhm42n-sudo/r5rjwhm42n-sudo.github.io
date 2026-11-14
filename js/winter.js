@@ -133,7 +133,7 @@
           <button class="sc ${g === next ? "next" : ""}" data-game="${g.id}">
             <div class="when">${esc(dayOf(g, dateShort))}${g.result ? " · Final" : ""}</div>
             <div class="who">${vs(g)} ${esc(who(g))}</div>
-            <div class="res ${g.cancelled ? "cx" : g.result || (g.place ? "pl" : awaiting(g) ? "cx" : "up")}">${g.cancelled ? "Cancelled" : g.result ? `${g.result} ${g.us}–${g.them}` : g.place ? esc(placing(g)) : awaiting(g) ? "" : startOf(g) || esc(g.round || "Time TBA")}</div>
+            <div class="res ${g.cancelled ? "cx" : g.result || (g.place ? "pl" : awaiting(g) ? "cx" : "up")}">${g.cancelled ? "Cancelled" : g.result ? `${g.result} ${g.us}–${g.them}` : g.place ? esc(placing(g)) : awaiting(g) ? esc(g.resultNote || "") : startOf(g) || esc(g.round || "Time TBA")}</div>
           </button>`).join("")}</div>
       </div></div>`);
     const track = $(".scores-track"), focus = $(".sc.next", track) || $(".sc:last-child", track);
@@ -152,7 +152,7 @@
       : g.result
       ? `<div class="result"><span class="wl ${g.result}">${g.result}</span>${g.us}–${g.them}</div>`
       : g.place ? `<div class="result placed">${esc(g.place)}${g.score != null ? `<small>${esc(g.score)}</small>` : ""}</div>`
-      : awaiting(g) ? `<div class="result cancelled">${g.scrimmage ? "Scrimmage" : ""}</div>`
+      : awaiting(g) ? `<div class="result cancelled">${esc(g.resultNote || (g.scrimmage ? "Scrimmage" : ""))}</div>`
       : `<div class="result upcoming">${startOf(g) || "Time TBA"}</div>`;
     return `
       <button class="game ${g.cancelled ? "is-cancelled" : ""}" data-game="${g.id}">
@@ -186,6 +186,7 @@
     let body = "";
     if (g.summary) body += `<h4>Recap</h4><p>${esc(g.summary)}</p>`;
     if (g.cancelled) body += `<h4>Cancelled</h4><p>Originally scheduled for ${dateLong(g.date)} at ${timeOf(g.date)}${g.site ? `, ${esc(g.site)}` : ""}.</p>`;
+    else if (!g.place && g.resultNote && awaiting(g)) body += `<h4>Result</h4><p>${esc(g.resultNote)}${g.site ? `<br>${esc(g.site)}` : ""}</p>`;
     else if (g.place) body += `<h4>Result</h4><p>${esc(g.place)}${g.score != null ? ` · score ${esc(g.score)}` : ""}${g.division ? `<br>${esc(g.division)}` : ""}${g.site ? `<br>${esc(g.site)}` : ""}</p>`;
     else if (!g.result) body += `<h4>${g.scrimmage ? "Scrimmage" : esc(S.start)}</h4><p>${esc([dayOf(g, dateLong), startOf(g) || "Time to be announced"].filter(Boolean).join(" · "))}${g.site ? `<br>${esc(g.site)}` : ""}</p>`;
     if (g.field?.length) body += `<h4>The Field</h4><div class="srcs">${g.field.map((n) => `<span class="tag">${esc(n)}</span>`).join("")}</div>`;
@@ -329,7 +330,7 @@
   function schedule() {
     const homeN = GAMES.filter((g) => g.home).length;
     $("#sched-tiles").innerHTML = (COMPETE ? [
-      [cap(S.games), GAMES.length, `${played.length} done · ${GAMES.length - played.length} to go`],
+      [cap(S.games), GAMES.length, `${GAMES.length - upcoming.filter((g) => !awaiting(g)).length} done · ${upcoming.filter((g) => !awaiting(g)).length} to go`],
       ...(T.schedTiles || []),
       ...(next ? [["Next", fmt(next.date, { month: "short", day: "numeric" }), esc(who(next))]] : [])
     ] : [

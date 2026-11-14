@@ -1673,6 +1673,30 @@ DESCRIPTION:Non-league\nFinal: Danvers 41\, Salem 0\nDanvers celebrated Sen
 URL:https://danversfalconsathletics.org/football/#schedule
 END:VEVENT
 BEGIN:VEVENT
+UID:cheer-1@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;VALUE=DATE:20261024
+DTEND;VALUE=DATE:20261025
+SUMMARY:Danvers Cheer: Competition at Billerica
+LOCATION:Billerica Memorial High School\, Billerica
+DESCRIPTION:Competition\nOn the school's ArbiterLive schedule\nThe school's
+  schedule doesn't list a start time\nSchedule and results: https://danvers
+ falconsathletics.org/cheer/#schedule
+URL:https://danversfalconsathletics.org/cheer/#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:cheer-2@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;VALUE=DATE:20261025
+DTEND;VALUE=DATE:20261026
+SUMMARY:Danvers Cheer: Competition at Beverly
+LOCATION:Beverly High School\, Beverly
+DESCRIPTION:Competition\nOn the school's ArbiterLive schedule\nListed for 1
+ 2:00 PM\nSchedule and results: https://danversfalconsathletics.org/cheer/#
+ schedule
+URL:https://danversfalconsathletics.org/cheer/#schedule
+END:VEVENT
+BEGIN:VEVENT
 UID:boys-soccer-16@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261026T160000
@@ -1868,6 +1892,18 @@ DESCRIPTION:Northeastern Conference\nFinal: Danvers 17\, Peabody 14\nDanver
 URL:https://danversfalconsathletics.org/football/#schedule
 END:VEVENT
 BEGIN:VEVENT
+UID:cheer-3@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261031T100000
+DURATION:PT2H
+SUMMARY:Danvers Cheer: Competition at Central Catholic
+LOCATION:Central Catholic High School\, Lawrence
+DESCRIPTION:Competition\nOn the school's ArbiterLive schedule\nListed for 1
+ 0:00 AM\nSchedule and results: https://danversfalconsathletics.org/cheer/#
+ schedule
+URL:https://danversfalconsathletics.org/cheer/#schedule
+END:VEVENT
+BEGIN:VEVENT
 UID:cross-country-7@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261031T100000
@@ -1978,7 +2014,7 @@ DESCRIPTION:MIAA state tournament · Round of 16\nFinal: Danvers 30\, Bedfo
 URL:https://danversfalconsathletics.org/football/#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:cheer-1@danversfalconsathletics.org
+UID:cheer-4@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;VALUE=DATE:20261107
 DTEND;VALUE=DATE:20261108
@@ -2054,7 +2090,7 @@ DESCRIPTION:Postseason\nSchedule and results: https://danversfalconsathleti
 URL:https://danversfalconsathletics.org/cross-country/#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:cheer-2@danversfalconsathletics.org
+UID:cheer-5@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261115T161500
 DURATION:PT2H
@@ -2079,7 +2115,7 @@ DESCRIPTION:Postseason\nSchedule and results: https://danversfalconsathleti
 URL:https://danversfalconsathletics.org/cross-country/#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:cheer-3@danversfalconsathletics.org
+UID:cheer-6@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;VALUE=DATE:20261122
 DTEND;VALUE=DATE:20261123
