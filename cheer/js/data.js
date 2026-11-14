@@ -16,8 +16,11 @@
      [date, 0, name, division, place, score, null, note]
    with tiles: [[title, place, line], ...] for the season's finishes.
 
-   Sources: the school's team page, the MSAA (results, orders of
-   appearance and state programs), Patch and The Swampscott Tides.
+   resultNote: "Results not posted" for a competition that's over without a published place
+
+   Sources: the school's team page and ArbiterLive schedule, the MSAA
+   (results, orders of appearance and state programs), Patch and The
+   Swampscott Tides.
    ===================================================================== */
 
 const SPORT = {
@@ -43,7 +46,7 @@ const TEAMS = {
     stripTile: ["State finals", "3 straight", "2023 · 2024 · 2025"],
     schedTiles: [["Division", "3", "MSAA North · set by enrollment"]],
     scheduleNote: "The squad also cheers at every Danvers football game, home and away. Times for the state finals are set after the regionals.",
-    links: { school: "https://danverspublicschools.org/dhs/athletics/football-cheerleading/" },
+    links: { school: "https://danverspublicschools.org/dhs/athletics/football-cheerleading/", schedule: "https://www.arbiterlive.com/Teams/Schedule/9424643?activeEntityId=5538" },
     staff: [["Head coach", "Rita Mirandi", "Also coaches basketball cheer"], ["JV coach", "Julia Saggese"], ["Assistant coach", "Melanie Delande"]],
     about: [
       "Danvers cheerleading has a long tradition of leadership and spirit. The squad cheers at every Danvers football game, home and away, which is uncommon in the Northeastern Conference, and gives Friday nights at Deering Stadium their sound.",
@@ -54,6 +57,50 @@ const TEAMS = {
     schedule: [
       {
         id: 1,
+        date: "2026-10-24T12:00",
+        timeTbd: true,
+        name: "Competition at Billerica",
+        opponent: "Competition at Billerica",
+        home: false,
+        league: false,
+        kind: "Competition",
+        site: "Billerica Memorial High School, Billerica",
+        result: null,
+        resultNote: "Results not posted",
+        notes: ["On the school's ArbiterLive schedule", "The school's schedule doesn't list a start time", "Results from this competition haven't been published"],
+        sources: [{ label: "Cheer schedule (ArbiterLive)", url: "https://www.arbiterlive.com/Teams/Schedule/9424643?activeEntityId=5538" }]
+      },
+      {
+        id: 2,
+        date: "2026-10-25T12:00",
+        timeTbd: true,
+        name: "Competition at Beverly",
+        opponent: "Competition at Beverly",
+        home: false,
+        league: false,
+        kind: "Competition",
+        site: "Beverly High School, Beverly",
+        result: null,
+        resultNote: "Results not posted",
+        notes: ["On the school's ArbiterLive schedule", "Listed for 12:00 PM", "Results from this competition haven't been published"],
+        sources: [{ label: "Cheer schedule (ArbiterLive)", url: "https://www.arbiterlive.com/Teams/Schedule/9424643?activeEntityId=5538" }]
+      },
+      {
+        id: 3,
+        date: "2026-10-31T10:00",
+        name: "Competition at Central Catholic",
+        opponent: "Competition at Central Catholic",
+        home: false,
+        league: false,
+        kind: "Competition",
+        site: "Central Catholic High School, Lawrence",
+        result: null,
+        resultNote: "Results not posted",
+        notes: ["On the school's ArbiterLive schedule", "Listed for 10:00 AM", "Results from this competition haven't been published"],
+        sources: [{ label: "Cheer schedule (ArbiterLive)", url: "https://www.arbiterlive.com/Teams/Schedule/9424643?activeEntityId=5538" }]
+      },
+      {
+        id: 4,
         date: "2026-11-07T12:00",
         timeTbd: true,
         name: "NEC Championship",
@@ -76,7 +123,7 @@ const TEAMS = {
         ]
       },
       {
-        id: 2,
+        id: 5,
         date: "2026-11-15T16:15",
         name: "MSAA North Regional",
         opponent: "MSAA North Regional",
@@ -102,7 +149,7 @@ const TEAMS = {
         ]
       },
       {
-        id: 3,
+        id: 6,
         date: "2026-11-22T10:30",
         timeTbd: true,
         name: "MSAA State Finals",
@@ -188,6 +235,7 @@ const TEAMS = {
       { kind: "Tournament", title: "MSAA cheerleading", text: "Regional and state schedules, orders of appearance and results from the MSAA.", url: "https://www.msaa.net/activities/msaa-cheerleading", go: "msaa.net" },
       { kind: "Tickets", title: "Regionals and states on GoFan", text: "MSAA tournament tickets are sold online only, $16.75 general admission.", url: "https://gofan.co/app/school/MSAA", go: "GoFan" },
       { kind: "School", title: "Team page", text: "Coaches and program notes from Danvers High School.", url: "https://danverspublicschools.org/dhs/athletics/football-cheerleading/", go: "danverspublicschools.org" },
+      { kind: "Schedule", title: "Official schedule", text: "The squad's competitions on the school's ArbiterLive page.", url: "https://www.arbiterlive.com/Teams/Schedule/9424643?activeEntityId=5538", go: "ArbiterLive" },
       { kind: "Game days", title: "Danvers football", text: "The squad cheers at every football game. See where the Falcons play next.", url: "../football/", go: "Football site" }
     ],
     news: [
