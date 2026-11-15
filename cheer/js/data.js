@@ -53,7 +53,7 @@ const TEAMS = {
       "Each fall the varsity competes for the Northeastern Conference title and then in the MSAA cheerleading tournament: the North Regional at Billerica, and the state finals at Worcester State University for the teams that qualify. Danvers competes in Division 3, which the MSAA sets by school enrollment.",
       "Judges score each routine's stunts, pyramids, jumps and tumbling for difficulty and technique, and teams are ranked within their division. The program stresses commitment, teamwork and sportsmanship. Program information from the school's team page and the MSAA."
     ],
-    rosterNote: "This fall's roster hasn't been published. Last year's state finals team is under Past Seasons.",
+    rosterNote: "This fall's roster will be posted soon.",
     schedule: [
       {
         id: 1,
@@ -179,7 +179,19 @@ const TEAMS = {
         sources: [{ label: "State competition guide (MSAA)", url: "https://www.msaa.net/sites/default/files/2026-11/state-competition-guide-wsu-fall-2026.pdf" }, { label: "Tickets on GoFan", url: "https://gofan.co/app/school/MSAA" }]
       }
     ],
-    players: [],
+    players: [
+      { name: "Hailey Booth", grade: "Sr." },
+      { name: "Bridget Colwell", grade: "Fr." },
+      { name: "Tess Darisse", grade: "Fr." },
+      { name: "Francesca Gatti", grade: "Fr." },
+      { name: "Mia Hammond", grade: "Sr." },
+      { name: "Amanda Hartley", grade: "Sr." },
+      { name: "Summer Horgan", grade: "Fr." },
+      { name: "Alyssa Joe", grade: "Jr." },
+      { name: "Mia Kingston", grade: "Jr." },
+      { name: "Mya McNeill", grade: "Sr." },
+      { name: "Ella Tsatsis", grade: "Jr." }
+    ],
     pastIntro: "The last three falls: every competition on file, with each place and score, and the team that went to the state finals.",
     past: [
       {
@@ -192,8 +204,8 @@ const TEAMS = {
         note: "Places and scores from the MSAA results. The NEC finish is from the school's team page, and the team is as listed in the MSAA state finals program.",
         games: [
           ["2025-11-08", 0, "NEC Championship", "NEC", "2nd", null, null, "Gloucester won the title"],
-          ["2025-11-16", 0, "MSAA North Regional", "Division 3", "5th of 14", "84.6", null, "Billerica Memorial High School · advanced to the state finals"],
-          ["2025-11-22", 0, "MSAA State Finals", "Division 3", "13th of 20", "81.0", null, "Worcester State University"]
+          ["2025-11-16", 0, "MSAA North Regional", "Division 3", "5th of 14", "84.6", null, "Billerica Memorial High School · North Reading won with 89.4 · Danvers advanced to the state finals"],
+          ["2025-11-22", 0, "MSAA State Finals", "Division 3", "13th of 20", "81.0", null, "Worcester State University · Hanover won with 92.1"]
         ]
       },
       {
@@ -205,8 +217,8 @@ const TEAMS = {
         roster: "Serena Bettencourt, Abby Brogna, Marlene Catalano, Lizzie Farrell, Abby Harvey, Maddy Hillier, Alyssa Joe, Emily Mahoney, Arianna Makrakis, Mya McNeill, Ava Nadeau, Brenna Newton, Kylie Redford, Lili Teheen, Alexis Vramis",
         note: "Places and scores from the MSAA results, and the team as listed in the MSAA state finals program. The NEC title is from the team's own list of championships.",
         games: [
-          ["2024-11-17", 0, "MSAA North Regional", "Division 3", "4th of 16", "81.3", null, "Billerica Memorial High School · advanced to the state finals"],
-          ["2024-11-24", 0, "MSAA State Finals", "Division 3", "7th of 14", "85.5", null, "Worcester State University"]
+          ["2024-11-17", 0, "MSAA North Regional", "Division 3", "4th of 16", "81.3", null, "Billerica Memorial High School · Burlington won with 87.5 · Danvers advanced to the state finals"],
+          ["2024-11-24", 0, "MSAA State Finals", "Division 3", "7th of 14", "85.5", null, "Worcester State University · Hanover won with 94.7"]
         ]
       },
       {
@@ -216,8 +228,8 @@ const TEAMS = {
         tiles: [["NEC Championship", "2nd", "Northeastern Conference"], ["North Regional", "3rd", "of 12 in Division 3 · 87.5"], ["State finals", "5th", "of 16 in Division 3 · 89.0"]],
         note: "Places and scores from the MSAA results; the NEC finish from Patch. The date of the 2023 NEC meet isn't on file.",
         games: [
-          ["2023-11-12", 0, "MSAA North Regional", "Division 3", "3rd of 12", "87.5", null, "Billerica Memorial High School · advanced to the state finals"],
-          ["2023-11-19", 0, "MSAA State Finals", "Division 3", "5th of 16", "89.0", null, "Worcester State University"]
+          ["2023-11-12", 0, "MSAA North Regional", "Division 3", "3rd of 12", "87.5", null, "Billerica Memorial High School · Wilmington won with 89.6 · Danvers advanced to the state finals"],
+          ["2023-11-19", 0, "MSAA State Finals", "Division 3", "5th of 16", "89.0", null, "Worcester State University · East Bridgewater won with 93.4"]
         ]
       }
     ],
