@@ -40,8 +40,8 @@ const TEAMS = {
     label: "Cheer",
     short: "Varsity",
     headCoach: "Rita Mirandi",
-    heroTitle: "Falcons compete at the North Regional Nov. 15",
-    preview: "Danvers cheer earned a spot at the MSAA North Regional at the NEC Championship on Nov. 7. The Falcons compete in Division 3 at Billerica Memorial High School on Sunday, Nov. 15, with awards at 5:30 PM, and a top finish sends them to the state finals at Worcester State on Nov. 22.",
+    heroTitle: "NEC champions compete at the North Regional",
+    preview: "Danvers cheer won the small division at the NEC Championship on Nov. 7. The Falcons compete in Division 3 at the MSAA North Regional at Billerica Memorial High School on Sunday, Nov. 15, with awards at 5:30 PM, and a top finish sends them to the state finals at Worcester State on Nov. 22.",
     boardTag: "Div. 3",
     stripTile: ["State finals", "3 straight", "2023 · 2024 · 2025"],
     schedTiles: [["Division", "3", "MSAA North · set by enrollment"]],
@@ -57,67 +57,76 @@ const TEAMS = {
     schedule: [
       {
         id: 1,
-        date: "2026-10-24T12:00",
-        timeTbd: true,
-        name: "Competition at Billerica",
-        opponent: "Competition at Billerica",
+        date: "2026-10-24T09:00",
+        name: "Think Pink Invitational",
+        opponent: "Think Pink Invitational",
         home: false,
         league: false,
-        kind: "Competition",
+        kind: "Invitational",
         site: "Billerica Memorial High School, Billerica",
         result: null,
         resultNote: "Results not posted",
-        notes: ["On the school's ArbiterLive schedule", "The school's schedule doesn't list a start time", "Results from this competition haven't been published"],
-        sources: [{ label: "Cheer schedule (ArbiterLive)", url: "https://www.arbiterlive.com/Teams/Schedule/9424643?activeEntityId=5538" }]
+        notes: ["Think Pink Invitational, hosted by Billerica Memorial High School", "The competition starts at 9:00 AM", "Results from this competition haven't been published"],
+        sources: [
+          { label: "Cheer schedule (ArbiterLive)", url: "https://www.arbiterlive.com/Teams/Schedule/9424643?activeEntityId=5538" },
+          { label: "MSAA sanctioned events", url: "https://www.msaa.net/sites/default/files/2026-04/msaa-cheerleading-sanction-event-26-27.pdf" }
+        ]
       },
       {
         id: 2,
         date: "2026-10-25T12:00",
-        timeTbd: true,
-        name: "Competition at Beverly",
-        opponent: "Competition at Beverly",
+        name: "Claw Out Cancer Invitational",
+        opponent: "Claw Out Cancer Invitational",
         home: false,
         league: false,
-        kind: "Competition",
+        kind: "Invitational",
         site: "Beverly High School, Beverly",
         result: null,
         resultNote: "Results not posted",
-        notes: ["On the school's ArbiterLive schedule", "Listed for 12:00 PM", "Results from this competition haven't been published"],
-        sources: [{ label: "Cheer schedule (ArbiterLive)", url: "https://www.arbiterlive.com/Teams/Schedule/9424643?activeEntityId=5538" }]
+        notes: ["Claw Out Cancer Invitational, hosted by Beverly High School", "The competition starts at 12:00 PM", "Results from this competition haven't been published"],
+        sources: [
+          { label: "Cheer schedule (ArbiterLive)", url: "https://www.arbiterlive.com/Teams/Schedule/9424643?activeEntityId=5538" },
+          { label: "MSAA sanctioned events", url: "https://www.msaa.net/sites/default/files/2026-04/msaa-cheerleading-sanction-event-26-27.pdf" }
+        ]
       },
       {
         id: 3,
         date: "2026-10-31T10:00",
-        name: "Competition at Central Catholic",
-        opponent: "Competition at Central Catholic",
+        name: "Raider Invitational",
+        opponent: "Raider Invitational",
         home: false,
         league: false,
-        kind: "Competition",
+        kind: "Invitational",
         site: "Central Catholic High School, Lawrence",
         result: null,
         resultNote: "Results not posted",
-        notes: ["On the school's ArbiterLive schedule", "Listed for 10:00 AM", "Results from this competition haven't been published"],
-        sources: [{ label: "Cheer schedule (ArbiterLive)", url: "https://www.arbiterlive.com/Teams/Schedule/9424643?activeEntityId=5538" }]
+        notes: ["Raider Invitational, hosted by Central Catholic High School", "The competition starts at 10:00 AM", "Results from this competition haven't been published"],
+        sources: [
+          { label: "Cheer schedule (ArbiterLive)", url: "https://www.arbiterlive.com/Teams/Schedule/9424643?activeEntityId=5538" },
+          { label: "MSAA sanctioned events", url: "https://www.msaa.net/sites/default/files/2026-04/msaa-cheerleading-sanction-event-26-27.pdf" }
+        ]
       },
       {
         id: 4,
-        date: "2026-11-07T12:00",
-        timeTbd: true,
+        date: "2026-11-07T13:00",
         name: "NEC Championship",
         opponent: "NEC Championship",
         home: false,
         league: true,
         kind: "NEC",
         site: "Gloucester High School, Gloucester",
-        place: "Qualified",
-        division: "Northeastern Conference",
+        place: "Champions",
+        division: "NEC small division",
+        summary: "Danvers won the small division at the Northeastern Conference Championship at Gloucester High School, its second NEC small-division title in three falls (2024 and 2026), and earned a spot at the MSAA North Regional.",
         notes: [
-          "The Northeastern Conference championship meet, held at Gloucester High School",
-          "Danvers' place hasn't been published, but the Falcons earned a spot at the MSAA North Regional",
+          "NEC small division champions, at Gloucester High School",
+          "The meet started at 1:00 PM",
+          "Swampscott was third in the small division",
           "Every team has to compete in its league meet to qualify for the regional and state tournaments",
           "Gloucester won the NEC title in 2025, with Danvers second"
         ],
         sources: [
+          { label: "The team's titles (@danverscheerleading)", url: "https://www.instagram.com/danverscheerleading/" },
           { label: "NEC meet coverage (The Swampscott Tides)", url: "https://swampscotttides.org/news/swampscott-cheerleaders-finish-strong-at-nec-championships/" },
           { label: "MSAA North Regional order of appearance", url: "https://www.msaa.net/sites/default/files/2026-11/f26-north-order-of-appearance.pdf" }
         ]
@@ -191,10 +200,10 @@ const TEAMS = {
         season: "2024",
         record: "4th",
         post: "North Regional, Division 3 · 7th at the state finals",
-        tiles: [["North Regional", "4th", "of 16 in Division 3 · 81.3"], ["State finals", "7th", "of 14 in Division 3 · 85.5"]],
+        tiles: [["NEC Championship", "1st", "Small division champions"], ["North Regional", "4th", "of 16 in Division 3 · 81.3"], ["State finals", "7th", "of 14 in Division 3 · 85.5"]],
         rosterTitle: "State finals team",
         roster: "Serena Bettencourt, Abby Brogna, Marlene Catalano, Lizzie Farrell, Abby Harvey, Maddy Hillier, Alyssa Joe, Emily Mahoney, Arianna Makrakis, Mya McNeill, Ava Nadeau, Brenna Newton, Kylie Redford, Lili Teheen, Alexis Vramis",
-        note: "Places and scores from the MSAA results, and the team as listed in the MSAA state finals program. The 2024 NEC Championship result isn't on file.",
+        note: "Places and scores from the MSAA results, and the team as listed in the MSAA state finals program. The NEC title is from the team's own list of championships.",
         games: [
           ["2024-11-17", 0, "MSAA North Regional", "Division 3", "4th of 16", "81.3", null, "Billerica Memorial High School · advanced to the state finals"],
           ["2024-11-24", 0, "MSAA State Finals", "Division 3", "7th of 14", "85.5", null, "Worcester State University"]
@@ -212,26 +221,30 @@ const TEAMS = {
         ]
       }
     ],
-    historyIntro: "Danvers cheer has made the MSAA state finals in each of the last three falls, with a best of 5th in Division 3 in 2023.",
-    banners: [],
+    historyIntro: "Nine NEC championships by the team's own count, a New England winter title in 2011, three North Regional winter titles, and the MSAA state finals in each of the last three falls.",
+    banners: [{ year: 2026, label: "NEC Small Division Champions" }, { year: 2024, label: "NEC Small Division Champions" }, { year: 2011, label: "New England Winter Champions" }],
+    historyNote: "Titles from the team's own list (@danverscheerleading): 9 NEC championships, 3 North Regional winter titles, the 2011 New England winter title, the 2024 and 2026 NEC small-division titles and the 2022 JV NEC title. The years of the other NEC and regional titles aren't on file.",
     necTitles: [],
     seasons: [],
     honors: [],
     legends: [],
-    historyTiles: [["State finals", "3 straight", "2023 · 2024 · 2025"], ["Best state finish", "5th", "Division 3, 2023 · 89.0"], ["Best regional finish", "3rd", "North Regional, 2023 · 87.5"], ["NEC Championship", "2nd", "2023 and 2025"]],
+    historyTiles: [["NEC championships", "9", "The team's count, the latest in 2026"], ["New England title", "Winter 2011", "New England champions"], ["North Regional winter titles", "3", "The team's count"], ["State finals", "3 straight", "2023 · 2024 · 2025"]],
     records: {
       "MSAA Results": {
         "Top scores": [["2023 state finals", "89.0", "5th of 16"], ["2023 North Regional", "87.5", "3rd of 12"], ["2024 state finals", "85.5", "7th of 14"], ["2025 North Regional", "84.6", "5th of 14"]],
-        "Best finishes": [["State finals", "5th", "2023 · Division 3"], ["North Regional", "3rd", "2023 · Division 3"], ["NEC Championship", "2nd", "2023 and 2025"]]
+        "Best finishes": [["State finals", "5th", "2023 · Division 3"], ["North Regional", "3rd", "2023 · Division 3"], ["NEC Championship", "1st", "Small division, 2024 and 2026"]]
       }
     },
     milestones: [
+      { year: "2011", text: "Danvers wins the New England championship in the winter season." },
+      { year: "2022", text: "The JV squad wins the NEC football-season championship." },
       { year: "2023", text: "Danvers is 2nd at the NEC Championship and 3rd in Division 3 at the North Regional with 87.5, then finishes 5th of 16 at the state finals with 89.0, its best state finish in the MSAA results on file." },
-      { year: "2024", text: "4th of 16 at the North Regional, and 7th of 14 at the state finals with 85.5." },
+      { year: "2024", text: "NEC small division champions, then 4th of 16 at the North Regional and 7th of 14 at the state finals with 85.5." },
       { year: "2025", text: "2nd at the NEC Championship behind Gloucester, 5th of 14 at the North Regional and 13th of 20 at the state finals: a third straight trip to Worcester State." },
-      { year: "2026", text: "The Falcons qualify for the North Regional again at the NEC Championship at Gloucester High School." }
+      { year: "2026", text: "NEC small division champions again, at Gloucester High School, and back to the North Regional." }
     ],
     follow: [
+      { kind: "Instagram", title: "@danverscheerleading", text: "Photos, results and news from the Danvers High cheer team.", url: "https://www.instagram.com/danverscheerleading/", go: "Instagram" },
       { kind: "Tournament", title: "MSAA cheerleading", text: "Regional and state schedules, orders of appearance and results from the MSAA.", url: "https://www.msaa.net/activities/msaa-cheerleading", go: "msaa.net" },
       { kind: "Tickets", title: "Regionals and states on GoFan", text: "MSAA tournament tickets are sold online only, $16.75 general admission.", url: "https://gofan.co/app/school/MSAA", go: "GoFan" },
       { kind: "School", title: "Team page", text: "Coaches and program notes from Danvers High School.", url: "https://danverspublicschools.org/dhs/athletics/football-cheerleading/", go: "danverspublicschools.org" },

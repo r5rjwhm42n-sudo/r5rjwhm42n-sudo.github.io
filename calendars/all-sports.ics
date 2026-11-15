@@ -1675,25 +1675,25 @@ END:VEVENT
 BEGIN:VEVENT
 UID:cheer-1@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
-DTSTART;VALUE=DATE:20261024
-DTEND;VALUE=DATE:20261025
-SUMMARY:Danvers Cheer: Competition at Billerica
+DTSTART;TZID=America/New_York:20261024T090000
+DURATION:PT2H
+SUMMARY:Danvers Cheer: Think Pink Invitational
 LOCATION:Billerica Memorial High School\, Billerica
-DESCRIPTION:Competition\nOn the school's ArbiterLive schedule\nThe school's
-  schedule doesn't list a start time\nSchedule and results: https://danvers
- falconsathletics.org/cheer/#schedule
+DESCRIPTION:Invitational\nThink Pink Invitational\, hosted by Billerica Mem
+ orial High School\nThe competition starts at 9:00 AM\nSchedule and results
+ : https://danversfalconsathletics.org/cheer/#schedule
 URL:https://danversfalconsathletics.org/cheer/#schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:cheer-2@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
-DTSTART;VALUE=DATE:20261025
-DTEND;VALUE=DATE:20261026
-SUMMARY:Danvers Cheer: Competition at Beverly
+DTSTART;TZID=America/New_York:20261025T120000
+DURATION:PT2H
+SUMMARY:Danvers Cheer: Claw Out Cancer Invitational
 LOCATION:Beverly High School\, Beverly
-DESCRIPTION:Competition\nOn the school's ArbiterLive schedule\nListed for 1
- 2:00 PM\nSchedule and results: https://danversfalconsathletics.org/cheer/#
- schedule
+DESCRIPTION:Invitational\nClaw Out Cancer Invitational\, hosted by Beverly 
+ High School\nThe competition starts at 12:00 PM\nSchedule and results: htt
+ ps://danversfalconsathletics.org/cheer/#schedule
 URL:https://danversfalconsathletics.org/cheer/#schedule
 END:VEVENT
 BEGIN:VEVENT
@@ -1896,11 +1896,11 @@ UID:cheer-3@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261031T100000
 DURATION:PT2H
-SUMMARY:Danvers Cheer: Competition at Central Catholic
+SUMMARY:Danvers Cheer: Raider Invitational
 LOCATION:Central Catholic High School\, Lawrence
-DESCRIPTION:Competition\nOn the school's ArbiterLive schedule\nListed for 1
- 0:00 AM\nSchedule and results: https://danversfalconsathletics.org/cheer/#
- schedule
+DESCRIPTION:Invitational\nRaider Invitational\, hosted by Central Catholic 
+ High School\nThe competition starts at 10:00 AM\nSchedule and results: htt
+ ps://danversfalconsathletics.org/cheer/#schedule
 URL:https://danversfalconsathletics.org/cheer/#schedule
 END:VEVENT
 BEGIN:VEVENT
@@ -2016,12 +2016,15 @@ END:VEVENT
 BEGIN:VEVENT
 UID:cheer-4@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
-DTSTART;VALUE=DATE:20261107
-DTEND;VALUE=DATE:20261108
-SUMMARY:Danvers Cheer: NEC Championship (Qualified)
+DTSTART;TZID=America/New_York:20261107T130000
+DURATION:PT2H
+SUMMARY:Danvers Cheer: NEC Championship (Champions)
 LOCATION:Gloucester High School\, Gloucester
-DESCRIPTION:NEC\nResult: Qualified\nSchedule and results: https://danversfa
- lconsathletics.org/cheer/#schedule
+DESCRIPTION:NEC\nResult: Champions\nDanvers won the small division at the N
+ ortheastern Conference Championship at Gloucester High School\, its second
+  NEC small-division title in three falls (2024 and 2026)\, and earned a sp
+ ot at the MSAA North Regional.\nSchedule and results: https://danversfalco
+ nsathletics.org/cheer/#schedule
 URL:https://danversfalconsathletics.org/cheer/#schedule
 END:VEVENT
 BEGIN:VEVENT

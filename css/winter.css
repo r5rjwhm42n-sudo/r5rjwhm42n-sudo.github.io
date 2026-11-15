@@ -66,3 +66,4 @@
 .result.placed small { font-family: var(--body); font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
 .sc .res.pl { color: var(--royal); }
 @media (max-width: 720px) { .result.placed { align-items: flex-start; font-size: 24px; } }
+.card.titles[hidden] { display: none; }
