@@ -17,6 +17,8 @@
                   ["cross-country", "Cross Country"], ["golf", "Golf"], ["esports", "Esports"],
                   ["basketball", "Basketball"], ["hockey", "Hockey"], ["wrestling", "Wrestling"],
                   ["indoor-track", "Indoor Track"], ["swim-dive", "Swim & Dive"], ["gymnastics", "Gymnastics"]];
+  /* sites that aren't open yet (js/fx.js sets the list) stay out of search */
+  const OPEN = () => SPORTS.filter(([s]) => !(window.DFA_SOON || []).includes(s));
   const NAMES = ["TEAM", "TEAMS", "SCHEDULE", "MEETS", "GAMES", "PLAYERS", "RUNNERS", "SPORT"];
 
   /* Sport icons, the same drawings as the hub's (added to the page when it doesn't have them) */
@@ -60,7 +62,7 @@
       return list.some((g) => g.result) ? `${n("W")}–${n("L")}${ties || n("T") ? `–${n("T")}` : ""}` : "";
     };
 
-    SPORTS.forEach(([sport, label], i) => {
+    OPEN().forEach(([sport, label], i) => {
       const d = all[i];
       if (!d) return;
       const site = `${ROOT}${sport}/`;
@@ -289,7 +291,7 @@
     if (!dlg.open) dlg.showModal();
     input.select();
     if (!INDEX) {
-      const all = await Promise.all(SPORTS.map(([s]) => load(s)));
+      const all = await Promise.all(OPEN().map(([s]) => load(s)));
       INDEX = build(all);
       const n = (t) => INDEX.filter((e) => e.type === t).length;
       dlg.querySelector(".dfs-count").textContent = `${n("athlete")} athletes · ${n("game")} games · 7 sports`;

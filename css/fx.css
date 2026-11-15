@@ -263,3 +263,29 @@ html.fx-has-cursor .fx-cursor, html.fx-has-cursor .fx-ring { display: block; }
   .fx-seasons a, .topbar .fx-seasons a { padding: 3px 16px 2px; }
   .topbar .wrap:has(> .fx-seasons) { flex-wrap: wrap; align-items: center; gap: 8px 14px; }
 }
+
+/* ---------- Team sites that aren't open yet (js/fx.js SOON) ---------- */
+a[data-soon] { cursor: not-allowed; }
+.nav a[data-soon], .fx-foot ul a[data-soon] { opacity: .6; }
+.team-card[data-soon] .tc-media img { filter: grayscale(.35) brightness(.75); }
+.team-card[data-soon]:hover { transform: none; }
+.fx-soon-tag { position: absolute; z-index: 3; left: 50%; top: 50%; transform: translate(-50%, -50%); padding: 8px 18px 7px; border-radius: 4px;
+  background: rgba(11, 31, 77, .9); border: 2px solid var(--white); color: var(--white); font-family: var(--display); font-weight: 800;
+  font-size: 20px; letter-spacing: .1em; text-transform: uppercase; white-space: nowrap; box-shadow: 0 8px 24px rgba(5, 14, 40, .35); }
+.fx-soon-toast { position: fixed; z-index: 90; left: 50%; bottom: 28px; max-width: min(92vw, 520px); transform: translate(-50%, 20px); opacity: 0;
+  padding: 12px 18px; border-radius: 8px; background: var(--navy, #0b1f4d); color: #fff; font-weight: 600; font-size: 15px; text-align: center;
+  box-shadow: 0 12px 32px rgba(5, 14, 40, .35); pointer-events: none; transition: opacity .25s, transform .25s; }
+.fx-soon-toast.on { opacity: 1; transform: translate(-50%, 0); }
+/* a closed site: the Coming soon panel over the whole page */
+html.fx-soon-locked, html.fx-soon-locked body { overflow: hidden; }
+.fx-soon-page { position: fixed; inset: 0; z-index: 95; display: grid; place-items: center; padding: 24px 16px;
+  background: linear-gradient(140deg, rgba(11, 31, 77, .96), rgba(24, 71, 159, .93)); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+.fx-soon-card { max-width: 560px; text-align: center; color: #fff; }
+.fx-soon-card img { display: block; width: 96px; height: 96px; margin: 0 auto; padding: 10px; border-radius: 50%; background: #fff; }
+.fx-soon-k { display: block; margin-top: 20px; font-family: var(--display); font-weight: 700; font-size: 15px; letter-spacing: .14em; text-transform: uppercase; color: #c5d4f5; }
+.fx-soon-card h1 { margin: 6px 0 0; font-family: var(--display); font-weight: 800; font-size: clamp(48px, 9vw, 84px); line-height: .95; text-transform: uppercase; color: #fff; }
+.fx-soon-card .fx-soon-big { margin: 10px 0 0; font-family: var(--display); font-weight: 800; font-size: clamp(26px, 4.5vw, 36px); letter-spacing: .08em; text-transform: uppercase; color: var(--gold, #f0b429); }
+.fx-soon-card p { margin: 14px 0 0; font-size: 17px; line-height: 1.5; color: #dbe5fb; }
+.fx-soon-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 26px; }
+/* the winter front page's snowfall */
+.fx-snow { position: fixed; inset: 0; z-index: 80; width: 100%; height: 100%; pointer-events: none; }

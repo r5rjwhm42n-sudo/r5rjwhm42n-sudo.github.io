@@ -429,6 +429,121 @@
 
   sportMenu();
 
+  /* ---------- Team sites that aren't open yet ----------
+     The winter sites are built but stay shut until the season starts: every link to one says "Coming soon" and
+     goes nowhere, search leaves them out (it reads window.DFA_SOON), and a visit to one is covered by a Coming soon
+     panel. To open a site, take its folder out of SOON. */
+  const SOON = ["basketball", "hockey", "wrestling", "indoor-track", "swim-dive", "gymnastics"];
+  window.DFA_SOON = SOON;
+  const NAME_OF = Object.fromEntries(WINTER);
+  const soonOf = (a) => {
+    const href = a.getAttribute("href");
+    if (!href || href.startsWith("#") || /^(mailto|tel|javascript):/.test(href)) return null;
+    let url;
+    try { url = new URL(href, location.href); } catch (e) { return null; }
+    if (!url.href.startsWith(ROOT)) return null;
+    const dir = url.href.slice(ROOT.length).split(/[/?#]/)[0];
+    return SOON.includes(dir) ? dir : null;
+  };
+  function markSoon(root = document) {
+    root.querySelectorAll("a[href]:not([data-soon])").forEach((a) => {
+      const dir = soonOf(a);
+      if (!dir) return;
+      a.dataset.soon = dir;
+      a.setAttribute("aria-disabled", "true");
+      a.title = `${NAME_OF[dir] || "This team"}: coming soon`;
+      /* a team card gets a Coming soon panel over its photo */
+      if (a.matches(".team-card")) {
+        a.querySelector(".tc-media")?.insertAdjacentHTML("beforeend", '<span class="fx-soon-tag">Coming soon</span>');
+        const go = a.querySelector(".tc-go");
+        if (go) go.firstChild.textContent = "Coming soon ";
+      }
+      else if (a.matches(".tc-go, .nu-foot")) a.firstChild.textContent = "Coming soon ";
+    });
+  }
+  if (!SPORT || !SOON.includes(SPORT[0])) {
+    markSoon();
+    new MutationObserver(() => markSoon()).observe(document.body, { childList: true, subtree: true });   // lists drawn later
+    document.addEventListener("click", (e) => {
+      const a = e.target.closest("a[data-soon]");
+      if (!a) return;
+      e.preventDefault();
+      e.stopPropagation();
+      let tip = document.querySelector(".fx-soon-toast");
+      if (!tip) { tip = document.createElement("div"); tip.className = "fx-soon-toast"; tip.setAttribute("role", "status"); document.body.appendChild(tip); }
+      tip.textContent = `${NAME_OF[a.dataset.soon] || "This team"}: coming soon. The site opens when the winter season starts.`;
+      tip.classList.remove("on"); void tip.offsetWidth; tip.classList.add("on");
+      clearTimeout(tip._t); tip._t = setTimeout(() => tip.classList.remove("on"), 2600);
+    }, true);
+  } else {
+    /* a closed site itself: a Coming soon panel over the page, and nothing behind it can be reached */
+    const [, name] = SPORT;
+    const panel = document.createElement("div");
+    panel.className = "fx-soon-page";
+    panel.setAttribute("role", "dialog");
+    panel.setAttribute("aria-modal", "true");
+    panel.setAttribute("aria-labelledby", "fx-soon-h");
+    panel.innerHTML = `
+      <div class="fx-soon-card">
+        <img src="${ROOT}images/falcons-logo.png" alt="">
+        <span class="fx-soon-k">Danvers Falcons · Winter 2026–27</span>
+        <h1 id="fx-soon-h">${name}</h1>
+        <p class="fx-soon-big">Coming soon</p>
+        <p>This team's site opens when the winter season starts. Tryouts begin Monday, Nov. 30.</p>
+        <div class="fx-soon-links"><a class="btn btn-primary" href="${ROOT}winter.html">Winter sports</a><a class="btn btn-ghost" href="${ROOT}">Fall sports</a></div>
+      </div>`;
+    [...document.body.children].forEach((el) => { el.inert = true; });
+    document.body.appendChild(panel);
+    document.documentElement.classList.add("fx-soon-locked");
+    panel.querySelector("a")?.focus({ preventScroll: true });
+  }
+
+  /* ---------- The winter front page: a light snowfall for the first 10 seconds ---------- */
+  function snow() {
+    if (!ON_HUB || document.body.dataset.season !== "winter" || REDUCED) return;
+    const cv = document.createElement("canvas");
+    cv.className = "fx-snow";
+    cv.setAttribute("aria-hidden", "true");
+    document.body.appendChild(cv);
+    const ctx = cv.getContext("2d");
+    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    let W = 0, H = 0;
+    const size = () => { W = innerWidth; H = innerHeight; cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); };
+    size();
+    addEventListener("resize", size);
+    const count = Math.round(Math.min(80, Math.max(30, (W * H) / 15000)));   // light: a few dozen flakes
+    const flakes = Array.from({ length: count }, () => ({
+      x: Math.random() * W, y: Math.random() * H * 1.1 - H * 0.2, r: 1 + Math.random() * 2.4,
+      vy: 0.35 + Math.random() * 0.75, sway: Math.random() * Math.PI * 2, vs: 0.008 + Math.random() * 0.014, a: 0.5 + Math.random() * 0.4
+    }));
+    const RUN = 10000, FADE = 2000;   // ten seconds in all, the last two fading out
+    let start = null, last = null;
+    const frame = (t) => {
+      if (start == null) start = last = t;
+      const age = t - start, step = Math.min(3, (t - last) / 16.7);
+      last = t;
+      if (age >= RUN) { cv.remove(); removeEventListener("resize", size); return; }
+      const fade = age > RUN - FADE ? (RUN - age) / FADE : Math.min(1, age / 700);
+      ctx.clearRect(0, 0, W, H);
+      ctx.shadowColor = "rgba(24, 71, 159, .35)";
+      ctx.shadowBlur = 3;
+      for (const f of flakes) {
+        f.y += f.vy * (0.7 + f.r / 3) * step;
+        f.sway += f.vs * step;
+        f.x += Math.sin(f.sway) * 0.45 * step;
+        if (f.y > H + 6) { f.y = -6; f.x = Math.random() * W; }
+        ctx.globalAlpha = f.a * fade;
+        ctx.beginPath();
+        ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+        ctx.fillStyle = "#fff";
+        ctx.fill();
+      }
+      requestAnimationFrame(frame);
+    };
+    requestAnimationFrame(frame);
+  }
+  snow();
+
   /* ---------- Hover effects ---------- */
   /* every button gets an arrow that tilts on hover: a "↗" already in the label is used, otherwise a "→" is added
      (not on the calendar dropdown or buttons that carry their own icon) */
