@@ -71,11 +71,14 @@ const TEAM = {
       { seeds: [5, 12], score: [3, 1], date: "2026-11-10T17:30", site: "Foxborough High School, Foxborough" },
       { seeds: [7, 10], score: [0, 2], date: "2026-11-10T18:00", site: "Dedham High School, Dedham" },
       { seeds: [3, 14], score: [5, 0], date: "2026-11-11T15:00", site: "Dover-Sherborn High School, Dover" },
-      { seeds: [1, 8], date: "2026-11-12T13:30", site: "Sandwich High School, Sandwich" },
-      { seeds: [4, 5], date: "2026-11-13T15:30", site: "Victory Field, Watertown" },
+      { seeds: [1, 8], score: [5, 1], date: "2026-11-12T13:30", site: "Sandwich High School, Sandwich" },
+      { seeds: [4, 5], score: [4, 0], date: "2026-11-13T15:30", site: "Victory Field, Watertown" },
       { seeds: [6, 11], score: [5, 1], date: "2026-11-11T14:00", site: "Gloucester High School, Gloucester" },
-      { seeds: [2, 10], date: "2026-11-14T14:00", site: "Uxbridge High School, Uxbridge" },
-      { seeds: [3, 6], date: "2026-11-14T14:00", site: "Dover-Sherborn High School, Dover" }
+      { seeds: [2, 10], score: [7, 1], date: "2026-11-14T14:00", site: "Uxbridge High School, Uxbridge" },
+      { seeds: [3, 6], score: [2, 0], date: "2026-11-14T14:00", site: "Dover-Sherborn High School, Dover" },
+      { seeds: [1, 4], score: [0, 1], date: "2026-11-17T19:00", site: "Bridgewater-Raynham Regional High School, Bridgewater" },
+      { seeds: [2, 3], score: [3, 1], date: "2026-11-17T17:00", site: "Bridgewater-Raynham Regional High School, Bridgewater" },
+      { seeds: [2, 4], date: "2026-11-21T10:00", site: "UMass Dartmouth, Dartmouth" }
     ]
   },
   links: {

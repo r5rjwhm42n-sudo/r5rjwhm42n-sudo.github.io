@@ -29,7 +29,7 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:boys-hockey-1@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
-DTSTART;TZID=America/New_York:20261214T160000
+DTSTART;TZID=America/New_York:20261214T193000
 DURATION:PT1H45M
 SUMMARY:Danvers Boys Hockey vs Somerville
 LOCATION:Raymond J. Bourque Arena\, Endicott College\, Beverly
@@ -62,7 +62,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:boys-hockey-4@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
-DTSTART;TZID=America/New_York:20261223T160000
+DTSTART;TZID=America/New_York:20261223T153000
 DURATION:PT1H45M
 SUMMARY:Danvers Boys Hockey vs Winthrop
 LOCATION:Raymond J. Bourque Arena\, Endicott College\, Beverly

@@ -83,10 +83,13 @@ const TEAM = {
       { seeds: [2, 15], score: [3, 1], date: "2026-11-10T18:00" },
       { seeds: [7, 10], score: [1, 3], date: "2026-11-09T18:00" },
       { seeds: [6, 11], score: [3, 2], date: "2026-11-10T17:00" },
-      { seeds: [1, 8], date: "2026-11-14T17:00" },
-      { seeds: [4, 5], date: "2026-11-13T18:00" },
-      { seeds: [2, 10], date: "2026-11-13T18:00" },
-      { seeds: [3, 6], date: "2026-11-12T17:30" }
+      { seeds: [1, 8], score: [3, 0], date: "2026-11-14T17:00" },
+      { seeds: [4, 5], score: [3, 2], date: "2026-11-13T18:00" },
+      { seeds: [2, 10], score: [3, 0], date: "2026-11-13T18:00" },
+      { seeds: [3, 6], score: [3, 0], date: "2026-11-12T17:30" },
+      { seeds: [1, 4], score: [3, 1], date: "2026-11-18T18:00", site: "Bridgewater-Raynham Regional High School, Bridgewater" },
+      { seeds: [2, 3], score: [2, 3], date: "2026-11-18T18:00", site: "Westwood High School, Westwood" },
+      { seeds: [1, 3], date: "2026-11-21T09:30", site: "Newton South High School, Newton" }
     ]
   },
   address: "60 Cabot Road, Danvers, MA 01923",

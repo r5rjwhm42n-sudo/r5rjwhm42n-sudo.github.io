@@ -41,9 +41,11 @@ const TEAM = {
       { seeds: [3, 14], score: [30, 27], date: "2026-11-06T18:30", site: "Morse Field, Danvers" },
       { seeds: [6, 11], score: [27, 21], date: "2026-11-06T19:00", site: "Tantasqua Regional High School, Sturbridge" },
       { seeds: [1, 8], score: [49, 7], date: "2026-11-13T19:00", site: "Scituate High School, Scituate" },
-      { seeds: [4, 5], date: "2026-11-13T19:00", site: "Duxbury High School, Duxbury" },
+      { seeds: [4, 5], score: [13, 14], date: "2026-11-13T19:00", site: "Duxbury High School, Duxbury" },
       { seeds: [2, 7], score: [49, 14], date: "2026-11-13T19:00", site: "Doucette Stadium, Tewksbury" },
-      { seeds: [3, 6], score: [40, 35], date: "2026-11-13T18:30", site: "Morse Field, Danvers" }
+      { seeds: [3, 6], score: [40, 35], date: "2026-11-13T18:30", site: "Morse Field, Danvers" },
+      { seeds: [1, 5], date: "2026-11-20T18:30", site: "Bridgewater-Raynham Regional High School, Bridgewater" },
+      { seeds: [2, 3], date: "2026-11-20T18:00", site: "Burlington High School, Burlington" }
     ]
   },
   headCoach: "Ryan Nolan",
@@ -366,7 +368,6 @@ const SCHEDULE = [
       kicker: "Division 4 Quarterfinal",
       blurb: "No. 3 Danvers hosts No. 6 Tantasqua Regional in the MIAA Division 4 quarterfinals. A win sends the Falcons to the semifinals.",
       oppRecord: "7–3",   // Tantasqua's record after the game
-      until: "2026-11-19T23:59",   // the win stays on the front page until semifinal week
       won: "On to the Semifinals",
       lost: "Final"
     },
@@ -390,12 +391,30 @@ const SCHEDULE = [
       { label: "MIAA Division 4 bracket", url: "https://www.miaa.net/miaa-football-2026-division-4-state-tournament" },
       { label: "Salem News preview", url: "https://www.salemnews.com/sports/moving-the-chains-playoff-quarterfinal-matchups-on-tap-tonight-for-danvers-peabody-sjp/article_2a8c07e3-5f68-4434-8f8e-15899d5d3b71.html" }
     ] },
-  { id: 12, date: "2026-11-20T00:00", dateTbd: true, dates: "Nov 20–21", opponent: "Tewksbury", mascot: "Redmen",
-    home: false, neutral: true, league: false, postseason: true, round: "Semifinals", site: "Neutral site to be announced", result: null,
+  { id: 12, date: "2026-11-20T18:00", opponent: "Tewksbury", mascot: "Redmen",
+    home: false, neutral: true, league: false, postseason: true, round: "Semifinals", site: "Burlington High School, Burlington", result: null,
     tag: "State Tournament",
-    notes: ["MIAA Division 4 semifinals: No. 3 Danvers (9–0) vs. No. 2 Tewksbury Memorial (9–1)", "Tewksbury beat No. 7 Shepherd Hill 49–14 in the quarterfinals", "Semifinals are played at neutral sites; the MIAA hasn't announced this game's date, time or site yet", "Expected the weekend before Thanksgiving, Nov. 20–21", "The winner plays for the Division 4 state title"],
+    spotlight: {
+      kicker: "Division 4 Semifinal",
+      blurb: "Unbeaten No. 3 Danvers meets No. 2 Tewksbury at Burlington High School. A win puts the Falcons in the first state final in school history.",
+      oppRecord: "9–1",   // Tewksbury's record after the game
+      watch: "https://www.nfhsnetwork.com/associations/miaa",   // the NFHS Network carries MIAA tournament football from the quarterfinals on
+      tickets: { label: "Tickets", note: "MIAA tournament tickets are sold on GoFan", url: "https://gofan.co/app/school/MIAA" },
+      won: "On to the State Final",
+      lost: "Final"
+    },
+    notes: [
+      "MIAA Division 4 semifinal: No. 3 Danvers (9–0) vs. No. 2 Tewksbury Memorial (9–1), at Burlington High School",
+      "Semifinals are played at neutral sites set by the MIAA",
+      "Danvers has won nine straight; Tewksbury has won six straight, beating No. 15 Wakefield 35–7 and No. 7 Shepherd Hill 49–14 in the tournament",
+      "Tewksbury lost last year's Division 4 state final to Scituate, 42–41, at Gillette Stadium",
+      "The other semifinal, also Friday: No. 1 Scituate vs. No. 5 Walpole, 6:30 p.m. at Bridgewater-Raynham",
+      "The winner plays for the Division 4 state title"
+    ],
     sources: [
       { label: "MIAA Division 4 bracket", url: "https://www.miaa.net/miaa-football-2026-division-4-state-tournament" },
+      { label: "Live on the NFHS Network", url: "https://www.nfhsnetwork.com/associations/miaa" },
+      { label: "MaxPreps game preview", url: "https://www.maxpreps.com/news/NA6kIGek00GF2FO1f5wxzw/football-preview-danvers-and-tewksbury-memorial-each-put-a-winning-streak-on-the-line.htm" },
       { label: "Tewksbury 49, Shepherd Hill 14 (MaxPreps)", url: "https://www.maxpreps.com/ma/football/game/shepherd-hill-regional-dudley-vs-tewksbury-memorial/11-13-2026/?c=a25582ba-4d94-459c-9793-03ecf523088e" }
     ] },
   { id: 9, date: "2026-11-26T10:00", opponent: "Gloucester", mascot: "Fishermen", home: false, league: false, site: "Newell Stadium, Gloucester", result: null,

@@ -238,8 +238,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:girls-hockey-20@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
-DTSTART;VALUE=DATE:20270217
-DTEND;VALUE=DATE:20270218
+DTSTART;TZID=America/New_York:20270217T144500
+DURATION:PT1H45M
 SUMMARY:Danvers Girls Hockey at Andover
 LOCATION:Breakaway Ice Center\, Tewksbury
 DESCRIPTION:Northeast Hockey League\nSchedule and results: https://danversf

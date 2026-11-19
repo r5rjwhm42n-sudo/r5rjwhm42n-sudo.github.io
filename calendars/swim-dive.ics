@@ -26,4 +26,92 @@ DTSTART:19701101T020000
 RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
+BEGIN:VEVENT
+UID:swim-dive-1@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261217T193000
+DURATION:PT2H
+SUMMARY:Danvers Swim & Dive at Peabody
+LOCATION:Peabody YMCA\, Peabody
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/swim-dive/#schedule
+URL:https://danversfalconsathletics.org/swim-dive/#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:swim-dive-2@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261223T190000
+DURATION:PT2H
+SUMMARY:Danvers Swim & Dive at Marblehead
+LOCATION:Lynch/van Otterloo YMCA\, Marblehead
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/swim-dive/#schedule
+URL:https://danversfalconsathletics.org/swim-dive/#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:swim-dive-3@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270106T190000
+DURATION:PT2H
+SUMMARY:Danvers Swim & Dive at Swampscott
+LOCATION:Jewish Community Center\, Marblehead
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/swim-dive/#schedule
+URL:https://danversfalconsathletics.org/swim-dive/#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:swim-dive-4@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270107T200000
+DURATION:PT2H
+SUMMARY:Danvers Swim & Dive at Hamilton-Wenham
+LOCATION:Gordon College\, Wenham
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/swim-dive/#schedule
+URL:https://danversfalconsathletics.org/swim-dive/#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:swim-dive-5@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270111T170000
+DURATION:PT2H
+SUMMARY:Danvers Swim & Dive at Lynn Classical
+LOCATION:Lynn Vocational Technical Institute\, Lynn
+DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
+ cs.org/swim-dive/#schedule
+URL:https://danversfalconsathletics.org/swim-dive/#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:swim-dive-6@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270113T193000
+DURATION:PT2H
+SUMMARY:Danvers Swim & Dive vs Gloucester
+LOCATION:St. John's Prep\, 72 Spring Street\, Danvers
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/swim-dive/#schedule
+URL:https://danversfalconsathletics.org/swim-dive/#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:swim-dive-7@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270120T193000
+DURATION:PT2H
+SUMMARY:Danvers Swim & Dive vs Salem
+LOCATION:St. John's Prep\, 72 Spring Street\, Danvers
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/swim-dive/#schedule
+URL:https://danversfalconsathletics.org/swim-dive/#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:swim-dive-8@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270127T193000
+DURATION:PT2H
+SUMMARY:Danvers Swim & Dive vs Masconomet
+LOCATION:St. John's Prep\, 72 Spring Street\, Danvers
+DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
+ alconsathletics.org/swim-dive/#schedule
+URL:https://danversfalconsathletics.org/swim-dive/#schedule
+END:VEVENT
 END:VCALENDAR

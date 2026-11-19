@@ -84,6 +84,17 @@ END:VEVENT
 BEGIN:VEVENT
 UID:wrestling-6@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261223T123000
+DURATION:PT2H30M
+SUMMARY:Danvers Wrestling at Meet at Marshfield
+LOCATION:Marshfield High School\, Marshfield
+DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
+ cs.org/wrestling/#schedule
+URL:https://danversfalconsathletics.org/wrestling/#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:wrestling-7@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270102T090000
 DURATION:PT2H30M
 SUMMARY:Danvers Wrestling vs Home quad meet: Foxborough and two more teams
@@ -93,7 +104,7 @@ DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
 URL:https://danversfalconsathletics.org/wrestling/#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:wrestling-7@danversfalconsathletics.org
+UID:wrestling-8@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270106T173000
 DURATION:PT2H30M
@@ -104,7 +115,18 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/wrestling/#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:wrestling-8@danversfalconsathletics.org
+UID:wrestling-9@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20270109T090000
+DURATION:PT2H30M
+SUMMARY:Danvers Wrestling at Tri-meet at Wilmington
+LOCATION:Wilmington High School\, Wilmington
+DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
+ cs.org/wrestling/#schedule
+URL:https://danversfalconsathletics.org/wrestling/#schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:wrestling-10@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270113T190000
 DURATION:PT2H30M
@@ -115,7 +137,7 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/wrestling/#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:wrestling-9@danversfalconsathletics.org
+UID:wrestling-11@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270120T183000
 DURATION:PT2H30M
@@ -126,7 +148,7 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/wrestling/#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:wrestling-10@danversfalconsathletics.org
+UID:wrestling-12@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270123T100000
 DURATION:PT2H30M
@@ -137,7 +159,7 @@ DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
 URL:https://danversfalconsathletics.org/wrestling/#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:wrestling-11@danversfalconsathletics.org
+UID:wrestling-13@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270127T193000
 DURATION:PT2H30M
@@ -148,7 +170,7 @@ DESCRIPTION:Northeastern Conference\nSchedule and results: https://danversf
 URL:https://danversfalconsathletics.org/wrestling/#schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:wrestling-12@danversfalconsathletics.org
+UID:wrestling-14@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20270202T173000
 DURATION:PT2H30M

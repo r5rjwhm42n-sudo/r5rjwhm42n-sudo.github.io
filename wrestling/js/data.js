@@ -112,6 +112,18 @@ const TEAMS = {
       },
       {
         id: 6,
+        date: "2026-12-23T12:30",
+        name: "Meet at Marshfield",
+        opponent: "Marshfield and four more teams",
+        home: false,
+        league: false,
+        tournament: true,
+        site: "Marshfield High School, Marshfield",
+        result: null,
+        notes: ["A holiday-week meet at Marshfield High School with Marshfield and four other teams", "Starts at 12:30 PM"]
+      },
+      {
+        id: 7,
         date: "2027-01-02T09:00",
         name: "Home quad meet: Foxborough and two more teams",
         opponent: "Foxborough and two more teams",
@@ -122,11 +134,23 @@ const TEAMS = {
         result: null,
         notes: ["A Saturday-morning quad meet in the Vye Gym at Danvers High: the Falcons wrestle Foxborough and two other teams", "The other two teams haven't been listed yet"]
       },
-      { id: 7, date: "2027-01-06T17:30", opponent: "Salem", mascot: "Witches", home: true, league: true, site: "Danvers High School (Vye Gym), Danvers", result: null },
-      { id: 8, date: "2027-01-13T19:00", opponent: "Gloucester", mascot: "Fishermen", home: false, league: true, site: "Gloucester High School, Gloucester", result: null },
-      { id: 9, date: "2027-01-20T18:30", opponent: "Marblehead/Swampscott", home: false, league: true, site: "Marblehead High School, Marblehead", result: null, notes: ["Marblehead and Swampscott wrestle as one co-op team"] },
+      { id: 8, date: "2027-01-06T17:30", opponent: "Salem", mascot: "Witches", home: true, league: true, site: "Danvers High School (Vye Gym), Danvers", result: null },
       {
-        id: 10,
+        id: 9,
+        date: "2027-01-09T09:00",
+        name: "Tri-meet at Wilmington",
+        opponent: "Wilmington and one more team",
+        home: false,
+        league: false,
+        tag: "Tri-meet",
+        site: "Wilmington High School, Wilmington",
+        result: null,
+        notes: ["A Saturday-morning meet at Wilmington High School with Wilmington and one other team"]
+      },
+      { id: 10, date: "2027-01-13T19:00", opponent: "Gloucester", mascot: "Fishermen", home: false, league: true, site: "Gloucester High School, Gloucester", result: null },
+      { id: 11, date: "2027-01-20T18:30", opponent: "Marblehead/Swampscott", home: false, league: true, site: "Marblehead High School, Marblehead", result: null, notes: ["Marblehead and Swampscott wrestle as one co-op team"] },
+      {
+        id: 12,
         date: "2027-01-23T10:00",
         name: "Quad meet at North Reading",
         opponent: "Lynnfield and two more teams",
@@ -137,8 +161,8 @@ const TEAMS = {
         result: null,
         notes: ["A Saturday quad meet at North Reading High School: the Falcons wrestle Lynnfield and two other teams"]
       },
-      { id: 11, date: "2027-01-27T19:30", opponent: "Beverly", mascot: "Panthers", home: false, league: true, site: "Beverly High School, Beverly", result: null },
-      { id: 12, date: "2027-02-02T17:30", opponent: "Pentucket", mascot: "Panthers", home: true, league: false, site: "Danvers High School (Vye Gym), Danvers", result: null }
+      { id: 13, date: "2027-01-27T19:30", opponent: "Beverly", mascot: "Panthers", home: false, league: true, site: "Beverly High School, Beverly", result: null },
+      { id: 14, date: "2027-02-02T17:30", opponent: "Pentucket", mascot: "Panthers", home: true, league: false, site: "Danvers High School (Vye Gym), Danvers", result: null }
     ],
     players: [],
     pastIntro: "The last three winters: each season's record, coach, captains and honors.",

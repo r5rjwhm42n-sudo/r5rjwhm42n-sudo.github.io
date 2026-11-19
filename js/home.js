@@ -287,7 +287,7 @@
       <div class="sp-label"><span class="sp-flag" id="sp-flag"></span><span>${esc(done ? (g.result === "W" ? sp.won : sp.lost) : sp.kicker)}</span></div>
       <div class="sp-matchup">
         ${side(`<span class="sp-logo us"><img src="images/falcons-logo.png" alt=""></span>`, "Danvers", ours, done ? g.us : null, done && g.result === "W")}
-        <span class="sp-vs">${g.home ? "vs" : "at"}</span>
+        <span class="sp-vs">${vs(g)}</span>
         ${side(opp, g.opponent, sp.oppRecord || "", done ? g.them : null, done && g.result === "L")}
       </div>
       <p class="sp-info">${done ? esc(sp.kicker) : `${today ? "" : `${esc(fmt(g.date, { weekday: "long", month: "short", day: "numeric" }))} · `}${esc(timeOf(g))}`} · ${esc(g.site || "")}<span id="sp-wx"></span></p>
@@ -323,7 +323,7 @@
     $("#sp-share").addEventListener("click", async (ev) => {
       const btn = ev.currentTarget;
       const text = done ? `${g.result === "W" ? sp.won : sp.lost}: Danvers ${g.us}, ${g.opponent} ${g.them}`
-        : `${sp.kicker}: Danvers ${g.home ? "vs" : "at"} ${g.opponent}, ${fmt(g.date, { weekday: "long", month: "short", day: "numeric" })} at ${timeOf(g)}. Go Falcons!`;
+        : `${sp.kicker}: Danvers ${vs(g)} ${g.opponent}, ${fmt(g.date, { weekday: "long", month: "short", day: "numeric" })} at ${timeOf(g)}. Go Falcons!`;
       try {
         if (navigator.share) await navigator.share({ title: "Danvers Falcons Football", text, url: page });
         else { await navigator.clipboard.writeText(`${text} ${page}`); btn.textContent = "Link copied"; }

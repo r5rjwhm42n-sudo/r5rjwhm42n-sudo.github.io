@@ -171,6 +171,17 @@ DESCRIPTION:MIAA state tournament · Quarterfinals\nFinal: Danvers 40\, Tan
 URL:https://danversfalconsathletics.org/football/#schedule
 END:VEVENT
 BEGIN:VEVENT
+UID:football-12@danversfalconsathletics.org
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=America/New_York:20261120T180000
+DURATION:PT2H30M
+SUMMARY:Danvers Football vs Tewksbury
+LOCATION:Burlington High School\, Burlington
+DESCRIPTION:MIAA state tournament · Semifinals\nSchedule and results: http
+ s://danversfalconsathletics.org/football/#schedule
+URL:https://danversfalconsathletics.org/football/#schedule
+END:VEVENT
+BEGIN:VEVENT
 UID:football-9@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261126T100000

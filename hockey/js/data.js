@@ -61,10 +61,10 @@ const TEAMS = {
     ],
     rosterNote: "The 2026–27 roster will be posted after tryouts, which begin Monday, Nov. 30.",
     schedule: [
-      { id: 1, date: "2026-12-14T16:00", opponent: "Somerville", mascot: "Highlanders", home: true, league: false, site: "Raymond J. Bourque Arena, Endicott College, Beverly", result: null },
+      { id: 1, date: "2026-12-14T19:30", opponent: "Somerville", mascot: "Highlanders", home: true, league: false, site: "Raymond J. Bourque Arena, Endicott College, Beverly", result: null },
       { id: 2, date: "2026-12-16T18:30", opponent: "Essex Tech", mascot: "Hawks", home: false, league: false, site: "Essex Sports Center, Middleton", result: null },
       { id: 3, date: "2026-12-19T19:30", opponent: "Saugus", mascot: "Sachems", home: false, league: true, site: "Kasabuski Rink, Saugus", result: null },
-      { id: 4, date: "2026-12-23T16:00", opponent: "Winthrop", mascot: "Vikings", home: true, league: true, site: "Raymond J. Bourque Arena, Endicott College, Beverly", result: null },
+      { id: 4, date: "2026-12-23T15:30", opponent: "Winthrop", mascot: "Vikings", home: true, league: true, site: "Raymond J. Bourque Arena, Endicott College, Beverly", result: null },
       {
         id: 5,
         date: "2026-12-26T16:00",
@@ -486,7 +486,7 @@ const TEAMS = {
       { id: 17, date: "2027-02-06T13:00", opponent: "Winthrop", mascot: "Vikings", home: false, league: false, site: "Larsen Rink, Winthrop", result: null },
       { id: 18, date: "2027-02-10T19:30", opponent: "Newburyport", mascot: "Clippers", home: true, league: false, site: "Raymond J. Bourque Arena, Endicott College, Beverly", result: null },
       { id: 19, date: "2027-02-13T18:00", opponent: "Peabody/Lynnfield/North Reading", mascot: "Tanners", home: true, league: false, site: "Raymond J. Bourque Arena, Endicott College, Beverly", result: null },
-      { id: 20, date: "2027-02-17T12:00", opponent: "Andover", mascot: "Golden Warriors", home: false, league: false, site: "Breakaway Ice Center, Tewksbury", result: null, timeTbd: true }
+      { id: 20, date: "2027-02-17T14:45", opponent: "Andover", mascot: "Golden Warriors", home: false, league: false, site: "Breakaway Ice Center, Tewksbury", result: null }
     ],
     players: [],
     past: [

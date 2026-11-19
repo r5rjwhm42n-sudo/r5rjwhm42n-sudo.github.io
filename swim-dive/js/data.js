@@ -36,11 +36,11 @@ const TEAMS = {
     label: "Swim & Dive",
     short: "Varsity",
     headCoach: "Meghan Beaulieu",
-    heroTitle: "Falcons are back in the pool Nov. 30",
-    preview: "The co-ed swimming and diving team begins practice Monday, Nov. 30 at St. John's Prep, its home pool. This winter's meets will be added here as soon as the schedule is posted.",
+    heroTitle: "Falcons open Dec. 17 at Peabody",
+    preview: "The co-ed swimming and diving team opens Thursday, Dec. 17 at Peabody, at the Peabody YMCA. Eight meets are on the schedule, with three at home at St. John's Prep in January. Practice begins Monday, Nov. 30.",
     stripTile: ["State tournament", "D2 North", "Boys and girls · MIAA"],
     noScheduleNote: "This winter's meets haven't been posted yet. Practice begins Monday, Nov. 30 at St. John's Prep.",
-    scheduleNote: "The meet schedule will be added as soon as it is posted. The school's ArbiterLive page has the latest.",
+    scheduleNote: "The schedule is from the school's ArbiterLive page and can change. The NEC meet and the MIAA state meets follow for swimmers and divers who qualify.",
     links: { school: "https://danverspublicschools.org/dhs/athletics/swimming-and-diving/", schedule: "https://www.arbiterlive.com/Teams?entityId=5538" },
     staff: [["Head coach", "Meghan Beaulieu", "A Danvers High graduate who swam at Babson College"], ["Assistant coaches", "Graham Beck, Ezra Lombardi & Maddie Butler"]],
     about: [
@@ -49,7 +49,16 @@ const TEAMS = {
       "Head coach Meghan Beaulieu played soccer, swam and played softball at Danvers High before swimming at Babson College. She teaches business at the high school. Program information from the school's team page."
     ],
     rosterNote: "The 2026–27 roster will be posted after practice begins Monday, Nov. 30.",
-    schedule: [],
+    schedule: [
+      { id: 1, date: "2026-12-17T19:30", opponent: "Peabody", mascot: "Tanners", home: false, league: true, site: "Peabody YMCA, Peabody", result: null },
+      { id: 2, date: "2026-12-23T19:00", opponent: "Marblehead", mascot: "Magicians", home: false, league: true, site: "Lynch/van Otterloo YMCA, Marblehead", result: null },
+      { id: 3, date: "2027-01-06T19:00", opponent: "Swampscott", mascot: "Big Blue", home: false, league: true, site: "Jewish Community Center, Marblehead", result: null },
+      { id: 4, date: "2027-01-07T20:00", opponent: "Hamilton-Wenham", mascot: "Generals", home: false, league: true, site: "Gordon College, Wenham", result: null },
+      { id: 5, date: "2027-01-11T17:00", opponent: "Lynn Classical", home: false, league: false, site: "Lynn Vocational Technical Institute, Lynn", result: null },
+      { id: 6, date: "2027-01-13T19:30", opponent: "Gloucester", mascot: "Fishermen", home: true, league: true, site: "St. John's Prep, 72 Spring Street, Danvers", result: null, notes: ["A home meet at St. John's Prep"] },
+      { id: 7, date: "2027-01-20T19:30", opponent: "Salem", mascot: "Witches", home: true, league: true, site: "St. John's Prep, 72 Spring Street, Danvers", result: null, notes: ["A home meet at St. John's Prep"] },
+      { id: 8, date: "2027-01-27T19:30", opponent: "Masconomet", mascot: "Chieftains", home: true, league: true, site: "St. John's Prep, 72 Spring Street, Danvers", result: null, notes: ["A home meet at St. John's Prep"] }
+    ],
     players: [],
     pastIntro: "Last winter's record and honors.",
     past: [

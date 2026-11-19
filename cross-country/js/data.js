@@ -291,25 +291,36 @@ const MEETS = [
   {
     id: 8, date: "2026-11-14T12:30", name: "MIAA Division 2 Championships", short: "MIAA", postseason: true,
     home: false, league: false, site: "Wrentham Developmental Center", distance: "5K",
-    boys: null, girls: null,
+    headline: "Conklin earns a spot at the state meet",
+    summary: "Senior Grace Conklin qualified for the MIAA State Championship meet as an individual at the Division 2B divisional meet in Wrentham. Holliston's Lucy Downin won the girls race in 17:25.8 and Amherst-Pelham took the team title for a third straight year. In the boys race, East Longmeadow's Nick Rivera won in 15:40.7 and Groton-Dunstable won the team title with 78 points. Neither Danvers team finished in the top seven that move on.",
+    boys: {
+      race: "Division 2B · Groton-Dunstable won with 78 points",
+      finishers: [f("Marcus Morais", null, "18:34.4"), f("Jason Rooney", null, "18:52.4"), f("Miles Pietal", null, "19:22.0")]
+    },
+    girls: {
+      race: "Division 2B · Grace Conklin qualified for the state meet",
+      finishers: [f("Grace Conklin", null, null, "Qualified for the state meet")]
+    },
     notes: [
-      "Listed as \"States\" on the team schedule",
-      "Danvers runs in Wave B: girls at 12:30 p.m., boys at 1:15 p.m.",
-      "Division 2 runs in three waves (A, B, C): girls at 11:00 a.m., 12:30 and 2:00 p.m., boys at 11:45 a.m., 1:15 and 2:45 p.m.",
-      "The top seven teams and the top ten other individuals in each wave qualify for the state meet"
+      "Danvers ran in Division 2B (Wave B): seven girls and eight boys were entered",
+      "The top seven teams and the top ten other individuals in each race qualify for the state meet",
+      "Girls team scores: Amherst-Pelham 54, Northampton 95, Burlington 150, Holliston 160, Falmouth 162, Ashland 175, Wakefield 205",
+      "Boys team scores: Groton-Dunstable 78, Amherst-Pelham 101, Northampton 112, Wayland 163, Pembroke 190, Newburyport 208, Ashland 211",
+      "The first three Danvers boys' times are from the posted results; full places and the other Falcons' times weren't available"
     ],
     sources: [
-      { label: "MIAA cross country schedule (PDF)", url: "https://www.miaa.net/sites/default/files/2026-03/cross-country-2026-schedule.pdf" },
-      { label: "Division 2 boys waves (PDF)", url: "https://www.miaa.net/sites/default/files/2026-10/boys-cross-country-waves-fall-2026-division-2.pdf" },
-      { label: "Division 2 girls waves (PDF)", url: "https://www.miaa.net/sites/default/files/2026-10/girls-cross-country-waves-fall-2026-division-2.pdf" }
+      { label: "MIAA meet story", url: "https://www.miaa.net/news/2026-division-2-cross-country-sectional-championships-familiar-results-among-girls-champions" },
+      { label: "Boys 2B results (athletic.net)", url: "https://www.athletic.net/CrossCountry/meet/283161/results/1125684" },
+      { label: "Division 2 meet program (PDF)", url: "https://www.miaa.net/sites/default/files/2026-11/2026-fall-d2-cross-country-program.pdf" },
+      { label: "Boston Globe boys divisionals", url: "https://www.bostonglobe.com/2026/11/14/sports/miaa-boys-cross-country-divisionals/" }
     ]
   },
   {
     id: 14, date: "2026-11-21T14:00", name: "MIAA State Championship Meet", short: "STA", postseason: true,
     home: false, league: false, site: "Devens", distance: "5K",
     boys: null, girls: null,
-    notes: ["For teams and runners who qualify at the divisional meet", "Division 2 girls race at 2:00 p.m., boys at 2:45 p.m."],
-    sources: [{ label: "MIAA cross country schedule (PDF)", url: "https://www.miaa.net/sites/default/files/2026-03/cross-country-2026-schedule.pdf" }]
+    notes: ["Grace Conklin runs for Danvers in the Division 2 girls race at 2:00 p.m.", "For teams and runners who qualified at the divisional meets", "Division 2 boys race at 2:45 p.m."],
+    sources: [{ label: "State meet program (PDF)", url: "https://www.miaa.net/sites/default/files/2026-11/2026-fall-state-cross-country-program_0.pdf" }, { label: "MIAA cross country schedule (PDF)", url: "https://www.miaa.net/sites/default/files/2026-03/cross-country-2026-schedule.pdf" }]
   }
 ];
 
@@ -322,7 +333,7 @@ const MEETS = [
    Each runner's race-by-race results are pulled automatically from the
    finishers lists in MEETS above — spell names the same in both places.
    --------------------------------------------------------------------- */
-const STATS_AS_OF = "Through 8 meets (Oct. 21, 2026)";
+const STATS_AS_OF = "Through the MIAA Division 2 meet (Nov. 14, 2026)";
 
 const RUNNERS = [
   { name: "Marcus Morais", squad: "boys", grade: "Sr.", captain: false, pr: "18:00.4" },
@@ -420,7 +431,7 @@ const MILESTONES = [
   { year: "2023", text: "The boys win the MIAA 2B divisional meet, then the MIAA Division II state championship." },
   { year: "2024", text: "Will Conklin is named NEC Boys Cross Country Runner of the Year and runs 15:53.1, the fastest 5K on the program's all-time list." },
   { year: "2025", text: "The girls go 5–2 and win the NEC Lynch Division. Grace Conklin is named NEC All-Conference." },
-  { year: "2026", text: "Marcus Morais wins the race at Salem and the boys take a 28–29 thriller, their first dual-meet win since 2024. Grace Conklin runs 19:46.7 at the Bay State Invitational, fifth on the girls' all-time 5K list, and makes the All-NEC team for the second straight year." }
+  { year: "2026", text: "Marcus Morais wins the race at Salem and the boys take a 28–29 thriller, their first dual-meet win since 2024. Grace Conklin runs 19:46.7 at the Bay State Invitational, fifth on the girls' all-time 5K list, and makes the All-NEC team for the second straight year, then qualifies for the MIAA state meet as an individual." }
 ];
 
 const STANDOUTS = [
