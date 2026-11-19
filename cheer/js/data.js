@@ -40,10 +40,10 @@ const TEAMS = {
     label: "Cheer",
     short: "Varsity",
     headCoach: "Rita Mirandi",
-    heroTitle: "NEC champions compete at the North Regional",
-    preview: "Danvers cheer won the small division at the NEC Championship on Nov. 7. The Falcons compete in Division 3 at the MSAA North Regional at Billerica Memorial High School on Sunday, Nov. 15, with awards at 5:30 PM, and a top finish sends them to the state finals at Worcester State on Nov. 22.",
+    heroTitle: "NEC champions head to the state finals",
+    preview: "Danvers cheer, the NEC small-division champions, placed fourth in Division 3 at the MSAA North Regional with 84.6 and competes at the state finals at Worcester State University on Sunday, Nov. 22, its fourth straight trip.",
     boardTag: "Div. 3",
-    stripTile: ["State finals", "3 straight", "2023 · 2024 · 2025"],
+    stripTile: ["State finals", "4 straight", "2023 through 2026"],
     schedTiles: [["Division", "3", "MSAA North · set by enrollment"]],
     scheduleNote: "The squad also cheers at every Danvers football game, home and away. Times for the state finals are set after the regionals.",
     links: { school: "https://danverspublicschools.org/dhs/athletics/football-cheerleading/", schedule: "https://www.arbiterlive.com/Teams/Schedule/9424643?activeEntityId=5538" },
@@ -142,41 +142,49 @@ const TEAMS = {
         kind: "MSAA regional",
         tag: "Division 3",
         site: "Billerica Memorial High School, Billerica",
-        field: ["Wakefield", "Wayland", "Winthrop", "Tewksbury", "Lynnfield", "North Reading", "Pentucket", "Dracut", "Stoneham", "Burlington", "Wilmington", "Lynn Tech"],
-        result: null,
+        field: ["Lynnfield", "Wilmington", "Winthrop", "Burlington", "Wakefield", "Dracut", "North Reading", "Pentucket", "Tewksbury", "Stoneham", "Wayland"],
+        place: "4th of 12",
+        score: "84.6",
+        division: "Division 3",
+        summary: "Danvers scored 84.6 to finish fourth of 12 teams in Division 3 at the MSAA North Regional and qualified for the state finals for a fourth straight fall. Lynnfield won the division with 90.3, ahead of Wilmington (86.3) and Winthrop (85.1), and Danvers edged Burlington (84.5) by a tenth of a point.",
         notes: [
-          "Danvers competes in Division 3 and is 7th of 13 teams to take the mat (No. 44 in the day's order)",
-          "Registration at 3:35 PM and report to warm-up at 4:15 PM; the afternoon session starts at 2:30 PM",
-          "Awards for Divisions 1 and 3 at 5:30 PM",
-          "Tickets are $16.75 on GoFan; doors open at 9:30 AM",
-          "The top teams in each division, plus at-large picks, go on to the state finals on Sunday, Nov. 22"
+          "4th of 12 in Division 3 with 84.6 points and no deductions",
+          "The top seven teams qualified for the state finals; North Reading got an at-large bid",
+          "Lynnfield 90.3, Wilmington 86.3, Winthrop 85.1, Danvers 84.6, Burlington 84.5, Wakefield 83.8, Dracut 83.6",
+          "Danvers' 84.6 matched its score at last year's North Regional, where it placed fifth"
         ],
         sources: [
-          { label: "Order of appearance (MSAA)", url: "https://www.msaa.net/sites/default/files/2026-11/f26-north-order-of-appearance.pdf" },
-          { label: "Tickets on GoFan", url: "https://gofan.co/app/school/MSAA" },
-          { label: "MSAA cheerleading", url: "https://www.msaa.net/activities/msaa-cheerleading" }
+          { label: "North Regional results (MSAA)", url: "https://www.msaa.net/sites/default/files/2026-11/f26-north-cheer-results.pdf" },
+          { label: "Order of appearance (MSAA)", url: "https://www.msaa.net/sites/default/files/2026-11/f26-north-order-of-appearance.pdf" }
         ]
       },
       {
         id: 6,
-        date: "2026-11-22T10:30",
-        timeTbd: true,
+        date: "2026-11-22T15:55",
         name: "MSAA State Finals",
         opponent: "MSAA State Finals",
         home: false,
         league: false,
         tournament: true,
         kind: "MSAA state finals",
-        tag: "If qualified",
+        tag: "Division 3",
         site: "Worcester State University, Worcester",
+        field: ["Wakefield", "Scituate", "Dracut", "Notre Dame Academy", "Norton", "North Reading", "Archbishop Williams", "Pembroke", "Burlington", "Winthrop", "Foxborough", "Uxbridge", "Nipmuc", "Medway", "Wilmington", "Millbury", "Lynnfield", "Hanover"],
         result: null,
         notes: [
-          "For the teams that qualify at the regionals",
-          "Session 1 starts at 10:30 AM and session 2 at about 2:45 PM; the order of appearance comes out after the regionals",
-          "Tickets are $16.75 on GoFan; doors open at 9:30 AM",
-          "Danvers made the state finals in 2023, 2024 and 2025"
+          "Danvers competes in Division 3, 10th of 19 teams to take the mat",
+          "Registration at 3:15 PM and report to warm-up at 3:55 PM; the MSAA doesn't give performance times, and the competition runs continuously",
+          "Awards for Divisions 1 and 3 at 6:15 PM",
+          "Tickets are $16.75 on GoFan, card and mobile payment only",
+          "Hanover won Division 3 in 2024 and 2025",
+          "A fourth straight trip to the state finals for Danvers"
         ],
-        sources: [{ label: "State competition guide (MSAA)", url: "https://www.msaa.net/sites/default/files/2026-11/state-competition-guide-wsu-fall-2026.pdf" }, { label: "Tickets on GoFan", url: "https://gofan.co/app/school/MSAA" }]
+        sources: [
+          { label: "State finals order of appearance (MSAA)", url: "https://www.msaa.net/sites/default/files/2026-11/f26-states-order-of-appearance.pdf" },
+          { label: "State finals program (MSAA)", url: "https://www.msaa.net/sites/default/files/2026-11/f26-program.pdf" },
+          { label: "State competition guide (MSAA)", url: "https://www.msaa.net/sites/default/files/2026-11/state-competition-guide-wsu-fall-2026.pdf" },
+          { label: "Tickets on GoFan", url: "https://gofan.co/app/school/MSAA" }
+        ]
       }
     ],
     players: [
@@ -240,7 +248,7 @@ const TEAMS = {
     seasons: [],
     honors: [],
     legends: [],
-    historyTiles: [["NEC championships", "9", "The team's count, the latest in 2026"], ["New England title", "Winter 2011", "New England champions"], ["North Regional winter titles", "3", "The team's count"], ["State finals", "3 straight", "2023 · 2024 · 2025"]],
+    historyTiles: [["NEC championships", "9", "The team's count, the latest in 2026"], ["New England title", "Winter 2011", "New England champions"], ["North Regional winter titles", "3", "The team's count"], ["State finals", "4 straight", "2023 through 2026"]],
     records: {
       "MSAA Results": {
         "Top scores": [["2023 state finals", "89.0", "5th of 16"], ["2023 North Regional", "87.5", "3rd of 12"], ["2024 state finals", "85.5", "7th of 14"], ["2025 North Regional", "84.6", "5th of 14"]],
@@ -253,7 +261,7 @@ const TEAMS = {
       { year: "2023", text: "Danvers is 2nd at the NEC Championship and 3rd in Division 3 at the North Regional with 87.5, then finishes 5th of 16 at the state finals with 89.0, its best state finish in the MSAA results on file." },
       { year: "2024", text: "NEC small division champions, then 4th of 16 at the North Regional and 7th of 14 at the state finals with 85.5." },
       { year: "2025", text: "2nd at the NEC Championship behind Gloucester, 5th of 14 at the North Regional and 13th of 20 at the state finals: a third straight trip to Worcester State." },
-      { year: "2026", text: "NEC small division champions again, at Gloucester High School, and back to the North Regional." }
+      { year: "2026", text: "NEC small division champions again, at Gloucester High School, then fourth in Division 3 at the North Regional with 84.6 for a fourth straight trip to the state finals." }
     ],
     follow: [
       { kind: "Instagram", title: "@danverscheerleading", text: "Photos, results and news from the Danvers High cheer team.", url: "https://www.instagram.com/danverscheerleading/", go: "Instagram" },

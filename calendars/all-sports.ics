@@ -2097,13 +2097,14 @@ UID:cheer-5@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261115T161500
 DURATION:PT2H
-SUMMARY:Danvers Cheer: MSAA North Regional
+SUMMARY:Danvers Cheer: MSAA North Regional (4th of 12)
 LOCATION:Billerica Memorial High School\, Billerica
-DESCRIPTION:MSAA regional\nDivision 3\nDanvers competes in Division 3 and i
- s 7th of 13 teams to take the mat (No. 44 in the day's order)\nRegistratio
- n at 3:35 PM and report to warm-up at 4:15 PM\; the afternoon session star
- ts at 2:30 PM\nSchedule and results: https://danversfalconsathletics.org/c
- heer/#schedule
+DESCRIPTION:MSAA regional\nDivision 3\nResult: 4th of 12\, 84.6\nDanvers sc
+ ored 84.6 to finish fourth of 12 teams in Division 3 at the MSAA North Reg
+ ional and qualified for the state finals for a fourth straight fall. Lynnf
+ ield won the division with 90.3\, ahead of Wilmington (86.3) and Winthrop 
+ (85.1)\, and Danvers edged Burlington (84.5) by a tenth of a point.\nSched
+ ule and results: https://danversfalconsathletics.org/cheer/#schedule
 URL:https://danversfalconsathletics.org/cheer/#schedule
 END:VEVENT
 BEGIN:VEVENT
@@ -2120,14 +2121,15 @@ END:VEVENT
 BEGIN:VEVENT
 UID:cheer-6@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
-DTSTART;VALUE=DATE:20261122
-DTEND;VALUE=DATE:20261123
+DTSTART;TZID=America/New_York:20261122T155500
+DURATION:PT2H
 SUMMARY:Danvers Cheer: MSAA State Finals
 LOCATION:Worcester State University\, Worcester
-DESCRIPTION:MSAA state finals\nIf qualified\nFor the teams that qualify at 
- the regionals\nSession 1 starts at 10:30 AM and session 2 at about 2:45 PM
- \; the order of appearance comes out after the regionals\nSchedule and res
- ults: https://danversfalconsathletics.org/cheer/#schedule
+DESCRIPTION:MSAA state finals\nDivision 3\nDanvers competes in Division 3\,
+  10th of 19 teams to take the mat\nRegistration at 3:15 PM and report to w
+ arm-up at 3:55 PM\; the MSAA doesn't give performance times\, and the comp
+ etition runs continuously\nSchedule and results: https://danversfalconsath
+ letics.org/cheer/#schedule
 URL:https://danversfalconsathletics.org/cheer/#schedule
 END:VEVENT
 BEGIN:VEVENT
