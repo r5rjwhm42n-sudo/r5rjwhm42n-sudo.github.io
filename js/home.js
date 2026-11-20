@@ -258,6 +258,7 @@
     window.DFA?.weather(e).then((w) => { if (w) $("#nu-wx").innerHTML = `${w.icon}<b>${w.temp}°</b><span>${esc(w.label)}${w.rain >= 30 ? ` · ${w.rain}% rain` : ""}</span>`; });
   }
 
+  let LIVE_POLL = false;   // the banner is checking football/live.json for the score
   let SPOT_ON = false;   // a football spotlight game is coming up or under way: its Game Day button glows
 
   /* ---------- Big-game spotlight ----------
@@ -272,7 +273,7 @@
     });
     if (!box || !g) return;
     const sp = g.spotlight, start = new Date(g.date).getTime(), done = !!g.result;
-    const live = !done && g.live && Date.now() >= start ? g.live : null;   // live: { us, them, updated, source } while the game is on
+    const live = !done && g.live && g.live.us != null && Date.now() >= start ? g.live : null;   // live: { us, them, updated, source } while the game is on
     const games = d.SCHEDULE.filter((x) => x.result && !x.cancelled);
     const ours = `${games.filter((x) => x.result === "W").length}–${games.filter((x) => x.result === "L").length}`;
     const photo = d.PHOTOS?.[0]?.src;
@@ -292,7 +293,7 @@
         ${side(opp, g.opponent, sp.oppRecord || "", done ? g.them : live ? live.them : null, done && g.result === "L")}
       </div>
       <p class="sp-info">${done ? esc(sp.kicker) : `${today ? "" : `${esc(fmt(g.date, { weekday: "long", month: "short", day: "numeric" }))} · `}${esc(timeOf(g))}`} · ${esc(g.site || "")}<span id="sp-wx"></span></p>
-      ${live ? `<p class="sp-blurb sp-live">Live score, updated ${esc(live.updated)}${live.source ? ` · ${esc(live.source)}` : ""}</p>` : ""}
+      ${live ? `<p class="sp-blurb sp-live">Live${live.status ? ` · ${esc(live.status)}` : ""} · updated ${esc(live.updated)}${live.source ? ` · ${esc(live.source)}` : ""}</p>` : ""}
       ${done ? "" : `${live ? "" : `<p class="sp-blurb">${esc(sp.blurb || "")}</p>`}<div class="sp-clock" id="sp-clock" aria-live="off"></div>`}
       <div class="sp-actions">
         ${done ? `<a class="btn btn-gold" href="${recap}">Game recap</a>` : sp.follow ? `<a class="btn btn-gold" href="${esc(sp.follow.url)}" target="_blank" rel="noopener">${esc(sp.follow.label)}</a>` : sp.watch ? `<a class="btn btn-gold" href="${esc(sp.watch)}" target="_blank" rel="noopener">Watch live</a>` : ""}
@@ -339,7 +340,24 @@
       SPOT_ON = true;
       $$('.nav a[href="football/"], .team-card[data-sport="football"], #today .td-g[data-sport="football"]').forEach((el) => el.classList.add("sp-glow"));
       const media = $('.team-card[data-sport="football"] .tc-media');
-      if (media) media.insertAdjacentHTML("beforeend", `<span class="tc-ribbon">${esc(g.tag || sp.kicker)}${today ? " · tonight" : ""}</span>`);
+      if (media && !media.querySelector(".tc-ribbon")) media.insertAdjacentHTML("beforeend", `<span class="tc-ribbon">${esc(g.tag || sp.kicker)}${today ? " · tonight" : ""}</span>`);
+    }
+
+    /* during the game the score comes from football/live.json ({ game, us, them, status, updated, source }),
+       checked every 30 seconds, so the banner updates without a reload */
+    if (!done && !LIVE_POLL && Date.now() > start - 15 * 6e4 && Date.now() < start + 5 * HOUR) {
+      LIVE_POLL = true;
+      let last = JSON.stringify(g.live || null);
+      const poll = async () => {
+        try {
+          const r = await fetch(`football/live.json?t=${Date.now()}`, { cache: "no-store" });
+          if (!r.ok) return;
+          const x = await r.json();
+          const k = JSON.stringify(x.game === g.id ? x : null);
+          if (k !== last) { last = k; g.live = x.game === g.id ? x : null; renderSpotlight(d); }
+        } catch (e) { /* offline: keep the last score */ }
+      };
+      poll(); setInterval(poll, 30000);
     }
   }
 
