@@ -394,6 +394,7 @@ const SCHEDULE = [
   { id: 12, date: "2026-11-20T18:00", opponent: "Tewksbury", mascot: "Redmen",
     home: false, neutral: true, league: false, postseason: true, round: "Semifinals", site: "Burlington High School, Burlington", result: null,
     tag: "State Tournament",
+    live: { us: 0, them: 14, updated: "6:30 PM", source: "Boston Globe scoreboard" },   // the score while the game is on; remove once it is final
     spotlight: {
       kicker: "Division 4 Semifinal",
       blurb: "Unbeaten No. 3 Danvers meets No. 2 Tewksbury at Burlington High School. A win puts the Falcons in the first state final in school history.",

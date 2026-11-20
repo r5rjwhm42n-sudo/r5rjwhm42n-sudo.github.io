@@ -173,13 +173,14 @@
 
     if (big) {
       const sp = big.spotlight;
+      const live = big.live && Date.now() >= new Date(big.date).getTime() ? big.live : null;   // the live score, while the game is on
       const when = new Date(big.date).toDateString() === new Date().toDateString() ? "Tonight" : dateShort(big.date);
       const slug = big.opponent.toLowerCase().replace(/[^a-z0-9]+/g, "-");
       $(".hero-home").classList.add("spot");
       $("#hero-story").innerHTML = `
         <div class="eyebrow spot-eyebrow">${esc(big.tag || sp.kicker)} · ${esc(when)} ${timeOf(big.date)}</div>
         <h1>Danvers ${vs(big)} <em>${esc(big.opponent)}</em></h1>
-        <p>${esc(sp.blurb)}</p>
+        <p>${live ? `Live: Danvers ${live.us}, ${esc(big.opponent)} ${live.them} · updated ${esc(live.updated)}${live.source ? ` · ${esc(live.source)}` : ""}` : esc(sp.blurb)}</p>
         <div class="btn-row">
           ${sp.follow ? `<a class="btn btn-gold" href="${esc(sp.follow.url)}" target="_blank" rel="noopener">${esc(sp.follow.label)}</a>` : ""}
           ${sp.watch ? `<a class="btn ${sp.follow ? "btn-ghost" : "btn-gold"}" href="${esc(sp.watch)}" target="_blank" rel="noopener">${esc(sp.follow ? sp.watchLabel || "Watch live" : "Watch live")}</a>` : ""}
@@ -187,9 +188,9 @@
         </div>`;
       $("#scoreboard").innerHTML = `
         <button class="card scoreboard spot-board" data-game="${big.id}" aria-label="Title game details">
-          <div class="sb-top"><span>${esc(big.tag || sp.kicker)}</span><span>${esc(when)}</span></div>
-          <div class="sb-row"><img src="${LOGO}" alt=""><span class="nm">Danvers</span><span class="rec">${record}</span></div>
-          <div class="sb-row"><img src="../images/opponents/${slug}.png" alt="" class="opp-img" onerror="this.style.visibility='hidden'"><span class="nm">${esc(big.opponent)}</span><span class="rec">${esc((sp.oppRecord || "").split(" · ")[0])}</span></div>
+          <div class="sb-top"><span>${esc(big.tag || sp.kicker)}</span><span>${live ? "Live" : esc(when)}</span></div>
+          <div class="sb-row"><img src="${LOGO}" alt=""><span class="nm">Danvers</span><span class="rec">${live ? live.us : record}</span></div>
+          <div class="sb-row"><img src="../images/opponents/${slug}.png" alt="" class="opp-img" onerror="this.style.visibility='hidden'"><span class="nm">${esc(big.opponent)}</span><span class="rec">${live ? live.them : esc((sp.oppRecord || "").split(" · ")[0])}</span></div>
           <div class="sb-foot"><span>${vs(big) === "at" ? "At " : ""}${esc(big.site)} · ${timeOf(big.date)}</span><b>Preview ›</b></div>
         </button>`;
     } else if (last) {

@@ -272,6 +272,7 @@
     });
     if (!box || !g) return;
     const sp = g.spotlight, start = new Date(g.date).getTime(), done = !!g.result;
+    const live = !done && g.live && Date.now() >= start ? g.live : null;   // live: { us, them, updated, source } while the game is on
     const games = d.SCHEDULE.filter((x) => x.result && !x.cancelled);
     const ours = `${games.filter((x) => x.result === "W").length}–${games.filter((x) => x.result === "L").length}`;
     const photo = d.PHOTOS?.[0]?.src;
@@ -286,12 +287,13 @@
     box.innerHTML = `<div class="wrap sp-in">
       <div class="sp-label"><span class="sp-flag" id="sp-flag"></span><span>${esc(done ? (g.result === "W" ? sp.won : sp.lost) : sp.kicker)}</span></div>
       <div class="sp-matchup">
-        ${side(`<span class="sp-logo us"><img src="images/falcons-logo.png" alt=""></span>`, "Danvers", ours, done ? g.us : null, done && g.result === "W")}
+        ${side(`<span class="sp-logo us"><img src="images/falcons-logo.png" alt=""></span>`, "Danvers", ours, done ? g.us : live ? live.us : null, done && g.result === "W")}
         <span class="sp-vs">${vs(g)}</span>
-        ${side(opp, g.opponent, sp.oppRecord || "", done ? g.them : null, done && g.result === "L")}
+        ${side(opp, g.opponent, sp.oppRecord || "", done ? g.them : live ? live.them : null, done && g.result === "L")}
       </div>
       <p class="sp-info">${done ? esc(sp.kicker) : `${today ? "" : `${esc(fmt(g.date, { weekday: "long", month: "short", day: "numeric" }))} · `}${esc(timeOf(g))}`} · ${esc(g.site || "")}<span id="sp-wx"></span></p>
-      ${done ? "" : `<p class="sp-blurb">${esc(sp.blurb || "")}</p><div class="sp-clock" id="sp-clock" aria-live="off"></div>`}
+      ${live ? `<p class="sp-blurb sp-live">Live score, updated ${esc(live.updated)}${live.source ? ` · ${esc(live.source)}` : ""}</p>` : ""}
+      ${done ? "" : `${live ? "" : `<p class="sp-blurb">${esc(sp.blurb || "")}</p>`}<div class="sp-clock" id="sp-clock" aria-live="off"></div>`}
       <div class="sp-actions">
         ${done ? `<a class="btn btn-gold" href="${recap}">Game recap</a>` : sp.follow ? `<a class="btn btn-gold" href="${esc(sp.follow.url)}" target="_blank" rel="noopener">${esc(sp.follow.label)}</a>` : sp.watch ? `<a class="btn btn-gold" href="${esc(sp.watch)}" target="_blank" rel="noopener">Watch live</a>` : ""}
         <a class="btn btn-ghost" href="${done ? "football/" : recap}">${done ? "Football site" : "Game preview"}</a>
