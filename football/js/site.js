@@ -181,7 +181,8 @@
         <h1>Danvers ${vs(big)} <em>${esc(big.opponent)}</em></h1>
         <p>${esc(sp.blurb)}</p>
         <div class="btn-row">
-          ${sp.watch ? `<a class="btn btn-gold" href="${esc(sp.watch)}" target="_blank" rel="noopener">Watch live</a>` : ""}
+          ${sp.follow ? `<a class="btn btn-gold" href="${esc(sp.follow.url)}" target="_blank" rel="noopener">${esc(sp.follow.label)}</a>` : ""}
+          ${sp.watch ? `<a class="btn ${sp.follow ? "btn-ghost" : "btn-gold"}" href="${esc(sp.watch)}" target="_blank" rel="noopener">${esc(sp.follow ? sp.watchLabel || "Watch live" : "Watch live")}</a>` : ""}
           <button class="btn btn-ghost" data-game="${big.id}">Game preview</button>
         </div>`;
       $("#scoreboard").innerHTML = `

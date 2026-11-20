@@ -293,12 +293,13 @@
       <p class="sp-info">${done ? esc(sp.kicker) : `${today ? "" : `${esc(fmt(g.date, { weekday: "long", month: "short", day: "numeric" }))} · `}${esc(timeOf(g))}`} · ${esc(g.site || "")}<span id="sp-wx"></span></p>
       ${done ? "" : `<p class="sp-blurb">${esc(sp.blurb || "")}</p><div class="sp-clock" id="sp-clock" aria-live="off"></div>`}
       <div class="sp-actions">
-        ${done ? `<a class="btn btn-gold" href="${recap}">Game recap</a>` : sp.watch ? `<a class="btn btn-gold" href="${esc(sp.watch)}" target="_blank" rel="noopener">Watch live</a>` : ""}
+        ${done ? `<a class="btn btn-gold" href="${recap}">Game recap</a>` : sp.follow ? `<a class="btn btn-gold" href="${esc(sp.follow.url)}" target="_blank" rel="noopener">${esc(sp.follow.label)}</a>` : sp.watch ? `<a class="btn btn-gold" href="${esc(sp.watch)}" target="_blank" rel="noopener">Watch live</a>` : ""}
         <a class="btn btn-ghost" href="${done ? "football/" : recap}">${done ? "Football site" : "Game preview"}</a>
       </div>
       <div class="sp-links">
         ${!done && window.DFA ? `<a href="${DFA.mapsUrl(g)}" target="_blank" rel="noopener">Directions</a>` : ""}
         ${!done && sp.tickets ? `<a href="${esc(sp.tickets.url)}" target="_blank" rel="noopener" title="${esc(sp.tickets.note || "")}">${esc(sp.tickets.label)}</a>` : ""}
+        ${!done && sp.follow && sp.watch ? `<a href="${esc(sp.watch)}" target="_blank" rel="noopener">${esc(sp.watchLabel || "Watch live")}</a>` : ""}
         <button type="button" id="sp-share">Share</button>
       </div>
     </div>`;

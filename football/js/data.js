@@ -398,7 +398,12 @@ const SCHEDULE = [
       kicker: "Division 4 Semifinal",
       blurb: "Unbeaten No. 3 Danvers meets No. 2 Tewksbury at Burlington High School. A win puts the Falcons in the first state final in school history.",
       oppRecord: "9–1",   // Tewksbury's record after the game
-      watch: "https://www.nfhsnetwork.com/associations/miaa",   // the NFHS Network carries MIAA tournament football from the quarterfinals on
+      /* follow: a free way to keep up with the game; it leads the banner. The MIAA licenses live video of
+         tournament football (quarterfinals on) only to the NFHS Network, a paid subscription, so there
+         is no free live stream; watchLabel says so on the smaller link. */
+      follow: { label: "Live score (free)", url: "https://www.maxpreps.com/ma/football/game/danvers-vs-tewksbury-memorial/11-20-2026/?c=0fc7b1ed-76d0-4913-8d3c-5c14e6dc985f" },
+      watch: "https://www.nfhsnetwork.com/associations/miaa",
+      watchLabel: "Stream on NFHS (subscription)",
       tickets: { label: "Tickets", note: "MIAA tournament tickets are sold on GoFan", url: "https://gofan.co/app/school/MIAA" },
       won: "On to the State Final",
       lost: "Final"
@@ -409,11 +414,13 @@ const SCHEDULE = [
       "Danvers has won nine straight; Tewksbury has won six straight, beating No. 15 Wakefield 35–7 and No. 7 Shepherd Hill 49–14 in the tournament",
       "Tewksbury lost last year's Division 4 state final to Scituate, 42–41, at Gillette Stadium",
       "The other semifinal, also Friday: No. 1 Scituate vs. No. 5 Walpole, 6:30 p.m. at Bridgewater-Raynham",
-      "The winner plays for the Division 4 state title"
+      "The winner plays for the Division 4 state title",
+      "Live video is only on the NFHS Network, a paid subscription: the MIAA licenses tournament football to it from the quarterfinals on. MaxPreps has the live score for free."
     ],
     sources: [
       { label: "MIAA Division 4 bracket", url: "https://www.miaa.net/miaa-football-2026-division-4-state-tournament" },
-      { label: "Live on the NFHS Network", url: "https://www.nfhsnetwork.com/associations/miaa" },
+      { label: "Live score on MaxPreps (free)", url: "https://www.maxpreps.com/ma/football/game/danvers-vs-tewksbury-memorial/11-20-2026/?c=0fc7b1ed-76d0-4913-8d3c-5c14e6dc985f" },
+      { label: "Live video on the NFHS Network (subscription)", url: "https://www.nfhsnetwork.com/associations/miaa" },
       { label: "MaxPreps game preview", url: "https://www.maxpreps.com/news/NA6kIGek00GF2FO1f5wxzw/football-preview-danvers-and-tewksbury-memorial-each-put-a-winning-streak-on-the-line.htm" },
       { label: "Tewksbury 49, Shepherd Hill 14 (MaxPreps)", url: "https://www.maxpreps.com/ma/football/game/shepherd-hill-regional-dudley-vs-tewksbury-memorial/11-13-2026/?c=a25582ba-4d94-459c-9793-03ecf523088e" }
     ] },
