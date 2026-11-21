@@ -2054,10 +2054,16 @@ UID:football-12@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261120T180000
 DURATION:PT2H30M
-SUMMARY:Danvers Football vs Tewksbury
+SUMMARY:Danvers Football vs Tewksbury (L 7–28)
 LOCATION:Burlington High School\, Burlington
-DESCRIPTION:MIAA state tournament · Semifinals\nSchedule and results: http
- s://danversfalconsathletics.org/football/#schedule
+DESCRIPTION:MIAA state tournament · Semifinals\nFinal: Danvers 7\, Tewksbu
+ ry 28\nDanvers' unbeaten season ended in the MIAA Division 4 semifinals\, 
+ 28–7 to No. 2 Tewksbury at Burlington High School. Tewksbury quarterback
+  Will Harrison completed nine passes for 125 yards and a touchdown and ran
+  for 82 yards and another score. Vinny Lacount returned a blocked punt for
+  the first touchdown\, Nick Colametta caught an 11-yard touchdown pass and
+  Dominic Curreri added a 4-yard run.\nSchedule and results: https://danver
+ sfalconsathletics.org/football/#schedule
 URL:https://danversfalconsathletics.org/football/#schedule
 END:VEVENT
 BEGIN:VEVENT

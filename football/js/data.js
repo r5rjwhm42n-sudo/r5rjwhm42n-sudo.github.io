@@ -44,8 +44,8 @@ const TEAM = {
       { seeds: [4, 5], score: [13, 14], date: "2026-11-13T19:00", site: "Duxbury High School, Duxbury" },
       { seeds: [2, 7], score: [49, 14], date: "2026-11-13T19:00", site: "Doucette Stadium, Tewksbury" },
       { seeds: [3, 6], score: [40, 35], date: "2026-11-13T18:30", site: "Morse Field, Danvers" },
-      { seeds: [1, 5], date: "2026-11-20T18:30", site: "Bridgewater-Raynham Regional High School, Bridgewater" },
-      { seeds: [2, 3], date: "2026-11-20T18:00", site: "Burlington High School, Burlington" }
+      { seeds: [1, 5], score: [28, 29], date: "2026-11-20T18:30", site: "Bridgewater-Raynham Regional High School, Bridgewater" },
+      { seeds: [2, 3], score: [28, 7], date: "2026-11-20T18:00", site: "Burlington High School, Burlington" }
     ]
   },
   headCoach: "Ryan Nolan",
@@ -392,36 +392,31 @@ const SCHEDULE = [
       { label: "Salem News preview", url: "https://www.salemnews.com/sports/moving-the-chains-playoff-quarterfinal-matchups-on-tap-tonight-for-danvers-peabody-sjp/article_2a8c07e3-5f68-4434-8f8e-15899d5d3b71.html" }
     ] },
   { id: 12, date: "2026-11-20T18:00", opponent: "Tewksbury", mascot: "Redmen",
-    home: false, neutral: true, league: false, postseason: true, round: "Semifinals", site: "Burlington High School, Burlington", result: null,
+    home: false, neutral: true, league: false, postseason: true, round: "Semifinals", site: "Burlington High School, Burlington",
+    result: "L", us: 7, them: 28, half: [7, 21],
+    summary: "Danvers' unbeaten season ended in the MIAA Division 4 semifinals, 28–7 to No. 2 Tewksbury at Burlington High School. Tewksbury quarterback Will Harrison completed nine passes for 125 yards and a touchdown and ran for 82 yards and another score. Vinny Lacount returned a blocked punt for the first touchdown, Nick Colametta caught an 11-yard touchdown pass and Dominic Curreri added a 4-yard run.",
     tag: "State Tournament",
     spotlight: {
       kicker: "Division 4 Semifinal",
       blurb: "Unbeaten No. 3 Danvers meets No. 2 Tewksbury at Burlington High School. A win puts the Falcons in the first state final in school history.",
-      oppRecord: "9–1",   // Tewksbury's record after the game
-      /* follow leads the banner; watch is the smaller link. TewksburyTV, the town of Tewksbury's own
-         cable access station, streams the game free on its YouTube channel. */
-      follow: { label: "Watch free on TewksburyTV", url: "https://www.youtube.com/results?search_query=TewksburyTV+TMHS+Football+vs+Danvers+2026+MIAA+Division+4+Football+Semifinals" },
-      watch: "https://www.maxpreps.com/ma/football/game/danvers-vs-tewksbury-memorial/11-20-2026/?c=0fc7b1ed-76d0-4913-8d3c-5c14e6dc985f",
-      watchLabel: "Live score (free)",
+      oppRecord: "10–1",   // Tewksbury's record after the game
       tickets: { label: "Tickets", note: "MIAA tournament tickets are sold on GoFan", url: "https://gofan.co/app/school/MIAA" },
       won: "On to the State Final",
-      lost: "Final"
+      lost: "Tournament run ends"
     },
     notes: [
-      "MIAA Division 4 semifinal: No. 3 Danvers (9–0) vs. No. 2 Tewksbury Memorial (9–1), at Burlington High School",
-      "Semifinals are played at neutral sites set by the MIAA",
-      "Danvers has won nine straight; Tewksbury has won six straight, beating No. 15 Wakefield 35–7 and No. 7 Shepherd Hill 49–14 in the tournament",
-      "Tewksbury lost last year's Division 4 state final to Scituate, 42–41, at Gillette Stadium",
-      "The other semifinal, also Friday: No. 1 Scituate vs. No. 5 Walpole, 6:30 p.m. at Bridgewater-Raynham",
-      "The winner plays for the Division 4 state title",
-      "Watch free on YouTube: TewksburyTV, the town of Tewksbury's cable access station, streams the game live. It is also on the NFHS Network (subscription), and MaxPreps has the live score."
+      "Danvers' first loss of the season ends its state tournament run in the Division 4 semifinals at 9–1",
+      "Tewksbury led 21–7 at halftime",
+      "Vinny Lacount's return of a blocked punt opened the scoring",
+      "Tewksbury (10–1) plays No. 5 Walpole for the Division 4 title; Walpole beat No. 1 Scituate, the two-time defending champion, 29–28",
+      "Danvers' scoring play hasn't been reported yet",
+      "Danvers still has its Thanksgiving game at Gloucester on Thursday, Nov. 26"
     ],
     sources: [
       { label: "MIAA Division 4 bracket", url: "https://www.miaa.net/miaa-football-2026-division-4-state-tournament" },
-      { label: "Watch free on TewksburyTV (YouTube)", url: "https://www.youtube.com/results?search_query=TewksburyTV+TMHS+Football+vs+Danvers+2026+MIAA+Division+4+Football+Semifinals" },
-      { label: "Live score on MaxPreps (free)", url: "https://www.maxpreps.com/ma/football/game/danvers-vs-tewksbury-memorial/11-20-2026/?c=0fc7b1ed-76d0-4913-8d3c-5c14e6dc985f" },
-      { label: "Also on the NFHS Network (subscription)", url: "https://www.nfhsnetwork.com/associations/miaa" },
-      { label: "MaxPreps game preview", url: "https://www.maxpreps.com/news/NA6kIGek00GF2FO1f5wxzw/football-preview-danvers-and-tewksbury-memorial-each-put-a-winning-streak-on-the-line.htm" },
+      { label: "Boston Globe scoreboard and recap", url: "https://www.bostonglobe.com/sports/high-schools/football/scoreboard/?date=2026-11-20" },
+      { label: "Full-game replay on TewksburyTV (YouTube)", url: "https://www.youtube.com/results?search_query=TewksburyTV+TMHS+Football+vs+Danvers+2026+MIAA+Division+4+Football+Semifinals" },
+      { label: "MaxPreps game page", url: "https://www.maxpreps.com/ma/football/game/danvers-vs-tewksbury-memorial/11-20-2026/?c=0fc7b1ed-76d0-4913-8d3c-5c14e6dc985f" },
       { label: "Tewksbury 49, Shepherd Hill 14 (MaxPreps)", url: "https://www.maxpreps.com/ma/football/game/shepherd-hill-regional-dudley-vs-tewksbury-memorial/11-13-2026/?c=a25582ba-4d94-459c-9793-03ecf523088e" }
     ] },
   { id: 9, date: "2026-11-26T10:00", opponent: "Gloucester", mascot: "Fishermen", home: false, league: false, site: "Newell Stadium, Gloucester", result: null,
@@ -738,7 +733,7 @@ const MILESTONES = [
   { year: "2004–05", text: "Back-to-back NEC championships." },
   { year: "2019", text: "A 9–2 season and a perfect 4–0 league record deliver another NEC title." },
   { year: "2023", text: "An 8–4 run carries Danvers to the MIAA Division 5 Final Four." },
-  { year: "2026", text: "A perfect 7–0 regular season and the NEC Dunn Division title, clinched 17–14 at Peabody on Colby Medeiros's 66-yard punt return." }
+  { year: "2026", text: "A perfect 7–0 regular season and the NEC Dunn Division title, clinched 17–14 at Peabody on Colby Medeiros's 66-yard punt return. Wins over Bedford (30–27) and Tantasqua (40–35) put the Falcons in the Division 4 semifinals, where the season's only loss came 28–7 to Tewksbury." }
 ];
 
 const LEGENDS = [
