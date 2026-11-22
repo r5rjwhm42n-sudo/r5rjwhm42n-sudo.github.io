@@ -174,11 +174,15 @@ const TEAMS = {
         finish: "9th",
         allStars: "Logan Jacques",
         games: [
+          ["2025-12-13", 0, "Winchester and 13 more teams", "Non-league", null, null, null, "Tournament"],
           ["2025-12-17", 0, "Salem", "NEC", "L", 24, 48, ""],
           ["2025-12-18", 0, "Triton", "Non-league", "W", 46, 36, "", "Logan Jacques, Tommy Duval, and Drew McMahon picked up wins as the Falcons (1-1) secured a nonleague road win."],
+          ["2025-12-20", 0, "Marlborough and 20 more teams", "Non-league", null, null, null, "Tournament"],
+          ["2025-12-23", 0, "Marshfield and four more teams", "Non-league", null, null, null, "Tournament"],
           ["2025-12-30", 0, "Wayland", "Non-league", "L", 12, 71, ""],
           ["2026-01-03", 1, "Lynnfield/North Reading", "Non-league", "L", 23, 53, ""],
           ["2026-01-07", 0, "Gloucester", "NEC", "L", 34, 48, "", "Aiden DeCoste (138 pounds) earned a quick pin to start the comeback from down 22-6 for the Fishermen (6-4), who dominated from that point to take the Northeastern Conference tilt."],
+          ["2026-01-10", 0, "Canton and 13 more teams", "Tournament", null, null, null, "Tournament"],
           [
             "2026-01-14",
             1,
@@ -190,15 +194,22 @@ const TEAMS = {
             "",
             "James Carey (113), Kenney Drolete (120), Liam O'Brien (138), Nolan Glass (150), Andrew Delisle (157), Colin Hart (175), and Colin Homan (190) won by pin for the Magicians in a Northeastern road win."
           ],
-          ["2026-01-17", 0, "King Philip", "Non-league", "L", 24, 50, ""],
+          ["2026-01-15", 1, "Essex Tech", "NEC", "L", 28, 42, ""],
           ["2026-01-17", 1, "Hope (R.I.)", "Non-league", "L", 12, 67, ""],
+          ["2026-01-17", 0, "King Philip", "Non-league", "L", 24, 50, ""],
           ["2026-01-21", 1, "Beverly", "NEC", "L", 18, 57, ""],
+          ["2026-01-24", 0, "Whittier and two more teams", "NEC", null, null, null, "Tournament"],
+          ["2026-01-27", 0, "Beverly", "NEC", null, null, null, "No score on file"],
           ["2026-01-28", 1, "Quincy Upper", "Non-league", "W", 48, 18, ""],
           ["2026-01-28", 1, "Saugus/Peabody", "NEC", "L", 21, 54, ""],
+          ["2026-01-31", 0, "Beverly and two more teams", "NEC", null, null, null, "Tournament"],
+          ["2026-01-31", 0, "CAL/NEC Open", "Tournament", null, null, null, "Tournament"],
+          ["2026-02-04", 0, "Pentucket", "Non-league", "L", 15, 57, ""],
+          ["2026-02-07", 0, "North Andover and five more teams", "Non-league", null, null, null, "Tournament"],
           ["2026-02-14", 0, "MIAA Division 3 North Sectional", "State", "12th", "61 pts", null, "14 teams scored"]
         ],
         photo: { src: "../images/teams/wrestling.jpg", caption: "The 2025–26 Danvers wrestling team. Photo from the Danvers High School athletics page." },
-        note: "Dual meets as reported to the Boston Globe, so the list may be incomplete; the season record is from the school's record book. Game stories from the Boston Globe's high school scoreboard. Open a meet to read its story. At the Division 3 North sectional Danvers scored 61 points with a 3rd-place finisher, a 4th and three 6ths; Tyngsborough/Dracut won.",
+        note: "Every meet on the school's ArbiterLive schedule for the season. Scores come from ArbiterLive and the Boston Globe; tournaments are scored for individuals, and a few duals have no score on file. The season record is from the school's record book. Game stories from the Boston Globe's high school scoreboard. Open a meet to read its story. At the Division 3 North sectional Danvers scored 61 points with a 3rd-place finisher, a 4th and three 6ths; Tyngsborough/Dracut won.",
         keyPlayers: [{ name: "Logan Jacques", note: "NEC All-Star, and a winner in the 46–36 victory at Triton." }, { name: "Tommy Duval and Drew McMahon", note: "Won their bouts in the win at Triton." }],
         post: "12th of 14 at the Division 3 North sectional"
       },
@@ -209,8 +220,8 @@ const TEAMS = {
         finish: "10th",
         allLeague: "Logan Jacques, JJ Rand",
         games: [
-          ["2024-12-14", 0, "Northeast/Bishop Fenwick", "Non-league", "L", 30, 45, ""],
           ["2024-12-14", 1, "Foxborough", "Non-league", "L", 9, 67, ""],
+          ["2024-12-14", 0, "Northeast/Bishop Fenwick", "Non-league", "L", 30, 45, ""],
           ["2024-12-14", 0, "Westford", "Non-league", "L", 18, 59, ""],
           ["2024-12-18", 0, "Gloucester", "NEC", "L", 12, 71, "", "The Fishermen (1-0-0) soared past their Northeastern Conference opponents, winning 10 events by pin and sophomore Anthony Murawski won by technical fall."],
           [
@@ -224,6 +235,7 @@ const TEAMS = {
             "",
             "With pins from Riley-Anne Tamry (106 pounds), Alex Sabino (126), Austin Scolamiero (132), Sam Imlach (138), Ben Imlach (144), Jake Mies (157), Jared Coady (165), Amir Almami (175), Nolan Merrill (190), and Anthony Navaroli (285), the Vikings (5-0) picked up a nonleague road win."
           ],
+          ["2024-12-27", 0, "Pentucket and 17 more teams", "NEC", null, null, null, "Tournament"],
           ["2025-01-02", 0, "Excel Academy", "Non-league", "L", 15, 66, ""],
           ["2025-01-04", 0, "Lynnfield/North Reading", "Non-league", "L", 15, 54, ""],
           ["2025-01-08", 1, "Lynn Tech", "Non-league", "W", 62, 18, ""],
@@ -231,10 +243,11 @@ const TEAMS = {
           ["2025-01-16", 1, "Essex Tech/Masconomet", "NEC", "T", 42, 42, ""],
           ["2025-01-22", 0, "Saugus/Peabody", "NEC", "L", 21, 54, ""],
           ["2025-01-28", 1, "Salem", "NEC", "L", 12, 59, ""],
+          ["2025-02-01", 0, "Triton and five more teams", "NEC", null, null, null, "Tournament"],
           ["2025-02-05", 0, "Pentucket", "Non-league", null, null, null, "No score on file"],
           ["2025-02-12", 0, "Beverly", "NEC", "L", 18, 53, ""]
         ],
-        note: "Dual meets as reported to the Boston Globe, so the list may be incomplete; the season record is from the school's record book. Game stories from the Boston Globe's high school scoreboard. Open a meet to read its story."
+        note: "Every meet on the school's ArbiterLive schedule for the season. Scores come from ArbiterLive and the Boston Globe; tournaments are scored for individuals, and a few duals have no score on file. The season record is from the school's record book. Game stories from the Boston Globe's high school scoreboard. Open a meet to read its story."
       },
       {
         season: "2023–24",
@@ -244,8 +257,22 @@ const TEAMS = {
         captains: "Mark Haskins, Adam Guzofski, Zach Trohon",
         allLeague: "Adam Guzofski",
         awards: "Adam Guzofski, Division 3 state champion at 285 pounds and All-State qualifier",
-        games: [],
-        gamesNote: "Meet-by-meet results for this season aren't on file. The season record is from the school's record book."
+        games: [
+          ["2023-12-09", 0, "Methuen and two more teams", "NEC", null, null, null, "Tournament"],
+          ["2023-12-13", 1, "Marblehead", "NEC", "W", 46, 36, ""],
+          ["2023-12-14", 0, "Triton", "NEC", "L", 27, 54, ""],
+          ["2023-12-20", 1, "Beverly", "NEC", "L", 24, 58, ""],
+          ["2023-12-30", 1, "Lynnfield and one more team", "Non-league", null, null, null, "Tournament"],
+          ["2023-12-30", 1, "North Middlesex", "Non-league", null, null, null, "No score on file"],
+          ["2024-01-03", 1, "Excel Academy East Boston", "Non-league", "L", 19, 54, ""],
+          ["2024-01-10", 1, "Saugus", "NEC", null, null, null, "No score on file"],
+          ["2024-01-17", 0, "Salem", "NEC", "L", 13, 60, ""],
+          ["2024-01-19", 1, "Essex Tech and one more team", "Non-league", "L", 33, 36, ""],
+          ["2024-01-24", 1, "Gloucester", "NEC", "L", 21, 60, ""],
+          ["2024-01-27", 0, "Gloucester and ten more teams", "NEC", null, null, null, "Tournament"],
+          ["2024-01-31", 1, "Pentucket", "NEC", "L", 26, 51, ""]
+        ],
+        note: "Every meet on the school's ArbiterLive schedule for the season. Scores come from ArbiterLive and the Boston Globe; tournaments are scored for individuals, and a few duals have no score on file. The season record is from the school's record book."
       }
     ],
     historyIntro: "A program that started in 2011, won its first conference title four years later and has sent seven wrestlers to the top of the state podium.",

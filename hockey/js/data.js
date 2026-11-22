@@ -790,7 +790,6 @@ const TEAMS = {
         post: "Lost in a shootout at Malden Catholic in the Round of 32",
         awards: "Ashley Freitas, NEHL All-Star and MIAA Bruins Sportsmanship Award",
         photo: { src: "../images/teams/girls-hockey.jpg", caption: "Members of the 2025–26 Beverly/Danvers/Ipswich girls hockey team. Photo from the Danvers High School athletics page." },
-        note: "The school's team page lists the season as 15–6; one win isn't in the results on file. Game stories from the Boston Globe's high school scoreboard. Open a game to read its story.",
         games: [
           ["2025-12-13", 0, "Gloucester", "", "W", 7, 5, "Dorothy Talbot Rink"],
           ["2025-12-20", 1, "Peabody/Lynnfield/North Reading", "", "W", 3, 1, "Bourque Arena", "Asuka Keough scored twice for the Panthers (2-0-0) in the Northeastern win at Endicott."],
@@ -845,6 +844,17 @@ const TEAMS = {
             "McVann-O'Keefe Rink",
             "Junior Asuka Keough propelled the offense with a pair of goals, both assisted by sophomore Avery LeBlanc, in a Northeastern win for Beverly/Danvers (10-3) at McVann-O'Keefe Memorial Rink."
           ],
+          [
+            "2026-01-28",
+            0,
+            "Medford/Malden",
+            "",
+            "W",
+            6,
+            0,
+            "LoConte Rink",
+            "Meredith Johnston tallied a first-period hat trick to set the tone, Asuka Keough tallied a goal and two assists, and Avery LeBlanc dished out three assists for the Panthers (11-3-0) in the Northeastern win at LoConte Rink."
+          ],
           ["2026-01-31", 1, "Marblehead", "", "W", 6, 2, "Bourque Arena"],
           ["2026-02-03", 1, "Stoneham/Wilmington", "", "W", 6, 1, "Bourque Arena"],
           ["2026-02-07", 0, "Newburyport", "", "W", 4, 2, "Graf Rink"],
@@ -863,6 +873,7 @@ const TEAMS = {
             "After three scoreless overtime periods, the No. 14 Lancers (8-11-2) won a shootout, 2-0, to defeat No. 19 BDI (15-6) in a first-round marathon contest at Kasabuski Rink. Senior Abbie Poole netted a pair of goals, including the tying goal with 2:07 remaining in regulation, and sophomore Isabella Silva posted 27 saves in the win."
           ]
         ],
+        note: "Game stories from the Boston Globe's high school scoreboard. Open a game to read its story.",
         keyPlayers: [
           { name: "Asuka Keough", grade: "Jr.", note: "The Panthers' top scorer in the Globe's stories: a hat trick against Winthrop to clinch the league title, and two goals and two assists against Andover." },
           { name: "Avery LeBlanc", grade: "So.", note: "The playmaker: four assists against Andover, three at Medford and two on Keough's goals at Peabody." },

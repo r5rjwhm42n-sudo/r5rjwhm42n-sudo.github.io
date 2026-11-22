@@ -341,6 +341,7 @@ const TEAMS = {
           ["2023-12-08", 0, "Salem", "NEC", "L", 53, 54, ""],
           ["2023-12-09", 0, "Winthrop", "NEC", "W", 62, 39, ""],
           ["2023-12-12", 0, "Gloucester", "NEC", "W", 57, 46, ""],
+          ["2023-12-20", 1, "Prospect Hill", "Non-league", "W", 74, 42, ""],
           ["2023-12-28", 0, "Gloucester", "NEC", "L", 42, 45, ""],
           ["2024-01-02", 0, "Beverly", "NEC", "L", 47, 76, ""],
           ["2024-01-05", 1, "Swampscott", "NEC", "L", 47, 67, ""],
@@ -651,7 +652,17 @@ const TEAMS = {
             "Kayda Brown (16 points, 6 rebounds) knocked down three 3-pointers for the Falcons (12-1) as they cruised to a nonleague home win. Angie Djoko (9 points, 5 rebounds, 6 steals), Stella Shairs (7 points), and Kayla Moroney (5 points, 5 rebounds) contributed to the victory."
           ],
           ["2026-01-30", 1, "Revere", "Non-league", null, null, null, "Cancelled"],
-          ["2026-02-03", 1, "Saugus", "NEC", "W", 47, 19, ""],
+          [
+            "2026-02-02",
+            1,
+            "Saugus",
+            "NEC",
+            "W",
+            47,
+            19,
+            "",
+            "Angie Djoko posted yet another big game with 24 points, 14 rebounds, and 6 steals for the No. 17 Falcons (13-1) in the Northeastern Lynch home victory. The high-pressure Danvers defense held Saugus (4-10) to 6 second-half points, led by Sienna Lynch (three blocks), Lila Flynn (four steals), and Kendall Murphy (three steals)."
+          ],
           [
             "2026-02-04",
             0,

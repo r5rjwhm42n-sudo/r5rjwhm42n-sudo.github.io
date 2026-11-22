@@ -162,7 +162,7 @@ const TEAMS = {
       }
     ],
     players: [],
-    pastIntro: "The last two winters: dual meets, the MIAA Division 4 championship and the athletes who scored there.",
+    pastIntro: "The last three winters: every meet on the school's schedule, the MIAA Division 4 championship and the athletes who scored there.",
     past: [
       {
         season: "2025–26",
@@ -171,15 +171,20 @@ const TEAMS = {
         allLeague: "Zach Dunn",
         allStars: "Julian Capece",
         games: [
+          ["2025-12-12", 0, "Marblehead and eight more teams", "NEC", null, null, null, "Multi-team meet"],
           ["2025-12-17", 1, "Masconomet", "NEC", "L", 37, 49, ""],
+          ["2025-12-29", 0, "Swampscott and eight more teams", "NEC", null, null, null, "Multi-team meet"],
+          ["2026-01-07", 0, "Gloucester and one more team", "NEC", null, null, null, "Multi-team meet"],
           ["2026-01-14", 0, "Peabody", "NEC", null, null, null, "No score on file"],
+          ["2026-01-22", 1, "Salem", "NEC", null, null, null, "No score on file"],
           ["2026-01-28", 0, "Marblehead", "NEC", "L", 37, 45, ""],
+          ["2026-01-31", 0, "Marblehead and eight more teams", "NEC", null, null, null, "Multi-team meet"],
           ["2026-02-05", 1, "Beverly", "NEC", "L", 39, 47, ""],
           ["2026-02-13", 0, "MIAA Division 4 Championship", "State", "13th", "13 pts", null, "The Track at New Balance, Boston"]
         ],
         photo: { src: "../images/teams/boys-indoor-track.jpg", caption: "The 2025–26 Danvers boys indoor track team. Photo from the Danvers High School athletics page." },
         tiles: [["Record", "3–6", "Coach Tom Walsh"], ["Division 4 meet", "13th", "13 points · The Track at New Balance"], ["MSTCA ranking", "Unranked", "Not in the Division 4 top 10 (Jan. 28)"]],
-        note: "Dual meets as reported to the Boston Globe, so the list may be incomplete. Division 4 places and points from the meet's official results; the season record is from the school's team page.",
+        note: "Every meet on the school's ArbiterLive schedule for the season, with scores from ArbiterLive and the Boston Globe; multi-team meets are scored by place, and some duals have no score on file. Division 4 places and points from the meet's official results. The season record is from the school's team page.",
         keyPlayers: [
           { name: "Zach Dunn", grade: "Jr.", note: "NEC All-Conference. 2nd in the 55 meters at the MIAA Division 4 meet in 6.59, the Falcons' best finish there." },
           { name: "Julian Capece", grade: "So.", note: "NEC All-Star. 5th in the high jump at Division 4, clearing 6 feet." },
@@ -189,15 +194,31 @@ const TEAMS = {
       },
       {
         season: "2024–25",
-        games: [["2025-01-22", 0, "Salem", "NEC", "W", 64, 18, ""], ["2025-02-15", 0, "MIAA Division 4 Championship", "State", "7th", "19 pts", null, "Reggie Lewis Center, Boston"]],
-        tiles: [["Division 4 meet", "7th", "19 points · Reggie Lewis Center"]],
-        note: "Dual meets as reported to the Boston Globe, so the list may be incomplete. Division 4 places and points from the meet's official results.",
+        games: [
+          ["2025-01-15", 0, "Swampscott and one more team", "NEC", null, null, null, "Multi-team meet"],
+          ["2025-01-22", 0, "Salem", "NEC", "W", 64, 18, ""],
+          ["2025-01-30", 1, "Beverly", "NEC", null, null, null, "No score on file"],
+          ["2025-02-15", 0, "MIAA Division 4 Championship", "State", "7th", "19 pts", null, "Reggie Lewis Center, Boston"]
+        ],
+        tiles: [["Dual meets with scores", "1–0", "Of the meets on the school's schedule"], ["Division 4 meet", "7th", "19 points · Reggie Lewis Center"]],
+        note: "Every meet on the school's ArbiterLive schedule for the season, with scores from ArbiterLive and the Boston Globe; multi-team meets are scored by place, and some duals have no score on file. Division 4 places and points from the meet's official results.",
         keyPlayers: [
           { name: "William Conklin", grade: "Sr.", note: "MIAA Division 4 champion in the two-mile, 9:32.79." },
           { name: "JJ Rooney", grade: "Sr.", note: "2nd in the mile at Division 4 in 4:25.03." },
           { name: "Chuck Garlin", grade: "Sr.", note: "8th in the 600 meters at Division 4 (1:25.68)." },
           { name: "Julian Capece", grade: "Fr.", note: "Cleared 5-8 in the high jump at Division 4 as a freshman." }
         ]
+      },
+      {
+        season: "2023–24",
+        games: [
+          ["2023-12-13", 0, "Peabody and one more team", "NEC", null, null, null, "Multi-team meet"],
+          ["2023-12-21", 0, "Beverly", "NEC", "L", 26, 60, ""],
+          ["2024-01-04", 1, "Masconomet and two more teams", "NEC", "L", 42, 44, ""],
+          ["2024-01-10", 0, "Gloucester", "NEC", null, null, null, "No score on file"]
+        ],
+        tiles: [["Dual meets with scores", "0–2", "Of the meets on the school's schedule"]],
+        note: "Every meet on the school's ArbiterLive schedule for the season, with scores from ArbiterLive and the Boston Globe; multi-team meets are scored by place, and some duals have no score on file."
       }
     ],
     historyIntro: "",
@@ -217,7 +238,7 @@ const TEAMS = {
     returning: [
       { name: "Zach Dunn", grade: "Sr.", note: "2nd in the Division 4 55 meters last winter (6.59)." },
       { name: "Julian Capece", grade: "Jr.", note: "Cleared 6 feet for 5th in the Division 4 high jump." },
-      { name: "Marcus Morais", grade: "Sr.", note: "Ran the mile at Division 4 last winter (5:04.62) and won two cross country races this fall." }
+      { name: "Marcus Morais", grade: "Sr.", note: "Won two cross country races this fall: at Salem on Sept. 16 (19:20) and at home against Saugus/Winthrop on Sept. 30 (17:25). Ran the mile at the Division 4 meet last winter (5:04.62)." }
     ],
     returningNote: "Picked from last winter's results and game stories.",
     returningTitle: "Returning athletes to watch",
@@ -357,7 +378,7 @@ const TEAMS = {
       }
     ],
     players: [],
-    pastIntro: "The last two winters: dual meets, the MIAA Division 4 championship and the athletes who scored there.",
+    pastIntro: "The last three winters: every meet on the school's schedule, the MIAA Division 4 championship and the athletes who scored there.",
     past: [
       {
         season: "2025–26",
@@ -366,14 +387,20 @@ const TEAMS = {
         allLeague: "Tess Ryan",
         allStars: "Grace Conklin",
         games: [
+          ["2025-12-12", 0, "Marblehead and eight more teams", "NEC", null, null, null, "Multi-team meet"],
           ["2025-12-17", 1, "Masconomet", "NEC", "L", 34, 52, ""],
+          ["2025-12-29", 0, "Salem and eight more teams", "NEC", null, null, null, "Multi-team meet"],
+          ["2026-01-07", 0, "Gloucester and one more team", "NEC", null, null, null, "Multi-team meet"],
           ["2026-01-14", 0, "Peabody", "NEC", "L", 18, 68, "", "Ayanna Cirame won both the 55-meter hurdles and the high jump for the Tanners (3-0) in the Northeastern win."],
+          ["2026-01-22", 1, "Salem", "NEC", null, null, null, "No score on file"],
           ["2026-01-28", 0, "Marblehead", "NEC", "L", 32, 39, ""],
+          ["2026-01-31", 0, "Marblehead and eight more teams", "NEC", null, null, null, "Multi-team meet"],
+          ["2026-02-05", 0, "Gloucester and two more teams", "NEC", null, null, null, "Multi-team meet"],
           ["2026-02-14", 0, "MIAA Division 4 Championship", "State", "19th", "13 pts", null, "The Track at New Balance, Boston"]
         ],
         photo: { src: "../images/teams/girls-indoor-track.jpg", caption: "The 2025–26 Danvers girls indoor track team. Photo from the Danvers High School athletics page." },
         tiles: [["Record", "3–5–1", "Coach Erin St. Pierre"], ["Division 4 meet", "19th", "13 points · The Track at New Balance"], ["MSTCA ranking", "Unranked", "Not in the Division 4 top 10 (Jan. 22)"]],
-        note: "Dual meets as reported to the Boston Globe, so the list may be incomplete. Division 4 places and points from the meet's official results; the season record is from the school's team page.",
+        note: "Every meet on the school's ArbiterLive schedule for the season, with scores from ArbiterLive and the Boston Globe; multi-team meets are scored by place, and some duals have no score on file. Division 4 places and points from the meet's official results. The season record is from the school's team page.",
         keyPlayers: [
           { name: "Tess Ryan", grade: "Jr.", note: "NEC All-Conference. 3rd in the 55 meters at the MIAA Division 4 meet in 7.30." },
           { name: "Grace Conklin", grade: "Jr.", note: "NEC All-Star. 6th in the two-mile at Division 4 in 11:58.46." },
@@ -382,14 +409,20 @@ const TEAMS = {
       },
       {
         season: "2024–25",
-        games: [["2025-01-15", 1, "Peabody", "NEC", "L", 33, 48, ""], ["2025-02-15", 0, "MIAA Division 4 Championship", "State", "19th", "8 pts", null, "Reggie Lewis Center, Boston"]],
-        tiles: [["Division 4 meet", "19th", "8 points · Reggie Lewis Center"]],
-        note: "Dual meets as reported to the Boston Globe, so the list may be incomplete. Division 4 places and points from the meet's official results.",
+        games: [["2025-01-15", 1, "Peabody", "NEC", "L", 33, 48, ""], ["2025-01-30", 1, "Beverly", "NEC", null, null, null, "No score on file"], ["2025-02-15", 0, "MIAA Division 4 Championship", "State", "19th", "8 pts", null, "Reggie Lewis Center, Boston"]],
+        tiles: [["Dual meets with scores", "0–1", "Of the meets on the school's schedule"], ["Division 4 meet", "19th", "8 points · Reggie Lewis Center"]],
+        note: "Every meet on the school's ArbiterLive schedule for the season, with scores from ArbiterLive and the Boston Globe; multi-team meets are scored by place, and some duals have no score on file. Division 4 places and points from the meet's official results.",
         keyPlayers: [
           { name: "Grace Conklin", grade: "So.", note: "4th in the two-mile at the MIAA Division 4 meet in 12:08.43." },
           { name: "Tess Ryan", grade: "So.", note: "7th in the 55 meters at Division 4 (7.57)." },
           { name: "Addison Lamar", grade: "Jr.", note: "8th in the two-mile at Division 4 (12:21.92)." }
         ]
+      },
+      {
+        season: "2023–24",
+        games: [["2023-12-13", 0, "Peabody and one more team", "NEC", null, null, null, "Multi-team meet"], ["2023-12-21", 0, "Beverly", "NEC", "L", 15, 71, ""], ["2024-01-10", 0, "Gloucester", "NEC", null, null, null, "No score on file"]],
+        tiles: [["Dual meets with scores", "0–1", "Of the meets on the school's schedule"]],
+        note: "Every meet on the school's ArbiterLive schedule for the season, with scores from ArbiterLive and the Boston Globe; multi-team meets are scored by place, and some duals have no score on file."
       }
     ],
     historyIntro: "",

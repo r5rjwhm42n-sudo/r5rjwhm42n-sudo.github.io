@@ -57,7 +57,7 @@ const TEAMS = {
       { id: 6, date: "2027-01-31T17:00", opponent: "Bishop Fenwick", mascot: "Crusaders", home: false, league: false, site: "Legends Gymnastics, North Andover", result: null }
     ],
     players: [],
-    pastIntro: "The last two winters, meet by meet, with team scores.",
+    pastIntro: "The last three winters, meet by meet, with team scores.",
     past: [
       {
         season: "2025–26",
@@ -67,15 +67,16 @@ const TEAMS = {
         games: [
           ["2025-12-21", 0, "Essex Tech", "", "L", 109.35, 119.7, ""],
           ["2025-12-28", 0, "Masconomet", "", "L", 122, 139, ""],
-          ["2026-01-08", 0, "Marblehead/Swampscott", "", "L", 121.95, 123.5, ""],
           ["2026-01-08", 0, "Hamilton-Wenham/Manchester Essex", "", "L", 121.95, 133.05, ""],
+          ["2026-01-08", 0, "Marblehead/Swampscott", "", "L", 121.95, 123.5, ""],
           ["2026-01-12", 0, "Beverly", "", "L", 121.75, 132.4, ""],
           ["2026-01-17", 1, "Hamilton-Wenham/Manchester Essex", "", "L", 127.8, 136.05, ""],
           ["2026-01-18", 0, "Bishop Fenwick", "", "L", 122.5, 123.15, ""],
-          ["2026-02-02", 0, "Beverly", "", "L", 101.5, 133.55, ""]
+          ["2026-02-02", 0, "Beverly", "", "L", 101.5, 133.55, ""],
+          ["2026-02-07", 0, "Beverly and eight more teams", "NEC", null, null, null, "Multi-team meet"]
         ],
         photo: { src: "../images/teams/gymnastics.jpg", caption: "The 2025–26 Danvers gymnastics team. Photo from the Danvers High School athletics page." },
-        note: "Meets as reported to the Boston Globe, which lists eight; the season record is from the school's team page. A meet against two teams counts as two. The MIAA seeds the state tournament on the average of a team's four best scores: Danvers' was 123.68, with a season high of 127.8 against Hamilton-Wenham/Manchester Essex on Jan. 17.",
+        note: "Every meet on the school's ArbiterLive schedule, with scores from ArbiterLive and the Boston Globe; the season record is from the school's team page. A meet against two teams counts as two. The MIAA seeds the state tournament on the average of a team's four best scores: Danvers' was 123.68.",
         tiles: [["Record", "0–6", "Coach Jen Habeeb"], ["Season high", "127.8", "vs. Hamilton-Wenham/Manchester Essex, Jan. 17"], ["MIAA seeding average", "123.68", "Average of the four best scores"]]
       },
       {
@@ -87,10 +88,25 @@ const TEAMS = {
           ["2025-01-19", 1, "Bishop Fenwick", "", "W", 144.45, 119.95, ""],
           ["2025-01-19", 1, "Peabody", "", "W", 144.45, 64.7, ""],
           ["2025-01-30", 1, "Hamilton-Wenham/Manchester Essex", "", "W", 144.1, 133.65, ""],
+          ["2025-02-07", 0, "Winthrop", "NEC", null, null, null, "No score on file"],
           ["2025-02-09", 1, "Essex Tech", "", "W", 148.4, 126.45, ""]
         ],
-        note: "Meets and the 4–2 record as reported to the Boston Globe.",
+        note: "Every meet on the school's ArbiterLive schedule, with scores from ArbiterLive and the Boston Globe. The 4–2 record is as reported to the Globe.",
         tiles: [["Record", "4–2", "As reported to the Boston Globe"], ["Season high", "148.4", "vs. Essex Tech, Feb. 9"]]
+      },
+      {
+        season: "2023–24",
+        games: [
+          ["2023-12-27", 1, "Bishop Fenwick", "NEC", "W", 145.4, 127.5, ""],
+          ["2024-01-06", 1, "Peabody", "NEC", null, null, null, "No score on file"],
+          ["2024-01-15", 1, "Hamilton-Wenham and one more team", "NEC", "W", 145.95, 136.9, ""],
+          ["2024-01-21", 1, "Beverly", "NEC", "W", 143.45, 128.4, ""],
+          ["2024-01-28", 0, "Marblehead", "NEC", "W", 146.05, 140.05, ""],
+          ["2024-02-11", 0, "Essex Tech", "NEC", "W", 144.2, 118, ""]
+        ],
+        note: "Every meet on the school's ArbiterLive schedule, with the scores entered there: unbeaten in the five meets that have one.",
+        record: "5–0",
+        tiles: [["Record", "5–0", "In meets with a score on file"], ["Season high", "146.05", "at Marblehead, Jan. 28"]]
       }
     ],
     historyIntro: "",

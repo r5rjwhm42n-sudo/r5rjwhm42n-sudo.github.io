@@ -60,16 +60,57 @@ const TEAMS = {
       { id: 8, date: "2027-01-27T19:30", opponent: "Masconomet", mascot: "Chieftains", home: true, league: true, site: "St. John's Prep, 72 Spring Street, Danvers", result: null, notes: ["A home meet at St. John's Prep"] }
     ],
     players: [],
-    pastIntro: "Last winter's record and honors.",
+    pastIntro: "The last three winters, meet by meet, with team scores.",
     past: [
       {
         season: "2025–26",
         record: "2–4",
         coach: "Meghan Beaulieu",
-        games: [],
-        note: "The school's team page lists these honors for 2024–25: NEC All-Conference Zachary Cotter and Max Scott, NEC All-Star Caleb Clark.",
-        gamesNote: "Meet-by-meet results for this season aren't on file. The season record is from the school's team page.",
+        games: [
+          ["2025-12-19", 0, "Masconomet", "NEC", "L", 74, 88, ""],
+          ["2025-12-20", 0, "NEC Dive", "NEC", null, null, null, "7 teams"],
+          ["2026-01-06", 1, "Marblehead", "NEC", "L", 81, 92, ""],
+          ["2026-01-11", 0, "NEC Dive", "NEC", null, null, null, "8 teams"],
+          ["2026-01-14", 1, "Swampscott", "NEC", "W", 88, 79, ""],
+          ["2026-01-19", 0, "Salem", "NEC", null, null, null, "No score on file"],
+          ["2026-01-23", 1, "Peabody", "NEC", "L", 88, 92, ""],
+          ["2026-01-28", 0, "Gloucester", "NEC", null, null, null, "No score on file"],
+          ["2026-01-30", 0, "NEC Dive Championships", "NEC", null, null, null, "7 teams"],
+          ["2026-01-31", 0, "NEC Swim Championships", "NEC", null, null, null, "7 teams"]
+        ],
+        note: "Every meet on the school's ArbiterLive schedule, with the scores entered there; two duals have no score on file. The season record is from the school's team page.",
         photo: { src: "../images/teams/swim-dive.jpg", caption: "The 2025–26 Danvers swim and dive team. Photo from the Danvers High School athletics page." }
+      },
+      {
+        season: "2024–25",
+        games: [
+          ["2024-12-19", 1, "Beverly", "NEC", null, null, null, "No score on file"],
+          ["2024-12-19", 1, "Peabody", "NEC", "L", 80, 102, ""],
+          ["2025-01-09", 1, "Masconomet", "NEC", "L", 81, 103, ""],
+          ["2025-01-15", 0, "Swampscott", "NEC", "W", 94, 89, ""],
+          ["2025-01-16", 1, "Salem", "NEC", "W", 93, 57, ""],
+          ["2025-01-21", 0, "Peabody", "NEC", "L", 84, 102, ""],
+          ["2025-01-23", 0, "Marblehead", "NEC", "L", 75, 103, ""],
+          ["2025-01-28", 1, "Gloucester", "NEC", "W", 95, 88, ""]
+        ],
+        allLeague: "Zachary Cotter, Max Scott",
+        allStars: "Caleb Clark",
+        note: "Every meet on the school's ArbiterLive schedule, with the scores entered there; the record counts the meets with a score. Honors from the school's team page.",
+        record: "3–4"
+      },
+      {
+        season: "2023–24",
+        games: [
+          ["2023-12-07", 1, "Beverly", "NEC", "W", 93, 65, ""],
+          ["2023-12-20", 1, "Marblehead", "NEC", "L", 74, 96, ""],
+          ["2024-01-03", 1, "Swampscott", "NEC", "W", 96, 82, ""],
+          ["2024-01-10", 0, "Salem", "NEC", "W", 100, 66, ""],
+          ["2024-01-17", 1, "Peabody", "NEC", "L", 83, 94, ""],
+          ["2024-01-19", 0, "Masconomet", "NEC", "L", 85, 93, ""],
+          ["2024-01-23", 0, "Gloucester", "NEC", null, null, null, "No score on file"]
+        ],
+        note: "Every meet on the school's ArbiterLive schedule, with the scores entered there; the record counts the meets with a score.",
+        record: "3–3"
       }
     ],
     historyIntro: "A co-ed program with a Northeastern Conference championship to its name.",
