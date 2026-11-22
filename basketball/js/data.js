@@ -115,26 +115,113 @@ const TEAMS = {
         allStars: "Kyle Sillars, Luca Tirella",
         games: [
           ["2025-12-12", 0, "Marblehead", "NEC", "L", 51, 58, ""],
-          ["2025-12-13", 1, "Bishop Fenwick", "Non-league", "L", 51, 63, ""],
+          ["2025-12-13", 1, "Bishop Fenwick", "Non-league", "L", 51, 63, "", "Rocco Cerrutti led the Shamrocks (1-1) to a nonleague road win with 17 points. Damon Mataragas, Dean Cocchiola, and Jake Bellancini all added 11 points."],
           ["2025-12-17", 0, "Wakefield", "Non-league", "W", 63, 49, ""],
-          ["2025-12-19", 1, "Winthrop", "NEC", "W", 60, 56, ""],
-          ["2025-12-29", 0, "Gloucester", "NEC", "W", 72, 70, ""],
-          ["2025-12-30", 1, "Salem Academy", "Non-league", "W", 58, 30, ""],
-          ["2026-01-05", 1, "Beverly", "NEC", "L", 36, 80, ""],
+          ["2025-12-19", 1, "Winthrop", "NEC", "W", 60, 56, "", "Senior Kyle Sillars scored 23 points to power the Falcons (2-2) to the Northeastern Conference triumph. Connor DiTomaso added 13 points and Randall Martin played solid defense and scored 11."],
+          [
+            "2025-12-29",
+            0,
+            "Gloucester",
+            "NEC",
+            "W",
+            72,
+            70,
+            "",
+            "Luca Tirella (19 points, 13 rebounds, 3 assists) notched a double-double and Kyle Sillars (19 points, 6 assists, 4 rebounds) played a solid all-around game for the visiting Falcons (3-2) in a Northeastern Lynch win."
+          ],
+          ["2025-12-30", 1, "Salem Academy", "Non-league", "W", 58, 30, "", "The Falcons (4-2) captured the Gloucester Holiday Tournament thanks to the efforts of MVP Kyle Sillars, who finished with 19 points, 6 steals, and 5 assists."],
+          [
+            "2026-01-05",
+            1,
+            "Beverly",
+            "NEC",
+            "L",
+            36,
+            80,
+            "",
+            "Jacob Klass scored a team-high 19 points, finishing 12 shy of 1,000 for his career. Danny Pierce added 14 points for the fifth-ranked Panthers (5-1) in a dominant Northeastern road win. Klass's next attempt at the scoring milestone is at home on Friday night against Salem."
+          ],
           ["2026-01-08", 0, "Masconomet", "NEC", "L", 43, 81, ""],
-          ["2026-01-13", 0, "Salem", "NEC", "L", 48, 76, ""],
-          ["2026-01-16", 1, "Peabody", "NEC", "W", 66, 62, ""],
+          [
+            "2026-01-13",
+            0,
+            "Salem",
+            "NEC",
+            "L",
+            48,
+            76,
+            "",
+            "The Witches (6-1) picked up a Northeastern win thanks to Elian Rodriguez (22 points, 8 assists, 6 rebounds), Cleto Deng (17 points, 10 rebounds), and Nathaniel Lane (15 points, 9 assists, 7 rebounds)."
+          ],
+          [
+            "2026-01-16",
+            1,
+            "Peabody",
+            "NEC",
+            "W",
+            66,
+            62,
+            "",
+            "Senior Connor DiTomaso drilled a late 3-pointer to seal a Northeastern Lynch victory for the Falcons (5-5), their first win over Peabody (2-8) in over five years. Luca Tirella (20 points, 15 rebounds) and Kyle Sillars (23 points, 8 rebounds) were dominant."
+          ],
           ["2026-01-20", 1, "Marblehead", "NEC", "L", 56, 71, ""],
-          ["2026-01-23", 1, "Gloucester", "NEC", "W", 70, 47, ""],
+          [
+            "2026-01-23",
+            1,
+            "Gloucester",
+            "NEC",
+            "W",
+            70,
+            47,
+            "",
+            "Luca Tirella (16 points, 10 rebounds, 2 blocks) and Kyle Sillars (15 points 4 rebounds, 4 assists) led the way for the Falcons (6-6) as they soared to a Northeastern Lynch home win. Connor DiTomaso added 10 points with 5 assists and 3 rebounds."
+          ],
           ["2026-01-26", 1, "Bishop Fenwick", "Non-league", null, null, null, "Cancelled"],
-          ["2026-01-30", 0, "Beverly", "NEC", "L", 52, 89, ""],
-          ["2026-02-02", 0, "Saugus", "NEC", "L", 57, 60, ""],
+          [
+            "2026-01-30",
+            0,
+            "Beverly",
+            "NEC",
+            "L",
+            52,
+            89,
+            "",
+            "Jacob Klass led all scorers with 25 points, Eli Landman scored 19, and Jack Ulirch (13 points) and Ben Doughty (12 points) reached double figures for the No. 13 Panthers (11-3, 8-2) in Northeastern Conference crossover action."
+          ],
+          [
+            "2026-02-02",
+            0,
+            "Saugus",
+            "NEC",
+            "L",
+            57,
+            60,
+            "",
+            "Kam Conroy (9 points) drilled a go-ahead 3-point with eight seconds left to lift the host Sachems (6-7) to the Northeastern Conference win. Huey Jasama tossed in 17 points, Ryan Dupuy added 15, and Ryan Shea had 11."
+          ],
           ["2026-02-04", 1, "Essex Tech", "Non-league", "W", 65, 52, ""],
           ["2026-02-06", 1, "Masconomet", "NEC", "L", 43, 87, ""],
-          ["2026-02-09", 0, "Peabody", "NEC", "L", 44, 62, ""],
-          ["2026-02-12", 1, "Swampscott", "NEC", "L", 60, 76, ""],
+          ["2026-02-09", 0, "Peabody", "NEC", "L", 44, 62, "", "Mark Mendonca was a factor on both ends of the court, finishing with 22 points, 5 assists, 4 rebounds, and 5 steals for the host Tanners (6-13) in the Northeastern triumph."],
+          [
+            "2026-02-12",
+            1,
+            "Swampscott",
+            "NEC",
+            "L",
+            60,
+            76,
+            "",
+            "Connor Chiarello led the way for the Big Blue (14-4, 10-3) with 25 points, 5 boards, and 6 assists in a Northeastern Conference victory. Teddy O'Neill's 22 points and five assists and Cole Manning's 9 points off the bench were also crucial."
+          ],
           ["2026-02-15", 1, "Salem Academy", "Non-league", "W", 57, 48, ""],
           ["2026-02-17", 1, "Bishop Fenwick", "Non-league", "W", 64, 63, ""]
+        ],
+        note: "Game stories from the Boston Globe's high school scoreboard. Open a game to read its story.",
+        keyPlayers: [
+          { name: "Kyle Sillars", grade: "Sr.", note: "Captain and NEC All-Star. MVP of the Gloucester Holiday Tournament (19 points, 6 steals, 5 assists in the final), with 23 points against Winthrop and 23 and 8 rebounds against Peabody." },
+          { name: "Luca Tirella", note: "Captain and NEC All-Star. Double-doubles in three straight wins the Globe covered: 19 points and 13 rebounds at Gloucester, 20 and 15 against Peabody, 16 and 10 against Gloucester." },
+          { name: "Connor DiTomaso", grade: "Sr.", note: "Captain. His late 3-pointer sealed the 66–62 win over Peabody, Danvers' first over the Tanners in more than five years." },
+          { name: "Randall Martin", note: "11 points and strong defense in the 60–56 win over Winthrop." }
         ]
       },
       {
@@ -146,24 +233,100 @@ const TEAMS = {
         games: [
           ["2024-12-13", 1, "Marblehead", "NEC", "L", 47, 54, ""],
           ["2024-12-14", 0, "Salem Academy", "Non-league", "W", 82, 24, ""],
-          ["2024-12-18", 0, "Bishop Fenwick", "Non-league", "W", 78, 61, ""],
-          ["2024-12-20", 0, "Winthrop", "NEC", "W", 58, 51, ""],
-          ["2024-12-23", 0, "Somerville", "Non-league", "W", 60, 48, ""],
+          [
+            "2024-12-18",
+            0,
+            "Bishop Fenwick",
+            "Non-league",
+            "W",
+            78,
+            61,
+            "",
+            "Kyle Sillars put up 18 points, 8 rebounds, and 6 assists, Kevin Ahearn contributed 18 points and 6 rebounds, and Zach Calabro added 15 points and 4 assists, powering the Falcons (1-1) to a nonleague triumph."
+          ],
+          ["2024-12-20", 0, "Winthrop", "NEC", "W", 58, 51, "", "Zachary Calabro scored 15 points and Kevin Ahearn tacked on another 10 to help seal a close Northeastern League win for the Falcons (2-1)."],
+          [
+            "2024-12-23",
+            0,
+            "Somerville",
+            "Non-league",
+            "W",
+            60,
+            48,
+            "",
+            "Kyle Sillars, Zach Calabro, and Luca Tirella each scored 11 points and Kevin Ahearn added 10, lifting the Falcons (3-1) to a nonleague win. Edward Nyasembi had a game-high 17 points for Prospect Hill."
+          ],
           ["2024-12-27", 1, "Salem Academy", "Non-league", "W", 52, 40, ""],
           ["2024-12-28", 0, "Gloucester", "Tournament", "L", 53, 67, ""],
-          ["2025-01-03", 0, "Beverly", "NEC", "L", 65, 79, ""],
-          ["2025-01-06", 1, "Masconomet", "NEC", "L", 63, 85, ""],
+          [
+            "2025-01-03",
+            0,
+            "Beverly",
+            "NEC",
+            "L",
+            65,
+            79,
+            "",
+            "Jacob Klass dropped 26 points, Isaac Saas posted 14 points and 16 rebounds, and freshman Connie Panda netted a career-high 12 points with five rebounds to lift the Panthers (6-2) in a Northeastern Conference victory."
+          ],
+          [
+            "2025-01-06",
+            1,
+            "Masconomet",
+            "NEC",
+            "L",
+            63,
+            85,
+            "",
+            "Junior point guard Jimmy Farrell fired in a career-high 31 points and junior forward Jamason Vella turned in a 22-point, 10-rebound double-double for the Chieftains (6-1, 3-0) in a Northeastern Conference win over the Falcons (5-3, 1-3)."
+          ],
           ["2025-01-09", 1, "Salem", "NEC", "L", 54, 65, ""],
-          ["2025-01-14", 0, "Peabody", "NEC", "L", 47, 59, ""],
+          ["2025-01-14", 0, "Peabody", "NEC", "L", 47, 59, "", "Jariel Tolentino had a team-high 26 points, 4 rebounds, and 3 assists for the Tanners (7-3) who notched their seventh straight victory in the Northeastern home win following an 0-3 start."],
           ["2025-01-17", 0, "Marblehead", "NEC", "L", 57, 68, ""],
           ["2025-01-21", 0, "Gloucester", "NEC", "L", 47, 53, ""],
-          ["2025-01-28", 1, "Beverly", "NEC", "L", 63, 90, ""],
+          [
+            "2025-01-28",
+            1,
+            "Beverly",
+            "NEC",
+            "L",
+            63,
+            90,
+            "",
+            "Andrew Braganca posted a triple double with 19 points, 11 rebounds, 11 steals, and five assists, and Jacob Klass scored 13 of his 20 points in the first half the pace the Panthers (10-5) in NEC action."
+          ],
           ["2025-01-30", 1, "Saugus", "NEC", "W", 86, 59, ""],
-          ["2025-02-04", 0, "Masconomet", "NEC", "L", 46, 92, ""],
-          ["2025-02-07", 1, "Peabody", "NEC", "L", 59, 71, ""],
-          ["2025-02-11", 0, "Swampscott", "NEC", "L", 55, 68, ""],
-          ["2025-02-14", 1, "Bishop Fenwick", "Non-league", "L", 55, 58, ""],
+          [
+            "2025-02-04",
+            0,
+            "Masconomet",
+            "NEC",
+            "L",
+            46,
+            92,
+            "",
+            "Devin O'Brien had a season-high 22 points (including four 3-pointers), scoring 19 in the first half, to go along with 8 rebounds. Thomas Denton and Jimmy Farrell each had 16 points for the Chieftains (15-1) in a blowout Northeastern home win."
+          ],
+          ["2025-02-07", 1, "Peabody", "NEC", "L", 59, 71, "", "Jariel Tolentino scored 27 points and came up with four steals to help the Tanners (9-10) notch the Northeastern Conference win on the road. Jimmy Festa had a 15-point, 11-rebound double-double."],
+          [
+            "2025-02-11",
+            0,
+            "Swampscott",
+            "NEC",
+            "L",
+            55,
+            68,
+            "",
+            "Junior guard Connor Chiarello broke the 1,000-point career barrier while leading the Big Blue (10-7, 8-3) to a Northeastern Conference win. Teddy O'Neill contributed with 21 points, and Noah Baskin netted 6 points off the bench."
+          ],
+          ["2025-02-14", 1, "Bishop Fenwick", "Non-league", "L", 55, 58, "", "Damon Mataragas led the Crusaders (7-10) with 18 points as they picked up a nonleague road win. Nate Alder and Vincent Finocchio netted 11 each."],
           ["2025-02-16", 1, "Salem Academy", "Non-league", "W", 64, 45, ""]
+        ],
+        note: "Game stories from the Boston Globe's high school scoreboard. Open a game to read its story.",
+        keyPlayers: [
+          { name: "Kevin Ahearn", note: "Captain. 18 points and 6 rebounds in the opening win at Bishop Fenwick." },
+          { name: "Zach Calabro", note: "Captain. 15 points in each of the wins at Bishop Fenwick and at Winthrop." },
+          { name: "Kyle Sillars", grade: "Jr.", note: "18 points, 8 rebounds and 6 assists at Bishop Fenwick." }
         ]
       },
       {
@@ -322,7 +485,8 @@ const TEAMS = {
       }
     ],
     news: [],
-    photos: []
+    photos: [],
+    division: "MIAA Division 2"
   },
 
   /* ================================ GIRLS ================================ */
@@ -393,28 +557,181 @@ const TEAMS = {
         allStars: "Kayda Brown, Annabel Boyd, Sienna Lynch",
         awards: "Angie Djoko, NEC Player of the Year · Dave Chisholm, NEC Coach of the Year · 19–2 is the school record",
         games: [
-          ["2025-12-12", 1, "Marblehead", "NEC", "W", 54, 25, ""],
-          ["2025-12-18", 0, "Manchester Essex", "Non-league", "W", 61, 44, ""],
-          ["2025-12-19", 0, "Winthrop", "NEC", "W", 65, 23, ""],
+          ["2025-12-12", 1, "Marblehead", "NEC", "W", 54, 25, "", "Captain Kayda Brown nailed three 3-pointers in an 11-point performance as the Falcons (1-0) soared to a Northeastern home win. Angie Djoko added 8 points, 6 rebounds and 3 steals."],
+          [
+            "2025-12-18",
+            0,
+            "Manchester Essex",
+            "Non-league",
+            "W",
+            61,
+            44,
+            "",
+            "Anchoring the paint with 17 rebounds and 15 points, Angie Djoko powered the visiting Falcons (2-0) to a nonleague victory. Sienna Lynch had a strong game in the backcourt, scoring 14 points and getting her teammates involved with 4 assists."
+          ],
+          [
+            "2025-12-19",
+            0,
+            "Winthrop",
+            "NEC",
+            "W",
+            65,
+            23,
+            "",
+            "A balanced attack led by captains Angie Djoko (13 points, 10 rebounds, 6 steals) and Kayda Brown (6 points, 6 rebounds, 3 assists) earned the visiting Falcons (3-0) a Northeastern win. Annabel Boyd (9 points, 4 assists), Avery Baril (9 points), Kendall Murphy (9 points), and Stella Shairs (8 points) were among 11 Winthrop scorers."
+          ],
           ["2025-12-29", 1, "Hamilton-Wenham", "Non-league", "L", 21, 26, ""],
           ["2025-12-30", 1, "Essex Tech", "Non-league", "W", 38, 33, ""],
-          ["2026-01-05", 0, "Beverly", "NEC", "W", 59, 46, ""],
-          ["2026-01-08", 1, "Masconomet", "NEC", "W", 58, 29, ""],
-          ["2026-01-13", 1, "Salem", "NEC", "W", 59, 10, ""],
-          ["2026-01-16", 0, "Peabody", "NEC", "W", 57, 52, ""],
-          ["2026-01-20", 0, "Marblehead", "NEC", "W", 47, 29, ""],
-          ["2026-01-21", 1, "Manchester Essex", "Non-league", "W", 54, 45, ""],
+          [
+            "2026-01-05",
+            0,
+            "Beverly",
+            "NEC",
+            "W",
+            59,
+            46,
+            "",
+            "Angie Djoko amassed 10 of her 14 points in the second half, adding 10 rebounds and three steals for the visiting Falcons (4-1, 2-0) in a Northeastern Conference triumph over the Panthers (0-6, 0-2)."
+          ],
+          [
+            "2026-01-08",
+            1,
+            "Masconomet",
+            "NEC",
+            "W",
+            58,
+            29,
+            "",
+            "Senior Angie Djoko flirted with a triple-double, amassing a game-high 21 points, 20 rebounds, 8 steals, and 4 assists as the host Falcons (6-1) flew to a Northeastern victory. Annabel Boyd contributed with 13 points and five assists and Lila Flynn applied constant pressure on defense."
+          ],
+          ["2026-01-13", 1, "Salem", "NEC", "W", 59, 10, "", "Freshman Stella Shairs (16 points, 7 rebounds, 5 steals) showed her two-way ability with a dominant showing for the Falcons (7-1) in a Northeastern home win."],
+          [
+            "2026-01-16",
+            0,
+            "Peabody",
+            "NEC",
+            "W",
+            57,
+            52,
+            "",
+            "Angie Djoko notched a double-double (22 points, 20 rebounds, 5 steals) while Annabel Boyd (11 points, 5 assists, 9 rebounds) anchored the defense for the Falcons (8-1, 6-0). Kayda Brown (7 points, 5 rebounds) and Sienna Lynch (6 points, 4 rebounds, 4 assists) chipped in for the Northeastern Conference road win."
+          ],
+          [
+            "2026-01-20",
+            0,
+            "Marblehead",
+            "NEC",
+            "W",
+            47,
+            29,
+            "",
+            "Angie Djoko logged a double-double with 20 points and 14 rebounds and Annabel Boyd (12 points, 4 assists, 4 steals) knocked down a pair of 3-pointers down the stretch to give the visiting Falcons (9-1) the Northeastern win."
+          ],
+          [
+            "2026-01-21",
+            1,
+            "Manchester Essex",
+            "Non-league",
+            "W",
+            54,
+            45,
+            "",
+            "The Falcons (11-1) pulled away with tough second-half defense to earn their seventh-straight win in a nonleague matchup. Angie Djoko (15 points, 14 rebounds), Kayda Brown (13 points, 6 boards), Annabel Boyd (9 points, 5 assists, 3 steals), Sienna Lynch (9 points, 6 rebounds), and Lila Flynn (6 points, 9 boards, 5 steals) all contributed."
+          ],
           ["2026-01-23", 0, "Gloucester", "NEC", "W", 52, 38, ""],
-          ["2026-01-28", 1, "Revere", "Non-league", "W", 46, 25, ""],
+          [
+            "2026-01-28",
+            1,
+            "Revere",
+            "Non-league",
+            "W",
+            46,
+            25,
+            "",
+            "Kayda Brown (16 points, 6 rebounds) knocked down three 3-pointers for the Falcons (12-1) as they cruised to a nonleague home win. Angie Djoko (9 points, 5 rebounds, 6 steals), Stella Shairs (7 points), and Kayla Moroney (5 points, 5 rebounds) contributed to the victory."
+          ],
           ["2026-01-30", 1, "Revere", "Non-league", null, null, null, "Cancelled"],
           ["2026-02-03", 1, "Saugus", "NEC", "W", 47, 19, ""],
-          ["2026-02-04", 0, "Hamilton-Wenham", "Non-league", "W", 38, 35, ""],
-          ["2026-02-06", 0, "Masconomet", "NEC", "W", 59, 19, ""],
-          ["2026-02-09", 1, "Peabody", "NEC", "W", 52, 28, ""],
-          ["2026-02-12", 0, "Swampscott", "NEC", "W", 37, 31, ""],
-          ["2026-02-15", 1, "Beverly", "NEC", "W", 39, 36, ""],
-          ["2026-02-17", 0, "Revere", "Non-league", "W", 50, 36, ""],
-          ["2026-02-27", 0, "Mansfield", "MIAA tournament", "L", 48, 51, ""]
+          [
+            "2026-02-04",
+            0,
+            "Hamilton-Wenham",
+            "Non-league",
+            "W",
+            38,
+            35,
+            "",
+            "Angie Djoko (16 points, 15 rebounds, 7 steals) posted a double-double for the Falcons (14-1) to hold on for the nonleague road win. Sienna Lynch (11 points, six rebounds) and Annabel Boyd (6 points, four assists) helped out."
+          ],
+          [
+            "2026-02-06",
+            0,
+            "Masconomet",
+            "NEC",
+            "W",
+            59,
+            19,
+            "",
+            "Angie Djoko (21 points, 14 rebounds) and Annabel Boyd (12 points, 3 assists) powered the Falcons (15-1) to a 26-5 second-half run in a Northeastern Conference victory. Kendall Murphy posted 6 points, 7 rebounds, 6 assists, and 2 steals."
+          ],
+          [
+            "2026-02-09",
+            1,
+            "Peabody",
+            "NEC",
+            "W",
+            52,
+            28,
+            "",
+            "Angie Djoko (27 points, 22 rebounds, 5 steals) dominated as the No. 15 Falcons (16-1) soared to a Northeastern Conference home victory to capture their first NEC title since 2019. Sienna Lynch (9 points, 3 assists, 3 steals) made a difference on the defensive end."
+          ],
+          [
+            "2026-02-12",
+            0,
+            "Swampscott",
+            "NEC",
+            "W",
+            37,
+            31,
+            "",
+            "Angie Djoko (10 points, 12 rebounds) notched a double-double and Annabel Boyd added 10 points, 5 rebounds, and 5 assists for the visiting No. 15 Falcons (17-1, 12-0) in a Northeastern Lynch heavyweight fight."
+          ],
+          ["2026-02-15", 1, "Beverly", "NEC", "W", 39, 36, "", "Angie Djoko posted 18 points and 12 rebounds for the No. 15 Falcons (18-1, 13-0) in a Northeastern Conference win. Kayda Brown added 12 points."],
+          [
+            "2026-02-17",
+            0,
+            "Revere",
+            "Non-league",
+            "W",
+            50,
+            36,
+            "",
+            "The No. 17 Falcons (19-1, 13-0) closed out the best regular season in program history powered by a double-double from Angie Djoko (18 points, 12 rebounds). Sienna Lynch (10 points, 4 rebounds, 3 assists) and Annabel Boyd (6 points, 6 assists, 3 steals) chipped in."
+          ],
+          [
+            "2026-02-27",
+            0,
+            "Mansfield",
+            "MIAA tournament",
+            "L",
+            48,
+            51,
+            "",
+            "Katelyn Troilo (25 points) had a 14-point fourth quarter, snagging a steal and free throw in the final seconds to lift the No. 12 Hornets (14-8) past No. 21 Danvers (19-2) and to a first-round home win."
+          ]
+        ],
+        note: "Game stories from the Boston Globe's high school scoreboard. Open a game to read its story.",
+        keyPlayers: [
+          {
+            name: "Angie Djoko",
+            grade: "Sr.",
+            note: "NEC Player of the Year and the program's fourth 1,000-point scorer. Double-doubles almost every night: 27 points and 22 rebounds as Danvers beat Peabody to clinch its first NEC title since 2019, and 21 points, 20 rebounds and 8 steals against Masconomet."
+          },
+          { name: "Annabel Boyd", grade: "Jr.", note: "NEC All-Star. 13 points and 5 assists against Masconomet, 12 points with two late 3-pointers at Marblehead, and 10 points, 5 rebounds and 5 assists at Swampscott." },
+          { name: "Kayda Brown", note: "Captain and NEC All-Star. 16 points with three 3-pointers against Revere, 13 against Manchester Essex and 12 in the 39–36 win over Beverly." },
+          { name: "Sienna Lynch", note: "NEC All-Star. 14 points and 4 assists at Manchester Essex, 11 points and 6 rebounds at Hamilton-Wenham, and three blocks against Saugus." },
+          { name: "Lila Flynn", note: "Captain and a defensive spark: 5 steals and 9 rebounds against Manchester Essex, 4 steals against Saugus." },
+          { name: "Stella Shairs", grade: "Fr.", note: "16 points, 7 rebounds and 5 steals in the win over Salem." }
         ]
       },
       {
@@ -427,27 +744,54 @@ const TEAMS = {
         allLeague: "Angie Djoko",
         games: [
           ["2024-12-13", 0, "Marblehead", "NEC", "L", 23, 28, ""],
-          ["2024-12-18", 0, "Ipswich", "Non-league", "W", 36, 11, ""],
-          ["2024-12-20", 1, "Winthrop", "NEC", "W", 41, 40, ""],
+          [
+            "2024-12-18",
+            0,
+            "Ipswich",
+            "Non-league",
+            "W",
+            36,
+            11,
+            "",
+            "Kayda Brown led the team in scoring with 13 points and Jane Koulopoulos had six points as the Falcons (1-1) picked up a nonleague win. Sienna Goldberg had five steals and four points in her first varsity game."
+          ],
+          [
+            "2024-12-20",
+            1,
+            "Winthrop",
+            "NEC",
+            "W",
+            41,
+            40,
+            "",
+            "Sophomores Kyla Moroney (16 points, 8 rebounds, 2 steals), Annabel Boyd (7 points, 4 assists, 3 steals), and Kendall Murphy (7 points, 4 assists, 2 steals) helped the Falcons (2-1) outlast Winthrop (1-2) on the road."
+          ],
           ["2024-12-23", 0, "Triton", "Non-league", "W", 45, 30, ""],
           ["2024-12-27", 1, "Hamilton-Wenham", "Non-league", "W", 47, 26, ""],
           ["2024-12-30", 1, "Manchester Essex", "Non-league", "W", 51, 40, ""],
           ["2025-01-03", 1, "Beverly", "NEC", null, null, null, "Cancelled"],
           ["2025-01-06", 0, "Masconomet", "NEC", "L", 24, 47, ""],
           ["2025-01-08", 0, "Hamilton-Wenham", "Non-league", "W", 39, 30, ""],
-          ["2025-01-09", 0, "Salem", "NEC", "W", 60, 9, ""],
+          ["2025-01-09", 0, "Salem", "NEC", "W", 60, 9, "", "Making her first varsity start, Gianna Ferraro led the Falcons (7-2) to a Northeastern win with 6 points, 6 rebounds, 4 assists, and 3 steals."],
           ["2025-01-14", 1, "Peabody", "NEC", "L", 34, 39, ""],
           ["2025-01-17", 1, "Marblehead", "NEC", "L", 30, 31, ""],
           ["2025-01-21", 1, "Gloucester", "NEC", "W", 46, 40, ""],
           ["2025-01-23", 1, "Ipswich", "Non-league", "W", 52, 11, ""],
           ["2025-01-28", 0, "Beverly", "NEC", "W", 59, 31, ""],
-          ["2025-01-30", 0, "Saugus", "NEC", "L", 59, 72, ""],
+          ["2025-01-30", 0, "Saugus", "NEC", "L", 59, 72, "", "Junior Peyton DiBiasio scored 35 points and Ella Castle added a season-high 18 as the Sachems (10-5, 7-3) secured a Northeastern Lynch Division win."],
           ["2025-02-04", 1, "Masconomet", "NEC", "L", 39, 42, ""],
           ["2025-02-07", 0, "Peabody", "NEC", "W", 48, 47, ""],
           ["2025-02-11", 1, "Swampscott", "NEC", "W", 58, 34, ""],
           ["2025-02-14", 0, "Manchester Essex", "Non-league", "W", 33, 30, ""],
           ["2025-02-16", 1, "Beverly", "NEC", "W", 45, 20, ""],
           ["2025-02-25", 0, "Holliston", "MIAA tournament", "L", 38, 53, ""]
+        ],
+        note: "Game stories from the Boston Globe's high school scoreboard. Open a game to read its story.",
+        keyPlayers: [
+          { name: "Angie Djoko", grade: "Jr.", note: "NEC All-Conference and a captain as a junior." },
+          { name: "Kyla Moroney", grade: "So.", note: "16 points and 8 rebounds in the 41–40 win at Winthrop." },
+          { name: "Kayda Brown", note: "Captain. Led the team with 13 points in the win at Ipswich." },
+          { name: "Annabel Boyd and Kendall Murphy", grade: "So.", note: "7 points and 4 assists each in the one-point win at Winthrop." }
         ]
       },
       {
@@ -590,6 +934,14 @@ const TEAMS = {
         url: "https://www.salemnews.com/sports/danvers-star-djoko-named-nec-player-of-the-year/article_cbe94190-178b-4ec5-969d-576d0f0b71fc.html"
       }
     ],
-    photos: []
+    photos: [],
+    returning: [
+      { name: "Annabel Boyd", grade: "Sr.", note: "NEC All-Star last winter, and on the varsity since her sophomore year." },
+      { name: "Kendall Murphy", grade: "Sr.", note: "6 points, 7 rebounds and 6 assists at Masconomet last winter." },
+      { name: "Kyla Moroney", grade: "Sr.", note: "A 16-point, 8-rebound game at Winthrop as a sophomore." },
+      { name: "Stella Shairs", grade: "So.", note: "16 points, 7 rebounds and 5 steals against Salem as a freshman." }
+    ],
+    returningNote: "Picked from last winter's results and game stories.",
+    division: "MIAA Division 2"
   }
 };

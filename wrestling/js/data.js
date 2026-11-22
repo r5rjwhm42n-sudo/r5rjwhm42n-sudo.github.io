@@ -62,14 +62,14 @@ const TEAMS = {
       {
         id: 1,
         date: "2026-12-05T09:00",
-        name: "North Shore Practice Meet",
-        opponent: "North Shore Practice Meet",
+        name: "Preseason practice meet",
+        opponent: "Triton and three more teams",
         home: false,
         league: false,
         scrimmage: true,
-        site: "Marblehead High School, Marblehead",
+        site: "Site to be announced",
         result: null,
-        notes: ["A preseason practice meet with Triton, Masconomet, Essex Tech, Lynn Classical and Salem", "Not counted in the record"]
+        notes: ["A preseason practice meet with Triton and three other teams", "Not counted in the record", "The school's schedule first listed it at Marblehead with five other teams; it now lists Triton, with the site to be announced"]
       },
       { id: 2, date: "2026-12-16T17:30", opponent: "Saugus", mascot: "Sachems", home: false, league: true, site: "Saugus High School, Saugus", result: null },
       {
@@ -173,11 +173,69 @@ const TEAMS = {
         coach: "Tom Savage",
         finish: "9th",
         allStars: "Logan Jacques",
-        games: [],
-        gamesNote: "Meet-by-meet results for this season aren't on file. The season record is from the school's record book.",
-        photo: { src: "../images/teams/wrestling.jpg", caption: "The 2025–26 Danvers wrestling team. Photo from the Danvers High School athletics page." }
+        games: [
+          ["2025-12-17", 0, "Salem", "NEC", "L", 24, 48, ""],
+          ["2025-12-18", 0, "Triton", "Non-league", "W", 46, 36, "", "Logan Jacques, Tommy Duval, and Drew McMahon picked up wins as the Falcons (1-1) secured a nonleague road win."],
+          ["2025-12-30", 0, "Wayland", "Non-league", "L", 12, 71, ""],
+          ["2026-01-03", 1, "Lynnfield/North Reading", "Non-league", "L", 23, 53, ""],
+          ["2026-01-07", 0, "Gloucester", "NEC", "L", 34, 48, "", "Aiden DeCoste (138 pounds) earned a quick pin to start the comeback from down 22-6 for the Fishermen (6-4), who dominated from that point to take the Northeastern Conference tilt."],
+          [
+            "2026-01-14",
+            1,
+            "Marblehead/Swampscott",
+            "NEC",
+            "L",
+            33,
+            42,
+            "",
+            "James Carey (113), Kenney Drolete (120), Liam O'Brien (138), Nolan Glass (150), Andrew Delisle (157), Colin Hart (175), and Colin Homan (190) won by pin for the Magicians in a Northeastern road win."
+          ],
+          ["2026-01-17", 0, "King Philip", "Non-league", "L", 24, 50, ""],
+          ["2026-01-17", 1, "Hope (R.I.)", "Non-league", "L", 12, 67, ""],
+          ["2026-01-21", 1, "Beverly", "NEC", "L", 18, 57, ""],
+          ["2026-01-28", 1, "Quincy Upper", "Non-league", "W", 48, 18, ""],
+          ["2026-01-28", 1, "Saugus/Peabody", "NEC", "L", 21, 54, ""],
+          ["2026-02-14", 0, "MIAA Division 3 North Sectional", "State", "12th", "61 pts", null, "14 teams scored"]
+        ],
+        photo: { src: "../images/teams/wrestling.jpg", caption: "The 2025–26 Danvers wrestling team. Photo from the Danvers High School athletics page." },
+        note: "Dual meets as reported to the Boston Globe, so the list may be incomplete; the season record is from the school's record book. Game stories from the Boston Globe's high school scoreboard. Open a meet to read its story. At the Division 3 North sectional Danvers scored 61 points with a 3rd-place finisher, a 4th and three 6ths; Tyngsborough/Dracut won.",
+        keyPlayers: [{ name: "Logan Jacques", note: "NEC All-Star, and a winner in the 46–36 victory at Triton." }, { name: "Tommy Duval and Drew McMahon", note: "Won their bouts in the win at Triton." }],
+        post: "12th of 14 at the Division 3 North sectional"
       },
-      { season: "2024–25", record: "1–13–2", coach: "Jake Almon", finish: "10th", allLeague: "Logan Jacques, JJ Rand", games: [], gamesNote: "Meet-by-meet results for this season aren't on file. The season record is from the school's record book." },
+      {
+        season: "2024–25",
+        record: "1–13–2",
+        coach: "Jake Almon",
+        finish: "10th",
+        allLeague: "Logan Jacques, JJ Rand",
+        games: [
+          ["2024-12-14", 0, "Northeast/Bishop Fenwick", "Non-league", "L", 30, 45, ""],
+          ["2024-12-14", 1, "Foxborough", "Non-league", "L", 9, 67, ""],
+          ["2024-12-14", 0, "Westford", "Non-league", "L", 18, 59, ""],
+          ["2024-12-18", 0, "Gloucester", "NEC", "L", 12, 71, "", "The Fishermen (1-0-0) soared past their Northeastern Conference opponents, winning 10 events by pin and sophomore Anthony Murawski won by technical fall."],
+          [
+            "2024-12-19",
+            1,
+            "Triton",
+            "Non-league",
+            "L",
+            6,
+            78,
+            "",
+            "With pins from Riley-Anne Tamry (106 pounds), Alex Sabino (126), Austin Scolamiero (132), Sam Imlach (138), Ben Imlach (144), Jake Mies (157), Jared Coady (165), Amir Almami (175), Nolan Merrill (190), and Anthony Navaroli (285), the Vikings (5-0) picked up a nonleague road win."
+          ],
+          ["2025-01-02", 0, "Excel Academy", "Non-league", "L", 15, 66, ""],
+          ["2025-01-04", 0, "Lynnfield/North Reading", "Non-league", "L", 15, 54, ""],
+          ["2025-01-08", 1, "Lynn Tech", "Non-league", "W", 62, 18, ""],
+          ["2025-01-08", 1, "Marblehead/Swampscott", "NEC", "L", 18, 66, ""],
+          ["2025-01-16", 1, "Essex Tech/Masconomet", "NEC", "T", 42, 42, ""],
+          ["2025-01-22", 0, "Saugus/Peabody", "NEC", "L", 21, 54, ""],
+          ["2025-01-28", 1, "Salem", "NEC", "L", 12, 59, ""],
+          ["2025-02-05", 0, "Pentucket", "Non-league", null, null, null, "No score on file"],
+          ["2025-02-12", 0, "Beverly", "NEC", "L", 18, 53, ""]
+        ],
+        note: "Dual meets as reported to the Boston Globe, so the list may be incomplete; the season record is from the school's record book. Game stories from the Boston Globe's high school scoreboard. Open a meet to read its story."
+      },
       {
         season: "2023–24",
         record: "2–18",
@@ -299,6 +357,7 @@ const TEAMS = {
       }
     ],
     news: [],
-    photos: []
+    photos: [],
+    division: "MIAA Division 3"
   }
 };

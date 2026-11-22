@@ -66,3 +66,25 @@
 .result.placed small { font-family: var(--body); font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
 .sc .res.pl { color: var(--royal); }
 @media (max-width: 720px) { .result.placed { align-items: flex-start; font-size: 24px; } }
+
+/* past games: a game story under the row */
+.game.past details.recap { margin-top: 6px; font-size: 14px; line-height: 1.5; color: var(--muted); }
+.game.past details.recap summary { cursor: pointer; font-weight: 700; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--royal); list-style: none; display: inline-flex; align-items: center; gap: 6px; }
+.game.past details.recap summary::-webkit-details-marker { display: none; }
+.game.past details.recap summary::after { content: "+"; font-size: 15px; line-height: 1; }
+.game.past details.recap[open] summary::after { content: "–"; }
+.game.past details.recap p { margin: 6px 0 2px; max-width: 64ch; }
+/* key players of a past season, and returning players on the Team chapter */
+.season-keys[hidden] { display: none; }
+.season-keys, .returning { margin: 18px 0 8px; }
+.keys-h { font-family: var(--display); font-weight: 800; font-size: 22px; letter-spacing: .04em; color: var(--navy); text-transform: uppercase; margin: 0 0 10px; }
+.card.kp { padding: 16px 18px; }
+.card.kp h4 { margin: 0 0 6px; font-size: 18px; line-height: 1.2; }
+.card.kp h4 span { font-weight: 600; font-size: 13px; color: var(--muted); margin-left: 4px; }
+.card.kp p { margin: 0; font-size: 14px; line-height: 1.5; color: var(--muted); }
+.returning .fine { margin-top: 8px; }
+/* a past game with no score on file: not struck through like a cancelled one, and the label wraps on phones */
+.game.past.no-score .result.cancelled { white-space: normal; text-align: center; max-width: 9.5em; line-height: 1.25; }
+@media (max-width: 640px) { .game.past .result.cancelled { font-size: 11px; padding: 5px 8px; max-width: 100%; white-space: normal; } }
+/* long co-op names like Marblehead/Swampscott wrap instead of running off a phone screen */
+.game .opp { overflow-wrap: anywhere; }

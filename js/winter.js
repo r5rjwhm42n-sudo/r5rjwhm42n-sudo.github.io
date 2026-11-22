@@ -366,6 +366,15 @@
     $("#leaders").innerHTML = hasStats ? leaders() : "";
     hide($("#leaders"), !hasStats);
 
+    /* until this winter's roster is out, last winter's returning standouts: returning: [{ name, grade, note }] */
+    if ((T.returning || []).length && !$("#returning")) {
+      $("#filters").insertAdjacentHTML("beforebegin", `<div class="returning" id="returning">
+        <h3 class="keys-h">${esc(T.returningTitle || "Returning players to watch")}</h3>
+        <div class="grid g3">${T.returning.map((p) => `
+          <article class="card kp"><h4>${esc(p.name)}${p.grade ? ` <span>${esc(p.grade)}</span>` : ""}</h4><p>${esc(p.note)}</p></article>`).join("")}</div>
+        ${T.returningNote ? `<p class="sub fine">${esc(T.returningNote)}</p>` : ""}</div>`);
+    }
+
     const box = $("#players");
     if (!PLAYERS.length) {
       box.innerHTML = `<div class="empty card" style="grid-column:1/-1">${esc(T.rosterNote || "The roster will be posted once the team is set.")}</div>`;
@@ -402,20 +411,22 @@
   }
 
   /* ---------- PAST SEASONS: the last few winters, game by game ----------
-     a past game: [date, home (1/0), opponent, type, result, us, them, note] */
+     a past game: [date, home (1/0), opponent, type, result, us, them, note, recap]
+       recap (optional): a short game story, shown when the row is opened
+     a season can also carry keyPlayers: [{ name, grade, note }], the standouts of that winter */
   function seasons() {
     const past = T.past || [];
     const chapter = $("#seasons");
     if (!past.length) { chapter.hidden = true; return; }
     let active = 0;
     $("#season-tabs").innerHTML = past.map((s, i) => `<button class="chip" role="tab" aria-selected="${!i}" data-i="${i}">${esc(s.season)}</button>`).join("");
-    const pastRow = ([date, isHome, opp, type, result, us, them, note]) => {
+    const pastRow = ([date, isHome, opp, type, result, us, them, note, recap]) => {
       const d = new Date(`${date}T12:00`);
       const res = ["W", "L", "T"].includes(result) ? `<div class="result"><span class="wl ${result}">${result}</span>${us}–${them}</div>`
         : result ? `<div class="result placed">${esc(result)}${us != null ? `<small>${esc(us)}</small>` : ""}</div>`   // a placing, with its score
         : `<div class="result cancelled">${esc(note || "No score")}</div>`;
       return `
-        <div class="game past ${result ? "" : "is-cancelled"}">
+        <div class="game past ${result ? "" : /cancel|postpon/i.test(note || "") ? "is-cancelled" : "no-score"}">
           <div class="datebox">
             <div class="m">${fmt(d, { month: "short" })}</div>
             <div class="d">${d.getDate()}</div>
@@ -428,6 +439,7 @@
               ${type ? `<span class="tag">${esc(type)}</span>` : ""}
               ${result && note ? `<span>${esc(note)}</span>` : ""}
             </div>
+            ${recap ? `<details class="recap"><summary>Game story</summary><p>${esc(recap)}</p></details>` : ""}
           </div>
           ${res}
         </div>`;
@@ -447,6 +459,11 @@
         s.captains && ["Captains", s.captains], s.allLeague && ["All-conference", s.allLeague], s.allStars && ["NEC All-Stars", s.allStars], s.awards && ["Awards", s.awards], s.roster && [s.rosterTitle || "Team", s.roster]
       ].filter(Boolean).map(([k, v]) => `<div><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join("");
       $("#season-honors").hidden = !$("#season-honors").innerHTML;
+      let keys = $("#season-keys");
+      if (!keys) { $("#season-honors").insertAdjacentHTML("afterend", '<div class="season-keys" id="season-keys"></div>'); keys = $("#season-keys"); }
+      keys.innerHTML = (s.keyPlayers || []).length ? `<h3 class="keys-h">Key players</h3><div class="grid g3">${s.keyPlayers.map((p) => `
+        <article class="card kp"><h4>${esc(p.name)}${p.grade ? ` <span>${esc(p.grade)}</span>` : ""}</h4><p>${esc(p.note)}</p></article>`).join("")}</div>` : "";
+      keys.hidden = !(s.keyPlayers || []).length;
       $("#season-games").innerHTML = games.length ? games.map(pastRow).join("") : `<div class="empty">${esc(s.gamesNote || "Game-by-game results for this season aren't on file.")}</div>`;
       $("#season-note").textContent = s.note || "";
       $("#season-note").hidden = !s.note;

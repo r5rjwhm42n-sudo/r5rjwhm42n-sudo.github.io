@@ -57,16 +57,40 @@ const TEAMS = {
       { id: 6, date: "2027-01-31T17:00", opponent: "Bishop Fenwick", mascot: "Crusaders", home: false, league: false, site: "Legends Gymnastics, North Andover", result: null }
     ],
     players: [],
-    pastIntro: "Last winter's record and honors.",
+    pastIntro: "The last two winters, meet by meet, with team scores.",
     past: [
       {
         season: "2025–26",
         record: "0–6",
         coach: "Jen Habeeb",
         allLeague: "Delainy Murphy",
-        games: [],
-        gamesNote: "Meet-by-meet results for this season aren't on file. The season record is from the school's team page.",
-        photo: { src: "../images/teams/gymnastics.jpg", caption: "The 2025–26 Danvers gymnastics team. Photo from the Danvers High School athletics page." }
+        games: [
+          ["2025-12-21", 0, "Essex Tech", "", "L", 109.35, 119.7, ""],
+          ["2025-12-28", 0, "Masconomet", "", "L", 122, 139, ""],
+          ["2026-01-08", 0, "Marblehead/Swampscott", "", "L", 121.95, 123.5, ""],
+          ["2026-01-08", 0, "Hamilton-Wenham/Manchester Essex", "", "L", 121.95, 133.05, ""],
+          ["2026-01-12", 0, "Beverly", "", "L", 121.75, 132.4, ""],
+          ["2026-01-17", 1, "Hamilton-Wenham/Manchester Essex", "", "L", 127.8, 136.05, ""],
+          ["2026-01-18", 0, "Bishop Fenwick", "", "L", 122.5, 123.15, ""],
+          ["2026-02-02", 0, "Beverly", "", "L", 101.5, 133.55, ""]
+        ],
+        photo: { src: "../images/teams/gymnastics.jpg", caption: "The 2025–26 Danvers gymnastics team. Photo from the Danvers High School athletics page." },
+        note: "Meets as reported to the Boston Globe, which lists eight; the season record is from the school's team page. A meet against two teams counts as two. The MIAA seeds the state tournament on the average of a team's four best scores: Danvers' was 123.68, with a season high of 127.8 against Hamilton-Wenham/Manchester Essex on Jan. 17.",
+        tiles: [["Record", "0–6", "Coach Jen Habeeb"], ["Season high", "127.8", "vs. Hamilton-Wenham/Manchester Essex, Jan. 17"], ["MIAA seeding average", "123.68", "Average of the four best scores"]]
+      },
+      {
+        season: "2024–25",
+        record: "4–2",
+        games: [
+          ["2024-12-22", 1, "Masconomet", "", "L", 145.95, 147.35, ""],
+          ["2025-01-05", 1, "Marblehead/Swampscott", "", "L", 127.3, 141.6, ""],
+          ["2025-01-19", 1, "Bishop Fenwick", "", "W", 144.45, 119.95, ""],
+          ["2025-01-19", 1, "Peabody", "", "W", 144.45, 64.7, ""],
+          ["2025-01-30", 1, "Hamilton-Wenham/Manchester Essex", "", "W", 144.1, 133.65, ""],
+          ["2025-02-09", 1, "Essex Tech", "", "W", 148.4, 126.45, ""]
+        ],
+        note: "Meets and the 4–2 record as reported to the Boston Globe.",
+        tiles: [["Record", "4–2", "As reported to the Boston Globe"], ["Season high", "148.4", "vs. Essex Tech, Feb. 9"]]
       }
     ],
     historyIntro: "",
@@ -78,6 +102,7 @@ const TEAMS = {
     milestones: [],
     follow: [
       { kind: "Schedule", title: "Official schedule", text: "Every meet, time and change on the school's ArbiterLive page.", url: "https://www.arbiterlive.com/Teams?entityId=5538", go: "ArbiterLive" },
+      { kind: "Instagram", title: "@dhs_gymnastics", text: "The team's own Instagram, Danvers Varsity Gymnastics: meet days, scores and photos.", url: "https://www.instagram.com/dhs_gymnastics/", go: "Instagram" },
       { kind: "School", title: "Team page", text: "Coaches, program notes and announcements from Danvers High School.", url: "https://danverspublicschools.org/dhs/athletics/gymnastics/", go: "danverspublicschools.org" },
       { kind: "Athletics", title: "Falcons Athletics", text: "The athletic department's site, with schedules for every level.", url: "https://www.danversfalconsathletics.com/", go: "danversfalconsathletics.com" }
     ],
