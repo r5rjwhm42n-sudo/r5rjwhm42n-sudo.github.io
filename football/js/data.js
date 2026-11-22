@@ -145,8 +145,18 @@ const SCHEDULE = [
     home: false, league: false, site: "Hollingsworth Field, Reading",
     result: "W", us: 37, them: 20,
     quarters: { us: [0, 10, 13, 14], them: [8, 6, 0, 6] },
+    scoring: [
+      { q: "1st", play: "Reading: Dom Pate 5 run (Dom Pate run)", score: "0–8" },
+      { q: "2nd", play: "Zach Fultz 5 run (Colby Medeiros kick)", score: "7–8" },
+      { q: "2nd", play: "Colby Medeiros 36 field goal", score: "10–8" },
+      { q: "2nd", play: "Reading: Dom Pate 11 run (kick blocked)", score: "10–14" },
+      { q: "3rd", play: "Zach Fultz 30 run (Colby Medeiros kick)", score: "17–14" },
+      { q: "3rd", play: "Jack Houston 12 run (kick failed)", score: "23–14" },
+      { q: "4th", play: "Reading: Kobe Johnson 7 run (rush failed)", score: "23–20" },
+      { q: "4th", play: "Zach Fultz 6 run (Colby Medeiros kick)", score: "30–20" },
+      { q: "4th", play: "Jack Houston 13 run (Colby Medeiros kick)", score: "37–20" }
+    ],
     summary: "Danvers trailed 8–0 after a quarter and 14–10 at halftime, then outscored Reading 27–6 after the break. The ground game produced five rushing touchdowns: Jack Houston and Zach Fultz both cleared 100 yards, and Colby Medeiros added a 36-yard field goal and an interception in a non-league road win.",
-    scoring: null,
     performers: [
       { name: "Jack Houston", line: "135 rushing yds, 2 TD" },
       { name: "Zach Fultz", line: "101 rushing yds, 3 TD" },
@@ -181,15 +191,15 @@ const SCHEDULE = [
     id: 5, date: "2026-10-09T18:30", opponent: "Beverly", mascot: "Panthers",
     home: true, league: true, site: HOME_FIELD,
     result: "W", us: 38, them: 0,
-    quarters: null, half: [24, 0],
+    quarters: null, quarters: { us: [7, 17, 14, 0], them: [0, 0, 0, 0] },
     summary: "In new all-black uniforms, Danvers debuted a shotgun double wing. Captain Nate Wise threw for a career-high 120 yards and two touchdowns, both to Jack Houston, and the defense forced three fumbles and held Beverly to 38 yards.",
     scoring: [
-      { q: "—", play: "Nate Wise 15 pass to Jack Houston", score: null },
-      { q: "—", play: "Nate Wise 11 pass to Jack Houston", score: null },
-      { q: "—", play: "Zach Fultz rushing touchdown", score: null },
-      { q: "—", play: "Zach Fultz rushing touchdown", score: null },
-      { q: "—", play: "Matt Nikiforov 1 run", score: null },
-      { q: "End of 2nd", play: "Colby Medeiros 40 field goal as the half ended", score: "24–0 at half" }
+      { q: "1st", play: "Zach Fultz 2 run (Colby Medeiros kick)", score: "7–0" },
+      { q: "2nd", play: "Zach Fultz 1 run (Colby Medeiros kick)", score: "14–0" },
+      { q: "2nd", play: "Jack Houston 15 pass from Nate Wise (Colby Medeiros kick)", score: "21–0" },
+      { q: "2nd", play: "Colby Medeiros 40 field goal as the half ended", score: "24–0" },
+      { q: "3rd", play: "Jack Houston 11 pass from Nate Wise (Colby Medeiros kick)", score: "31–0" },
+      { q: "3rd", play: "Matt Nikiforov 1 run (Colby Medeiros kick)", score: "38–0" }
     ],
     performers: [
       { name: "Nate Wise", line: "120 passing yds (career high), 2 TD" },
@@ -251,14 +261,15 @@ const SCHEDULE = [
     id: 7, date: "2026-10-23T18:30", opponent: "Salem", mascot: "Witches",
     home: true, league: false, site: HOME_FIELD,
     result: "W", us: 41, them: 0,
-    half: [35, 0],
+    quarters: { us: [21, 14, 6, 0], them: [0, 0, 0, 0] },
     summary: "Danvers celebrated Senior Night with its third straight shutout. Jack Houston scored three touchdowns, a 32-yard run and two catches from Nate Wise, Wise ran one in from a yard out, and captain Nick Xerras returned an interception 41 yards for another as the Falcons built a 14–0 lead in the first quarter and a 35–0 lead at halftime.",
     scoring: [
-      { q: "—", play: "Jack Houston 32 run", score: null },
-      { q: "—", play: "Nate Wise pass to Jack Houston", score: null },
-      { q: "—", play: "Nate Wise pass to Jack Houston", score: null },
-      { q: "—", play: "Nate Wise 1 run", score: null },
-      { q: "—", play: "Nick Xerras 41 interception return", score: null }
+      { q: "1st", play: "Jack Houston 15 pass from Nate Wise", score: "7–0" },
+      { q: "1st", play: "Nate Wise 1 run", score: "14–0" },
+      { q: "1st", play: "Nick Xerras 41 interception return", score: "21–0" },
+      { q: "2nd", play: "Jack Houston 32 run", score: "28–0" },
+      { q: "2nd", play: "Jack Houston 14 pass from Nate Wise", score: "35–0" },
+      { q: "3rd", play: "Danvers touchdown (the scorer isn't in the published box score)", score: "41–0" }
     ],
     performers: [
       { name: "Jack Houston", line: "32-yd TD run · 2 TD catches" },
@@ -329,10 +340,14 @@ const SCHEDULE = [
     quarters: { us: [0, 22, 0, 8], them: [7, 12, 0, 8] },
     summary: "No. 3 Danvers held off No. 14 Bedford 30–27 in a downpour at Deering Stadium in the MIAA Division 4 Round of 16. Bedford led 7–0 after a quarter, Danvers scored 22 points in the second to lead 22–19 at halftime, and Bedford went back in front 27–22 with 7:30 left. The Falcons answered with a touchdown pass to Jack Houston and a two-point conversion to retake the lead with under five minutes to play. Zach Fultz ran for 137 yards and three touchdowns and scored 22 points as Danvers stayed unbeaten at 8–0.",
     scoring: [
-      { q: "1st", play: "Bedford touchdown", score: "0–7" },
-      { q: "2nd", play: "Zach Fultz runs for three touchdowns as Danvers scores 22 points in the quarter", score: "22–19 at half" },
-      { q: "4th · 7:30", play: "Bedford touchdown and two-point conversion", score: "22–27" },
-      { q: "4th", play: "Jack Houston touchdown catch and two-point conversion, with under five minutes left", score: "30–27" }
+      { q: "1st", play: "Bedford: Nick Brecher 15 pass from Sylar Pimentel (Max Mezheritskiy kick)", score: "0–7" },
+      { q: "2nd", play: "Zach Fultz 14 run (Colby Medeiros kick)", score: "7–7" },
+      { q: "2nd", play: "Zach Fultz 1 run (Colby Medeiros kick)", score: "14–7" },
+      { q: "2nd", play: "Bedford: Sylar Pimentel 1 run (kick failed)", score: "14–13" },
+      { q: "2nd", play: "Bedford: Athos Quaglioz 23 pass from Sylar Pimentel (kick failed)", score: "14–19" },
+      { q: "2nd", play: "Zach Fultz 3 run (two-point run)", score: "22–19" },
+      { q: "4th · 7:30", play: "Bedford: Sylar Pimentel 1 run (two-point conversion)", score: "22–27" },
+      { q: "4th", play: "Jack Houston 18 pass from Nate Wise (Zach Fultz run), with under five minutes left", score: "30–27" }
     ],
     performers: [
       { name: "Zach Fultz", line: "137 rushing yds, 3 TD (all in the 2nd quarter), 22 points" },
@@ -393,7 +408,19 @@ const SCHEDULE = [
     ] },
   { id: 12, date: "2026-11-20T18:00", opponent: "Tewksbury", mascot: "Redmen",
     home: false, neutral: true, league: false, postseason: true, round: "Semifinals", site: "Burlington High School, Burlington",
-    result: "L", us: 7, them: 28, half: [7, 21],
+    result: "L", us: 7, them: 28,
+    quarters: { us: [0, 7, 0, 0], them: [7, 14, 0, 7] },
+    scoring: [
+      { q: "1st", play: "Tewksbury: Vinny Lacount return (Teddy Vorreth kick)", score: "0–7" },
+      { q: "2nd", play: "Tewksbury: Will Harrison 10 run (Teddy Vorreth kick)", score: "0–14" },
+      { q: "2nd", play: "Zach Fultz 46 run (Colby Medeiros kick)", score: "7–14" },
+      { q: "2nd", play: "Tewksbury: Nick Colametta 11 pass from Will Harrison (Teddy Vorreth kick)", score: "7–21" },
+      { q: "4th", play: "Tewksbury: Dominic Curreri 4 run (Teddy Vorreth kick)", score: "7–28" }
+    ],
+    performers: [
+      { name: "Zach Fultz", line: "46-yd TD run in the 2nd quarter, Danvers' only score" },
+      { name: "Colby Medeiros", line: "Extra point" }
+    ],
     summary: "Danvers' unbeaten season ended in the MIAA Division 4 semifinals, 28–7 to No. 2 Tewksbury at Burlington High School. Tewksbury quarterback Will Harrison completed nine passes for 125 yards and a touchdown and ran for 82 yards and another score. Vinny Lacount returned a blocked punt for the first touchdown, Nick Colametta caught an 11-yard touchdown pass and Dominic Curreri added a 4-yard run.",
     tag: "State Tournament",
     spotlight: {
@@ -407,14 +434,15 @@ const SCHEDULE = [
     notes: [
       "Danvers' first loss of the season ends its state tournament run in the Division 4 semifinals at 9–1",
       "Tewksbury led 21–7 at halftime",
-      "Vinny Lacount's return of a blocked punt opened the scoring",
+      "Vinny Lacount's return opened the scoring: the Globe's game story calls it a blocked punt, its scoring summary a fumble return",
       "Tewksbury (10–1) plays No. 5 Walpole for the Division 4 title; Walpole beat No. 1 Scituate, the two-time defending champion, 29–28",
-      "Danvers' scoring play hasn't been reported yet",
+      "Zach Fultz's 46-yard run cut it to 14–7 in the 2nd quarter; Tewksbury scored again before the half and shut Danvers out the rest of the way",
       "Danvers still has its Thanksgiving game at Gloucester on Thursday, Nov. 26"
     ],
     sources: [
       { label: "MIAA Division 4 bracket", url: "https://www.miaa.net/miaa-football-2026-division-4-state-tournament" },
       { label: "Boston Globe scoreboard and recap", url: "https://www.bostonglobe.com/sports/high-schools/football/scoreboard/?date=2026-11-20" },
+      { label: "Boston Globe box score", url: "https://www.bostonglobe.com/sports/high-schools/story/?season=202627&sport=football&id=20261120-1-danvers-tewksbury" },
       { label: "Full-game replay on TewksburyTV (YouTube)", url: "https://www.youtube.com/results?search_query=TewksburyTV+TMHS+Football+vs+Danvers+2026+MIAA+Division+4+Football+Semifinals" },
       { label: "MaxPreps game page", url: "https://www.maxpreps.com/ma/football/game/danvers-vs-tewksbury-memorial/11-20-2026/?c=0fc7b1ed-76d0-4913-8d3c-5c14e6dc985f" },
       { label: "Tewksbury 49, Shepherd Hill 14 (MaxPreps)", url: "https://www.maxpreps.com/ma/football/game/shepherd-hill-regional-dudley-vs-tewksbury-memorial/11-13-2026/?c=a25582ba-4d94-459c-9793-03ecf523088e" }
@@ -440,19 +468,19 @@ const SCHEDULE = [
    Kaciqi's rushing yards are from the Boston Globe notebook of Oct. 26.
    Both cover six games; everything else was compiled from newspaper box
    scores and recaps, so it is PARTIAL. Touchdown and points totals are
-   complete through Bedford (Nov. 6): Danvers scored four touchdowns there,
-   Fultz's three in the 2nd quarter and Houston's in the 4th.
+   complete through the semifinal (Nov. 20), checked against the Boston
+   Globe's scoring summaries.
    Replace with the team's official numbers when you get them.
    --------------------------------------------------------------------- */
-const STATS_AS_OF = "Touchdowns and points through 8 games (Nov. 6, 2026) · yardage through Oct. 23";
+const STATS_AS_OF = "Touchdowns and points through 11 games (Nov. 20, 2026) · yardage through Oct. 23";
 
 const PLAYERS = [
   { name: "Zach Fultz", num: null, pos: ["RB", "DB"], grade: "Jr.", captain: false,
-    stats: [["Carries", 99], ["Rush Yds", 646], ["Rush TD", 15], ["Points", 94]],
+    stats: [["Carries", 99], ["Rush Yds", 646], ["Rush TD", 16], ["Rec TD", 1], ["Points", 106]],
     log: { 1: "14 car, 121 yds, 23-yd TD run", 2: "56 rushing yds, TD runs of 1 and 2 yards", 3: "101 rushing yds, 3 TD",
-           5: "125 rushing yds, 2 TD", 6: "15 car, 179 yds, TD runs of 1 and 4 yards", 8: "4-yd TD run on the opening drive", 10: "137 rushing yds, 3 TD runs in the 2nd quarter, 22 points", 11: "161 rushing yds · 53-yd game-winning TD catch from Nate Wise with 38 seconds left" } },
+           5: "125 rushing yds, 2 TD", 6: "15 car, 179 yds, TD runs of 1 and 4 yards", 8: "4-yd TD run on the opening drive", 10: "137 rushing yds, 3 TD runs in the 2nd quarter, 22 points", 11: "161 rushing yds · 53-yd game-winning TD catch from Nate Wise with 38 seconds left", 12: "46-yd TD run, Danvers' only score" } },
   { name: "Jack Houston", num: null, pos: ["RB", "LB"], grade: "Sr.", captain: true,
-    stats: [["Carries", 86], ["Rush Yds", 577], ["Rush TD", 4], ["Rec Yds", 231], ["Rec TD", 6], ["Points", 60]],
+    stats: [["Carries", 86], ["Rush Yds", 577], ["Rush TD", 6], ["Rec Yds", 231], ["Rec TD", 7], ["Points", 78]],
     log: { 1: "16 car, 106 yds", 2: "79 rushing yds · 2 catches for 45 yards", 3: "135 rushing yds, 2 TD",
            5: "TD catches of 15 and 11 yards from Nate Wise", 6: "59 rushing yds, 2-yd TD run · 11-yard TD catch",
            7: "32-yd TD run · 2 TD catches from Nate Wise", 10: "Go-ahead TD catch in the 4th quarter", 11: "3 TD, among them a 23-yd run and a 22-yd catch · interception on the final play" } },
@@ -460,9 +488,9 @@ const PLAYERS = [
     stats: [["Rush Yds", 295], ["Rush TD", 2]],
     log: { 1: "21 car, 114 yds, 1-yd TD run (varsity debut)", 6: "12 car, 111 yds, 25-yd TD run" } },
   { name: "Nate Wise", num: null, pos: ["QB"], grade: "Sr.", captain: true,
-    stats: [["Comp/Att", "20/29"], ["Pass Yds", 294], ["Pass TD", 5], ["Rush TD", 1]],
+    stats: [["Comp/Att", "20/29"], ["Pass Yds", 294], ["Pass TD", 9], ["Rush TD", 2]],
     log: { 1: "3 car, 13 yds · 2-of-4 passing for 29 yards", 5: "120 passing yards (career high), 2 TD",
-           6: "5-of-6 passing for 43 yards, TD", 7: "2 TD passes to Jack Houston · 1-yd TD run", 11: "5-of-5 passing for 110 yards, 3 TD" } },
+           6: "5-of-6 passing for 43 yards, TD", 7: "2 TD passes to Jack Houston · 1-yd TD run", 10: "18-yard go-ahead TD pass to Jack Houston in the 4th quarter", 11: "5-of-5 passing for 110 yards, 3 TD · 1-yd TD run" } },
   { name: "Colby Medeiros", num: 11, pos: ["K"], grade: "Sr.", captain: true,
     stats: [["FG Made", 5], ["Long FG", 40], ["INT", 1], ["Punt Ret TD", 1]],
     log: { 1: "19-yd FG · extra point", 2: "35-yd FG · onside kick to open the 2nd half", 3: "36-yd FG · interception",
@@ -482,7 +510,7 @@ const PLAYERS = [
   { name: "Dylan Kinney", num: 75, pos: ["OL", "DL"], grade: "Sr.", captain: true,
     stats: [], log: { 1: "Started at right guard" } },
   { name: "Tim Nikiforov", num: null, pos: ["LB"], grade: "So.", captain: false,
-    stats: [["Rec", 1], ["Rec Yds", 21], ["Forced Fum", 1]],
+    stats: [["Rec", 2], ["Rec Yds", 29], ["Rec TD", 1], ["Forced Fum", 1]],
     log: { 1: "1 catch for 21 yards", 5: "Forced a fumble · tipped a pass", 11: "8-yard TD catch" } },
   { name: "Alexander Mimo", num: null, pos: ["DL"], grade: null, captain: false,
     stats: [["Fum Rec", 2]],

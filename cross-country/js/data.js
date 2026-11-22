@@ -157,11 +157,13 @@ const MEETS = [
   {
     id: 4, date: "2026-09-30T16:30", opponent: "Saugus/Winthrop", mascot: null, short: "S/W",
     home: true, league: true, site: "Danvers High School", distance: "2.9 mi",
-    summary: "Both squads got back to .500. Madyson Danish won the girls race and four more Falcons followed her into the scoring in a 16–40 rout, and the boys won 22–30.",
+    summary: "Both squads got back to .500. Marcus Morais won the boys race in 17:25 as the Falcons won 22–30, and Madyson Danish won the girls race with four more Falcons following her into the scoring in a 16–40 rout.",
+    headline: "Morais and Danish win their races",
     boys: {
       result: "W", us: 22, them: 30,
+      winner: { name: "Marcus Morais", school: "Danvers", time: "17:25" },
       finishers: [
-        f("Marcus Morais", null, "17:25"), f("Levi James", null, "18:52"), f("Miles Pietal", null, "19:02"),
+        f("Marcus Morais", 1, "17:25"), f("Levi James", null, "18:52"), f("Miles Pietal", null, "19:02"),
         f("Jakob Crandall", null, "21:27"), f("Ethan Santiago", null, "24:03"), f("Anis Lmal", null, "25:31")
       ]
     },
@@ -431,7 +433,7 @@ const MILESTONES = [
   { year: "2023", text: "The boys win the MIAA 2B divisional meet, then the MIAA Division II state championship." },
   { year: "2024", text: "Will Conklin is named NEC Boys Cross Country Runner of the Year and runs 15:53.1, the fastest 5K on the program's all-time list." },
   { year: "2025", text: "The girls go 5–2 and win the NEC Lynch Division. Grace Conklin is named NEC All-Conference." },
-  { year: "2026", text: "Marcus Morais wins the race at Salem and the boys take a 28–29 thriller, their first dual-meet win since 2024. Grace Conklin runs 19:46.7 at the Bay State Invitational, fifth on the girls' all-time 5K list, and makes the All-NEC team for the second straight year, then qualifies for the MIAA state meet as an individual." }
+  { year: "2026", text: "Marcus Morais wins two races, at Salem and at home against Saugus/Winthrop, and the boys take a 28–29 thriller at Salem, their first dual-meet win since 2024. Grace Conklin runs 19:46.7 at the Bay State Invitational, fifth on the girls' all-time 5K list, and makes the All-NEC team for the second straight year, then qualifies for the MIAA state meet as an individual." }
 ];
 
 const STANDOUTS = [

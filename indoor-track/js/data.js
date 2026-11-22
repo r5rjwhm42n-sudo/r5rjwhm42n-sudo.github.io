@@ -217,7 +217,7 @@ const TEAMS = {
     returning: [
       { name: "Zach Dunn", grade: "Sr.", note: "2nd in the Division 4 55 meters last winter (6.59)." },
       { name: "Julian Capece", grade: "Jr.", note: "Cleared 6 feet for 5th in the Division 4 high jump." },
-      { name: "Marcus Morais", grade: "Sr.", note: "Ran the mile at Division 4 last winter (5:04.62) and won a cross country race at Salem this fall." }
+      { name: "Marcus Morais", grade: "Sr.", note: "Ran the mile at Division 4 last winter (5:04.62) and won two cross country races this fall." }
     ],
     returningNote: "Picked from last winter's results and game stories.",
     returningTitle: "Returning athletes to watch",
