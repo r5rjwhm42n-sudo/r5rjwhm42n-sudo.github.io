@@ -58,7 +58,7 @@
   header.insertAdjacentHTML("beforebegin", `
     <div class="topbar"><div class="wrap">
       <span>${league}</span>
-      <span><a href="${TEAM.links.school}" target="_blank" rel="noopener">DHS Cross Country</a><a href="${TEAM.links.athletics}" target="_blank" rel="noopener">Falcons Athletics</a><a href="../">All Sports</a></span>
+      <span><a href="${TEAM.links.school}" target="_blank" rel="noopener">DHS Cross Country</a><a href="${TEAM.links.athletics}" target="_blank" rel="noopener">Falcons Athletics</a><a href="../fall.html">All Sports</a></span>
     </div></div>`);
   header.innerHTML = `
     <div class="wrap hbar">

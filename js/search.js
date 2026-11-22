@@ -79,6 +79,12 @@
           sub: [T.label, p.pos?.join("/"), p.grade, p.num != null && `#${p.num}`].filter(Boolean).join(" · "), right: p.captain ? "Captain" : "", keys: "player athlete" }));
         (T.legends || []).forEach((p) => add({ type: "athlete", sport, title: p.name, href: `${site}${q}#history`,
           sub: [T.label, p.role].filter(Boolean).join(" · "), right: "Falcon great", keys: "history record book legend great" }));
+        /* returning players to watch, then each past season's key players (a name shows once, with its latest season) */
+        const seen = new Set([...(T.players || []), ...(T.legends || [])].map((p) => p.name));
+        (T.returning || []).forEach((p) => { if (seen.has(p.name)) return; seen.add(p.name);
+          add({ type: "athlete", sport, title: p.name, href: `${site}${q}#stats`, sub: [T.label, p.grade, "Returning"].filter(Boolean).join(" · "), right: "", keys: "player athlete returning" }); });
+        (T.past || []).forEach((s) => (s.keyPlayers || []).forEach((p) => { if (seen.has(p.name)) return; seen.add(p.name);
+          add({ type: "athlete", sport, title: p.name, href: `${site}${q}#seasons`, sub: [T.label, `${s.season} key player`].join(" · "), right: "", keys: "player athlete key past season" }); }));
       });
 
       /* the team site and its pages */

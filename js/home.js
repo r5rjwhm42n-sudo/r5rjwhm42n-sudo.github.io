@@ -18,7 +18,7 @@
 
   /* ---------- Load each team's data.js in its own scope ---------- */
   const NAMES = ["TEAM", "TEAMS", "SCHEDULE", "MEETS", "GAMES", "TITLES", "NEC_TITLES", "HISTORY_TILE", "PHOTOS", "SPORT"];
-  /* the front page (index.html) shows the fall sports and winter.html the winter sports; each page says which with
+  /* the front page (index.html) shows the winter sports and fall.html the fall sports; each page says which with
      <body data-season>. */
   const SEASON = document.body.dataset.season || "fall";
   const BY_SEASON = { fall: ["football", "soccer", "field-hockey", "volleyball", "golf", "cross-country", "esports"], winter: ["basketball", "hockey", "wrestling", "indoor-track", "swim-dive", "gymnastics"] };

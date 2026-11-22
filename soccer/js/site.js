@@ -87,7 +87,7 @@
         ${Object.entries(TEAMS).map(([key, t]) => `<a href="${to(here, key)}" class="${key === teamKey ? "on" : ""}"${key === teamKey ? ' aria-current="true"' : ""}>${esc(t.short)}</a>`).join("")}
       </div>
       <span class="tb-info">${esc(SCHOOL.school)} · ${esc(SCHOOL.conference)} · ${esc(T.division)}</span>
-      <span class="tb-links"><a href="${T.links.hudl}" target="_blank" rel="noopener">Hudl</a><a href="${SCHOOL.athletics}" target="_blank" rel="noopener">Falcons Athletics</a><a href="../">All Sports</a></span>
+      <span class="tb-links"><a href="${T.links.hudl}" target="_blank" rel="noopener">Hudl</a><a href="${SCHOOL.athletics}" target="_blank" rel="noopener">Falcons Athletics</a><a href="../fall.html">All Sports</a></span>
     </div></div>`);
   header.innerHTML = `
     <div class="wrap hbar">

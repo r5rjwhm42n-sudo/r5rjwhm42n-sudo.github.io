@@ -80,7 +80,7 @@
   header.insertAdjacentHTML("beforebegin", `
     <div class="topbar"><div class="wrap">
       <span class="tb-info">${esc(TEAM.school)} · ${esc(TEAM.league)} · ${esc(TEAM.seasonLabel)}</span>
-      <span class="tb-links"><a href="${TEAM.links.league}" target="_blank" rel="noopener">State League</a><a href="${TEAM.links.athletics}" target="_blank" rel="noopener">Falcons Athletics</a><a href="../">All Sports</a></span>
+      <span class="tb-links"><a href="${TEAM.links.league}" target="_blank" rel="noopener">State League</a><a href="${TEAM.links.athletics}" target="_blank" rel="noopener">Falcons Athletics</a><a href="../fall.html">All Sports</a></span>
     </div></div>`);
   header.innerHTML = `
     <div class="wrap hbar">
