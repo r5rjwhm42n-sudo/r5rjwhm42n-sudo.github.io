@@ -221,13 +221,17 @@ const TEAMS = {
         note: "Every meet on the school's ArbiterLive schedule for the season, with scores from ArbiterLive and the Boston Globe; multi-team meets are scored by place, and some duals have no score on file."
       }
     ],
-    historyIntro: "",
+    historyIntro: "A Division 4 state champion in the two-mile in 2025, a 7th-place team at the state divisional meet that winter, and the program's fastest sprinter in years.",
     banners: [],
     necTitles: [],
-    seasons: [],
-    honors: [],
+    seasons: [[2026, 3, 6, 0, "Tom Walsh", "", "13th at the Division 4 meet"], [2025, null, null, null, "", "", "7th at the Division 4 meet"], [2024, null, null, null, "", "", ""], [2023, null, null, null, "", "", ""], [2022, 4, 2, 0, "", "", ""]],
+    honors: [{ year: 2026, captains: "", allLeague: "Zach Dunn", note: "NEC All-Star: Julian Capece" }, { year: 2025, captains: "", allLeague: "Owen Shanbar, Will Conklin", note: "William Conklin, Division 4 two-mile champion" }],
     legends: [],
-    milestones: [],
+    milestones: [
+      { year: "2022", text: "A 4–2 dual-meet winter, with wins over Gloucester, Swampscott, Masconomet and Beverly." },
+      { year: "2025", text: "William Conklin wins the Division 4 two-mile in 9:32.79, JJ Rooney is 2nd in the mile and the Falcons place 7th at the Division 4 meet." },
+      { year: "2026", text: "Zach Dunn runs 6.59 for 2nd in the Division 4 55 meters, and Julian Capece clears 6 feet for 5th in the high jump." }
+    ],
     follow: [
       { kind: "Schedule", title: "Official schedule", text: "Every meet, time and change on the school's ArbiterLive page.", url: "https://www.arbiterlive.com/Teams?entityId=5538", go: "ArbiterLive" },
       { kind: "School", title: "Team page", text: "Coaches, program notes and announcements from Danvers High School.", url: "https://danverspublicschools.org/dhs/athletics/winter-track-and-field/", go: "danverspublicschools.org" },
@@ -242,7 +246,12 @@ const TEAMS = {
     ],
     returningNote: "Picked from last winter's results and game stories.",
     returningTitle: "Returning athletes to watch",
-    division: "MIAA Division 4"
+    division: "MIAA Division 4",
+    historyNote: "No indoor track record book is posted, so this history starts with the seasons on file. Records are from the school's team page (2025–26) and the dual meets scored on ArbiterLive (2021–22), and Division 4 finishes from the MIAA meets' official results.",
+    seasonsLabel: "on file",
+    recordsNote: "A season is listed by the year it ended. A dash means too few meets on file have a score to give a record, and blank cells are details not on file.",
+    honorsNote: "NEC All-Conference picks and state honors from the school's team pages and the MIAA. Captains aren't posted for these seasons.",
+    champions: [["2025", "William Conklin", "MIAA Division 4 champion, two-mile (9:32.79)"]]
   },
 
   /* ================================ GIRLS ================================ */
@@ -425,13 +434,18 @@ const TEAMS = {
         note: "Every meet on the school's ArbiterLive schedule for the season, with scores from ArbiterLive and the Boston Globe; multi-team meets are scored by place, and some duals have no score on file."
       }
     ],
-    historyIntro: "",
+    historyIntro: "State champions in 1978 and 1979 in the spring, and a sprinter and a distance runner scoring at the Division 4 meet the last two winters.",
     banners: [],
     necTitles: [],
-    seasons: [],
-    honors: [],
+    seasons: [[2026, 3, 5, 1, "Erin St. Pierre", "", "19th at the Division 4 meet"], [2025, null, null, null, "", "", "19th at the Division 4 meet"], [2024, null, null, null, "", "", ""], [2023, null, null, null, "", "", ""], [2022, 2, 4, 0, "", "", ""]],
+    honors: [{ year: 2026, captains: "", allLeague: "Tess Ryan", note: "NEC All-Star: Grace Conklin" }, { year: 2025, captains: "", allLeague: "Tess Ryan, Jenea Cash, Flavia Locilento, Sabina Sturgeon", note: "" }],
     legends: [],
-    milestones: [],
+    milestones: [
+      { year: "1978", text: "The Danvers girls win the MIAA state track championship, and repeat in 1979 (both in the spring season)." },
+      { year: "2022", text: "Dual-meet wins over Gloucester and Swampscott." },
+      { year: "2025", text: "Grace Conklin is 4th in the Division 4 two-mile as a sophomore and Tess Ryan 7th in the 55 meters." },
+      { year: "2026", text: "Tess Ryan takes 3rd in the Division 4 55 meters in 7.30, and Grace Conklin is 6th in the two-mile." }
+    ],
     follow: [
       { kind: "Schedule", title: "Official schedule", text: "Every meet, time and change on the school's ArbiterLive page.", url: "https://www.arbiterlive.com/Teams?entityId=5538", go: "ArbiterLive" },
       { kind: "School", title: "Team page", text: "Coaches, program notes and announcements from Danvers High School.", url: "https://danverspublicschools.org/dhs/athletics/winter-track-and-field/", go: "danverspublicschools.org" },
@@ -446,6 +460,10 @@ const TEAMS = {
     ],
     returningNote: "Picked from last winter's results and game stories.",
     returningTitle: "Returning athletes to watch",
-    division: "MIAA Division 4"
+    division: "MIAA Division 4",
+    historyNote: "No indoor track record book is posted, so this history starts with the seasons on file. Records are from the school's team page (2025–26) and the dual meets scored on ArbiterLive (2021–22), and Division 4 finishes from the MIAA meets' official results.",
+    seasonsLabel: "on file",
+    recordsNote: "A season is listed by the year it ended. A dash means too few meets on file have a score to give a record, and blank cells are details not on file.",
+    honorsNote: "NEC All-Conference picks and state honors from the school's team pages and the MIAA. Captains aren't posted for these seasons."
   }
 };

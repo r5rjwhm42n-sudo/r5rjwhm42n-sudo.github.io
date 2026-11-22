@@ -113,20 +113,27 @@ const TEAMS = {
         record: "3–3"
       }
     ],
-    historyIntro: "A co-ed program with a Northeastern Conference championship to its name.",
+    historyIntro: "A co-ed program with the 1991 Northeastern Conference championship, and a team that closed the 2022 season with four straight wins.",
     banners: [],
     necTitles: [1991],
-    historyNote: "From the school's team page.",
-    seasons: [],
-    honors: [],
+    historyNote: "No swim and dive record book is posted. The NEC title is from the school's team page; season records since 2021–22 count the dual meets with a score on ArbiterLive, except 2021–22 (4–3), from the Salem News, and 2025–26, from the school's team page.",
+    seasons: [[2026, 2, 4, 0, "Meghan Beaulieu", "", ""], [2025, 3, 4, 0, "", "", ""], [2024, 3, 3, 0, "", "", ""], [2023, 1, 2, 0, "", "", ""], [2022, 4, 3, 0, "", "", "3rd at the NEC Championships"]],
+    honors: [{ year: 2025, captains: "", allLeague: "Zachary Cotter, Max Scott", note: "NEC All-Star: Caleb Clark" }],
     legends: [],
-    milestones: [{ year: "1991", text: "Danvers wins the Northeastern Conference swimming championship." }],
+    milestones: [
+      { year: "1991", text: "Danvers wins the Northeastern Conference swimming championship." },
+      { year: "2022", text: "After an 0–3 start the Falcons win their last four meets, against Salem, Peabody, Gloucester and Masconomet, and place 3rd at the NEC Championships." },
+      { year: "2025", text: "Zachary Cotter and Max Scott are named NEC All-Conference and Caleb Clark an NEC All-Star." }
+    ],
     follow: [
       { kind: "Schedule", title: "Official schedule", text: "Every meet, time and change on the school's ArbiterLive page.", url: "https://www.arbiterlive.com/Teams?entityId=5538", go: "ArbiterLive" },
       { kind: "School", title: "Team page", text: "Coaches, program notes and announcements from Danvers High School.", url: "https://danverspublicschools.org/dhs/athletics/swimming-and-diving/", go: "danverspublicschools.org" },
       { kind: "Athletics", title: "Falcons Athletics", text: "The athletic department's site, with schedules for every level.", url: "https://www.danversfalconsathletics.com/", go: "danversfalconsathletics.com" }
     ],
     news: [],
-    photos: []
+    photos: [],
+    seasonsLabel: "on file",
+    recordsNote: "A season is listed by the year it ended, and blank cells are details not on file.",
+    honorsNote: "NEC All-Conference picks and state honors from the school's team pages and the MIAA. Captains aren't posted for these seasons."
   }
 };

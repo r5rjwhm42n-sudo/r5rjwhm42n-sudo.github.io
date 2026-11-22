@@ -109,13 +109,28 @@ const TEAMS = {
         tiles: [["Record", "5–0", "In meets with a score on file"], ["Season high", "146.05", "at Marblehead, Jan. 28"]]
       }
     ],
-    historyIntro: "",
-    banners: [],
-    necTitles: [],
-    seasons: [],
-    honors: [],
+    historyIntro: "Six MIAA state championships, in 1984, 1986, three straight from 1996 to 1998, and 2005, plus North sectional titles in 2005 and 2010. In 2025 Kaylee Westcott won the state all-around title.",
+    banners: [
+      { year: 2010, label: "North Sectional Champions" },
+      { year: 2005, label: "State and North Sectional Champions" },
+      { year: 1998, label: "MIAA State Champions" },
+      { year: 1997, label: "MIAA State Champions" },
+      { year: 1996, label: "MIAA State Champions" },
+      { year: 1986, label: "MIAA State Champions" },
+      { year: 1984, label: "MIAA State Champions" }
+    ],
+    necTitles: [1984, 1986, 1996, 1997, 1998, 2005],
+    seasons: [[2026, 0, 6, 0, "Jen Habeeb", "", ""], [2025, 4, 2, 0, "", "", "4th at the MIAA state meet"], [2024, 5, 0, 0, "", "", ""], [2023, 2, 2, 0, "", "", ""], [2022, 1, 2, 0, "", "", ""]],
+    honors: [{ year: 2026, captains: "", allLeague: "Delainy Murphy", note: "" }, { year: 2025, captains: "", allLeague: "", note: "Kaylee Westcott, state all-around champion; Camryn Donovan, top five" }],
     legends: [],
-    milestones: [],
+    milestones: [
+      { year: "1984", text: "Danvers wins its first MIAA state gymnastics championship." },
+      { year: "1986", text: "A second state title." },
+      { year: "1996", text: "The first of three straight state championships, 1996 through 1998." },
+      { year: "2005", text: "State champions for the sixth time, and North sectional champions too." },
+      { year: "2010", text: "North sectional champions." },
+      { year: "2025", text: "Kaylee Westcott wins the all-around at the MIAA State Individuals meet, with Camryn Donovan in the top five, and the team places 4th at the state meet." }
+    ],
     follow: [
       { kind: "Schedule", title: "Official schedule", text: "Every meet, time and change on the school's ArbiterLive page.", url: "https://www.arbiterlive.com/Teams?entityId=5538", go: "ArbiterLive" },
       { kind: "Instagram", title: "@dhs_gymnastics", text: "The team's own Instagram, Danvers Varsity Gymnastics: meet days, scores and photos.", url: "https://www.instagram.com/dhs_gymnastics/", go: "Instagram" },
@@ -123,6 +138,14 @@ const TEAMS = {
       { kind: "Athletics", title: "Falcons Athletics", text: "The athletic department's site, with schedules for every level.", url: "https://www.danversfalconsathletics.com/", go: "danversfalconsathletics.com" }
     ],
     news: [],
-    photos: []
+    photos: [],
+    historyNote: "State and sectional titles from the MIAA's all-time gymnastics champions list. Season records since 2021–22 count the meets with a score on ArbiterLive and in the Boston Globe; 2025–26 is from the school's team page.",
+    titlesLabel: "MIAA state championships",
+    titlesShort: "State titles",
+    titleYear: "State title year",
+    seasonsLabel: "on file",
+    recordsNote: "A season is listed by the year it ended, and blank cells are details not on file.",
+    honorsNote: "NEC All-Conference picks and state honors from the school's team pages and the MIAA. Captains aren't posted for these seasons.",
+    champions: [["2025", "Kaylee Westcott", "MIAA State Individuals all-around champion"]]
   }
 };

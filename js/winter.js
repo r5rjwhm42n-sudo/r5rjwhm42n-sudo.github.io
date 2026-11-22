@@ -485,24 +485,25 @@
   const pct = (s) => (s.w + s.t / 2) / ((s.w + s.l + s.t) || 1);
   const TITLES = T.necTitles || [];
   const isTitle = (s) => TITLES.includes(s.year);
+  const hwlt = (w, l, t) => `${w}–${l}${(TIES && SEASONS.some((s) => s.t)) || t ? `–${t}` : ""}`;   // history shows ties only for a team that has had one
 
   function winChart(data) {
     const W = 900, H = 290, L = 34, R = 18, T0 = 24, B = 36;
-    const top = Math.max(20, Math.ceil(Math.max(...data.map((s) => s.w)) / 5) * 5);
+    const top = Math.max(10, Math.ceil(Math.max(...data.map((s) => s.w)) / 5) * 5);
     const x = (i) => L + i * (W - L - R) / (data.length - 1);
     const y = (w) => T0 + (1 - w / top) * (H - T0 - B);
     const pts = data.map((s, i) => [x(i), y(s.w)]);
     const path = pts.map(([px, py], i) => `${i ? "L" : "M"}${px.toFixed(1)} ${py.toFixed(1)}`).join(" ");
     const grid = []; for (let v = 0; v <= top; v += 5) grid.push(v);
     return `
-      <div class="key"><span><i></i>Wins per season</span><span><i class="t"></i>NEC title year</span></div>
+      <div class="key"><span><i></i>Wins per season</span>${data.some(isTitle) ? `<span><i class="t"></i>${esc(T.titleYear || "NEC title year")}</span>` : ""}</div>
       <div class="table-scroll"><svg viewBox="0 0 ${W} ${H}" style="min-width:720px" role="img" aria-label="Wins per season, ${data[0].year} to ${data[data.length - 1].year}">
         ${grid.map((v) => `<line class="gridl" x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}"/><text x="${L - 10}" y="${y(v) + 4}" text-anchor="end">${v}</text>`).join("")}
         <path class="area" d="${path} L${x(data.length - 1)} ${y(0)} L${x(0)} ${y(0)} Z"/>
         <path class="ln" pathLength="1" d="${path}"/>
         ${data.map((s, i) => `
-          <circle class="pt ${isTitle(s) ? "title" : ""}" cx="${pts[i][0].toFixed(1)}" cy="${pts[i][1].toFixed(1)}" r="${isTitle(s) ? 5.5 : 3.5}"><title>${span(s.year)}: ${wlt(s.w, s.l, s.t)}${s.finish ? " · " + esc(s.finish) : ""}${s.post ? " · " + esc(s.post) : ""}</title></circle>
-          ${s.year % 5 === 0 ? `<text x="${pts[i][0].toFixed(1)}" y="${H - 10}" text-anchor="middle">${s.year}</text>` : ""}`).join("")}
+          <circle class="pt ${isTitle(s) ? "title" : ""}" cx="${pts[i][0].toFixed(1)}" cy="${pts[i][1].toFixed(1)}" r="${isTitle(s) ? 5.5 : 3.5}"><title>${span(s.year)}: ${hwlt(s.w, s.l, s.t)}${s.finish ? " · " + esc(s.finish) : ""}${s.post ? " · " + esc(s.post) : ""}</title></circle>
+          ${s.year % 5 === 0 || data.length <= 10 ? `<text x="${pts[i][0].toFixed(1)}" y="${H - 10}" text-anchor="middle">${s.year}</text>` : ""}`).join("")}
       </svg></div>`;
   }
 
@@ -518,6 +519,10 @@
       <div class="years">${TITLES.map((yr) => `<span>${yr}</span>`).join("")}</div>` : "";
     $("#nec-titles").hidden = !TITLES.length;
     $("#history-note").textContent = T.historyNote || "";
+    const noBanners = !(T.banners || []).length && !TITLES.length;   // the note sits with the banners, so move it under the records table
+    if ((T.recordsNote || (noBanners && T.historyNote)) && $("#records-note"))
+      $("#records-note").textContent = [noBanners ? T.historyNote : "", T.recordsNote || ""].filter(Boolean).join(" ");
+    if (T.honorsNote && $("#honors-note")) $("#honors-note").textContent = T.honorsNote;
     hide($("#banners"), !(T.banners || []).length && !TITLES.length);
 
     const chartData = full.filter((s) => s.w + s.l + s.t > 0).reverse();
@@ -531,9 +536,9 @@
       const sum = (k) => full.reduce((n, s) => n + s[k], 0);
       const best = [...full].sort((a, b) => pct(b) - pct(a) || b.w - a.w)[0];
       $("#history-tiles").innerHTML = [
-        ...(TITLES.length ? [["NEC titles", TITLES.length, `First in ${TITLES[0]} · latest in ${TITLES[TITLES.length - 1]}`]] : []),
-        ["Record on file", wlt(sum("w"), sum("l"), sum("t")), `${full.length} seasons in the record book`],
-        ["Best season", wlt(best.w, best.l, best.t), `${span(best.year)} · ${esc(best.coach || "")}`],
+        ...(TITLES.length ? [[T.titlesShort || "NEC titles", TITLES.length, TITLES.length === 1 ? `Won in ${TITLES[0]}` : `First in ${TITLES[0]} · latest in ${TITLES[TITLES.length - 1]}`]] : []),
+        ["Record on file", hwlt(sum("w"), sum("l"), sum("t")), `${full.length} seasons ${T.seasonsLabel || "in the record book"}`],
+        ["Best season", hwlt(best.w, best.l, best.t), `${span(best.year)}${best.coach ? " · " + esc(best.coach) : ""}`],
         ...(T.historyTile ? [T.historyTile] : [])
       ].map(tile).join("");
     }
@@ -569,7 +574,7 @@
     const SHOWN = 15;
     $("#records").innerHTML = SEASONS.map((s, i) => `<tr${i >= SHOWN ? ' class="older" hidden' : ""}>
         <td class="yr">${esc(span(s.year))}</td>
-        <td class="rec">${s.w == null ? "–" : wlt(s.w, s.l, s.t)}</td>
+        <td class="rec">${s.w == null ? "–" : hwlt(s.w, s.l, s.t)}</td>
         <td>${s.w == null ? "" : `<div class="bar" title="${(pct(s) * 100).toFixed(0)}%${TIES ? " (ties count as half a win)" : ""}"><i style="width:${pct(s) * 100}%"></i></div>`}</td>
         <td>${esc(s.coach || "")}</td>
         <td>${/Champ/i.test(s.finish || "") ? `<span class="note-pill">${esc(s.finish)}</span>` : esc(s.finish || "")}</td>

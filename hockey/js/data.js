@@ -1077,14 +1077,21 @@ const TEAMS = {
         ]
       }
     ],
-    historyIntro: "A three-town team since 2005, and Northeast Hockey League champions in 2026.",
-    banners: [],
+    historyIntro: "A three-town team since 2005, Northeast Hockey League champions in 2026, and in the state tournament each of the last three winters.",
+    historyNote: "No girls hockey record book is posted, so the records start with the three seasons on file: the school's team page for 2025–26 and the game results on MyHockeyLive and ArbiterLive for the two winters before.",
+    seasonsLabel: "on file",
+    recordsNote: "A season is listed by the year it ended, and blank cells are details not on file.",
+    honorsNote: "League and MIAA honors from the school's team page. Captains aren't posted for these seasons.",
+    historyTile: ["State tournament", "3 straight", "2024, 2025 and 2026"],
+    banners: [{ year: 2026, label: "Northeast Hockey League Champions" }],
     necTitles: [],
-    seasons: [],
-    honors: [],
     legends: [],
+    seasons: [[2026, 15, 6, 0, "Chris LeBlanc", "NEHL Champions", "Round of 32 (lost in a shootout at Malden Catholic)"], [2025, 8, 13, 0, "", "", "Round of 32 (lost at Burlington/Central Catholic)"], [2024, 11, 9, 1, "", "", "First round (lost at Plymouth)"]],
+    honors: [{ year: 2026, captains: "", allLeague: "Ashley Freitas", note: "Ashley Freitas, MIAA Bruins Sportsmanship Award" }],
     milestones: [
       { year: "2005", text: "The co-operative girls hockey program begins play, bringing together players from Danvers, Beverly and Ipswich." },
+      { year: "2024", text: "An 11–9–1 season and a trip to the state tournament, ending in the first round at Plymouth." },
+      { year: "2025", text: "Back in the state tournament despite an 8–13 record, with a Round of 32 game at Burlington/Central Catholic." },
       { year: "2026", text: "A 15–6 season and the Northeast Hockey League championship. Ashley Freitas is a league all-star and wins the MIAA Bruins Sportsmanship Award." }
     ],
     follow: [
