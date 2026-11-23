@@ -79,7 +79,12 @@ const TEAMS = {
           ["2026-01-31", 0, "NEC Swim Championships", "NEC", null, null, null, "7 teams"]
         ],
         note: "Every meet on the school's ArbiterLive schedule, with the scores entered there; two duals have no score on file. The season record is from the school's team page.",
-        photo: { src: "../images/teams/swim-dive.jpg", caption: "The 2025–26 Danvers swim and dive team. Photo from the Danvers High School athletics page." }
+        photo: { src: "../images/teams/swim-dive.jpg", caption: "The 2025–26 Danvers swim and dive team. Photo from the Danvers High School athletics page." },
+        post: "Zachary Cotter and Max Scott swam at the Division 2 state meet",
+        keyPlayers: [
+          { name: "Zachary Cotter", note: "Senior. Qualified for the Division 2 state meet in the 100 freestyle and the 100 backstroke; NEC All-Conference the winter before." },
+          { name: "Max Scott", note: "Qualified for the Division 2 state meet in the 100 breaststroke (seeded 1:06.41); NEC All-Conference the winter before." }
+        ]
       },
       {
         season: "2024–25",
@@ -96,7 +101,8 @@ const TEAMS = {
         allLeague: "Zachary Cotter, Max Scott",
         allStars: "Caleb Clark",
         note: "Every meet on the school's ArbiterLive schedule, with the scores entered there; the record counts the meets with a score. Honors from the school's team page.",
-        record: "3–4"
+        record: "3–4",
+        keyPlayers: [{ name: "Zachary Cotter", note: "NEC All-Conference and a Salem News all-star." }, { name: "Max Scott", note: "NEC All-Conference." }, { name: "Caleb Clark", note: "NEC All-Star." }]
       },
       {
         season: "2023–24",
@@ -113,17 +119,29 @@ const TEAMS = {
         record: "3–3"
       }
     ],
-    historyIntro: "A co-ed program with the 1991 Northeastern Conference championship, and a team that closed the 2022 season with four straight wins.",
+    historyIntro: "A co-ed program with the 1991 Northeastern Conference championship, two NEC Male Swimmers of the Year in Graham Beck (2011) and Jared Casey (2019), and a coach, Meghan Beaulieu, twice named NEC Coach of the Year.",
     banners: [],
     necTitles: [1991],
     historyNote: "No swim and dive record book is posted. The NEC title is from the school's team page; season records since 2021–22 count the dual meets with a score on ArbiterLive, except 2021–22 (4–3), from the Salem News, and 2025–26, from the school's team page.",
-    seasons: [[2026, 2, 4, 0, "Meghan Beaulieu", "", ""], [2025, 3, 4, 0, "", "", ""], [2024, 3, 3, 0, "", "", ""], [2023, 1, 2, 0, "", "", ""], [2022, 4, 3, 0, "", "", "3rd at the NEC Championships"]],
-    honors: [{ year: 2025, captains: "", allLeague: "Zachary Cotter, Max Scott", note: "NEC All-Star: Caleb Clark" }],
+    seasons: [[2026, 2, 4, 0, "Meghan Beaulieu", "", "2 swimmers at the Division 2 state meet"], [2025, 3, 4, 0, "", "", ""], [2024, 3, 3, 0, "", "", ""], [2023, 1, 2, 0, "", "", ""], [2022, 4, 3, 0, "", "", "3rd at the NEC Championships"]],
+    honors: [
+      { year: 2026, captains: "", allLeague: "", note: "Division 2 state meet: Zachary Cotter (100 free, 100 back), Max Scott (100 breaststroke)" },
+      { year: 2025, captains: "", allLeague: "Zachary Cotter, Max Scott", note: "NEC All-Star: Caleb Clark; Salem News all-star: Zachary Cotter" },
+      { year: 2023, captains: "", allLeague: "Spencer Keyes", note: "NEC All-Stars: Kylee McGraw, Zachary Cotter" },
+      { year: 2019, captains: "", allLeague: "", note: "Jared Casey, NEC Male Swimmer of the Year; Jack O'Neill, NEC Male Diver of the Year; Meghan Beaulieu, NEC Coach of the Year" },
+      { year: 2017, captains: "", allLeague: "", note: "Meghan Beaulieu, NEC Coach of the Year" },
+      { year: 2011, captains: "", allLeague: "", note: "Graham Beck, NEC Male Swimmer of the Year" }
+    ],
     legends: [],
     milestones: [
       { year: "1991", text: "Danvers wins the Northeastern Conference swimming championship." },
+      { year: "2008", text: "Danvers and Marblehead meet unbeaten for the NEC title at the Danvers YMCA; Marblehead wins, 58–41." },
+      { year: "2011", text: "Graham Beck is named NEC Male Swimmer of the Year." },
+      { year: "2017", text: "Meghan Beaulieu is named NEC Coach of the Year." },
+      { year: "2019", text: "Three of the NEC's top swimming awards go to Danvers: Jared Casey is Male Swimmer of the Year, Jack O'Neill Male Diver of the Year, and Meghan Beaulieu Coach of the Year for the second time." },
       { year: "2022", text: "After an 0–3 start the Falcons win their last four meets, against Salem, Peabody, Gloucester and Masconomet, and place 3rd at the NEC Championships." },
-      { year: "2025", text: "Zachary Cotter and Max Scott are named NEC All-Conference and Caleb Clark an NEC All-Star." }
+      { year: "2025", text: "Zachary Cotter and Max Scott are named NEC All-Conference and Caleb Clark an NEC All-Star." },
+      { year: "2026", text: "Zachary Cotter (100 freestyle, 100 backstroke) and Max Scott (100 breaststroke) swim at the MIAA Division 2 state meet." }
     ],
     follow: [
       { kind: "Instagram", title: "@dhs_swimstagram", text: "Danvers Swim, the swim and dive team's own Instagram.", url: "https://www.instagram.com/dhs_swimstagram/", go: "Instagram" },
@@ -136,6 +154,6 @@ const TEAMS = {
     photos: [],
     seasonsLabel: "on file",
     recordsNote: "A season is listed by the year it ended, and blank cells are details not on file.",
-    honorsNote: "NEC All-Conference picks and state honors from the school's team pages and the MIAA. Captains aren't posted for these seasons."
+    honorsNote: "NEC awards from the Daily Item and the Salem News, 2025 picks from the school's team page and state qualifiers from the MIAA's meet program. Captains aren't posted for these seasons."
   }
 };

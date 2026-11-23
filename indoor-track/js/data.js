@@ -178,7 +178,7 @@ const TEAMS = {
           ["2026-01-14", 0, "Peabody", "NEC", null, null, null, "No score on file"],
           ["2026-01-22", 1, "Salem", "NEC", null, null, null, "No score on file"],
           ["2026-01-28", 0, "Marblehead", "NEC", "L", 37, 45, ""],
-          ["2026-01-31", 0, "Marblehead and eight more teams", "NEC", null, null, null, "Multi-team meet"],
+          ["2026-01-31", 0, "NEC Championship", "NEC", "7th", "34 pts", null, "Reggie Lewis Center, Roxbury · 7th of 10; Marblehead won with 93"],
           ["2026-02-05", 1, "Beverly", "NEC", "L", 39, 47, ""],
           ["2026-02-13", 0, "MIAA Division 4 Championship", "State", "13th", "13 pts", null, "The Track at New Balance, Boston"]
         ],
@@ -226,7 +226,7 @@ const TEAMS = {
     historyIntro: "A Division 4 state champion in the two-mile in 2025, a 7th-place team at the state divisional meet that winter, and the program's fastest sprinter in years.",
     banners: [],
     necTitles: [],
-    seasons: [[2026, 3, 6, 0, "Tom Walsh", "", "13th at the Division 4 meet"], [2025, null, null, null, "", "", "7th at the Division 4 meet"], [2024, null, null, null, "", "", ""], [2023, null, null, null, "", "", ""], [2022, 4, 2, 0, "", "", ""]],
+    seasons: [[2026, 3, 6, 0, "Tom Walsh", "7th at the NEC meet", "13th at the Division 4 meet"], [2025, null, null, null, "", "", "7th at the Division 4 meet"], [2024, null, null, null, "", "", ""], [2023, null, null, null, "", "", ""], [2022, 4, 2, 0, "", "", ""]],
     honors: [
       { year: 2026, captains: "", allLeague: "Zach Dunn", note: "NEC All-Star: Julian Capece; Salem News all-star: Zach Dunn" },
       { year: 2025, captains: "", allLeague: "Owen Shanbar, Will Conklin", note: "William Conklin, Division 4 two-mile champion; Salem News all-star: Will Conklin" }
@@ -409,7 +409,7 @@ const TEAMS = {
           ["2026-01-14", 0, "Peabody", "NEC", "L", 18, 68, "", "Ayanna Cirame won both the 55-meter hurdles and the high jump for the Tanners (3-0) in the Northeastern win."],
           ["2026-01-22", 1, "Salem", "NEC", null, null, null, "No score on file"],
           ["2026-01-28", 0, "Marblehead", "NEC", "L", 32, 39, ""],
-          ["2026-01-31", 0, "Marblehead and eight more teams", "NEC", null, null, null, "Multi-team meet"],
+          ["2026-01-31", 0, "NEC Championship", "NEC", "6th", "43 pts", null, "Reggie Lewis Center, Roxbury · 6th of 10; Peabody won with 121"],
           ["2026-02-05", 0, "Gloucester and two more teams", "NEC", null, null, null, "Multi-team meet"],
           ["2026-02-14", 0, "MIAA Division 4 Championship", "State", "19th", "13 pts", null, "The Track at New Balance, Boston"]
         ],
@@ -444,7 +444,13 @@ const TEAMS = {
     historyIntro: "State champions in 1978 and 1979 in the spring, and a sprinter and a distance runner scoring at the Division 4 meet the last two winters.",
     banners: [],
     necTitles: [],
-    seasons: [[2026, 3, 5, 1, "Erin St. Pierre", "", "19th at the Division 4 meet"], [2025, null, null, null, "", "", "19th at the Division 4 meet"], [2024, null, null, null, "", "", ""], [2023, null, null, null, "", "", ""], [2022, 2, 4, 0, "", "", ""]],
+    seasons: [
+      [2026, 3, 5, 1, "Erin St. Pierre", "6th at the NEC meet", "19th at the Division 4 meet"],
+      [2025, null, null, null, "", "", "19th at the Division 4 meet"],
+      [2024, null, null, null, "", "", ""],
+      [2023, null, null, null, "", "", ""],
+      [2022, 2, 4, 0, "", "", ""]
+    ],
     honors: [{ year: 2026, captains: "", allLeague: "Tess Ryan", note: "NEC All-Star: Grace Conklin" }, { year: 2025, captains: "", allLeague: "Tess Ryan, Jenea Cash, Flavia Locilento, Sabina Sturgeon", note: "Salem News all-star: Tess Ryan" }],
     legends: [],
     milestones: [
