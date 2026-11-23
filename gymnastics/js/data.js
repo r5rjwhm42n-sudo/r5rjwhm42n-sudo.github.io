@@ -146,10 +146,14 @@ const TEAMS = {
     necTitles: [1984, 1986, 1996, 1997, 1998, 2005],
     seasons: [
       [2026, 0, 6, 0, "Jen Habeeb", "", ""],
-      [2025, 6, 1, 0, "Jen Habeeb", "", "4th at the MIAA state meet"],
+      [2025, 6, 1, 0, "Jen Habeeb", "", "4th at the MIAA state meet (146.325); 3rd at the North sectional"],
       [2024, 5, 1, 0, "Jen Habeeb", "", "3rd at the MIAA state meet; 3rd at the North sectional"],
-      [2023, 4, 1, 0, "Jen Habeeb", "", "2nd at the MIAA state meet; 3rd at the North sectional"],
-      [2022, 2, 4, 0, "", "", ""]
+      [2023, 4, 1, 0, "Jen Habeeb", "", "2nd at the MIAA state meet (148.15); 3rd at the North sectional"],
+      [2022, 2, 4, 0, "", "", ""],
+      [2020, null, null, null, "", "", "9th at the North sectional (132.35)"],
+      [2019, null, null, null, "", "", "9th at the North sectional (138.225)"],
+      [2016, null, null, null, "", "", "12th at the North sectional (128.725)"],
+      [2015, null, null, null, "", "", "8th at the MIAA state meet (136.975); 2nd at the North sectional"]
     ],
     honors: [
       { year: 2026, captains: "", allLeague: "Delainy Murphy", note: "" },
@@ -161,7 +165,8 @@ const TEAMS = {
       },
       { year: 2024, captains: "Maddie Westcott", allLeague: "Kaylee Westcott (all-around), Camryn Donovan (bars), Callie Donovan (vault)", note: "Kaylee Westcott, North sectional all-around champion" },
       { year: 2023, captains: "Maddie Westcott", allLeague: "Maddie Westcott, Kaylee Westcott, Maddie Migliero, Camryn Donovan", note: "Salem News all-stars: Camryn Donovan, Maddie Migliero, Kaylee Westcott (team MVP as an eighth grader), Maddie Westcott" },
-      { year: 2022, captains: "Allie Taylor", allLeague: "Maddie Westcott (all-around)", note: "A Danvers–North Reading co-op that season; Maddie Westcott competed at State Individuals as a freshman" }
+      { year: 2022, captains: "Allie Taylor", allLeague: "Maddie Westcott (all-around)", note: "A Danvers–North Reading co-op that season; Maddie Westcott competed at State Individuals as a freshman" },
+      { year: 2015, captains: "", allLeague: "", note: "State meet all-around: Jacquelyn Veatch 13th (34.375), Julia Valenti 14th (34.35)" }
     ],
     legends: [],
     milestones: [
@@ -170,8 +175,9 @@ const TEAMS = {
       { year: "1996", text: "The first of three straight state championships, 1996 through 1998." },
       { year: "2005", text: "State champions for the sixth time, and North sectional champions too." },
       { year: "2010", text: "North sectional champions." },
+      { year: "2015", text: "2nd at the North sectional and 8th at the MIAA state meet, led by Jacquelyn Veatch and Julia Valenti, 13th and 14th in the state all-around." },
       { year: "2022", text: "Gymnasts from Danvers and North Reading compete as one team. Freshman Maddie Westcott is an NEC/CAL all-star in the all-around and competes at State Individuals." },
-      { year: "2023", text: "Runners-up at the MIAA state meet behind Masconomet. Eighth grader Kaylee Westcott ties for 2nd in the all-around (38.6) and freshman Maddie Migliero is 5th." },
+      { year: "2023", text: "Runners-up at the MIAA state meet, 0.45 behind Masconomet (148.6 to 148.15). Eighth grader Kaylee Westcott ties for 2nd in the all-around (38.6) and freshman Maddie Migliero is 5th." },
       { year: "2024", text: "Kaylee Westcott wins the North sectional all-around title as a freshman (38.725), and the Falcons place 3rd in the state." },
       {
         year: "2025",
@@ -187,13 +193,13 @@ const TEAMS = {
     ],
     news: [],
     photos: [],
-    historyNote: "State and sectional titles from the MIAA's all-time gymnastics champions list. Recent finishes, captains and honors from Salem News and Boston Globe stories reprinted on Masconomet gymnastics' site.",
+    historyNote: "State and sectional titles from the MIAA's all-time gymnastics champions list. State and North sectional finishes since 2015 from the MIAA's official results (Danvers didn't reach the state meet in 2017, 2018, 2022 or 2026); captains and honors from Salem News and Boston Globe stories reprinted on Masconomet gymnastics' site.",
     titlesLabel: "MIAA state championships",
     titlesShort: "State titles",
     titleYear: "State title year",
     seasonsLabel: "on file",
     recordsNote: "A season is listed by the year it ended. Records count the meets with a score on the school's ArbiterLive schedule, Masconomet's results page and Local Headline News; 2024–25 (6–1) is from the Salem News and 2025–26 from the school's team page. Two scores were entered the wrong way round on the schedule and are counted as wins: Marblehead/Swampscott in 2025 (the Salem News reported Masconomet as the only loss) and Beverly in 2023, entered as 127.15–145.55 when Danvers scored 146 or more in every other meet that month.",
-    honorsNote: "Captains, NEC/CAL all-stars and Salem News all-stars from the Salem News; 2026 from the school's team page.",
+    honorsNote: "Captains, NEC/CAL all-stars and Salem News all-stars from the Salem News; 2026 from the school's team page; 2015 from the MIAA's state meet results.",
     champions: [["2025", "Kaylee Westcott", "MIAA State Individuals all-around champion"], ["2024", "Kaylee Westcott", "MIAA North sectional all-around champion (38.725)"]]
   }
 };

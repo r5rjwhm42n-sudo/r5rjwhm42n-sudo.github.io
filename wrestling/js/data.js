@@ -209,9 +209,13 @@ const TEAMS = {
           ["2026-02-14", 0, "MIAA Division 3 North Sectional", "State", "12th", "61 pts", null, "14 teams scored"]
         ],
         photo: { src: "../images/teams/wrestling.jpg", caption: "The 2025–26 Danvers wrestling team. Photo from the Danvers High School athletics page." },
-        note: "Every meet on the school's ArbiterLive schedule for the season. Scores come from ArbiterLive and the Boston Globe; tournaments are scored for individuals, and a few duals have no score on file. The season record is from the school's record book. Game stories from the Boston Globe's high school scoreboard. Open a meet to read its story. At the Division 3 North sectional Danvers scored 61 points with a 3rd-place finisher, a 4th and three 6ths; Tyngsborough/Dracut won.",
-        keyPlayers: [{ name: "Logan Jacques", note: "NEC All-Star, and a winner in the 46–36 victory at Triton." }, { name: "Tommy Duval and Drew McMahon", note: "Won their bouts in the win at Triton." }],
-        post: "12th of 14 at the Division 3 North sectional"
+        note: "Every meet on the school's ArbiterLive schedule for the season. Scores come from ArbiterLive and the Boston Globe; tournaments are scored for individuals, and a few duals have no score on file. The season record is from the school's record book. Game stories from the Boston Globe's high school scoreboard. Open a meet to read its story. At the Division 3 state meet Logan Jacques (126 pounds) placed 6th and Dylan Kinney wrestled at 285; Danvers scored 11.5 points, 40th in the state. At the Division 3 North sectional Danvers scored 61 points with a 3rd-place finisher, a 4th and three 6ths; Tyngsborough/Dracut won.",
+        keyPlayers: [
+          { name: "Logan Jacques", note: "NEC All-Star. Placed 6th at 126 pounds at the Division 3 state meet, a year after placing 5th at the North sectional." },
+          { name: "Tommy Duval and Drew McMahon", note: "Won their bouts in the win at Triton." },
+          { name: "Dylan Kinney", note: "Qualified for the Division 3 state meet at 285 pounds from the North sectional." }
+        ],
+        post: "12th of 14 at the Division 3 North sectional; Logan Jacques 6th at 126 pounds at the Division 3 state meet"
       },
       {
         season: "2024–25",
@@ -247,7 +251,9 @@ const TEAMS = {
           ["2025-02-05", 0, "Pentucket", "Non-league", null, null, null, "No score on file"],
           ["2025-02-12", 0, "Beverly", "NEC", "L", 18, 53, ""]
         ],
-        note: "Every meet on the school's ArbiterLive schedule for the season. Scores come from ArbiterLive and the Boston Globe; tournaments are scored for individuals, and a few duals have no score on file. The season record is from the school's record book. Game stories from the Boston Globe's high school scoreboard. Open a meet to read its story."
+        note: "Every meet on the school's ArbiterLive schedule for the season. Scores come from ArbiterLive and the Boston Globe; tournaments are scored for individuals, and a few duals have no score on file. The season record is from the school's record book. Game stories from the Boston Globe's high school scoreboard. Open a meet to read its story. At the Division 3 North sectional Danvers scored 43 points, 13th, with two 5th-place finishers: JJ Rand at 113 pounds and Logan Jacques at 126.",
+        post: "13th at the Division 3 North sectional (43 points)",
+        keyPlayers: [{ name: "Logan Jacques", note: "NEC All-Conference; 5th at 126 pounds at the Division 3 North sectional." }, { name: "JJ Rand", note: "NEC All-Conference; 5th at 113 pounds at the Division 3 North sectional." }]
       },
       {
         season: "2023–24",
@@ -281,13 +287,13 @@ const TEAMS = {
     historyNote: "Title seasons follow the record book, listed by the year each season ended. The school's team page lists NEC championships in 2014, 2015, 2016 and 2018.",
     historyTile: ["State champions", 13, "7 wrestlers · 2015 to 2024"],
     seasons: [
-      [2026, 3, 23, 0, "Tom Savage", "9th", ""],
-      [2025, 1, 13, 2, "Jake Almon", "10th", ""],
+      [2026, 3, 23, 0, "Tom Savage", "9th", "Jacques 6th at states (126)"],
+      [2025, 1, 13, 2, "Jake Almon", "10th", "13th at the D3 North sectional"],
       [2024, 2, 18, 0, "Jake Almon", "8th", "State champion: Adam Guzofski (285)"],
       [2023, 3, 6, 0, "Jake Almon", "", ""],
       [2022, 10, 1, 0, "Mike Anderson", "NEC Champions", ""],
       [2021, 3, 4, 1, "Mike Anderson", "", ""],
-      [2020, 4, 3, 0, "", "", "State champions: Max Leete (126), Russell Canova (175)"],
+      [2020, 4, 3, 0, "", "", "State champions: Max Leete (126), Russell Canova (182)"],
       [2019, 6, 2, 0, "", "", "State champions: Max Leete (120), Russell Canova (170)"],
       [2018, 8, 0, 0, "Tim Rich", "NEC Champions", "State champion: Max Leete (113)"],
       [2017, 12, 7, 1, "", "", "State champions: Jack Anderson (160), Colby Holland (145), Quintin Holland (170)"],
@@ -299,8 +305,8 @@ const TEAMS = {
       [2011, null, null, null, "Mark DeCiccio", "", ""]
     ],
     honors: [
-      { year: 2026, captains: "", allLeague: "Logan Jacques (NEC All-Star)", note: "" },
-      { year: 2025, captains: "", allLeague: "Logan Jacques, JJ Rand", note: "" },
+      { year: 2026, captains: "", allLeague: "Logan Jacques (NEC All-Star)", note: "Logan Jacques, 6th at the Division 3 state meet (126)" },
+      { year: 2025, captains: "", allLeague: "Logan Jacques, JJ Rand", note: "5th at the Division 3 North sectional: JJ Rand (113), Logan Jacques (126)" },
       { year: 2024, captains: "Mark Haskins, Adam Guzofski, Zach Trohon", allLeague: "Adam Guzofski", note: "Adam Guzofski: Division 3 state champion at 285 pounds and All-State qualifier; Salem News all-star: Adam Guzofski" },
       { year: 2023, captains: "Matt Dowling, Mark Haskins, Reagan Little, Zachary Zoladz", allLeague: "", note: "" },
       { year: 2021, captains: "", allLeague: "", note: "Salem News all-stars: Max Leete (126 pounds), Isaac Flores (heavyweight)" },
@@ -315,8 +321,8 @@ const TEAMS = {
       {
         name: "Max Leete",
         role: "State champion 2018, 2019, 2020",
-        bio: "The program's all-time wins leader with 207, and the holder of the single-season record with 57. Leete won three straight state titles, moving up a weight class each year: 113, 120 and 126 pounds.",
-        tags: ["207 career wins", "57 wins in a season", "3 state titles"]
+        bio: "The program's all-time wins leader with 207, and the holder of the single-season record with 57. Leete won three straight Division 2 titles and three straight All-State titles, moving up a weight class each year: 113, 120 and 126 pounds.",
+        tags: ["207 career wins", "57 wins in a season", "3 All-State titles"]
       },
       {
         name: "Colby Holland",
@@ -325,7 +331,12 @@ const TEAMS = {
         tags: ["3 state titles", "113 · 132 · 145 lbs."]
       },
       { name: "Quintin Holland", role: "State champion 2015, 2017", bio: "A two-time state champion, at 152 pounds in 2015 and at 170 in 2017. He and Colby Holland each won a title in both of those years.", tags: ["2 state titles", "152 · 170 lbs."] },
-      { name: "Russell Canova", role: "State champion 2019, 2020", bio: "Won back-to-back state titles in the upper weights, at 170 pounds in 2019 and 175 in 2020.", tags: ["2 state titles", "170 · 175 lbs."] },
+      {
+        name: "Russell Canova",
+        role: "State champion 2019, 2020",
+        bio: "Won back-to-back Division 2 titles in the upper weights, at 170 pounds in 2019 and 182 in 2020, when he also won the All-State title alongside Max Leete.",
+        tags: ["2 state titles", "All-State champion 2020", "170 · 182 lbs."]
+      },
       {
         name: "Adam Guzofski",
         role: "State champion 2024 · Assistant coach",
@@ -341,14 +352,14 @@ const TEAMS = {
     ],
     champions: [
       ["2024", "Adam Guzofski", "Division 3 state champion · 285 lbs."],
-      ["2020", "Max Leete", "State champion · 126 lbs."],
-      ["2020", "Russell Canova", "State champion · 175 lbs."],
-      ["2019", "Max Leete", "State champion · 120 lbs."],
-      ["2019", "Russell Canova", "State champion · 170 lbs."],
-      ["2018", "Max Leete", "State champion · 113 lbs."],
-      ["2017", "Jack Anderson", "State champion · 160 lbs."],
-      ["2017", "Colby Holland", "State champion · 145 lbs."],
-      ["2017", "Quintin Holland", "State champion · 170 lbs."],
+      ["2020", "Max Leete", "All-State and Division 2 champion · 126 lbs."],
+      ["2020", "Russell Canova", "All-State and Division 2 champion · 182 lbs."],
+      ["2019", "Max Leete", "All-State and Division 2 champion · 120 lbs."],
+      ["2019", "Russell Canova", "Division 2 state champion · 170 lbs."],
+      ["2018", "Max Leete", "All-State and Division 2 champion · 113 lbs."],
+      ["2017", "Jack Anderson", "Division 3 state champion · 160 lbs."],
+      ["2017", "Colby Holland", "Division 3 state champion · 145 lbs."],
+      ["2017", "Quintin Holland", "Division 3 state champion · 170 lbs."],
       ["2016", "Colby Holland", "State champion · 132 lbs."],
       ["2015", "Chris Behen", "State champion · 138 lbs."],
       ["2015", "Colby Holland", "State champion · 113 lbs."],
@@ -368,7 +379,7 @@ const TEAMS = {
       { year: "2016", text: "The Falcons go 7–0 in dual meets and win the NEC again. Colby Holland takes his second state title, at 132 pounds." },
       { year: "2017", text: "Three more state champions: Jack Anderson at 160 pounds, Colby Holland at 145 and Quintin Holland at 170." },
       { year: "2018", text: "An 8–0 dual-meet season and another NEC championship under Tim Rich, the conference's Coach of the Year. Max Leete wins his first state title, at 113 pounds." },
-      { year: "2020", text: "Max Leete wins his third straight state title, at 126 pounds, and Russell Canova his second, at 175." },
+      { year: "2020", text: "Max Leete wins his third straight All-State title, at 126 pounds, and Russell Canova takes the All-State crown at 182." },
       { year: "2022", text: "The Falcons go 10–1 under Mike Anderson and are NEC champions." },
       { year: "2024", text: "Adam Guzofski wins the Division 3 state championship at 285 pounds and qualifies for All-States." }
     ],

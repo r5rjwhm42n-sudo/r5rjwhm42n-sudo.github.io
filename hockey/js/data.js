@@ -888,6 +888,7 @@ const TEAMS = {
       {
         season: "2024–25",
         record: "8–13",
+        coach: "Kristen McCarthy",
         post: "Lost in the Round of 32 at Burlington/Central Catholic",
         games: [
           [
@@ -1054,6 +1055,7 @@ const TEAMS = {
       {
         season: "2023–24",
         record: "11–9–1",
+        coach: "Matt Lampert",
         post: "Lost in the first round at Plymouth",
         games: [
           ["2023-12-09", 1, "Peabody/Lynnfield/North Reading", "", "L", 0, 4, "Bourque Arena"],
@@ -1081,19 +1083,35 @@ const TEAMS = {
         awards: "Salem News all-stars: Halle Greenleaf, Meredith Johnston"
       }
     ],
-    historyIntro: "A three-town team since 2005, Northeast Hockey League champions in 2026, and in the state tournament each of the last three winters.",
-    historyNote: "No girls hockey record book is posted, so the records start with the three seasons on file: the school's team page for 2025–26 and the game results on MyHockeyLive and ArbiterLive for the two winters before.",
+    historyIntro: "A three-town team since 2005: a 17–2–3 season in 2017, the Northeast Hockey League title in 2026, and five straight trips to the state tournament.",
+    historyNote: "No girls hockey record book is posted. Season records and head coaches are from MyHockeyLive's page for each season (2015–16 has none), except 2025–26, from the school's team page; coaching history from the Salem News.",
     seasonsLabel: "on file",
-    recordsNote: "A season is listed by the year it ended, and blank cells are details not on file.",
+    recordsNote: "A season is listed by the year it ended. The NEC column is the team's conference record where MyHockeyLive has one, and blank cells are details not on file.",
     honorsNote: "League and MIAA honors from the school's team page. Captains aren't posted for these seasons.",
-    historyTile: ["State tournament", "3 straight", "2024, 2025 and 2026"],
+    historyTile: ["State tournament", "5 straight", "2022 through 2026"],
     banners: [{ year: 2026, label: "Northeast Hockey League Champions" }],
     necTitles: [],
     legends: [],
-    seasons: [[2026, 15, 6, 0, "Chris LeBlanc", "NEHL Champions", "Round of 32 (lost in a shootout at Malden Catholic)"], [2025, 8, 13, 0, "", "", "Round of 32 (lost at Burlington/Central Catholic)"], [2024, 11, 9, 1, "", "", "First round (lost at Plymouth)"]],
+    seasons: [
+      [2026, 15, 6, 0, "Chris LeBlanc", "NEHL Champions (10–1)", "Round of 32 (lost in a shootout at Malden Catholic)"],
+      [2025, 8, 13, 0, "Kristen McCarthy", "5–7", "Round of 32 (lost 9–2 at Burlington/Central Catholic)"],
+      [2024, 11, 9, 1, "Matt Lampert", "11–4–1", "First round (lost 3–1 at Plymouth)"],
+      [2023, 10, 10, 2, "Matt Lampert", "10–4–1", "First round (lost 2–1 at Arlington)"],
+      [2022, 9, 9, 2, "Matt Lampert", "", "Lost 7–2 at Notre Dame Academy in the Division 1 tournament"],
+      [2021, 5, 9, 1, "Danielle Finocchiaro", "", ""],
+      [2020, 6, 12, 2, "Danielle Finocchiaro", "3–7", ""],
+      [2019, 6, 13, 0, "Danielle Finocchiaro", "2–9", ""],
+      [2018, 4, 15, 1, "Brian Seabury", "3–6–1", ""],
+      [2017, 17, 2, 3, "Brian Seabury", "9–1–1", "Lost 5–4 to Masconomet (Mar. 3)"],
+      [2015, 11, 6, 1, "Brian Seabury", "", "Lost 3–0 at Reading (Mar. 3)"]
+    ],
     honors: [{ year: 2026, captains: "", allLeague: "Ashley Freitas", note: "Ashley Freitas, MIAA Bruins Sportsmanship Award" }, { year: 2024, captains: "", allLeague: "", note: "Salem News all-stars: Halle Greenleaf, Meredith Johnston" }],
     milestones: [
-      { year: "2005", text: "The co-operative girls hockey program begins play, bringing together players from Danvers, Beverly and Ipswich." },
+      { year: "2005", text: "The co-operative girls hockey program begins play, bringing together players from Danvers, Beverly and Ipswich, with Fiona Rice as its first coach." },
+      { year: "2012", text: "Brian Seabury takes over. In six seasons his teams go 87–35–10 and win four league titles." },
+      { year: "2017", text: "The best record on file: 17–2–3, and 9–1–1 in the conference." },
+      { year: "2021", text: "Matt Lampert, a Beverly High hockey alum who had coached goalies and assisted the three coaches before him, becomes the program's fourth head coach." },
+      { year: "2022", text: "Back in the state tournament for the first time in five seasons, in Division 1." },
       { year: "2024", text: "An 11–9–1 season and a trip to the state tournament, ending in the first round at Plymouth." },
       { year: "2025", text: "Back in the state tournament despite an 8–13 record, with a Round of 32 game at Burlington/Central Catholic." },
       { year: "2026", text: "A 15–6 season and the Northeast Hockey League championship. Ashley Freitas is a league all-star and wins the MIAA Bruins Sportsmanship Award." }
