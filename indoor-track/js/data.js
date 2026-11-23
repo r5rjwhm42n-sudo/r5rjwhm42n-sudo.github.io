@@ -186,11 +186,12 @@ const TEAMS = {
         tiles: [["Record", "3–6", "Coach Tom Walsh"], ["Division 4 meet", "13th", "13 points · The Track at New Balance"], ["MSTCA ranking", "Unranked", "Not in the Division 4 top 10 (Jan. 28)"]],
         note: "Every meet on the school's ArbiterLive schedule for the season, with scores from ArbiterLive and the Boston Globe; multi-team meets are scored by place, and some duals have no score on file. Division 4 places and points from the meet's official results. The season record is from the school's team page.",
         keyPlayers: [
-          { name: "Zach Dunn", grade: "Jr.", note: "NEC All-Conference. 2nd in the 55 meters at the MIAA Division 4 meet in 6.59, the Falcons' best finish there." },
+          { name: "Zach Dunn", grade: "Jr.", note: "NEC All-Conference. 2nd in the 55 meters at the MIAA Division 4 meet in 6.59, the Falcons' best finish there. Salem News all-star." },
           { name: "Julian Capece", grade: "So.", note: "NEC All-Star. 5th in the high jump at Division 4, clearing 6 feet." },
           { name: "Jack Curcuru", grade: "Sr.", note: "8th in the 55 meters at Division 4 (6.75 in the prelims)." },
           { name: "Mason Ellsworth", grade: "Sr.", note: "10th in the shot put at Division 4 (41-2½)." }
-        ]
+        ],
+        awards: "Salem News all-star: Zach Dunn"
       },
       {
         season: "2024–25",
@@ -203,11 +204,12 @@ const TEAMS = {
         tiles: [["Dual meets with scores", "1–0", "Of the meets on the school's schedule"], ["Division 4 meet", "7th", "19 points · Reggie Lewis Center"]],
         note: "Every meet on the school's ArbiterLive schedule for the season, with scores from ArbiterLive and the Boston Globe; multi-team meets are scored by place, and some duals have no score on file. Division 4 places and points from the meet's official results.",
         keyPlayers: [
-          { name: "William Conklin", grade: "Sr.", note: "MIAA Division 4 champion in the two-mile, 9:32.79." },
+          { name: "William Conklin", grade: "Sr.", note: "MIAA Division 4 champion in the two-mile, 9:32.79. Salem News all-star." },
           { name: "JJ Rooney", grade: "Sr.", note: "2nd in the mile at Division 4 in 4:25.03." },
           { name: "Chuck Garlin", grade: "Sr.", note: "8th in the 600 meters at Division 4 (1:25.68)." },
           { name: "Julian Capece", grade: "Fr.", note: "Cleared 5-8 in the high jump at Division 4 as a freshman." }
-        ]
+        ],
+        awards: "Salem News all-star: Will Conklin"
       },
       {
         season: "2023–24",
@@ -225,7 +227,10 @@ const TEAMS = {
     banners: [],
     necTitles: [],
     seasons: [[2026, 3, 6, 0, "Tom Walsh", "", "13th at the Division 4 meet"], [2025, null, null, null, "", "", "7th at the Division 4 meet"], [2024, null, null, null, "", "", ""], [2023, null, null, null, "", "", ""], [2022, 4, 2, 0, "", "", ""]],
-    honors: [{ year: 2026, captains: "", allLeague: "Zach Dunn", note: "NEC All-Star: Julian Capece" }, { year: 2025, captains: "", allLeague: "Owen Shanbar, Will Conklin", note: "William Conklin, Division 4 two-mile champion" }],
+    honors: [
+      { year: 2026, captains: "", allLeague: "Zach Dunn", note: "NEC All-Star: Julian Capece; Salem News all-star: Zach Dunn" },
+      { year: 2025, captains: "", allLeague: "Owen Shanbar, Will Conklin", note: "William Conklin, Division 4 two-mile champion; Salem News all-star: Will Conklin" }
+    ],
     legends: [],
     milestones: [
       { year: "2022", text: "A 4–2 dual-meet winter, with wins over Gloucester, Swampscott, Masconomet and Beverly." },
@@ -235,7 +240,8 @@ const TEAMS = {
     follow: [
       { kind: "Schedule", title: "Official schedule", text: "Every meet, time and change on the school's ArbiterLive page.", url: "https://www.arbiterlive.com/Teams?entityId=5538", go: "ArbiterLive" },
       { kind: "School", title: "Team page", text: "Coaches, program notes and announcements from Danvers High School.", url: "https://danverspublicschools.org/dhs/athletics/winter-track-and-field/", go: "danverspublicschools.org" },
-      { kind: "Athletics", title: "Falcons Athletics", text: "The athletic department's site, with schedules for every level.", url: "https://www.danversfalconsathletics.com/", go: "danversfalconsathletics.com" }
+      { kind: "Athletics", title: "Falcons Athletics", text: "The athletic department's site, with schedules for every level.", url: "https://www.danversfalconsathletics.com/", go: "danversfalconsathletics.com" },
+      { kind: "Instagram", title: "@danversfalconsathletics", text: "The Danvers High School athletic department's Instagram: game days, results and photos for every team.", url: "https://www.instagram.com/danversfalconsathletics/", go: "Instagram" }
     ],
     news: [],
     photos: [],
@@ -423,9 +429,10 @@ const TEAMS = {
         note: "Every meet on the school's ArbiterLive schedule for the season, with scores from ArbiterLive and the Boston Globe; multi-team meets are scored by place, and some duals have no score on file. Division 4 places and points from the meet's official results.",
         keyPlayers: [
           { name: "Grace Conklin", grade: "So.", note: "4th in the two-mile at the MIAA Division 4 meet in 12:08.43." },
-          { name: "Tess Ryan", grade: "So.", note: "7th in the 55 meters at Division 4 (7.57)." },
+          { name: "Tess Ryan", grade: "So.", note: "7th in the 55 meters at Division 4 (7.57). Salem News all-star." },
           { name: "Addison Lamar", grade: "Jr.", note: "8th in the two-mile at Division 4 (12:21.92)." }
-        ]
+        ],
+        awards: "Salem News all-star: Tess Ryan"
       },
       {
         season: "2023–24",
@@ -438,7 +445,7 @@ const TEAMS = {
     banners: [],
     necTitles: [],
     seasons: [[2026, 3, 5, 1, "Erin St. Pierre", "", "19th at the Division 4 meet"], [2025, null, null, null, "", "", "19th at the Division 4 meet"], [2024, null, null, null, "", "", ""], [2023, null, null, null, "", "", ""], [2022, 2, 4, 0, "", "", ""]],
-    honors: [{ year: 2026, captains: "", allLeague: "Tess Ryan", note: "NEC All-Star: Grace Conklin" }, { year: 2025, captains: "", allLeague: "Tess Ryan, Jenea Cash, Flavia Locilento, Sabina Sturgeon", note: "" }],
+    honors: [{ year: 2026, captains: "", allLeague: "Tess Ryan", note: "NEC All-Star: Grace Conklin" }, { year: 2025, captains: "", allLeague: "Tess Ryan, Jenea Cash, Flavia Locilento, Sabina Sturgeon", note: "Salem News all-star: Tess Ryan" }],
     legends: [],
     milestones: [
       { year: "1978", text: "The Danvers girls win the MIAA state track championship, and repeat in 1979 (both in the spring season)." },
@@ -449,7 +456,8 @@ const TEAMS = {
     follow: [
       { kind: "Schedule", title: "Official schedule", text: "Every meet, time and change on the school's ArbiterLive page.", url: "https://www.arbiterlive.com/Teams?entityId=5538", go: "ArbiterLive" },
       { kind: "School", title: "Team page", text: "Coaches, program notes and announcements from Danvers High School.", url: "https://danverspublicschools.org/dhs/athletics/winter-track-and-field/", go: "danverspublicschools.org" },
-      { kind: "Athletics", title: "Falcons Athletics", text: "The athletic department's site, with schedules for every level.", url: "https://www.danversfalconsathletics.com/", go: "danversfalconsathletics.com" }
+      { kind: "Athletics", title: "Falcons Athletics", text: "The athletic department's site, with schedules for every level.", url: "https://www.danversfalconsathletics.com/", go: "danversfalconsathletics.com" },
+      { kind: "Instagram", title: "@danversfalconsathletics", text: "The Danvers High School athletic department's Instagram: game days, results and photos for every team.", url: "https://www.instagram.com/danversfalconsathletics/", go: "Instagram" }
     ],
     news: [],
     photos: [],

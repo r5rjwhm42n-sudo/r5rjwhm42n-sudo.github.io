@@ -218,11 +218,16 @@ const TEAMS = {
         ],
         note: "Game stories from the Boston Globe's high school scoreboard. Open a game to read its story.",
         keyPlayers: [
-          { name: "Kyle Sillars", grade: "Sr.", note: "Captain and NEC All-Star. MVP of the Gloucester Holiday Tournament (19 points, 6 steals, 5 assists in the final), with 23 points against Winthrop and 23 and 8 rebounds against Peabody." },
+          {
+            name: "Kyle Sillars",
+            grade: "Sr.",
+            note: "Captain and NEC All-Star. MVP of the Gloucester Holiday Tournament (19 points, 6 steals, 5 assists in the final), with 23 points against Winthrop and 23 and 8 rebounds against Peabody. Salem News all-star."
+          },
           { name: "Luca Tirella", note: "Captain and NEC All-Star. Double-doubles in three straight wins the Globe covered: 19 points and 13 rebounds at Gloucester, 20 and 15 against Peabody, 16 and 10 against Gloucester." },
           { name: "Connor DiTomaso", grade: "Sr.", note: "Captain. His late 3-pointer sealed the 66–62 win over Peabody, Danvers' first over the Tanners in more than five years." },
           { name: "Randall Martin", note: "11 points and strong defense in the 60–56 win over Winthrop." }
-        ]
+        ],
+        awards: "Salem News all-star: Kyle Sillars"
       },
       {
         season: "2024–25",
@@ -413,7 +418,7 @@ const TEAMS = {
       [1966, 14, 6, 0, "John McGrath", "", ""]
     ],
     honors: [
-      { year: 2026, captains: "Connor DiTomaso, Luca Tirella, Kyle Sillars", allLeague: "", note: "" },
+      { year: 2026, captains: "Connor DiTomaso, Luca Tirella, Kyle Sillars", allLeague: "", note: "Salem News all-star: Kyle Sillars" },
       { year: 2025, captains: "Kevin Ahearn, Zach Calabro, Connor DiTomaso", allLeague: "", note: "" },
       { year: 2024, captains: "Logan Meteivier, Luke Meteivier, and Michal Kazprzak", allLeague: "", note: "" },
       { year: 2019, captains: "", allLeague: "Justin DiTomaso", note: "Chris Timson: Salem News Coach of the Year" },
@@ -474,6 +479,7 @@ const TEAMS = {
       { year: "2023", text: "Jabari Clarke takes over as head coach for the 2023–24 season." }
     ],
     follow: [
+      { kind: "X", title: "@DanversHoops", text: "The official account of Danvers High School boys basketball on X.", url: "https://x.com/DanversHoops", go: "X" },
       { kind: "Schedule", title: "Official schedule", text: "Every level's games, times and changes on the school's ArbiterLive page.", url: "https://www.arbiterlive.com/Teams?entityId=5538", go: "ArbiterLive" },
       { kind: "Watch", title: "Home games on NFHS Network", text: "Danvers High School streams home games on the NFHS Network.", url: "https://www.nfhsnetwork.com/schools/danvers-high-school-danvers-ma", go: "NFHS Network" },
       { kind: "School", title: "Team page", text: "Coaches, program notes and announcements from Danvers High School.", url: "https://danverspublicschools.org/dhs/athletics/boys-basketball/", go: "danverspublicschools.org" },
@@ -483,7 +489,8 @@ const TEAMS = {
         text: "Season records, captains and all-league picks kept by the athletic department.",
         url: "https://docs.google.com/spreadsheets/d/1qf7e1RGZkG9hAWzIqTPi8bHVbajBI5YpY_EwnUyab4w/edit?gid=1756060361#gid=1756060361",
         go: "Record book"
-      }
+      },
+      { kind: "Instagram", title: "@danversfalconsathletics", text: "The Danvers High School athletic department's Instagram: game days, results and photos for every team.", url: "https://www.instagram.com/danversfalconsathletics/", go: "Instagram" }
     ],
     news: [],
     photos: [],
@@ -925,6 +932,7 @@ const TEAMS = {
       { year: "2026", text: "A school-record 19–2 season and the NEC title. Angie Djoko reaches 1,000 points and is the conference Player of the Year, and Dave Chisholm is Coach of the Year." }
     ],
     follow: [
+      { kind: "X", title: "@GBallDanvers", text: "Danvers girls basketball on X.", url: "https://x.com/GBallDanvers", go: "X" },
       { kind: "Schedule", title: "Official schedule", text: "Every level's games, times and changes on the school's ArbiterLive page.", url: "https://www.arbiterlive.com/Teams?entityId=5538", go: "ArbiterLive" },
       { kind: "Watch", title: "Home games on NFHS Network", text: "Danvers High School streams home games on the NFHS Network.", url: "https://www.nfhsnetwork.com/schools/danvers-high-school-danvers-ma", go: "NFHS Network" },
       { kind: "School", title: "Team page", text: "Coaches, program notes and announcements from Danvers High School.", url: "https://danverspublicschools.org/dhs/athletics/94341-2/", go: "danverspublicschools.org" },
@@ -934,7 +942,8 @@ const TEAMS = {
         text: "Season records, captains and all-league picks kept by the athletic department.",
         url: "https://docs.google.com/spreadsheets/d/1QoAjMBsgvHdUGnr3C75JJzgyqOdt6L9BBpcLU_QlNJs/edit?gid=1756060361#gid=1756060361",
         go: "Record book"
-      }
+      },
+      { kind: "Instagram", title: "@danversfalconsathletics", text: "The Danvers High School athletic department's Instagram: game days, results and photos for every team.", url: "https://www.instagram.com/danversfalconsathletics/", go: "Instagram" }
     ],
     news: [
       {

@@ -43,7 +43,7 @@ const TEAMS = {
     links: { school: "https://danverspublicschools.org/dhs/athletics/gymnastics/", schedule: "https://www.arbiterlive.com/Teams?entityId=5538" },
     staff: [["Head coach", "Jen Habeeb"], ["Assistant coach", "Aimee Sinewitz"]],
     about: [
-      "Danvers gymnastics is a varsity co-op: the Falcons practice and compete together with Lynnfield at the Yellow Jackets gym in Peabody.",
+      "Danvers gymnastics is a varsity co-op: the Falcons practice and compete together with Lynnfield at the Yellow Jackets gym in Peabody. North Reading gymnasts were part of the team through 2022–23.",
       "The program has won Northeastern Conference championships in multiple seasons and often advances to sectional and state competition. The Falcons face Peabody, Salem, Masconomet and Winthrop, and the meet with Beverly is the most anticipated of the season.",
       "Teammates work together across town lines, which makes the team different from most at Danvers High. Program information from the school's team page."
     ],
@@ -77,39 +77,63 @@ const TEAMS = {
         ],
         photo: { src: "../images/teams/gymnastics.jpg", caption: "The 2025–26 Danvers gymnastics team. Photo from the Danvers High School athletics page." },
         note: "Every meet on the school's ArbiterLive schedule, with scores from ArbiterLive and the Boston Globe; the season record is from the school's team page. A meet against two teams counts as two. The MIAA seeds the state tournament on the average of a team's four best scores: Danvers' was 123.68.",
-        tiles: [["Record", "0–6", "Coach Jen Habeeb"], ["Season high", "127.8", "vs. Hamilton-Wenham/Manchester Essex, Jan. 17"], ["MIAA seeding average", "123.68", "Average of the four best scores"]]
+        tiles: [["Record", "0–6", "From the school's team page"], ["Season high", "127.8", "vs. Hamilton-Wenham/Manchester Essex, Jan. 17"], ["MIAA seeding average", "123.68", "Average of the four best scores"]]
       },
       {
         season: "2024–25",
-        record: "4–2",
+        record: "6–1",
+        coach: "Jen Habeeb",
+        post: "4th at the MIAA state meet (146.325)",
+        captains: "Maddie Westcott, Camryn Donovan",
+        allLeague: "Kaylee Westcott, Camryn Donovan, Callie Donovan, Sophia Catinazzo",
+        awards: "Kaylee Westcott: NEC/CAL MVP, MIAA State Individuals all-around champion, Boston Globe All-Scholastic and team MVP · Camryn Donovan: Boston Globe All-Scholastic and the team's Unsung Hero Award",
         games: [
           ["2024-12-22", 1, "Masconomet", "", "L", 145.95, 147.35, ""],
-          ["2025-01-05", 1, "Marblehead/Swampscott", "", "L", 127.3, 141.6, ""],
+          ["2025-01-05", 1, "Marblehead/Swampscott", "", "W", 141.6, 127.3, "Entered on the schedule as a 127.3–141.6 loss; the Salem News reported Masconomet as the season's only loss"],
           ["2025-01-19", 1, "Bishop Fenwick", "", "W", 144.45, 119.95, ""],
           ["2025-01-19", 1, "Peabody", "", "W", 144.45, 64.7, ""],
           ["2025-01-30", 1, "Hamilton-Wenham/Manchester Essex", "", "W", 144.1, 133.65, ""],
-          ["2025-02-07", 0, "Winthrop", "NEC", null, null, null, "No score on file"],
+          ["2025-02-07", 0, "Winthrop", "NEC", "W", null, null, "A win (the Salem News reported a 6–1 season); no score on file"],
           ["2025-02-09", 1, "Essex Tech", "", "W", 148.4, 126.45, ""]
         ],
-        note: "Every meet on the school's ArbiterLive schedule, with scores from ArbiterLive and the Boston Globe. The 4–2 record is as reported to the Globe.",
-        tiles: [["Record", "4–2", "As reported to the Boston Globe"], ["Season high", "148.4", "vs. Essex Tech, Feb. 9"]]
+        note: "Every meet on the school's ArbiterLive schedule, with scores from ArbiterLive and the Boston Globe. The 6–1 record, the captains and the honors are from the Salem News, the Boston Globe and Local Headline News; the season high, 148.4 against Essex Tech, was the best regular-season score of the winter.",
+        keyPlayers: [
+          { name: "Kaylee Westcott", note: "NEC/CAL MVP and Boston Globe All-Scholastic as a sophomore. Won the MIAA State Individuals all-around, then took 2nd in the all-around at both the North sectional and the state meet." },
+          { name: "Camryn Donovan", note: "Senior captain, NEC/CAL all-star and Boston Globe All-Scholastic; 4th in the all-around at the state meet." },
+          { name: "Maddie Westcott", note: "Senior captain, a captain for three winters." },
+          { name: "Sophia Catinazzo", note: "NEC/CAL all-star as a sophomore; 7th on vault at the North sectional." },
+          { name: "Callie Donovan", note: "NEC/CAL all-star for the second straight winter." }
+        ],
+        tiles: [["Record", "6–1", "Regular season, per the Salem News"], ["Season high", "148.4", "vs. Essex Tech, Feb. 9"]]
       },
       {
         season: "2023–24",
         games: [
           ["2023-12-27", 1, "Bishop Fenwick", "NEC", "W", 145.4, 127.5, ""],
           ["2024-01-06", 1, "Peabody", "NEC", null, null, null, "No score on file"],
-          ["2024-01-15", 1, "Hamilton-Wenham and one more team", "NEC", "W", 145.95, 136.9, ""],
+          ["2024-01-15", 1, "Hamilton-Wenham", "NEC", "W", 145.95, 136.9, "A tri-meet with Masconomet"],
+          ["2024-01-15", 1, "Masconomet", "NEC", "L", 145.95, 149.35, "A tri-meet with Hamilton-Wenham; score from Masconomet's results page"],
           ["2024-01-21", 1, "Beverly", "NEC", "W", 143.45, 128.4, ""],
           ["2024-01-28", 0, "Marblehead", "NEC", "W", 146.05, 140.05, ""],
           ["2024-02-11", 0, "Essex Tech", "NEC", "W", 144.2, 118, ""]
         ],
-        note: "Every meet on the school's ArbiterLive schedule, with the scores entered there: unbeaten in the five meets that have one.",
-        record: "5–0",
-        tiles: [["Record", "5–0", "In meets with a score on file"], ["Season high", "146.05", "at Marblehead, Jan. 28"]]
+        coach: "Jen Habeeb",
+        post: "3rd at the MIAA state meet; 3rd at the North sectional (145.5)",
+        captains: "Maddie Westcott",
+        allLeague: "Kaylee Westcott, Camryn Donovan, Callie Donovan",
+        awards: "Kaylee Westcott, North sectional all-around champion (38.725)",
+        note: "Every meet on the school's ArbiterLive schedule, with the scores entered there and Masconomet's score from its own results page. Postseason results are from the Salem News.",
+        record: "5–1",
+        keyPlayers: [
+          { name: "Kaylee Westcott", note: "Won the North sectional all-around title (38.725) as a freshman and was the NEC all-around all-star." },
+          { name: "Camryn Donovan", note: "NEC all-star on bars (9.525 average) and 7th in the all-around at the North sectional." },
+          { name: "Callie Donovan", note: "NEC all-star on vault (9.225 average)." },
+          { name: "Maddie Westcott", note: "Team captain for the second straight winter." }
+        ],
+        tiles: [["Record", "5–1", "In meets with a score on file"], ["Season high", "146.05", "at Marblehead, Jan. 28"]]
       }
     ],
-    historyIntro: "Six MIAA state championships, in 1984, 1986, three straight from 1996 to 1998, and 2005, plus North sectional titles in 2005 and 2010. In 2025 Kaylee Westcott won the state all-around title.",
+    historyIntro: "Six MIAA state championships, in 1984, 1986, three straight from 1996 to 1998, and 2005, plus North sectional titles in 2005 and 2010. The Danvers/Lynnfield co-op was back on the podium in 2023 and 2024, and Kaylee Westcott won the state all-around title in 2025.",
     banners: [
       { year: 2010, label: "North Sectional Champions" },
       { year: 2005, label: "State and North Sectional Champions" },
@@ -120,8 +144,25 @@ const TEAMS = {
       { year: 1984, label: "MIAA State Champions" }
     ],
     necTitles: [1984, 1986, 1996, 1997, 1998, 2005],
-    seasons: [[2026, 0, 6, 0, "Jen Habeeb", "", ""], [2025, 4, 2, 0, "", "", "4th at the MIAA state meet"], [2024, 5, 0, 0, "", "", ""], [2023, 2, 2, 0, "", "", ""], [2022, 1, 2, 0, "", "", ""]],
-    honors: [{ year: 2026, captains: "", allLeague: "Delainy Murphy", note: "" }, { year: 2025, captains: "", allLeague: "", note: "Kaylee Westcott, state all-around champion; Camryn Donovan, top five" }],
+    seasons: [
+      [2026, 0, 6, 0, "Jen Habeeb", "", ""],
+      [2025, 6, 1, 0, "Jen Habeeb", "", "4th at the MIAA state meet"],
+      [2024, 5, 1, 0, "Jen Habeeb", "", "3rd at the MIAA state meet; 3rd at the North sectional"],
+      [2023, 4, 1, 0, "Jen Habeeb", "", "2nd at the MIAA state meet; 3rd at the North sectional"],
+      [2022, 2, 4, 0, "", "", ""]
+    ],
+    honors: [
+      { year: 2026, captains: "", allLeague: "Delainy Murphy", note: "" },
+      {
+        year: 2025,
+        captains: "Maddie Westcott, Camryn Donovan",
+        allLeague: "Kaylee Westcott (MVP), Camryn Donovan, Callie Donovan, Sophia Catinazzo",
+        note: "Boston Globe All-Scholastics: Kaylee Westcott, state individual all-around champion, and Camryn Donovan. 2nd (Westcott) and 4th (Donovan) in the all-around at the state meet"
+      },
+      { year: 2024, captains: "Maddie Westcott", allLeague: "Kaylee Westcott (all-around), Camryn Donovan (bars), Callie Donovan (vault)", note: "Kaylee Westcott, North sectional all-around champion" },
+      { year: 2023, captains: "Maddie Westcott", allLeague: "Maddie Westcott, Kaylee Westcott, Maddie Migliero, Camryn Donovan", note: "Salem News all-stars: Camryn Donovan, Maddie Migliero, Kaylee Westcott (team MVP as an eighth grader), Maddie Westcott" },
+      { year: 2022, captains: "Allie Taylor", allLeague: "Maddie Westcott (all-around)", note: "A Danvers–North Reading co-op that season; Maddie Westcott competed at State Individuals as a freshman" }
+    ],
     legends: [],
     milestones: [
       { year: "1984", text: "Danvers wins its first MIAA state gymnastics championship." },
@@ -129,23 +170,30 @@ const TEAMS = {
       { year: "1996", text: "The first of three straight state championships, 1996 through 1998." },
       { year: "2005", text: "State champions for the sixth time, and North sectional champions too." },
       { year: "2010", text: "North sectional champions." },
-      { year: "2025", text: "Kaylee Westcott wins the all-around at the MIAA State Individuals meet, with Camryn Donovan in the top five, and the team places 4th at the state meet." }
+      { year: "2022", text: "Gymnasts from Danvers and North Reading compete as one team. Freshman Maddie Westcott is an NEC/CAL all-star in the all-around and competes at State Individuals." },
+      { year: "2023", text: "Runners-up at the MIAA state meet behind Masconomet. Eighth grader Kaylee Westcott ties for 2nd in the all-around (38.6) and freshman Maddie Migliero is 5th." },
+      { year: "2024", text: "Kaylee Westcott wins the North sectional all-around title as a freshman (38.725), and the Falcons place 3rd in the state." },
+      {
+        year: "2025",
+        text: "A 6–1 regular season, with the only loss to Masconomet by 1.4 points. Kaylee Westcott is the NEC/CAL MVP and wins the MIAA State Individuals all-around; at the state meet she is 2nd in the all-around and Camryn Donovan 4th, and the team finishes 4th, 0.075 out of 3rd."
+      }
     ],
     follow: [
       { kind: "Schedule", title: "Official schedule", text: "Every meet, time and change on the school's ArbiterLive page.", url: "https://www.arbiterlive.com/Teams?entityId=5538", go: "ArbiterLive" },
       { kind: "Instagram", title: "@dhs_gymnastics", text: "The team's own Instagram, Danvers Varsity Gymnastics: meet days, scores and photos.", url: "https://www.instagram.com/dhs_gymnastics/", go: "Instagram" },
       { kind: "School", title: "Team page", text: "Coaches, program notes and announcements from Danvers High School.", url: "https://danverspublicschools.org/dhs/athletics/gymnastics/", go: "danverspublicschools.org" },
-      { kind: "Athletics", title: "Falcons Athletics", text: "The athletic department's site, with schedules for every level.", url: "https://www.danversfalconsathletics.com/", go: "danversfalconsathletics.com" }
+      { kind: "Athletics", title: "Falcons Athletics", text: "The athletic department's site, with schedules for every level.", url: "https://www.danversfalconsathletics.com/", go: "danversfalconsathletics.com" },
+      { kind: "Instagram", title: "@danversfalconsathletics", text: "The Danvers High School athletic department's Instagram: game days, results and photos for every team.", url: "https://www.instagram.com/danversfalconsathletics/", go: "Instagram" }
     ],
     news: [],
     photos: [],
-    historyNote: "State and sectional titles from the MIAA's all-time gymnastics champions list. Season records since 2021–22 count the meets with a score on ArbiterLive and in the Boston Globe; 2025–26 is from the school's team page.",
+    historyNote: "State and sectional titles from the MIAA's all-time gymnastics champions list. Recent finishes, captains and honors from Salem News and Boston Globe stories reprinted on Masconomet gymnastics' site.",
     titlesLabel: "MIAA state championships",
     titlesShort: "State titles",
     titleYear: "State title year",
     seasonsLabel: "on file",
-    recordsNote: "A season is listed by the year it ended, and blank cells are details not on file.",
-    honorsNote: "NEC All-Conference picks and state honors from the school's team pages and the MIAA. Captains aren't posted for these seasons.",
-    champions: [["2025", "Kaylee Westcott", "MIAA State Individuals all-around champion"]]
+    recordsNote: "A season is listed by the year it ended. Records count the meets with a score on the school's ArbiterLive schedule, Masconomet's results page and Local Headline News; 2024–25 (6–1) is from the Salem News and 2025–26 from the school's team page. Two scores were entered the wrong way round on the schedule and are counted as wins: Marblehead/Swampscott in 2025 (the Salem News reported Masconomet as the only loss) and Beverly in 2023, entered as 127.15–145.55 when Danvers scored 146 or more in every other meet that month.",
+    honorsNote: "Captains, NEC/CAL all-stars and Salem News all-stars from the Salem News; 2026 from the school's team page.",
+    champions: [["2025", "Kaylee Westcott", "MIAA State Individuals all-around champion"], ["2024", "Kaylee Westcott", "MIAA North sectional all-around champion (38.725)"]]
   }
 };

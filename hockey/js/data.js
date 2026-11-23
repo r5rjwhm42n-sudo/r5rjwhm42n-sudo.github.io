@@ -498,10 +498,11 @@ const TEAMS = {
         note: "Game stories from the Boston Globe's high school scoreboard. Open a game to read its story.",
         keyPlayers: [
           { name: "Seamus Cary", note: "Captain. A hat trick in the 5–2 win at Beverly and a goal in the 4–3 tournament win over Nashoba." },
-          { name: "Josh Henry", note: "Captain and NEC All-Conference. Two goals at Haverhill in the Newburyport Bank Classic and a goal against Nashoba." },
+          { name: "Josh Henry", note: "Captain and NEC All-Conference. Two goals at Haverhill in the Newburyport Bank Classic and a goal against Nashoba. Salem News all-star." },
           { name: "Colby Medeiros", note: "A first-period hat trick in the 3–2 win at Winthrop and two goals at Beverly." },
           { name: "Cody Standring", note: "A 21-save shutout at Haverhill." }
-        ]
+        ],
+        awards: "Salem News all-stars: Cooper Dunham, Josh Henry"
       },
       {
         season: "2023–24",
@@ -533,7 +534,8 @@ const TEAMS = {
           ["2024-02-19", 1, "Wakefield", "Non-league", "W", 5, 4, "Bourque Arena"],
           ["2024-02-21", 1, "Beverly", "NEC", "W", 5, 2, "Bourque Arena"],
           ["2024-02-29", 1, "West Springfield", "MIAA tournament", "L", 0, 3, "Round of 32 · Driscoll Arena"]
-        ]
+        ],
+        awards: "Salem News all-stars: Mike DeLisio, Ty Langlais"
       }
     ],
     historyIntro: "Two state championships, 11 conference titles and a record book full of 100-point scorers. The seasons and players behind Danvers boys hockey.",
@@ -606,8 +608,8 @@ const TEAMS = {
     ],
     honors: [
       { year: 2026, captains: "Drew Godfried and Thomas Fish", allLeague: "Drew Godfried and Cooper Dunham", note: "" },
-      { year: 2025, captains: "Josh Henry and Seamus Cary", allLeague: "Josh Henry", note: "" },
-      { year: 2024, captains: "Ty Langlais and Nick Anderson", allLeague: "Ty Langlais", note: "" },
+      { year: 2025, captains: "Josh Henry and Seamus Cary", allLeague: "Josh Henry", note: "Salem News all-stars: Cooper Dunham, Josh Henry" },
+      { year: 2024, captains: "Ty Langlais and Nick Anderson", allLeague: "Ty Langlais", note: "Salem News all-stars: Mike DeLisio, Ty Langlais" },
       { year: 2023, captains: "Trevor McNeil and Bobby Joyce", allLeague: "Trevor McNeil", note: "" },
       { year: 2022, captains: "Connor Horn, Aidan Lanphere", allLeague: "", note: "" },
       { year: 2021, captains: "Brian Taylor, Michael Papamechail", allLeague: "", note: "Andrew O'Neill, Steve Baldassare: 10 games" },
@@ -706,8 +708,8 @@ const TEAMS = {
       { year: "2026", text: "The Falcons win a state tournament game at Westfield and reach the Division 3 Round of 16. Cooper Dunham joins the 100-point club." }
     ],
     follow: [
+      { kind: "Instagram", title: "@danversfalconshockey", text: "The official Instagram of DHS Falcons boys hockey: game days, scores and photos.", url: "https://www.instagram.com/danversfalconshockey/", go: "Instagram" },
       { kind: "Schedule", title: "Official schedule", text: "Every level's games, times and changes on the school's ArbiterLive page.", url: "https://www.arbiterlive.com/Teams?entityId=5538", go: "ArbiterLive" },
-      { kind: "Boosters", title: "Danvers Hockey Boosters", text: "News, fundraisers and team information from the boosters.", url: "https://www.danversfalconshockey.com/", go: "danversfalconshockey.com" },
       { kind: "School", title: "Team page", text: "Coaches, program notes and announcements from Danvers High School.", url: "https://danverspublicschools.org/dhs/athletics/boys-hockey/", go: "danverspublicschools.org" },
       {
         kind: "History",
@@ -716,7 +718,8 @@ const TEAMS = {
         url: "https://docs.google.com/spreadsheets/d/1vf0NtXTt-mCHhaf4qSfU9y2mp_HIP2uRHK4gkjEYRLA/edit?gid=1756060361#gid=1756060361",
         go: "Record book"
       },
-      { kind: "Scores", title: "MyHockeyLive", text: "Statewide high school hockey scores, standings and schedules.", url: "https://www.myhockeylive.com/miaa/teams/3912-danvers", go: "MyHockeyLive" }
+      { kind: "Scores", title: "MyHockeyLive", text: "Statewide high school hockey scores, standings and schedules.", url: "https://www.myhockeylive.com/miaa/teams/3912-danvers", go: "MyHockeyLive" },
+      { kind: "Instagram", title: "@danversfalconsathletics", text: "The Danvers High School athletic department's Instagram: game days, results and photos for every team.", url: "https://www.instagram.com/danversfalconsathletics/", go: "Instagram" }
     ],
     news: [],
     photos: [],
@@ -1074,7 +1077,8 @@ const TEAMS = {
           ["2024-02-17", 0, "St. Mary's", "", "L", 2, 6, "Connery Memorial Arena"],
           ["2024-02-21", 0, "Winthrop", "", "L", 2, 4, "Larsen Rink"],
           ["2024-02-29", 0, "Plymouth", "MIAA tournament", "L", 1, 3, "First round · Gallo Arena"]
-        ]
+        ],
+        awards: "Salem News all-stars: Halle Greenleaf, Meredith Johnston"
       }
     ],
     historyIntro: "A three-town team since 2005, Northeast Hockey League champions in 2026, and in the state tournament each of the last three winters.",
@@ -1087,7 +1091,7 @@ const TEAMS = {
     necTitles: [],
     legends: [],
     seasons: [[2026, 15, 6, 0, "Chris LeBlanc", "NEHL Champions", "Round of 32 (lost in a shootout at Malden Catholic)"], [2025, 8, 13, 0, "", "", "Round of 32 (lost at Burlington/Central Catholic)"], [2024, 11, 9, 1, "", "", "First round (lost at Plymouth)"]],
-    honors: [{ year: 2026, captains: "", allLeague: "Ashley Freitas", note: "Ashley Freitas, MIAA Bruins Sportsmanship Award" }],
+    honors: [{ year: 2026, captains: "", allLeague: "Ashley Freitas", note: "Ashley Freitas, MIAA Bruins Sportsmanship Award" }, { year: 2024, captains: "", allLeague: "", note: "Salem News all-stars: Halle Greenleaf, Meredith Johnston" }],
     milestones: [
       { year: "2005", text: "The co-operative girls hockey program begins play, bringing together players from Danvers, Beverly and Ipswich." },
       { year: "2024", text: "An 11–9–1 season and a trip to the state tournament, ending in the first round at Plymouth." },
@@ -1096,7 +1100,8 @@ const TEAMS = {
     ],
     follow: [
       { kind: "Schedule", title: "MyHockeyLive", text: "The co-op team's schedule, scores and standings.", url: "https://www.myhockeylive.com/miaa/teams/4397-beverly-danvers-ipswich", go: "MyHockeyLive" },
-      { kind: "School", title: "Team page", text: "Program notes and announcements from Danvers High School.", url: "https://danverspublicschools.org/dhs/athletics/girls-hockey/", go: "danverspublicschools.org" }
+      { kind: "School", title: "Team page", text: "Program notes and announcements from Danvers High School.", url: "https://danverspublicschools.org/dhs/athletics/girls-hockey/", go: "danverspublicschools.org" },
+      { kind: "Instagram", title: "@danversfalconsathletics", text: "The Danvers High School athletic department's Instagram: game days, results and photos for every team.", url: "https://www.instagram.com/danversfalconsathletics/", go: "Instagram" }
     ],
     news: [],
     photos: [],

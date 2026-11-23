@@ -126,9 +126,11 @@ const TEAMS = {
       { year: "2025", text: "Zachary Cotter and Max Scott are named NEC All-Conference and Caleb Clark an NEC All-Star." }
     ],
     follow: [
+      { kind: "Instagram", title: "@dhs_swimstagram", text: "Danvers Swim, the swim and dive team's own Instagram.", url: "https://www.instagram.com/dhs_swimstagram/", go: "Instagram" },
       { kind: "Schedule", title: "Official schedule", text: "Every meet, time and change on the school's ArbiterLive page.", url: "https://www.arbiterlive.com/Teams?entityId=5538", go: "ArbiterLive" },
       { kind: "School", title: "Team page", text: "Coaches, program notes and announcements from Danvers High School.", url: "https://danverspublicschools.org/dhs/athletics/swimming-and-diving/", go: "danverspublicschools.org" },
-      { kind: "Athletics", title: "Falcons Athletics", text: "The athletic department's site, with schedules for every level.", url: "https://www.danversfalconsathletics.com/", go: "danversfalconsathletics.com" }
+      { kind: "Athletics", title: "Falcons Athletics", text: "The athletic department's site, with schedules for every level.", url: "https://www.danversfalconsathletics.com/", go: "danversfalconsathletics.com" },
+      { kind: "Instagram", title: "@danversfalconsathletics", text: "The Danvers High School athletic department's Instagram: game days, results and photos for every team.", url: "https://www.instagram.com/danversfalconsathletics/", go: "Instagram" }
     ],
     news: [],
     photos: [],

@@ -256,7 +256,7 @@ const TEAMS = {
         finish: "8th",
         captains: "Mark Haskins, Adam Guzofski, Zach Trohon",
         allLeague: "Adam Guzofski",
-        awards: "Adam Guzofski, Division 3 state champion at 285 pounds and All-State qualifier",
+        awards: "Adam Guzofski, Division 3 state champion at 285 pounds and All-State qualifier · Salem News all-star: Adam Guzofski",
         games: [
           ["2023-12-09", 0, "Methuen and two more teams", "NEC", null, null, null, "Tournament"],
           ["2023-12-13", 1, "Marblehead", "NEC", "W", 46, 36, ""],
@@ -301,8 +301,9 @@ const TEAMS = {
     honors: [
       { year: 2026, captains: "", allLeague: "Logan Jacques (NEC All-Star)", note: "" },
       { year: 2025, captains: "", allLeague: "Logan Jacques, JJ Rand", note: "" },
-      { year: 2024, captains: "Mark Haskins, Adam Guzofski, Zach Trohon", allLeague: "Adam Guzofski", note: "Adam Guzofski: Division 3 state champion at 285 pounds and All-State qualifier" },
+      { year: 2024, captains: "Mark Haskins, Adam Guzofski, Zach Trohon", allLeague: "Adam Guzofski", note: "Adam Guzofski: Division 3 state champion at 285 pounds and All-State qualifier; Salem News all-star: Adam Guzofski" },
       { year: 2023, captains: "Matt Dowling, Mark Haskins, Reagan Little, Zachary Zoladz", allLeague: "", note: "" },
+      { year: 2021, captains: "", allLeague: "", note: "Salem News all-stars: Max Leete (126 pounds), Isaac Flores (heavyweight)" },
       { year: 2018, captains: "", allLeague: "", note: "Tim Rich: NEC Coach of the Year" },
       { year: 2016, captains: "", allLeague: "", note: "Mark DeCiccio: NEC Coach of the Year" },
       { year: 2015, captains: "", allLeague: "", note: "Mark DeCiccio: NEC Coach of the Year" },
@@ -381,7 +382,8 @@ const TEAMS = {
         text: "Season records, coaches, captains and the program's wins leaders.",
         url: "https://docs.google.com/spreadsheets/d/1smxaVhd4j4EcqWxkuHkSh6I80dgGpbHQutp4sVk-qz0/edit?gid=1756060361#gid=1756060361",
         go: "Record book"
-      }
+      },
+      { kind: "Instagram", title: "@danversfalconsathletics", text: "The Danvers High School athletic department's Instagram: game days, results and photos for every team.", url: "https://www.instagram.com/danversfalconsathletics/", go: "Instagram" }
     ],
     news: [],
     photos: [],
