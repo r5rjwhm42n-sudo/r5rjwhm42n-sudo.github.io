@@ -434,7 +434,7 @@ const SCHEDULE = [
     notes: [
       "Danvers' first loss of the season ends its state tournament run in the Division 4 semifinals at 9–1",
       "Tewksbury led 21–7 at halftime",
-      "Vinny Lacount's return opened the scoring: the Globe's game story calls it a blocked punt, its scoring summary a fumble return",
+      "Vinny Lacount's return opened the scoring",
       "Tewksbury (10–1) plays No. 5 Walpole for the Division 4 title; Walpole beat No. 1 Scituate, the two-time defending champion, 29–28",
       "Zach Fultz's 46-yard run cut it to 14–7 in the 2nd quarter; Tewksbury scored again before the half and shut Danvers out the rest of the way",
       "Danvers still has its Thanksgiving game at Gloucester on Thursday, Nov. 26"

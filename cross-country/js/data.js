@@ -294,21 +294,20 @@ const MEETS = [
     id: 8, date: "2026-11-14T12:30", name: "MIAA Division 2 Championships", short: "MIAA", postseason: true,
     home: false, league: false, site: "Wrentham Developmental Center", distance: "5K",
     headline: "Conklin earns a spot at the state meet",
-    summary: "Senior Grace Conklin qualified for the MIAA State Championship meet as an individual at the Division 2B divisional meet in Wrentham. Holliston's Lucy Downin won the girls race in 17:25.8 and Amherst-Pelham took the team title for a third straight year. In the boys race, East Longmeadow's Nick Rivera won in 15:40.7 and Groton-Dunstable won the team title with 78 points. Neither Danvers team finished in the top seven that move on.",
+    summary: "Senior Grace Conklin ran a personal-best 19:36.3 to finish 11th and qualify for the MIAA State Championship meet as an individual at the Division 2B divisional meet in Wrentham. The time is fourth on the Danvers girls' all-time 5K list. Holliston's Lucy Downin won the girls race in 17:25.8 and Amherst-Pelham took the team title for a third straight year. In the boys race, East Longmeadow's Nick Rivera won in 15:40.7 and Groton-Dunstable won the team title with 78 points. Neither Danvers team finished in the top seven that move on.",
     boys: {
       race: "Division 2B · Groton-Dunstable won with 78 points",
-      finishers: [f("Marcus Morais", null, "18:34.4"), f("Jason Rooney", null, "18:52.4"), f("Miles Pietal", null, "19:22.0")]
+      finishers: [f("Marcus Morais", null, "18:34.4"), f("Jason Rooney", 108, "18:52.4", "PR"), f("Miles Pietal", null, "19:22.0"), f("Rowan Bartlett", 166, "20:45.2", "PR"), f("Miles LaMontagne", 181, "24:25.0", "PR")]
     },
     girls: {
       race: "Division 2B · Grace Conklin qualified for the state meet",
-      finishers: [f("Grace Conklin", null, null, "Qualified for the state meet")]
+      finishers: [f("Grace Conklin", 11, "19:36.3", "PR · Qualified for the state meet"), f("Madyson Danish", 48, "21:33.4"), f("Kylie Walsh", 108, "23:27.5", "PR"), f("Makayla Cheung", 138, "26:14.3", "PR")]
     },
     notes: [
       "Danvers ran in Division 2B (Wave B): seven girls and eight boys were entered",
       "The top seven teams and the top ten other individuals in each race qualify for the state meet",
       "Girls team scores: Amherst-Pelham 54, Northampton 95, Burlington 150, Holliston 160, Falmouth 162, Ashland 175, Wakefield 205",
-      "Boys team scores: Groton-Dunstable 78, Amherst-Pelham 101, Northampton 112, Wayland 163, Pembroke 190, Newburyport 208, Ashland 211",
-      "The first three Danvers boys' times are from the posted results; full places and the other Falcons' times weren't available"
+      "Boys team scores: Groton-Dunstable 78, Amherst-Pelham 101, Northampton 112, Wayland 163, Pembroke 190, Newburyport 208, Ashland 211"
     ],
     sources: [
       { label: "MIAA meet story", url: "https://www.miaa.net/news/2026-division-2-cross-country-sectional-championships-familiar-results-among-girls-champions" },
@@ -320,8 +319,10 @@ const MEETS = [
   {
     id: 14, date: "2026-11-21T14:00", name: "MIAA State Championship Meet", short: "STA", postseason: true,
     home: false, league: false, site: "Devens", distance: "5K",
-    boys: null, girls: null,
-    notes: ["Grace Conklin runs for Danvers in the Division 2 girls race at 2:00 p.m.", "For teams and runners who qualified at the divisional meets", "Division 2 boys race at 2:45 p.m."],
+    summary: "Senior captain Grace Conklin closed the Danvers season at the MIAA State Championship Meet at Devens, racing as an individual qualifier in the Division 2 girls race.",
+    boys: null,
+    girls: { race: "Division 2", finishers: [f("Grace Conklin")] },
+    notes: ["For teams and runners who qualified at the divisional meets"],
     sources: [{ label: "State meet program (PDF)", url: "https://www.miaa.net/sites/default/files/2026-11/2026-fall-state-cross-country-program_0.pdf" }, { label: "MIAA cross country schedule (PDF)", url: "https://www.miaa.net/sites/default/files/2026-03/cross-country-2026-schedule.pdf" }]
   }
 ];
@@ -335,7 +336,7 @@ const MEETS = [
    Each runner's race-by-race results are pulled automatically from the
    finishers lists in MEETS above — spell names the same in both places.
    --------------------------------------------------------------------- */
-const STATS_AS_OF = "Through the MIAA Division 2 meet (Nov. 14, 2026)";
+const STATS_AS_OF = "Through the MIAA State Championship Meet (Nov. 21, 2026)";
 
 const RUNNERS = [
   { name: "Marcus Morais", squad: "boys", grade: "Sr.", captain: false, pr: "18:00.4" },
@@ -350,7 +351,7 @@ const RUNNERS = [
   { name: "Anis Lmal", squad: "boys", grade: "So.", captain: false, pr: null },
   { name: "Samuel Lawler", squad: "boys", grade: "So.", captain: false, pr: null },
 
-  { name: "Grace Conklin", squad: "girls", grade: "Sr.", captain: true, pr: "19:46.7" },
+  { name: "Grace Conklin", squad: "girls", grade: "Sr.", captain: true, pr: "19:36.3" },
   { name: "Emily Sullivan", squad: "girls", grade: "Sr.", captain: true, pr: "20:46.8" },
   { name: "Madyson Danish", squad: "girls", grade: "Jr.", captain: false, pr: "21:20.8" },
   { name: "Paige Sherman", squad: "girls", grade: "Jr.", captain: false, pr: "23:32.6" },
@@ -390,7 +391,7 @@ const ALL_TIME = {
   ],
   girls: [
     ["Catalina Dominick", "17:56.0", 2013, "Jr."], ["Shea Nemeskal", "19:20.4", 2022, "Sr."], ["Heather Wilson", "19:23.0", 2003, "Sr."],
-    ["Emma Eagan", "19:46.3", 2022, "Sr."], ["Grace Conklin", "19:46.7", 2026, "Sr."], ["Haley Dyer", "19:53.8", 2009, "So."],
+    ["Grace Conklin", "19:36.3", 2026, "Sr."], ["Emma Eagan", "19:46.3", 2022, "Sr."], ["Haley Dyer", "19:53.8", 2009, "So."],
     ["Christina Montefusco", "20:08.8", 2008, "Sr."], ["Julie Kee", "20:16.0", 2018, "Jr."], ["Rachel Kaczynski", "20:23.0", 2008, "Fr."],
     ["Alison Barker", "20:31.1", 2013, "Sr."], ["Catherine Nemeskal", "20:37.0", 2018, "So."], ["Erin McGuirk", "20:39.1", 2001, null],
     ["Ivy O'Connor", "20:45.0", 2008, "Sr."], ["Emily Sullivan", "20:46.8", 2023, "Fr."], ["Katherine Crum", "21:03.9", 2016, "Sr."],
@@ -433,7 +434,7 @@ const MILESTONES = [
   { year: "2023", text: "The boys win the MIAA 2B divisional meet, then the MIAA Division II state championship." },
   { year: "2024", text: "Will Conklin is named NEC Boys Cross Country Runner of the Year and runs 15:53.1, the fastest 5K on the program's all-time list." },
   { year: "2025", text: "The girls go 5–2 and win the NEC Lynch Division. Grace Conklin is named NEC All-Conference." },
-  { year: "2026", text: "Marcus Morais wins two races, at Salem and at home against Saugus/Winthrop, and the boys take a 28–29 thriller at Salem, their first dual-meet win since 2024. Grace Conklin runs 19:46.7 at the Bay State Invitational, fifth on the girls' all-time 5K list, and makes the All-NEC team for the second straight year, then qualifies for the MIAA state meet as an individual." }
+  { year: "2026", text: "Marcus Morais wins two races, at Salem and at home against Saugus/Winthrop, and the boys take a 28–29 thriller at Salem, their first dual-meet win since 2024. Grace Conklin makes the All-NEC team for the second straight year, then runs 19:36.3 at the Division 2 meet, fourth on the girls' all-time 5K list, to qualify for the MIAA state meet as an individual." }
 ];
 
 const STANDOUTS = [
@@ -444,8 +445,8 @@ const STANDOUTS = [
     bio: "Named Northeastern Conference Boys Cross Country Runner of the Year in 2024. His 15:53.1 that fall is the fastest 5K on the program's all-time list.",
     tags: ["NEC Runner of the Year", "15:53.1 5K"] },
   { name: "Grace Conklin", role: "Girls · Class of 2027", year: "2025",
-    bio: "NEC All-Conference in 2025 and 2026 and a senior captain in 2026. Her 19:46.7 at the 2026 Bay State Invitational ranks fifth on the girls' all-time 5K list.",
-    tags: ["2× NEC All-Conference", "Captain", "19:46.7 5K"] },
+    bio: "NEC All-Conference in 2025 and 2026 and a senior captain in 2026. Her 19:36.3 at the 2026 MIAA Division 2 meet ranks fourth on the girls' all-time 5K list.",
+    tags: ["2× NEC All-Conference", "Captain", "19:36.3 5K"] },
   { name: "Madyson Danish", role: "Girls · Class of 2028", year: "2025",
     bio: "A 2025 NEC All-Star as a sophomore, and a race winner in 2026. Her 21:20.8 is 20th on the girls' all-time 5K list.",
     tags: ["NEC All-Star"] },
