@@ -78,12 +78,12 @@ const TEAMS = {
           ["2026-01-30", 0, "NEC Dive Championships", "NEC", null, null, null, "7 teams"],
           ["2026-01-31", 0, "NEC Swim Championships", "NEC", null, null, null, "7 teams"]
         ],
-        note: "Every meet on the school's ArbiterLive schedule, with the scores entered there; two duals have no score on file. The season record is from the school's team page.",
+        note: "Every meet on the school's ArbiterLive schedule, with the scores entered there; two duals have no score on file. The season record is from the school's team page. State and sectional places and times from the MIAA's official results.",
         photo: { src: "../images/teams/swim-dive.jpg", caption: "The 2025–26 Danvers swim and dive team. Photo from the Danvers High School athletics page." },
-        post: "Zachary Cotter and Max Scott swam at the Division 2 state meet",
+        post: "36th at the Division 2 state meet (6 points), all from Zachary Cotter's 11th in the 100 backstroke",
         keyPlayers: [
-          { name: "Zachary Cotter", note: "Senior. Qualified for the Division 2 state meet in the 100 freestyle and the 100 backstroke; NEC All-Conference the winter before." },
-          { name: "Max Scott", note: "Qualified for the Division 2 state meet in the 100 breaststroke (seeded 1:06.41); NEC All-Conference the winter before." }
+          { name: "Zachary Cotter", note: "Senior. 11th in the 100 backstroke (57.70) and 17th in the 100 freestyle (51.13) at the Division 2 state meet, after 14th in the 100 free at the North sectional." },
+          { name: "Max Scott", note: "20th in the 100 breaststroke at the Division 2 state meet (1:06.18); NEC All-Conference the winter before." }
         ]
       },
       {
@@ -102,7 +102,12 @@ const TEAMS = {
         allStars: "Caleb Clark",
         note: "Every meet on the school's ArbiterLive schedule, with the scores entered there; the record counts the meets with a score. Honors from the school's team page.",
         record: "3–4",
-        keyPlayers: [{ name: "Zachary Cotter", note: "NEC All-Conference and a Salem News all-star." }, { name: "Max Scott", note: "NEC All-Conference." }, { name: "Caleb Clark", note: "NEC All-Star." }]
+        post: "Zachary Cotter, 16th in the 100 backstroke at the Division 2 state meet",
+        keyPlayers: [
+          { name: "Zachary Cotter", note: "NEC All-Conference and a Salem News all-star. 16th in the 100 backstroke at the Division 2 state meet (57.84) as a junior." },
+          { name: "Max Scott", note: "NEC All-Conference." },
+          { name: "Caleb Clark", note: "NEC All-Star." }
+        ]
       },
       {
         season: "2023–24",
@@ -123,11 +128,19 @@ const TEAMS = {
     banners: [],
     necTitles: [1991],
     historyNote: "No swim and dive record book is posted. The NEC title is from the school's team page; season records since 2021–22 count the dual meets with a score on ArbiterLive, except 2021–22 (4–3), from the Salem News, and 2025–26, from the school's team page.",
-    seasons: [[2026, 2, 4, 0, "Meghan Beaulieu", "", "2 swimmers at the Division 2 state meet"], [2025, 3, 4, 0, "", "", ""], [2024, 3, 3, 0, "", "", ""], [2023, 1, 2, 0, "", "", ""], [2022, 4, 3, 0, "", "", "3rd at the NEC Championships"]],
+    seasons: [
+      [2026, 2, 4, 0, "Meghan Beaulieu", "", "36th at the Division 2 state meet (6 points)"],
+      [2025, 3, 4, 0, "", "", "40th at the Division 2 state meet (1 point)"],
+      [2024, 3, 3, 0, "", "", ""],
+      [2023, 1, 2, 0, "", "", ""],
+      [2022, 4, 3, 0, "", "", "3rd at the NEC Championships"],
+      [2020, null, null, null, "", "", "Raphael Hicaro and the 200 free relay at the Division 2 state meet"]
+    ],
     honors: [
-      { year: 2026, captains: "", allLeague: "", note: "Division 2 state meet: Zachary Cotter (100 free, 100 back), Max Scott (100 breaststroke)" },
+      { year: 2026, captains: "", allLeague: "", note: "Division 2 state meet: Zachary Cotter 11th (100 back) and 17th (100 free), Max Scott 20th (100 breaststroke)" },
       { year: 2025, captains: "", allLeague: "Zachary Cotter, Max Scott", note: "NEC All-Star: Caleb Clark; Salem News all-star: Zachary Cotter" },
       { year: 2023, captains: "", allLeague: "Spencer Keyes", note: "NEC All-Stars: Kylee McGraw, Zachary Cotter" },
+      { year: 2020, captains: "", allLeague: "", note: "Division 2 state meet: Raphael Hicaro (50 free) and the 200 free relay" },
       { year: 2019, captains: "", allLeague: "", note: "Jared Casey, NEC Male Swimmer of the Year; Jack O'Neill, NEC Male Diver of the Year; Meghan Beaulieu, NEC Coach of the Year" },
       { year: 2017, captains: "", allLeague: "", note: "Meghan Beaulieu, NEC Coach of the Year" },
       { year: 2011, captains: "", allLeague: "", note: "Graham Beck, NEC Male Swimmer of the Year" }
@@ -141,7 +154,8 @@ const TEAMS = {
       { year: "2019", text: "Three of the NEC's top swimming awards go to Danvers: Jared Casey is Male Swimmer of the Year, Jack O'Neill Male Diver of the Year, and Meghan Beaulieu Coach of the Year for the second time." },
       { year: "2022", text: "After an 0–3 start the Falcons win their last four meets, against Salem, Peabody, Gloucester and Masconomet, and place 3rd at the NEC Championships." },
       { year: "2025", text: "Zachary Cotter and Max Scott are named NEC All-Conference and Caleb Clark an NEC All-Star." },
-      { year: "2026", text: "Zachary Cotter (100 freestyle, 100 backstroke) and Max Scott (100 breaststroke) swim at the MIAA Division 2 state meet." }
+      { year: "2025", text: "Zachary Cotter scores the Falcons' first state meet point on file, 16th in the Division 2 100 backstroke." },
+      { year: "2026", text: "Zachary Cotter swims to 11th in the Division 2 100 backstroke (57.70) and 17th in the 100 freestyle, and freshman Max Scott is 20th in the 100 breaststroke." }
     ],
     follow: [
       { kind: "Instagram", title: "@dhs_swimstagram", text: "Danvers Swim, the swim and dive team's own Instagram.", url: "https://www.instagram.com/dhs_swimstagram/", go: "Instagram" },
