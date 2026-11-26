@@ -437,7 +437,7 @@ const SCHEDULE = [
       "Vinny Lacount's return opened the scoring",
       "Tewksbury (10–1) plays No. 5 Walpole for the Division 4 title; Walpole beat No. 1 Scituate, the two-time defending champion, 29–28",
       "Zach Fultz's 46-yard run cut it to 14–7 in the 2nd quarter; Tewksbury scored again before the half and shut Danvers out the rest of the way",
-      "Danvers still has its Thanksgiving game at Gloucester on Thursday, Nov. 26"
+      "Danvers closed its season on Thanksgiving at Gloucester, a 7–0 loss"
     ],
     sources: [
       { label: "MIAA Division 4 bracket", url: "https://www.miaa.net/miaa-football-2026-division-4-state-tournament" },
@@ -447,9 +447,30 @@ const SCHEDULE = [
       { label: "MaxPreps game page", url: "https://www.maxpreps.com/ma/football/game/danvers-vs-tewksbury-memorial/11-20-2026/?c=0fc7b1ed-76d0-4913-8d3c-5c14e6dc985f" },
       { label: "Tewksbury 49, Shepherd Hill 14 (MaxPreps)", url: "https://www.maxpreps.com/ma/football/game/shepherd-hill-regional-dudley-vs-tewksbury-memorial/11-13-2026/?c=a25582ba-4d94-459c-9793-03ecf523088e" }
     ] },
-  { id: 9, date: "2026-11-26T10:00", opponent: "Gloucester", mascot: "Fishermen", home: false, league: false, site: "Newell Stadium, Gloucester", result: null,
-    notes: ["Thanksgiving Day rivalry, played every Thanksgiving morning since 1964"],
-    sources: [{ label: "Watch live on NFHS Network", url: "https://www.nfhsnetwork.com/events/gloucester-high-school-gloucester-ma/gam6c9d84ba83" }] }
+  { id: 9, date: "2026-11-26T10:00", opponent: "Gloucester", mascot: "Fishermen", home: false, league: false, site: "Newell Stadium, Gloucester",
+    result: "L", us: 0, them: 7,
+    quarters: { us: [0, 0, 0, 0], them: [0, 7, 0, 0] },
+    scoring: [
+      { q: "2nd", play: "Gloucester: Tanner Smith 22 pass from Cole Mosley-Wynn (Fode Kaba kick)", score: "0–7" }
+    ],
+    performers: [
+      { name: "Danvers defense", line: "Held Gloucester to one touchdown and kept it scoreless after halftime" }
+    ],
+    summary: "One play decided the 78th Thanksgiving meeting. Gloucester quarterback Cole Mosley-Wynn found Tanner Smith for a 22-yard touchdown in the second quarter, Fode Kaba added the kick, and neither team scored again. The Fishermen (9–1) won on Thanksgiving for the second year in a row, and Danvers finished its season 9–2.",
+    tag: "Thanksgiving",
+    notes: [
+      "Thanksgiving Day rivalry, played every Thanksgiving morning since 1964; this was the 78th Thanksgiving meeting",
+      "Scoreless after one quarter and 7–0 Gloucester at halftime",
+      "Danvers was shut out for the first time this season",
+      "Gloucester's second straight Thanksgiving win over Danvers, after a 27–7 win at Danvers last year",
+      "The Globe has Gloucester leading the all-time series 48–28–2",
+      "Danvers finishes 9–2: a perfect regular season, the NEC Dunn Division title and a trip to the Division 4 semifinals"
+    ],
+    sources: [
+      { label: "Boston Globe box score", url: "https://www.bostonglobe.com/sports/high-schools/story/?season=202627&sport=football&id=20261126-1-danvers-gloucester" },
+      { label: "Boston Globe Thanksgiving live blog", url: "https://www.bostonglobe.com/2026/11/26/sports/massachusetts-thanksgiving-football-live-scores/" },
+      { label: "Full-game stream on NFHS Network", url: "https://www.nfhsnetwork.com/events/gloucester-high-school-gloucester-ma/gam6c9d84ba83" }
+    ] }
 ];
 
 /* ---------------------------------------------------------------------
@@ -472,7 +493,7 @@ const SCHEDULE = [
    Globe's scoring summaries.
    Replace with the team's official numbers when you get them.
    --------------------------------------------------------------------- */
-const STATS_AS_OF = "Touchdowns and points through 11 games (Nov. 20, 2026) · yardage through Oct. 23";
+const STATS_AS_OF = "Touchdowns and points through all 11 games (Danvers didn't score on Thanksgiving) · yardage through Oct. 23";
 
 const PLAYERS = [
   { name: "Zach Fultz", num: null, pos: ["RB", "DB"], grade: "Jr.", captain: false,
@@ -565,6 +586,7 @@ const TITLES = [
    2004 on), nec = conference finish, post = MIAA tournament. Title years come
    from TITLES. w: null = no team that year. */
 const SEASONS = [
+  { year: 2026, w: 9, l: 2, t: 0, lw: 3, ll: 0, coach: "Ryan Nolan", nec: "Dunn Division champions", post: "Division 4 semifinals — beat Bedford 30–27 and Tantasqua 40–35, lost 28–7 to Tewksbury" },
   { year: 2025, w: 6, l: 5, t: 0, lw: 2, ll: 2, coach: "Ryan Nolan", nec: "2nd", post: "Division 4 Round of 16 — lost 36–20 to Ashland" },
   { year: 2024, w: 5, l: 6, t: 0, lw: 3, ll: 2, coach: "Ryan Nolan", nec: "3rd", post: "Lost 27–0 to Foxborough" },
   { year: 2023, w: 8, l: 4, t: 0, lw: 3, ll: 1, coach: "Ryan Nolan", nec: "2nd", post: "Division 5 Final Four — went 2–1, lost 27–24 to Hanover" },
@@ -761,7 +783,7 @@ const MILESTONES = [
   { year: "2004–05", text: "Back-to-back NEC championships." },
   { year: "2019", text: "A 9–2 season and a perfect 4–0 league record deliver another NEC title." },
   { year: "2023", text: "An 8–4 run carries Danvers to the MIAA Division 5 Final Four." },
-  { year: "2026", text: "A perfect 7–0 regular season and the NEC Dunn Division title, clinched 17–14 at Peabody on Colby Medeiros's 66-yard punt return. Wins over Bedford (30–27) and Tantasqua (40–35) put the Falcons in the Division 4 semifinals, where the season's only loss came 28–7 to Tewksbury." }
+  { year: "2026", text: "A perfect 7–0 regular season and the NEC Dunn Division title, clinched 17–14 at Peabody on Colby Medeiros's 66-yard punt return. Wins over Bedford (30–27) and Tantasqua (40–35) put the Falcons in the Division 4 semifinals, where Tewksbury won 28–7. Gloucester won the Thanksgiving game 7–0, and the Falcons finished 9–2." }
 ];
 
 const LEGENDS = [
