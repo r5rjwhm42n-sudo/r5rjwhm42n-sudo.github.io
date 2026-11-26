@@ -89,7 +89,7 @@ const TEAM = {
       { seeds: [3, 6], score: [3, 0], date: "2026-11-12T17:30" },
       { seeds: [1, 4], score: [3, 1], date: "2026-11-18T18:00", site: "Bridgewater-Raynham Regional High School, Bridgewater" },
       { seeds: [2, 3], score: [2, 3], date: "2026-11-18T18:00", site: "Westwood High School, Westwood" },
-      { seeds: [1, 3], date: "2026-11-21T09:30", site: "Newton South High School, Newton" }
+      { seeds: [1, 3], score: [3, 1], date: "2026-11-21T09:30", site: "Newton South High School, Newton" }
     ]
   },
   address: "60 Cabot Road, Danvers, MA 01923",
@@ -691,6 +691,7 @@ const SEASONS = [
    allStars:  NEC All-Stars
    Leave out anything the book doesn't have. */
 const HONORS = [
+  { year: 2026, captains: "Gabrielle Lindeman, Lauren Garofalo, Kendall Murphy", allStars: "Gabrielle Lindeman, Lauren Garofalo" },
   { year: 2025, captains: "Angie Djoko, Diahana Kassiotis", allStars: "Gabby Lindemen" },
   { year: 2024, captains: "Audrey Lapine, Mia Gongas, Kelly McCrea", allLeague: "Audrey Lapine", allStars: "Mia Gongas, Sophia DiPaulo" },
   { year: 2023, captains: "Audrey Lapine, Katelyn Cicerone, Riley Devitt", allLeague: "Katelyn Cicerone, Riley Devitt, Audrey Lapine",

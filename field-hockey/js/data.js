@@ -78,7 +78,7 @@ const TEAM = {
       { seeds: [3, 6], score: [2, 0], date: "2026-11-14T14:00", site: "Dover-Sherborn High School, Dover" },
       { seeds: [1, 4], score: [0, 1], date: "2026-11-17T19:00", site: "Bridgewater-Raynham Regional High School, Bridgewater" },
       { seeds: [2, 3], score: [3, 1], date: "2026-11-17T17:00", site: "Bridgewater-Raynham Regional High School, Bridgewater" },
-      { seeds: [2, 4], date: "2026-11-21T10:00", site: "UMass Dartmouth, Dartmouth" }
+      { seeds: [2, 4], score: [3, 1], date: "2026-11-21T10:00", site: "UMass Dartmouth, Dartmouth" }
     ]
   },
   links: {

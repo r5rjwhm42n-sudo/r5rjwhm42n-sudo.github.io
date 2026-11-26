@@ -133,7 +133,7 @@ const TEAMS = {
         { seeds: [3, 6], score: [2, 3], date: "2026-11-14T16:00", site: "King Philip Regional High School, Wrentham" },
         { seeds: [1, 4], score: [5, 0], date: "2026-11-17T18:00", site: "Hormel Stadium, Medford" },
         { seeds: [2, 6], score: [5, 2], date: "2026-11-17T19:00", site: "Scituate High School, Scituate" },
-        { seeds: [1, 2], date: "2026-11-21T12:15", site: "Worcester State University, Worcester" }
+        { seeds: [1, 2], score: [1, 0], date: "2026-11-21T12:15", site: "Worcester State University, Worcester" }
       ]
     },
     headCoach: "Jimmy Hinchion",
@@ -563,7 +563,8 @@ const TEAMS = {
        (MVP) = NEC MVP. Leave out anything the book doesn't have. "…" marks a
        name the book doesn't finish. */
     honors: [
-      { year: 2026, captains: "Emma Sutherland, Maddie Hanas, Cassidy Randall, Ali Doucette" },
+      { year: 2026, captains: "Emma Sutherland, Maddie Hanas, Cassidy Randall, Ali Doucette", allLeague: "Ali Doucette, Mia St. Pierre",
+        allStars: "Emma Sutherland" },
       { year: 2025, captains: "Addi McCarty, Lila Doucette, Ashley Freitas, Lily Delafano", allLeague: "Addi McCarty, DeAnna Figueirdo",
         allStars: "Rylee Sullivan, Lilla Doucette" },
       { year: 2024, captains: "Brooke Wynott, Georgia Prouty, Maddie Dembowski", allLeague: "Georgia Prouty (MVP), Ashley Freitas",
@@ -1028,7 +1029,7 @@ const TEAMS = {
        (POY) = NEC Player of the Year. Leave out anything the book doesn't
        have. "…" marks a name the book doesn't finish. */
     honors: [
-      { year: 2026, captains: "Luke Wynott, Matt McCrea, Nathan Kounga, Bryce Page" },
+      { year: 2026, captains: "Luke Wynott, Matt McCrea, Nathan Kounga, Bryce Page", allStars: "Andrew Morse" },
       { year: 2025, captains: "Luca D'Angelo, Jack Chronis, Gianluca Locilento, Drew Godfried, Connor DiTomaso", allLeague: "Gianluca Locilento" },
       { year: 2024, captains: "Bradley Piscitello, Kevin Oulette, Keegan Witterton", allLeague: "Gianluca Locilento" },
       { year: 2023, captains: "Chris McCrea, Kevin Oulette, Bradley Piscitello" },

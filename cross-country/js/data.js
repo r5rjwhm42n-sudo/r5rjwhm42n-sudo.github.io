@@ -448,8 +448,8 @@ const STANDOUTS = [
     bio: "NEC All-Conference in 2025 and 2026 and a senior captain in 2026. Her 19:36.3 at the 2026 MIAA Division 2 meet ranks fourth on the girls' all-time 5K list.",
     tags: ["2× NEC All-Conference", "Captain", "19:36.3 5K"] },
   { name: "Madyson Danish", role: "Girls · Class of 2028", year: "2025",
-    bio: "A 2025 NEC All-Star as a sophomore, and a race winner in 2026. Her 21:20.8 is 20th on the girls' all-time 5K list.",
-    tags: ["NEC All-Star"] },
+    bio: "An NEC All-Star in 2025 and again in 2026, and a race winner in 2026. Her 21:20.8 is 20th on the girls' all-time 5K list.",
+    tags: ["2× NEC All-Star"] },
   { name: "Addison Lamar", role: "Girls", year: "2025",
     bio: "A 2025 NEC All-Star on the Lynch Division championship team.",
     tags: ["NEC All-Star"] }
