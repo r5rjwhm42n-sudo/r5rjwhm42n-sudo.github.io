@@ -192,10 +192,15 @@ UID:football-9@danversfalconsathletics.org
 DTSTAMP:20260801T000000Z
 DTSTART;TZID=America/New_York:20261126T100000
 DURATION:PT2H30M
-SUMMARY:Danvers Football at Gloucester
+SUMMARY:Danvers Football at Gloucester (L 0–7)
 LOCATION:Newell Stadium\, Gloucester
-DESCRIPTION:Non-league\nSchedule and results: https://danversfalconsathleti
- cs.org/football/#schedule
+DESCRIPTION:Non-league\nFinal: Danvers 0\, Gloucester 7\nOne play decided t
+ he 78th Thanksgiving meeting. Gloucester quarterback Cole Mosley-Wynn foun
+ d Tanner Smith for a 22-yard touchdown in the second quarter\, Fode Kaba a
+ dded the kick\, and neither team scored again. The Fishermen (9–1) won o
+ n Thanksgiving for the second year in a row\, and Danvers finished its sea
+ son 9–2.\nSchedule and results: https://danversfalconsathletics.org/foot
+ ball/#schedule
 URL:https://danversfalconsathletics.org/football/#schedule
 END:VEVENT
 END:VCALENDAR
