@@ -791,7 +791,8 @@ const TEAMS = {
         coach: "Chris LeBlanc",
         finish: "NEHL Champions",
         post: "Lost in a shootout at Malden Catholic in the Round of 32",
-        awards: "Ashley Freitas, NEHL All-Star and MIAA Bruins Sportsmanship Award",
+        allLeague: "Asuka Keough, Meredith Johnston", allStars: "Morgan Linskey, Ashley Freitas, Avery LeBlanc",
+        awards: "Chris LeBlanc, NEHL Coach of the Year · Ashley Freitas, MIAA Bruins Sportsmanship Award",
         photo: { src: "../images/teams/girls-hockey.jpg", caption: "Members of the 2025–26 Beverly/Danvers/Ipswich girls hockey team. Photo from the Danvers High School athletics page." },
         games: [
           ["2025-12-13", 0, "Gloucester", "", "W", 7, 5, "Dorothy Talbot Rink"],
@@ -878,9 +879,9 @@ const TEAMS = {
         ],
         note: "Game stories from the Boston Globe's high school scoreboard. Open a game to read its story.",
         keyPlayers: [
-          { name: "Asuka Keough", grade: "Jr.", note: "The Panthers' top scorer in the Globe's stories: a hat trick against Winthrop to clinch the league title, and two goals and two assists against Andover." },
-          { name: "Avery LeBlanc", grade: "So.", note: "The playmaker: four assists against Andover, three at Medford and two on Keough's goals at Peabody." },
-          { name: "Meredith Johnston", grade: "Sr.", note: "A first-period hat trick at Medford and two goals and an assist against Andover." },
+          { name: "Asuka Keough", grade: "Jr.", note: "NEHL All-Conference. The Panthers' top scorer in the Globe's stories: a hat trick against Winthrop to clinch the league title, and two goals and two assists against Andover." },
+          { name: "Avery LeBlanc", grade: "So.", note: "NEHL All-Star. The playmaker: four assists against Andover, three at Medford and two on Keough's goals at Peabody." },
+          { name: "Meredith Johnston", grade: "Sr.", note: "NEHL All-Conference. A first-period hat trick at Medford and two goals and an assist against Andover." },
           { name: "Zoie Abell", note: "Broke a 2–2 tie in the upset of No. 13 Medfield and scored twice at Masconomet." },
           { name: "Ashley Freitas", note: "NEHL All-Star and the MIAA Bruins Sportsmanship Award." }
         ]
@@ -1110,7 +1111,7 @@ const TEAMS = {
       [2012, 10, 9, 2, "", "", "Division 1 first round: lost 4–1 to Lexington"],
       [2011, 13, 8, 0, "", "", "Division 1 preliminary round: lost to Shrewsbury in a shootout"]
     ],
-    honors: [{ year: 2026, captains: "", allLeague: "Ashley Freitas", note: "Ashley Freitas, MIAA Bruins Sportsmanship Award" }, { year: 2024, captains: "", allLeague: "", note: "Salem News all-stars: Halle Greenleaf, Meredith Johnston" }],
+    honors: [{ year: 2026, captains: "", allLeague: "Asuka Keough, Meredith Johnston", note: "NEHL All-Stars: Morgan Linskey, Ashley Freitas, Avery LeBlanc; Chris LeBlanc, NEHL Coach of the Year; Ashley Freitas, MIAA Bruins Sportsmanship Award" }, { year: 2024, captains: "", allLeague: "", note: "Salem News all-stars: Halle Greenleaf, Meredith Johnston" }],
     milestones: [
       { year: "2005", text: "The co-operative girls hockey program begins play, bringing together players from Danvers, Beverly and Ipswich, with Fiona Rice as its first coach." },
       { year: "2012", text: "Brian Seabury takes over. In six seasons his teams go 87–35–10 and win four league titles." },
@@ -1121,7 +1122,7 @@ const TEAMS = {
       { year: "2022", text: "Back in the state tournament for the first time in five seasons, in Division 1." },
       { year: "2024", text: "An 11–9–1 season and a trip to the state tournament, ending in the first round at Plymouth." },
       { year: "2025", text: "Back in the state tournament despite an 8–13 record, with a Round of 32 game at Burlington/Central Catholic." },
-      { year: "2026", text: "A 15–6 season and the Northeast Hockey League championship. Ashley Freitas is a league all-star and wins the MIAA Bruins Sportsmanship Award." }
+      { year: "2026", text: "A 15–6 season and the Northeast Hockey League championship, won as Dunn Division champions. Chris LeBlanc is the league's Coach of the Year, Asuka Keough and Meredith Johnston are All-Conference, and Ashley Freitas wins the MIAA Bruins Sportsmanship Award." }
     ],
     follow: [
       { kind: "Schedule", title: "MyHockeyLive", text: "The co-op team's schedule, scores and standings.", url: "https://www.myhockeylive.com/miaa/teams/4397-beverly-danvers-ipswich", go: "MyHockeyLive" },
@@ -1131,8 +1132,8 @@ const TEAMS = {
     news: [],
     photos: [],
     returning: [
-      { name: "Asuka Keough", grade: "Sr.", note: "Last winter's top scorer, with the title-clinching hat trick against Winthrop." },
-      { name: "Avery LeBlanc", grade: "Jr.", note: "Four assists in one game against Andover last winter." },
+      { name: "Asuka Keough", grade: "Sr.", note: "Last winter's top scorer and an NEHL All-Conference pick, with the title-clinching hat trick against Winthrop." },
+      { name: "Avery LeBlanc", grade: "Jr.", note: "An NEHL All-Star last winter, with four assists in one game against Andover." },
       { name: "Emily Tibbetts", grade: "Sr.", note: "Scored against Wakefield/Wilmington and Gloucester last winter." }
     ],
     returningNote: "Picked from last winter's results and game stories.",

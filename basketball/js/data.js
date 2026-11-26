@@ -52,7 +52,7 @@ const TEAMS = {
       recordBook: "https://docs.google.com/spreadsheets/d/1qf7e1RGZkG9hAWzIqTPi8bHVbajBI5YpY_EwnUyab4w/edit?gid=1756060361#gid=1756060361",
       watch: "https://www.nfhsnetwork.com/schools/danvers-high-school-danvers-ma"
     },
-    staff: [["Head coach", "Jabari Clarke", "Fourth season"], ["Assistant coach", "Jared McCarron"], ["JV coaches", "Ted Cottrell & Ryan Dumont"], ["Freshman coach", "Peter Spiros"]],
+    staff: [["Head coach", "Jabari Clarke", "Fourth season"], ["Assistant coach", "Jared McCarron"], ["JV coach", "Jani Mired"], ["Freshman coach", "Peter Spiros"]],
     about: [
       "Danvers boys basketball has won seven Northeastern Conference titles and three state championships. All three state titles came in a four-year run under coach John Walsh: Division 3 in 2012 and 2013, then Division 2 in 2015, when the Falcons went 27–0.",
       "The Falcons play their home games in the Danvers High School Field House and face Northeastern Conference rivals Beverly, Peabody, Marblehead, Masconomet, Gloucester, Salem, Saugus, Swampscott and Winthrop.",
@@ -419,7 +419,7 @@ const TEAMS = {
     ],
     honors: [
       { year: 2026, captains: "Connor DiTomaso, Luca Tirella, Kyle Sillars", allLeague: "", note: "Salem News all-star: Kyle Sillars" },
-      { year: 2025, captains: "Kevin Ahearn, Zach Calabro, Connor DiTomaso", allLeague: "", note: "" },
+      { year: 2025, captains: "Kevin Ahearn, Zach Calabro, Connor DiTomaso", allLeague: "", note: "NEC Dunn Division All-Star: Kyle Sillars" },
       { year: 2024, captains: "Logan Meteivier, Luke Meteivier, and Michal Kazprzak", allLeague: "", note: "" },
       { year: 2019, captains: "", allLeague: "Justin DiTomaso", note: "Chris Timson: Salem News Coach of the Year" },
       { year: 2016, captains: "Devonn Allen, Tre Crittendon, Rashad Francois", allLeague: "Devonn Allen, Rashad Francois", note: "" },
@@ -885,7 +885,7 @@ const TEAMS = {
     ],
     honors: [
       { year: 2026, captains: "Angie Djoko, Lila Flynn, Kayda Brown", allLeague: "", note: "Dave Chisholm: NEC Coach of the Year" },
-      { year: 2025, captains: "Kayda Brown, Angie Djoko, Gianna Ferrero, Maddie Shairs", allLeague: "Angie Djoko", note: "" },
+      { year: 2025, captains: "Kayda Brown, Angie Djoko, Gianna Ferrero, Maddie Shairs", allLeague: "Angie Djoko", note: "NEC Dunn Division All-Stars: Annabell Boyd, Kayda Brown" },
       { year: 2024, captains: "Reese Holland, Aundrea Guadino, Molly Godfried", allLeague: "Angie Djoko", note: "" },
       { year: 2023, captains: "Eliana Anderson, Kaylee Marsello, Emma McCullough", allLeague: "", note: "" },
       { year: 2022, captains: "Kristina Yebba, Gabby Chisolm", allLeague: "", note: "" },
