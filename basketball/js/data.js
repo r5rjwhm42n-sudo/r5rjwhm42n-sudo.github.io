@@ -565,7 +565,7 @@ const TEAMS = {
         captains: "Angie Djoko, Lila Flynn, Kayda Brown",
         photo: { src: "../images/teams/girls-basketball.jpg", caption: "The 2025–26 Danvers girls basketball team. Photo from the Danvers High School athletics page." },
         allStars: "Kayda Brown, Annabel Boyd, Sienna Lynch",
-        awards: "Angie Djoko, NEC Player of the Year · Dave Chisholm, NEC Coach of the Year · 19–2 is the school record",
+        awards: "Angie Djoko, NEC Player of the Year and Boston Globe All-Scholastic · Dave Chisholm, NEC Coach of the Year · 19–2 is the school record",
         games: [
           ["2025-12-12", 1, "Marblehead", "NEC", "W", 54, 25, "", "Captain Kayda Brown nailed three 3-pointers in an 11-point performance as the Falcons (1-0) soared to a Northeastern home win. Angie Djoko added 8 points, 6 rebounds and 3 steals."],
           [
@@ -886,7 +886,7 @@ const TEAMS = {
       [1994, 4, 15, 0, "Jen Mscisz", "", ""]
     ],
     honors: [
-      { year: 2026, captains: "Angie Djoko, Lila Flynn, Kayda Brown", allLeague: "", note: "Dave Chisholm: NEC Coach of the Year" },
+      { year: 2026, captains: "Angie Djoko, Lila Flynn, Kayda Brown", allLeague: "", note: "Angie Djoko: NEC Player of the Year and Boston Globe All-Scholastic; Dave Chisholm: NEC Coach of the Year" },
       { year: 2025, captains: "Kayda Brown, Angie Djoko, Gianna Ferrero, Maddie Shairs", allLeague: "Angie Djoko", note: "NEC Dunn Division All-Stars: Annabell Boyd, Kayda Brown" },
       { year: 2024, captains: "Reese Holland, Aundrea Guadino, Molly Godfried", allLeague: "Angie Djoko", note: "" },
       { year: 2023, captains: "Eliana Anderson, Kaylee Marsello, Emma McCullough", allLeague: "", note: "" },

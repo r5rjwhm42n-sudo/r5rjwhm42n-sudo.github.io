@@ -51,16 +51,16 @@ const TEAMS = {
     rosterNote: "The 2026–27 roster will be posted after practice begins Monday, Nov. 30.",
     schedule: [
       { id: 1, date: "2026-12-17T19:30", opponent: "Peabody", mascot: "Tanners", home: false, league: true, site: "Peabody YMCA, Peabody", result: null },
-      { id: 9, date: "2026-12-19T13:00", name: "NEC meet at the Peabody YMCA", opponent: "Gloucester and six more teams", home: false, league: true, site: "Peabody YMCA, Peabody", result: null, notes: ["A seven-team Northeastern Conference meet on the school's ArbiterLive schedule"] },
+      { id: 9, date: "2026-12-19T13:00", name: "NEC meet at the Peabody YMCA", opponent: "Gloucester and six more teams", home: false, league: true, site: "Peabody YMCA, Peabody", result: null, notes: ["A seven-team Northeastern Conference meet on the school's ArbiterLive schedule", "Last winter, the seven- and eight-team NEC meets on the schedule were listed as diving meets"] },
       { id: 2, date: "2026-12-23T16:00", opponent: "Marblehead", mascot: "Magicians", home: false, league: true, site: "Lynch/van Otterloo YMCA, Marblehead", result: null },
       { id: 3, date: "2027-01-06T19:00", opponent: "Swampscott", mascot: "Big Blue", home: false, league: true, site: "Jewish Community Center, Marblehead", result: null },
       { id: 4, date: "2027-01-07T20:00", opponent: "Hamilton-Wenham", mascot: "Generals", home: false, league: true, site: "Gordon College, Wenham", result: null },
-      { id: 10, date: "2027-01-09T13:00", name: "NEC meet at the Peabody YMCA", opponent: "Gloucester and six more teams", home: false, league: true, site: "Peabody YMCA, Peabody", result: null, notes: ["A seven-team Northeastern Conference meet on the school's ArbiterLive schedule"] },
+      { id: 10, date: "2027-01-09T13:00", name: "NEC meet at the Peabody YMCA", opponent: "Gloucester and six more teams", home: false, league: true, site: "Peabody YMCA, Peabody", result: null, notes: ["A seven-team Northeastern Conference meet on the school's ArbiterLive schedule", "Last winter, the seven- and eight-team NEC meets on the schedule were listed as diving meets"] },
       { id: 5, date: "2027-01-11T17:00", opponent: "Lynn Classical", home: false, league: false, site: "Lynn Vocational Technical Institute, Lynn", result: null },
       { id: 6, date: "2027-01-13T18:30", opponent: "Gloucester", mascot: "Fishermen", home: true, league: true, site: "St. John's Prep, 72 Spring Street, Danvers", result: null, notes: ["A home meet at St. John's Prep"] },
       { id: 7, date: "2027-01-20T18:30", opponent: "Salem", mascot: "Witches", home: true, league: true, site: "St. John's Prep, 72 Spring Street, Danvers", result: null, notes: ["A home meet at St. John's Prep"] },
       { id: 8, date: "2027-01-27T18:30", opponent: "Masconomet", mascot: "Chieftains", home: true, league: true, site: "St. John's Prep, 72 Spring Street, Danvers", result: null, notes: ["A home meet at St. John's Prep"] },
-      { id: 11, date: "2027-01-29T19:00", name: "NEC meet at the Peabody YMCA", opponent: "Gloucester and six more teams", home: false, league: true, site: "Peabody YMCA, Peabody", result: null, notes: ["A seven-team Northeastern Conference meet on the school's ArbiterLive schedule"] }
+      { id: 11, date: "2027-01-29T19:00", name: "NEC meet at the Peabody YMCA", opponent: "Gloucester and six more teams", home: false, league: true, site: "Peabody YMCA, Peabody", result: null, notes: ["A seven-team Northeastern Conference meet on the school's ArbiterLive schedule", "Last winter, the seven- and eight-team NEC meets on the schedule were listed as diving meets"] }
     ],
     players: [],
     pastIntro: "The last three winters, meet by meet, with team scores.",
@@ -69,6 +69,7 @@ const TEAMS = {
         season: "2025–26",
         record: "2–4",
         coach: "Meghan Beaulieu",
+        allStars: "Caleb Clark, Max Scott",
         games: [
           ["2025-12-19", 0, "Masconomet", "NEC", "L", 74, 88, ""],
           ["2025-12-20", 0, "NEC Dive", "NEC", null, null, null, "7 teams"],
@@ -86,7 +87,8 @@ const TEAMS = {
         post: "36th at the Division 2 state meet (6 points), all from Zachary Cotter's 11th in the 100 backstroke",
         keyPlayers: [
           { name: "Zachary Cotter", note: "Senior. 11th in the 100 backstroke (57.70) and 17th in the 100 freestyle (51.13) at the Division 2 state meet, after 14th in the 100 free at the North sectional." },
-          { name: "Max Scott", note: "20th in the 100 breaststroke at the Division 2 state meet (1:06.18); NEC All-Conference the winter before." }
+          { name: "Max Scott", note: "20th in the 100 breaststroke at the Division 2 state meet (1:06.18). An NEC All-Star, after NEC All-Conference the winter before. The MIAA's results list him in the class of 2029, which doesn't fit with a 2024–25 All-Conference pick; the two sources disagree." },
+          { name: "Caleb Clark", note: "An NEC All-Star (the Boston Globe's league list)." }
         ]
       },
       {
@@ -140,7 +142,7 @@ const TEAMS = {
       [2020, null, null, null, "", "", "Raphael Hicaro and the 200 free relay at the Division 2 state meet"]
     ],
     honors: [
-      { year: 2026, captains: "", allLeague: "", note: "Division 2 state meet: Zachary Cotter 11th (100 back) and 17th (100 free), Max Scott 20th (100 breaststroke)" },
+      { year: 2026, captains: "", allLeague: "", note: "NEC All-Stars (Boston Globe's league list): Caleb Clark, Max Scott. Division 2 state meet: Zachary Cotter 11th (100 back) and 17th (100 free), Max Scott 20th (100 breaststroke)" },
       { year: 2025, captains: "", allLeague: "Zachary Cotter, Max Scott", note: "NEC All-Star: Caleb Clark; Salem News all-star: Zachary Cotter" },
       { year: 2023, captains: "", allLeague: "Spencer Keyes", note: "NEC All-Stars: Kylee McGraw, Zachary Cotter" },
       { year: 2020, captains: "", allLeague: "", note: "Division 2 state meet: Raphael Hicaro (50 free) and the 200 free relay" },
@@ -158,7 +160,7 @@ const TEAMS = {
       { year: "2022", text: "After an 0–3 start the Falcons win their last four meets, against Salem, Peabody, Gloucester and Masconomet, and place 3rd at the NEC Championships." },
       { year: "2025", text: "Zachary Cotter and Max Scott are named NEC All-Conference and Caleb Clark an NEC All-Star." },
       { year: "2025", text: "Zachary Cotter scores the Falcons' first state meet point on file, 16th in the Division 2 100 backstroke." },
-      { year: "2026", text: "Zachary Cotter swims to 11th in the Division 2 100 backstroke (57.70) and 17th in the 100 freestyle, and freshman Max Scott is 20th in the 100 breaststroke." }
+      { year: "2026", text: "Zachary Cotter swims to 11th in the Division 2 100 backstroke (57.70) and 17th in the 100 freestyle, and Max Scott is 20th in the 100 breaststroke." }
     ],
     follow: [
       { kind: "Instagram", title: "@dhs_swimstagram", text: "Danvers Swim, the swim and dive team's own Instagram.", url: "https://www.instagram.com/dhs_swimstagram/", go: "Instagram" },

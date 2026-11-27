@@ -64,6 +64,7 @@ const TEAMS = {
         record: "0–6",
         coach: "Jen Habeeb",
         allLeague: "Delainy Murphy",
+        awards: "Delainy Murphy, Boston Globe All-Scholastic honorable mention",
         games: [
           ["2025-12-21", 0, "Essex Tech", "", "L", 109.35, 119.7, ""],
           ["2025-12-28", 0, "Masconomet", "", "L", 122, 139, ""],
@@ -156,12 +157,12 @@ const TEAMS = {
       [2015, null, null, null, "", "", "8th at the MIAA state meet (136.975); 2nd at the North sectional"]
     ],
     honors: [
-      { year: 2026, captains: "", allLeague: "Delainy Murphy", note: "" },
+      { year: 2026, captains: "", allLeague: "Delainy Murphy", note: "Delainy Murphy, Boston Globe All-Scholastic honorable mention" },
       {
         year: 2025,
         captains: "Maddie Wescott, Camryn Donovan",
         allLeague: "Kaylee Wescott (MVP), Camryn Donovan, Callie Donovan, Sophia Catinazzo",
-        note: "Boston Globe All-Scholastics: Kaylee Wescott, state individual all-around champion, and Camryn Donovan. At the state meet Wescott was 2nd in the all-around (38.4) and won vault (9.7), and Donovan was 4th; at the North sectional Wescott won floor (9.875) and was 2nd in the all-around (38.275)"
+        note: "Boston Globe All-Scholastics: Kaylee Wescott, all-around champion at the MIAA State Individuals, and Camryn Donovan. At the state team meet (March 1) Wescott was 2nd in the all-around (38.4) and won vault (9.7), and Donovan was 4th; at the North sectional Wescott won floor (9.875) and was 2nd in the all-around (38.275)"
       },
       { year: 2024, captains: "Maddie Wescott", allLeague: "Kaylee Wescott (all-around), Camryn Donovan (bars), Callie Donovan (vault)", note: "Kaylee Wescott, North sectional all-around (38.725) and beam (9.6) champion; Camryn Donovan 7th all-around and 4th on floor" },
       { year: 2023, captains: "Maddie Wescott", allLeague: "Maddie Wescott, Kaylee Wescott, Maddie Migliero, Camryn Donovan", note: "Salem News all-stars: Camryn Donovan, Maddie Migliero, Kaylee Wescott (team MVP as an eighth grader), Maddie Wescott. State meet: Wescott tied for 2nd in the all-around (38.6), Migliero 5th (36.75); North sectional: Wescott 3rd all-around and 1st on floor (9.8)" },
