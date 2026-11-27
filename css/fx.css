@@ -289,3 +289,20 @@ html.fx-soon-locked, html.fx-soon-locked body { overflow: hidden; }
 .fx-soon-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 26px; }
 /* the winter front page's snowfall */
 .fx-snow { position: fixed; inset: 0; z-index: 80; width: 100%; height: 100%; pointer-events: none; }
+
+/* ---------- Fall history pages: past seasons, game by game (js/pastgames.js) ---------- */
+#past-games .filters { margin-bottom: 12px; }
+.pg-sum { margin: 0 0 12px; color: var(--muted); font-size: 15.5px; }
+.pg-sum b { font-family: var(--display); font-weight: 800; font-size: 19px; letter-spacing: .04em; color: var(--ink); }
+table.pg-table td { vertical-align: top; }
+.pg-res { display: inline-block; min-width: 1.4em; font-family: var(--display); font-weight: 800; }
+.pg-w { color: var(--win, #1a8a4a); } .pg-l { color: var(--loss, #c8322b); } .pg-t { color: var(--tie, var(--muted)); }
+.pg-none { color: var(--muted); }
+.pg-va { color: var(--muted); }
+.pg-tag { display: inline-block; margin-left: 6px; padding: 0 7px; border: 1px solid var(--line); border-radius: 4px; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--royal); white-space: nowrap; }
+.pg-note { display: block; margin-top: 2px; font-size: 13px; color: var(--muted); }
+@media (max-width: 560px) {
+  table.pg-table td { padding: 8px 10px; font-size: 14.5px; }
+  table.pg-table td:last-child { min-width: 150px; }
+  .pg-dow { display: none; }
+}
