@@ -607,7 +607,7 @@ const TEAMS = {
       [1946, null, null, null, "Ray Funchion", "", ""]
     ],
     honors: [
-      { year: 2026, captains: "Drew Godfried and Thomas Fish", allLeague: "Drew Godfried and Cooper Dunham", note: "" },
+      { year: 2026, captains: "Drew Godfried and Thomas Fish", allLeague: "Drew Godfried and Cooper Dunham", note: "NEC All-Stars: Evan Morey, Owen Swanton" },
       { year: 2025, captains: "Josh Henry and Seamus Cary", allLeague: "Josh Henry", note: "Salem News all-stars: Cooper Dunham, Josh Henry" },
       { year: 2024, captains: "Ty Langlais and Nick Anderson", allLeague: "Ty Langlais", note: "Salem News all-stars: Mike DeLisio, Ty Langlais" },
       { year: 2023, captains: "Trevor McNeil and Bobby Joyce", allLeague: "Trevor McNeil", note: "" },
@@ -792,7 +792,7 @@ const TEAMS = {
         finish: "NEHL Champions",
         post: "Lost in a shootout at Malden Catholic in the Round of 32",
         allLeague: "Asuka Keough, Meredith Johnston", allStars: "Morgan Linskey, Ashley Freitas, Avery LeBlanc",
-        awards: "Chris LeBlanc, NEHL Coach of the Year · Ashley Freitas, MIAA Bruins Sportsmanship Award",
+        awards: "Chris LeBlanc, NEHL Coach of the Year · Asuka Keough, Boston Globe All-Scholastic honorable mention · Ashley Freitas, MIAA Bruins Sportsmanship Award",
         photo: { src: "../images/teams/girls-hockey.jpg", caption: "Members of the 2025–26 Beverly/Danvers/Ipswich girls hockey team. Photo from the Danvers High School athletics page." },
         games: [
           ["2025-12-13", 0, "Gloucester", "", "W", 7, 5, "Dorothy Talbot Rink"],
@@ -879,7 +879,7 @@ const TEAMS = {
         ],
         note: "Game stories from the Boston Globe's high school scoreboard. Open a game to read its story.",
         keyPlayers: [
-          { name: "Asuka Keough", grade: "Jr.", note: "NEHL All-Conference. The Panthers' top scorer in the Globe's stories: a hat trick against Winthrop to clinch the league title, and two goals and two assists against Andover." },
+          { name: "Asuka Keough", grade: "Jr.", note: "NEHL All-Conference and a Boston Globe All-Scholastic honorable mention. The Panthers' top scorer in the Globe's stories: a hat trick against Winthrop to clinch the league title, and two goals and two assists against Andover." },
           { name: "Avery LeBlanc", grade: "So.", note: "NEHL All-Star. The playmaker: four assists against Andover, three at Medford and two on Keough's goals at Peabody." },
           { name: "Meredith Johnston", grade: "Sr.", note: "NEHL All-Conference. A first-period hat trick at Medford and two goals and an assist against Andover." },
           { name: "Zoie Abell", note: "Broke a 2–2 tie in the upset of No. 13 Medfield and scored twice at Masconomet." },
@@ -890,7 +890,7 @@ const TEAMS = {
         season: "2024–25",
         record: "8–13",
         coach: "Kristen McCarthy",
-        post: "Lost in the Round of 32 at Burlington/Central Catholic",
+        post: "Division 2 Round of 32 as the No. 28 seed: lost 9–2 at No. 5 Burlington/Central Catholic",
         games: [
           [
             "2024-12-12",
@@ -1085,7 +1085,7 @@ const TEAMS = {
       }
     ],
     historyIntro: "A three-town team since 2005: seven straight state tournaments from 2011 to 2017, No. 2 seeds in Division 1 three times, the Northeast Hockey League title in 2026 and five more straight tournament trips.",
-    historyNote: "No girls hockey record book is posted. Records for 2011–2017 are the regular-season records in the MIAA's tournament brackets plus the tournament games (a shootout counts as a loss); 2018–2025 are from MyHockeyLive and 2025–26 from the school's team page. Brian Seabury's six seasons add up to the 87–35–10 the Salem News reported. Head coaches from MyHockeyLive and the Salem News.",
+    historyNote: "No girls hockey record book is posted. Records for 2011–2017 are the regular-season records in the MIAA's tournament brackets plus the tournament games (a shootout counts as a loss); 2018–2025 are from MyHockeyLive and 2025–26 from the school's team page. Brian Seabury's six seasons add up to the 87–35–10 the Salem News reported. Head coaches from MyHockeyLive and the Salem News. Tournament seeds and scores are from the MIAA's bracket archive, which has no girls bracket posted for 2024 or 2026.",
     seasonsLabel: "on file",
     recordsNote: "A season is listed by the year it ended. The NEC column is the team's conference record where MyHockeyLive has one, and blank cells are details not on file.",
     honorsNote: "League and MIAA honors from the school's team page. Captains aren't posted for these seasons.",
@@ -1095,10 +1095,10 @@ const TEAMS = {
     legends: [],
     seasons: [
       [2026, 15, 6, 0, "Chris LeBlanc", "NEHL Champions (10–1)", "Round of 32 (lost in a shootout at Malden Catholic)"],
-      [2025, 8, 13, 0, "Kristen McCarthy", "5–7", "Round of 32 (lost 9–2 at Burlington/Central Catholic)"],
+      [2025, 8, 13, 0, "Kristen McCarthy", "5–7", "Division 2 Round of 32 as the No. 28 seed: lost 9–2 at No. 5 Burlington/Central Catholic"],
       [2024, 11, 9, 1, "Matt Lampert", "11–4–1", "First round (lost 3–1 at Plymouth)"],
-      [2023, 10, 10, 2, "Matt Lampert", "10–4–1", "First round (lost 2–1 at Arlington)"],
-      [2022, 9, 9, 2, "Matt Lampert", "", "Lost 7–2 at Notre Dame Academy in the Division 1 tournament"],
+      [2023, 10, 10, 2, "Matt Lampert", "10–4–1", "Division 1 Round of 32 as the No. 23 seed: lost 2–1 at No. 10 Arlington"],
+      [2022, 9, 9, 2, "Matt Lampert", "", "Division 1 Round of 32 as the No. 30 seed: lost 7–2 at No. 3 Notre Dame Academy (Hingham)"],
       [2021, 5, 9, 1, "Danielle Finocchiaro", "", ""],
       [2020, 6, 12, 2, "Danielle Finocchiaro", "3–7", ""],
       [2019, 6, 13, 0, "Danielle Finocchiaro", "2–9", ""],
@@ -1111,7 +1111,7 @@ const TEAMS = {
       [2012, 10, 9, 2, "", "", "Division 1 first round: lost 4–1 to Lexington"],
       [2011, 13, 8, 0, "", "", "Division 1 preliminary round: lost to Shrewsbury in a shootout"]
     ],
-    honors: [{ year: 2026, captains: "", allLeague: "Asuka Keough, Meredith Johnston", note: "NEHL All-Stars: Morgan Linskey, Ashley Freitas, Avery LeBlanc; Chris LeBlanc, NEHL Coach of the Year; Ashley Freitas, MIAA Bruins Sportsmanship Award" }, { year: 2024, captains: "", allLeague: "", note: "Salem News all-stars: Halle Greenleaf, Meredith Johnston" }],
+    honors: [{ year: 2026, captains: "", allLeague: "Asuka Keough, Meredith Johnston", note: "NEHL All-Stars: Morgan Linskey, Ashley Freitas, Avery LeBlanc; Chris LeBlanc, NEHL Coach of the Year; Asuka Keough, Boston Globe All-Scholastic honorable mention; Ashley Freitas, MIAA Bruins Sportsmanship Award. The league's award list and the Globe name all five; the school's team page lists only Freitas." }, { year: 2024, captains: "", allLeague: "", note: "Salem News all-stars: Halle Greenleaf, Meredith Johnston" }],
     milestones: [
       { year: "2005", text: "The co-operative girls hockey program begins play, bringing together players from Danvers, Beverly and Ipswich, with Fiona Rice as its first coach." },
       { year: "2012", text: "Brian Seabury takes over. In six seasons his teams go 87–35–10 and win four league titles." },
@@ -1132,7 +1132,7 @@ const TEAMS = {
     news: [],
     photos: [],
     returning: [
-      { name: "Asuka Keough", grade: "Sr.", note: "Last winter's top scorer and an NEHL All-Conference pick, with the title-clinching hat trick against Winthrop." },
+      { name: "Asuka Keough", grade: "Sr.", note: "Last winter's top scorer, an NEHL All-Conference pick and a Boston Globe All-Scholastic honorable mention, with the title-clinching hat trick against Winthrop." },
       { name: "Avery LeBlanc", grade: "Jr.", note: "An NEHL All-Star last winter, with four assists in one game against Andover." },
       { name: "Emily Tibbetts", grade: "Sr.", note: "Scored against Wakefield/Wilmington and Gloucester last winter." }
     ],

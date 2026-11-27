@@ -1993,7 +1993,7 @@ TEAMS.girls.past.push(...[
   "record": "10–10–2",
   "coach": "Matt Lampert",
   "finish": "10–4–1",
-  "post": "First round (lost 2–1 at Arlington)",
+  "post": "Division 1 Round of 32 as the No. 23 seed: lost 2–1 at No. 10 Arlington",
   "games": [
    [
     "2022-12-08",
@@ -2224,7 +2224,7 @@ TEAMS.girls.past.push(...[
   "season": "2021–22",
   "record": "9–9–2",
   "coach": "Matt Lampert",
-  "post": "Lost 7–2 at Notre Dame Academy in the Division 1 tournament",
+  "post": "Division 1 Round of 32 as the No. 30 seed: lost 7–2 at No. 3 Notre Dame Academy (Hingham)",
   "games": [
    [
     "2021-12-09",
