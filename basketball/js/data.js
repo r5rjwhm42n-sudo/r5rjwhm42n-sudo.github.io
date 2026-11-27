@@ -369,7 +369,7 @@ const TEAMS = {
     historyIntro: "Seven conference titles, three state championships and a 27–0 season. The seasons and players behind Danvers boys basketball.",
     banners: [{ year: 2015, label: "Division 2 State Champions" }, { year: 2013, label: "Division 3 State Champions" }, { year: 2012, label: "Division 3 State Champions" }],
     necTitles: [1964, 1975, 2012, 2013, 2014, 2015, 2016],
-    historyNote: "Title years follow the school's team page. The record book also marks 1970 and 2011 as NEC championship seasons and has no entry for 1964.",
+    historyNote: "Title years follow the school's team page. The record book also marks 1970 and 2011 as NEC championship seasons and has no entry for 1964. Tournament scores and seeds since 1998 are from the MIAA's bracket archive, with the state semifinals and finals checked against Patch, ESPN Boston and CBS Boston; where the record book understated a run (2011, 2014), the bracket is used.",
     historyTile: ["Perfect season", "27–0", "2015 · Division 2 state champions"],
     seasons: [
       [2026, 9, 11, 0, "Jabari Clarke", "4th in Lynch", ""],
@@ -848,7 +848,7 @@ const TEAMS = {
     historyIntro: "Five conference titles, four 1,000-point scorers and a school-record 19–2 season in 2026. The seasons and players behind Danvers girls basketball.",
     banners: [],
     necTitles: [2010, 2011, 2018, 2019, 2026],
-    historyNote: "Title years are the seasons the record book marks as NEC champions.",
+    historyNote: "Title years are the seasons the record book marks as NEC champions. Tournament scores since 2001 are from the MIAA's bracket archive.",
     historyTile: ["1,000-point club", 4, "Sherry · Wright · Macdonald · Djoko"],
     seasons: [
       [2026, 19, 2, 0, "Dave Chisholm", "NEC Champions", "Lost Round of 32 51-48 @ Mansfield"],

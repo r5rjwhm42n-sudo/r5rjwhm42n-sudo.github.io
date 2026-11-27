@@ -6,9 +6,9 @@ TEAMS["varsity"].past.push(...[
   "record": "4–1",
   "coach": "Jen Habeeb",
   "post": "2nd at the MIAA state meet (148.15); 3rd at the North sectional",
-  "captains": "Maddie Westcott",
-  "allLeague": "Maddie Westcott, Kaylee Westcott, Maddie Migliero, Camryn Donovan",
-  "awards": "Salem News all-stars: Camryn Donovan, Maddie Migliero, Kaylee Westcott (team MVP as an eighth grader), Maddie Westcott",
+  "captains": "Maddie Wescott",
+  "allLeague": "Maddie Wescott, Kaylee Wescott, Maddie Migliero, Camryn Donovan",
+  "awards": "Salem News all-stars: Camryn Donovan, Maddie Migliero, Kaylee Wescott (team MVP as an eighth grader), Maddie Wescott",
   "games": [
    [
     "2023-01-07",
@@ -67,8 +67,8 @@ TEAMS["varsity"].past.push(...[
   "season": "2021–22",
   "record": "2–4",
   "captains": "Allie Taylor",
-  "allLeague": "Maddie Westcott (all-around)",
-  "awards": "A Danvers–North Reading co-op that season; Maddie Westcott competed at State Individuals as a freshman",
+  "allLeague": "Maddie Wescott (all-around)",
+  "awards": "A Danvers–North Reading co-op that season; Maddie Wescott competed at State Individuals as a freshman",
   "games": [
    [
     "2022-01-02",

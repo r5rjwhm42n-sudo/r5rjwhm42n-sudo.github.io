@@ -541,7 +541,7 @@ const TEAMS = {
     historyIntro: "Two state championships, 11 conference titles and a record book full of 100-point scorers. The seasons and players behind Danvers boys hockey.",
     banners: [{ year: 2001, label: "Division 2 State Champions" }, { year: 1994, label: "Division 2 State Champions" }],
     necTitles: [1981, 1990, 1991, 1992, 1993, 1994, 1996, 2002, 2012, 2017, 2018],
-    historyNote: "Title years follow the school's team page. The 1991 team was the first in NEC history to go 16–0–0 in the conference.",
+    historyNote: "Title years follow the school's team page. The 1991 team was the first in NEC history to go 16–0–0 in the conference. Tournament seeds and scores for the deepest runs since 1998 are from the MIAA's bracket archive.",
     historyTile: ["100-point club", 17, "Newest: Cooper Dunham, 2026"],
     seasons: [
       [2026, 10, 10, 2, "Bill Sheehan", "2nd", "Lost in the Round of 16 to Shawsheen Tech (4-0)"],
