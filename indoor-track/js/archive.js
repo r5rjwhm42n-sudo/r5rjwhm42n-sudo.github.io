@@ -3,19 +3,29 @@
 TEAMS["boys"].past.push(...[
  {
   "season": "2022–23",
-  "record": "0–3–0 in scored meets",
+  "record": "2–3–0 in scored meets",
   "post": "27th at the Division 2 meet",
   "awards": "Will Conklin, 7th in the Division 2 two-mile as a sophomore; Chris McCrea, 8th in the 600",
   "games": [
    [
     "2022-12-11",
     0,
-    "Beverly and one more team",
+    "Beverly",
     "NEC",
     "L",
-    25,
+    29,
     61,
-    "The Track at New Balance"
+    "NEC Meet #1 at The Track at New Balance · official team scoring from Lancer Timing (the school's ArbiterLive schedule has 25–61)"
+   ],
+   [
+    "2022-12-11",
+    0,
+    "Masconomet",
+    "NEC",
+    "W",
+    50,
+    43,
+    "NEC Meet #1 at The Track at New Balance · official team scoring from Lancer Timing"
    ],
    [
     "2022-12-19",
@@ -62,10 +72,10 @@ TEAMS["boys"].past.push(...[
     0,
     "Swampscott",
     "NEC",
-    null,
-    null,
-    null,
-    "The Track at New Balance · No score on file"
+    "W",
+    53,
+    33,
+    "NEC Meet #2 at The Track at New Balance · official team scoring from Lancer Timing"
    ],
    [
     "2023-02-18",
@@ -78,7 +88,7 @@ TEAMS["boys"].past.push(...[
     "Reggie Lewis Center, Boston"
    ]
   ],
-  "note": "Every meet on the school's ArbiterLive schedule; multi-team meets are scored by place. The results on file add up to 0–3–0, with the Marblehead score from the Marblehead Weekly News. Division 2 places and points from the MIAA's official results."
+  "note": "Every meet on the school's ArbiterLive schedule; multi-team meets are scored by place. The results on file add up to 2–3–0: the two NEC meets at The Track at New Balance are scored from Lancer Timing's official results, and the Marblehead score is from the Marblehead Weekly News. Division 2 places and points from the MIAA's official results."
  },
  {
   "season": "2021–22",
@@ -151,19 +161,29 @@ TEAMS["boys"].past.push(...[
 TEAMS["girls"].past.push(...[
  {
   "season": "2022–23",
-  "record": "0–3–0 in scored meets",
+  "record": "1–4–0 in scored meets",
   "post": "13th at the Division 2 meet",
   "awards": "3rd at the Division 2 meet: Emma Eagan (two-mile, 11:41.42) and Cali Abbatessa (shot put, 33-6); both went on to the All-State meet",
   "games": [
    [
     "2022-12-11",
     0,
-    "Beverly and one more team",
+    "Masconomet",
     "NEC",
     "L",
-    29,
-    57,
-    "The Track at New Balance"
+    33,
+    62,
+    "NEC Meet #1 at The Track at New Balance · official team scoring from Lancer Timing (the school's ArbiterLive schedule lists a 29–57 loss to Beverly instead)"
+   ],
+   [
+    "2022-12-11",
+    0,
+    "Peabody",
+    "NEC",
+    "L",
+    33,
+    62,
+    "NEC Meet #1 at The Track at New Balance · official team scoring from Lancer Timing"
    ],
    [
     "2022-12-19",
@@ -210,10 +230,10 @@ TEAMS["girls"].past.push(...[
     0,
     "Swampscott",
     "NEC",
-    null,
-    null,
-    null,
-    "Swampscott-Phillips · No score on file"
+    "W",
+    63,
+    17,
+    "NEC Meet #2 at The Track at New Balance · official team scoring from Lancer Timing (the school's schedule lists the meet at Swampscott)"
    ],
    [
     "2023-02-18",
@@ -226,7 +246,7 @@ TEAMS["girls"].past.push(...[
     "Reggie Lewis Center, Boston"
    ]
   ],
-  "note": "Every meet on the school's ArbiterLive schedule; multi-team meets are scored by place. The results on file add up to 0–3–0, with the Marblehead score from the Marblehead Weekly News. Division 2 places and points from the MIAA's official results."
+  "note": "Every meet on the school's ArbiterLive schedule; multi-team meets are scored by place. The results on file add up to 1–4–0: the two NEC meets at The Track at New Balance are scored from Lancer Timing's official results, and the Marblehead score is from the Marblehead Weekly News. Division 2 places and points from the MIAA's official results."
  },
  {
   "season": "2021–22",

@@ -10,104 +10,159 @@
     {
      "name": "Sean Moore",
      "grade": "Sr.",
-     "note": "A senior, he won the two-mile (9:45.39, seeded 9:41.21) at the Division 4 meet at the Reggie Lewis Center on Feb. 18. Teammates William Conklin (2nd, 9:52.51) and Gianluca Locilento (23rd, 10:51.89) ran the same event. He was 8th in the two-mile (9:39.11) at the Meet of Champions at the Reggie Lewis Center on Feb. 24. That was 10 of the Falcons' 23 points; they placed 7th as a team. That fall he ran 16:10.9 for 5K, fifth on the program's all-time list, for the cross country team that won the MIAA Division 2 state title. As a junior in 2022–23, he was 9th in the two-mile (10:02.87) at the Division 2 meet. It was his senior season."
+     "note": "A senior, he won the two-mile (9:45.39, seeded 9:41.21) at the Division 4 meet at the Reggie Lewis Center on Feb. 18. Teammates William Conklin (2nd, 9:52.51) and Gianluca Locilento (23rd, 10:51.89) were in the same event. That was 10 of the Falcons' 23 points; they placed 7th as a team. He was 8th in the two-mile (9:39.11) at the Meet of Champions at the Reggie Lewis Center on Feb. 24. That fall he was 4th at the MIAA Division 2 state cross country meet in 16:10.90, fifth on the program's all-time 5K list, as the Falcons won the state title. As a junior in 2022–23, he was 9th in the two-mile (10:02.87) at the Division 2 meet. It was his senior season."
     },
     {
      "name": "William Conklin",
      "grade": "Jr.",
-     "note": "A junior, he was 2nd in the two-mile (9:52.51, seeded 9:47.88) at the Division 4 meet at the Reggie Lewis Center on Feb. 18. Teammates Sean Moore (1st, 9:45.39) and Gianluca Locilento (23rd, 10:51.89) ran the same event. That was 8 of the Falcons' 23 points; they placed 7th as a team. As a sophomore in 2022–23, he was 7th in the two-mile (9:59.77) at the Division 2 meet. The next winter he won the two-mile (9:32.79) and ran on the 4x400 relay that placed 13th in 3:44.90 at the Division 4 meet and was 15th in the two-mile (9:44.39) at the Meet of Champions."
+     "note": "A junior, he was 2nd in the two-mile (9:52.51, seeded 9:47.88) at the Division 4 meet at the Reggie Lewis Center on Feb. 18. Teammates Sean Moore (1st, 9:45.39) and Gianluca Locilento (23rd, 10:51.89) were in the same event. That was 8 of the Falcons' 23 points; they placed 7th as a team. That fall he was 5th at the Division 2B cross country meet (16:05.2) and 12th at the state meet (16:32.07) as the Falcons won the Division 2 title. As a sophomore in 2022–23, he was 7th in the two-mile (9:59.77) at the Division 2 meet. The next winter he won the two-mile (9:32.79) and ran on the 4x400 relay that placed 13th in 3:44.90 at the Division 4 meet and was 15th in the two-mile (9:44.39) at the Meet of Champions."
     },
     {
      "name": "Chris McCrea",
      "grade": "Sr.",
-     "note": "A senior, he ran on the 4x400 relay that placed 6th in 3:38.76 with Bryce Kassiotis, Nick Figuerido and Michael Rinella at the Division 4 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 7th as a team with 23 points. That fall he was a captain of the boys soccer team. As a junior in 2022–23, he was 8th in the 600 meters (1:28.82) and ran on the 4x400 relay that placed 18th in 3:49.10 at the Division 2 meet. It was his senior season."
-    },
-    {
-     "name": "Bryce Kassiotis",
-     "grade": "Sr.",
-     "note": "A senior, he was 17th in the 300 meters (37.86, seeded 38.10) and ran on the 4x400 relay that placed 6th in 3:38.76 with Chris McCrea, Nick Figuerido and Michael Rinella at the Division 4 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 7th as a team with 23 points. It was his senior season."
-    },
-    {
-     "name": "JJ Rooney",
-     "grade": "Jr.",
-     "note": "A junior, he was 7th in the mile (4:33.15, seeded 4:31.91) at the Division 4 meet at the Reggie Lewis Center on Feb. 18. Teammate Chuck Garlin (11th, 4:35.52) ran the same event. That was 2 of the Falcons' 23 points; they placed 7th as a team. As a sophomore in 2022–23, he was 9th in the mile (4:38.37) at the Division 2 meet. The next winter he was 2nd in the mile (4:25.03) at the Division 4 meet and was 11th in the mile (4:24.87) at the Meet of Champions."
-    },
-    {
-     "name": "Michael Rinella",
-     "grade": "Jr.",
-     "note": "A junior, he ran on the 4x400 relay that placed 6th in 3:38.76 with Bryce Kassiotis, Chris McCrea and Nick Figuerido at the Division 4 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 7th as a team with 23 points. The next winter he ran on the 4x400 relay that placed 13th in 3:44.90 at the Division 4 meet."
-    },
-    {
-     "name": "Nick Figuerido",
-     "grade": "Sr.",
-     "note": "A senior, he ran on the 4x400 relay that placed 6th in 3:38.76 with Bryce Kassiotis, Chris McCrea and Michael Rinella at the Division 4 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 7th as a team with 23 points. As a junior in 2022–23, he ran on the 4x400 relay that placed 18th in 3:49.10 at the Division 2 meet. It was his senior season."
+     "note": "A senior, he ran on the 4x400 relay that placed 6th in 3:38.76 with Bryce Kassiotis, Nick Figuerido and Michael Rinella at the Division 4 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 7th as a team with 23 points. Earlier that winter, at the NEC Winter Invitational on Dec. 9, he was 5th in the 300 meters (39.45). That fall he was a captain of the boys soccer team. As a junior in 2022–23, he was 8th in the 600 meters (1:28.82) and ran on the 4x400 relay that placed 18th in 3:49.10 at the Division 2 meet. It was his senior season."
     },
     {
      "name": "Chuck Garlin",
      "grade": "Jr.",
-     "note": "A junior, he was 11th in the mile (4:35.52, seeded 4:36.78) at the Division 4 meet at the Reggie Lewis Center on Feb. 18. Teammate JJ Rooney (7th, 4:33.15) ran the same event. The Falcons placed 7th as a team with 23 points. His 16:42.4 for 5K that fall is ninth on the program's all-time cross country list. As a sophomore in 2022–23, he was 16th in the 1000 meters (2:44.22) and ran on the 4x400 relay that placed 18th in 3:49.10 at the Division 2 meet. The next winter he was 8th in the 600 meters (1:25.68) and ran on the 4x400 relay that placed 13th in 3:44.90 at the Division 4 meet."
+     "note": "A junior, he was 11th in the mile (4:35.52, seeded 4:36.78) at the Division 4 meet at the Reggie Lewis Center on Feb. 18. Teammate JJ Rooney (7th, 4:33.15) was in the same event. The Falcons placed 7th as a team with 23 points. Earlier that winter, at the NEC Winter Invitational on Dec. 9, he was 3rd in the 600 meters (1:30.67). His 16:42.4 at the Division 2B cross country meet that fall is ninth on the program's all-time 5K list. In cross country that fall he was 22nd at the state meet (16:54.07) as the Falcons won the Division 2 title. As a sophomore in 2022–23, he was 16th in the 1000 meters (2:44.22) and ran on the 4x400 relay that placed 18th in 3:49.10 at the Division 2 meet. The next winter he was 8th in the 600 meters (1:25.68) and ran on the 4x400 relay that placed 13th in 3:44.90 at the Division 4 meet."
+    },
+    {
+     "name": "Michael Rinella",
+     "grade": "Jr.",
+     "note": "A junior, he ran on the 4x400 relay that placed 6th in 3:38.76 with Bryce Kassiotis, Chris McCrea and Nick Figuerido at the Division 4 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 7th as a team with 23 points. Earlier that winter, at the NEC Winter Invitational on Dec. 9, he was 7th in the 300 meters (39.66). As a sophomore in 2022–23, he was 13th in the 300 meters (42.36) at NEC Meet #1 and ran on the 4x400 relay that placed 3rd in 3:49.31 at NEC Meet #2. The next winter he ran on the 4x400 relay that placed 13th in 3:44.90 at the Division 4 meet."
     },
     {
      "name": "Bradley Piscitello",
      "grade": "Jr.",
-     "note": "A junior, he was 23rd in the 1000 meters (2:57.33, seeded 2:52.48) at the Division 4 meet at the Reggie Lewis Center on Feb. 18. Teammate Sam Randall (28th, 3:08.29) ran the same event. The Falcons placed 7th as a team with 23 points. A boys soccer captain that fall and again the next. As a sophomore in 2022–23, he ran on the 4x400 relay that placed 18th in 3:49.10 at the Division 2 meet."
-    },
-    {
-     "name": "Gianluca Locilento",
-     "grade": "So.",
-     "note": "A sophomore, he was 23rd in the two-mile (10:51.89, seeded 11:02.84) at the Division 4 meet at the Reggie Lewis Center on Feb. 18. Teammates Sean Moore (1st, 9:45.39) and William Conklin (2nd, 9:52.51) ran the same event. The Falcons placed 7th as a team with 23 points. The next fall he was an NEC All-League pick in soccer, and in 2025 a soccer captain and All-League again."
+     "note": "A junior, he was 23rd in the 1000 meters (2:57.33, seeded 2:52.48) at the Division 4 meet at the Reggie Lewis Center on Feb. 18. Teammate Sam Randall (28th, 3:08.29) was in the same event. The Falcons placed 7th as a team with 23 points. Earlier that winter, at the NEC Winter Invitational on Dec. 9, he was 7th in the 600 meters (1:36.19). A boys soccer captain that fall and again the next. As a sophomore in 2022–23, he ran on the 4x400 relay that placed 18th in 3:49.10 at the Division 2 meet."
     },
     {
      "name": "Noah Wade",
      "grade": "Sr.",
-     "note": "A senior, he threw 39-7 for 16th in the shot put at the Division 4 meet at the Reggie Lewis Center on Feb. 18. Teammate Timothy Bowler (13th, 40-5) competed in the same event. The Falcons placed 7th as a team with 23 points. He won the shot put in the Jan. 4 home meet against Marblehead, an inch ahead of the Magicians' best throw of 39-10½. It was his senior season."
+     "note": "A senior, he threw 39-7 for 16th in the shot put at the Division 4 meet at the Reggie Lewis Center on Feb. 18. Teammate Timothy Bowler (13th, 40-5) was in the same event. The Falcons placed 7th as a team with 23 points. Earlier that winter, at the NEC Winter Invitational on Dec. 9, he threw 38-5½ for 4th in the shot put. He won the shot put in the Jan. 4 home meet against Marblehead, an inch ahead of the Magicians' best throw of 39-10½. As a junior in 2022–23, he threw 34-7 for 13th in the shot put at NEC Meet #1 and threw 36-7 for 9th in the shot put at NEC Meet #2. It was his senior season."
     },
     {
-     "name": "Zachary Dunn",
-     "grade": "Fr.",
-     "note": "A freshman, he ran on the 4x200 relay that placed 22nd in 1:41.71 with Kaio Borghardt, Nate Flint and Daniel Hnatowicz at the Division 4 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 7th as a team with 23 points. The next winter he was 23rd in the 55-meter prelims (6.91) at the Division 4 meet."
+     "name": "JJ Rooney",
+     "grade": "Jr.",
+     "note": "A junior, he was 7th in the mile (4:33.15, seeded 4:31.91) at the Division 4 meet at the Reggie Lewis Center on Feb. 18. Teammate Chuck Garlin (11th, 4:35.52) was in the same event. That was 2 of the Falcons' 23 points; they placed 7th as a team. In cross country that fall (as Jonathan Rooney) he was 6th at the Division 2B meet in 16:09.6, fourth on the program's all-time 5K list, and 10th at the state meet as the Falcons won the title. As a sophomore in 2022–23, he was 9th in the mile (4:38.37) at the Division 2 meet. The next winter he was 2nd in the mile (4:25.03) at the Division 4 meet and was 11th in the mile (4:24.87) at the Meet of Champions."
     },
     {
      "name": "Nate Flint",
      "grade": "Jr.",
-     "note": "A junior, he ran on the 4x200 relay that placed 22nd in 1:41.71 with Kaio Borghardt, Zachary Dunn and Daniel Hnatowicz at the Division 4 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 7th as a team with 23 points. The next winter he ran on the 4x400 relay that placed 13th in 3:44.90 at the Division 4 meet."
+     "note": "A junior, he ran on the 4x200 relay that placed 22nd in 1:41.71 with Kaio Borghardt, Zachary Dunn and Daniel Hnatowicz at the Division 4 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 7th as a team with 23 points. Earlier that winter, at the NEC Winter Invitational on Dec. 9, he ran on the 4x200 relay that placed 7th in 1:45.07 with Chris Davis, Jason Giacalone and Juan Ibanez and no-heighted in the high jump. The next winter he ran on the 4x400 relay that placed 13th in 3:44.90 at the Division 4 meet."
     },
     {
-     "name": "Sam Randall",
-     "grade": "Jr.",
-     "note": "A junior, he was 28th in the 1000 meters (3:08.29, seeded 3:00.63) at the Division 4 meet at the Reggie Lewis Center on Feb. 18. Teammate Bradley Piscitello (23rd, 2:57.33) ran the same event. The Falcons placed 7th as a team with 23 points."
+     "name": "Chris Davis",
+     "grade": "So.",
+     "note": "A sophomore, he was 14th in the 55-meter hurdles prelims (10.90) and ran on the 4x200 relay that placed 7th in 1:45.07 with Jason Giacalone, Juan Ibanez and Nate Flint at the NEC Winter Invitational at The Track at New Balance on Dec. 9. As a freshman in 2022–23, he was 26th in the 55 meters (8.18) at NEC Meet #2."
+    },
+    {
+     "name": "Nick Figuerido",
+     "grade": "Sr.",
+     "note": "A senior, he ran on the 4x400 relay that placed 6th in 3:38.76 with Bryce Kassiotis, Chris McCrea and Michael Rinella at the Division 4 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 7th as a team with 23 points. Earlier that winter, at the NEC Winter Invitational on Dec. 9, he was 10th in the 300 meters (39.93). As a junior in 2022–23, he ran on the 4x400 relay that placed 18th in 3:49.10 at the Division 2 meet. It was his senior season."
+    },
+    {
+     "name": "Bryce Kassiotis",
+     "grade": "Sr.",
+     "note": "A senior, he was 17th in the 300 meters (37.86, seeded 38.10) and ran on the 4x400 relay that placed 6th in 3:38.76 with Chris McCrea, Nick Figuerido and Michael Rinella at the Division 4 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 7th as a team with 23 points. As a junior in 2022–23, he was 3rd in the 300 meters (39.11) at NEC Meet #1 and was 3rd in the 300 meters (38.35) and ran on the 4x400 relay that placed 3rd in 3:49.31 at NEC Meet #2. It was his senior season."
+    },
+    {
+     "name": "Lucas Landry",
+     "grade": "Sr.",
+     "note": "A senior, he was 8th in the 1000 meters (3:01.07) at the NEC Winter Invitational at The Track at New Balance on Dec. 9. Teammates Connor Wells (14th, 3:10.02) and Sam Randall (15th, 3:13.49) were in the same event. As a junior in 2022–23, he was 9th in the 1000 meters (3:09.26) at NEC Meet #1 and was 17th in the mile (5:25.52) at NEC Meet #2. It was his senior season."
+    },
+    {
+     "name": "Jason Giacalone",
+     "grade": "",
+     "note": "He ran on the 4x200 relay that placed 7th in 1:45.07 with Chris Davis, Juan Ibanez and Nate Flint at the NEC Winter Invitational at The Track at New Balance on Dec. 9."
+    },
+    {
+     "name": "Juan Ibanez",
+     "grade": "",
+     "note": "He ran on the 4x200 relay that placed 7th in 1:45.07 with Chris Davis, Jason Giacalone and Nate Flint at the NEC Winter Invitational at The Track at New Balance on Dec. 9."
+    },
+    {
+     "name": "Gianluca Locilento",
+     "grade": "So.",
+     "note": "A sophomore, he was 23rd in the two-mile (10:51.89, seeded 11:02.84) at the Division 4 meet at the Reggie Lewis Center on Feb. 18. Teammates Sean Moore (1st, 9:45.39) and William Conklin (2nd, 9:52.51) were in the same event. The Falcons placed 7th as a team with 23 points. Earlier that winter, at the NEC Winter Invitational on Dec. 9, he was 10th in the mile (5:17.11). The next fall he was an NEC All-League pick in soccer, and in 2025 a soccer captain and All-League again. As a freshman in 2022–23, he ran on the 4x200 relay that placed 8th in 1:54.87 at NEC Meet #2."
     },
     {
      "name": "Kaio Borghardt",
      "grade": "So.",
-     "note": "A sophomore, he ran on the 4x200 relay that placed 22nd in 1:41.71 with Zachary Dunn, Nate Flint and Daniel Hnatowicz at the Division 4 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 7th as a team with 23 points."
+     "note": "A sophomore, he ran on the 4x200 relay that placed 22nd in 1:41.71 with Zachary Dunn, Nate Flint and Daniel Hnatowicz at the Division 4 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 7th as a team with 23 points. Earlier that winter, at the NEC Winter Invitational on Dec. 9, he was 20th in the 55-meter prelims (7.51) and cleared 5-0 for 10th in the high jump."
     },
     {
-     "name": "Daniel Hnatowicz",
-     "grade": "Sr.",
-     "note": "A senior, he ran on the 4x200 relay that placed 22nd in 1:41.71 with Kaio Borghardt, Zachary Dunn and Nate Flint at the Division 4 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 7th as a team with 23 points. It was his senior season."
+     "name": "Zachary Dunn",
+     "grade": "Fr.",
+     "note": "A freshman, he ran on the 4x200 relay that placed 22nd in 1:41.71 with Kaio Borghardt, Nate Flint and Daniel Hnatowicz at the Division 4 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 7th as a team with 23 points. Earlier that winter, at the NEC Winter Invitational on Dec. 9, he was 16th in the 55-meter prelims (7.26). The next winter he was 23rd in the 55-meter prelims (6.91) at the Division 4 meet."
     },
     {
-     "name": "Timothy Bowler",
-     "grade": "Sr.",
-     "note": "A senior, he threw 40-5 for 13th in the shot put at the Division 4 meet at the Reggie Lewis Center on Feb. 18. Teammate Noah Wade (16th, 39-7) competed in the same event. The Falcons placed 7th as a team with 23 points. It was his senior season."
+     "name": "Sam Randall",
+     "grade": "Jr.",
+     "note": "A junior, he was 28th in the 1000 meters (3:08.29, seeded 3:00.63) at the Division 4 meet at the Reggie Lewis Center on Feb. 18. Teammate Bradley Piscitello (23rd, 2:57.33) was in the same event. The Falcons placed 7th as a team with 23 points. Earlier that winter, at the NEC Winter Invitational on Dec. 9, he was 15th in the 1000 meters (3:13.49). As a sophomore in 2022–23, he was 12th in the 1000 meters (3:16.90) at NEC Meet #1 and was 16th in the 1000 meters (3:21.20) at NEC Meet #2."
     },
     {
      "name": "Brendan Glowik",
      "grade": "Sr.",
-     "note": "A senior, he no-heighted in the high jump after entering with a 5-8 mark at the Division 4 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 7th as a team with 23 points. It was his senior season."
+     "note": "A senior, he no-heighted in the high jump after entering with a 5-8 mark at the Division 4 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 7th as a team with 23 points. Earlier that winter, at the NEC Winter Invitational on Dec. 9, he cleared 5-0 for 9th in the high jump. As a junior in 2022–23, he was 13th in the 55-meter hurdles (11.07) at NEC Meet #1 and was 7th in the 55-meter hurdles (10.10) and cleared 5-2 for 7th in the high jump at NEC Meet #2. It was his senior season."
+    },
+    {
+     "name": "Anish Patel",
+     "grade": "So.",
+     "note": "A sophomore, he was 23rd in the 55-meter prelims (7.57) at the NEC Winter Invitational at The Track at New Balance on Dec. 9. Teammates Zachary Dunn (16th in the prelims, 7.26) and Kaio Borghardt (20th in the prelims, 7.51) were in the same event. As a freshman in 2022–23, he was 23rd in the 55 meters (7.70) at NEC Meet #2. The next winter he was 12th in the 55-meter prelims (6.82) at the Division 4 meet."
+    },
+    {
+     "name": "Devin Whitcomb",
+     "grade": "Fr.",
+     "note": "A freshman, he was 22nd in the 600 meters (2:15.27) at the NEC Winter Invitational at The Track at New Balance on Dec. 9. Teammates Chuck Garlin (3rd, 1:30.67) and Bradley Piscitello (7th, 1:36.19) were in the same event."
+    },
+    {
+     "name": "Connor Wells",
+     "grade": "Jr.",
+     "note": "A junior, he was 14th in the 1000 meters (3:10.02) at the NEC Winter Invitational at The Track at New Balance on Dec. 9. Teammates Lucas Landry (8th, 3:01.07) and Sam Randall (15th, 3:13.49) were in the same event. As a sophomore in 2022–23, he was 17th in the 600 meters (1:51.92) at NEC Meet #1 and ran on the 4x200 relay that placed 8th in 1:54.87 at NEC Meet #2."
+    },
+    {
+     "name": "Ben Wilhelm",
+     "grade": "So.",
+     "note": "A sophomore, he was 21st in the mile (6:19.88) at the NEC Winter Invitational at The Track at New Balance on Dec. 9. Teammates Gianluca Locilento (10th, 5:17.11) and Johnny Ao (23rd, 7:02.98) were in the same event."
+    },
+    {
+     "name": "Johnny Ao",
+     "grade": "So.",
+     "note": "A sophomore, he was 23rd in the mile (7:02.98) at the NEC Winter Invitational at The Track at New Balance on Dec. 9. Teammates Gianluca Locilento (10th, 5:17.11) and Ben Wilhelm (21st, 6:19.88) were in the same event."
+    },
+    {
+     "name": "Kevin Burke",
+     "grade": "Sr.",
+     "note": "A senior, he threw 34-11 for 9th in the shot put at the NEC Winter Invitational at The Track at New Balance on Dec. 9. Teammates Noah Wade (4th, 38-5½) and Thomas Corbin (23rd, 25-10¾) were in the same event. As a junior in 2022–23, he was 20th in the 55 meters (7.71) and threw 35-9½ for 9th in the shot put at NEC Meet #1 and threw 35-10¾ for 10th in the shot put at NEC Meet #2. It was his senior season."
+    },
+    {
+     "name": "Thomas Corbin",
+     "grade": "So.",
+     "note": "A sophomore, he threw 25-10¾ for 23rd in the shot put at the NEC Winter Invitational at The Track at New Balance on Dec. 9. Teammates Noah Wade (4th, 38-5½) and Kevin Burke (9th, 34-11) were in the same event."
+    },
+    {
+     "name": "Daniel Hnatowicz",
+     "grade": "Sr.",
+     "note": "A senior, he ran on the 4x200 relay that placed 22nd in 1:41.71 with Kaio Borghardt, Zachary Dunn and Nate Flint at the Division 4 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 7th as a team with 23 points. As a junior in 2022–23, he was 14th in the 600 meters (1:39.95) at NEC Meet #2. It was his senior season."
+    },
+    {
+     "name": "Timothy Bowler",
+     "grade": "Sr.",
+     "note": "A senior, he threw 40-5 for 13th in the shot put at the Division 4 meet at the Reggie Lewis Center on Feb. 18. Teammate Noah Wade (16th, 39-7) was in the same event. The Falcons placed 7th as a team with 23 points. As a junior in 2022–23, he threw 37-10 for 6th in the shot put at NEC Meet #1 and threw 37-5½ for 8th in the shot put at NEC Meet #2. It was his senior season."
     }
    ],
    "2024–25": [
     {
      "name": "William Conklin",
      "grade": "Sr.",
-     "note": "A senior, he won the two-mile (9:32.79) and ran on the 4x400 relay that placed 13th in 3:44.90 with Michael Rinella, Chuck Garlin and Nate Flint at the Division 4 meet at the Reggie Lewis Center on Feb. 15. He was 15th in the two-mile (9:44.39) at the Meet of Champions at the Reggie Lewis Center on Feb. 22. That was 10 of the Falcons' 19 points; they placed 7th as a team. A Salem News all-star and NEC All-Conference. That fall he was the NEC Boys Cross Country Runner of the Year and ran 15:53.1, the fastest 5K in program history. As a sophomore in 2022–23, he was 7th in the two-mile (9:59.77) at the Division 2 meet. As a junior in 2023–24, he was 2nd in the two-mile (9:52.51) at the Division 4 meet. It was his senior season."
+     "note": "A senior, he won the two-mile (9:32.79) and ran on the 4x400 relay that placed 13th in 3:44.90 with Michael Rinella, Chuck Garlin and Nate Flint at the Division 4 meet at the Reggie Lewis Center on Feb. 15. That was 10 of the Falcons' 19 points; they placed 7th as a team. He was 15th in the two-mile (9:44.39) at the Meet of Champions at the Reggie Lewis Center on Feb. 22. A Salem News all-star and NEC All-Conference. That fall he was the NEC Boys Cross Country Runner of the Year and ran 15:53.1, the fastest 5K in program history. That 15:53 came at the Division 2B meet, where he was 2nd, and he was 4th at the MIAA Meet of Champions (15:57.77). As a sophomore in 2022–23, he was 7th in the two-mile (9:59.77) at the Division 2 meet. As a junior in 2023–24, he was 2nd in the two-mile (9:52.51) at the Division 4 meet. It was his senior season."
     },
     {
      "name": "JJ Rooney",
      "grade": "Sr.",
-     "note": "A senior, he was 2nd in the mile (4:25.03) at the Division 4 meet at the Reggie Lewis Center on Feb. 15. He was 11th in the mile (4:24.87) at the Meet of Champions at the Reggie Lewis Center on Feb. 22. That was 8 of the Falcons' 19 points; they placed 7th as a team. As a sophomore in 2022–23, he was 9th in the mile (4:38.37) at the Division 2 meet. As a junior in 2023–24, he was 7th in the mile (4:33.15) at the Division 4 meet. It was his senior season."
+     "note": "A senior, he was 2nd in the mile (4:25.03) at the Division 4 meet at the Reggie Lewis Center on Feb. 15. That was 8 of the Falcons' 19 points; they placed 7th as a team. He was 11th in the mile (4:24.87) at the Meet of Champions at the Reggie Lewis Center on Feb. 22. In cross country that fall (as Jonathan Rooney) he was 6th at the Division 2B meet (16:17.82) and 8th at the MIAA Meet of Champions (16:25.13). As a sophomore in 2022–23, he was 9th in the mile (4:38.37) at the Division 2 meet. As a junior in 2023–24, he was 7th in the mile (4:33.15) at the Division 4 meet. It was his senior season."
     },
     {
      "name": "Chuck Garlin",
@@ -132,7 +187,7 @@
     {
      "name": "Michael Rinella",
      "grade": "Sr.",
-     "note": "A senior, he ran on the 4x400 relay that placed 13th in 3:44.90 with William Conklin, Chuck Garlin and Nate Flint at the Division 4 meet at the Reggie Lewis Center on Feb. 15. The Falcons placed 7th as a team with 19 points. As a junior in 2023–24, he ran on the 4x400 relay that placed 6th in 3:38.76 at the Division 4 meet. It was his senior season."
+     "note": "A senior, he ran on the 4x400 relay that placed 13th in 3:44.90 with William Conklin, Chuck Garlin and Nate Flint at the Division 4 meet at the Reggie Lewis Center on Feb. 15. The Falcons placed 7th as a team with 19 points. As a sophomore in 2022–23, he was 13th in the 300 meters (42.36) at NEC Meet #1 and ran on the 4x400 relay that placed 3rd in 3:49.31 at NEC Meet #2. As a junior in 2023–24, he ran on the 4x400 relay that placed 6th in 3:38.76 at the Division 4 meet. It was his senior season."
     },
     {
      "name": "Nate Flint",
@@ -144,7 +199,7 @@
     {
      "name": "Zachary Dunn",
      "grade": "Jr.",
-     "note": "A junior, he was 2nd in the 55 meters (6.59) and ran on the 4x200 relay that placed 12th in 1:35.89 with Julian Capece, Jack Curcuru and Braylon Al-Nabulsi at the Division 4 meet at The Track at New Balance on Feb. 13. Teammates Jack Curcuru (8th, 6.81) and Anish Patel (12th in the prelims, 6.82) ran the same event. That was 8 of the Falcons' 13 points; they placed 13th as a team. NEC All-Conference and a Salem News all-star, and one of the Northeastern Conference all-stars listed with the Boston Globe's 2026 All-Scholastics. As a freshman in 2023–24, he ran on the 4x200 relay that placed 22nd in 1:41.71 at the Division 4 meet. As a sophomore in 2024–25, he was 23rd in the 55-meter prelims (6.91) at the Division 4 meet."
+     "note": "A junior, he was 2nd in the 55 meters (6.59) and ran on the 4x200 relay that placed 12th in 1:35.89 with Julian Capece, Jack Curcuru and Braylon Al-Nabulsi at the Division 4 meet at The Track at New Balance on Feb. 13. Teammates Jack Curcuru (8th, 6.81) and Anish Patel (12th in the prelims, 6.82) were in the same event. That was 8 of the Falcons' 13 points; they placed 13th as a team. NEC All-Conference and a Salem News all-star, and one of the Northeastern Conference all-stars listed with the Boston Globe's 2026 All-Scholastics. As a freshman in 2023–24, he ran on the 4x200 relay that placed 22nd in 1:41.71 at the Division 4 meet. As a sophomore in 2024–25, he was 23rd in the 55-meter prelims (6.91) at the Division 4 meet."
     },
     {
      "name": "Julian Capece",
@@ -154,7 +209,7 @@
     {
      "name": "Jack Curcuru",
      "grade": "Sr.",
-     "note": "A senior, he was 8th in the 55 meters (6.81) and ran on the 4x200 relay that placed 12th in 1:35.89 with Julian Capece, Braylon Al-Nabulsi and Zachary Dunn at the Division 4 meet at The Track at New Balance on Feb. 13. Teammates Zachary Dunn (2nd, 6.59) and Anish Patel (12th in the prelims, 6.82) ran the same event. That was 1 of the Falcons' 13 points; they placed 13th as a team. It was his senior season."
+     "note": "A senior, he was 8th in the 55 meters (6.81) and ran on the 4x200 relay that placed 12th in 1:35.89 with Julian Capece, Braylon Al-Nabulsi and Zachary Dunn at the Division 4 meet at The Track at New Balance on Feb. 13. Teammates Zachary Dunn (2nd, 6.59) and Anish Patel (12th in the prelims, 6.82) were in the same event. That was 1 of the Falcons' 13 points; they placed 13th as a team. It was his senior season."
     },
     {
      "name": "Andrew Morse",
@@ -164,17 +219,17 @@
     {
      "name": "Marcus Morais",
      "grade": "Jr.",
-     "note": "A junior, he was 26th in the mile (5:04.62) at the Division 4 meet at The Track at New Balance on Feb. 13. The Falcons placed 13th as a team with 13 points. The next fall, as a senior, he won two cross country races, at Salem on Sept. 16 (19:20) and at home against Saugus/Winthrop on Sept. 30 (17:25), and ran a 5K best of 18:00.4 at the MSTCA Bay State Invitational."
+     "note": "A junior, he was 26th in the mile (5:04.62) at the Division 4 meet at The Track at New Balance on Feb. 13. The Falcons placed 13th as a team with 13 points. The next fall, as a senior, he won two cross country races, at Salem on Sept. 16 (19:20) and at home against Saugus/Winthrop on Sept. 30 (17:25), and ran a 5K best of 18:00.4 at the MSTCA Bay State Invitational. He ran the MIAA Division 2 cross country meet that fall (122nd, 20:48.00)."
     },
     {
      "name": "Mason Ellsworth",
      "grade": "Sr.",
-     "note": "A senior, he threw 41-2½ for 10th in the shot put at the Division 4 meet at The Track at New Balance on Feb. 13. Teammate Kelvin Ramirez (20th, 37-7½) competed in the same event. The Falcons placed 13th as a team with 13 points. That fall he was a football captain and an NEC All-Conference pick. It was his senior season."
+     "note": "A senior, he threw 41-2½ for 10th in the shot put at the Division 4 meet at The Track at New Balance on Feb. 13. Teammate Kelvin Ramirez (20th, 37-7½) was in the same event. The Falcons placed 13th as a team with 13 points. That fall he was a football captain and an NEC All-Conference pick. It was his senior season."
     },
     {
      "name": "Anish Patel",
      "grade": "Sr.",
-     "note": "A senior, he was 12th in the 55-meter prelims (6.82) at the Division 4 meet at The Track at New Balance on Feb. 13. Teammates Zachary Dunn (2nd, 6.59) and Jack Curcuru (8th, 6.81) ran the same event. The Falcons placed 13th as a team with 13 points. It was his senior season."
+     "note": "A senior, he was 12th in the 55-meter prelims (6.82) at the Division 4 meet at The Track at New Balance on Feb. 13. Teammates Zachary Dunn (2nd, 6.59) and Jack Curcuru (8th, 6.81) were in the same event. The Falcons placed 13th as a team with 13 points. As a freshman in 2022–23, he was 23rd in the 55 meters (7.70) at NEC Meet #2. As a sophomore in 2023–24, he was 23rd in the 55-meter prelims (7.57) at the NEC Winter Invitational. It was his senior season."
     },
     {
      "name": "Bennett Tenney",
@@ -189,54 +244,159 @@
     {
      "name": "Kelvin Ramirez",
      "grade": "Sr.",
-     "note": "A senior, he threw 37-7½ for 20th in the shot put at the Division 4 meet at The Track at New Balance on Feb. 13. Teammate Mason Ellsworth (10th, 41-2½) competed in the same event. The Falcons placed 13th as a team with 13 points. It was his senior season."
+     "note": "A senior, he threw 37-7½ for 20th in the shot put at the Division 4 meet at The Track at New Balance on Feb. 13. Teammate Mason Ellsworth (10th, 41-2½) was in the same event. The Falcons placed 13th as a team with 13 points. It was his senior season."
     }
    ],
    "2022–23": [
     {
-     "name": "Chris McCrea",
-     "grade": "Jr.",
-     "note": "A junior, he was 8th in the 600 meters (1:28.82) and ran on the 4x400 relay that placed 18th in 3:49.10 with Bradley Piscitello, Chuck Garlin and Nick Figuerido at the Division 2 meet at the Reggie Lewis Center on Feb. 18. That was 1 of the Falcons' 3 points; they placed 27th as a team. The next winter he ran on the 4x400 relay that placed 6th in 3:38.76 at the Division 4 meet."
-    },
-    {
-     "name": "William Conklin",
-     "grade": "So.",
-     "note": "A sophomore, he was 7th in the two-mile (9:59.77) at the Division 2 meet at the Reggie Lewis Center on Feb. 18. Teammates Sean Moore (9th, 10:02.87) and Will Dumont (20th, 10:34.44) ran the same event. That was 2 of the Falcons' 3 points; they placed 27th as a team. The next winter he was 2nd in the two-mile (9:52.51) at the Division 4 meet."
-    },
-    {
-     "name": "Will Dumont",
-     "grade": "Jr.",
-     "note": "A junior, he was 20th in the two-mile (10:34.44) at the Division 2 meet at the Reggie Lewis Center on Feb. 18. Teammates William Conklin (7th, 9:59.77) and Sean Moore (9th, 10:02.87) ran the same event. The Falcons placed 27th as a team with 3 points. His 17:17.9 for 5K that fall is 16th on the program's all-time cross country list."
-    },
-    {
      "name": "Chuck Garlin",
      "grade": "So.",
-     "note": "A sophomore, he was 16th in the 1000 meters (2:44.22) and ran on the 4x400 relay that placed 18th in 3:49.10 with Chris McCrea, Bradley Piscitello and Nick Figuerido at the Division 2 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 27th as a team with 3 points. The next winter he was 11th in the mile (4:35.52) at the Division 4 meet."
+     "note": "A sophomore, he was 16th in the 1000 meters (2:44.22) and ran on the 4x400 relay that placed 18th in 3:49.10 with Chris McCrea, Bradley Piscitello and Nick Figuerido at the Division 2 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 27th as a team with 3 points. Earlier that winter, at NEC Meet #1 on Dec. 11, he won the 1000 meters (2:55.14). At NEC Meet #2 on Jan. 22, he was 3rd in the 1000 meters (2:49.11) and ran on the 4x400 relay that placed 3rd in 3:49.31 with Michael Rinella, Bryce Kassiotis and JJ Rooney. In cross country that fall (as Charles Garlin) he was 44th at the Division 2 state meet (17:23.63) for the runner-up Falcons. The next winter he was 11th in the mile (4:35.52) at the Division 4 meet."
     },
     {
      "name": "JJ Rooney",
      "grade": "So.",
-     "note": "A sophomore, he was 9th in the mile (4:38.37) at the Division 2 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 27th as a team with 3 points. The next winter he was 7th in the mile (4:33.15) at the Division 4 meet."
+     "note": "A sophomore, he was 9th in the mile (4:38.37) at the Division 2 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 27th as a team with 3 points. Earlier that winter, at NEC Meet #1 on Dec. 11, he was 5th in the mile (4:55.80). At NEC Meet #2 on Jan. 22, he won the mile (4:47.96) and ran on the 4x400 relay that placed 3rd in 3:49.31 with Chuck Garlin, Michael Rinella and Bryce Kassiotis. The MIAA's cross country results list him as Jonathan Rooney: 26th at the Division 2 state meet that fall (16:57.45). The next winter he was 7th in the mile (4:33.15) at the Division 4 meet."
     },
     {
-     "name": "Bradley Piscitello",
+     "name": "William Conklin",
      "grade": "So.",
-     "note": "A sophomore, he ran on the 4x400 relay that placed 18th in 3:49.10 with Chris McCrea, Chuck Garlin and Nick Figuerido at the Division 2 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 27th as a team with 3 points. The next winter he was 23rd in the 1000 meters (2:57.33) at the Division 4 meet."
+     "note": "A sophomore, he was 7th in the two-mile (9:59.77) at the Division 2 meet at the Reggie Lewis Center on Feb. 18. Teammates Sean Moore (9th, 10:02.87) and Will Dumont (20th, 10:34.44) were in the same event. That was 2 of the Falcons' 3 points; they placed 27th as a team. Earlier that winter, at NEC Meet #1 on Dec. 11, he was 2nd in the two-mile (10:28.93). At NEC Meet #2 on Jan. 22, he was 2nd in the two-mile (10:07.89). In cross country that fall he was 21st at the Division 2 state meet (16:51.94) for the runner-up Falcons. The next winter he was 2nd in the two-mile (9:52.51) at the Division 4 meet."
+    },
+    {
+     "name": "Bryce Kassiotis",
+     "grade": "Jr.",
+     "note": "A junior, he was 3rd in the 300 meters (39.11) at NEC Meet #1 at The Track at New Balance on Dec. 11. Teammates Michael Rinella (13th, 42.36) and Nick Figuerido (15th, 42.81) were in the same event. At NEC Meet #2 on Jan. 22, he was 3rd in the 300 meters (38.35) and ran on the 4x400 relay that placed 3rd in 3:49.31 with Chuck Garlin, Michael Rinella and JJ Rooney. The next winter he was 17th in the 300 meters (37.86) and ran on the 4x400 relay that placed 6th in 3:38.76 at the Division 4 meet."
+    },
+    {
+     "name": "Chris McCrea",
+     "grade": "Jr.",
+     "note": "A junior, he was 8th in the 600 meters (1:28.82) and ran on the 4x400 relay that placed 18th in 3:49.10 with Bradley Piscitello, Chuck Garlin and Nick Figuerido at the Division 2 meet at the Reggie Lewis Center on Feb. 18. That was 1 of the Falcons' 3 points; they placed 27th as a team. Earlier that winter, at NEC Meet #1 on Dec. 11, he was 8th in the 600 meters (1:36.69). At NEC Meet #2 on Jan. 22, he was 5th in the 600 meters (1:32.21). The next winter he ran on the 4x400 relay that placed 6th in 3:38.76 at the Division 4 meet."
     },
     {
      "name": "Sean Moore",
      "grade": "Jr.",
-     "note": "A junior, he was 9th in the two-mile (10:02.87) at the Division 2 meet at the Reggie Lewis Center on Feb. 18. Teammates William Conklin (7th, 9:59.77) and Will Dumont (20th, 10:34.44) ran the same event. The Falcons placed 27th as a team with 3 points. The next winter he won the two-mile (9:45.39) at the Division 4 meet and was 8th in the two-mile (9:39.11) at the Meet of Champions."
+     "note": "A junior, he was 9th in the two-mile (10:02.87) at the Division 2 meet at the Reggie Lewis Center on Feb. 18. Teammates William Conklin (7th, 9:59.77) and Will Dumont (20th, 10:34.44) were in the same event. The Falcons placed 27th as a team with 3 points. Earlier that winter, at NEC Meet #1 on Dec. 11, he was 4th in the mile (4:55.53). At NEC Meet #2 on Jan. 22, he was 4th in the two-mile (10:22.51). In cross country that fall he was 10th at the MIAA Division 2 state meet (16:31.37) as the Falcons finished 2nd as a team. The next winter he won the two-mile (9:45.39) at the Division 4 meet and was 8th in the two-mile (9:39.11) at the Meet of Champions."
     },
     {
-     "name": "Nick Figuerido",
+     "name": "Will Dumont",
      "grade": "Jr.",
-     "note": "A junior, he ran on the 4x400 relay that placed 18th in 3:49.10 with Chris McCrea, Bradley Piscitello and Chuck Garlin at the Division 2 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 27th as a team with 3 points. The next winter he ran on the 4x400 relay that placed 6th in 3:38.76 at the Division 4 meet."
+     "note": "A junior, he was 20th in the two-mile (10:34.44) at the Division 2 meet at the Reggie Lewis Center on Feb. 18. Teammates William Conklin (7th, 9:59.77) and Sean Moore (9th, 10:02.87) were in the same event. The Falcons placed 27th as a team with 3 points. Earlier that winter, at NEC Meet #1 on Dec. 11, he was 5th in the two-mile (10:51.63). At NEC Meet #2 on Jan. 22, he was 6th in the two-mile (10:36.52). He was 59th at the Division 2 state cross country meet (17:30.66) as the Falcons finished 2nd."
+    },
+    {
+     "name": "Brendan Lahr",
+     "grade": "So.",
+     "note": "A sophomore, he was 27th in the 55 meters (8.56), jumped 16-9 for 4th in the long jump and no-heighted in the high jump at NEC Meet #1 at The Track at New Balance on Dec. 11. Teammates in the same events: 55 meters, Kevin Burke (20th, 7.71) and Ben Hanas (21st, 7.74); high jump, Ben Hanas (no height). At NEC Meet #2 on Jan. 22, he ran on the 4x200 relay that placed 8th in 1:54.87 with Luca D'Angelo, Connor Wells and Gianluca Locilento and jumped 16-0¾ for 9th in the long jump."
+    },
+    {
+     "name": "Brendan Glowik",
+     "grade": "Jr.",
+     "note": "A junior, he was 13th in the 55-meter hurdles (11.07) at NEC Meet #1 at The Track at New Balance on Dec. 11. Teammate Sean Marmen (12th, 10.99) was in the same event. At NEC Meet #2 on Jan. 22, he was 7th in the 55-meter hurdles (10.10) and cleared 5-2 for 7th in the high jump. The next winter he no-heighted in the high jump at the Division 4 meet."
+    },
+    {
+     "name": "Timothy Bowler",
+     "grade": "Jr.",
+     "note": "A junior, he threw 37-10 for 6th in the shot put at NEC Meet #1 at The Track at New Balance on Dec. 11. Teammates Kevin Burke (9th, 35-9½), Noah Wade (13th, 34-7) and Isiah Young (20th, 29-7) were in the same event. At NEC Meet #2 on Jan. 22, he threw 37-5½ for 8th in the shot put. The next winter he threw 40-5 for 13th in the shot put at the Division 4 meet."
     },
     {
      "name": "Aidan Smith",
      "grade": "Sr.",
-     "note": "A senior, he no-heighted in the high jump at the Division 2 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 27th as a team with 3 points. It was his senior season."
+     "note": "A senior, he no-heighted in the high jump at the Division 2 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 27th as a team with 3 points. Earlier that winter, at NEC Meet #2 on Jan. 22, he was 12th in the 55 meters (7.30) and cleared 5-8 for 3rd in the high jump. It was his senior season."
+    },
+    {
+     "name": "Michael Rinella",
+     "grade": "So.",
+     "note": "A sophomore, he was 13th in the 300 meters (42.36) at NEC Meet #1 at The Track at New Balance on Dec. 11. Teammates Bryce Kassiotis (3rd, 39.11) and Nick Figuerido (15th, 42.81) were in the same event. At NEC Meet #2 on Jan. 22, he ran on the 4x400 relay that placed 3rd in 3:49.31 with Chuck Garlin, Bryce Kassiotis and JJ Rooney. The next winter he ran on the 4x400 relay that placed 6th in 3:38.76 at the Division 4 meet."
+    },
+    {
+     "name": "Ben Hanas",
+     "grade": "Jr.",
+     "note": "A junior, he was 21st in the 55 meters (7.74) and no-heighted in the high jump at NEC Meet #1 at The Track at New Balance on Dec. 11. Teammates in the same events: 55 meters, Kevin Burke (20th, 7.71) and Brendan Lahr (27th, 8.56); high jump, Brendan Lahr (no height). At NEC Meet #2 on Jan. 22, he was 12th in the 300 meters (40.55) and cleared 5-2 for 7th in the high jump."
+    },
+    {
+     "name": "Connor Wells",
+     "grade": "So.",
+     "note": "A sophomore, he was 17th in the 600 meters (1:51.92) at NEC Meet #1 at The Track at New Balance on Dec. 11. Teammates Chris McCrea (8th, 1:36.69) and Bradley Piscitello (12th, 1:40.99) were in the same event. At NEC Meet #2 on Jan. 22, he ran on the 4x200 relay that placed 8th in 1:54.87 with Luca D'Angelo, Brendan Lahr and Gianluca Locilento. The next winter he was 14th in the 1000 meters (3:10.02) at the NEC Winter Invitational."
+    },
+    {
+     "name": "Gianluca Locilento",
+     "grade": "Fr.",
+     "note": "A freshman, he ran on the 4x200 relay that placed 8th in 1:54.87 with Luca D'Angelo, Connor Wells and Brendan Lahr at NEC Meet #2 at The Track at New Balance on Jan. 22. The next winter he was 23rd in the two-mile (10:51.89) at the Division 4 meet."
+    },
+    {
+     "name": "Luca D'Angelo",
+     "grade": "",
+     "note": "He ran on the 4x200 relay that placed 8th in 1:54.87 with Connor Wells, Brendan Lahr and Gianluca Locilento at NEC Meet #2 at The Track at New Balance on Jan. 22."
+    },
+    {
+     "name": "Nick Figuerido",
+     "grade": "Jr.",
+     "note": "A junior, he ran on the 4x400 relay that placed 18th in 3:49.10 with Chris McCrea, Bradley Piscitello and Chuck Garlin at the Division 2 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 27th as a team with 3 points. Earlier that winter, at NEC Meet #1 on Dec. 11, he was 15th in the 300 meters (42.81). At NEC Meet #2 on Jan. 22, he was 15th in the 300 meters (40.79). The next winter he ran on the 4x400 relay that placed 6th in 3:38.76 at the Division 4 meet."
+    },
+    {
+     "name": "Bradley Piscitello",
+     "grade": "So.",
+     "note": "A sophomore, he ran on the 4x400 relay that placed 18th in 3:49.10 with Chris McCrea, Chuck Garlin and Nick Figuerido at the Division 2 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 27th as a team with 3 points. Earlier that winter, at NEC Meet #1 on Dec. 11, he was 12th in the 600 meters (1:40.99). At NEC Meet #2 on Jan. 22, he was 16th in the 600 meters (1:41.74). The next winter he was 23rd in the 1000 meters (2:57.33) at the Division 4 meet."
+    },
+    {
+     "name": "Kevin Burke",
+     "grade": "Jr.",
+     "note": "A junior, he was 20th in the 55 meters (7.71) and threw 35-9½ for 9th in the shot put at NEC Meet #1 at The Track at New Balance on Dec. 11. Teammates in the same events: 55 meters, Ben Hanas (21st, 7.74) and Brendan Lahr (27th, 8.56); shot put, Timothy Bowler (6th, 37-10), Noah Wade (13th, 34-7) and Isiah Young (20th, 29-7). At NEC Meet #2 on Jan. 22, he threw 35-10¾ for 10th in the shot put. The next winter he threw 34-11 for 9th in the shot put at the NEC Winter Invitational."
+    },
+    {
+     "name": "Lucas Landry",
+     "grade": "Jr.",
+     "note": "A junior, he was 9th in the 1000 meters (3:09.26) at NEC Meet #1 at The Track at New Balance on Dec. 11. Teammates Chuck Garlin (1st, 2:55.14) and Sam Randall (12th, 3:16.90) were in the same event. At NEC Meet #2 on Jan. 22, he was 17th in the mile (5:25.52). The next winter he was 8th in the 1000 meters (3:01.07) at the NEC Winter Invitational."
+    },
+    {
+     "name": "Sam Randall",
+     "grade": "So.",
+     "note": "A sophomore, he was 12th in the 1000 meters (3:16.90) at NEC Meet #1 at The Track at New Balance on Dec. 11. Teammates Chuck Garlin (1st, 2:55.14) and Lucas Landry (9th, 3:09.26) were in the same event. At NEC Meet #2 on Jan. 22, he was 16th in the 1000 meters (3:21.20). The next winter he was 28th in the 1000 meters (3:08.29) at the Division 4 meet."
+    },
+    {
+     "name": "Noah Wade",
+     "grade": "Jr.",
+     "note": "A junior, he threw 34-7 for 13th in the shot put at NEC Meet #1 at The Track at New Balance on Dec. 11. Teammates Timothy Bowler (6th, 37-10), Kevin Burke (9th, 35-9½) and Isiah Young (20th, 29-7) were in the same event. At NEC Meet #2 on Jan. 22, he threw 36-7 for 9th in the shot put. The next winter he threw 39-7 for 16th in the shot put at the Division 4 meet."
+    },
+    {
+     "name": "Sean Marmen",
+     "grade": "Sr.",
+     "note": "A senior, he was 12th in the 55-meter hurdles (10.99) at NEC Meet #1 at The Track at New Balance on Dec. 11. Teammate Brendan Glowik (13th, 11.07) was in the same event. At NEC Meet #2 on Jan. 22, he was 10th in the 55-meter hurdles (10.41). It was his senior season."
+    },
+    {
+     "name": "Isiah Young",
+     "grade": "Jr.",
+     "note": "A junior, he threw 29-7 for 20th in the shot put at NEC Meet #1 at The Track at New Balance on Dec. 11. Teammates Timothy Bowler (6th, 37-10), Kevin Burke (9th, 35-9½) and Noah Wade (13th, 34-7) were in the same event. At NEC Meet #2 on Jan. 22, he threw 29-11½ for 25th in the shot put."
+    },
+    {
+     "name": "Anish Patel",
+     "grade": "Fr.",
+     "note": "A freshman, he was 23rd in the 55 meters (7.70) at NEC Meet #2 at The Track at New Balance on Jan. 22. Teammates Aidan Smith (12th, 7.30) and Chris Davis (26th, 8.18) were in the same event. The next winter he was 23rd in the 55-meter prelims (7.57) at the NEC Winter Invitational."
+    },
+    {
+     "name": "Chris Davis",
+     "grade": "Fr.",
+     "note": "A freshman, he was 26th in the 55 meters (8.18) at NEC Meet #2 at The Track at New Balance on Jan. 22. Teammates Aidan Smith (12th, 7.30) and Anish Patel (23rd, 7.70) were in the same event. The next winter he was 14th in the 55-meter hurdles prelims (10.90) and ran on the 4x200 relay that placed 7th in 1:45.07 at the NEC Winter Invitational."
+    },
+    {
+     "name": "Daniel Hnatowicz",
+     "grade": "Jr.",
+     "note": "A junior, he was 14th in the 600 meters (1:39.95) at NEC Meet #2 at The Track at New Balance on Jan. 22. Teammates Chris McCrea (5th, 1:32.21) and Bradley Piscitello (16th, 1:41.74) were in the same event. The next winter he ran on the 4x200 relay that placed 22nd in 1:41.71 at the Division 4 meet."
+    },
+    {
+     "name": "Julian Morias",
+     "grade": "So.",
+     "note": "A sophomore, he didn't finish the two-mile at NEC Meet #1 at The Track at New Balance on Dec. 11. Teammates William Conklin (2nd, 10:28.93) and Will Dumont (5th, 10:51.63) were in the same event."
+    },
+    {
+     "name": "Cooper Guttadauro",
+     "grade": "So.",
+     "note": "A sophomore, he was 11th in the 1000 meters (3:07.37) at NEC Meet #2 at The Track at New Balance on Jan. 22. Teammates Chuck Garlin (3rd, 2:49.11) and Sam Randall (16th, 3:21.20) were in the same event."
+    },
+    {
+     "name": "Lucas Venezia",
+     "grade": "So.",
+     "note": "A sophomore, he was 20th in the mile (6:11.69) at NEC Meet #2 at The Track at New Balance on Jan. 22. Teammates JJ Rooney (1st, 4:47.96) and Lucas Landry (17th, 5:25.52) were in the same event."
     }
    ]
   },
@@ -245,59 +405,99 @@
     {
      "name": "Bobbi Serino",
      "grade": "Sr.",
-     "note": "A senior, she was 8th in the mile (5:32.60, seeded 5:32.21) at the Division 4 meet at the Reggie Lewis Center on Feb. 18. That was the team's only point; the Falcons placed 34th. That fall she was a field hockey captain and NEC All-Conference; her 34 career goals are second in program history. As a junior in 2022–23, she was 11th in the mile (5:39.19) at the Division 2 meet. It was her senior season."
-    },
-    {
-     "name": "Emily Sullivan",
-     "grade": "Fr.",
-     "note": "A freshman, she was 14th in the two-mile (13:22.40, seeded 13:01.24) at the Division 4 meet at the Reggie Lewis Center on Feb. 18. Teammates Addison Lamar (10th, 12:53.73) and Grace Conklin (16th, 13:28.52) ran the same event. The Falcons placed 34th as a team with 1 point. That fall, as a freshman, she ran 20:46.8 for 5K, 14th on the girls' all-time cross country list. The next winter she was 13th in the two-mile (12:52.76) and ran on the 4x800 relay that placed 14th in 11:21.44 at the Division 4 meet."
-    },
-    {
-     "name": "Tess Ryan",
-     "grade": "Fr.",
-     "note": "A freshman, she was 29th in the 55-meter prelims (7.85) and ran on the 4x200 relay that placed 19th in 1:56.93 with Jenea Cash, Sabina Sturgeon and Ava Patch at the Division 4 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 34th as a team with 1 point. The next winter she was 7th in the 55 meters (7.57) and ran on the 4x200 relay that placed 10th in 1:54.81 at the Division 4 meet."
+     "note": "A senior, she was 8th in the mile (5:32.60, seeded 5:32.21) at the Division 4 meet at the Reggie Lewis Center on Feb. 18. That was the team's only point; the Falcons placed 34th. Earlier that winter, at the NEC Winter Invitational on Dec. 9, she was 11th in the 55-meter hurdles prelims (11.15) and was 5th in the mile (6:06.62). That fall she was a field hockey captain and NEC All-Conference; her 34 career goals are second in program history. As a junior in 2022–23, she was 11th in the mile (5:39.19) at the Division 2 meet. It was her senior season."
     },
     {
      "name": "Sabina Sturgeon",
      "grade": "So.",
-     "note": "A sophomore, she was 27th in the 300 meters (46.18, seeded 44.99) and ran on the 4x200 relay that placed 19th in 1:56.93 with Jenea Cash, Tess Ryan and Ava Patch at the Division 4 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 34th as a team with 1 point. As a freshman in 2022–23, she ran on the 4x400 relay that placed 17th in 4:32.85 at the Division 2 meet. The next winter she was 18th in the 300 meters (44.66) and ran on the 4x200 relay that placed 10th in 1:54.81 at the Division 4 meet."
-    },
-    {
-     "name": "Ava Patch",
-     "grade": "So.",
-     "note": "A sophomore, she was 30th in the 600 meters (1:57.96, seeded 1:51.44) and ran on the 4x200 relay that placed 19th in 1:56.93 with Jenea Cash, Tess Ryan and Sabina Sturgeon at the Division 4 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 34th as a team with 1 point. The next winter she was 14th in the 600 meters (1:45.94) and ran on the 4x800 relay that placed 14th in 11:21.44 at the Division 4 meet."
+     "note": "A sophomore, she was 27th in the 300 meters (46.18, seeded 44.99) and ran on the 4x200 relay that placed 19th in 1:56.93 with Jenea Cash, Tess Ryan and Ava Patch at the Division 4 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 34th as a team with 1 point. Earlier that winter, at the NEC Winter Invitational on Dec. 9, she was 5th in the 300 meters (45.53) and ran on the 4x200 relay that placed 5th in 2:00.98 with Tess Ryan, Ava Patch and Jenea Cash. As a freshman in 2022–23, she ran on the 4x400 relay that placed 17th in 4:32.85 at the Division 2 meet. The next winter she was 18th in the 300 meters (44.66) and ran on the 4x200 relay that placed 10th in 1:54.81 at the Division 4 meet."
     },
     {
      "name": "Grace Conklin",
      "grade": "Fr.",
-     "note": "A freshman, she was 16th in the two-mile (13:28.52, seeded 13:02.76) at the Division 4 meet at the Reggie Lewis Center on Feb. 18. Teammates Addison Lamar (10th, 12:53.73) and Emily Sullivan (14th, 13:22.40) ran the same event. The Falcons placed 34th as a team with 1 point. The next winter she was 4th in the two-mile (12:08.43) and ran on the 4x800 relay that placed 14th in 11:21.44 at the Division 4 meet."
+     "note": "A freshman, she was 16th in the two-mile (13:28.52, seeded 13:02.76) at the Division 4 meet at the Reggie Lewis Center on Feb. 18. Teammates Addison Lamar (10th, 12:53.73) and Emily Sullivan (14th, 13:22.40) were in the same event. The Falcons placed 34th as a team with 1 point. Earlier that winter, at the NEC Winter Invitational on Dec. 9, she was 4th in the two-mile (13:50.29). As a freshman that fall she ran 21:36.8 at the Division 2B cross country meet and qualified for the state meet as an individual (110th, 22:33.66). The next winter she was 4th in the two-mile (12:08.43) and ran on the 4x800 relay that placed 14th in 11:21.44 at the Division 4 meet."
+    },
+    {
+     "name": "Emily Sullivan",
+     "grade": "Fr.",
+     "note": "A freshman, she was 14th in the two-mile (13:22.40, seeded 13:01.24) at the Division 4 meet at the Reggie Lewis Center on Feb. 18. Teammates Addison Lamar (10th, 12:53.73) and Grace Conklin (16th, 13:28.52) were in the same event. The Falcons placed 34th as a team with 1 point. Earlier that winter, at the NEC Winter Invitational on Dec. 9, she was 8th in the mile (6:21.27). That fall, as a freshman, she was 24th at the Division 2B cross country meet in 20:46.8, 14th on the girls' all-time 5K list, and ran the state meet (59th, 21:31.98). The next winter she was 13th in the two-mile (12:52.76) and ran on the 4x800 relay that placed 14th in 11:21.44 at the Division 4 meet."
     },
     {
      "name": "Addison Lamar",
      "grade": "So.",
-     "note": "A sophomore, she was 10th in the two-mile (12:53.73, seeded 12:38.07) at the Division 4 meet at the Reggie Lewis Center on Feb. 18. Teammates Emily Sullivan (14th, 13:22.40) and Grace Conklin (16th, 13:28.52) ran the same event. The Falcons placed 34th as a team with 1 point. As a freshman in 2022–23, she was 23rd in the mile (6:00.90) at the Division 2 meet. The next winter she was 8th in the two-mile (12:21.92) and ran on the 4x800 relay that placed 14th in 11:21.44 at the Division 4 meet."
+     "note": "A sophomore, she was 10th in the two-mile (12:53.73, seeded 12:38.07) at the Division 4 meet at the Reggie Lewis Center on Feb. 18. Teammates Emily Sullivan (14th, 13:22.40) and Grace Conklin (16th, 13:28.52) were in the same event. The Falcons placed 34th as a team with 1 point. Earlier that winter, at the NEC Winter Invitational on Dec. 9, she was 3rd in the two-mile (13:37.23). As a freshman in 2022–23, she was 23rd in the mile (6:00.90) at the Division 2 meet. The next winter she was 8th in the two-mile (12:21.92) and ran on the 4x800 relay that placed 14th in 11:21.44 at the Division 4 meet."
+    },
+    {
+     "name": "Tess Ryan",
+     "grade": "Fr.",
+     "note": "A freshman, she was 29th in the 55-meter prelims (7.85) and ran on the 4x200 relay that placed 19th in 1:56.93 with Jenea Cash, Sabina Sturgeon and Ava Patch at the Division 4 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 34th as a team with 1 point. Earlier that winter, at the NEC Winter Invitational on Dec. 9, she was 16th in the 300 meters (49.65) and ran on the 4x200 relay that placed 5th in 2:00.98 with Sabina Sturgeon, Ava Patch and Jenea Cash. The next winter she was 7th in the 55 meters (7.57) and ran on the 4x200 relay that placed 10th in 1:54.81 at the Division 4 meet."
+    },
+    {
+     "name": "Ava Patch",
+     "grade": "So.",
+     "note": "A sophomore, she was 30th in the 600 meters (1:57.96, seeded 1:51.44) and ran on the 4x200 relay that placed 19th in 1:56.93 with Jenea Cash, Tess Ryan and Sabina Sturgeon at the Division 4 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 34th as a team with 1 point. Earlier that winter, at the NEC Winter Invitational on Dec. 9, she was 17th in the 300 meters (49.73) and ran on the 4x200 relay that placed 5th in 2:00.98 with Sabina Sturgeon, Tess Ryan and Jenea Cash. The next winter she was 14th in the 600 meters (1:45.94) and ran on the 4x800 relay that placed 14th in 11:21.44 at the Division 4 meet."
     },
     {
      "name": "Jenea Cash",
      "grade": "So.",
-     "note": "A sophomore, she ran on the 4x200 relay that placed 19th in 1:56.93 with Tess Ryan, Sabina Sturgeon and Ava Patch at the Division 4 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 34th as a team with 1 point. The next winter she ran on the 4x200 relay that placed 10th in 1:54.81 at the Division 4 meet."
+     "note": "A sophomore, she ran on the 4x200 relay that placed 19th in 1:56.93 with Tess Ryan, Sabina Sturgeon and Ava Patch at the Division 4 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 34th as a team with 1 point. Earlier that winter, at the NEC Winter Invitational on Dec. 9, she was 16th in the 55-meter prelims (8.53) and ran on the 4x200 relay that placed 5th in 2:00.98 with Sabina Sturgeon, Tess Ryan and Ava Patch. As a freshman in 2022–23, she was 12th in the 55 meters (8.34) at NEC Meet #2. The next winter she ran on the 4x200 relay that placed 10th in 1:54.81 at the Division 4 meet."
+    },
+    {
+     "name": "Jordan Turcotte",
+     "grade": "Sr.",
+     "note": "A senior, she was 19th in the 55-meter prelims (8.61), cleared 4-2 for 8th in the high jump and jumped 13-1¼ for 9th in the long jump at the NEC Winter Invitational at The Track at New Balance on Dec. 9. Teammates in the same events: 55 meters, Jenea Cash (16th in the prelims, 8.53); high jump, Katelyn Corbett (no height). As a junior in 2022–23, she was 15th in the 55 meters (8.45) and jumped 13-4½ for 9th in the long jump at NEC Meet #1 and was 9th in the 300 meters (48.13) at NEC Meet #2. It was her senior season."
+    },
+    {
+     "name": "Katelyn Corbett",
+     "grade": "Sr.",
+     "note": "A senior, she was 18th in the 55-meter hurdles prelims (11.76) and no-heighted in the high jump at the NEC Winter Invitational at The Track at New Balance on Dec. 9. Teammates in the same events: 55-meter hurdles, Bobbi Serino (11th in the prelims, 11.15) and Megan Evans (17th in the prelims, 11.58); high jump, Jordan Turcotte (8th, 4-2). As a junior in 2022–23, she was 17th in the 55-meter hurdles (12.33) and no-heighted in the high jump at NEC Meet #1 and was 15th in the 55-meter hurdles (11.86) at NEC Meet #2. It was her senior season."
+    },
+    {
+     "name": "Megan Evans",
+     "grade": "Sr.",
+     "note": "A senior, she was 17th in the 55-meter hurdles prelims (11.58) at the NEC Winter Invitational at The Track at New Balance on Dec. 9. Teammates Bobbi Serino (11th in the prelims, 11.15) and Katelyn Corbett (18th in the prelims, 11.76) were in the same event. It was her senior season."
+    },
+    {
+     "name": "Isha Patel",
+     "grade": "Sr.",
+     "note": "A senior, she was 14th in the 1000 meters (4:30.55) at the NEC Winter Invitational at The Track at New Balance on Dec. 9. Teammates Lauren Ahearn (16th, 4:36.46) and Lola Smith (17th, 4:39.42) were in the same event. As a junior in 2022–23, she was 12th in the two-mile (15:52.07) at NEC Meet #1 and was 11th in the two-mile (15:12.89) at NEC Meet #2. It was her senior season."
+    },
+    {
+     "name": "Lauren Ahearn",
+     "grade": "Sr.",
+     "note": "A senior, she was 16th in the 1000 meters (4:36.46) at the NEC Winter Invitational at The Track at New Balance on Dec. 9. Teammates Isha Patel (14th, 4:30.55) and Lola Smith (17th, 4:39.42) were in the same event. As a junior in 2022–23, she was 20th in the 55 meters (8.68) at NEC Meet #1 and was 14th in the 55 meters (8.47) at NEC Meet #2. It was her senior season."
+    },
+    {
+     "name": "Lola Smith",
+     "grade": "Sr.",
+     "note": "A senior, she was 17th in the 1000 meters (4:39.42) at the NEC Winter Invitational at The Track at New Balance on Dec. 9. Teammates Isha Patel (14th, 4:30.55) and Lauren Ahearn (16th, 4:36.46) were in the same event. As a junior in 2022–23, she was 17th in the mile (8:22.85) at NEC Meet #1. It was her senior season."
+    },
+    {
+     "name": "Kelly Huynh",
+     "grade": "Sr.",
+     "note": "A senior, she threw 23-10 for 12th in the shot put at the NEC Winter Invitational at The Track at New Balance on Dec. 9. Teammate Ella Behling (23rd, 13-8½) was in the same event. As a junior in 2022–23, she threw 22-11½ for 18th in the shot put at NEC Meet #1 and threw 22-5½ for 19th in the shot put at NEC Meet #2. It was her senior season."
+    },
+    {
+     "name": "Ella Behling",
+     "grade": "Sr.",
+     "note": "A senior, she threw 13-8½ for 23rd in the shot put at the NEC Winter Invitational at The Track at New Balance on Dec. 9. Teammate Kelly Huynh (12th, 23-10) was in the same event. As a junior in 2022–23, she threw 12-9 for 36th in the shot put at NEC Meet #1 and threw 13-6 for 30th in the shot put at NEC Meet #2. It was her senior season."
     }
    ],
    "2024–25": [
     {
      "name": "Tess Ryan",
      "grade": "So.",
-     "note": "A sophomore, she was 7th in the 55 meters (7.57) and ran on the 4x200 relay that placed 10th in 1:54.81 with Sabina Sturgeon, Jenea Cash and Flavia Locilento at the Division 4 meet at the Reggie Lewis Center on Feb. 15. That was 2 of the Falcons' 8 points; they placed 19th as a team. A Salem News all-star and NEC All-Conference, along with Jenea Cash, Flavia Locilento and Sabina Sturgeon, the other three on the 4x200. At the NEC Freshman/Sophomore meet on Dec. 30 she ran 7.60 in the 55, breaking the meet record of 7.62. As a freshman in 2023–24, she was 29th in the 55-meter prelims (7.85) and ran on the 4x200 relay that placed 19th in 1:56.93 at the Division 4 meet. The next winter she was 3rd in the 55 meters (7.30) and ran on the 4x200 relay that placed 5th in 1:50.63 at the Division 4 meet and was 17th in the 55-meter prelims (7.39) at the Meet of Champions."
-    },
-    {
-     "name": "Addison Lamar",
-     "grade": "Jr.",
-     "note": "A junior, she was 8th in the two-mile (12:21.92) and ran on the 4x800 relay that placed 14th in 11:21.44 with Grace Conklin, Emily Sullivan and Ava Patch at the Division 4 meet at the Reggie Lewis Center on Feb. 15. Teammates Grace Conklin (4th, 12:08.43) and Emily Sullivan (13th, 12:52.76) ran the same event. That was 1 of the Falcons' 8 points; they placed 19th as a team. Her 21:19.9 for 5K is 19th on the girls' all-time cross country list, and the next fall she was an NEC All-Star for the Lynch Division champions. As a freshman in 2022–23, she was 23rd in the mile (6:00.90) at the Division 2 meet. As a sophomore in 2023–24, she was 10th in the two-mile (12:53.73) at the Division 4 meet."
+     "note": "A sophomore, she was 7th in the 55 meters (7.57) and ran on the 4x200 relay that placed 10th in 1:54.81 with Sabina Sturgeon, Jenea Cash and Flavia Locilento at the Division 4 meet at the Reggie Lewis Center on Feb. 15. That was 2 of the Falcons' 8 points; they placed 19th as a team. A Salem News all-star and NEC All-Conference, along with Jenea Cash, Flavia Locilento and Sabina Sturgeon, the other three on the 4x200. At the NEC Freshman/Sophomore meet on Dec. 30 she ran 7.60 in the 55, breaking the meet record of 7.62. She ran cross country that fall too: 23:37.00 at the Division 2B meet and 23:15.82 at the MIAA Meet of Champions. As a freshman in 2023–24, she was 29th in the 55-meter prelims (7.85) and ran on the 4x200 relay that placed 19th in 1:56.93 at the Division 4 meet. The next winter she was 3rd in the 55 meters (7.30) and ran on the 4x200 relay that placed 5th in 1:50.63 at the Division 4 meet and was 17th in the 55-meter prelims (7.39) at the Meet of Champions."
     },
     {
      "name": "Grace Conklin",
      "grade": "So.",
-     "note": "A sophomore, she was 4th in the two-mile (12:08.43) and ran on the 4x800 relay that placed 14th in 11:21.44 with Addison Lamar, Emily Sullivan and Ava Patch at the Division 4 meet at the Reggie Lewis Center on Feb. 15. Teammates Addison Lamar (8th, 12:21.92) and Emily Sullivan (13th, 12:52.76) ran the same event. That was 5 of the Falcons' 8 points; they placed 19th as a team. As a freshman in 2023–24, she was 16th in the two-mile (13:28.52) at the Division 4 meet. The next winter she was 6th in the two-mile (11:58.46) at the Division 4 meet."
+     "note": "A sophomore, she was 4th in the two-mile (12:08.43) and ran on the 4x800 relay that placed 14th in 11:21.44 with Addison Lamar, Emily Sullivan and Ava Patch at the Division 4 meet at the Reggie Lewis Center on Feb. 15. Teammates Addison Lamar (8th, 12:21.92) and Emily Sullivan (13th, 12:52.76) were in the same event. That was 5 of the Falcons' 8 points; they placed 19th as a team. That fall she was 12th at the Division 2B cross country meet (20:44.91) and 44th at the MIAA Meet of Champions (21:21.59). As a freshman in 2023–24, she was 16th in the two-mile (13:28.52) at the Division 4 meet. The next winter she was 6th in the two-mile (11:58.46) at the Division 4 meet."
+    },
+    {
+     "name": "Addison Lamar",
+     "grade": "Jr.",
+     "note": "A junior, she was 8th in the two-mile (12:21.92) and ran on the 4x800 relay that placed 14th in 11:21.44 with Grace Conklin, Emily Sullivan and Ava Patch at the Division 4 meet at the Reggie Lewis Center on Feb. 15. Teammates Grace Conklin (4th, 12:08.43) and Emily Sullivan (13th, 12:52.76) were in the same event. That was 1 of the Falcons' 8 points; they placed 19th as a team. As a freshman in 2022–23, she was 23rd in the mile (6:00.90) at the Division 2 meet. As a sophomore in 2023–24, she was 10th in the two-mile (12:53.73) at the Division 4 meet."
     },
     {
      "name": "Sabina Sturgeon",
@@ -305,34 +505,34 @@
      "note": "A junior, she was 18th in the 300 meters (44.66) and ran on the 4x200 relay that placed 10th in 1:54.81 with Tess Ryan, Jenea Cash and Flavia Locilento at the Division 4 meet at the Reggie Lewis Center on Feb. 15. The Falcons placed 19th as a team with 8 points. NEC All-Conference. As a freshman in 2022–23, she ran on the 4x400 relay that placed 17th in 4:32.85 at the Division 2 meet. As a sophomore in 2023–24, she was 27th in the 300 meters (46.18) and ran on the 4x200 relay that placed 19th in 1:56.93 at the Division 4 meet. The next winter she was 29th in the 300 meters (46.02) and ran on the 4x200 relay that placed 5th in 1:50.63 at the Division 4 meet."
     },
     {
+     "name": "Emily Sullivan",
+     "grade": "So.",
+     "note": "A sophomore, she was 13th in the two-mile (12:52.76) and ran on the 4x800 relay that placed 14th in 11:21.44 with Grace Conklin, Addison Lamar and Ava Patch at the Division 4 meet at the Reggie Lewis Center on Feb. 15. Teammates Grace Conklin (4th, 12:08.43) and Addison Lamar (8th, 12:21.92) were in the same event. The Falcons placed 19th as a team with 8 points. In cross country that fall she was 26th at the Division 2B meet (21:34.70) and 87th at the MIAA Meet of Champions. As a freshman in 2023–24, she was 14th in the two-mile (13:22.40) at the Division 4 meet. The next winter she was 19th in the two-mile (13:52.42) at the Division 4 meet."
+    },
+    {
+     "name": "Madyson Danish",
+     "grade": "Fr.",
+     "note": "A freshman, she was 17th in the 1000 meters (3:27.63) at the Division 4 meet at the Reggie Lewis Center on Feb. 15. Teammate Paige Sherman (19th, 3:29.24) was in the same event. The Falcons placed 19th as a team with 8 points. In cross country that fall she was 33rd at the Division 2B meet (22:02.83) and 78th at the MIAA Meet of Champions (22:15.38). The next winter she was 16th in the two-mile (12:51.31) at the Division 4 meet."
+    },
+    {
      "name": "Flavia Locilento",
      "grade": "Fr.",
      "note": "A freshman, she ran on the 4x200 relay that placed 10th in 1:54.81 with Tess Ryan, Sabina Sturgeon and Jenea Cash at the Division 4 meet at the Reggie Lewis Center on Feb. 15. The Falcons placed 19th as a team with 8 points. NEC All-Conference. The next winter she ran on the 4x200 relay that placed 5th in 1:50.63 at the Division 4 meet."
     },
     {
+     "name": "Paige Sherman",
+     "grade": "Fr.",
+     "note": "A freshman, she was 19th in the 1000 meters (3:29.24) at the Division 4 meet at the Reggie Lewis Center on Feb. 15. Teammate Madyson Danish (17th, 3:27.63) was in the same event. The Falcons placed 19th as a team with 8 points. In cross country that fall she ran 23:32.62 at the Division 2B meet and 23:55.79 at the MIAA Meet of Champions."
+    },
+    {
      "name": "Jenea Cash",
      "grade": "Jr.",
-     "note": "A junior, she ran on the 4x200 relay that placed 10th in 1:54.81 with Tess Ryan, Sabina Sturgeon and Flavia Locilento at the Division 4 meet at the Reggie Lewis Center on Feb. 15. The Falcons placed 19th as a team with 8 points. NEC All-Conference. As a sophomore in 2023–24, she ran on the 4x200 relay that placed 19th in 1:56.93 at the Division 4 meet."
+     "note": "A junior, she ran on the 4x200 relay that placed 10th in 1:54.81 with Tess Ryan, Sabina Sturgeon and Flavia Locilento at the Division 4 meet at the Reggie Lewis Center on Feb. 15. The Falcons placed 19th as a team with 8 points. NEC All-Conference. As a freshman in 2022–23, she was 12th in the 55 meters (8.34) at NEC Meet #2. As a sophomore in 2023–24, she ran on the 4x200 relay that placed 19th in 1:56.93 at the Division 4 meet."
     },
     {
      "name": "Ava Patch",
      "grade": "Jr.",
      "note": "A junior, she was 14th in the 600 meters (1:45.94) and ran on the 4x800 relay that placed 14th in 11:21.44 with Grace Conklin, Addison Lamar and Emily Sullivan at the Division 4 meet at the Reggie Lewis Center on Feb. 15. The Falcons placed 19th as a team with 8 points. As a sophomore in 2023–24, she was 30th in the 600 meters (1:57.96) and ran on the 4x200 relay that placed 19th in 1:56.93 at the Division 4 meet. The next winter she was 14th in the 600 meters (1:47.20) at the Division 4 meet."
-    },
-    {
-     "name": "Emily Sullivan",
-     "grade": "So.",
-     "note": "A sophomore, she was 13th in the two-mile (12:52.76) and ran on the 4x800 relay that placed 14th in 11:21.44 with Grace Conklin, Addison Lamar and Ava Patch at the Division 4 meet at the Reggie Lewis Center on Feb. 15. Teammates Grace Conklin (4th, 12:08.43) and Addison Lamar (8th, 12:21.92) ran the same event. The Falcons placed 19th as a team with 8 points. As a freshman in 2023–24, she was 14th in the two-mile (13:22.40) at the Division 4 meet. The next winter she was 19th in the two-mile (13:52.42) at the Division 4 meet."
-    },
-    {
-     "name": "Madyson Danish",
-     "grade": "Fr.",
-     "note": "A freshman, she was 17th in the 1000 meters (3:27.63) at the Division 4 meet at the Reggie Lewis Center on Feb. 15. Teammate Paige Sherman (19th, 3:29.24) ran the same event. The Falcons placed 19th as a team with 8 points. The next winter she was 16th in the two-mile (12:51.31) at the Division 4 meet."
-    },
-    {
-     "name": "Paige Sherman",
-     "grade": "Fr.",
-     "note": "A freshman, she was 19th in the 1000 meters (3:29.24) at the Division 4 meet at the Reggie Lewis Center on Feb. 15. Teammate Madyson Danish (17th, 3:27.63) ran the same event. The Falcons placed 19th as a team with 8 points."
     },
     {
      "name": "Hailey O'Connor",
@@ -344,12 +544,12 @@
     {
      "name": "Tess Ryan",
      "grade": "Jr.",
-     "note": "A junior, she was 3rd in the 55 meters (7.30) and ran on the 4x200 relay that placed 5th in 1:50.63 with Flavia Locilento, Sabina Sturgeon and Margaret Lamar at the Division 4 meet at The Track at New Balance on Feb. 14. She was 17th in the 55-meter prelims (7.39) at the Meet of Champions at The Track at New Balance on Feb. 21. That was 6 of the Falcons' 13 points; they placed 19th as a team. NEC All-Conference, and one of the Northeastern Conference all-stars listed with the Boston Globe's 2026 All-Scholastics. As a freshman in 2023–24, she was 29th in the 55-meter prelims (7.85) and ran on the 4x200 relay that placed 19th in 1:56.93 at the Division 4 meet. As a sophomore in 2024–25, she was 7th in the 55 meters (7.57) and ran on the 4x200 relay that placed 10th in 1:54.81 at the Division 4 meet."
+     "note": "A junior, she was 3rd in the 55 meters (7.30) and ran on the 4x200 relay that placed 5th in 1:50.63 with Flavia Locilento, Sabina Sturgeon and Margaret Lamar at the Division 4 meet at The Track at New Balance on Feb. 14. That was 6 of the Falcons' 13 points; they placed 19th as a team. She was 17th in the 55-meter prelims (7.39) at the Meet of Champions at The Track at New Balance on Feb. 21. NEC All-Conference, and one of the Northeastern Conference all-stars listed with the Boston Globe's 2026 All-Scholastics. As a freshman in 2023–24, she was 29th in the 55-meter prelims (7.85) and ran on the 4x200 relay that placed 19th in 1:56.93 at the Division 4 meet. As a sophomore in 2024–25, she was 7th in the 55 meters (7.57) and ran on the 4x200 relay that placed 10th in 1:54.81 at the Division 4 meet."
     },
     {
      "name": "Grace Conklin",
      "grade": "Jr.",
-     "note": "A junior, she was 6th in the two-mile (11:58.46) at the Division 4 meet at The Track at New Balance on Feb. 14. Teammates Madyson Danish (16th, 12:51.31) and Emily Sullivan (19th, 13:52.42) ran the same event. That was 3 of the Falcons' 13 points; they placed 19th as a team. An NEC All-Star. In cross country she was All-NEC in the fall of 2025 and again in 2026, when she ran 19:36.3 at the Division 2 meet, fourth on the girls' all-time 5K list, to qualify for the state meet as an individual. As a freshman in 2023–24, she was 16th in the two-mile (13:28.52) at the Division 4 meet. As a sophomore in 2024–25, she was 4th in the two-mile (12:08.43) and ran on the 4x800 relay that placed 14th in 11:21.44 at the Division 4 meet."
+     "note": "A junior, she was 6th in the two-mile (11:58.46) at the Division 4 meet at The Track at New Balance on Feb. 14. Teammates Madyson Danish (16th, 12:51.31) and Emily Sullivan (19th, 13:52.42) were in the same event. That was 3 of the Falcons' 13 points; they placed 19th as a team. An NEC All-Star. In cross country she was All-NEC in the fall of 2025 and again in 2026, when she ran 19:36.3 at the Division 2 meet, fourth on the girls' all-time 5K list, to qualify for the state meet as an individual. At the MIAA's Division 2 cross country meet that fall she was 8th (20:53.44), and she was 24th at the Meet of Champions in 19:55.28. As a freshman in 2023–24, she was 16th in the two-mile (13:28.52) at the Division 4 meet. As a sophomore in 2024–25, she was 4th in the two-mile (12:08.43) and ran on the 4x800 relay that placed 14th in 11:21.44 at the Division 4 meet."
     },
     {
      "name": "Sabina Sturgeon",
@@ -379,64 +579,169 @@
     {
      "name": "Madyson Danish",
      "grade": "So.",
-     "note": "A sophomore, she was 16th in the two-mile (12:51.31) at the Division 4 meet at The Track at New Balance on Feb. 14. Teammates Grace Conklin (6th, 11:58.46) and Emily Sullivan (19th, 13:52.42) ran the same event. The Falcons placed 19th as a team with 13 points. An NEC All-Star in cross country in the fall of 2025 and again in 2026, when she won the girls' race against Saugus/Winthrop. Her 21:20.8 is 20th on the girls' all-time 5K list. As a freshman in 2024–25, she was 17th in the 1000 meters (3:27.63) at the Division 4 meet."
+     "note": "A sophomore, she was 16th in the two-mile (12:51.31) at the Division 4 meet at The Track at New Balance on Feb. 14. Teammates Grace Conklin (6th, 11:58.46) and Emily Sullivan (19th, 13:52.42) were in the same event. The Falcons placed 19th as a team with 13 points. An NEC All-Star in cross country in the fall of 2025 and again in 2026, when she won the girls' race against Saugus/Winthrop. Her 21:20.8 is 20th on the girls' all-time 5K list. At the Division 2 cross country meet that fall she was 15th (21:40.39), and she ran 21:20.76 at the Meet of Champions. As a freshman in 2024–25, she was 17th in the 1000 meters (3:27.63) at the Division 4 meet."
     },
     {
      "name": "Emily Sullivan",
      "grade": "Jr.",
-     "note": "A junior, she was 19th in the two-mile (13:52.42) at the Division 4 meet at The Track at New Balance on Feb. 14. Teammates Grace Conklin (6th, 11:58.46) and Madyson Danish (16th, 12:51.31) ran the same event. The Falcons placed 19th as a team with 13 points. As a freshman in 2023–24, she was 14th in the two-mile (13:22.40) at the Division 4 meet. As a sophomore in 2024–25, she was 13th in the two-mile (12:52.76) and ran on the 4x800 relay that placed 14th in 11:21.44 at the Division 4 meet."
+     "note": "A junior, she was 19th in the two-mile (13:52.42) at the Division 4 meet at The Track at New Balance on Feb. 14. Teammates Grace Conklin (6th, 11:58.46) and Madyson Danish (16th, 12:51.31) were in the same event. The Falcons placed 19th as a team with 13 points. She was 51st at the Division 2 cross country meet that fall (23:32.94). As a freshman in 2023–24, she was 14th in the two-mile (13:22.40) at the Division 4 meet. As a sophomore in 2024–25, she was 13th in the two-mile (12:52.76) and ran on the 4x800 relay that placed 14th in 11:21.44 at the Division 4 meet."
     }
    ],
    "2022–23": [
     {
      "name": "Emma Eagan",
      "grade": "Sr.",
-     "note": "A senior, she was 3rd in the two-mile (11:41.42) at the Division 2 meet at the Reggie Lewis Center on Feb. 18. She was 17th in the two-mile (11:36.29) at the All-State meet at the Reggie Lewis Center on Feb. 25. That was 6 of the Falcons' 14 points; they placed 13th as a team. Her 19:46.3 for 5K that fall is fifth on the girls' all-time cross country list. It was her senior season."
+     "note": "A senior, she was 3rd in the two-mile (11:41.42) at the Division 2 meet at the Reggie Lewis Center on Feb. 18. That was 6 of the Falcons' 14 points; they placed 13th as a team. She was 17th in the two-mile (11:36.29) at the All-State meet at the Reggie Lewis Center on Feb. 25. Earlier that winter, at NEC Meet #1 on Dec. 11, she won the two-mile (12:31.06). At NEC Meet #2 on Jan. 22, she won the two-mile (11:58.85). That fall she was 11th at the Division 2 cross country meet (19:46.32) and 19th at the state meet (19:52.37). It was her senior season."
     },
     {
      "name": "Cali Abbatessa",
      "grade": "Sr.",
-     "note": "A senior, she threw 33-6 for 3rd in the shot put at the Division 2 meet at the Reggie Lewis Center on Feb. 18. She threw 31-8½ for 23rd in the shot put at the All-State meet at the Reggie Lewis Center on Feb. 25. That was 6 of the Falcons' 14 points; they placed 13th as a team. It was her senior season."
-    },
-    {
-     "name": "Olivia St. Pierre",
-     "grade": "Fr.",
-     "note": "A freshman, she was 8th in the 1000 meters (3:10.57) at the Division 2 meet at the Reggie Lewis Center on Feb. 18. Teammate Katie Walfield (22nd, 3:23.98) ran the same event. That was 1 of the Falcons' 14 points; they placed 13th as a team. The next fall she was NEC All-Conference in soccer, with 20 assists, tied for the second-most in a season in program history."
+     "note": "A senior, she threw 33-6 for 3rd in the shot put at the Division 2 meet at the Reggie Lewis Center on Feb. 18. That was 6 of the Falcons' 14 points; they placed 13th as a team. She threw 31-8½ for 23rd in the shot put at the All-State meet at the Reggie Lewis Center on Feb. 25. Earlier that winter, at NEC Meet #1 on Dec. 11, she threw 32-1½ for 3rd in the shot put. At NEC Meet #2 on Jan. 22, she threw 30-10 for 2nd in the shot put. It was her senior season."
     },
     {
      "name": "Courtney Hinchion",
      "grade": "Sr.",
-     "note": "A senior, she was 8th in the mile (5:29.78) and ran on the 4x400 relay that placed 17th in 4:32.85 with Mikayla Shaffaval, Katie Walfield and Sabina Sturgeon at the Division 2 meet at the Reggie Lewis Center on Feb. 18. Teammates Bobbi Serino (11th, 5:39.19) and Addison Lamar (23rd, 6:00.90) ran the same event. That was 1 of the Falcons' 14 points; they placed 13th as a team. It was her senior season."
-    },
-    {
-     "name": "Mikayla Shaffaval",
-     "grade": "Sr.",
-     "note": "A senior, she was 19th in the 600 meters (1:47.89) and ran on the 4x400 relay that placed 17th in 4:32.85 with Katie Walfield, Courtney Hinchion and Sabina Sturgeon at the Division 2 meet at the Reggie Lewis Center on Feb. 18. Teammate Ava Newton (12th, 1:46.27) ran the same event. The Falcons placed 13th as a team with 14 points. That fall she was a girls soccer captain and an NEC All-Star. It was her senior season."
-    },
-    {
-     "name": "Ava Newton",
-     "grade": "Sr.",
-     "note": "A senior, she was 12th in the 600 meters (1:46.27) at the Division 2 meet at the Reggie Lewis Center on Feb. 18. Teammate Mikayla Shaffaval (19th, 1:47.89) ran the same event. The Falcons placed 13th as a team with 14 points. That fall she was an NEC All-Star in volleyball. It was her senior season."
-    },
-    {
-     "name": "Katie Walfield",
-     "grade": "Sr.",
-     "note": "A senior, she was 22nd in the 1000 meters (3:23.98) and ran on the 4x400 relay that placed 17th in 4:32.85 with Mikayla Shaffaval, Courtney Hinchion and Sabina Sturgeon at the Division 2 meet at the Reggie Lewis Center on Feb. 18. Teammate Olivia St. Pierre (8th, 3:10.57) ran the same event. The Falcons placed 13th as a team with 14 points. It was her senior season."
-    },
-    {
-     "name": "Sabina Sturgeon",
-     "grade": "Fr.",
-     "note": "A freshman, she ran on the 4x400 relay that placed 17th in 4:32.85 with Mikayla Shaffaval, Katie Walfield and Courtney Hinchion at the Division 2 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 13th as a team with 14 points. The next winter she was 27th in the 300 meters (46.18) and ran on the 4x200 relay that placed 19th in 1:56.93 at the Division 4 meet."
-    },
-    {
-     "name": "Addison Lamar",
-     "grade": "Fr.",
-     "note": "A freshman, she was 23rd in the mile (6:00.90) at the Division 2 meet at the Reggie Lewis Center on Feb. 18. Teammates Courtney Hinchion (8th, 5:29.78) and Bobbi Serino (11th, 5:39.19) ran the same event. The Falcons placed 13th as a team with 14 points. The next winter she was 10th in the two-mile (12:53.73) at the Division 4 meet."
+     "note": "A senior, she was 8th in the mile (5:29.78) and ran on the 4x400 relay that placed 17th in 4:32.85 with Mikayla Shaffaval, Katie Walfield and Sabina Sturgeon at the Division 2 meet at the Reggie Lewis Center on Feb. 18. Teammates Bobbi Serino (11th, 5:39.19) and Addison Lamar (23rd, 6:00.90) were in the same event. That was 1 of the Falcons' 14 points; they placed 13th as a team. Earlier that winter, at NEC Meet #2 on Jan. 22, she won the mile (5:46.16). It was her senior season."
     },
     {
      "name": "Bobbi Serino",
      "grade": "Jr.",
-     "note": "A junior, she was 11th in the mile (5:39.19) at the Division 2 meet at the Reggie Lewis Center on Feb. 18. Teammates Courtney Hinchion (8th, 5:29.78) and Addison Lamar (23rd, 6:00.90) ran the same event. The Falcons placed 13th as a team with 14 points. The next winter she was 8th in the mile (5:32.60) at the Division 4 meet."
+     "note": "A junior, she was 11th in the mile (5:39.19) at the Division 2 meet at the Reggie Lewis Center on Feb. 18. Teammates Courtney Hinchion (8th, 5:29.78) and Addison Lamar (23rd, 6:00.90) were in the same event. The Falcons placed 13th as a team with 14 points. Earlier that winter, at NEC Meet #1 on Dec. 11, she was 4th in the 1000 meters (3:25.11). At NEC Meet #2 on Jan. 22, she was 3rd in the 1000 meters (3:25.61). The next winter she was 8th in the mile (5:32.60) at the Division 4 meet."
+    },
+    {
+     "name": "Ava Newton",
+     "grade": "Sr.",
+     "note": "A senior, she was 12th in the 600 meters (1:46.27) at the Division 2 meet at the Reggie Lewis Center on Feb. 18. Teammate Mikayla Shaffaval (19th, 1:47.89) was in the same event. The Falcons placed 13th as a team with 14 points. Earlier that winter, at NEC Meet #1 on Dec. 11, she was 2nd in the 600 meters (1:47.72). That fall she was an NEC All-Star in volleyball. It was her senior season."
+    },
+    {
+     "name": "Sabina Sturgeon",
+     "grade": "Fr.",
+     "note": "A freshman, she ran on the 4x400 relay that placed 17th in 4:32.85 with Mikayla Shaffaval, Katie Walfield and Courtney Hinchion at the Division 2 meet at the Reggie Lewis Center on Feb. 18. The Falcons placed 13th as a team with 14 points. Earlier that winter, at NEC Meet #1 on Dec. 11, she was 9th in the 300 meters (47.53). At NEC Meet #2 on Jan. 22, she was 7th in the 300 meters (47.44) and ran on the 4x400 relay that placed 5th in 4:53.48 with Isabella Drakos, Ruth Gasinowski and Chloe Hertigan. The next winter she was 27th in the 300 meters (46.18) and ran on the 4x200 relay that placed 19th in 1:56.93 at the Division 4 meet."
+    },
+    {
+     "name": "Katie Walfield",
+     "grade": "Sr.",
+     "note": "A senior, she was 22nd in the 1000 meters (3:23.98) and ran on the 4x400 relay that placed 17th in 4:32.85 with Mikayla Shaffaval, Courtney Hinchion and Sabina Sturgeon at the Division 2 meet at the Reggie Lewis Center on Feb. 18. Teammate Olivia St. Pierre (8th, 3:10.57) was in the same event. The Falcons placed 13th as a team with 14 points. Earlier that winter, at NEC Meet #1 on Dec. 11, she was 6th in the 1000 meters (3:33.38). At NEC Meet #2 on Jan. 22, she was 4th in the 1000 meters (3:26.44). It was her senior season."
+    },
+    {
+     "name": "Mikayla Shaffaval",
+     "grade": "Sr.",
+     "note": "A senior, she was 19th in the 600 meters (1:47.89) and ran on the 4x400 relay that placed 17th in 4:32.85 with Katie Walfield, Courtney Hinchion and Sabina Sturgeon at the Division 2 meet at the Reggie Lewis Center on Feb. 18. Teammate Ava Newton (12th, 1:46.27) was in the same event. The Falcons placed 13th as a team with 14 points. Earlier that winter, at NEC Meet #2 on Jan. 22, she was 6th in the 300 meters (46.54). That fall she was a girls soccer captain and an NEC All-Star. It was her senior season."
+    },
+    {
+     "name": "Olivia St. Pierre",
+     "grade": "Fr.",
+     "note": "A freshman, she was 8th in the 1000 meters (3:10.57) at the Division 2 meet at the Reggie Lewis Center on Feb. 18. Teammate Katie Walfield (22nd, 3:23.98) was in the same event. That was 1 of the Falcons' 14 points; they placed 13th as a team. The next fall she was NEC All-Conference in soccer, with 20 assists, tied for the second-most in a season in program history."
+    },
+    {
+     "name": "Chloe Hertigan",
+     "grade": "Sr.",
+     "note": "A senior, she was 17th in the 300 meters (51.62) and cleared 4-2 for 12th in the high jump at NEC Meet #1 at The Track at New Balance on Dec. 11. Teammates in the same events: 300 meters, Sabina Sturgeon (9th, 47.53) and Isabella Drakos (19th, 52.41); high jump, Katelyn Corbett (no height). At NEC Meet #2 on Jan. 22, she ran on the 4x400 relay that placed 5th in 4:53.48 with Isabella Drakos, Ruth Gasinowski and Sabina Sturgeon and cleared 4-4 for 10th in the high jump. It was her senior season."
+    },
+    {
+     "name": "Isabella Drakos",
+     "grade": "Fr.",
+     "note": "A freshman, she was 19th in the 300 meters (52.41) and jumped 12-10¼ for 11th in the long jump at NEC Meet #1 at The Track at New Balance on Dec. 11. Teammates in the same events: 300 meters, Sabina Sturgeon (9th, 47.53) and Chloe Hertigan (17th, 51.62); long jump, Jordan Turcotte (9th, 13-4½) and Claudia Drakos (no mark). At NEC Meet #2 on Jan. 22, she was 15th in the 600 meters (2:13.36) and ran on the 4x400 relay that placed 5th in 4:53.48 with Ruth Gasinowski, Chloe Hertigan and Sabina Sturgeon."
+    },
+    {
+     "name": "Addison Lamar",
+     "grade": "Fr.",
+     "note": "A freshman, she was 23rd in the mile (6:00.90) at the Division 2 meet at the Reggie Lewis Center on Feb. 18. Teammates Courtney Hinchion (8th, 5:29.78) and Bobbi Serino (11th, 5:39.19) were in the same event. The Falcons placed 13th as a team with 14 points. Earlier that winter, at NEC Meet #1 on Dec. 11, she was 15th in the mile (6:33.07). At NEC Meet #2 on Jan. 22, she was 8th in the mile (6:17.43). The next winter she was 10th in the two-mile (12:53.73) at the Division 4 meet."
+    },
+    {
+     "name": "Lily Delafano",
+     "grade": "Fr.",
+     "note": "A freshman, she was 9th in the 55 meters (8.26) at NEC Meet #1 at The Track at New Balance on Dec. 11. Teammates Jordan Turcotte (15th, 8.45) and Lauren Ahearn (20th, 8.68) were in the same event. At NEC Meet #2 on Jan. 22, she was 8th in the 55 meters (8.09)."
+    },
+    {
+     "name": "Claudia Drakos",
+     "grade": "Fr.",
+     "note": "A freshman, she fouled out of the long jump at NEC Meet #1 at The Track at New Balance on Dec. 11. Teammates Jordan Turcotte (9th, 13-4½) and Isabella Drakos (11th, 12-10¼) were in the same event. At NEC Meet #2 on Jan. 22, she ran on the 4x200 relay that placed 6th in 2:19.03 with Elizabeth Owen, Mariellen Owen and Amelia Gilmore."
+    },
+    {
+     "name": "Elizabeth Owen",
+     "grade": "",
+     "note": "She ran on the 4x200 relay that placed 6th in 2:19.03 with Claudia Drakos, Mariellen Owen and Amelia Gilmore at NEC Meet #2 at The Track at New Balance on Jan. 22."
+    },
+    {
+     "name": "Mariellen Owen",
+     "grade": "",
+     "note": "She ran on the 4x200 relay that placed 6th in 2:19.03 with Claudia Drakos, Elizabeth Owen and Amelia Gilmore at NEC Meet #2 at The Track at New Balance on Jan. 22."
+    },
+    {
+     "name": "Amelia Gilmore",
+     "grade": "",
+     "note": "She ran on the 4x200 relay that placed 6th in 2:19.03 with Claudia Drakos, Elizabeth Owen and Mariellen Owen at NEC Meet #2 at The Track at New Balance on Jan. 22."
+    },
+    {
+     "name": "Ruth Gasinowski",
+     "grade": "",
+     "note": "She ran on the 4x400 relay that placed 5th in 4:53.48 with Isabella Drakos, Chloe Hertigan and Sabina Sturgeon at NEC Meet #2 at The Track at New Balance on Jan. 22."
+    },
+    {
+     "name": "Jordan Turcotte",
+     "grade": "Jr.",
+     "note": "A junior, she was 15th in the 55 meters (8.45) and jumped 13-4½ for 9th in the long jump at NEC Meet #1 at The Track at New Balance on Dec. 11. Teammates in the same events: 55 meters, Lily Delafano (9th, 8.26) and Lauren Ahearn (20th, 8.68); long jump, Isabella Drakos (11th, 12-10¼) and Claudia Drakos (no mark). At NEC Meet #2 on Jan. 22, she was 9th in the 300 meters (48.13). The next winter she was 19th in the 55-meter prelims (8.61), cleared 4-2 for 8th in the high jump and jumped 13-1¼ for 9th in the long jump at the NEC Winter Invitational."
+    },
+    {
+     "name": "Katelyn Corbett",
+     "grade": "Jr.",
+     "note": "A junior, she was 17th in the 55-meter hurdles (12.33) and no-heighted in the high jump at NEC Meet #1 at The Track at New Balance on Dec. 11. Teammates in the same events: 55-meter hurdles, Jordan Ortins (9th, 10.77) and Emma Gibbons (15th, 12.10); high jump, Chloe Hertigan (12th, 4-2). At NEC Meet #2 on Jan. 22, she was 15th in the 55-meter hurdles (11.86). The next winter she was 18th in the 55-meter hurdles prelims (11.76) and no-heighted in the high jump at the NEC Winter Invitational."
+    },
+    {
+     "name": "Isha Patel",
+     "grade": "Jr.",
+     "note": "A junior, she was 12th in the two-mile (15:52.07) at NEC Meet #1 at The Track at New Balance on Dec. 11. Teammate Emma Eagan (1st, 12:31.06) was in the same event. At NEC Meet #2 on Jan. 22, she was 11th in the two-mile (15:12.89). The next winter she was 14th in the 1000 meters (4:30.55) at the NEC Winter Invitational."
+    },
+    {
+     "name": "Lauren Ahearn",
+     "grade": "Jr.",
+     "note": "A junior, she was 20th in the 55 meters (8.68) at NEC Meet #1 at The Track at New Balance on Dec. 11. Teammates Lily Delafano (9th, 8.26) and Jordan Turcotte (15th, 8.45) were in the same event. At NEC Meet #2 on Jan. 22, she was 14th in the 55 meters (8.47). The next winter she was 16th in the 1000 meters (4:36.46) at the NEC Winter Invitational."
+    },
+    {
+     "name": "Kelly Huynh",
+     "grade": "Jr.",
+     "note": "A junior, she threw 22-11½ for 18th in the shot put at NEC Meet #1 at The Track at New Balance on Dec. 11. Teammates Cali Abbatessa (3rd, 32-1½) and Ella Behling (36th, 12-9) were in the same event. At NEC Meet #2 on Jan. 22, she threw 22-5½ for 19th in the shot put. The next winter she threw 23-10 for 12th in the shot put at the NEC Winter Invitational."
+    },
+    {
+     "name": "Ella Behling",
+     "grade": "Jr.",
+     "note": "A junior, she threw 12-9 for 36th in the shot put at NEC Meet #1 at The Track at New Balance on Dec. 11. Teammates Cali Abbatessa (3rd, 32-1½) and Kelly Huynh (18th, 22-11½) were in the same event. At NEC Meet #2 on Jan. 22, she threw 13-6 for 30th in the shot put. The next winter she threw 13-8½ for 23rd in the shot put at the NEC Winter Invitational."
+    },
+    {
+     "name": "Emma Gibbons",
+     "grade": "Sr.",
+     "note": "A senior, she was 15th in the 55-meter hurdles (12.10) at NEC Meet #1 at The Track at New Balance on Dec. 11. Teammates Jordan Ortins (9th, 10.77) and Katelyn Corbett (17th, 12.33) were in the same event. At NEC Meet #2 on Jan. 22, she was 14th in the 55-meter hurdles (11.57). It was her senior season."
+    },
+    {
+     "name": "Olivia Ferullo",
+     "grade": "Jr.",
+     "note": "A junior, she was 16th in the 600 meters (2:25.81) at NEC Meet #1 at The Track at New Balance on Dec. 11. Teammates Ava Newton (2nd, 1:47.72) and Sadie Bucco (14th, 2:05.77) were in the same event. At NEC Meet #2 on Jan. 22, she was 20th in the 600 meters (2:24.36)."
+    },
+    {
+     "name": "Jenea Cash",
+     "grade": "Fr.",
+     "note": "A freshman, she was 12th in the 55 meters (8.34) at NEC Meet #2 at The Track at New Balance on Jan. 22. Teammates Lily Delafano (8th, 8.09) and Lauren Ahearn (14th, 8.47) were in the same event. The next winter she ran on the 4x200 relay that placed 19th in 1:56.93 at the Division 4 meet."
+    },
+    {
+     "name": "Lola Smith",
+     "grade": "Jr.",
+     "note": "A junior, she was 17th in the mile (8:22.85) at NEC Meet #1 at The Track at New Balance on Dec. 11. Teammate Addison Lamar (15th, 6:33.07) was in the same event. The next winter she was 17th in the 1000 meters (4:39.42) at the NEC Winter Invitational."
+    },
+    {
+     "name": "Jordan Ortins",
+     "grade": "Sr.",
+     "note": "A senior, she was 9th in the 55-meter hurdles (10.77) at NEC Meet #1 at The Track at New Balance on Dec. 11. Teammates Emma Gibbons (15th, 12.10) and Katelyn Corbett (17th, 12.33) were in the same event. It was her senior season."
+    },
+    {
+     "name": "Sadie Bucco",
+     "grade": "Sr.",
+     "note": "A senior, she was 14th in the 600 meters (2:05.77) at NEC Meet #1 at The Track at New Balance on Dec. 11. Teammates Ava Newton (2nd, 1:47.72) and Olivia Ferullo (16th, 2:25.81) were in the same event. It was her senior season."
+    },
+    {
+     "name": "Anielys Rodriguez",
+     "grade": "Jr.",
+     "note": "A junior, she threw 18-1½ for 27th in the shot put at NEC Meet #2 at The Track at New Balance on Jan. 22. Teammates Cali Abbatessa (2nd, 30-10), Kelly Huynh (19th, 22-5½) and Ella Behling (30th, 13-6) were in the same event."
     }
    ]
   }
@@ -483,7 +788,7 @@
    {
     "name": "Grace Conklin",
     "grade": "Sr.",
-    "note": "Last winter she was 6th in the two-mile (11:58.46) at the Division 4 meet, where the Falcons placed 19th as a team. In 2024–25 she was 4th in the two-mile (12:08.43) and ran on the 4x800 relay that placed 14th in 11:21.44 at the Division 4 meet. All-NEC in cross country for the second straight fall, a senior captain, and an individual qualifier for the MIAA state meet after running 19:36.3 at the Division 2 meet, fourth on the girls' all-time 5K list."
+    "note": "Last winter she was 6th in the two-mile (11:58.46) at the Division 4 meet, where the Falcons placed 19th as a team. In 2024–25 she was 4th in the two-mile (12:08.43) and ran on the 4x800 relay that placed 14th in 11:21.44 at the Division 4 meet. All-NEC in cross country for the second straight fall, a senior captain, and an individual qualifier for the MIAA state meet after running 19:36.3 at the Division 2 meet, fourth on the girls' all-time 5K list. She was 34th at the MIAA Meet of Champions on Nov. 21 (20:44.17)."
    },
    {
     "name": "Flavia Locilento",
@@ -503,7 +808,7 @@
    {
     "name": "Emily Sullivan",
     "grade": "Sr.",
-    "note": "Last winter she was 19th in the two-mile (13:52.42) at the Division 4 meet, where the Falcons placed 19th as a team. In 2024–25 she was 13th in the two-mile (12:52.76) and ran on the 4x800 relay that placed 14th in 11:21.44 at the Division 4 meet. A senior captain of the cross country team this fall."
+    "note": "Last winter she was 19th in the two-mile (13:52.42) at the Division 4 meet, where the Falcons placed 19th as a team. In 2024–25 she was 13th in the two-mile (12:52.76) and ran on the 4x800 relay that placed 14th in 11:21.44 at the Division 4 meet. She was 51st at the Division 2 cross country meet that fall (23:32.94). A senior captain of the cross country team this fall."
    },
    {
     "name": "Paige Sherman",

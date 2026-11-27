@@ -204,6 +204,7 @@ const TEAMS = {
       {
         season: "2023–24",
         games: [
+          ["2023-12-09", 0, "NEC Winter Invitational", "NEC", null, null, null, "The Track at New Balance · No team scoring; every Danvers result is below, from Lancer Timing"],
           ["2023-12-13", 0, "Peabody and one more team", "NEC", null, null, null, "Multi-team meet"],
           ["2023-12-21", 0, "Beverly", "NEC", "L", 26, 60, ""],
           ["2024-01-04", 1, "Marblehead", "NEC", "L", 42, 44, "The school's schedule lists this home meet with Masconomet and two more teams; the Marblehead Current has the 44–42 Marblehead win"],
@@ -252,7 +253,7 @@ const TEAMS = {
     returningNote: "Every Falcon who competed at last winter's state meets and is back this winter. The cards are written in js/athletes.js.",
     returningTitle: "Returning athletes to watch",
     division: "MIAA Division 4",
-    historyNote: "No indoor track record book is posted, so this history starts with the seasons on file. Every Danvers result at the state meets since 2023 is under Past Seasons, with final marks rather than seed marks. Records are from the school's team page (2025–26) and the dual meets scored on ArbiterLive (2021–22); divisional and Meet of Champions results since 2023 from the MIAA's official results (Danvers ran in Division 2 in 2023 and Division 4 since).",
+    historyNote: "No indoor track record book is posted, so this history starts with the seasons on file. Every Danvers result at the state meets since 2023, and at the three NEC meets Lancer Timing posted (December 2022, January 2023 and December 2023), is under Past Seasons, with final marks rather than seed marks. The Record Book lists the best marks from those meets; it isn't a full school record book, since none is posted. Records are from the school's team page (2025–26) and the dual meets scored on ArbiterLive (2021–22); divisional and Meet of Champions results since 2023 from the MIAA's official results (Danvers ran in Division 2 in 2023 and Division 4 since).",
     seasonsLabel: "on file",
     recordsNote: "A season is listed by the year it ended. A dash means too few meets on file have a score to give a record, and blank cells are details not on file.",
     honorsNote: "NEC All-Conference picks and state honors from the school's team pages and the MIAA; 2012 and 2013 from the Boston Globe's All-Scholastic archive, which printed each league's all-star list. Captains aren't posted for these seasons.",
@@ -426,6 +427,7 @@ const TEAMS = {
       {
         season: "2023–24",
         games: [
+          ["2023-12-09", 0, "NEC Winter Invitational", "NEC", null, null, null, "The Track at New Balance · No team scoring; every Danvers result is below, from Lancer Timing"],
           ["2023-12-13", 0, "Peabody and one more team", "NEC", null, null, null, "Multi-team meet"],
           ["2023-12-21", 0, "Beverly", "NEC", "L", 15, 71, ""],
           ["2024-01-04", 1, "Marblehead", "NEC", "L", 26, 60, "Score from the Marblehead Current"],
@@ -474,7 +476,7 @@ const TEAMS = {
     returningNote: "Every Falcon who competed at last winter's state meets and is back this winter. The cards are written in js/athletes.js.",
     returningTitle: "Returning athletes to watch",
     division: "MIAA Division 4",
-    historyNote: "No indoor track record book is posted, so this history starts with the seasons on file. Every Danvers result at the state meets since 2023 is under Past Seasons, with final marks rather than seed marks. Records are from the school's team page (2025–26) and the dual meets scored on ArbiterLive (2021–22); divisional and Meet of Champions results since 2023 from the MIAA's official results (Danvers ran in Division 2 in 2023 and Division 4 since).",
+    historyNote: "No indoor track record book is posted, so this history starts with the seasons on file. Every Danvers result at the state meets since 2023, and at the three NEC meets Lancer Timing posted (December 2022, January 2023 and December 2023), is under Past Seasons, with final marks rather than seed marks. The Record Book lists the best marks from those meets; it isn't a full school record book, since none is posted. Records are from the school's team page (2025–26) and the dual meets scored on ArbiterLive (2021–22); divisional and Meet of Champions results since 2023 from the MIAA's official results (Danvers ran in Division 2 in 2023 and Division 4 since).",
     seasonsLabel: "on file",
     recordsNote: "A season is listed by the year it ended. A dash means too few meets on file have a score to give a record, and blank cells are details not on file.",
     honorsNote: "NEC All-Conference picks and state honors from the school's team pages and the MIAA; 2012 and 2013 from the Boston Globe's All-Scholastic archive, which printed each league's all-star list. Captains aren't posted for these seasons."
