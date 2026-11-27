@@ -148,7 +148,7 @@ const TEAMS = {
     seasons: [
       [2026, 0, 6, 0, "Jen Habeeb", "", ""],
       [2025, 6, 1, 0, "Jen Habeeb", "", "4th at the MIAA state meet (146.325); 3rd at the North sectional (146.525)"],
-      [2024, 5, 1, 0, "Jen Habeeb", "", "3rd at the MIAA state meet (145.5); 3rd at the North sectional"],
+      [2024, 5, 1, 0, "Jen Habeeb", "", "3rd at the MIAA state meet; 3rd at the North sectional (145.5)"],
       [2023, 4, 1, 0, "Jen Habeeb", "", "2nd at the MIAA state meet (148.15); 3rd at the North sectional (146.475)"],
       [2022, 2, 4, 0, "", "", ""],
       [2020, null, null, null, "", "", "9th at the North sectional (132.35)"],
@@ -199,7 +199,7 @@ const TEAMS = {
     ],
     news: [],
     photos: [],
-    historyNote: "State and sectional titles from the MIAA's all-time gymnastics champions list. State and North sectional finishes since 2015 from the MIAA's official results (Danvers didn't reach the state meet in 2017, 2018, 2022 or 2026); captains and honors from Salem News and Boston Globe stories reprinted on Masconomet gymnastics' site.",
+    historyNote: "State and sectional titles from the MIAA's all-time gymnastics champions list. State and North sectional finishes since 2015 from the MIAA's official results (Danvers didn't reach the state meet in 2017, 2018, 2022 or 2026); captains and honors from Salem News and Boston Globe stories reprinted on Masconomet gymnastics' site. Every Danvers gymnast's scores at the sectional and state meets since 2022–23 are under Past Seasons, and the Record Book lists the best Danvers scores at those meets since 2016.",
     titlesLabel: "MIAA state championships",
     titlesShort: "State titles",
     titleYear: "State title year",

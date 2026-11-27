@@ -101,6 +101,7 @@ const TEAMS = {
           ["2025-01-16", 1, "Salem", "NEC", "W", 93, 57, ""],
           ["2025-01-21", 0, "Peabody", "NEC", "L", 84, 102, ""],
           ["2025-01-23", 0, "Marblehead", "NEC", "L", 75, 103, ""],
+          ["2025-01-24", 0, "NEC Championship meet", "NEC", "3rd", "601 pts", null, "Beverly · boys' and girls' points combined; 3rd of 7, behind Marblehead (1,138) and Masconomet (775) (Marblehead Current)"],
           ["2025-01-28", 1, "Gloucester", "NEC", "W", 95, 88, ""]
         ],
         allLeague: "Zachary Cotter, Max Scott",
@@ -123,7 +124,8 @@ const TEAMS = {
           ["2024-01-10", 0, "Salem", "NEC", "W", 100, 66, ""],
           ["2024-01-17", 1, "Peabody", "NEC", "L", 83, 94, ""],
           ["2024-01-19", 0, "Masconomet", "NEC", "L", 85, 93, ""],
-          ["2024-01-23", 0, "Gloucester", "NEC", null, null, null, "No score on file"]
+          ["2024-01-23", 0, "Gloucester", "NEC", null, null, null, "No score on file"],
+          ["2024-01-30", 0, "NEC Championship meet", "NEC", "5th", "257 pts", null, "Girls' team standings · 5th of 8; Marblehead won with 515 (Marblehead Current)"]
         ],
         note: "Every meet on the school's ArbiterLive schedule, with the scores entered there; the record counts the meets with a score.",
         record: "3–3"

@@ -310,6 +310,7 @@ const MILESTONES = [
   { year: "1990–93", text: "Three NEC titles in four seasons: 1990, 1992 and 1993." },
   { year: "2005–06", text: "Back-to-back NEC championships, capped by a sectional title in 2006." },
   { year: "2008–11", text: "Four straight NEC championships — the longest run in program history." },
+  { year: "2009", text: "Kyle Larson, Christian Russo and Patrick Saunders are NEC all-stars (from the Boston Globe's All-Scholastics) in the second of four straight title seasons." },
   { year: "2015–18", text: "Four more in a row, with a second sectional title in 2016." },
   { year: "2018", text: "NEC Player of the Year Jared Mscisz shares medalist honors with a 1-under 71 as Danvers wins the Division 2 North tournament with a 305, then finishes second in the state, six shots behind Hopkinton." },
   { year: "2021", text: "Ryan Hayes takes over as head coach." },

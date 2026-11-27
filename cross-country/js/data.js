@@ -429,12 +429,14 @@ const MILESTONES = [
   { year: "1996–98", text: "Three straight NEC titles for the girls." },
   { year: "2000", text: "The girls add a fourth conference crown in five years." },
   { year: "2008", text: "Another NEC championship for the girls." },
+  { year: "2009", text: "Haley Dyer and Rachel Kaczynski are NEC all-stars (from the Boston Globe's All-Scholastics); Dyer's 19:53.8 that fall, as a sophomore, is still sixth on the girls' all-time 5K list." },
   { year: "2017–18", text: "The girls go back-to-back — and in 2018 the boys join them for a Danvers sweep of the NEC." },
   { year: "2021", text: "The boys win the NEC again." },
-  { year: "2023", text: "The boys win the MIAA 2B divisional meet, then the MIAA Division II state championship." },
-  { year: "2024", text: "Will Conklin is named NEC Boys Cross Country Runner of the Year and runs 15:53.1, the fastest 5K on the program's all-time list." },
-  { year: "2025", text: "The girls go 5–2 and win the NEC Lynch Division. Grace Conklin is named NEC All-Conference." },
-  { year: "2026", text: "Marcus Morais wins two races, at Salem and at home against Saugus/Winthrop, and the boys take a 28–29 thriller at Salem, their first dual-meet win since 2024. Grace Conklin makes the All-NEC team for the second straight year, then runs 19:36.3 at the Division 2 meet, fourth on the girls' all-time 5K list, to qualify for the MIAA state meet as an individual." }
+  { year: "2022", text: "The boys finish 2nd at the MIAA Division 2 state meet with 120 points, led by Sean Moore in 10th (16:31.37). At the Division 2 championship a week earlier, Shea Nemeskal is 4th (19:20.43) and Emma Eagan 11th (19:46.32), times that rank second and fifth on the girls' all-time list." },
+  { year: "2023", text: "The boys win the MIAA 2B divisional meet (71 points, with William Conklin, Jonathan Rooney and Sean Moore 5th, 6th and 7th), then the MIAA Division II state championship with 92 points: Moore 4th in 16:10.90, Rooney 10th and Conklin 12th." },
+  { year: "2024", text: "Will Conklin is named NEC Boys Cross Country Runner of the Year and runs 15:53.1, the fastest 5K on the program's all-time list. He is 2nd at the Division 2B meet that November and 4th at the MIAA Meet of Champions (15:57.77), and the girls place 4th at Division 2B with 144 points." },
+  { year: "2025", text: "The girls go 5–2 and win the NEC Lynch Division. Grace Conklin is named NEC All-Conference. At the MIAA's Division 2 meet the girls are 6th with 209 points, led by Conklin in 8th (20:53.44) and Madyson Danish in 15th, and Conklin runs 19:55.28 for 24th at the Meet of Champions." },
+  { year: "2026", text: "Marcus Morais wins two races, at Salem and at home against Saugus/Winthrop, and the boys take a 28–29 thriller at Salem, their first dual-meet win since 2024. Grace Conklin makes the All-NEC team for the second straight year, then runs 19:36.3 at the Division 2 meet, fourth on the girls' all-time 5K list, to qualify for the MIAA state meet as an individual. She finishes 34th at the MIAA Meet of Champions on Nov. 21 (20:44.17)." }
 ];
 
 const STANDOUTS = [

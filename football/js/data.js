@@ -735,7 +735,7 @@ const HONORS = [
   { year: 2012, captains: "Alex Grant, Connor Morrison, Jake Cawlina" },
   { year: 2011, captains: "Nick Valle, Mike Connors, Paul Nicolo, Scott Hovey" },
   { year: 2010, captains: "Greg Little, Zach Ryan" },
-  { year: 2009, captains: "Greg Ladd, Eric Burgos" },
+  { year: 2009, captains: "Greg Ladd, Eric Burgos", allLeague: "Erik Burgos, Steven Hennessey, John McInnis, Zach Ryan, Nick Serino, Dan Skinner, Corey Walker (NEC all-stars, from the Boston Globe's All-Scholastics); John McInnis was also a Globe Division 3 all-star" },
   { year: 2008, captains: "Josh Levesque, Cody Croft, John Gikas" },
   { year: 2007, captains: "Chris Martin, Kevin Keogh, Pat Hennessey", allLeague: "Chris Martin" },
   { year: 2006, captains: "Nick Steele, Pete Spiros, Brett Fravel" },
