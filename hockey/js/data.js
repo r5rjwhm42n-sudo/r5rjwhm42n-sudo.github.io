@@ -541,7 +541,7 @@ const TEAMS = {
     historyIntro: "Two state championships, 11 conference titles and a record book full of 100-point scorers. The seasons and players behind Danvers boys hockey.",
     banners: [{ year: 2001, label: "Division 2 State Champions" }, { year: 1994, label: "Division 2 State Champions" }],
     necTitles: [1981, 1990, 1991, 1992, 1993, 1994, 1996, 2002, 2012, 2017, 2018],
-    historyNote: "Title years follow the school's team page. The 1991 team was the first in NEC history to go 16–0–0 in the conference. Tournament seeds and scores for every year since 1998 are from the MIAA's bracket archive, and they match the record book's results; the record book adds that the 2003 semifinal went to overtime.",
+    historyNote: "Title years follow the school's team page. The 1991 team was the first in NEC history to go 16–0–0 in the conference. The 1994 state final and 1997 North final scores are from the MIAA's champions list. Tournament seeds and scores for every year since 1998 are from the MIAA's bracket archive, and they match the record book's results; the record book adds that the 2003 semifinal went to overtime.",
     historyTile: ["100-point club", 17, "Newest: Cooper Dunham, 2026"],
     seasons: [
       [2026, 10, 10, 2, "Bill Sheehan", "2nd", "Division 3 Round of 16 as the No. 21 seed: beat No. 12 Westfield 4–1 at Westfield, lost 4–0 to No. 5 Shawsheen Valley Tech"],
@@ -573,10 +573,10 @@ const TEAMS = {
       [2000, 15, 7, 1, "Kevin Flynn", "", "Division 2 North semifinals as the No. 7 seed: beat No. 10 Methuen 5–3 and No. 2 Saugus 2–0, lost 3–2 to No. 6 St. Bernard's at Chelmsford Arena"],
       [1999, 12, 9, 1, "Kevin Flynn", "4th", "Division 2 North quarterfinals as the No. 9 seed: beat No. 8 North Andover 4–1, lost 4–2 to No. 1 Saugus"],
       [1998, 9, 7, 6, "Kevin Flynn", "4th", "Division 2 North quarterfinals as the No. 10 seed: beat No. 7 Wilmington 8–5, lost 10–5 to No. 2 Saugus"],
-      [1997, 16, 4, 3, "Kevin Flynn", "2nd", "Lost to Newburyport in Div. 2 North final"],
+      [1997, 16, 4, 3, "Kevin Flynn", "2nd", "Division 2 North finalists: lost 6–3 to Newburyport in the North final"],
       [1996, 19, 1, 2, "Kevin Flynn", "NEC Champs", "Lost to Hingham in Div. 2 state semifinals"],
       [1995, 13, 6, 3, "Kevin Flynn", "2nd", "Lost to Whitman-Hanson in 2nd round"],
-      [1994, 20, 1, 3, "Kevin Flynn", "NEC Champs", "Won the Div. 2 state title over Taunton (OT)"],
+      [1994, 20, 1, 3, "Kevin Flynn", "NEC Champs", "MIAA Division 2 state champions: beat Taunton 5–4 in overtime in the state final"],
       [1993, 17, 1, 2, "Kevin Flynn", "NEC Champs", "Lost as No. 1 seed in first round to Marshfield"],
       [1992, 13, 4, 4, "Kevin Flynn", "NEC Champs", "Lost in Div. 1 first round to Medford"],
       [1991, 17, 3, 1, "Kevin Flynn", "NEC Champs", "Lost in Div. 1 first round to Don Bosco"],
@@ -620,7 +620,7 @@ const TEAMS = {
       { year: 2016, captains: "", allLeague: "Tom Mento, Matt Taylor, Rob Tibbetts", note: "" },
       { year: 2015, captains: "", allLeague: "Stephen Ganley", note: "" },
       { year: 1993, captains: "", allLeague: "David Finn", note: "" },
-      { year: 1991, captains: "", allLeague: "", note: "First NEC team to go 16-0-0" },
+      { year: 1991, captains: "", allLeague: "Brian Thibodeau", note: "First NEC team to go 16-0-0. Captain Brian Thibodeau was the NEC MVP and led the league with 49 points (17 goals, 32 assists), per his Blue and White Hall of Fame bio; the record book lists 35 assists that season" },
       { year: 1987, captains: "Mark Lombard, George Stamulis, Mike Thibodeau", allLeague: "", note: "" },
       { year: 1986, captains: "Mike Mscisz, John O'Neill", allLeague: "", note: "" },
       { year: 1985, captains: "Adam Belanger, Steve Horn, Jamie Whitmyer", allLeague: "", note: "" },
@@ -653,7 +653,7 @@ const TEAMS = {
       {
         name: "Kevin Flynn",
         role: "Head coach · 1987–2006",
-        bio: "Coached the Falcons for 20 seasons and to both of the program's state championships: an overtime win over Taunton in 1994 and a win over Boston Latin in 2001.",
+        bio: "Coached the Falcons for 20 seasons and to both of the program's state championships: a 5–4 overtime win over Taunton in 1994 and a 4–3 win over Boston Latin in 2001.",
         tags: ["2 state titles", "7 NEC titles", "20 seasons"]
       },
       {
@@ -701,7 +701,7 @@ const TEAMS = {
     milestones: [
       { year: "1981", text: "First Northeastern Conference championship. The Falcons go 17–5–2 and reach the state semifinals at Boston Garden." },
       { year: "1991", text: "The Falcons become the first NEC team to go 16–0–0 in the conference, the second of five straight league titles." },
-      { year: "1994", text: "State champions. A 20–1–3 season ends with an overtime win over Taunton for the Division 2 title." },
+      { year: "1994", text: "State champions. A 20–1–3 season ends with a 5–4 overtime win over Taunton for the Division 2 title." },
       { year: "1996", text: "A 19–1–2 team reaches the state semifinals. Chris McNeill sets the single-season marks of 42 goals and 76 points." },
       { year: "2001", text: "A second state title. Seeded fifth in Division 2 North, Danvers beats Bishop Fenwick, Saugus, top-seeded Wilmington and Lynnfield, then Boston Latin 4–3 at the FleetCenter on March 18 to finish 18–4–3." },
       { year: "2018", text: "A 16–5–1 season brings a second straight NEC North championship." },
@@ -1088,7 +1088,7 @@ const TEAMS = {
     historyNote: "No girls hockey record book is posted. Records for 2011–2017 are the regular-season records in the MIAA's tournament brackets plus the tournament games (a shootout counts as a loss); 2018–2025 are from MyHockeyLive and 2025–26 from the school's team page. Brian Seabury's six seasons add up to the 87–35–10 the Salem News reported. Head coaches from MyHockeyLive and the Salem News. Tournament seeds and scores are from the MIAA's bracket archive, which has no girls bracket posted for 2024 or 2026.",
     seasonsLabel: "on file",
     recordsNote: "A season is listed by the year it ended. The NEC column is the team's conference record where MyHockeyLive has one, and blank cells are details not on file.",
-    honorsNote: "League and MIAA honors from the school's team page. Captains aren't posted for these seasons.",
+    honorsNote: "League and MIAA honors from the school's team page and the DHS Blue and White Hall of Fame. Captains aren't posted for these seasons.",
     historyTile: ["State tournament", "12 trips", "2011 to 2017 and 2022 to 2026"],
     banners: [{ year: 2026, label: "Northeast Hockey League Champions" }],
     necTitles: [],
