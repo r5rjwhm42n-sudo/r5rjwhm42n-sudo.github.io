@@ -87,6 +87,7 @@
 table.records.results td:last-child { min-width: 0; }
 table.records.results td:nth-child(2) { white-space: normal; min-width: 160px; }
 table.records.results .yr { font-size: 19px; }
+table.records.results td.res-note { font-size: 14.5px; color: var(--muted); white-space: normal; min-width: 180px; }
 @media (max-width: 720px) {
   /* phone: one stacked row per result, athlete and event on the left, place and mark on the right */
   table.records.results thead { display: none; }
@@ -98,6 +99,8 @@ table.records.results .yr { font-size: 19px; }
   table.records.results td:nth-child(3) { grid-column: 2; grid-row: 1; text-align: right; font-size: 17px; }
   table.records.results td:nth-child(4) { grid-column: 2; grid-row: 2; text-align: right; font-size: 15px; color: var(--muted); }
   table.records.results tr:nth-child(even) { background: #f8f9fc; }
+  table.records.results td.res-note { grid-column: 1 / -1; grid-row: 3; text-align: left; font-size: 13.5px; min-width: 0; }
+  table.records.results td.res-note:empty { display: none; }
 }
 .card.kp { padding: 16px 18px; }
 .card.kp h4 { margin: 0 0 6px; font-size: 18px; line-height: 1.2; }

@@ -87,7 +87,7 @@ TEAMS["varsity"].past.push(...[
   "record": "10–1",
   "coach": "Mike Anderson",
   "finish": "NEC Champions",
-  "post": "Sectional champion: Michael Ambliotis (170)",
+  "post": "Sectional champion: Michael Ambliotis (170); Mark Haskins 7th at the Division 3 state meet (120)",
   "awards": "Michael Ambliotis, Division 3 North champion at 170; five Falcons wrestled at the Division 3 state meet",
   "games": [
    [

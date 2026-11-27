@@ -466,15 +466,16 @@
       keys.hidden = !(s.keyPlayers || []).length;
       $("#season-games").innerHTML = games.length ? games.map(pastRow).join("") : `<div class="empty">${esc(s.gamesNote || "Game-by-game results for this season aren't on file.")}</div>`;
       /* results (optional): a season's state meets, athlete by athlete —
-         [{ meet, date, team, rows: [[event, athlete, place, mark]] }] */
+         [{ meet, date, team, rows: [[event, athlete, place, mark]] }]
+         head: other column names (wrestling: Weight, Wrestler, Place, Note); notes: true when the last column is text */
       let res = $("#season-results");
       if (!res) { $("#season-games").insertAdjacentHTML("afterend", '<div class="season-results" id="season-results"></div>'); res = $("#season-results"); }
       res.innerHTML = (s.results || []).map((m) => `
         <h3 class="keys-h">${esc(m.meet)}${m.date ? ` <span>${esc(m.date)}</span>` : ""}</h3>
         ${m.team ? `<p class="sub fine">${esc(m.team)}</p>` : ""}
-        <div class="card table-scroll"><table class="records results">
-          <thead><tr><th>Event</th><th>Athlete</th><th>Place</th><th>Mark</th></tr></thead>
-          <tbody>${m.rows.map(([e, a, p, mk]) => `<tr><td>${esc(e)}</td><td>${esc(a)}</td><td class="yr">${esc(p)}</td><td class="yr">${esc(mk)}</td></tr>`).join("")}</tbody>
+        <div class="card table-scroll"><table class="records results${m.notes ? " with-notes" : ""}">
+          <thead><tr>${(m.head || ["Event", "Athlete", "Place", "Mark"]).map((h) => `<th>${esc(h)}</th>`).join("")}</tr></thead>
+          <tbody>${m.rows.map(([e, a, p, mk]) => `<tr><td>${esc(e)}</td><td>${esc(a)}</td><td class="yr">${esc(p)}</td><td class="${m.notes ? "res-note" : "yr"}">${esc(mk)}</td></tr>`).join("")}</tbody>
         </table></div>`).join("");
       res.hidden = !(s.results || []).length;
       $("#season-note").textContent = s.note || "";
