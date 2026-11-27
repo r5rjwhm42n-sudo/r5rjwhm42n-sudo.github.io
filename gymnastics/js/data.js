@@ -147,14 +147,14 @@ const TEAMS = {
     necTitles: [1984, 1986, 1996, 1997, 1998, 2005],
     seasons: [
       [2026, 0, 6, 0, "Jen Habeeb", "", ""],
-      [2025, 6, 1, 0, "Jen Habeeb", "", "4th at the MIAA state meet (146.325); 3rd at the North sectional"],
-      [2024, 5, 1, 0, "Jen Habeeb", "", "3rd at the MIAA state meet; 3rd at the North sectional"],
-      [2023, 4, 1, 0, "Jen Habeeb", "", "2nd at the MIAA state meet (148.15); 3rd at the North sectional"],
+      [2025, 6, 1, 0, "Jen Habeeb", "", "4th at the MIAA state meet (146.325); 3rd at the North sectional (146.525)"],
+      [2024, 5, 1, 0, "Jen Habeeb", "", "3rd at the MIAA state meet (145.5); 3rd at the North sectional"],
+      [2023, 4, 1, 0, "Jen Habeeb", "", "2nd at the MIAA state meet (148.15); 3rd at the North sectional (146.475)"],
       [2022, 2, 4, 0, "", "", ""],
       [2020, null, null, null, "", "", "9th at the North sectional (132.35)"],
       [2019, null, null, null, "", "", "9th at the North sectional (138.225)"],
       [2016, null, null, null, "", "", "12th at the North sectional (128.725)"],
-      [2015, null, null, null, "", "", "8th at the MIAA state meet (136.975); 2nd at the North sectional"]
+      [2015, null, null, null, "", "", "8th at the MIAA state meet (136.975); 2nd at the North sectional (141.355, behind Andover's 142.325)"]
     ],
     honors: [
       { year: 2026, captains: "", allLeague: "Delainy Murphy", note: "Delainy Murphy, Boston Globe All-Scholastic honorable mention" },
