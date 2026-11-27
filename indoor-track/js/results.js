@@ -186,7 +186,7 @@
      ],
      [
       "Two-mile",
-      "Gianluca Lociento",
+      "Gianluca Locilento",
       "23rd",
       "10:51.89"
      ],

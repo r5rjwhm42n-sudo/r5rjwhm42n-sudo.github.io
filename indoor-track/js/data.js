@@ -185,30 +185,20 @@ const TEAMS = {
         photo: { src: "../images/teams/boys-indoor-track.jpg", caption: "The 2025–26 Danvers boys indoor track team. Photo from the Danvers High School athletics page." },
         tiles: [["Record", "3–6", "Coach Tom Walsh"], ["Division 4 meet", "13th", "13 points · The Track at New Balance"], ["MSTCA ranking", "Unranked", "Not in the Division 4 top 10 (Jan. 28)"]],
         note: "Every meet on the school's ArbiterLive schedule for the season, with scores from ArbiterLive and the Boston Globe; multi-team meets are scored by place, and some duals have no score on file. Division 4 places and points from the meet's official results. The season record is from the school's team page.",
-        keyPlayers: [
-          { name: "Zach Dunn", grade: "Jr.", note: "NEC All-Conference. 2nd in the 55 meters at the MIAA Division 4 meet in 6.59, the Falcons' best finish there. Salem News all-star." },
-          { name: "Julian Capece", grade: "So.", note: "NEC All-Star. 5th in the high jump at Division 4, clearing 6 feet." },
-          { name: "Jack Curcuru", grade: "Sr.", note: "8th in the 55 meters at Division 4 in 6.81, after 6.75 in the prelims." },
-          { name: "Mason Ellsworth", grade: "Sr.", note: "10th in the shot put at Division 4 (41-2½)." }
-        ],
         awards: "Salem News all-star: Zach Dunn"
       },
       {
         season: "2024–25",
         games: [
-          ["2025-01-15", 0, "Swampscott and one more team", "NEC", null, null, null, "Multi-team meet"],
+          ["2024-12-30", 0, "NEC Freshman/Sophomore meet", "NEC", "5th", "25 pts", null, "Gloucester High · 5th of 10; Swampscott won with 93"],
+          ["2025-01-15", 0, "Marblehead", "NEC", "L", 21, 56, "A tri-meet at Swampscott; score from the Marblehead Current (the Swampscott score isn't on file)"],
           ["2025-01-22", 0, "Salem", "NEC", "W", 64, 18, ""],
           ["2025-01-30", 1, "Beverly", "NEC", null, null, null, "No score on file"],
+          ["2025-02-09", 0, "NEC Championship", "NEC", "5th", "35 pts", null, "Reggie Lewis Center, Roxbury · 5th of 9; Peabody won with 132"],
           ["2025-02-15", 0, "MIAA Division 4 Championship", "State", "7th", "19 pts", null, "Reggie Lewis Center, Boston"]
         ],
-        tiles: [["Dual meets with scores", "1–0", "Of the meets on the school's schedule"], ["Division 4 meet", "7th", "19 points · Reggie Lewis Center"]],
-        note: "Every meet on the school's ArbiterLive schedule for the season, with scores from ArbiterLive and the Boston Globe; multi-team meets are scored by place, and some duals have no score on file. Division 4 places and points from the meet's official results.",
-        keyPlayers: [
-          { name: "William Conklin", grade: "Sr.", note: "MIAA Division 4 champion in the two-mile, 9:32.79. 15th in the two-mile at the Meet of Champions (9:44.39). Salem News all-star." },
-          { name: "JJ Rooney", grade: "Sr.", note: "2nd in the mile at Division 4 in 4:25.03. 11th in the mile at the Meet of Champions (4:24.87)." },
-          { name: "Chuck Garlin", grade: "Sr.", note: "8th in the 600 meters at Division 4 (1:25.68)." },
-          { name: "Julian Capece", grade: "Fr.", note: "Cleared 5-8 in the high jump at Division 4 as a freshman." }
-        ],
+        tiles: [["Dual meets with scores", "1–1", "Of the meets on file"], ["NEC meet", "5th", "35 points · Reggie Lewis Center"], ["Division 4 meet", "7th", "19 points · Reggie Lewis Center"]],
+        note: "Every meet on the school's ArbiterLive schedule for the season, with scores from ArbiterLive and the Boston Globe; multi-team meets are scored by place, and some duals have no score on file. Division 4 places and points from the meet's official results. NEC meet standings, the Freshman/Sophomore meet and the Marblehead tri-meet from the Marblehead Current. Peabody Weekly News also reports a 53.5–27.5 loss to Peabody in a dual meet it doesn't date.",
         awards: "Salem News all-star: Will Conklin"
       },
       {
@@ -216,18 +206,13 @@ const TEAMS = {
         games: [
           ["2023-12-13", 0, "Peabody and one more team", "NEC", null, null, null, "Multi-team meet"],
           ["2023-12-21", 0, "Beverly", "NEC", "L", 26, 60, ""],
-          ["2024-01-04", 1, "Masconomet and two more teams", "NEC", "L", 42, 44, ""],
+          ["2024-01-04", 1, "Marblehead", "NEC", "L", 42, 44, "The school's schedule lists this home meet with Masconomet and two more teams; the Marblehead Current has the 44–42 Marblehead win"],
           ["2024-01-10", 0, "Gloucester", "NEC", null, null, null, "No score on file"],
+          ["2024-02-10", 0, "NEC Championship", "NEC", "36 pts", null, null, "Reggie Lewis Center, Roxbury · Peabody won with 117.5"],
           ["2024-02-18", 0, "MIAA Division 4 Championship", "State", "7th", "23 pts", null, "Reggie Lewis Center, Boston"]
         ],
         tiles: [["Dual meets with scores", "0–2", "Of the meets on the school's schedule"], ["Division 4 meet", "7th", "23 points · Reggie Lewis Center"]],
-        note: "Every meet on the school's ArbiterLive schedule for the season, with scores from ArbiterLive and the Boston Globe; multi-team meets are scored by place, and some duals have no score on file. Division 4 places and points from the meet's official results.",
-        keyPlayers: [
-          { name: "Sean Moore", note: "Senior. Won the Division 4 two-mile in 9:45.39, then ran 9:39.11 for 8th at the Meet of Champions." },
-          { name: "William Conklin", note: "2nd in the Division 4 two-mile (9:52.51) as a junior, a year before winning it." },
-          { name: "JJ Rooney", note: "7th in the Division 4 mile (4:33.15)." },
-          { name: "4x400 relay", note: "6th at the Division 4 meet in 3:41.59." }
-        ]
+        note: "Every meet on the school's ArbiterLive schedule for the season, with scores from ArbiterLive and the Boston Globe; multi-team meets are scored by place, and some duals have no score on file. Division 4 places and points from the meet's official results. The Marblehead meet and the NEC meet standings are from the Marblehead Current; its list of the boys' standings skips two places, so Danvers's place isn't shown.",
       }
     ],
     historyIntro: "Division 4 two-mile champions two winters running, Sean Moore in 2024 and William Conklin in 2025, 7th-place teams at the Division 4 meet both years, and a sprinter who ran 6.59 in 2026.",
@@ -264,12 +249,7 @@ const TEAMS = {
     ],
     news: [],
     photos: [],
-    returning: [
-      { name: "Zach Dunn", grade: "Sr.", note: "2nd in the Division 4 55 meters last winter (6.59)." },
-      { name: "Julian Capece", grade: "Jr.", note: "Cleared 6 feet for 5th in the Division 4 high jump." },
-      { name: "Marcus Morais", grade: "Sr.", note: "Won two cross country races this fall: at Salem on Sept. 16 (19:20) and at home against Saugus/Winthrop on Sept. 30 (17:25). Ran the mile at the Division 4 meet last winter (5:04.62)." }
-    ],
-    returningNote: "Picked from last winter's results and game stories.",
+    returningNote: "Every Falcon who competed at last winter's state meets and is back this winter. The cards are written in js/athletes.js.",
     returningTitle: "Returning athletes to watch",
     division: "MIAA Division 4",
     historyNote: "No indoor track record book is posted, so this history starts with the seasons on file. Every Danvers result at the state meets since 2023 is under Past Seasons, with final marks rather than seed marks. Records are from the school's team page (2025–26) and the dual meets scored on ArbiterLive (2021–22); divisional and Meet of Champions results since 2023 from the MIAA's official results (Danvers ran in Division 2 in 2023 and Division 4 since).",
@@ -435,22 +415,12 @@ const TEAMS = {
         photo: { src: "../images/teams/girls-indoor-track.jpg", caption: "The 2025–26 Danvers girls indoor track team. Photo from the Danvers High School athletics page." },
         tiles: [["Record", "3–5–1", "Coach Erin St. Pierre"], ["Division 4 meet", "19th", "13 points · The Track at New Balance"], ["MSTCA ranking", "Unranked", "Not in the Division 4 top 10 (Jan. 22)"]],
         note: "Every meet on the school's ArbiterLive schedule for the season, with scores from ArbiterLive and the Boston Globe; multi-team meets are scored by place, and some duals have no score on file. Division 4 places and points from the meet's official results. The season record is from the school's team page.",
-        keyPlayers: [
-          { name: "Tess Ryan", grade: "Jr.", note: "NEC All-Conference. 3rd in the 55 meters at the MIAA Division 4 meet in 7.30." },
-          { name: "Grace Conklin", grade: "Jr.", note: "NEC All-Star. 6th in the two-mile at Division 4 in 11:58.46." },
-          { name: "Madyson Danish", grade: "So.", note: "Ran the two-mile at Division 4 (12:51.31)." }
-        ]
       },
       {
         season: "2024–25",
-        games: [["2025-01-15", 1, "Peabody", "NEC", "L", 33, 48, ""], ["2025-01-22", 0, "Salem", "NEC", "W", 70, 0, "Score as reported to the Boston Globe"], ["2025-01-30", 1, "Beverly", "NEC", null, null, null, "No score on file"], ["2025-02-15", 0, "MIAA Division 4 Championship", "State", "19th", "8 pts", null, "Reggie Lewis Center, Boston"]],
-        tiles: [["Dual meets with scores", "0–1", "Of the meets on the school's schedule"], ["Division 4 meet", "19th", "8 points · Reggie Lewis Center"]],
-        note: "Every meet on the school's ArbiterLive schedule for the season, with scores from ArbiterLive and the Boston Globe; multi-team meets are scored by place, and some duals have no score on file. Division 4 places and points from the meet's official results.",
-        keyPlayers: [
-          { name: "Grace Conklin", grade: "So.", note: "4th in the two-mile at the MIAA Division 4 meet in 12:08.43." },
-          { name: "Tess Ryan", grade: "So.", note: "7th in the 55 meters at Division 4 (7.57). Salem News all-star." },
-          { name: "Addison Lamar", grade: "Jr.", note: "8th in the two-mile at Division 4 (12:21.92)." }
-        ],
+        games: [["2024-12-30", 0, "NEC Freshman/Sophomore meet", "NEC", "4th", "49 pts", null, "Gloucester High · 4th of 10; Peabody won with 99"], ["2025-01-15", 1, "Peabody", "NEC", "L", 33, 48, ""], ["2025-01-22", 0, "Salem", "NEC", "W", 70, 0, "Score as reported to the Boston Globe"], ["2025-01-30", 1, "Beverly", "NEC", null, null, null, "No score on file"], ["2025-02-09", 0, "NEC Championship", "NEC", "5th", "48 pts", null, "Reggie Lewis Center, Roxbury · 5th of 8; Peabody won with 80"], ["2025-02-15", 0, "MIAA Division 4 Championship", "State", "19th", "8 pts", null, "Reggie Lewis Center, Boston"]],
+        tiles: [["Dual meets with scores", "1–1", "Of the meets on file"], ["NEC meet", "5th", "48 points · Reggie Lewis Center"], ["Division 4 meet", "19th", "8 points · Reggie Lewis Center"]],
+        note: "Every meet on the school's ArbiterLive schedule for the season, with scores from ArbiterLive and the Boston Globe; multi-team meets are scored by place, and some duals have no score on file. Division 4 places and points from the meet's official results. NEC meet standings and the Freshman/Sophomore meet from the Marblehead Current, which also reports a 55–22 loss to Marblehead in a tri-meet with Swampscott. It dates that meet Jan. 15, the day the school's schedule and the Globe have the girls at home against Peabody, so the date is left off here.",
         awards: "Salem News all-star: Tess Ryan"
       },
       {
@@ -458,16 +428,13 @@ const TEAMS = {
         games: [
           ["2023-12-13", 0, "Peabody and one more team", "NEC", null, null, null, "Multi-team meet"],
           ["2023-12-21", 0, "Beverly", "NEC", "L", 15, 71, ""],
+          ["2024-01-04", 1, "Marblehead", "NEC", "L", 26, 60, "Score from the Marblehead Current"],
           ["2024-01-10", 0, "Gloucester", "NEC", null, null, null, "No score on file"],
+          ["2024-02-10", 0, "NEC Championship", "NEC", "6th", "16 pts", null, "Reggie Lewis Center, Roxbury · 6th of 8; Marblehead won"],
           ["2024-02-18", 0, "MIAA Division 4 Championship", "State", "34th", "1 pt", null, "Reggie Lewis Center, Boston"]
         ],
-        tiles: [["Dual meets with scores", "0–1", "Of the meets on the school's schedule"], ["Division 4 meet", "34th", "1 pt · Reggie Lewis Center"]],
-        note: "Every meet on the school's ArbiterLive schedule for the season, with scores from ArbiterLive and the Boston Globe; multi-team meets are scored by place, and some duals have no score on file. Division 4 places and points from the meet's official results.",
-        keyPlayers: [
-          { name: "Bobbi Serino", note: "Senior. 8th in the Division 4 mile (5:32.60), the girls' only point." },
-          { name: "Grace Conklin", note: "Ran the Division 4 two-mile as a freshman (13:28.52, 16th)." },
-          { name: "Tess Ryan", note: "Ran the Division 4 55 meters as a freshman." }
-        ]
+        tiles: [["Dual meets with scores", "0–2", "Of the meets on file"], ["NEC meet", "6th", "16 points · Reggie Lewis Center"], ["Division 4 meet", "34th", "1 pt · Reggie Lewis Center"]],
+        note: "Every meet on the school's ArbiterLive schedule for the season, with scores from ArbiterLive and the Boston Globe; multi-team meets are scored by place, and some duals have no score on file. Division 4 places and points from the meet's official results. The Marblehead meet and the NEC meet standings are from the Marblehead Current.",
       }
     ],
     historyIntro: "State champions in 1978 and 1979 in the spring, and a sprinter and a distance runner scoring at the Division 4 meet the last two winters.",
@@ -504,12 +471,7 @@ const TEAMS = {
     ],
     news: [],
     photos: [],
-    returning: [
-      { name: "Tess Ryan", grade: "Sr.", note: "3rd in the Division 4 55 meters last winter (7.30)." },
-      { name: "Grace Conklin", grade: "Sr.", note: "Top-six finishes in the Division 4 two-mile the last two winters, and a state cross country qualifier this fall." },
-      { name: "Madyson Danish", grade: "Jr.", note: "A Division 4 two-miler last winter." }
-    ],
-    returningNote: "Picked from last winter's results and game stories.",
+    returningNote: "Every Falcon who competed at last winter's state meets and is back this winter. The cards are written in js/athletes.js.",
     returningTitle: "Returning athletes to watch",
     division: "MIAA Division 4",
     historyNote: "No indoor track record book is posted, so this history starts with the seasons on file. Every Danvers result at the state meets since 2023 is under Past Seasons, with final marks rather than seed marks. Records are from the school's team page (2025–26) and the dual meets scored on ArbiterLive (2021–22); divisional and Meet of Champions results since 2023 from the MIAA's official results (Danvers ran in Division 2 in 2023 and Division 4 since).",

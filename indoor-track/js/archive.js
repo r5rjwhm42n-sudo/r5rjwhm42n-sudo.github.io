@@ -3,7 +3,7 @@
 TEAMS["boys"].past.push(...[
  {
   "season": "2022–23",
-  "record": "0–2–0 in scored meets",
+  "record": "0–3–0 in scored meets",
   "post": "27th at the Division 2 meet",
   "awards": "Will Conklin, 7th in the Division 2 two-mile as a sophomore; Chris McCrea, 8th in the 600",
   "games": [
@@ -20,12 +20,12 @@ TEAMS["boys"].past.push(...[
    [
     "2022-12-19",
     0,
-    "Marblehead and one more team",
+    "Marblehead",
     "NEC",
-    null,
-    null,
-    null,
-    "Marblehead High School Gym/Field House · Multi-team meet"
+    "L",
+    27,
+    59,
+    "Marblehead High School Gym/Field House · A tri-meet with Salem; score from the Marblehead Weekly News"
    ],
    [
     "2022-12-29",
@@ -78,7 +78,7 @@ TEAMS["boys"].past.push(...[
     "Reggie Lewis Center, Boston"
    ]
   ],
-  "note": "Every meet on the school's ArbiterLive schedule; multi-team meets are scored by place. The results on file add up to 0–2–0. Division 2 places and points from the MIAA's official results."
+  "note": "Every meet on the school's ArbiterLive schedule; multi-team meets are scored by place. The results on file add up to 0–3–0, with the Marblehead score from the Marblehead Weekly News. Division 2 places and points from the MIAA's official results."
  },
  {
   "season": "2021–22",
@@ -151,7 +151,7 @@ TEAMS["boys"].past.push(...[
 TEAMS["girls"].past.push(...[
  {
   "season": "2022–23",
-  "record": "0–2–0 in scored meets",
+  "record": "0–3–0 in scored meets",
   "post": "13th at the Division 2 meet",
   "awards": "3rd at the Division 2 meet: Emma Eagan (two-mile, 11:41.42) and Cali Abbatessa (shot put, 33-6); both went on to the All-State meet",
   "games": [
@@ -168,12 +168,12 @@ TEAMS["girls"].past.push(...[
    [
     "2022-12-19",
     0,
-    "Marblehead and one more team",
+    "Marblehead",
     "NEC",
-    null,
-    null,
-    null,
-    "Multi-team meet"
+    "L",
+    40,
+    46,
+    "A tri-meet at Marblehead with Salem; score from the Marblehead Weekly News"
    ],
    [
     "2022-12-29",
@@ -226,7 +226,7 @@ TEAMS["girls"].past.push(...[
     "Reggie Lewis Center, Boston"
    ]
   ],
-  "note": "Every meet on the school's ArbiterLive schedule; multi-team meets are scored by place. The results on file add up to 0–2–0. Division 2 places and points from the MIAA's official results."
+  "note": "Every meet on the school's ArbiterLive schedule; multi-team meets are scored by place. The results on file add up to 0–3–0, with the Marblehead score from the Marblehead Weekly News. Division 2 places and points from the MIAA's official results."
  },
  {
   "season": "2021–22",
