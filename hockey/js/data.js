@@ -619,6 +619,8 @@ const TEAMS = {
       { year: 2017, captains: "", allLeague: "Matt Taylor", note: "" },
       { year: 2016, captains: "", allLeague: "Tom Mento, Matt Taylor, Rob Tibbetts", note: "" },
       { year: 2015, captains: "", allLeague: "Stephen Ganley", note: "" },
+      { year: 2013, captains: "", allLeague: "", note: "NEC all-stars: Rob Buchanon, AJ Couto, Mike Discuillo, Adam Merry, Joe Strangie, Alex Taylor" },
+      { year: 2012, captains: "", allLeague: "", note: "NEC all-stars: Peter Marshall, Joe Strangie" },
       { year: 1993, captains: "", allLeague: "David Finn", note: "" },
       { year: 1991, captains: "", allLeague: "Brian Thibodeau", note: "First NEC team to go 16-0-0. Captain Brian Thibodeau was the NEC MVP and led the league with 49 points (17 goals, 32 assists), per his Blue and White Hall of Fame bio; the record book lists 35 assists that season" },
       { year: 1987, captains: "Mark Lombard, George Stamulis, Mike Thibodeau", allLeague: "", note: "" },

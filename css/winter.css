@@ -78,6 +78,27 @@
 .season-keys[hidden] { display: none; }
 .season-keys, .returning { margin: 18px 0 8px; }
 .keys-h { font-family: var(--display); font-weight: 800; font-size: 22px; letter-spacing: .04em; color: var(--navy); text-transform: uppercase; margin: 0 0 10px; }
+/* past season: state meet results, athlete by athlete (indoor track) */
+.season-results { margin-top: 26px; }
+.season-results[hidden] { display: none; }
+.season-results .keys-h { margin-top: 22px; }
+.season-results .keys-h span { font-size: 15px; letter-spacing: .1em; color: var(--muted); margin-left: 6px; }
+.season-results .sub { margin: -4px 0 10px; }
+table.records.results td:last-child { min-width: 0; }
+table.records.results td:nth-child(2) { white-space: normal; min-width: 160px; }
+table.records.results .yr { font-size: 19px; }
+@media (max-width: 720px) {
+  /* phone: one stacked row per result, athlete and event on the left, place and mark on the right */
+  table.records.results thead { display: none; }
+  table.records.results tr { display: grid; grid-template-columns: 1fr auto; gap: 2px 14px; padding: 10px 14px; border-top: 1px solid var(--line); }
+  table.records.results tr:first-child { border-top: 0; }
+  table.records.results td { padding: 0; border: 0; background: none !important; white-space: normal; min-width: 0; }
+  table.records.results td:nth-child(1) { grid-column: 1; grid-row: 2; font-size: 13.5px; color: var(--muted); }
+  table.records.results td:nth-child(2) { grid-column: 1; grid-row: 1; font-weight: 600; }
+  table.records.results td:nth-child(3) { grid-column: 2; grid-row: 1; text-align: right; font-size: 17px; }
+  table.records.results td:nth-child(4) { grid-column: 2; grid-row: 2; text-align: right; font-size: 15px; color: var(--muted); }
+  table.records.results tr:nth-child(even) { background: #f8f9fc; }
+}
 .card.kp { padding: 16px 18px; }
 .card.kp h4 { margin: 0 0 6px; font-size: 18px; line-height: 1.2; }
 .card.kp h4 span { font-weight: 600; font-size: 13px; color: var(--muted); margin-left: 4px; }

@@ -188,7 +188,7 @@ const TEAMS = {
         keyPlayers: [
           { name: "Zach Dunn", grade: "Jr.", note: "NEC All-Conference. 2nd in the 55 meters at the MIAA Division 4 meet in 6.59, the Falcons' best finish there. Salem News all-star." },
           { name: "Julian Capece", grade: "So.", note: "NEC All-Star. 5th in the high jump at Division 4, clearing 6 feet." },
-          { name: "Jack Curcuru", grade: "Sr.", note: "8th in the 55 meters at Division 4 (6.75 in the prelims)." },
+          { name: "Jack Curcuru", grade: "Sr.", note: "8th in the 55 meters at Division 4 in 6.81, after 6.75 in the prelims." },
           { name: "Mason Ellsworth", grade: "Sr.", note: "10th in the shot put at Division 4 (41-2½)." }
         ],
         awards: "Salem News all-star: Zach Dunn"
@@ -223,9 +223,9 @@ const TEAMS = {
         tiles: [["Dual meets with scores", "0–2", "Of the meets on the school's schedule"], ["Division 4 meet", "7th", "23 points · Reggie Lewis Center"]],
         note: "Every meet on the school's ArbiterLive schedule for the season, with scores from ArbiterLive and the Boston Globe; multi-team meets are scored by place, and some duals have no score on file. Division 4 places and points from the meet's official results.",
         keyPlayers: [
-          { name: "Sean Moore", note: "Senior. Won the Division 4 two-mile in 9:41.21, then ran 9:39.11 for 8th at the Meet of Champions." },
-          { name: "William Conklin", note: "2nd in the Division 4 two-mile (9:47.88) as a junior, a year before winning it." },
-          { name: "JJ Rooney", note: "7th in the Division 4 mile (4:31.91)." },
+          { name: "Sean Moore", note: "Senior. Won the Division 4 two-mile in 9:45.39, then ran 9:39.11 for 8th at the Meet of Champions." },
+          { name: "William Conklin", note: "2nd in the Division 4 two-mile (9:52.51) as a junior, a year before winning it." },
+          { name: "JJ Rooney", note: "7th in the Division 4 mile (4:33.15)." },
           { name: "4x400 relay", note: "6th at the Division 4 meet in 3:41.59." }
         ]
       }
@@ -238,18 +238,21 @@ const TEAMS = {
       [2025, null, null, null, "", "", "7th at the Division 4 meet"],
       [2024, null, null, null, "", "", "7th at the Division 4 meet"],
       [2023, null, null, null, "", "", "27th at the Division 2 meet"],
-      [2022, 4, 2, 0, "", "", ""]
+      [2022, 4, 2, 0, "", "", ""],
+      [2013, null, null, null, "John Norris", "Unbeaten in the NEC South (7–0)", ""]
     ],
     honors: [
       { year: 2026, captains: "", allLeague: "Zach Dunn", note: "NEC All-Star: Julian Capece; Salem News all-star: Zach Dunn" },
       { year: 2025, captains: "", allLeague: "Owen Shanbar, Will Conklin", note: "William Conklin, Division 4 two-mile champion; Meet of Champions: JJ Rooney (mile), William Conklin (two-mile); Salem News all-star: Will Conklin" },
       { year: 2024, captains: "", allLeague: "", note: "Sean Moore, Division 4 two-mile champion and 8th at the Meet of Champions; William Conklin 2nd in the Division 4 two-mile" },
-      { year: 2023, captains: "", allLeague: "", note: "Will Conklin, 7th in the Division 2 two-mile as a sophomore; Chris McCrea, 8th in the 600" }
+      { year: 2023, captains: "", allLeague: "", note: "Will Conklin, 7th in the Division 2 two-mile as a sophomore; Chris McCrea, 8th in the 600" },
+      { year: 2013, captains: "", allLeague: "", note: "NEC all-stars: James Bailey, Ryan Levesque, Joe Manson, Drew Piazza, Connor Rollins, John Thomas. John Norris, a Boston Globe Coach of the Year" }
     ],
     legends: [],
     milestones: [
+      { year: "2013", text: "In his 30th year of coaching, John Norris leads the boys through an unbeaten NEC South season (7–0) and to 2nd at the Division 3 Coaches Relays, and the Boston Globe names him one of its Coaches of the Year. Between track and cross country he had been NEC Coach of the Year 17 times." },
       { year: "2022", text: "A 4–2 dual-meet winter, with wins over Gloucester, Swampscott, Masconomet and Beverly." },
-      { year: "2024", text: "Sean Moore wins the Division 4 two-mile in 9:41.21 with William Conklin right behind him in 2nd, the 4x400 relay is 6th, and the Falcons place 7th with 23 points. Moore is 8th in the two-mile at the Meet of Champions." },
+      { year: "2024", text: "Sean Moore wins the Division 4 two-mile in 9:45.39 with William Conklin right behind him in 2nd, the 4x400 relay is 6th, and the Falcons place 7th with 23 points. Moore is 8th in the two-mile at the Meet of Champions." },
       { year: "2025", text: "William Conklin wins the Division 4 two-mile in 9:32.79, JJ Rooney is 2nd in the mile and the Falcons place 7th at the Division 4 meet." },
       { year: "2026", text: "Zach Dunn runs 6.59 for 2nd in the Division 4 55 meters, and Julian Capece clears 6 feet for 5th in the high jump." }
     ],
@@ -269,11 +272,11 @@ const TEAMS = {
     returningNote: "Picked from last winter's results and game stories.",
     returningTitle: "Returning athletes to watch",
     division: "MIAA Division 4",
-    historyNote: "No indoor track record book is posted, so this history starts with the seasons on file. Records are from the school's team page (2025–26) and the dual meets scored on ArbiterLive (2021–22); divisional and Meet of Champions results since 2023 from the MIAA's official results (Danvers ran in Division 2 in 2023 and Division 4 since).",
+    historyNote: "No indoor track record book is posted, so this history starts with the seasons on file. Every Danvers result at the state meets since 2023 is under Past Seasons, with final marks rather than seed marks. Records are from the school's team page (2025–26) and the dual meets scored on ArbiterLive (2021–22); divisional and Meet of Champions results since 2023 from the MIAA's official results (Danvers ran in Division 2 in 2023 and Division 4 since).",
     seasonsLabel: "on file",
     recordsNote: "A season is listed by the year it ended. A dash means too few meets on file have a score to give a record, and blank cells are details not on file.",
-    honorsNote: "NEC All-Conference picks and state honors from the school's team pages and the MIAA. Captains aren't posted for these seasons.",
-    champions: [["2025", "William Conklin", "MIAA Division 4 champion, two-mile (9:32.79)"], ["2024", "Sean Moore", "MIAA Division 4 champion, two-mile (9:41.21)"]]
+    honorsNote: "NEC All-Conference picks and state honors from the school's team pages and the MIAA; 2012 and 2013 from the Boston Globe's All-Scholastic archive, which printed each league's all-star list. Captains aren't posted for these seasons.",
+    champions: [["2025", "William Conklin", "MIAA Division 4 champion, two-mile (9:32.79)"], ["2024", "Sean Moore", "MIAA Division 4 champion, two-mile (9:45.39)"]]
   },
 
   /* ================================ GIRLS ================================ */
@@ -440,7 +443,7 @@ const TEAMS = {
       },
       {
         season: "2024–25",
-        games: [["2025-01-15", 1, "Peabody", "NEC", "L", 33, 48, ""], ["2025-01-30", 1, "Beverly", "NEC", null, null, null, "No score on file"], ["2025-02-15", 0, "MIAA Division 4 Championship", "State", "19th", "8 pts", null, "Reggie Lewis Center, Boston"]],
+        games: [["2025-01-15", 1, "Peabody", "NEC", "L", 33, 48, ""], ["2025-01-22", 0, "Salem", "NEC", "W", 70, 0, "Score as reported to the Boston Globe"], ["2025-01-30", 1, "Beverly", "NEC", null, null, null, "No score on file"], ["2025-02-15", 0, "MIAA Division 4 Championship", "State", "19th", "8 pts", null, "Reggie Lewis Center, Boston"]],
         tiles: [["Dual meets with scores", "0–1", "Of the meets on the school's schedule"], ["Division 4 meet", "19th", "8 points · Reggie Lewis Center"]],
         note: "Every meet on the school's ArbiterLive schedule for the season, with scores from ArbiterLive and the Boston Globe; multi-team meets are scored by place, and some duals have no score on file. Division 4 places and points from the meet's official results.",
         keyPlayers: [
@@ -461,8 +464,8 @@ const TEAMS = {
         tiles: [["Dual meets with scores", "0–1", "Of the meets on the school's schedule"], ["Division 4 meet", "34th", "1 pt · Reggie Lewis Center"]],
         note: "Every meet on the school's ArbiterLive schedule for the season, with scores from ArbiterLive and the Boston Globe; multi-team meets are scored by place, and some duals have no score on file. Division 4 places and points from the meet's official results.",
         keyPlayers: [
-          { name: "Bobbi Serino", note: "Senior. 8th in the Division 4 mile (5:32.21), the girls' only point." },
-          { name: "Grace Conklin", note: "Ran the Division 4 two-mile as a freshman (13:02.76)." },
+          { name: "Bobbi Serino", note: "Senior. 8th in the Division 4 mile (5:32.60), the girls' only point." },
+          { name: "Grace Conklin", note: "Ran the Division 4 two-mile as a freshman (13:28.52, 16th)." },
           { name: "Tess Ryan", note: "Ran the Division 4 55 meters as a freshman." }
         ]
       }
@@ -481,7 +484,9 @@ const TEAMS = {
       { year: 2026, captains: "", allLeague: "Tess Ryan", note: "NEC All-Star: Grace Conklin" },
       { year: 2025, captains: "", allLeague: "Tess Ryan, Jenea Cash, Flavia Locilento, Sabina Sturgeon", note: "Salem News all-star: Tess Ryan" },
       { year: 2024, captains: "", allLeague: "", note: "Bobbi Serino, 8th in the Division 4 mile" },
-      { year: 2023, captains: "", allLeague: "", note: "3rd at the Division 2 meet: Emma Eagan (two-mile, 11:41.42) and Cali Abbatessa (shot put, 33-6); both went on to the All-State meet" }
+      { year: 2023, captains: "", allLeague: "", note: "3rd at the Division 2 meet: Emma Eagan (two-mile, 11:41.42) and Cali Abbatessa (shot put, 33-6); both went on to the All-State meet" },
+      { year: 2013, captains: "", allLeague: "", note: "NEC all-stars: Ashley Brooks, Meghan Kellard, Xanthi Pantazelos" },
+      { year: 2012, captains: "", allLeague: "", note: "NEC all-stars: Samantha DiBella, Catreida Dominick, Xanthi Pantazelos" }
     ],
     legends: [],
     milestones: [
@@ -507,9 +512,9 @@ const TEAMS = {
     returningNote: "Picked from last winter's results and game stories.",
     returningTitle: "Returning athletes to watch",
     division: "MIAA Division 4",
-    historyNote: "No indoor track record book is posted, so this history starts with the seasons on file. Records are from the school's team page (2025–26) and the dual meets scored on ArbiterLive (2021–22); divisional and Meet of Champions results since 2023 from the MIAA's official results (Danvers ran in Division 2 in 2023 and Division 4 since).",
+    historyNote: "No indoor track record book is posted, so this history starts with the seasons on file. Every Danvers result at the state meets since 2023 is under Past Seasons, with final marks rather than seed marks. Records are from the school's team page (2025–26) and the dual meets scored on ArbiterLive (2021–22); divisional and Meet of Champions results since 2023 from the MIAA's official results (Danvers ran in Division 2 in 2023 and Division 4 since).",
     seasonsLabel: "on file",
     recordsNote: "A season is listed by the year it ended. A dash means too few meets on file have a score to give a record, and blank cells are details not on file.",
-    honorsNote: "NEC All-Conference picks and state honors from the school's team pages and the MIAA. Captains aren't posted for these seasons."
+    honorsNote: "NEC All-Conference picks and state honors from the school's team pages and the MIAA; 2012 and 2013 from the Boston Globe's All-Scholastic archive, which printed each league's all-star list. Captains aren't posted for these seasons."
   }
 };

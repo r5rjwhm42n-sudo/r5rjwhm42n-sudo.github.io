@@ -465,6 +465,18 @@
         <article class="card kp"><h4>${esc(p.name)}${p.grade ? ` <span>${esc(p.grade)}</span>` : ""}</h4><p>${esc(p.note)}</p></article>`).join("")}</div>` : "";
       keys.hidden = !(s.keyPlayers || []).length;
       $("#season-games").innerHTML = games.length ? games.map(pastRow).join("") : `<div class="empty">${esc(s.gamesNote || "Game-by-game results for this season aren't on file.")}</div>`;
+      /* results (optional): a season's state meets, athlete by athlete —
+         [{ meet, date, team, rows: [[event, athlete, place, mark]] }] */
+      let res = $("#season-results");
+      if (!res) { $("#season-games").insertAdjacentHTML("afterend", '<div class="season-results" id="season-results"></div>'); res = $("#season-results"); }
+      res.innerHTML = (s.results || []).map((m) => `
+        <h3 class="keys-h">${esc(m.meet)}${m.date ? ` <span>${esc(m.date)}</span>` : ""}</h3>
+        ${m.team ? `<p class="sub fine">${esc(m.team)}</p>` : ""}
+        <div class="card table-scroll"><table class="records results">
+          <thead><tr><th>Event</th><th>Athlete</th><th>Place</th><th>Mark</th></tr></thead>
+          <tbody>${m.rows.map(([e, a, p, mk]) => `<tr><td>${esc(e)}</td><td>${esc(a)}</td><td class="yr">${esc(p)}</td><td class="yr">${esc(mk)}</td></tr>`).join("")}</tbody>
+        </table></div>`).join("");
+      res.hidden = !(s.results || []).length;
       $("#season-note").textContent = s.note || "";
       $("#season-note").hidden = !s.note;
       $("#season-photo").innerHTML = s.photo ? `<img src="${esc(s.photo.src)}" alt="${esc(s.photo.caption)}" loading="lazy"><figcaption>${esc(s.photo.caption)}</figcaption>` : "";

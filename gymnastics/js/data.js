@@ -170,7 +170,9 @@ const TEAMS = {
       { year: 2020, captains: "", allLeague: "", note: "North sectional: Jessica Mandri 15th in the all-around and 7th on beam; Allie Taylor 16th" },
       { year: 2019, captains: "", allLeague: "", note: "North sectional: Jessica Mandri and Allie Taylor tied for 14th and 15th in the all-around (35.35)" },
       { year: 2016, captains: "", allLeague: "", note: "North sectional: Rachel Hill 11th in the all-around (34.625), Alyson Kelleher 17th" },
-      { year: 2015, captains: "", allLeague: "", note: "State meet all-around: Jacquelyn Veatch 13th (34.375), Julia Valenti 14th (34.35). North sectional: Rachel Hill 4th on beam (9.175), Jacquelyn Veatch 5th; Julia Valenti 9th all-around" }
+      { year: 2015, captains: "", allLeague: "", note: "State meet all-around: Jacquelyn Veatch 13th (34.375), Julia Valenti 14th (34.35). North sectional: Rachel Hill 4th on beam (9.175), Jacquelyn Veatch 5th; Julia Valenti 9th all-around" },
+      { year: 2013, captains: "", allLeague: "", note: "NEC/CAL all-stars: Roni Levine, Emily McPherson, Jackie Veatch" },
+      { year: 2012, captains: "", allLeague: "Roni Levine", note: "Roni Levine: Boston Globe All-Scholastic, team MVP for the second straight year and an NEC/CAL All-Star for the third; 5th in the all-around and 3rd on vault (9.5) at the North sectional" }
     ],
     legends: [],
     milestones: [
@@ -203,7 +205,7 @@ const TEAMS = {
     titleYear: "State title year",
     seasonsLabel: "on file",
     recordsNote: "A season is listed by the year it ended. Records count the meets with a score on the school's ArbiterLive schedule, Masconomet's results page and Local Headline News; 2024–25 (6–1) is from the Salem News and 2025–26 from the school's team page. Two scores were entered the wrong way round on the schedule and are counted as wins: Marblehead/Swampscott in 2025 (the Salem News reported Masconomet as the only loss) and Beverly in 2023, entered as 127.15–145.55 when Danvers scored 146 or more in every other meet that month.",
-    honorsNote: "Captains, NEC/CAL all-stars and Salem News all-stars from the Salem News; 2026 from the school's team page; 2015 from the MIAA's state meet results.",
+    honorsNote: "Captains, NEC/CAL all-stars and Salem News all-stars from the Salem News; 2026 from the school's team page; 2015 from the MIAA's state meet results; 2012 and 2013 from the Boston Globe's All-Scholastic archive.",
     champions: [["2025", "Kaylee Wescott", "MIAA State Individuals all-around champion"], ["2025", "Kaylee Wescott", "Vault champion at the MIAA state meet (9.7)"], ["2024", "Kaylee Wescott", "MIAA North sectional all-around champion (38.725)"]]
   }
 };
