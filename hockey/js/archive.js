@@ -7,7 +7,7 @@ TEAMS.boys.past.push(...[
   "season": "2022–23",
   "record": "6–12–3",
   "coach": "Kevin Fessette",
-  "post": "Lost Round of 32 vs. Triton",
+  "post": "Division 3 Round of 32 as the No. 23 seed: lost 3–2 to No. 10 Triton",
   "captains": "Trevor McNeil and Bobby Joyce",
   "allLeague": "Trevor McNeil",
   "games": [
@@ -230,7 +230,7 @@ TEAMS.boys.past.push(...[
   "season": "2021–22",
   "record": "9–7–4",
   "coach": "Kevin Fessette",
-  "post": "Lost Round of 8 vs. Marlboro",
+  "post": "Division 3 quarterfinals as the No. 8 seed: beat No. 25 Southeastern 6–1 and No. 24 North Quincy 5–1, lost 4–3 in overtime to No. 1 Marlborough, the eventual state champion",
   "captains": "Connor Horn, Aidan Lanphere",
   "games": [
    [
@@ -604,7 +604,7 @@ TEAMS.boys.past.push(...[
   "season": "2019–20",
   "record": "9–10–2",
   "coach": "Steve Baldassare",
-  "post": "Lost First Round to Lincoln Sudbury",
+  "post": "Division 2 North first round as the No. 15 seed: lost 5–3 to No. 2 Lincoln-Sudbury",
   "captains": "Calvin Mansfield, Tyler Puska, Cam DiMeglio",
   "allLeague": "Cal Mansfield",
   "games": [
@@ -827,7 +827,7 @@ TEAMS.boys.past.push(...[
   "season": "2018–19",
   "record": "12–9–2",
   "coach": "Steve Baldassare",
-  "post": "North Semi-Finals Lost to Tewksbury",
+  "post": "Division 2 North semifinals as the No. 14 seed: beat No. 3 Gloucester 6–5 (2OT) and Marblehead 3–0, lost 4–1 to Tewksbury",
   "captains": "Jared Mscisz, Jack Thibodeau",
   "allLeague": "Jared Mscisz",
   "games": [
@@ -1045,31 +1045,31 @@ TEAMS.boys.past.push(...[
     "2019-02-26",
     0,
     "Gloucester",
-    "Non-league",
+    "MIAA tournament",
     "W",
     6,
     5,
-    "Stoneham Arena"
+    "Division 2 North first round · double overtime · Stoneham Arena"
    ],
    [
     "2019-03-01",
     1,
     "Marblehead",
-    "Non-league",
+    "MIAA tournament",
     "W",
     3,
     0,
-    "Stoneham Arena"
+    "Division 2 North quarterfinal · Stoneham Arena"
    ],
    [
     "2019-03-05",
     0,
     "Tewksbury",
-    "Non-league",
+    "MIAA tournament",
     "L",
     1,
     4,
-    "Tsongas Center"
+    "Division 2 North semifinal · Tsongas Center"
    ]
   ],
   "note": "Every game on MyHockeyLive's 2018–19 season page, which lists Steve Baldassare as head coach. The 12–9–2 record is from the school's record book; the results on file add up to 12–10–2.",
@@ -1081,7 +1081,7 @@ TEAMS.boys.past.push(...[
   "record": "16–5–1",
   "coach": "Steve Baldassare",
   "finish": "NEC North Champs",
-  "post": "North Quarterfinals Lost to North Andover",
+  "post": "Division 2 North quarterfinals as the No. 1 seed: beat No. 16 North Reading 5–2, lost 5–2 to No. 8 North Andover",
   "captains": "Tommy Mento, Conor Purtell, Nic DiSciullo, Matt Taylor",
   "allLeague": "Yegor Bublik, Mat Taylor, Conor Purtell",
   "games": [
@@ -1299,11 +1299,11 @@ TEAMS.boys.past.push(...[
     "2018-02-28",
     1,
     "North Reading",
-    "Non-league",
+    "MIAA tournament",
     "W",
     5,
     2,
-    "Stoneham Arena"
+    "Division 2 North first round · Stoneham Arena"
    ]
   ],
   "note": "Every game on MyHockeyLive's 2017–18 season page, which lists Steve Baldassare as head coach. The results add up to 16–5–1.",
@@ -1315,7 +1315,7 @@ TEAMS.boys.past.push(...[
   "record": "15–4–2",
   "coach": "Steve Baldassare",
   "finish": "NEC North Champs",
-  "post": "North Quarterfinals Lost to Stoneham",
+  "post": "Division 2 North quarterfinals as the No. 3 seed: a first-round bye, then lost 4–0 to No. 11 Stoneham",
   "allLeague": "Matt Taylor",
   "games": [
    [
@@ -1532,11 +1532,11 @@ TEAMS.boys.past.push(...[
     "2017-03-03",
     1,
     "Stoneham",
-    "Non-league",
+    "MIAA tournament",
     "L",
     0,
     4,
-    "O'Brien Arena"
+    "Division 2 North quarterfinal · O'Brien Arena"
    ]
   ],
   "note": "Every game on MyHockeyLive's 2016–17 season page, which lists Steve Baldassare as head coach. The 15–4–2 record is from the school's record book; the results on file add up to 15–5–2.",
@@ -1768,7 +1768,7 @@ TEAMS.boys.past.push(...[
   "season": "2014–15",
   "record": "11–7–4",
   "coach": "Kevin Brown",
-  "post": "Lost 1st Round to Peabody in OT",
+  "post": "Division 2 North first round as the No. 7 seed: lost 5–4 in overtime to No. 10 Peabody",
   "allLeague": "Stephen Ganley",
   "games": [
    [
@@ -1975,11 +1975,11 @@ TEAMS.boys.past.push(...[
     "2015-02-25",
     1,
     "Peabody/Salem",
-    "Non-league",
+    "MIAA tournament",
     "L",
     4,
     5,
-    "Stoneham Arena"
+    "Division 2 North first round · overtime · Stoneham Arena"
    ]
   ],
   "note": "Every game on MyHockeyLive's 2014–15 season page, which lists Kevin Brown as head coach. The 11–7–4 record is from the school's record book; the results on file add up to 11–7–3.",
