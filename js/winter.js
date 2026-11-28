@@ -104,7 +104,8 @@
   /* ---------- Top bar, header, schedule strip ---------- */
   const NAV = [["index.html", "Home"], ["schedule.html", "Schedule"], ["stats.html", "Team"], ["seasons.html", "Past seasons"],
                ["history.html", "History"], ["media.html", "Media"]]
-    .filter(([href]) => href !== "history.html" || (T.seasons || []).length || (T.banners || []).length || (T.milestones || []).length);   // no History link for a team with none on file
+    .filter(([href]) => href !== "history.html" || (T.seasons || []).length || (T.banners || []).length || (T.milestones || []).length)   // no History link for a team with none on file
+    .concat(S.extraNav || []);   // a sport's own extra pages (indoor track: the Track Lab)
   const header = $("#site-header");
   header.insertAdjacentHTML("beforebegin", `
     <div class="topbar"><div class="wrap">

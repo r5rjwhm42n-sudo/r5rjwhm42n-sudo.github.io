@@ -172,7 +172,7 @@
   const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const SPORT = TEAMS.find(([dir]) => here.split("/")[0] === dir);
   /* the sport's own pages, in this order, with the names visitors know them by */
-  const PAGE_ORDER = ["index.html", "schedule.html", "stats.html", "runners.html", "seasons.html", "history.html", "media.html"];
+  const PAGE_ORDER = ["index.html", "schedule.html", "stats.html", "runners.html", "seasons.html", "history.html", "media.html", "lab.html"];
   const FILM = ["football", "soccer", "field-hockey", "volleyball"];   // their media pages are game film and highlights
   const pageName = (file, label, dir) =>
     file === "stats.html" && label === "Stats" ? "Roster & stats" : file === "media.html" ? (FILM.includes(dir) ? "Highlights" : "Media") : label;
@@ -193,7 +193,7 @@
       const f = a.getAttribute("href").split("?")[0];
       const id = SECTION_OF[f], sec = id && document.getElementById(id);
       return { href: sec ? `#${id}` : a.getAttribute("href"), file: f, id: sec ? id : null, label: pageName(f, a.textContent.trim(), dir), current: !sec && a.classList.contains("active") };
-    }).sort((a, b) => PAGE_ORDER.indexOf(a.file) - PAGE_ORDER.indexOf(b.file));
+    }).sort((a, b) => PAGE_ORDER.indexOf(a.file.split("#")[0]) - PAGE_ORDER.indexOf(b.file.split("#")[0]));   // "index.html#history" (from a page that isn't the long one) sorts as index.html
     const homeHref = (pages.find((p) => p.file === "index.html") || { href: "index.html" }).href;
 
     /* header: the Menu button at the end */

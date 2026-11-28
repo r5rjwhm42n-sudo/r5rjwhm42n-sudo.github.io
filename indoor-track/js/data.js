@@ -21,6 +21,7 @@
 
 const SPORT = {
   key: "indoor-track", name: "Indoor Track", season: "2026–27",
+  extraNav: [["lab.html", "Track Lab"]],          // the Track Lab page: race replays, lap splits and more
   game: "meet", games: "meets", players: "athletes", start: "Start Time",
   scoreWord: "Points", lineTitle: "", periods: [], boxTitle: "Results",
   stats: [],
