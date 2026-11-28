@@ -429,25 +429,29 @@ figure { margin: 0; }
 @keyframes vt-in { from { opacity: 0; transform: translateY(12px); } }
 @media (prefers-reduced-motion: reduce) { @view-transition { navigation: none; } }
 
-/* ---------- Track Lab teaser on the home page (the page itself: lab.html, css/lab.css) ---------- */
-.lab-promo { padding-top: 28px; }
-.lab-promo-card { display: grid; grid-template-columns: 200px minmax(0, 1fr) auto; gap: 24px; align-items: center; padding: 20px 26px; border-radius: 10px; text-decoration: none; color: var(--white);
-  background: radial-gradient(120% 140% at 90% 0%, #1a3f94 0%, var(--navy) 55%, #071437 100%); box-shadow: 0 14px 34px rgba(7, 20, 55, .28); transition: transform .15s, box-shadow .15s; }
-.lab-promo-card:hover { transform: translateY(-2px); box-shadow: 0 18px 40px rgba(7, 20, 55, .34); }
-.lab-promo-trk { width: 100%; height: auto; }
-.lab-promo-trk .t1 { fill: #1f54b8; }
-.lab-promo-trk .t2 { fill: none; stroke: rgba(255, 255, 255, .5); stroke-width: 1; }
-.lab-promo-trk .t3 { fill: #0b1f4d; stroke: #fff; stroke-width: 1.5; }
-.lab-promo-trk .r1 { fill: var(--gold); stroke: #fff; stroke-width: 1.5; }
-.lab-promo-trk .r2 { fill: #c9d3ea; }
-.lab-promo-txt { display: grid; gap: 4px; }
-.lab-promo-k { font-family: var(--display); font-weight: 700; font-size: 14px; letter-spacing: .14em; text-transform: uppercase; color: #9cbaf2; }
-.lab-promo-txt b { font-family: var(--display); font-weight: 800; font-size: 32px; line-height: 1; text-transform: uppercase; }
-.lab-promo-txt > span:last-child { color: #d4dff6; font-size: 15.5px; max-width: 620px; }
-.lab-promo-go { font-family: var(--display); font-weight: 700; font-size: 18px; letter-spacing: .08em; text-transform: uppercase; background: var(--white); color: var(--navy); padding: 10px 18px 9px; border-radius: 6px; white-space: nowrap; }
+
+/* ---------- Pace calculator on the home page (js/pace.js) ---------- */
+.pace-grid { display: grid; grid-template-columns: 320px minmax(0, 1fr); gap: 16px; align-items: start; }
+.pace-form { padding: 16px; display: grid; gap: 12px; }
+.pace-form label { display: grid; gap: 6px; font-family: var(--display); font-weight: 700; font-size: 14px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.pace-form select, .pace-form input { width: 100%; font: inherit; font-size: 16px; padding: 9px 10px; border: 1.5px solid var(--line); border-radius: 4px; background: var(--white); color: var(--ink); }
+.pace-form input { font-family: var(--display); font-size: 30px; font-weight: 700; letter-spacing: .04em; padding: 5px 12px; color: var(--navy); }
+.pace-form select:focus, .pace-form input:focus { border-color: var(--royal); outline: none; box-shadow: 0 0 0 3px rgba(24, 71, 159, .15); }
+.pace-err { margin: 0; color: var(--loss); font-size: 14px; }
+.pace-near h3 { font-size: 19px; margin: 4px 0 8px; }
+.pace-near ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.pace-near li { padding: 7px 10px; border-radius: 4px; background: var(--bg); border-left: 4px solid var(--royal); font-size: 15px; }
+.pace-near li small { display: block; color: var(--muted); font-size: 13px; }
+.pace-res { padding: 16px 18px; }
+.pace-big { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-bottom: 12px; }
+.pace-big div { background: var(--bg); border-radius: 4px; padding: 10px 12px; }
+.pace-big div:first-child { background: var(--navy); color: var(--white); }
+.pace-big b { display: block; font-family: var(--display); font-size: 32px; line-height: 1; font-variant-numeric: tabular-nums; }
+.pace-big span { font-size: 13px; color: var(--muted); }
+.pace-big div:first-child span { color: #b9c6e6; }
+table.records.pace-tbl td:last-child { min-width: 0; }
+.pace-tbl td { font-variant-numeric: tabular-nums; }
 @media (max-width: 760px) {
-  .lab-promo-card { grid-template-columns: 1fr; gap: 14px; padding: 18px; }
-  .lab-promo-trk { max-width: 220px; }
-  .lab-promo-txt b { font-size: 27px; }
-  .lab-promo-go { justify-self: start; }
+  .pace-grid { grid-template-columns: 1fr; }
+  .pace-big b { font-size: 26px; }
 }

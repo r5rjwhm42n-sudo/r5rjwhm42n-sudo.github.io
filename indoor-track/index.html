@@ -35,16 +35,18 @@
 
 <div class="wrap home-strip"><div class="strip" id="scorestrip"></div></div>
 
-<section class="block lab-promo"><div class="wrap">
-  <a class="lab-promo-card" href="lab.html">
-    <svg class="lab-promo-trk" viewBox="0 0 200 92" aria-hidden="true"><rect x="6" y="6" width="188" height="80" rx="40" class="t1"/><rect x="16" y="16" width="168" height="60" rx="30" class="t2"/><rect x="26" y="26" width="148" height="40" rx="20" class="t3"/><circle cx="140" cy="81" r="5" class="r1"/><circle cx="118" cy="81" r="4" class="r2"/><circle cx="100" cy="81" r="4" class="r2"/></svg>
-    <span class="lab-promo-txt">
-      <span class="lab-promo-k">New · Track Lab</span>
-      <b>Plan your splits. Replay real races.</b>
-      <span>A pace calculator for every lap, replays of real Falcon races lap by lap, a 55-meter tap race against a Danvers sprinter, the jumps and throws drawn life-size, and how a dual meet is scored.</span>
-    </span>
-    <span class="lab-promo-go">Open the Track Lab ›</span>
-  </a>
+<section class="block" id="pace"><div class="wrap">
+  <div class="section-head"><h2>Pace Calculator</h2></div>
+  <p class="sub">Pick a race and a goal time to get the split you need every lap of a 200-meter indoor track, and the Falcons who have run closest to it.</p>
+  <div class="pace-grid">
+    <form class="card pace-form" id="pace-form">
+      <label>Event<select id="pace-ev"></select></label>
+      <label>Goal time<input id="pace-time" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="5:30.00"></label>
+      <p class="pace-err" id="pace-err" role="alert" hidden></p>
+      <div class="pace-near" id="pace-near"></div>
+    </form>
+    <div class="card pace-res" id="pace-out"></div>
+  </div>
 </div></section>
 </div>
 
@@ -223,6 +225,7 @@
 <script src="js/results.js"></script>
 <script src="js/athletes.js"></script>
 <script src="../js/winter.js"></script>
+<script src="js/pace.js"></script>
 <script src="../js/common.js"></script>
 <script src="../js/extras.js"></script>
 <script src="../js/search.js"></script>

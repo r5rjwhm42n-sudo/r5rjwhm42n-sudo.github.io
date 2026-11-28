@@ -104,8 +104,7 @@
   /* ---------- Top bar, header, schedule strip ---------- */
   const NAV = [["index.html", "Home"], ["schedule.html", "Schedule"], ["stats.html", "Team"], ["seasons.html", "Past seasons"],
                ["history.html", "History"], ["media.html", "Media"]]
-    .filter(([href]) => href !== "history.html" || (T.seasons || []).length || (T.banners || []).length || (T.milestones || []).length)   // no History link for a team with none on file
-    .concat(S.extraNav || []);   // a sport's own extra pages (indoor track: the Track Lab)
+    .filter(([href]) => href !== "history.html" || (T.seasons || []).length || (T.banners || []).length || (T.milestones || []).length);   // no History link for a team with none on file
   const header = $("#site-header");
   header.insertAdjacentHTML("beforebegin", `
     <div class="topbar"><div class="wrap">
@@ -599,6 +598,39 @@
     more.textContent = `Show all ${SEASONS.length} seasons`;
     more.hidden = SEASONS.length <= SHOWN;
     more.addEventListener("click", () => { $$("#records .older").forEach((tr) => { tr.hidden = false; }); more.hidden = true; });
+
+    /* head to head (pages with a #h2h table): every opponent played three or more times in the seasons on file,
+       from the games with a score. A past games row: [date, home, opponent, type, result, us, them, …] */
+    const h2h = $("#h2h");
+    if (h2h) {
+      const games = (T.past || []).flatMap((p) => (p.games || []).map((g) => ({ season: p.season, date: g[0], opp: g[2], res: g[4], us: g[5], them: g[6] })))
+        .filter((g) => /^[WLT]$/.test(g.res || "") && typeof g.us === "number" && typeof g.them === "number");
+      const by = {};
+      for (const g of games) (by[g.opp] = by[g.opp] || []).push(g);
+      const rows = Object.entries(by).filter(([, gs]) => gs.length >= 3).map(([opp, gs]) => {
+        gs.sort((a, b) => a.date.localeCompare(b.date));
+        const w = gs.filter((g) => g.res === "W").length, l = gs.filter((g) => g.res === "L").length, t = gs.filter((g) => g.res === "T").length;
+        return { opp, gs, w, l, t, f: gs.reduce((n, g) => n + g.us, 0) / gs.length, a: gs.reduce((n, g) => n + g.them, 0) / gs.length, last: gs[gs.length - 1] };
+      }).sort((a, b) => b.gs.length - a.gs.length || a.opp.localeCompare(b.opp));
+      h2h.innerHTML = rows.map((r, i) => `<tr${i >= SHOWN ? ' class="older" hidden' : ""}>
+          <td><b>${esc(r.opp)}</b></td>
+          <td class="yr">${r.gs.length}</td>
+          <td class="rec">${wlt(r.w, r.l, r.t)}</td>
+          <td><div class="bar" title="${(pct(r) * 100).toFixed(0)}%${TIES ? " (ties count as half a win)" : ""}"><i style="width:${pct(r) * 100}%"></i></div></td>
+          <td>${r.f.toFixed(1)}–${r.a.toFixed(1)}</td>
+          <td>${esc(r.last.res)} ${r.last.us}–${r.last.them}, ${esc(fmt(r.last.date + "T12:00", { month: "short", day: "numeric", year: "numeric" }))}</td>
+        </tr>`).join("");
+      hide(h2h, !rows.length);
+      const seasons = [...new Set(games.map((g) => g.season))].sort();
+      const note = $("#h2h-note");
+      if (note && seasons.length) note.textContent = `Every game on this site with a score, ${seasons[0]} to ${seasons[seasons.length - 1]} (${seasons.length} season${seasons.length === 1 ? "" : "s"}), against the teams the Falcons played three or more times. The average score is ${S.scoreWord ? S.scoreWord.toLowerCase() : "points"} for and against a game.`;
+      const moreH = $("#h2h-more");
+      if (moreH) {
+        moreH.textContent = `Show all ${rows.length} opponents`;
+        moreH.hidden = rows.length <= SHOWN;
+        moreH.addEventListener("click", () => { $$("#h2h .older").forEach((tr) => { tr.hidden = false; }); moreH.hidden = true; });
+      }
+    }
 
     const HON = T.honors || [];
     $("#honors").innerHTML = HON.map((h, i) => `<tr${i >= SHOWN ? ' class="older" hidden' : ""}>

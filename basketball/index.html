@@ -23,7 +23,6 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Falcons">
 <link rel="stylesheet" href="../css/fx.css">
-<link rel="stylesheet" href="../css/labkit.css">
 </head>
 <body data-page="home">
 <header class="site-header" id="site-header"></header>
@@ -35,18 +34,6 @@
 </div></div>
 
 <div class="wrap home-strip"><div class="strip" id="scorestrip"></div></div>
-
-<section class="block lk-promo"><div class="wrap">
-  <a class="lk-promo-card" href="lab.html">
-    <svg viewBox="0 0 200 120" aria-hidden="true"><rect x="4" y="4" width="192" height="112" fill="none" stroke="#5cc8ff" stroke-opacity=".6" stroke-width="2"/><rect x="70" y="4" width="60" height="60" fill="rgba(92,200,255,.08)" stroke="#5cc8ff" stroke-opacity=".6" stroke-width="2"/><circle cx="100" cy="64" r="26" fill="none" stroke="#5cc8ff" stroke-opacity=".6" stroke-width="2"/><circle cx="100" cy="20" r="6" fill="none" stroke="#ff8a3d" stroke-width="3"/><circle cx="56" cy="78" r="5" fill="#ff8a3d"/></svg>
-    <span class="lk-promo-txt">
-      <span class="lk-promo-k">New · Basketball Lab</span>
-      <b>Every game as a pulse. Every run to the Garden.</b>
-      <span>See a whole season as a heartbeat, follow each state tournament run game by game, test your free throws and scroll sixty years of Falcon seasons.</span>
-    </span>
-    <span class="lk-promo-go">Open the lab ›</span>
-  </a>
-</div></section>
 </div>
 
 <div class="fx-chapter" id="schedule">
@@ -177,6 +164,16 @@
   </table></div>
   <button class="chip show-more" id="records-more"></button>
   <p class="sub fine" id="records-note">From the school's record book. A season is listed by the year it ended, and blank cells are details the book doesn't have.</p>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="section-head"><h2>Head to Head</h2></div>
+  <div class="card table-scroll"><table class="records h2h">
+    <thead><tr><th>Opponent</th><th>Games</th><th>Record</th><th>Win %</th><th>Average score</th><th>Last meeting</th></tr></thead>
+    <tbody id="h2h"></tbody>
+  </table></div>
+  <button class="chip show-more" id="h2h-more"></button>
+  <p class="sub fine" id="h2h-note"></p>
 </div></section>
 
 <section class="block"><div class="wrap">
