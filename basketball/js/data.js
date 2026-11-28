@@ -25,6 +25,7 @@
 
 const SPORT = {
   key: "basketball", name: "Basketball", season: "2026–27",
+  extraNav: [["lab.html", "Basketball Lab"]],     // the Basketball Lab page: season pulses, tournament runs and more
   game: "game", games: "games", players: "players", start: "Tip-off",
   scoreWord: "Points", lineTitle: "Score by Quarter", periods: ["1st", "2nd", "3rd", "4th"], boxTitle: "Scoring",
   stats: [["pts", "Points", "point"], ["reb", "Rebounds", "rebound"], ["ast", "Assists", "assist"]],

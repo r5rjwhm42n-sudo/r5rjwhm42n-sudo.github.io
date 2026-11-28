@@ -569,7 +569,7 @@
       lastT = now;
       taps = taps.filter((x) => now - x < 600);
       const rate = taps.length / .6;                    // taps per second, over the last 0.6 s
-      const target = Math.min(10.5, rate * 1.3);       // about 7 taps a second keeps pace with a 6.6 sprinter
+      const target = Math.min(10.2, rate * 1.1);       // about 8 taps a second keeps pace with a 6.6 sprinter
       v += (target - v) * (1 - Math.exp(-dt / .25));
       d += v * dt; vTop = Math.max(vTop, v);
       speedo.textContent = `${v.toFixed(1)} m/s`;
