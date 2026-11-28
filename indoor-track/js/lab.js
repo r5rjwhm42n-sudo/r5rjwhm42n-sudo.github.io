@@ -1,13 +1,12 @@
 /* =====================================================================
    TRACK LAB — interactive extras for the indoor track site (lab.html)
    Everything here is drawn from official results:
-     · LAB_RACES / LAB_DUALS / LAB_MAP / LAB_VENUES from js/labdata.js
+     · LAB_RACES / LAB_DUALS / LAB_VENUES from js/labdata.js
        (Lancer Timing's NEC meet results and the MIAA's state meet results)
      · TEAMS from js/data.js, archive.js, results.js and athletes.js
        (every Danvers result on the site)
-   Features: Race Replay, Lap Splits, Beat the Falcon, Life-size Marks,
-   Then vs Now, Pace Calculator, Dual Meet Scoring, PR Wall, Where the
-   Points Come From, Meet Map.
+   Features: Race Replay (with lap splits), Beat the Falcon, Life-size
+   Marks, Pace Calculator, Dual Meet Scoring, Where the Points Come From.
    ===================================================================== */
 (function () {
   "use strict";
@@ -205,7 +204,7 @@
           label = S("text", { class: "tk-name", "text-anchor": "middle", y: kind === "straight" ? -.62 : -1.45 }, grp);
           label.textContent = e.legs ? "DANVERS" : lastName(e.n).toUpperCase();
         }
-        return { e, f: motion(e, r.dist), grp, idx: i, lane: middle[i % middle.length], rr: TR.r + .35 + (i % 6) * .92, d: 0 };
+        return { e, f: motion(e, r.dist), grp, label, below: false, idx: i, lane: middle[i % middle.length], rr: TR.r + .35 + (i % 6) * .92, d: 0 };
       });
       R.sort((a, b) => (a.e.dv ? 1 : 0) - (b.e.dv ? 1 : 0)).forEach((x) => g.appendChild(x.grp));   // Falcons on top
       return { kind, end: Math.max(...runnable.map((e) => e.t), 1) };
@@ -233,6 +232,14 @@
           const [px, py] = ovalPt(-(race.dist - Math.min(x.d, race.dist + 7)) - back, x.rr);
           x.grp.setAttribute("transform", `translate(${px.toFixed(3)},${py.toFixed(3)})`);
         }
+        /* two Falcons side by side: the second one's name goes under the dot so they don't overlap */
+        let prev = null;
+        for (const x of order) {
+          if (!x.label) continue;
+          const below = !!prev && !prev.below && Math.abs(prev.d - x.d) < 3;
+          if (below !== x.below) { x.below = below; x.label.setAttribute("y", below ? 2.35 : -1.45); }
+          prev = x;
+        }
       }
       return R;
     }
@@ -244,33 +251,30 @@
   const hasSplits = (r) => r.entries.some((e) => e.sp && e.sp.length);
   const falcons = (r) => r.entries.filter((e) => e.dv).map((e) => (e.legs ? "Danvers relay" : e.n));
 
-  /* ---------- the hero: a real race on loop ---------- */
-  (function hero() {
+  /* ---------- the hero: a real race, as one picture ---------- */
+  function hero(replay) {
     const svg = $("#hero-track");
     if (!svg) return;
     const r = LAB_RACES.find((x) => x.date === "2023-01-22" && x.gender === "boys" && x.event === "Two-mile") || LAB_RACES.find(hasSplits);
     const view = RaceView(svg, { labels: true });
     const { end } = view.setRace(r);
+    /* one still frame, with the bell about to ring: where every runner really was with two laps to go
+       (a picture, not a loop, so the page stays light) */
+    const two = (e) => (e.sp && e.sp.length > 2 ? e.sp[e.sp.length - 3][0] : null);
+    const lead = r.entries.find((e) => two(e) != null);
+    view.frame(lead ? two(lead) : end * .85);
     const cap = $("#hero-cap");
-    if (cap) cap.innerHTML = `<b>Now replaying</b> ${esc(raceTitle(r))} · ${esc(raceWhen(r))}${hasSplits(r) ? " · from the official lap splits" : ""}`;
+    if (cap) cap.innerHTML = `<b>Two laps to go</b> ${esc(raceTitle(r))} · ${esc(raceWhen(r))} · from the official lap splits. <a href="#replay" data-race="${r.id}">Watch the whole race ›</a>`;
+    const link = cap && $("a", cap);
+    if (link && replay) link.addEventListener("click", () => replay.load(r, true));
     const nums = $("#hero-nums");
     if (nums) {
       const runners = LAB_RACES.reduce((a, x) => a + x.entries.length, 0), split = LAB_RACES.reduce((a, x) => a + x.entries.filter((e) => e.sp).length, 0);
-      nums.innerHTML = [[LAB_RACES.length, "races to replay"], [runners, "runners"], [split, "with every lap timed"], [10, "ways to explore"]]
+      nums.innerHTML = [[LAB_RACES.length, "races to replay"], [runners, "runners"], [split, "with every lap timed"]]
         .map(([n, l]) => `<div><b>${n}</b><span>${l}</span></div>`).join("");
     }
-    if (REDUCED) { view.frame(end * .62); return; }
-    const SPEED = end / 22;               // the whole race in about 22 seconds
-    let t0 = null, visible = true;
-    new IntersectionObserver((es) => { visible = es[0].isIntersecting; }).observe(svg);
-    const tick = (now) => {
-      if (t0 == null) t0 = now;
-      const t = ((now - t0) / 1000 * SPEED) % (end + 8) - 2;
-      if (visible && !document.hidden) view.frame(t);
-      requestAnimationFrame(tick);
-    };
-    requestAnimationFrame(tick);
-  })();
+  }
+  /* the hero links into the replay, so it's drawn once the replay exists (bottom of the file) */
 
   /* =====================================================================
      1 · RACE REPLAY
@@ -282,17 +286,15 @@
     const scrub = $("#replay-scrub"), playBtn = $("#replay-play"), speeds = $("#replay-speed"), note = $("#replay-note"), title = $("#replay-title");
     const view = RaceView(svg);
     let race = null, end = 1, t = -1, playing = false, speed = 1, last = null, raf = 0, lastBoard = 0, onChange = [];
-    const SPEEDS = [.25, .5, 1, 2, 5, 10, 20, 40];
-    speeds.innerHTML = SPEEDS.map((s) => `<button type="button" class="chip" data-s="${s}" aria-pressed="false">${s < 1 ? (s === .5 ? "½" : "¼") : s}×</button>`).join("");
+    const SPEEDS = [.5, 1, 5, 20];
+    speeds.innerHTML = SPEEDS.map((s) => `<button type="button" class="chip" data-s="${s}" aria-pressed="false">${s < 1 ? "½" : s}×</button>`).join("");
     const setSpeed = (s) => { speed = s; $$("button", speeds).forEach((b) => b.setAttribute("aria-pressed", String(+b.dataset.s === s))); };
     speeds.addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) setSpeed(+b.dataset.s); });
     /* featured races */
     const FEATURED = [
       ["Sean Moore wins the Division 4 two-mile", (r) => r.date === "2024-02-18" && r.event === "Two-mile" && r.entries.some((e) => e.n === "Sean Moore")],
       ["Moore and Conklin: an NEC two-mile, every lap timed", (r) => r.date === "2023-01-22" && r.gender === "boys" && r.event === "Two-mile"],
-      ["Zachary Dunn, 2nd in the Division 4 55-meter final", (r) => r.date === "2026-02-13" && r.event === "55 meters" && r.round === "Final"],
       ["Tess Ryan, 3rd in the Division 4 55-meter final", (r) => r.date === "2026-02-14" && r.event === "55 meters" && r.round === "Final"],
-      ["Grace Conklin, 6th in the Division 4 two-mile", (r) => r.date === "2026-02-14" && r.event === "Two-mile" && r.entries.some((e) => e.n === "Grace Conklin")],
       ["Emma Eagan's NEC two-mile, every lap timed", (r) => r.date === "2023-01-22" && r.gender === "girls" && r.event === "Two-mile"]
     ].map(([label, test]) => [label, LAB_RACES.find(test)]).filter(([, r]) => r);
     $("#replay-featured").innerHTML = FEATURED.map(([label, r]) => `<button type="button" class="lab-feat" data-id="${r.id}"><span>${r.gender === "boys" ? "Boys" : "Girls"} · ${esc(String(isoDate(r.date).getFullYear()))}</span>${esc(label)}</button>`).join("");
@@ -301,6 +303,7 @@
       const r = LAB_RACES[+b.dataset.id];
       if (r.gender !== G) setGender(r.gender);
       load(r, true);
+      $(".rp-stage", sec).scrollIntoView({ block: "nearest", behavior: REDUCED ? "auto" : "smooth" });   // on a phone the track is below the buttons
     });
     function fillPicker() {
       const groups = {};
@@ -316,8 +319,8 @@
       ({ end } = view.setRace(r));
       end += 1.2;
       scrub.max = String(end); scrub.step = "0.01";
-      const auto = SPEEDS.find((s) => r.entries[0].t / s <= 24) || 40;
-      setSpeed(r.dist <= 60 ? .5 : auto);
+      const auto = SPEEDS.find((s) => r.entries[0].t / s <= 30) || 20;
+      setSpeed(r.dist <= 60 ? 1 : auto);
       title.innerHTML = `<span class="lab-kicker">${esc(raceWhen(r))} · ${esc(VENUE[r.venue] ? VENUE[r.venue].name : "")}</span>${esc(raceTitle(r))}`;
       const sp = hasSplits(r);
       note.textContent = (sp ? "Every runner's position comes from their official 200-meter splits." :
@@ -332,9 +335,12 @@
       if (playing) start();
       onChange.forEach((fn) => fn(r));
     }
-    function start() { cancelAnimationFrame(raf); last = null; raf = requestAnimationFrame(step); }
+    let visible = true, started = 0;
+    function start() { cancelAnimationFrame(raf); last = null; started = performance.now(); raf = requestAnimationFrame(step); }
     function step(now) {
       if (!playing) return;
+      /* off screen for more than a moment (after the scroll to it has had time): pause, so nothing runs unseen */
+      if (!visible && now - started > 1500) { playing = false; playBtn.textContent = "Play"; return; }
       if (last != null) t += (now - last) / 1000 * speed;
       last = now;
       if (t >= end) { t = end; playing = false; playBtn.textContent = "Replay"; }
@@ -354,7 +360,7 @@
         lapEl.textContent = left <= 0 ? "Finished" : laps <= 1 ? "Bell lap" : `${laps} laps to go`;
       } else lapEl.textContent = t < 0 ? "On your marks" : leader >= race.dist ? "Finished" : `${Math.round(leader)} m`;
       const now = performance.now();
-      if (!force && now - lastBoard < 140) return;
+      if (!force && now - lastBoard < 250) return;      // the leaderboard: four times a second is plenty
       lastBoard = now;
       const done = (x) => x.d >= race.dist;
       const order = [...R].sort((a, b) => (done(b) - done(a)) || (done(a) ? a.e.t - b.e.t : b.d - a.d));
@@ -372,15 +378,21 @@
     });
     $("#replay-restart").addEventListener("click", () => { t = -.6; playing = true; playBtn.textContent = "Pause"; start(); });
     scrub.addEventListener("input", () => { t = +scrub.value; draw(true); });
-    onGender(() => { fillPicker(); const first = LAB_RACES.find((r) => r.gender === G && FEATURED.some(([, f]) => f === r)) || LAB_RACES.find((r) => r.gender === G); load(first, false); });
+    /* each team opens on a featured race that has every lap timed, so the splits chart under it has something to show */
+    const opener = () => (FEATURED.find(([, r]) => r.gender === G && hasSplits(r)) || FEATURED.find(([, r]) => r.gender === G) || [])[1] || LAB_RACES.find((r) => r.gender === G);
+    onGender(() => { fillPicker(); load(opener(), false); });
     fillPicker();
-    load(FEATURED.find(([, r]) => r.gender === G)?.[1] || LAB_RACES.find((r) => r.gender === G), false);
-    onView(sec, () => { if (!playing && t < 0 && !REDUCED) { playing = true; playBtn.textContent = "Pause"; start(); } });
+    load(opener(), false);
+    /* it plays when asked, and pauses itself when scrolled off screen, so nothing runs in the background */
+    if ("IntersectionObserver" in window) new IntersectionObserver((es) => {
+      visible = es[es.length - 1].isIntersecting;
+      if (!visible && playing) { playing = false; cancelAnimationFrame(raf); playBtn.textContent = "Play"; }
+    }).observe(svg);
     return { onRace: (fn) => { onChange.push(fn); if (race) fn(race); }, load };
   })();
 
   /* =====================================================================
-     2 · LAP SPLITS
+     1b · LAP SPLITS, under the replay
      ===================================================================== */
   (function splits() {
     const sec = $("#splits");
@@ -390,23 +402,22 @@
       const pts = [[0, 0], ...e.sp];
       return pts.slice(1).map(([t1, d1], i) => { const [t0, d0] = pts[i]; return { t: t1 - t0, d: d1 - d0, per200: (t1 - t0) * 200 / (d1 - d0), at: d1 }; });
     };
-    let shown = null;
     function render(r) {
-      /* a race without splits in the replay: show the closest race that has them */
-      let lead = "";
+      /* no splits for this race: say so, and offer one that has them (in the dropdown they're marked "lap splits") */
       if (!hasSplits(r)) {
         const alt = LAB_RACES.filter((x) => x.gender === r.gender && hasSplits(x));
-        const keep = shown && shown.gender === r.gender && hasSplits(shown) ? shown : null;
-        const pickR = keep || alt.find((x) => x.event === r.event && x.entries.some((e) => e.dv && r.entries.some((y) => y.dv && y.n === e.n))) || alt.find((x) => x.event === r.event) || alt.find((x) => x.event === "Two-mile") || alt[0];
-        if (!pickR) { head.textContent = "No lap splits on file."; box.innerHTML = ""; table.innerHTML = ""; pick.hidden = true; return; }
-        lead = `The race in the replay (${esc(raceTitle(r).replace(/^(Boys|Girls) /, "").toLowerCase())}) has no lap splits in the results, so this is `;
-        r = pickR;
+        const pickR = alt.find((x) => x.event === r.event) || alt.find((x) => x.event === "Two-mile") || alt[0];
+        sec.classList.add("none");
+        head.innerHTML = `<b>Lap splits:</b> the timers didn't post lap splits for this race.`;
+        box.innerHTML = ""; table.innerHTML = "";
+        pick.hidden = !pickR;
+        if (pickR) pick.innerHTML = `<button type="button" class="lab-btn ghost" data-id="${pickR.id}">Show a race with lap splits: ${esc(raceTitle(pickR).replace(/^(Boys|Girls) /, "").toLowerCase())}, ${esc(isoDate(pickR.date).getFullYear())}</button>`;
+        return;
       }
-      shown = r;
+      sec.classList.remove("none");
+      pick.hidden = true;
       const withSp = r.entries.filter((e) => e.sp && e.sp.length && e.t != null);
-      pick.hidden = false;
-      pick.innerHTML = `<span class="sp-pick-l">Races with lap splits:</span>` + LAB_RACES.filter((x) => x.gender === r.gender && hasSplits(x)).map((x) => `<button type="button" class="chip" data-id="${x.id}" aria-pressed="${x === r}">${esc(raceTitle(x).replace(/^(Boys|Girls) /, ""))} · ${esc(isoDate(x.date).getFullYear())} <small>${esc(falcons(x).map(lastName).join(", "))}</small></button>`).join("");
-      head.innerHTML = `${lead}<b>${esc(raceTitle(r))}</b> · ${esc(raceWhen(r))}. Each line is a runner's pace for every lap, as seconds per 200 meters; lower is faster. <span class="lg"><i class="k-dv"></i>Danvers <i class="k-win"></i>Winner <i class="k-oth"></i>Everyone else</span>`;
+      head.innerHTML = `<b>Lap splits.</b> Each line is a runner's pace for every lap, as seconds per 200 meters; lower is faster. <span class="lg"><i class="k-dv"></i>Danvers <i class="k-win"></i>Winner <i class="k-oth"></i>Everyone else</span>`;
       const all = withSp.map((e) => ({ e, laps: lapsOf(e) }));
       const n = Math.max(...all.map((a) => a.laps.length));
       const vals = all.flatMap((a) => a.laps.map((l) => l.per200));
@@ -465,7 +476,7 @@
   })();
 
   /* =====================================================================
-     3 · BEAT THE FALCON — a 55-meter tap race against a real Danvers time
+     2 · BEAT THE FALCON — a 55-meter tap race against a real Danvers time
      ===================================================================== */
   (function beat() {
     const sec = $("#beat");
@@ -473,17 +484,21 @@
     const svg = $("#beat-track"), opp = $("#beat-opp"), btn = $("#beat-tap"), go = $("#beat-go"), msg = $("#beat-msg"), out = $("#beat-out"), speedo = $("#beat-speed");
     let foe = null, state = "idle", tGo = 0, raf = 0, taps = [], v = 0, vTop = 0, d = 0, react = null, gunTimer = 0, myTime = null;
     let ghost = null, you = null, ghostF = null;
-    const BLW = 3.2;          // two wide lanes, drawn bigger than a real 1.22 m lane so the race is easy to follow
+    const BLW = 5;            // two wide lanes, drawn much bigger than a real 1.22 m lane so the race is easy to follow on a phone
     const final = (g) => LAB_RACES.find((r) => r.gender === g && r.event === "55 meters" && r.round === "Final");
+    /* opponents from easiest to hardest: start against the slowest of the five, then work up */
+    let list = [];
+    const LEVEL = ["Easiest", "Easy", "Medium", "Hard", "Hardest"];
     function setup() {
-      const list = (records(G)["55 meters"] || []).slice(0, 5);
-      opp.innerHTML = list.map(([n, m, w], i) => `<button type="button" class="chip" data-i="${i}" aria-pressed="${i === 0}">${esc(n)} <b>${esc(m)}</b></button>`).join("");
+      list = (records(G)["55 meters"] || []).slice(0, 5).reverse();
+      const lv = (i) => LEVEL[i + 5 - list.length];
+      opp.innerHTML = list.map(([n, m], i) => `<button type="button" class="chip" data-i="${i}" aria-pressed="${i === 0}"><small>${lv(i)}</small>${esc(n)} <b>${esc(m)}</b></button>`).join("");
       foe = list[0] ? { n: list[0][0], m: list[0][1], w: list[0][2], t: toSec(list[0][1]) } : null;
       reset();
     }
     opp.addEventListener("click", (e) => {
       const b = e.target.closest("button"); if (!b || state === "running" || state === "set") return;
-      const [n, m, w] = records(G)["55 meters"][+b.dataset.i];
+      const [n, m, w] = list[+b.dataset.i];
       foe = { n, m, w, t: toSec(m) };
       $$("button", opp).forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
       reset();
@@ -492,10 +507,10 @@
       cancelAnimationFrame(raf); clearTimeout(gunTimer);
       while (svg.firstChild) svg.firstChild.remove();
       const g = drawStraight(svg, 2, null, BLW).runners;
-      ghost = S("g", { class: "tk-r dv ghost" }, g); S("circle", { r: .95, class: "tk-dot" }, ghost);
-      const gl = S("text", { class: "tk-name", "text-anchor": "middle", y: .45 }, ghost); gl.textContent = foe ? lastName(foe.n).toUpperCase() : "FALCON";
-      you = S("g", { class: "tk-r you" }, g); S("circle", { r: .95, class: "tk-dot" }, you);
-      const yl = S("text", { class: "tk-name", "text-anchor": "middle", y: .45 }, you); yl.textContent = "YOU";
+      ghost = S("g", { class: "tk-r dv ghost" }, g); S("circle", { r: 1.5, class: "tk-dot" }, ghost);
+      const gl = S("text", { class: "tk-name", "text-anchor": "middle", y: -1.9 }, ghost); gl.textContent = foe ? lastName(foe.n).toUpperCase() : "FALCON";
+      you = S("g", { class: "tk-r you" }, g); S("circle", { r: 1.5, class: "tk-dot" }, you);
+      const yl = S("text", { class: "tk-name", "text-anchor": "middle", y: -1.9 }, you); yl.textContent = "YOU";
       ghostF = foe ? motion({ t: foe.t }, 55) : null;
       state = "idle"; d = 0; v = 0; vTop = 0; taps = []; react = null; myTime = null; lastT = 0;
       place(0);
@@ -532,8 +547,8 @@
           msg.innerHTML = '<b class="go">GO!</b> Tap, tap, tap!';
           sec.classList.add("gun"); setTimeout(() => sec.classList.remove("gun"), 260);
           raf = requestAnimationFrame(run);
-        }, 1100 + Math.random() * 1500);
-      }, 1100);
+        }, 900 + Math.random() * 900);
+      }, 900);
       btn.focus({ preventScroll: true });
     });
     function tap() {
@@ -554,7 +569,7 @@
       lastT = now;
       taps = taps.filter((x) => now - x < 600);
       const rate = taps.length / .6;                    // taps per second, over the last 0.6 s
-      const target = Math.min(9.6, rate * .9);         // about 10 taps a second keeps pace with a 6.6 sprinter
+      const target = Math.min(10.5, rate * 1.3);       // about 7 taps a second keeps pace with a 6.6 sprinter
       v += (target - v) * (1 - Math.exp(-dt / .25));
       d += v * dt; vTop = Math.max(vTop, v);
       speedo.textContent = `${v.toFixed(1)} m/s`;
@@ -597,7 +612,7 @@
   })();
 
   /* =====================================================================
-     4 · LIFE-SIZE MARKS
+     3 · LIFE-SIZE MARKS
      ===================================================================== */
   (function lifesize() {
     const sec = $("#lifesize");
@@ -674,58 +689,19 @@
   })();
 
   /* =====================================================================
-     5 · THEN VS NOW — each winter's best mark on file, event by event
-     ===================================================================== */
-  (function thenNow() {
-    const sec = $("#thenvsnow");
-    if (!sec) return;
-    const box = $("#tvn-grid");
-    function render() {
-      const seasons = SEASONS[G];
-      const evs = [...new Set(PERF[G].filter((p) => p.v != null).map((p) => p.ev))].sort(evSort);
-      box.innerHTML = evs.map((ev) => {
-        const best = seasons.map((s) => {
-          const ps = PERF[G].filter((p) => p.ev === ev && p.season === s && p.v != null);
-          return ps.length ? ps.reduce((a, b) => (isBetter(ev, b.v, a.v) ? b : a)) : null;
-        });
-        const have = best.filter(Boolean);
-        if (have.length < 2) return "";
-        const vals = have.map((p) => p.v), lo = Math.min(...vals), hi = Math.max(...vals), pad = (hi - lo) * .18 || 1;
-        const W = 300, H = 140, P = 24, top = 30, bot = H - 30;
-        const x = (i) => P + i * (W - 2 * P) / Math.max(1, seasons.length - 1);
-        const y = (v) => { const f = (v - (lo - pad)) / (hi - lo + 2 * pad); return FIELD.has(ev) ? bot - f * (bot - top) : top + f * (bot - top); };   // up is always better
-        const pts = best.map((p, i) => (p ? [x(i), y(p.v), p] : null)).filter(Boolean);
-        const first = have[0], last = have[have.length - 1];
-        const top1 = have.reduce((a, b) => (isBetter(ev, b.v, a.v) ? b : a));
-        const better = isBetter(ev, last.v, first.v);
-        const sum = top1 === last ? `Best yet: ${last.season}` : `Best winter on file: ${top1.season}`;
-        return `<article class="tvn-card ${better ? "up" : "down"}"><header><h3>${esc(ev)}</h3><span class="tvn-sum">${esc(sum)}</span></header>
-          <svg viewBox="0 0 ${W} ${H}" class="tvn-svg" role="img" aria-label="${esc(ev)}: best mark on file each winter">
-            <polyline points="${pts.map(([a, b]) => `${a.toFixed(1)},${b.toFixed(1)}`).join(" ")}" class="tvn-line"/>
-            ${pts.map(([a, b, p], i) => `<g class="tvn-pt"><circle cx="${a}" cy="${b}" r="5"/><text x="${a}" y="${b - 10}" text-anchor="${i === 0 ? "start" : i === pts.length - 1 ? "end" : "middle"}">${esc(p.mark)}</text></g>`).join("")}
-            ${seasons.map((s, i) => `<text x="${x(i)}" y="${H - 2}" text-anchor="middle" class="tvn-ax">${esc(s.replace(/^20(\d\d)–(\d\d)$/, "’$1–’$2"))}</text>`).join("")}
-          </svg>
-          <ul class="tvn-who">${best.map((p, i) => (p ? `<li><span>${esc(seasons[i])}</span><b>${esc(p.mark)}</b> ${esc(p.relay ? p.who.split(/, | and /).map(lastName).join(" · ") : p.who)}<small>${esc(p.meet)}</small></li>` : "")).join("")}</ul></article>`;
-      }).join("");
-    }
-    onGender(render);
-    render();
-  })();
-
-  /* =====================================================================
-     6 · PACE CALCULATOR
+     4 · PACE CALCULATOR
      ===================================================================== */
   (function pace() {
     const sec = $("#pace");
     if (!sec) return;
-    const evSel = $("#pace-ev"), inp = $("#pace-time"), out = $("#pace-out"), near = $("#pace-near"), ring = $("#pace-ring"), err = $("#pace-err");
+    const evSel = $("#pace-ev"), inp = $("#pace-time"), out = $("#pace-out"), near = $("#pace-near"), err = $("#pace-err");
     const EV = { "600 meters": 600, "1000 meters": 1000, Mile: 1609.34, "Two-mile": 3218.69 };
     const DEF = { "600 meters": "1:45.00", "1000 meters": "3:00.00", Mile: "5:30.00", "Two-mile": "11:30.00" };
     evSel.innerHTML = Object.keys(EV).map((e) => `<option>${esc(e)}</option>`).join("");
     evSel.value = store.get("pace-ev", "Mile");
     inp.value = store.get("pace-t-" + evSel.value, DEF[evSel.value]);
     const segs = (D) => { const n = Math.round(D / 200), first = D - 200 * (n - 1); return [first, ...Array(n - 1).fill(200)]; };
-    let anim = 0;
+
     function calc() {
       const ev = evSel.value, D = EV[ev], T = toSec(inp.value.replace(/\s/g, ""));
       store.set("pace-ev", ev);
@@ -738,29 +714,21 @@
         <table class="pace-tbl"><thead><tr><th>Lap</th><th>At</th><th>Lap time</th><th>Clock</th></tr></thead><tbody>${rows.map((r) => `<tr><td>${r.i + 1}</td><td>${Math.round(sg.slice(0, r.i + 1).reduce((a, b) => a + b, 0))} m</td><td>${fmtT(r.lt)}</td><td><b>${fmtT(r.cum)}</b></td></tr>`).join("")}</tbody></table>
         ${sg[0] > 200.5 ? `<p class="lab-fine">The ${esc(ev.toLowerCase())} starts ${(sg[0] - 200).toFixed(1)} m behind the finish line, so the first split comes at ${sg[0].toFixed(0)} m.</p>` : ""}`;
       /* Falcons who've run close to it */
-      const mine = ["boys", "girls"].flatMap((g) => PERF[g].filter((p) => p.ev === ev && p.v != null).map((p) => ({ ...p, g })));
+      const mine = PERF[G].filter((p) => p.ev === ev && p.v != null);       // the boys or girls, as picked at the top
       const bestBy = {};
       for (const p of mine) if (!bestBy[p.who] || p.v < bestBy[p.who].v) bestBy[p.who] = p;
       const list = Object.values(bestBy).sort((a, b) => Math.abs(a.v - T) - Math.abs(b.v - T)).slice(0, 5).sort((a, b) => a.v - b.v);
       near.innerHTML = list.length ? `<h3>Falcons closest to ${fmtT(T)}</h3><ul>${list.map((p) => `<li class="${p.v <= T ? "faster" : "slower"}"><b>${esc(p.who)}</b> ${esc(p.mark)} <small>${esc(p.meet)}, ${esc(p.season)} · ${p.v <= T ? `${(T - p.v).toFixed(2)} s faster than your goal` : `${(p.v - T).toFixed(2)} s slower`}</small></li>`).join("")}</ul>` : "";
-      /* a dot that laps the ring at this pace, sped up so a lap takes about 2 s */
-      cancelAnimationFrame(anim);
-      const svg = ring; while (svg.firstChild) svg.firstChild.remove();
-      const g = drawOval(svg, { label: fmtT(T * 200 / D) + " / LAP" }).runners;
-      const dot = S("g", { class: "tk-r dv" }, g); S("circle", { r: 1.1, class: "tk-dot" }, dot);
-      const lap = T * 200 / D, scale = lap / 2.2;
-      let t0 = null;
-      const step = (now) => { if (t0 == null) t0 = now; const tt = (now - t0) / 1000 * scale; const [px, py] = ovalPt(tt / lap * 200, TR.r + 1.2); dot.setAttribute("transform", `translate(${px},${py})`); anim = requestAnimationFrame(step); };
-      if (REDUCED) { const [px, py] = ovalPt(60, TR.r + 1.2); dot.setAttribute("transform", `translate(${px},${py})`); } else anim = requestAnimationFrame(step);
     }
     evSel.addEventListener("change", () => { inp.value = store.get("pace-t-" + evSel.value, DEF[evSel.value]); calc(); });
     inp.addEventListener("input", calc);
     $("#pace-form").addEventListener("submit", (e) => { e.preventDefault(); calc(); });
+    onGender(calc);
     calc();
   })();
 
   /* =====================================================================
-     7 · DUAL MEET SCORING
+     5 · DUAL MEET SCORING
      ===================================================================== */
   (function dual() {
     const sec = $("#dual");
@@ -818,66 +786,7 @@
   })();
 
   /* =====================================================================
-     8 · PR WALL — season bests that beat everything earlier on file
-     ===================================================================== */
-  (function prwall() {
-    const sec = $("#prwall");
-    if (!sec) return;
-    const chips = $("#pr-seasons"), wall = $("#pr-wall"), debut = $("#pr-debuts");
-    let season = null, shot = false, armed = false;
-    function render() {
-      const ss = SEASONS[G];
-      if (!ss.includes(season)) season = ss[ss.length - 1];
-      chips.innerHTML = ss.map((s) => `<button type="button" class="chip" data-s="${esc(s)}" aria-pressed="${s === season}">${esc(s)}</button>`).join("");
-      const ind = PERF[G].filter((p) => !p.relay && p.v != null && p.date);
-      const byKey = {};
-      for (const p of ind) (byKey[p.who + "|" + p.ev] = byKey[p.who + "|" + p.ev] || []).push(p);
-      const prs = [], firsts = [];
-      for (const ps of Object.values(byKey)) {
-        ps.sort((a, b) => a.date - b.date);
-        const inS = ps.filter((p) => p.season === season);
-        if (!inS.length) continue;
-        const best = inS.reduce((a, b) => (isBetter(a.ev, b.v, a.v) ? b : a));
-        const before = ps.filter((p) => p.date < inS[0].date);
-        if (!before.length) { firsts.push(best); continue; }
-        const prevBest = before.reduce((a, b) => (isBetter(a.ev, b.v, a.v) ? b : a));
-        if (isBetter(best.ev, best.v, prevBest.v)) prs.push({ best, prev: prevBest });
-      }
-      prs.sort((a, b) => evSort(a.best.ev, b.best.ev) || a.best.v - b.best.v);
-      wall.innerHTML = prs.length ? prs.map(({ best, prev }) => {
-        const gain = Math.abs(best.v - prev.v);
-        const amt = FIELD.has(best.ev) ? `+${ftIn(gain)}` : `−${gain.toFixed(2)} s`;
-        return `<article class="pr-card"><span class="pr-badge">Best on file</span><h3>${esc(best.who)}</h3><p class="pr-ev">${esc(best.ev)}</p>
-          <p class="pr-mark">${esc(best.mark)} <span class="pr-gain">${esc(amt)}</span></p>
-          <p class="pr-meta">${esc(best.meet)}, ${esc(best.dateText)}<br>Up from ${esc(prev.mark)} at the ${esc(prev.meet)} (${esc(prev.dateText)})</p></article>`;
-      }).join("") : `<p class="lab-empty">No marks this winter beat an earlier mark on file.</p>`;
-      firsts.sort((a, b) => evSort(a.ev, b.ev) || a.v - b.v);
-      debut.innerHTML = firsts.length ? `<h3>First marks on file this winter</h3><ul>${firsts.map((p) => `<li><b>${esc(p.who)}</b> ${esc(p.ev)} <span>${esc(p.mark)}</span></li>`).join("")}</ul>` : "";
-      if (!shot && !armed && prs.length && !REDUCED) { armed = true; onView(wall, () => { if (shot) return; shot = true; confetti(); }); }
-    }
-    chips.addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { season = b.dataset.s; render(); } });
-    onGender(render);
-    render();
-    function confetti() {
-      const c = document.createElement("canvas"); c.className = "pr-confetti"; c.setAttribute("aria-hidden", "true");
-      sec.appendChild(c);
-      const r = sec.getBoundingClientRect(), dpr = Math.min(2, devicePixelRatio || 1);
-      c.width = r.width * dpr; c.height = Math.min(r.height, 700) * dpr;
-      const ctx = c.getContext("2d"); ctx.scale(dpr, dpr);
-      const COLORS = ["#18479f", "#9cbaf2", "#ffffff", "#0b1f4d", "#6c8fd6", "#f0b429"];
-      const P = Array.from({ length: 130 }, () => ({ x: r.width / 2 + (Math.random() - .5) * 80, y: 60, vx: (Math.random() - .5) * 9, vy: -Math.random() * 9 - 3, s: 4 + Math.random() * 5, a: Math.random() * 6, va: (Math.random() - .5) * .4, c: COLORS[Math.floor(Math.random() * COLORS.length)] }));
-      let n = 0;
-      const step = () => {
-        ctx.clearRect(0, 0, r.width, r.height);
-        for (const p of P) { p.vy += .22; p.vx *= .99; p.x += p.vx; p.y += p.vy; p.a += p.va; ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.a); ctx.fillStyle = p.c; ctx.fillRect(-p.s / 2, -p.s / 4, p.s, p.s / 2); ctx.restore(); }
-        if (++n < 160) requestAnimationFrame(step); else c.remove();
-      };
-      requestAnimationFrame(step);
-    }
-  })();
-
-  /* =====================================================================
-     9 · WHERE THE POINTS COME FROM — state meet points by event
+     6 · WHERE THE POINTS COME FROM — state meet points by event
      ===================================================================== */
   (function points() {
     const sec = $("#points");
@@ -911,67 +820,7 @@
     render();
   })();
 
-  /* =====================================================================
-     10 · MEET MAP
-     ===================================================================== */
-  (function map() {
-    const sec = $("#map");
-    if (!sec) return;
-    const svg = $("#map-svg"), card = $("#map-card"), listEl = $("#map-list");
-    const [W, E, So, N] = LAB_MAP.box, VW = LAB_MAP.vw, VH = LAB_MAP.vh;
-    const P = (lat, lon) => [(lon - W) / (E - W) * VW, (N - lat) / (N - So) * VH];
-    const miles = (a, b) => {
-      const R = 3958.8, toR = Math.PI / 180, dLat = (b.lat - a.lat) * toR, dLon = (b.lon - a.lon) * toR;
-      const h = Math.sin(dLat / 2) ** 2 + Math.cos(a.lat * toR) * Math.cos(b.lat * toR) * Math.sin(dLon / 2) ** 2;
-      return 2 * R * Math.asin(Math.sqrt(h));
-    };
-    const KEYOF = (site) => /Danvers High/.test(site) ? "danvers" : /Gloucester/.test(site) ? "gloucester" : /Marblehead/.test(site) ? "marblehead" : /Swampscott/.test(site) ? "swampscott" : /Reggie Lewis/.test(site) ? "reggie" : /New Balance/i.test(site) ? "trackNB" : null;
-    /* this winter's meets at each site (boys and girls meets on the same day and site count once) */
-    const winter = {};
-    for (const g of ["boys", "girls"]) for (const m of TEAMS[g].schedule || []) {
-      const k = KEYOF(m.site || ""); if (!k) continue;
-      (winter[k] = winter[k] || new Map()).set(m.date.slice(0, 10), m);
-    }
-    /* races on file at each site */
-    const onFile = {};
-    for (const r of LAB_RACES) { const k = r.venue; (onFile[k] = onFile[k] || new Set()).add(`${r.meet} (${dateText(isoDate(r.date))})`); }
-    const home = VENUE.danvers;
-    svg.setAttribute("viewBox", `0 0 ${VW} ${VH}`);
-    S("rect", { width: VW, height: VH, class: "mp-water" }, svg);
-    for (let i = 1; i < 8; i++) S("line", { x1: i * VW / 8, x2: i * VW / 8, y1: 0, y2: VH, class: "mp-gl" }, svg);
-    for (let i = 1; i < 6; i++) S("line", { y1: i * VH / 6, y2: i * VH / 6, x1: 0, x2: VW, class: "mp-gl" }, svg);
-    S("path", { d: LAB_MAP.d, class: "mp-land" }, svg);
-    [["BOSTON", 42.358, -71.06], ["Atlantic Ocean", 42.40, -70.70], ["Cape Ann", 42.655, -70.64]].forEach(([t, la, lo]) => { const [x, y] = P(la, lo); const tx = S("text", { x, y, class: t === "BOSTON" ? "mp-city" : "mp-sea", "text-anchor": "middle" }, svg); tx.textContent = t; });
-    const [hx, hy] = P(home.lat, home.lon);
-    const routes = S("g", { class: "mp-routes" }, svg), pins = S("g", {}, svg);
-    for (const v of LAB_VENUES) {
-      const [x, y] = P(v.lat, v.lon);
-      if (!v.home) S("path", { d: `M${hx},${hy} Q${(hx + x) / 2 + (y - hy) * .15},${(hy + y) / 2 - (x - hx) * .15} ${x},${y}`, class: "mp-route", "data-k": v.key }, routes);
-      const g = S("g", { class: "mp-pin" + (v.home ? " home" : ""), transform: `translate(${x},${y})`, tabindex: "0", role: "button", "aria-label": v.name, "data-k": v.key }, pins);
-      if (v.home) S("path", { d: "M0,-16 L4.6,-5 16,-5 7,2 10.5,14 0,7 -10.5,14 -7,2 -16,-5 -4.6,-5Z", class: "mp-star" }, g);
-      else { S("circle", { r: 16, class: "mp-halo" }, g); S("circle", { r: 9.5, class: "mp-dot" }, g); }
-      const lbl = S("text", { x: v.key === "trackNB" ? -18 : 18, y: 7, class: "mp-lbl", "text-anchor": v.key === "trackNB" ? "end" : "start" }, g);
-      lbl.textContent = v.home ? "Danvers" : v.key === "reggie" ? "Reggie Lewis Center" : v.key === "trackNB" ? "The TRACK at New Balance" : v.place;
-    }
-    function show(k) {
-      const v = VENUE[k], mi = v.home ? 0 : miles(home, v);
-      $$(".mp-pin", svg).forEach((p) => p.classList.toggle("on", p.dataset.k === k));
-      $$(".mp-route", svg).forEach((p) => p.classList.toggle("on", p.dataset.k === k));
-      const meets = winter[k] ? [...winter[k].values()].sort((a, b) => a.date.localeCompare(b.date)) : [];
-      const files = onFile[k] ? [...onFile[k]] : [];
-      card.innerHTML = `<span class="lab-kicker">${esc(v.place)}</span><h3>${esc(v.name)}</h3>
-        <p class="mp-dist">${v.home ? "Home: the Falcons' own field house" : `About <b>${mi.toFixed(1)} miles</b> from Danvers High in a straight line`}${v.approx ? " · pin at the town center" : ""}</p>
-        ${meets.length ? `<p><b>This winter:</b> ${meets.map((m) => `${esc(dateText(isoDate(m.date.slice(0, 10))))}${m.name ? ` (${esc(m.name)})` : m.opponent ? ` vs. ${esc(m.opponent)}` : ""}`).join("; ")}</p>` : "<p>No meets here on this winter's schedule.</p>"}
-        ${files.length ? `<p><b>Races to replay from here:</b> ${files.map(esc).join("; ")}</p>` : ""}`;
-    }
-    pins.addEventListener("click", (e) => { const p = e.target.closest(".mp-pin"); if (p) show(p.dataset.k); });
-    pins.addEventListener("keydown", (e) => { const p = e.target.closest(".mp-pin"); if (p && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); show(p.dataset.k); } });
-    listEl.innerHTML = LAB_VENUES.map((v) => `<li><button type="button" data-k="${v.key}"><b>${esc(v.home ? "Danvers High School (home)" : v.name)}</b><span>${v.home ? "0" : miles(home, v).toFixed(1)} mi · ${winter[v.key] ? winter[v.key].size : 0} meet${winter[v.key] && winter[v.key].size === 1 ? "" : "s"} this winter</span></button></li>`).join("");
-    listEl.addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) show(b.dataset.k); });
-    show("trackNB");
-    if (!REDUCED) onView(svg, () => svg.classList.add("drawn"));
-    else svg.classList.add("drawn");
-  })();
+  hero(replay);
 
   /* the lab bar: which feature is on screen */
   (function bar() {

@@ -6,11 +6,11 @@
 <script src="../js/arrive.js"></script>
 <meta name="theme-color" content="#0b1f4d">
 <title>Track Lab · Danvers Falcons Indoor Track</title>
-<meta name="description" content="Replay real Danvers indoor track races lap by lap, race a Falcon sprinter, see the jumps and throws life-size, and explore every mark on file.">
+<meta name="description" content="Plan your lap splits, replay real Danvers indoor track races, race a Falcon sprinter and see the jumps and throws life-size.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Danvers Falcons Teams">
 <meta property="og:title" content="Track Lab · Danvers Falcons Indoor Track">
-<meta property="og:description" content="Replay real Danvers indoor track races lap by lap, race a Falcon sprinter, and explore every mark on file.">
+<meta property="og:description" content="Plan your lap splits, replay real Danvers indoor track races and race a Falcon sprinter.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
@@ -45,7 +45,7 @@
     <div class="lab-hero-txt">
       <div class="eyebrow">Danvers Falcons · Indoor Track &amp; Field</div>
       <h1>Track <span>Lab</span></h1>
-      <p>Replay real Falcon races lap by lap, race a Danvers sprinter, see the jumps and throws life-size, and dig into every mark on file. Every number here comes from the official results.</p>
+      <p>Plan your splits, replay real Falcon races lap by lap, race a Danvers sprinter and see the jumps and throws life-size. Every number here comes from the official results.</p>
       <div class="lab-nums" id="hero-nums"></div>
     </div>
     <div class="lab-hero-trk">
@@ -58,14 +58,27 @@
 <nav class="lab-bar" aria-label="Track Lab features">
   <div class="wrap lab-bar-in">
     <div class="lab-links">
-      <a href="#replay">Replay</a><a href="#splits">Lap splits</a><a href="#beat">Beat the Falcon</a><a href="#lifesize">Life-size</a><a href="#thenvsnow">Then vs now</a><a href="#pace">Pace</a><a href="#dual">Dual meet</a><a href="#prwall">PR wall</a><a href="#points">Points</a><a href="#map">Map</a>
+      <a href="#pace">Pace</a><a href="#replay">Replay</a><a href="#beat">Beat the Falcon</a><a href="#lifesize">Life-size</a><a href="#dual">Dual meet</a><a href="#points">Points</a>
     </div>
     <div class="lab-g" role="group" aria-label="Boys or girls"><button type="button" data-g="boys">Boys</button><button type="button" data-g="girls">Girls</button></div>
   </div>
 </nav>
 
+<section class="block lab-sec" id="pace"><div class="wrap">
+  <header class="lab-head"><span class="lab-num">01</span><div><h2>Pace Calculator</h2><p>Pick a race and a goal time and get the split you need every lap of a 200-meter indoor track, plus the Falcons who've run closest to it.</p></div></header>
+  <div class="pace-grid">
+    <form class="lab-card pace-form" id="pace-form">
+      <label>Event<select id="pace-ev"></select></label>
+      <label>Goal time<input id="pace-time" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="5:30.00"></label>
+      <p class="pace-err" id="pace-err" role="alert" hidden></p>
+      <p class="lab-fine">Type minutes and seconds, like 5:30 or 11:45.5. The table assumes an even pace.</p>
+    </form>
+    <div class="lab-card pace-res"><div id="pace-out"></div><div class="pace-near" id="pace-near"></div></div>
+  </div>
+</div></section>
+
 <section class="block lab-sec" id="replay"><div class="wrap">
-  <header class="lab-head"><span class="lab-num">01</span><div><h2>Race Replay</h2><p>Every heat a Falcon ran at the NEC meets Lancer Timing posted and at the 2024 and 2026 state meets, with the whole field. Where the timers recorded lap splits, every runner is exactly where the splits put them.</p></div></header>
+  <header class="lab-head"><span class="lab-num">02</span><div><h2>Race Replay</h2><p>Every heat a Falcon ran at the NEC meets Lancer Timing posted and at the 2024 and 2026 state meets, with the whole field. Where the timers recorded lap splits, every runner is exactly where the splits put them, and their laps are charted below the track.</p></div></header>
   <div class="lab-feats" id="replay-featured"></div>
   <div class="rp-grid">
     <div class="rp-stage">
@@ -85,18 +98,16 @@
     </aside>
   </div>
   <p class="lab-fine" id="replay-note"></p>
-</div></section>
-
-<section class="block lab-sec" id="splits"><div class="wrap">
-  <header class="lab-head"><span class="lab-num">02</span><div><h2>Lap Splits</h2><p>Where a race was won or lost: every runner's pace, lap by lap, for the race in the replay. Hover or tap a line to see the runner.</p></div></header>
-  <p class="sp-head" id="splits-head"></p>
-  <div class="lab-card sp-chart"><div id="splits-chart"></div><div class="sp-tip" id="splits-tip" hidden></div></div>
-  <div class="sp-cards" id="splits-table"></div>
-  <div class="sp-pick" id="splits-pick" hidden></div>
+  <div class="rp-splits" id="splits">
+    <p class="sp-head" id="splits-head"></p>
+    <div class="lab-card sp-chart"><div id="splits-chart"></div><div class="sp-tip" id="splits-tip" hidden></div></div>
+    <div class="sp-cards" id="splits-table"></div>
+    <div class="sp-pick" id="splits-pick" hidden></div>
+  </div>
 </div></section>
 
 <section class="block lab-sec" id="beat"><div class="wrap">
-  <header class="lab-head"><span class="lab-num">03</span><div><h2>Beat the Falcon</h2><p>Line up against one of the fastest Falcons on file in the 55 meters. Wait for the gun, then tap as fast as you can. Go early and it's a false start.</p></div></header>
+  <header class="lab-head"><span class="lab-num">03</span><div><h2>Beat the Falcon</h2><p>Line up against a Falcon in the 55 meters, starting with the easiest and working up to the fastest on file. Wait for the gun, then tap as fast as you can. Go early and it's a false start.</p></div></header>
   <div class="beat">
     <div class="beat-opp" id="beat-opp" role="group" aria-label="Pick your opponent"></div>
     <svg id="beat-track" class="tk beat-svg" role="img" aria-label="The 55-meter straightaway: you and the Falcon"></svg>
@@ -107,7 +118,7 @@
       <span class="beat-speed" id="beat-speed" aria-hidden="true">0.0 m/s</span>
     </div>
     <div class="beat-out" id="beat-out" hidden></div>
-    <p class="lab-fine">Tap the button, or press Space or the arrow keys; alternating two fingers is fastest. The Falcon runs their real time with a standard sprint start, and your clock starts at the gun, so your reaction time counts, just like a real race.</p>
+    <p class="lab-fine">Tap the button, or press Space or the arrow keys; alternating two fingers is fastest. The Falcon runs their real time, and your clock starts at the gun, so your reaction counts, just like a real race.</p>
   </div>
 </div></section>
 
@@ -117,27 +128,8 @@
   <p class="lab-fine">Scale references: a basketball rim is 10 feet high, a standard door is 6 feet 8 inches, the free-throw line is 15 feet from the backboard, the high school 3-point line is 19 feet 9 inches, a high school court is 84 feet long and a bowling lane is 60 feet from the foul line to the head pin. Marks are the best on file from 2022 to 2026.</p>
 </div></section>
 
-<section class="block lab-sec" id="thenvsnow"><div class="wrap">
-  <header class="lab-head"><span class="lab-num">05</span><div><h2>Then vs Now</h2><p>The best Danvers mark on file in every event, winter by winter. Up is always better: faster for races, farther or higher for field events.</p></div></header>
-  <div class="tvn-grid" id="tvn-grid"></div>
-  <p class="lab-fine">Each winter has different meets on file: the NEC meets were posted for 2022–23 and 2023–24 only, and the state meets every year. So this compares the best marks on file, not full seasons.</p>
-</div></section>
-
-<section class="block lab-sec" id="pace"><div class="wrap">
-  <header class="lab-head"><span class="lab-num">06</span><div><h2>Pace Calculator</h2><p>Pick a race and a goal time and get the split you need every lap of a 200-meter indoor track, plus the Falcons who've run closest to it.</p></div></header>
-  <div class="pace-grid">
-    <form class="lab-card pace-form" id="pace-form">
-      <label>Event<select id="pace-ev"></select></label>
-      <label>Goal time<input id="pace-time" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="5:30.00"></label>
-      <p class="pace-err" id="pace-err" role="alert" hidden></p>
-      <svg id="pace-ring" class="tk pace-ring" aria-hidden="true"></svg>
-    </form>
-    <div class="lab-card pace-res"><div id="pace-out"></div><div class="pace-near" id="pace-near"></div></div>
-  </div>
-</div></section>
-
 <section class="block lab-sec" id="dual"><div class="wrap">
-  <header class="lab-head"><span class="lab-num">07</span><div><h2>Dual Meet Scoring</h2><p>How a track meet is won: step through a real Danvers dual meet event by event and watch the score add up to the official result.</p></div></header>
+  <header class="lab-head"><span class="lab-num">05</span><div><h2>Dual Meet Scoring</h2><p>How a track meet is won: step through a real Danvers dual meet event by event and watch the score add up to the official result.</p></div></header>
   <div class="dual-pick" id="dual-pick" role="group" aria-label="Pick a meet"></div>
   <div class="dual-grid">
     <div class="dual-score">
@@ -155,32 +147,15 @@
   </div>
 </div></section>
 
-<section class="block lab-sec" id="prwall"><div class="wrap">
-  <header class="lab-head"><span class="lab-num">08</span><div><h2>PR Wall</h2><p>Every Falcon who beat their best earlier mark on file, winter by winter.</p></div></header>
-  <div class="pr-seasons" id="pr-seasons" role="group" aria-label="Winter"></div>
-  <div class="pr-wall" id="pr-wall"></div>
-  <div class="pr-debuts" id="pr-debuts"></div>
-  <p class="lab-fine">"Best on file" means better than every earlier mark the site has for that athlete in that event. The site doesn't have every meet, so a true lifetime best could be faster.</p>
-</div></section>
-
 <section class="block lab-sec" id="points"><div class="wrap">
-  <header class="lab-head"><span class="lab-num">09</span><div><h2>Where the Points Come From</h2><p>Every point the Falcons scored at their state divisional meet, event by event. Places 1 to 8 score 10, 8, 6, 5, 4, 3, 2 and 1.</p></div></header>
+  <header class="lab-head"><span class="lab-num">06</span><div><h2>Where the Points Come From</h2><p>Every point the Falcons scored at their state divisional meet, event by event. Places 1 to 8 score 10, 8, 6, 5, 4, 3, 2 and 1.</p></div></header>
   <div class="lab-card pts-wrap" id="pts-grid"></div>
   <p class="pts-detail" id="pts-detail" aria-live="polite"></p>
 </div></section>
 
-<section class="block lab-sec" id="map"><div class="wrap">
-  <header class="lab-head"><span class="lab-num">10</span><div><h2>Meet Map</h2><p>Where the Falcons race, from the home field house to the big indoor tracks in Boston. Tap a pin.</p></div></header>
-  <div class="mp-grid">
-    <div class="lab-card mp-box"><svg id="map-svg" class="mp-svg" role="img" aria-label="Map of Boston and the North Shore with the Falcons' meet sites"></svg></div>
-    <div class="mp-side"><div class="lab-card mp-card" id="map-card" aria-live="polite"></div><ul class="mp-list" id="map-list"></ul></div>
-  </div>
-  <p class="lab-fine">Map: Natural Earth (public domain). Venue locations from Wikipedia; the Swampscott pin is at the town center. Distances are straight-line.</p>
-</div></section>
-
 <section class="block lab-sec lab-about"><div class="wrap">
   <h2>About the data</h2>
-  <p>Races, lap splits and dual meets come from the official results Lancer Timing posted for the Northeastern Conference meets of Dec. 11, 2022, Jan. 22, 2023 and Dec. 9, 2023, and from the MIAA's results for the 2024 and 2026 Division 4 meets and Meets of Champions. The other features use every Danvers result on this site. The two dual meets add up to the team scores Lancer Timing posted, and the state meet points add up to each official team score.</p>
+  <p>Races, lap splits and dual meets come from the official results Lancer Timing posted for the Northeastern Conference meets of Dec. 11, 2022, Jan. 22, 2023 and Dec. 9, 2023, and from the MIAA's results for the 2024 and 2026 Division 4 meets and Meets of Champions. The pace calculator, the life-size marks and the points use every Danvers result on this site. The two dual meets add up to the team scores Lancer Timing posted, and the state meet points add up to each official team score.</p>
   <p><a class="lab-btn ghost" href="index.html">Back to the indoor track page</a></p>
 </div></section>
 </main>
